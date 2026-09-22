@@ -463,6 +463,20 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
 .case-link { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; color: var(--blue); font-weight: 600; }
 .case-note { margin-top: 16px; font-size: 0.84rem; color: var(--ink-3); }
 
+.case-teaser { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.case-teaser .head, .case-teaser h2 { margin-bottom: 0; }
+.case-teaser > div:first-child { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.case-teaser .btn { margin-top: 6px; }
+.case-teaser-stats {
+  margin: 0; display: flex; flex-direction: column;
+  border: 1px solid var(--rule); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); overflow: hidden;
+}
+.case-teaser-stats > div { padding: 18px 22px; display: flex; flex-direction: column-reverse; gap: 4px; }
+.case-teaser-stats > div + div { border-top: 1px solid var(--rule); }
+.case-teaser-stats dd { margin: 0; font-size: 1.7rem; font-weight: 800; letter-spacing: -0.025em; color: var(--blue); line-height: 1; font-variant-numeric: tabular-nums; }
+.case-teaser-stats dd small { font-size: 0.52em; font-weight: 700; }
+.case-teaser-stats dt { font-size: 0.85rem; color: var(--ink-3); line-height: 1.35; }
+
 /* ── Case study pages ────────────────────────────────────────── */
 .cs h1 { font-size: clamp(2.3rem, 4.4vw, 3.7rem); max-width: 22ch; margin-bottom: 20px; }
 .cs-head { padding-bottom: clamp(40px, 5vw, 64px); background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%); }
@@ -545,7 +559,7 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
   .hero-stats > div:nth-child(3) { border-left: 0; }
   .hero-stats > div:nth-child(n + 3) { border-top: 1px solid var(--rule); }
   .proof-grid, .cs-value { grid-template-columns: minmax(0, 1fr); }
-  .case-grid, .cs-two, .cs-findings { grid-template-columns: minmax(0, 1fr); }
+  .case-grid, .cs-two, .cs-findings, .case-teaser { grid-template-columns: minmax(0, 1fr); }
   .cs-steps, .cs-steps.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cs-facts, .cs-context { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cs-facts > div:nth-child(3) { border-left: 0; padding-left: 0; }
