@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Case study — over $90,000 a year in avoidable cost | AquaMesh</title>
-  <meta name="description" content="AquaMesh read 25 days of a membrane-bioreactor reuse plant's existing SCADA history — no new hardware — and ranked $34,870 a year of avoidable cost. With targeted sensing added, the opportunity passes $90,000." />
+  <title>Case study — $92,200 a year in a plant's own data | AquaMesh</title>
+  <meta name="description" content="25 days of a membrane-bioreactor reuse plant's existing SCADA history — 1,001 tags, 7.2 million values, no new hardware — found $42,050 a year in avoidable cost, rising to $92,200 with instrumentation." />
   <link rel="canonical" href="https://aquamesh.ai/case-studies/water-reuse-plant.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Case study — over $90,000 a year in avoidable cost | AquaMesh" />
-  <meta property="og:description" content="What AquaMesh found in a water-reuse plant's own SCADA history, with no new hardware." />
+  <meta property="og:title" content="Case study — $92,200 a year in a plant's own data | AquaMesh" />
+  <meta property="og:description" content="What 25 days of existing SCADA history showed, every finding checked against the plant's own posted ranges." />
   <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
@@ -65,30 +65,40 @@
   <main class="cs">
     <section class="section cs-head">
       <div class="wrap">
-        <a class="cs-back" href="../index.html#case-studies"><svg class="ic"><use href="#i-back" /></svg>All case studies</a>
+        <a class="cs-back" href="../case-studies/index.html"><svg class="ic"><use href="#i-back" /></svg>All case studies</a>
         <p class="eyebrow">Case study · Membrane-bioreactor water reuse</p>
-        <h1>$34,870 a year from the data alone.<br /><span class="accent">Over $90,000 with sensing.</span></h1>
-        <p class="lead">A water-reuse plant gave AquaMesh an export of its own historian — no new instruments, no site visit. What came back was a ranked list of what the plant was losing, what to check first, and what each item was worth over a year. The historian alone accounted for $34,870; closing the measurement gaps it does not cover takes the opportunity past $90,000.</p>
+        <h1>$42,050 a year from the data alone.<br /><span class="accent">$92,200 with instrumentation.</span></h1>
+        <p class="lead">A water-reuse plant handed over 25 days of its own historian — 1,001 tags, 7.2 million recorded values — and nothing else. No new instruments, no site visit. Every finding was checked against the ranges the plant itself posts on its sampling schedule rather than against generic industry numbers, and every figure is labelled either measured or estimated.</p>
         <dl class="cs-facts">
-          <div><dt>Process</dt><dd>Flat-sheet membrane bioreactor, recycled water for indoor reuse and irrigation</dd></div>
-          <div><dt>Scale</dt><dd>~140,000 gallons a day</dd></div>
-          <div><dt>Input</dt><dd>25 days of existing SCADA history, ~1,100 tags</dd></div>
+          <div><dt>Process</dt><dd>Flat-sheet MBR at 0.4 µm; recycled water for indoor reuse, irrigation and fire suppression</dd></div>
+          <div><dt>Load</dt><dd>105,700 gpd measured — 71% of its 148,100 gpd design</dd></div>
+          <div><dt>Input</dt><dd>25 days of existing SCADA history · 1,001 tags · 7.2M values</dd></div>
           <div><dt>New hardware</dt><dd>None</dd></div>
         </dl>
       </div>
     </section>
 
     <section class="section wash">
+      <div class="wrap">
+        <figure class="cs-figure">
+          <img src="../assets/audit/fig1.jpg" width="1290" height="590" loading="lazy" decoding="async"
+               alt="Audit summary: potential annual savings of about $42,050 a year off the power and maintenance bills with no capital spend, rising to $58,428 including roughly seven hours a week of operator time, and $92,200 with the later instrumentation phase; estimated plant power bill $147,000 a year; plant running at 71 percent of design flow; effluent turbidity 0.11 NTU median, well inside the posted range." />
+          <figcaption>The opening page of the delivered audit. Values tagged <b>M</b> are measured directly from the plant's SCADA; <b>E</b> means AquaMesh calculated them, and the assumptions behind them are written down.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="wrap cs-two">
         <div>
           <h2>The plant</h2>
-          <p>Wastewater arrives at a lift station, passes a fine screen, and runs through anoxic basins for denitrification into aerated pre-air basins. Membranes separate the treated water from the biomass; permeate pumps draw it through, chlorine contact disinfects it, and a reservoir holds it for reuse — indoor flushing, irrigation and fire suppression.</p>
-          <p>It is a small plant that does a demanding job: the water it makes goes back into an occupied building, so every disinfection and turbidity question carries real stakes.</p>
+          <p>Flow arrives at an influent lift station, passes a 2 mm fine screen, then runs through anoxic basins into a membrane basin and an aerated pre-air basin with return-activated-sludge recirculation. Flat-sheet membranes at 0.4 micron separate the water; permeate goes through chlorine contact and effluent pumping into a reclaimed reservoir that serves fire suppression, indoor flushing and irrigation.</p>
+          <p>It came online in 2008, and it is run well. Effluent turbidity holds a median of 0.11 NTU against a posted range of 0.05–0.6, and nothing in the audit suggests otherwise. Every item in it is about protecting that record with less power and less manual effort.</p>
         </div>
         <div>
           <h2>What AquaMesh did</h2>
-          <p>Read the export. Build a model of each signal's normal behaviour and of each pair of parallel units — two basins, two pumps, two membrane trains — then look for the pairs that stopped agreeing and the signals that stopped moving.</p>
-          <p>Every finding is priced. The plant's own energy tariff turns a wasted kilowatt into dollars a year, so the list comes back ranked by what it costs rather than by how unusual it looks.</p>
+          <p>Read the export. Model each signal's normal behaviour and each pair of parallel units — two basins, two RAS pumps, two membrane trains — then look for the pairs that stopped agreeing and the signals that stopped moving.</p>
+          <p>Then price it. Blower power from the isentropic relation using measured airflow and measured discharge pressure; pump power from measured flow and head; runtime from historian totaliser deltas. Where a number had to be estimated, it says so and shows the method, so the plant's own engineer can check the arithmetic.</p>
         </div>
       </div>
     </section>
@@ -97,35 +107,65 @@
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">What it found</p>
-          <h2>Five things the plant could not see <span class="accent">from its own screens.</span></h2>
+          <h2>Seven things the plant could not see <span class="accent">from its own screens.</span></h2>
         </div>
         <ul class="cs-findings">
           <li>
-            <p class="pf-num">151,000<small> gal/day</small></p>
-            <h3>A potable line that never rests</h3>
-            <p>One line drew about 105 gpm around the clock and never dropped below 5 gpm in 25 days, while its neighbour varied normally through the day. A flat 24-hour draw is the signature of a continuous loss. Flagged for field investigation — if it is a leak, the pumping energy alone is roughly $8,000 a year.</p>
+            <p class="pf-num">3.6×</p>
+            <h3>One basin running above its own oxygen range</h3>
+            <p>The plant's sampling schedule posts pre-air dissolved oxygen at 0.5–1.5 mg/L. Basin 2 sits right in that band at a median of 0.49 mg/L. Basin 1 held a median of 5.35 mg/L on every day of the record — roughly eleven times its twin — with its blower command pinned at 99.99%. Both draw on the same shared airflow, which points at an air-split problem rather than a setpoint: a valve or a damper, cheap to investigate and cheap to correct. Worth $3,316 a year in blower power, plus the nitrogen-removal risk of carrying that oxygen into the anoxic zone. <b>The audit's own caveat:</b> a fouled DO probe can sit on an offset and still respond to airflow, so the reading gets verified against a calibrated handheld before anyone touches a valve.</p>
           </li>
           <li>
-            <p class="pf-num">10.9×</p>
-            <h3>Twin basins that disagreed all month</h3>
-            <p>Two basins measuring the same variable read 5.14 and 0.52 mg/L of dissolved oxygen, with one blower pinned at 99.99%. A divergence that large and that persistent is a control fault, a split valve or a drifting instrument — and it held for the whole window rather than appearing as a transient.</p>
+            <p class="pf-num">456 → 358<small> scfm</small></p>
+            <h3>Membrane scour air above what the flux needed</h3>
+            <p>Airflow tracked the permeate rate almost perfectly (R² = 1.00) at a ratio well above the manufacturer's specific-scour guidance. Trimming to the guideline at the measured flux, with the existing controls, is $5,391 a year — the single largest no-capital line on the list. The platform proposes it one safe step at a time rather than in a single jump, holding each step for a shift before the next.</p>
+          </li>
+          <li>
+            <p class="pf-num">13–28<small> starts/hour</small></p>
+            <h3>Reclaimed pumps short-cycling</h3>
+            <p>Against a manufacturer guideline near six starts an hour for pumps this size — and one asset logged 143 an hour, a start every 25 seconds. Every start draws locked-rotor current and heats the windings far more than running does. It is a control deadband, not a purchase, and it is writing a bill in motors, starters and contactors: $3,500 a year.</p>
           </li>
           <li>
             <p class="pf-num">84% / 39%</p>
-            <h3>Pumps not sharing the load</h3>
-            <p>A lead/lag setting left one pump carrying more than twice the duty of its twin. The lead unit reaches overhaul years earlier than it needs to, while the standby sits idle — the same pattern showed up again on mixers.</p>
+            <h3>RAS pumps not sharing duty</h3>
+            <p>504 run hours against 232 in the same 25 days, and the lifetime counters show the gap compounding — 44,299 hours against 30,953. Lead-lag alternation costs nothing and moves the next rebuild years to the right. The MBR blowers and permeate pumps are balanced, which is what marks this as an oversight rather than a design choice.</p>
           </li>
           <li>
             <p class="pf-num">16 of 16</p>
-            <h3>Frozen reuse totalizers</h3>
-            <p>Every spray-field zone totalizer read exactly the same value for 25 days. Nobody could report how much recycled water each zone received, which is the number that reuse reporting is built on.</p>
+            <h3>Reuse totalisers that never moved</h3>
+            <p>Every irrigation zone has a volume totaliser, and not one of them changed in 25 days. Until they record, nobody can show how much recycled water went to beneficial reuse versus straight to disposal — which is the largest untapped item on the site, about $7,300 a year once the split can be managed. A configuration fix, not a purchase.</p>
           </li>
           <li>
             <p class="pf-num">8×</p>
             <h3>Two turbidimeters, two answers</h3>
-            <p>The pair watching the same membrane filtrate disagreed eightfold at the 90th percentile. Whichever one is right, compliance decisions had been resting on a reading that could not be trusted.</p>
+            <p>Both watch the same permeate stream. One reads a median of 0.11 NTU and a 90th percentile of 0.26; the other reads 0.14 and 2.12 — three and a half times the plant's own posted limit. One of them is drifting, and compliance calls currently rest on an instrument that cannot be fully trusted. The encouraging part: the true value looks excellent.</p>
+          </li>
+          <li>
+            <p class="pf-num">3<small> records / 25 days</small></p>
+            <h3>MLSS could not be trended at all</h3>
+            <p>The tag reports a flat 10.00 — wrong scale, effectively dead, against a posted range of 7,500–10,000 mg/L. MLSS is the control variable for wasting and a leading indicator of membrane fouling, and the plant already measures it by hand every week. None of that reached the historian, so nothing could trend or alarm on it between grab samples.</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">What it is worth</p>
+          <h2>Two subtotals, <span class="accent">kept deliberately apart.</span></h2>
+          <p class="lead">Money off a bill, and operator hours given back. The hours are real, but they are not money off a bill, so they are never folded into the first number.</p>
+        </div>
+        <figure class="cs-figure">
+          <img src="../assets/audit/fig2.jpg" width="1290" height="640" loading="lazy" decoding="async"
+               alt="Opportunity table with each line flagged measured or estimated: pre-air basin oxygen correction $3,316 measured; modulating pre-air control $1,718 estimated; RAS flow optimisation $1,096 estimated; predictive maintenance programme $20,900 estimated; direct savings subtotal $42,048 for energy plus maintenance; reporting automation worth seven hours a week of operator time, $16,380 estimated; everything added up $58,428." />
+          <figcaption>The predictive-maintenance line is built asset by asset from the plant's own run hours and start counts, not taken as a percentage of a maintenance budget.</figcaption>
+        </figure>
+        <figure class="cs-figure" style="margin-top: 22px">
+          <img src="../assets/audit/fig3.jpg" width="1290" height="660" loading="lazy" decoding="async"
+               alt="Energy table: reclaimed and spray distribution 349 kWh per day at $46,071 a year; potable distribution pumps 284 kWh per day at $37,490; MBR scour blowers 173 kWh per day at $22,837; pre-air blowers 130 kWh per day at $17,161; RAS pumps 83 kWh per day at $10,957; pre-air zone blowers 72 kWh per day at $9,505; permeate pumps 23 kWh per day at $3,036; total measurable load 1,114 kWh per day, $147,057 a year, 406,610 kWh a year." />
+          <figcaption>Where the power actually goes — 1,114 kWh a day of measurable load — each line derived from measured airflow, discharge pressure and runtime, with its basis shown beside it.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -133,13 +173,14 @@
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">In the software</p>
-          <h2>Every finding says what to do <span class="accent">and what it is worth.</span></h2>
-          <p class="lead">The same findings as the operator sees them: severity, the action to take, the tags that are the evidence, and the annual value where there is one. Operators acknowledge, accept, resolve or dismiss — and accepted items are tracked to see whether the number actually moved.</p>
+          <h2>The same findings, <span class="accent">live in the platform.</span></h2>
+          <p class="lead">The audit is not a document that arrives and then ages. Those 25 days are loaded into AquaMesh against 108 mapped process tags, and each finding sits in front of the operator with its action, its evidence tags and its annual value attached — to acknowledge, accept, resolve or dismiss.</p>
+          <p class="lead">Because the platform keeps recomputing on a rolling window, its figures move a little from the ones fixed in the PDF: the same excursion, the same setpoint, priced on more recent data.</p>
         </div>
         <figure class="cs-shot">
           <img src="../assets/audit.jpg" width="1400" height="1392" loading="lazy" decoding="async"
-               alt="The AquaMesh recommendations view: counts of critical, warning and advisory findings with open value per year, then cards for mixers not sharing duty, a scour-airflow setpoint opportunity worth $5,393 a year, and twin basins whose dissolved oxygen disagrees by 9.9×." />
-          <figcaption>Plant name removed. Everything else is the product as it ships.</figcaption>
+               alt="The AquaMesh recommendations view: counts of critical, warning and advisory findings with open value per year, then cards for mixers not sharing duty, a scour-airflow setpoint opportunity worth $5,393 a year, and twin basins whose dissolved oxygen disagrees." />
+          <figcaption>Plant name removed. Everything else is the product as it ships — including the live numbers, which is why the oxygen card states the divergence as a basin-to-basin ratio where the audit prices the same fault against the plant’s posted range.</figcaption>
         </figure>
       </div>
     </section>
@@ -147,20 +188,49 @@
     <section class="section">
       <div class="wrap cs-value">
         <div class="proof-total">
-          <p class="proof-num">$90,000<small>+/yr</small></p>
-          <p class="proof-label">total opportunity, with sensing</p>
+          <p class="proof-num">$92,200<small>/yr</small></p>
+          <p class="proof-label">fully instrumented</p>
           <ul class="proof-split">
-            <li><b>$34,870</b> from existing data</li>
-            <li><b>$18,490</b> of that, energy</li>
-            <li><b>$16,380</b> of that, reporting</li>
+            <li><b>$42,050</b> from existing data</li>
+            <li><b>$58,428</b> with operator time</li>
+            <li><b>$75,800</b> direct, instrumented</li>
           </ul>
         </div>
         <div>
           <h2>Where the value sits</h2>
-          <p>Of the $34,870 the historian could prove by itself, about half is energy: air the process does not need, pumps running against each other, a scour setpoint the optimizer can lower without touching a single constraint. The other half is time — some seven hours a week of manual reporting the plant's own data can produce on its own.</p>
-          <p>The rest, taking the total past $90,000 a year, sits in what this plant cannot currently measure. Those items need targeted sensing before anyone should count them, which is also the right order of work: prove what the existing data supports, then add an instrument only where it turns a suspicion into a number.</p>
-          <p>Nothing here is realized until somebody acts on it. That is the point of the ranking — it tells you which hour of work pays the most.</p>
+          <p>$42,050 a year needs no capital at all: the scour setpoint the optimizer solved on the plant's own data, off-peak shifting on the two largest pumping loads, the air split in Basin 1, the pump-cycling deadbands, and a predictive-maintenance programme assembled from run hours rather than a budget percentage. Add the seven hours a week of reporting the data can produce by itself and it reaches $58,428.</p>
+          <p>The instrumentation phase is what takes it to $92,200, and none of it is needed to start. A $55,000 package pays back in about 1.6 years: automatic cleaning so the DO probes can be trusted, the zone totalisers restored, pressure optimisation on the largest load, vibration monitoring on four blowers, power metering that converts $21,148 of estimate into measurement, and AquaSpectra for continuous BOD, COD, TSS, nitrate and grease in place of weekly grab samples.</p>
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <figure class="cs-figure">
+          <img src="../assets/audit/fig4.jpg" width="1290" height="830" loading="lazy" decoding="async"
+               alt="Instrumentation package table: advanced aeration control $2,439 a year at no capital; reclaimed reuse displacing purchased potable, $4,000 capital for $7,300 a year; reclaimed distribution pressure optimisation, $6,000 capital for $6,917 a year; vibration monitoring on four blowers, $5,000 capital for $6,000 a year; power metering on five major loads, $10,000 capital, converting $21,148 a year of estimate into measurement; package total $55,000 capital for $33,728 a year, a 1.6 year simple payback." />
+          <figcaption>The later phase, priced item by item. The point of the power-metering line is not its savings — it converts the energy case from a defensible estimate into a measured result, which is what makes a performance guarantee possible.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cs-two">
+        <div>
+          <h2>What the audit says against itself</h2>
+          <p>The largest single uncertainty is the tariff. Everything here is priced on a residential time-of-use schedule blending to $0.362/kWh. At 406,610 kWh a year this plant is well past residential scale and would normally sit on a commercial schedule at roughly half that blended rate — on which the same physical savings are worth about half of what is shown.</p>
+          <p>The kilowatt-hours are measured either way; only their price is in question. One utility bill settles it. The audit says so on its own front page, because showing the range is worth more than picking the flattering end of it.</p>
+        </div>
+        <div>
+          <h2>And the rest of the fine print</h2>
+          <ul class="co-list">
+            <li><svg class="ic"><use href="#i-check" /></svg><span>Figures are ceilings that assume the recommendations are actually implemented and then maintained.</span></li>
+            <li><svg class="ic"><use href="#i-check" /></svg><span>Capital costs other than AquaSpectra are order-of-magnitude and should be firmed up with quotes.</span></li>
+            <li><svg class="ic"><use href="#i-check" /></svg><span>The record covers 25 days of summer operation, so it will not capture seasonal variation.</span></li>
+            <li><svg class="ic"><use href="#i-check" /></svg><span>Spectral BOD and COD are site-calibrated surrogates for the lab method, not a replacement for it.</span></li>
+            <li><svg class="ic"><use href="#i-check" /></svg><span>A continuous potable-line flow is reported as an anomaly needing field verification, not as a confirmed loss.</span></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -168,12 +238,12 @@
     <section class="closing">
       <div class="wrap closing-inner">
         <h2>Bring your own history.</h2>
-        <p class="lead">If your plant has a historian, AquaMesh has something to read. A demo starts with your process, your goals and the data you already keep.</p>
+        <p class="lead">If your plant keeps a historian, AquaMesh has something to read. A demo starts with your process, your goals and the data you already have.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
         </div>
-        <p class="cs-note">Anonymized case study. Figures are identified opportunities, not realized savings, and are specific to this plant. The $34,870 comes from a 25-day window of the plant's own history; the figure above $90,000 includes items that require targeted sensing to measure.</p>
+        <p class="cs-note">Anonymized case study, reproduced from the delivered audit with the plant's identity removed. Figures are identified opportunities, not realized savings, and are specific to this plant, its process and its tariff.</p>
       </div>
     </section>
   </main>
