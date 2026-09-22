@@ -542,6 +542,25 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
 .cs-note { margin-top: 16px; font-size: 0.82rem; color: var(--ink-3); max-width: 90ch; }
 .cs .closing { border-top: 1px solid var(--rule); padding-bottom: clamp(56px, 8vw, 90px); }
 
+/* ── Company page ────────────────────────────────────────────── */
+.co-founder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+.co-card { background: #fff; border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.co-role { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); }
+.co-card h2 { font-size: clamp(1.8rem, 2.6vw, 2.3rem); }
+.co-card .mail { padding-left: 0; }
+.co-note h3 { font-size: 1.2rem; margin-bottom: 12px; }
+.co-note p + p { margin-top: 12px; }
+.co-advisors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.co-advisors li { background: #fff; border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; display: flex; flex-direction: column; gap: 6px; }
+.co-affil { font-size: 0.82rem; color: var(--blue); font-weight: 600; }
+.trust-grid.co-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.co-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 64px); }
+.co-two h2 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); margin-bottom: 14px; }
+.co-two p { margin-bottom: 14px; }
+.co-list { display: flex; flex-direction: column; gap: 12px; }
+.co-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; }
+.co-list .ic { color: var(--green); width: 1.15em; height: 1.15em; stroke-width: 2.4; margin-top: 3px; }
+
 /* ── Trust ───────────────────────────────────────────────────── */
 .trust-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .trust-grid li {
@@ -565,7 +584,8 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
   .cs-facts > div:nth-child(3) { border-left: 0; padding-left: 0; }
   .cs-facts > div:nth-child(n + 3) { border-top: 1px solid var(--rule); }
   .estimator { grid-template-columns: minmax(0, 1fr); }
-  .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .trust-grid, .trust-grid.co-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .co-founder, .co-two, .co-advisors { grid-template-columns: minmax(0, 1fr); }
   .trio, .stages { grid-template-columns: minmax(0, 1fr); }
   .platform-grid { grid-template-columns: minmax(0, 1fr); }
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 0; }
@@ -588,7 +608,7 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
 @media (max-width: 560px) {
   .wrap { width: min(var(--wrap), 100% - 32px); }
   .proof-findings { grid-template-columns: minmax(0, 1fr); }
-  .trust-grid { grid-template-columns: minmax(0, 1fr); }
+  .trust-grid, .trust-grid.co-grid { grid-template-columns: minmax(0, 1fr); }
   .cs-steps, .cs-steps.three, .case-stats { grid-template-columns: minmax(0, 1fr); }
   .cs-facts, .cs-context { grid-template-columns: minmax(0, 1fr); }
   .cs-facts > div, .cs-facts > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); }

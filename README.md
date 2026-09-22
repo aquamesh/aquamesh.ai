@@ -10,6 +10,14 @@ The "Real plants. Real results." section uses anonymized figures from a real
 customer audit — confirm the customer is comfortable before publishing.
 
 ```
+index.html                      home
+company.html                    who we are + the guarantees (advisor block is
+                                commented out in the file, ready for names)
+case-studies/index.html         the two case studies
+case-studies/*.html             one page each
+
+(legacy note)
+```
 index.html      the page
 styles.css      design tokens + layout
 main.js         hero streamline figure + sticky-nav border
