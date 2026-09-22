@@ -4,6 +4,32 @@
    It draws a complete still frame first, animates only while on screen, and
    stays still for anyone who prefers reduced motion. */
 
+/* Savings estimator: a log-scale slider over $250K–$10M of annual water,
+   energy and chemical spend, showing the 10–25% band AquaMesh targets. */
+(function () {
+  var range = document.getElementById('spend');
+  if (!range) return;
+  var out = document.getElementById('spend-out');
+  var lo = document.getElementById('est-low');
+  var hi = document.getElementById('est-high');
+  var MIN = 250000, MAX = 10000000;
+  function spendAt(v) { return MIN * Math.pow(MAX / MIN, v / 1000); }
+  function round(n) { var step = n < 1e6 ? 10000 : 50000; return Math.round(n / step) * step; }
+  function money(n) {
+    if (n >= 1e6) return '$' + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace(/\.0$/, '') + 'M';
+    return '$' + Math.round(n / 1e3) + 'K';
+  }
+  function update() {
+    var spend = round(spendAt(+range.value));
+    out.textContent = money(spend);
+    lo.textContent = money(spend * 0.10);
+    hi.textContent = money(spend * 0.25);
+    range.setAttribute('aria-valuetext', money(spend) + ' a year');
+  }
+  range.addEventListener('input', update);
+  update();
+})();
+
 (function () {
   var nav = document.querySelector('.nav');
   function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }

@@ -1,8 +1,13 @@
 # aquamesh.ai
 
 The AquaMesh marketing site — one static page, no build step. Content and style
-follow the September customer deck; the product screenshot is a sanitized capture
-of the live digital twin (plant name anonymized, live findings excluded).
+follow the September customer deck. The hero is the deck's monitor + AquaSpectra
+render (`hero-product.jpg`, caption painted out) with a current, sanitized capture of
+the live digital twin (`screen.jpg`, plant name anonymized, live findings excluded)
+laid exactly over the monitor's screen in CSS.
+
+The "Real plants. Real results." section uses anonymized figures from a real
+customer audit — confirm the customer is comfortable before publishing.
 
 ```
 index.html      the page
@@ -42,4 +47,4 @@ Preview locally: `python3 -m http.server 8080` in this folder, then open http://
 
 All copy is in `index.html`. Figures on the page come from the customer deck and
 are framed as typical ranges or targets — keep that framing when numbers change.
-The call-to-action buttons open an email to info@aquamesh.ai.
+Every "Book a demo" button opens an email to info@aquamesh.ai (subject: Demo request).

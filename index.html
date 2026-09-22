@@ -77,6 +77,8 @@
     <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></symbol>
     <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2" /><circle cx="5.5" cy="18" r="2.2" /><circle cx="18.5" cy="18" r="2.2" /><path d="M12 7.2v4.3l-5 4.7M12 11.5l5 4.7" /></symbol>
     <symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.8" /><path d="M8.2 8.2a5.4 5.4 0 0 0 0 7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.3 5.3a9.5 9.5 0 0 0 0 13.4M18.7 5.3a9.5 9.5 0 0 1 0 13.4" /></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2H4.5z" /><path d="M10 20.5a2 2 0 0 0 4 0" /></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" /><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" /></symbol>
     <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21" /></symbol>
   </svg>
 
@@ -91,34 +93,85 @@
         <a href="#platform">Platform</a>
         <a href="#how">How it works</a>
         <a href="#roadmap">Roadmap</a>
+        <a href="#results">Results</a>
         <a href="#why">Why AquaMesh</a>
       </nav>
-      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Get a free audit</a>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
     </div>
   </header>
 
   <main id="main">
     <!-- ── Hero ─────────────────────────────────────────────── -->
     <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">The Autopilot For Industrial Water</p>
-        <h1>Water operations will run themselves<span class="dot">.</span></h1>
-        <p class="lead">AquaMesh is building the AI layer that makes it happen. It connects the data your plant already has, spots developing problems hours or days earlier, and recommends the fix — with every change approved by your operators.</p>
-        <div class="actions">
-          <a class="btn" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Get a free audit <svg class="ic"><use href="#i-arrow" /></svg></a>
-          <a class="btn btn-ghost" href="#platform">See the platform</a>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">The Autopilot For Industrial Water</p>
+          <h1>Water operations will run themselves<span class="dot">.</span></h1>
+          <p class="lead">Operational AI for industrial water. AquaMesh spots developing problems hours or days earlier — and tells your team what to do about them.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+            <a class="btn btn-ghost" href="#estimate">Estimate savings</a>
+          </div>
+          <ul class="hero-checks">
+            <li><svg class="ic"><use href="#i-check" /></svg>Starts on your existing SCADA and lab data</li>
+            <li><svg class="ic"><use href="#i-check" /></svg>No new hardware to begin</li>
+            <li><svg class="ic"><use href="#i-check" /></svg>Every change operator-approved</li>
+          </ul>
         </div>
-        <p class="spa" aria-label="See, predict, act">
-          <span>See</span><svg class="ic"><use href="#i-arrow" /></svg><span>Predict</span><svg class="ic"><use href="#i-arrow" /></svg><span>Act</span>
-        </p>
-      </div>
-      <div class="flow-wrap" aria-hidden="true">
-        <canvas id="flow"></canvas>
+        <figure class="hero-visual">
+          <div class="shot">
+            <img class="shot-base" src="assets/hero-product.jpg" width="2000" height="1320" fetchpriority="high" decoding="async"
+                 alt="The AquaMesh platform on a monitor, beside the AquaSpectra smart probe — a stainless-steel inline optical water-quality sensor." />
+            <img class="shot-screen" src="assets/screen.jpg" width="1800" height="1140" fetchpriority="high" decoding="async"
+                 alt="The AquaMesh dashboard: a live 3D digital twin of a water treatment plant with live readings, savings and cost tiles." />
+          </div>
+          <div class="float-finding" aria-hidden="true">
+            <p class="ff-tags"><span class="tag crit">Critical</span><span class="ff-ago">8m ago</span></p>
+            <p class="ff-title">Potable line 2 flat for 24 hours</p>
+            <p class="ff-body">Genuine demand or a leak? If it's a leak: <b>~$3.0k/yr</b></p>
+          </div>
+          <figcaption><b>AquaSpectra™</b> Fills the blind spots existing sensors miss.</figcaption>
+        </figure>
       </div>
       <div class="wrap">
+        <dl class="hero-stats">
+          <div><dt>Lost to water-related inefficiency at a typical target facility, every year</dt><dd>$1M+</dd></div>
+          <div><dt>Lower water-related OPEX</dt><dd>25%</dd></div>
+          <div><dt>Less unplanned downtime</dt><dd>30%</dd></div>
+          <div><dt>Target payback</dt><dd>&lt;12 mo</dd></div>
+        </dl>
+        <p class="hero-note">OPEX, downtime and payback figures are targets based on typical facility opportunities.</p>
         <ul class="industries" aria-label="Industries we serve">
           <li>Food &amp; Beverage</li><li>Industrial Water</li><li>Manufacturing</li><li>Municipal</li><li>Pharma &amp; Biotech</li><li>Data Centers</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ── Real results ─────────────────────────────────────── -->
+    <section class="section proof" id="results">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Real plants. Real results.</p>
+          <h2>What AquaMesh found in <span class="accent">one plant's existing data.</span></h2>
+          <p class="lead">The first audit of a live membrane-bioreactor water-reuse plant — no new hardware, just the SCADA history it already had.</p>
+        </div>
+        <div class="proof-grid">
+          <div class="proof-total">
+            <p class="proof-num">$34,870<small>/yr</small></p>
+            <p class="proof-label">in savings identified</p>
+            <ul class="proof-split">
+              <li><b>$18,490</b> energy</li>
+              <li><b>$16,380</b> reporting time</li>
+            </ul>
+          </div>
+          <ul class="proof-findings">
+            <li><p class="pf-num">151,000<small> gal/day</small></p><p>on a potable line that never dropped below 5 gpm in 25 days — flagged for leak investigation.</p></li>
+            <li><p class="pf-num">10.9×</p><p>the dissolved oxygen of its twin basin, with the blower pinned at 99.99% — paying for air the process doesn't need.</p></li>
+            <li><p class="pf-num">84% / 39%</p><p>duty split between two pumps meant to share the load — one wearing out twice as fast.</p></li>
+            <li><p class="pf-num">16 of 16</p><p>spray-field flow totalizers frozen — reuse volumes nobody could report.</p></li>
+          </ul>
+        </div>
+        <p class="proof-note">Anonymized results from a customer plant. Savings are identified opportunities, not yet realized.</p>
       </div>
     </section>
 
@@ -168,6 +221,27 @@
           <li><span class="disc"><svg class="ic"><use href="#i-gear" /></svg></span><span>Take action <small>Operator-approved</small></span></li>
           <li><span class="disc"><svg class="ic"><use href="#i-trend" /></svg></span><span>Realize measurable value</span></li>
         </ol>
+
+        <div class="estimator" id="estimate">
+          <div class="est-copy">
+            <p class="eyebrow">Estimate your savings</p>
+            <h3>What could AquaMesh find in your plant?</h3>
+            <p>AquaMesh targets 10–25% of the water, energy and chemical spend it can see. Move the slider to your facility's annual spend.</p>
+          </div>
+          <div class="est-control">
+            <label for="spend">Annual water, energy &amp; chemical spend</label>
+            <output id="spend-out" for="spend">$1.5M</output>
+            <input type="range" id="spend" min="0" max="1000" step="1" value="486" aria-describedby="est-note" />
+            <div class="est-scale" aria-hidden="true"><span>$250K</span><span>$10M</span></div>
+          </div>
+          <div class="est-result" aria-live="polite">
+            <p class="est-label">Typical annual opportunity</p>
+            <p class="est-num"><span id="est-low">$150K</span> – <span id="est-high">$375K</span></p>
+            <p class="est-note" id="est-note">An estimate from typical ranges, not a quote. A demo on your own data narrows it down.</p>
+            <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -180,11 +254,10 @@
           <p class="lead">Detect issues early. Prevent downtime. Reduce costs. Operate with confidence.</p>
         </div>
 
-        <figure class="device">
-          <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-          <img src="assets/platform.jpg" width="2000" height="1250" loading="lazy" decoding="async"
-               alt="The AquaMesh dashboard: a live 3D digital twin of an MBR water treatment plant with every unit labelled, an anomaly score, and live tiles for value delivered, efficiency against baseline, influent flow, dissolved oxygen, permeate ammonia and cost per 1,000 gallons." />
-          <figcaption>A live digital twin of a membrane-bioreactor reuse plant — every unit, every tag, synced in real time.</figcaption>
+        <figure class="twin">
+          <img src="assets/twin.jpg" width="1640" height="470" loading="lazy" decoding="async"
+               alt="Close-up of the AquaMesh live digital twin: every unit of a membrane-bioreactor reuse plant, from rake screen to distribution network, with live flow paths." />
+          <figcaption>Live digital twin — every unit from rake screen to distribution network, synced in real time.</figcaption>
         </figure>
 
         <div class="platform-grid">
@@ -233,20 +306,6 @@
       </div>
     </section>
 
-    <!-- ── Outcomes ─────────────────────────────────────────── -->
-    <section class="outcomes" aria-labelledby="outcomes-title">
-      <div class="wrap">
-        <h2 class="visually-hidden" id="outcomes-title">Target outcomes</h2>
-        <dl class="stats">
-          <div><dt>Lower water-related OPEX</dt><dd>25%</dd></div>
-          <div><dt>Less unplanned downtime</dt><dd>30%</dd></div>
-          <div><dt>ROI potential</dt><dd>2–10×</dd></div>
-          <div><dt>Across lines, products and sites</dt><dd>Scalable</dd></div>
-        </dl>
-        <p class="stats-note">Target outcomes based on typical facility opportunities. Your free audit sizes the opportunity at your site.</p>
-      </div>
-    </section>
-
     <!-- ── How it works ─────────────────────────────────────── -->
     <section class="section" id="how">
       <div class="wrap">
@@ -273,16 +332,33 @@
         <div class="promise">
           <svg class="ic xl"><use href="#i-shield" /></svg>
           <p><b>No big upfront costs.</b> <span>You see value first. Then you decide.</span></p>
-          <a class="btn" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Book your free audit</a>
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
         </div>
       </div>
     </section>
 
+    <!-- ── Trust ────────────────────────────────────────────── -->
+    <section class="section wash" id="trust">
+      <div class="wrap">
+        <div class="head center">
+          <p class="eyebrow">Built for the plant floor</p>
+          <h2>AI that recommends. <span class="accent">Operators decide.</span></h2>
+          <p class="lead">Industrial water is too important for a black box. AquaMesh keeps your team in control of every change.</p>
+        </div>
+        <ul class="trust-grid">
+          <li><span class="disc"><svg class="ic"><use href="#i-shield" /></svg></span><h3>Advisory by default</h3><p>Nothing changes on your plant without an operator's approval. When closed-loop control arrives, it is opt-in — and you can return to advisory at any time.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Every change on the record</h3><p>Recommendations, approvals and setting changes are logged — who, what, when, and the value before.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-bell" /></svg></span><h3>Alarms that reach a person</h3><p>Critical excursions escalate by phone, down your on-call list, until someone acknowledges them.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-lock" /></svg></span><h3>Your data, walled off</h3><p>Each customer's data is isolated at the database level, so one plant's readings are never visible to another.</p></li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ── Roadmap ──────────────────────────────────────────── -->
-    <section class="section wash" id="roadmap">
+    <section class="section" id="roadmap">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Real plants. Real results.</p>
+          <p class="eyebrow">Roadmap</p>
           <h2>Start with water. <span class="accent">Scale to the whole plant.</span></h2>
           <p class="lead">AquaMesh connects your data and sensors, runs real-time models and executes operator-approved control — starting with the highest-ROI use cases, with a path to full plant operations.</p>
         </div>
@@ -347,16 +423,19 @@
       </div>
     </section>
 
-    <!-- ── Closing CTA ──────────────────────────────────────── -->
-    <section class="cta" id="contact">
-      <div class="wrap cta-inner">
-        <p class="eyebrow light">See <svg class="ic"><use href="#i-arrow" /></svg> Predict <svg class="ic"><use href="#i-arrow" /></svg> Act</p>
-        <h2>See value first. Then decide.</h2>
-        <p class="lead">Start with a free audit of your process, goals and existing data. No obligation, no hardware to buy up front.</p>
+    <!-- ── Closing ──────────────────────────────────────────── -->
+    <section class="closing" id="contact">
+      <div class="wrap closing-inner">
+        <p class="eyebrow">See <svg class="ic"><use href="#i-arrow" /></svg> Predict <svg class="ic"><use href="#i-arrow" /></svg> Act</p>
+        <h2>See value first. <span class="accent">Then decide.</span></h2>
+        <p class="lead">Book a demo and we'll walk through your process, goals and existing data — and show where AquaMesh would pay off first. No obligation, and no hardware to buy up front.</p>
         <div class="actions">
-          <a class="btn btn-light" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Get a free audit <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
         </div>
+      </div>
+      <div class="flow-wrap" aria-hidden="true">
+        <canvas id="flow"></canvas>
       </div>
     </section>
   </main>
