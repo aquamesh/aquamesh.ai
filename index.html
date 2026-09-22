@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AquaMesh — The Autopilot for Industrial Water</title>
+  <meta name="description" content="Operational AI for industrial water. AquaMesh connects the data your plant already has, spots problems hours or days earlier, and recommends operator-approved actions that cut cost and downtime." />
+  <link rel="canonical" href="https://aquamesh.ai/" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aquamesh.ai/" />
+  <meta property="og:title" content="AquaMesh — The Autopilot for Industrial Water" />
+  <meta property="og:description" content="Operational AI for industrial water. Detect issues early. Prevent downtime. Reduce costs. Operate with confidence." />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Icon + wordmark sprite. Kept rendered (not display:none) so the clip paths resolve in every browser. -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <!-- AQUAMESH: stroke letters, Λ for each A, three bars for the E, the Q's tail dropping through the bowl. -->
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" /></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6L10 21l8-11h-6l1-7z" /></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M6 19v-6M12 19V6M18 19v-9M3.5 20.5h17" /></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="12" cy="6.5" rx="6.5" ry="2.5" /><path d="M5.5 6.5v5c0 1.4 2.9 2.5 6.5 2.5s6.5-1.1 6.5-2.5v-5M5.5 11.5v5c0 1.4 2.9 2.5 6.5 2.5s6.5-1.1 6.5-2.5v-5" /></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 20h18M4 20v-9l5 3v-3l5 3V5h4v15M8 17h1.5M12.5 17H14" /></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5.5" y="4.5" width="13" height="16" rx="2" /><path d="M9 4.5V3.5h6v1M9 13l2 2 4-4.5" /></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.8" /><path d="M8 20h8M12 16v4M7 12.5l3-3 2.5 2 4-4" /></symbol>
+    <symbol id="i-sensor" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="14" rx="2.5" /><path d="M12 17v4M9 7.5h6M3 13h3M18 13h3" /></symbol>
+    <symbol id="i-cycle" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3" /><path d="M18.5 3.5v3.3h-3.3M5.5 20.5v-3.3h3.3" /></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7" /><path d="M14.5 8H20v5.5" /></symbol>
+    <symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 3v18M16.5 7.5c-.7-1.5-2.5-2.5-4.5-2.5-2.5 0-4.5 1.4-4.5 3.4 0 4.6 9.5 2.4 9.5 7.2 0 2-2 3.4-5 3.4-2.2 0-4-.9-4.8-2.5" /></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" /><path d="M4 7.5l8 4.5 8-4.5M12 12v9" /></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z" /><path d="M8.8 12.2l2.2 2.2 4.4-4.6" /></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="1" /></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.4 1.1 2.2h5c0-.8.4-1.6 1.1-2.2A6 6 0 0 0 12 3z" /></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5c3.2 4 6 7.2 6 10.5a6 6 0 0 1-12 0c0-3.3 2.8-6.5 6-10.5z" /></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" /><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8" /></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 9c2 0 2-2 4.5-2S9.5 9 12 9s2.5-2 4.5-2S19 9 21 9M3 15c2 0 2-2 4.5-2s2 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2" /></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12.5" rx="2" /><circle cx="12" cy="13" r="3.4" /><path d="M8.5 7l1.5-2.5h4L15.5 7" /></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9.5 3.5h5M10.5 3.5v5.5L5 19a1.5 1.5 0 0 0 1.3 2.2h11.4A1.5 1.5 0 0 0 19 19l-5.5-10V3.5M7.5 15h9" /></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6" /></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5" /><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" /></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M6 4v8M6 16v4M12 4v2M12 10v10M18 4v9M18 17v3" /><circle cx="6" cy="14" r="2" /><circle cx="12" cy="8" r="2" /><circle cx="18" cy="15" r="2" /></symbol>
+    <symbol id="i-return" viewBox="0 0 24 24"><path d="M9 14L4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></symbol>
+    <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2" /><circle cx="5.5" cy="18" r="2.2" /><circle cx="18.5" cy="18" r="2.2" /><path d="M12 7.2v4.3l-5 4.7M12 11.5l5 4.7" /></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.8" /><path d="M8.2 8.2a5.4 5.4 0 0 0 0 7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.3 5.3a9.5 9.5 0 0 0 0 13.4M18.7 5.3a9.5 9.5 0 0 1 0 13.4" /></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21" /></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#platform">Platform</a>
+        <a href="#how">How it works</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#why">Why AquaMesh</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Get a free audit</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">The Autopilot For Industrial Water</p>
+        <h1>Water operations will run themselves<span class="dot">.</span></h1>
+        <p class="lead">AquaMesh is building the AI layer that makes it happen. It connects the data your plant already has, spots developing problems hours or days earlier, and recommends the fix — with every change approved by your operators.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Get a free audit <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="btn btn-ghost" href="#platform">See the platform</a>
+        </div>
+        <p class="spa" aria-label="See, predict, act">
+          <span>See</span><svg class="ic"><use href="#i-arrow" /></svg><span>Predict</span><svg class="ic"><use href="#i-arrow" /></svg><span>Act</span>
+        </p>
+      </div>
+      <div class="flow-wrap" aria-hidden="true">
+        <canvas id="flow"></canvas>
+      </div>
+      <div class="wrap">
+        <ul class="industries" aria-label="Industries we serve">
+          <li>Food &amp; Beverage</li><li>Industrial Water</li><li>Manufacturing</li><li>Municipal</li><li>Pharma &amp; Biotech</li><li>Data Centers</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Problem ──────────────────────────────────────────── -->
+    <section class="section wash" id="problem">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Water intelligence. Real impact.</p>
+          <h2>What is this problem <span class="accent">costing you?</span></h2>
+          <p class="lead">Many critical conditions in industrial water go undetected until they are already costing you — in product, downtime, energy or compliance.</p>
+        </div>
+
+        <div class="trio">
+          <article class="card">
+            <div class="card-top"><span class="num">1</span><div><h3>The problem</h3><p class="sub">What is going wrong?</p></div></div>
+            <ul class="qa">
+              <li><b>What happens?</b> Starch loss, membrane fouling, permit spikes, high energy use.</li>
+              <li><b>How do you catch it today?</b> Lab results, manual checks, operator observation.</li>
+              <li><b>How long before you know?</b> Hours, days — sometimes weeks.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="num">2</span><div><h3>The cost</h3><p class="sub">What happens when you don't catch it early?</p></div></div>
+            <ul class="costs">
+              <li><svg class="ic"><use href="#i-coins" /></svg><span><b>Product &amp; material loss</b> Lost yield, off-spec, recalls</span></li>
+              <li><svg class="ic"><use href="#i-factory" /></svg><span><b>Downtime</b> Hours offline, missed orders</span></li>
+              <li><svg class="ic"><use href="#i-bolt" /></svg><span><b>Water, energy, chemicals</b> Unnecessary use, higher OPEX</span></li>
+              <li><svg class="ic"><use href="#i-shield" /></svg><span><b>Quality &amp; compliance</b> Fines, penalties, reputational risk</span></li>
+            </ul>
+            <div class="figure blue"><span class="figure-label">Total potential impact</span><span class="figure-num">$500K – $5M+ <small>/ year</small></span><span class="figure-note">Typical range for industrial facilities</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="num">3</span><div><h3>The opportunity</h3><p class="sub">Could earlier visibility change the outcome?</p></div></div>
+            <ul class="qa">
+              <li><b>What would you do if you knew earlier?</b> Adjust the process, isolate the source, schedule maintenance, prevent a release.</li>
+              <li><b>Can AquaMesh detect or predict it?</b> <span class="verdict"><em class="yes">Yes</em> / <em class="test">Test</em> / <em>No</em></span> — we tell you which, straight.</li>
+              <li><b>Can the result be measured?</b> Higher yield, lower OPEX, fewer upsets.</li>
+            </ul>
+            <div class="figure green"><span class="figure-label">Potential recoverable value</span><span class="figure-num">$250K – $1M+ <small>/ year</small></span><span class="figure-note">Per facility, based on typical opportunities</span></div>
+          </article>
+        </div>
+
+        <ol class="flowbar" aria-label="How we work through it">
+          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><span>Identify the problem</span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-dollar" /></svg></span><span>Quantify the cost</span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><span>Get earlier visibility</span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-gear" /></svg></span><span>Take action <small>Operator-approved</small></span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-trend" /></svg></span><span>Realize measurable value</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── Platform (the product's own world: dark) ────────── -->
+    <section class="section night" id="platform">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">The platform</p>
+          <h2>Operational AI for <span class="accent">industrial water.</span></h2>
+          <p class="lead">Detect issues early. Prevent downtime. Reduce costs. Operate with confidence.</p>
+        </div>
+
+        <figure class="device">
+          <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="assets/platform.jpg" width="2000" height="1250" loading="lazy" decoding="async"
+               alt="The AquaMesh dashboard: a live 3D digital twin of an MBR water treatment plant with every unit labelled, an anomaly score, and live tiles for value delivered, efficiency against baseline, influent flow, dissolved oxygen, permeate ammonia and cost per 1,000 gallons." />
+          <figcaption>A live digital twin of a membrane-bioreactor reuse plant — every unit, every tag, synced in real time.</figcaption>
+        </figure>
+
+        <div class="platform-grid">
+          <div class="pillars">
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Real-time visibility</h3><p>Ingests SCADA, sensors, lab data and live process data into one unified view.</p></div>
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-spark" /></svg></span><h3>AI-powered insights</h3><p>Detects anomalies, diagnoses likely causes and predicts the operational impact.</p></div>
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-bolt" /></svg></span><h3>Actionable recommendations</h3><p>Routes operator-approved responses and tracks what they achieved.</p></div>
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><h3>Measurable value</h3><p>Lower operating costs, fewer upsets, better compliance, higher uptime.</p></div>
+          </div>
+
+          <aside class="finding" aria-label="Example finding">
+            <p class="finding-kicker">Example finding</p>
+            <div class="finding-card">
+              <div class="finding-tags"><span class="tag crit">Critical</span><span class="tag">Reuse &amp; distribution</span><span class="ago">8m ago</span></div>
+              <p class="finding-title">Potable water line 2 has not varied in 24 hours.</p>
+              <p class="finding-body">Trace this line in the field and confirm whether the flow is genuine continuous demand or a loss. If it is a leak, it is roughly <b>$3.0k/yr</b>.</p>
+              <div class="finding-actions"><span>Acknowledge</span><span class="primary">Accept</span><span>Dismiss</span></div>
+            </div>
+            <div class="stream">
+              <p class="stream-kicker">Operations stream</p>
+              <p class="stream-row"><span class="stream-dot"></span><span>Scour air eased 2%<small>TMP nominal, fouling trend flat</small></span><b>+$2.2/h</b></p>
+            </div>
+            <p class="finding-note">Every finding says what is happening, why it matters, and what to check — in the operator's language, with the cost attached.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AquaSpectra ─────────────────────────────────────── -->
+    <section class="section" id="aquaspectra">
+      <div class="wrap split">
+        <div class="probe-panel">
+          <img src="assets/aquaspectra.jpg" width="296" height="900" loading="lazy" decoding="async" alt="The AquaSpectra smart probe: a stainless-steel inline optical sensor with a flanged process connection and an AquaMesh-branded body." />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">AquaSpectra™ smart probe</p>
+          <h2>Fills the blind spots <span class="accent">existing sensors miss.</span></h2>
+          <p class="lead">A broad-spectrum inline optical sensor that reads water quality in real time — built for the plant floor, not the lab. Add it only where your existing instruments leave a gap.</p>
+          <ul class="specs">
+            <li><span class="disc sm"><svg class="ic"><use href="#i-pulse" /></svg></span><span><b>16+ parameters, one device</b> UV/Vis optical measurement in a single rugged probe.</span></li>
+            <li><span class="disc sm"><svg class="ic"><use href="#i-cycle" /></svg></span><span><b>Self-cleaning</b> Designed to keep reading through fouling-prone streams.</span></li>
+            <li><span class="disc sm"><svg class="ic"><use href="#i-signal" /></svg></span><span><b>Over-the-air updates</b> New capabilities arrive as firmware, not replacements.</span></li>
+            <li><span class="disc sm"><svg class="ic"><use href="#i-dollar" /></svg></span><span><b>A third of the upfront cost</b> Hardware priced at about 1/3 of comparable sensors.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Outcomes ─────────────────────────────────────────── -->
+    <section class="outcomes" aria-labelledby="outcomes-title">
+      <div class="wrap">
+        <h2 class="visually-hidden" id="outcomes-title">Target outcomes</h2>
+        <dl class="stats">
+          <div><dt>Lower water-related OPEX</dt><dd>25%</dd></div>
+          <div><dt>Less unplanned downtime</dt><dd>30%</dd></div>
+          <div><dt>ROI potential</dt><dd>2–10×</dd></div>
+          <div><dt>Across lines, products and sites</dt><dd>Scalable</dd></div>
+        </dl>
+        <p class="stats-note">Target outcomes based on typical facility opportunities. Your free audit sizes the opportunity at your site.</p>
+      </div>
+    </section>
+
+    <!-- ── How it works ─────────────────────────────────────── -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="head center">
+          <p class="eyebrow">How it works</p>
+          <h2>Easy. <span class="accent">Affordable.</span> Fast.</h2>
+          <p class="lead">A simple, low-risk path to real savings — without big upfront costs or taking up space.</p>
+        </div>
+
+        <ol class="steps">
+          <li><span class="num">1</span><svg class="ic lg"><use href="#i-clipboard" /></svg><h3>Free audit</h3><p>We review your process, goals and existing data. No obligation.</p></li>
+          <li><span class="num">2</span><svg class="ic lg"><use href="#i-monitor" /></svg><h3>Instant value <small>no hardware</small></h3><p>We connect to your existing plant data and deliver insights fast.</p><p class="blue">Start seeing savings right away.</p></li>
+          <li><span class="num">3</span><svg class="ic lg"><use href="#i-sensor" /></svg><h3>Rapid deployment <small>when you're ready</small></h3><p>Add our compact sensor and edge computer.</p><p class="blue">From audit to operations in just a few hours.</p></li>
+          <li><span class="num">4</span><svg class="ic lg"><use href="#i-cycle" /></svg><h3>Continuous optimization</h3><p>AI keeps optimizing your operations and verifies the results.</p><p class="blue">More savings. Less waste. Better uptime.</p></li>
+          <li><span class="num">5</span><svg class="ic lg"><use href="#i-trend" /></svg><h3>Scale as you grow</h3><p>Expand across more processes and sites as the ROI compounds.</p></li>
+        </ol>
+
+        <div class="assure">
+          <div><span class="disc"><svg class="ic"><use href="#i-dollar" /></svg></span><h3>Low upfront cost</h3><p>The upfront hardware fee is <b>1/3</b> the cost of comparable sensors.</p></div>
+          <div><span class="disc"><svg class="ic"><use href="#i-cube" /></svg></span><h3>Minimal footprint</h3><p>Compact sensor and edge computer fit in tight spaces. <b>Small footprint, big impact.</b></p></div>
+          <div><span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span><h3>Fast time to value</h3><p>From free audit to operational in <b>just a few hours</b>.</p></div>
+        </div>
+
+        <div class="promise">
+          <svg class="ic xl"><use href="#i-shield" /></svg>
+          <p><b>No big upfront costs.</b> <span>You see value first. Then you decide.</span></p>
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Book your free audit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Roadmap ──────────────────────────────────────────── -->
+    <section class="section wash" id="roadmap">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Real plants. Real results.</p>
+          <h2>Start with water. <span class="accent">Scale to the whole plant.</span></h2>
+          <p class="lead">AquaMesh connects your data and sensors, runs real-time models and executes operator-approved control — starting with the highest-ROI use cases, with a path to full plant operations.</p>
+        </div>
+
+        <div class="stages">
+          <article class="stage">
+            <header><span class="num lg">1</span><div><p class="stage-when">Today</p><h3>AI recommendations</h3></div></header>
+            <p>Combine existing plant data and sensors — including AquaSpectra™ — to detect issues early, identify the cause and recommend the best action.</p>
+            <ul class="sources">
+              <li><svg class="ic"><use href="#i-wave" /></svg><span><b>Process data</b> Flow, pressure, temperature</span></li>
+              <li><svg class="ic"><use href="#i-camera" /></svg><span><b>Visual data</b> Cameras and acoustics</span></li>
+              <li><svg class="ic"><use href="#i-flask" /></svg><span><b>Lab data</b> LIMS and QA/QC</span></li>
+              <li><svg class="ic"><use href="#i-pulse" /></svg><span><b>AquaSpectra™</b> Inline optical water quality</span></li>
+              <li><svg class="ic"><use href="#i-db" /></svg><span><b>Existing systems</b> SCADA, PLC, historians, CMMS, ERP</span></li>
+            </ul>
+            <p class="stage-foot"><svg class="ic"><use href="#i-trend" /></svg>See developing problems hours or days earlier.</p>
+          </article>
+
+          <article class="stage">
+            <header><span class="num lg">2</span><div><p class="stage-when">Next step</p><h3>AI control in the plant</h3></div></header>
+            <p>The AquaMesh compute blade runs real-time models on-site and executes approved changes through your existing PLC/SCADA systems.</p>
+            <img class="blade" src="assets/compute-blade.jpg" width="1200" height="237" loading="lazy" decoding="async" alt="The AquaMesh compute blade, a 1U rack-mounted edge server." />
+            <ul class="sources">
+              <li><svg class="ic"><use href="#i-sliders" /></svg><span><b>Execute approved changes</b> Setpoints, valves, pumps, dosing</span></li>
+              <li><svg class="ic"><use href="#i-wave" /></svg><span><b>Optimize across processes</b> Water, energy, chemicals, yield</span></li>
+              <li><svg class="ic"><use href="#i-shield" /></svg><span><b>Maintain validated limits</b> Safety, quality and compliance</span></li>
+              <li><svg class="ic"><use href="#i-return" /></svg><span><b>Back to advisory at any time</b> You stay in control</span></li>
+            </ul>
+            <p class="stage-foot"><svg class="ic"><use href="#i-gear" /></svg>Closed-loop control. Measurable results.</p>
+          </article>
+
+          <article class="stage">
+            <header><span class="num lg">3</span><div><p class="stage-when">Future vision</p><h3>AI agents across the plant</h3></div></header>
+            <p>A growing set of AI agents monitor, predict and control critical systems across the facility — starting with water.</p>
+            <ul class="agents">
+              <li><svg class="ic"><use href="#i-drop" /></svg><span><b>Water agent</b> Optimize use, reuse and discharge</span></li>
+              <li><svg class="ic"><use href="#i-bolt" /></svg><span><b>Energy agent</b> Reduce energy use and peak demand</span></li>
+              <li><svg class="ic"><use href="#i-gear" /></svg><span><b>Process agent</b> Maximize yield, throughput and quality</span></li>
+              <li><svg class="ic"><use href="#i-shield" /></svg><span><b>Security agent</b> Detect intrusions, safety risks and unusual activity</span></li>
+            </ul>
+            <p class="stage-foot"><svg class="ic"><use href="#i-chart" /></svg>A safer, more efficient plant. Same infrastructure. More value.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why AquaMesh ─────────────────────────────────────── -->
+    <section class="section" id="why">
+      <div class="wrap why">
+        <div class="head">
+          <p class="eyebrow">Why AquaMesh</p>
+          <h2>Lean, fast, and focused on <span class="accent">measurable results.</span></h2>
+          <p class="lead">Enterprise water platforms are powerful but heavyweight. Point solutions are quick but narrow. AquaMesh fills the gap — real operational value, faster and with less effort.</p>
+        </div>
+        <ul class="checks">
+          <li><span class="tick"><svg class="ic"><use href="#i-check" /></svg></span><div><h3>Uses the plant data you already have</h3><p>No rip-and-replace. Works from SCADA, PLCs, historians, LIMS and CMMS.</p></div></li>
+          <li><span class="tick"><svg class="ic"><use href="#i-check" /></svg></span><div><h3>Fast and low-cost to deploy</h3><p>Insight from existing data first; hardware only where it pays for itself.</p></div></li>
+          <li><span class="tick"><svg class="ic"><use href="#i-check" /></svg></span><div><h3>Adds targeted sensing when needed</h3><p>AquaSpectra™ goes where your instruments leave blind spots — not everywhere.</p></div></li>
+          <li><span class="tick"><svg class="ic"><use href="#i-check" /></svg></span><div><h3>AI insights tied to operational value</h3><p>Every recommendation carries its cost and the result it should deliver.</p></div></li>
+          <li><span class="tick"><svg class="ic"><use href="#i-check" /></svg></span><div><h3>Vendor-neutral</h3><p>Works with your equipment, your instruments and your control system.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Closing CTA ──────────────────────────────────────── -->
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <p class="eyebrow light">See <svg class="ic"><use href="#i-arrow" /></svg> Predict <svg class="ic"><use href="#i-arrow" /></svg> Act</p>
+        <h2>See value first. Then decide.</h2>
+        <p class="lead">Start with a free audit of your process, goals and existing data. No obligation, no hardware to buy up front.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="mailto:info@aquamesh.ai?subject=Free%20water%20audit">Get a free audit <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
