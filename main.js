@@ -57,6 +57,9 @@
     var r = canvas.getBoundingClientRect();
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = r.width; H = r.height;
+    // A zero-sized canvas (laid out but not yet measured) would make every
+    // derived radius negative; skip until it has real dimensions.
+    if (W < 40 || H < 40) { dots = []; lines = []; target = null; lens = null; return; }
     canvas.width = Math.max(1, Math.round(W * dpr));
     canvas.height = Math.max(1, Math.round(H * dpr));
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -112,6 +115,7 @@
   }
 
   function draw(ms) {
+    if (!target || !lens || lens.rx <= 0) return;
     var t = ms / 1000, still = reduce.matches;
     ctx.clearRect(0, 0, W, H);
 

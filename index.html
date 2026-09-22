@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
   <!-- Icon + wordmark sprite. Kept rendered (not display:none) so the clip paths resolve in every browser. -->
@@ -93,7 +93,7 @@
         <a href="#platform">Platform</a>
         <a href="#how">How it works</a>
         <a href="#roadmap">Roadmap</a>
-        <a href="#results">Results</a>
+        <a href="#case-studies">Case studies</a>
         <a href="#why">Why AquaMesh</a>
       </nav>
       <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
@@ -125,11 +125,6 @@
             <img class="shot-screen" src="assets/screen.jpg" width="1800" height="1140" fetchpriority="high" decoding="async"
                  alt="The AquaMesh dashboard: a live 3D digital twin of a water treatment plant with live readings, savings and cost tiles." />
           </div>
-          <div class="float-finding" aria-hidden="true">
-            <p class="ff-tags"><span class="tag crit">Critical</span><span class="ff-ago">8m ago</span></p>
-            <p class="ff-title">Potable line 2 flat for 24 hours</p>
-            <p class="ff-body">Genuine demand or a leak? If it's a leak: <b>~$3.0k/yr</b></p>
-          </div>
           <figcaption><b>AquaSpectra™</b> Fills the blind spots existing sensors miss.</figcaption>
         </figure>
       </div>
@@ -147,31 +142,39 @@
       </div>
     </section>
 
-    <!-- ── Real results ─────────────────────────────────────── -->
-    <section class="section proof" id="results">
+    <!-- ── Case studies ─────────────────────────────────────── -->
+    <section class="section" id="case-studies">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Real plants. Real results.</p>
-          <h2>What AquaMesh found in <span class="accent">one plant's existing data.</span></h2>
-          <p class="lead">The first audit of a live membrane-bioreactor water-reuse plant — no new hardware, just the SCADA history it already had.</p>
+          <p class="eyebrow">Real plants. Real numbers.</p>
+          <h2>What AquaMesh finds in <span class="accent">a plant's own data.</span></h2>
+          <p class="lead">Two case studies: a water-reuse plant where 25 days of existing history was enough to rank what it was losing, and a corn wet-milling facility where the loss leaves with the product long before it reaches wastewater.</p>
         </div>
-        <div class="proof-grid">
-          <div class="proof-total">
-            <p class="proof-num">$34,870<small>/yr</small></p>
-            <p class="proof-label">in savings identified</p>
-            <ul class="proof-split">
-              <li><b>$18,490</b> energy</li>
-              <li><b>$16,380</b> reporting time</li>
-            </ul>
-          </div>
-          <ul class="proof-findings">
-            <li><p class="pf-num">151,000<small> gal/day</small></p><p>on a potable line that never dropped below 5 gpm in 25 days — flagged for leak investigation.</p></li>
-            <li><p class="pf-num">10.9×</p><p>the dissolved oxygen of its twin basin, with the blower pinned at 99.99% — paying for air the process doesn't need.</p></li>
-            <li><p class="pf-num">84% / 39%</p><p>duty split between two pumps meant to share the load — one wearing out twice as fast.</p></li>
-            <li><p class="pf-num">16 of 16</p><p>spray-field flow totalizers frozen — reuse volumes nobody could report.</p></li>
-          </ul>
+        <div class="case-grid">
+          <a class="case-card" href="case-studies/water-reuse-plant.html">
+            <p class="case-kicker"><span class="tagline">Case study</span> Membrane-bioreactor water reuse</p>
+            <h3>25 days of history. $34,870 a year in avoidable cost.</h3>
+            <p class="case-body">No new hardware and no site visit — just the plant's own SCADA export, ranked by what each finding costs per year.</p>
+            <dl class="case-stats">
+              <div><dt>identified</dt><dd>$34,870<small>/yr</small></dd></div>
+              <div><dt>on a flat potable line</dt><dd>151,000<small> gal/day</small></dd></div>
+              <div><dt>DO between twin basins</dt><dd>10.9×</dd></div>
+            </dl>
+            <span class="case-link">Read the case study <svg class="ic"><use href="#i-arrow" /></svg></span>
+          </a>
+          <a class="case-card" href="case-studies/starch-plant.html">
+            <p class="case-kicker"><span class="tagline">Case study</span> Corn wet milling · starch loss</p>
+            <h3>One pound of starch per bushel is 160 tons a day.</h3>
+            <p class="case-body">An assessment of where starch escapes — separation, washing, CIP, dewatering — and how UV/Vis and NIR spectra catch it before it becomes wastewater load.</p>
+            <dl class="case-stats">
+              <div><dt>bushels a day</dt><dd>320,000</dd></div>
+              <div><dt>water a day</dt><dd>20.5M<small> gal</small></dd></div>
+              <div><dt>starch signal, NIR</dt><dd>↑2.8σ</dd></div>
+            </dl>
+            <span class="case-link">Read the case study <svg class="ic"><use href="#i-arrow" /></svg></span>
+          </a>
         </div>
-        <p class="proof-note">Anonymized results from a customer plant. Savings are identified opportunities, not yet realized.</p>
+        <p class="case-note">Figures are identified opportunities and publicly reported operating scale — not realized savings. Plants are anonymized.</p>
       </div>
     </section>
 
@@ -450,6 +453,6 @@
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script src="main.js?v=2" defer></script>
 </body>
 </html>

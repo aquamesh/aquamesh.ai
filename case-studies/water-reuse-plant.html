@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case study — 25 days of history, $34,870 a year | AquaMesh</title>
+  <meta name="description" content="AquaMesh read 25 days of a membrane-bioreactor reuse plant's existing SCADA history — no new hardware — and ranked $34,870 a year of avoidable cost." />
+  <link rel="canonical" href="https://aquamesh.ai/case-studies/water-reuse-plant.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Case study — 25 days of history, $34,870 a year | AquaMesh" />
+  <meta property="og:description" content="What AquaMesh found in a water-reuse plant's own SCADA history, with no new hardware." />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#platform">Platform</a>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#case-studies">Case studies</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+
+  <main class="cs">
+    <section class="section cs-head">
+      <div class="wrap">
+        <a class="cs-back" href="../index.html#case-studies"><svg class="ic"><use href="#i-back" /></svg>All case studies</a>
+        <p class="eyebrow">Case study · Membrane-bioreactor water reuse</p>
+        <h1>25 days of history.<br /><span class="accent">$34,870 a year</span> in avoidable cost.</h1>
+        <p class="lead">A water-reuse plant gave AquaMesh an export of its own historian — no new instruments, no site visit. What came back was a ranked list of what the plant was losing, what to check first, and what each item was worth over a year.</p>
+        <dl class="cs-facts">
+          <div><dt>Process</dt><dd>Flat-sheet membrane bioreactor, recycled water for indoor reuse and irrigation</dd></div>
+          <div><dt>Scale</dt><dd>~140,000 gallons a day</dd></div>
+          <div><dt>Input</dt><dd>25 days of existing SCADA history, ~1,100 tags</dd></div>
+          <div><dt>New hardware</dt><dd>None</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap cs-two">
+        <div>
+          <h2>The plant</h2>
+          <p>Wastewater arrives at a lift station, passes a fine screen, and runs through anoxic basins for denitrification into aerated pre-air basins. Membranes separate the treated water from the biomass; permeate pumps draw it through, chlorine contact disinfects it, and a reservoir holds it for reuse — indoor flushing, irrigation and fire suppression.</p>
+          <p>It is a small plant that does a demanding job: the water it makes goes back into an occupied building, so every disinfection and turbidity question carries real stakes.</p>
+        </div>
+        <div>
+          <h2>What AquaMesh did</h2>
+          <p>Read the export. Build a model of each signal's normal behaviour and of each pair of parallel units — two basins, two pumps, two membrane trains — then look for the pairs that stopped agreeing and the signals that stopped moving.</p>
+          <p>Every finding is priced. The plant's own energy tariff turns a wasted kilowatt into dollars a year, so the list comes back ranked by what it costs rather than by how unusual it looks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">What it found</p>
+          <h2>Five things the plant could not see <span class="accent">from its own screens.</span></h2>
+        </div>
+        <ul class="cs-findings">
+          <li>
+            <p class="pf-num">151,000<small> gal/day</small></p>
+            <h3>A potable line that never rests</h3>
+            <p>One line drew about 105 gpm around the clock and never dropped below 5 gpm in 25 days, while its neighbour varied normally through the day. A flat 24-hour draw is the signature of a continuous loss. Flagged for field investigation — if it is a leak, the pumping energy alone is roughly $8,000 a year.</p>
+          </li>
+          <li>
+            <p class="pf-num">10.9×</p>
+            <h3>Twin basins that disagreed all month</h3>
+            <p>Two basins measuring the same variable read 5.14 and 0.52 mg/L of dissolved oxygen, with one blower pinned at 99.99%. A divergence that large and that persistent is a control fault, a split valve or a drifting instrument — and it held for the whole window rather than appearing as a transient.</p>
+          </li>
+          <li>
+            <p class="pf-num">84% / 39%</p>
+            <h3>Pumps not sharing the load</h3>
+            <p>A lead/lag setting left one pump carrying more than twice the duty of its twin. The lead unit reaches overhaul years earlier than it needs to, while the standby sits idle — the same pattern showed up again on mixers.</p>
+          </li>
+          <li>
+            <p class="pf-num">16 of 16</p>
+            <h3>Frozen reuse totalizers</h3>
+            <p>Every spray-field zone totalizer read exactly the same value for 25 days. Nobody could report how much recycled water each zone received, which is the number that reuse reporting is built on.</p>
+          </li>
+          <li>
+            <p class="pf-num">8×</p>
+            <h3>Two turbidimeters, two answers</h3>
+            <p>The pair watching the same membrane filtrate disagreed eightfold at the 90th percentile. Whichever one is right, compliance decisions had been resting on a reading that could not be trusted.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section night">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">In the software</p>
+          <h2>Every finding says what to do <span class="accent">and what it is worth.</span></h2>
+          <p class="lead">The same findings as the operator sees them: severity, the action to take, the tags that are the evidence, and the annual value where there is one. Operators acknowledge, accept, resolve or dismiss — and accepted items are tracked to see whether the number actually moved.</p>
+        </div>
+        <figure class="cs-shot">
+          <img src="../assets/audit.jpg" width="1400" height="1392" loading="lazy" decoding="async"
+               alt="The AquaMesh recommendations view: counts of critical, warning and advisory findings with open value per year, then cards for mixers not sharing duty, a scour-airflow setpoint opportunity worth $5,393 a year, and twin basins whose dissolved oxygen disagrees by 9.9×." />
+          <figcaption>Plant name removed. Everything else is the product as it ships.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cs-value">
+        <div class="proof-total">
+          <p class="proof-num">$34,870<small>/yr</small></p>
+          <p class="proof-label">identified in one pass</p>
+          <ul class="proof-split">
+            <li><b>$18,490</b> energy</li>
+            <li><b>$16,380</b> reporting time</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Where the value sits</h2>
+          <p>Half of it is energy: air the process does not need, pumps running against each other, a scour setpoint the optimizer can lower without touching a single constraint. The other half is time — about seven hours a week of manual reporting that the plant's own data can produce on its own.</p>
+          <p>Neither number required new instruments. Both came out of data the plant had already been recording, and neither is realized until somebody acts on it. That is the point of the ranking: the list tells you which hour of work pays the most.</p>
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>Bring your own history.</h2>
+        <p class="lead">If your plant has a historian, AquaMesh has something to read. A demo starts with your process, your goals and the data you already keep.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+        <p class="cs-note">Anonymized case study. Figures are identified opportunities from a 25-day window, not realized savings, and are specific to this plant.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+    </div>
+  </footer>
+</body>
+</html>

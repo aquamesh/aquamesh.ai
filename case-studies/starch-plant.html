@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case study — finding starch loss before wastewater | AquaMesh</title>
+  <meta name="description" content="An assessment for a corn wet-milling facility: where starch escapes the process, and how UV/Vis and NIR spectra catch it in real time instead of hours later in the lab." />
+  <link rel="canonical" href="https://aquamesh.ai/case-studies/starch-plant.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Case study — finding starch loss before wastewater | AquaMesh" />
+  <meta property="og:description" content="One pound of starch per bushel is 160 tons a day. Where it goes, and how to see it leaving." />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5" /><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" /></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6" /></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" /></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M6 4v8M6 16v4M12 4v2M12 10v10M18 4v9M18 17v3" /><circle cx="6" cy="14" r="2" /><circle cx="12" cy="8" r="2" /><circle cx="18" cy="15" r="2" /></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#platform">Platform</a>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#case-studies">Case studies</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+
+  <main class="cs">
+    <section class="section cs-head">
+      <div class="wrap">
+        <a class="cs-back" href="../index.html#case-studies"><svg class="ic"><use href="#i-back" /></svg>All case studies</a>
+        <p class="eyebrow">Case study · Corn wet milling</p>
+        <h1>One pound of starch per bushel is <span class="accent">160 tons a day.</span></h1>
+        <p class="lead">An assessment prepared for a corn wet-milling facility. At its published operating scale, small upstream losses stop being small — and by the time they show up in wastewater, the product is already gone.</p>
+        <dl class="cs-facts">
+          <div><dt>Corn processed</dt><dd>320,000 bushels a day</dd></div>
+          <div><dt>Starch equivalent moving</dt><dd>10.2M lb a day</dd></div>
+          <div><dt>Water</dt><dd>20.5M gallons a day</dd></div>
+          <div><dt>One lb per bushel</dt><dd>160 tons a day</dd></div>
+        </dl>
+        <p class="cs-note">Throughput and water figures are publicly reported operating scale. Starch quantity uses the EPA average wet-milling yield. No actual loss rate is assumed for this facility.</p>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Where the problem shows up</p>
+          <h2>Find the loss <span class="accent">before it reaches wastewater.</span></h2>
+          <p class="lead">In starch processing, small upstream losses become lost yield, excess water load, higher energy use and more treatment demand. Each step has its own way of letting product escape.</p>
+        </div>
+        <figure class="cs-figure">
+          <img src="../assets/starch-process.jpg" width="1800" height="455" loading="lazy" decoding="async"
+               alt="Six process steps and how each loses starch: separation (hydrocyclone and screen drift let fines escape), washing (multi-stage washing can carry product into overflow), CIP (rinse steps send recoverable product to drain), dewatering (moisture variability raises dryer load and hides loss), drying (excess water carried forward becomes avoidable energy cost) and wastewater (lost starch raises COD/TSS load, sludge and treatment burden)." />
+        </figure>
+        <p class="cs-callout"><b>Wastewater is where the problem appears. The value is in finding where it started.</b> Lab results come back hours later, when the load has already moved through the plant.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">How AquaMesh would see it</p>
+          <h2>Use the plant data you already have. <span class="accent">Add sensing only where the process is blind.</span></h2>
+        </div>
+        <ol class="cs-steps">
+          <li><span class="num">1</span><div><h3>Connect</h3><p>Historian, PLC/SCADA, lab results, flow, pressure, temperature, conductivity, turbidity, utilities, production and CIP records.</p></div></li>
+          <li><span class="num">2</span><div><h3>Measure the gaps</h3><p>AquaSpectra™ for solids, turbidity and organic load. NIR or other instruments only where direct starch, protein or moisture measurement is needed.</p></div></li>
+          <li><span class="num">3</span><div><h3>Learn the process</h3><p>Link feed variability, machine behaviour, wash conditions, dewatering and wastewater signals to find the drivers of loss.</p></div></li>
+          <li><span class="num">4</span><div><h3>Act and verify</h3><p>Operators receive recommendations first. Only after validation can AquaMesh execute approved changes inside the plant's own operating limits — and verify the result.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">The measurement</p>
+          <h2>Two windows. <span class="accent">One fingerprint.</span></h2>
+          <p class="lead">AquaSpectra captures UV/Vis (190–440 nm) and NIR (900–1700 nm) spectra every few seconds. A one-time model of the plant's own starch product becomes the reference, and the system watches for deviation from it rather than trying to hold an absolute calibration.</p>
+        </div>
+        <figure class="cs-figure">
+          <img src="../assets/starch-spectra.jpg" width="1700" height="837" loading="lazy" decoding="async"
+               alt="Three panels: UV/Vis and NIR absorbance spectra at clean, rising, high and very high starch loss; a reference starch fingerprint across 200–1700 nm; and spectral deviation from that reference for small, moderate and large changes." />
+          <figcaption>Because the model tracks change rather than absolute values, it is insensitive to drift and calibration, and it holds across recipes, seasons and raw materials.</figcaption>
+        </figure>
+        <div class="table-wrap">
+          <table class="cs-table">
+            <caption>Example indicators, expressed as deviation from the plant's own reference</caption>
+            <thead><tr><th>Indicator</th><th>Deviation</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>NIR starch signal (900–1700 nm)</td><td>↑ 2.8 σ</td><td>Direct starch signature increase</td></tr>
+              <tr><td>Starch Loss Index (yield protection)</td><td>↑ 2.6 σ</td><td>Starch escaping to wastewater</td></tr>
+              <tr><td>fDOM (UV254)</td><td>↑ 2.1 σ</td><td>Higher soluble organics</td></tr>
+              <tr><td>COD/BOD proxy (TOC + UV254/SAC254)</td><td>↑ 1.9 σ</td><td>Rising organic load</td></tr>
+              <tr><td>Turbidity / solids</td><td>↑ 1.4 σ</td><td>Higher suspended solids</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <dl class="cs-context">
+          <div><dt>High-COD wastewater per tonne of starch produced</dt><dd>10–20 m³</dd></div>
+          <div><dt>Typical secondary effluent</dt><dd>200–250 mg/L COD</dd></div>
+          <div><dt>COD removal in healthy anaerobic digesters</dt><dd>&gt;89%</dd></div>
+          <div><dt>Lag on lab results while the load moves</dt><dd>Hours</dd></div>
+        </dl>
+        <p class="cs-note">Industry reference figures, not measurements from this facility. Sources: Anaerobic Digestion Starch Wastewater Guide; iFactory (BOD, COD &amp; compliance); LAR corn-milling TOC monitoring; MDPI 13(10):1762 flocculation study.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">The proposal</p>
+          <h2>Start small. <span class="accent">Prove value in 90 days.</span></h2>
+          <p class="lead">One process area, quantified: what the losses are, what they cost, and whether the recommendations move the number.</p>
+        </div>
+        <ol class="cs-steps three">
+          <li><span class="num">1</span><div><h3>Days 1–30 · Establish the baseline</h3><p>Connect to existing data, map the process and define KPIs, quantify current losses and variability, identify the high-impact opportunities.</p></div></li>
+          <li><span class="num">2</span><div><h3>Days 31–60 · Find and prioritize</h3><p>Detect and rank the top loss mechanisms, correlate drivers across process, quality and effluent, deliver real-time insight, validate with operators and lab data.</p></div></li>
+          <li><span class="num">3</span><div><h3>Days 61–90 · Prove and plan</h3><p>Quantify the impact of the recommended actions, build the economic case, define the scope for control and sensing, and lay out the deployment roadmap.</p></div></li>
+        </ol>
+        <p class="cs-callout"><b>No automated control in the pilot.</b> Insights and recommendations first; control comes only after validation and approval.</p>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>What is your process losing?</h2>
+        <p class="lead">The same assessment starts with your data: the historian you already keep, your lab results, and the process you already run.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+        <p class="cs-note">Anonymized case study built from publicly reported operating scale and industry references. Deviation figures are illustrative of the method, not measurements from this facility.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+    </div>
+  </footer>
+</body>
+</html>
