@@ -571,8 +571,25 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
 .cs .closing { border-top: 1px solid var(--rule); padding-bottom: clamp(56px, 8vw, 90px); }
 
 /* ── Company page (kept simple: story, founder, advisors, terms) ─── */
-.co-story { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 64px); }
-.co-story h2 { font-size: clamp(1.4rem, 2.1vw, 1.8rem); margin-bottom: 12px; }
+/* ── Story rows ──────────────────────────────────────────────── */
+.story-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(26px, 4vw, 56px); align-items: center; }
+.story-row + .story-row { margin-top: clamp(38px, 5vw, 68px); }
+.story-row.reverse .story-shot { order: 2; }
+.story-shot { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 2px rgba(16,30,70,0.06), 0 18px 44px rgba(16,30,70,0.13); }
+.story-shot img { width: 100%; height: auto; display: block; }
+.story-copy { display: flex; flex-direction: column; gap: 12px; }
+.story-copy h2 { font-size: clamp(1.7rem, 2.6vw, 2.3rem); }
+.story-copy p { font-size: 1.02rem; line-height: 1.6; max-width: 56ch; }
+.story-copy .eyebrow { color: var(--ink-3); }
+
+.origins { margin-top: clamp(40px, 5vw, 72px); padding-top: clamp(26px, 3vw, 38px); border-top: 1px solid var(--rule); }
+.origins-label { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); }
+.origins-marks { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 4vw, 60px); }
+.origins-marks img { height: clamp(30px, 3.4vw, 42px); width: auto; mix-blend-mode: multiply; }
+.origins-marks li:nth-child(2) img { height: clamp(38px, 4.2vw, 52px); }
+.origins-text { font-family: var(--display); font-size: clamp(1.15rem, 1.6vw, 1.45rem); font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.origins-note { margin-top: 18px; font-size: 0.86rem; color: var(--ink-3); max-width: 84ch; }
+
 /* ── Team ────────────────────────────────────────────────────── */
 /* Portraits are the source ovals uncropped - the rounded ends sit on the
    card's own white, so nothing is cut off the top of anyone's head. */
@@ -663,7 +680,8 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
   .cs-facts > div:nth-child(n + 3) { border-top: 1px solid var(--rule); }
   .estimator { grid-template-columns: minmax(0, 1fr); }
   .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .co-story { grid-template-columns: minmax(0, 1fr); }
+  .story-row, .story-row.reverse { grid-template-columns: minmax(0, 1fr); }
+  .story-row.reverse .story-shot { order: 0; }
   .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .trio, .stages { grid-template-columns: minmax(0, 1fr); }
   .platform-grid { grid-template-columns: minmax(0, 1fr); }
