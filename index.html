@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- Icon + wordmark sprite. Kept rendered (not display:none) so the clip paths resolve in every browser. -->
@@ -169,41 +169,48 @@
         <div class="head">
           <p class="eyebrow">Water intelligence. Real impact.</p>
           <h2>What is this problem <span class="accent">costing you?</span></h2>
-          <p class="lead">Most of it goes undetected until it has already cost you — in product, downtime, energy or compliance. And because exceedances are self-reported, what happens next is public record. What these have in common is duration: violations counted in the hundreds, across years, not one bad day.</p>
+          <p class="lead">Most of it goes undetected until it has already cost you — in product, downtime, energy or compliance.</p>
         </div>
-        <ul class="ledger">
-          <li>
-            <span class="ledger-sector">Industrial wastewater</span>
-            <span class="ledger-what">186 discharge-permit exceedances since 2016 — copper, aluminium, residual chlorine, phenolics, iron — then a new treatment plant built under order</span>
-            <span class="ledger-num">$1.9M<small> penalty + capital</small></span>
-          </li>
-          <li>
-            <span class="ledger-sector">Food &amp; beverage</span>
-            <span class="ledger-what">Permit limits exceeded on solids, ammonia, nitrogen and phosphorus — recent settlements across processing plants</span>
-            <span class="ledger-num">$230K–2.5M<small> per settlement</small></span>
-          </li>
-          <li>
-            <span class="ledger-sector">Any high-strength discharger</span>
-            <span class="ledger-what">BOD and suspended solids over the sewer threshold, billed by the pound — not a fine, a line on every monthly invoice</span>
-            <span class="ledger-num">$0.02–0.60<small> / lb over</small></span>
-          </li>
-          <li>
-            <span class="ledger-sector">Mining &amp; power</span>
-            <span class="ledger-what">System-wide treatment upgrades ordered alongside a record Clean Water Act penalty</span>
-            <span class="ledger-num">$200M<small> in upgrades</small></span>
-          </li>
-          <li>
-            <span class="ledger-sector">Water reuse</span>
-            <span class="ledger-what">Avoidable cost we found in 25 days of one plant’s existing history — no new instruments</span>
-            <span class="ledger-num">$92,200<small> / yr</small></span>
-          </li>
-          <li>
-            <span class="ledger-sector">Corn wet milling</span>
-            <span class="ledger-what">One pound of starch lost per bushel, at 320,000 bushels a day</span>
-            <span class="ledger-num">160 tons<small> / day</small></span>
-          </li>
-        </ul>
-        <p class="ledger-note">Penalties from public <a href="https://www.epa.gov/enforcement/water-enforcement" rel="noopener">EPA</a> and <a href="https://www.justice.gov/enrd" rel="noopener">DOJ</a> enforcement records, 2023–2025; surcharge rates from published municipal schedules. Other plants, named by sector only — shown because the exposure has the same shape everywhere. The last two rows are our own <a href="case-studies/index.html">case studies</a>.</p>
+        <div class="trio">
+          <article class="card">
+            <div class="card-top"><span class="num">1</span><div><h3>The problem</h3><p class="sub">What is going wrong?</p></div></div>
+            <ul class="qa">
+              <li><b>What happens?</b> Product and starch loss, membrane fouling, permit exceedances, BOD and solids over the sewer threshold, twin units drifting apart, pumps short-cycling, air the process never needed.</li>
+              <li><b>Who does it happen to?</b> Food and beverage, industrial wastewater, dairy, pharma, manufacturing, municipal reuse — the mechanism changes, the blind spot does not.</li>
+              <li><b>What has it cost others?</b> $230K to $2.5M in Clean Water Act penalties for exceedances that ran for years, plus surcharges billed by the pound every month.</li>
+              <li><b>How do you catch it today?</b> Lab results, manual checks, operator observation.</li>
+              <li><b>How long before you know?</b> Hours, days — sometimes weeks.</li>
+            </ul>
+            <div class="figure slate"><span class="figure-label">Time to detection today</span><span class="figure-num">Hours – weeks</span><span class="figure-note">Lab turnaround, manual rounds, operator eyes</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="num">2</span><div><h3>The cost</h3><p class="sub">What happens when you don't catch it early?</p></div></div>
+            <ul class="costs">
+              <li><svg class="ic"><use href="#i-coins" /></svg><span><b>Product &amp; material loss</b> Lost yield, off-spec, recalls</span></li>
+              <li><svg class="ic"><use href="#i-factory" /></svg><span><b>Downtime</b> Hours offline, missed orders</span></li>
+              <li><svg class="ic"><use href="#i-bolt" /></svg><span><b>Water, energy, chemicals</b> Unnecessary use, higher OPEX</span></li>
+              <li><svg class="ic"><use href="#i-shield" /></svg><span><b>Quality &amp; compliance</b> Fines, penalties, reputational risk</span></li>
+            </ul>
+            <div class="figure blue"><span class="figure-label">Total potential impact</span><span class="figure-num">$500K – $5M+ <small>/ year</small></span><span class="figure-note">Typical industrial range</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="num">3</span><div><h3>The opportunity</h3><p class="sub">Could earlier visibility change the outcome?</p></div></div>
+            <ul class="qa">
+              <li><b>What would you do if you knew earlier?</b> Adjust the process, isolate the source, schedule maintenance, prevent a release.</li>
+              <li><b>Can AquaMesh detect or predict it?</b> <span class="verdict"><em class="yes">Yes</em> / <em class="test">Test</em> / <em>No</em></span> — we tell you which.</li>
+              <li><b>Can the result be measured?</b> Higher yield, lower OPEX, fewer upsets.</li>
+            </ul>
+            <div class="figure green"><span class="figure-label">Potential recoverable value</span><span class="figure-num">$250K – $1M+ <small>/ year</small></span><span class="figure-note">Per facility, typical opportunities</span></div>
+          </article>
+        </div>
+
+        <ol class="flowbar" aria-label="How we work through it">
+          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><span>Identify the problem</span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-dollar" /></svg></span><span>Quantify the cost</span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><span>Get earlier visibility</span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-gear" /></svg></span><span>Take action <small>Operator-approved</small></span></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-trend" /></svg></span><span>Realize measurable value</span></li>
+        </ol>
 
         <div class="estimator" id="estimate">
           <div class="est-copy">
@@ -331,49 +338,8 @@
           <li><span class="disc"><svg class="ic"><use href="#i-shield" /></svg></span><h3>Advisory by default</h3><p>Nothing changes on your plant without an operator's approval. Closed-loop control is opt-in, and reversible.</p></li>
           <li><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Every change on the record</h3><p>Recommendations, approvals and setting changes are logged — who, what and when.</p></li>
           <li><span class="disc"><svg class="ic"><use href="#i-bell" /></svg></span><h3>Alarms that reach a person</h3><p>Critical excursions escalate by phone down your on-call list until someone acknowledges.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-lock" /></svg></span><h3>Your data, walled off</h3><p>Every query is scoped to your plant at the database level, enforced by the database itself rather than by application code.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-lock" /></svg></span><h3>Read-only and walled off</h3><p>We read your data, we don't write to your systems. Encrypted in transit and at rest, on secure cloud infrastructure, and isolated at the database level so one plant's readings are never visible to another.</p></li>
         </ul>
-
-        <div class="sec">
-          <div class="sec-cols">
-            <div class="sec-col">
-              <h3><svg class="ic"><use href="#i-return" /></svg>Into the plant, one way</h3>
-              <ul>
-                <li><b>Outbound only.</b> The connector dials out. No inbound firewall rule, no listening port, no remote session into your network.</li>
-                <li><b>Read-only until you say otherwise.</b> Data collection and control are separate credentials; the collector cannot write at all.</li>
-                <li><b>Level 3.5 and above.</b> Deployed in the DMZ, with the zones-and-conduits separation IEC 62443 describes — never on the control network.</li>
-              </ul>
-            </div>
-            <div class="sec-col">
-              <h3><svg class="ic"><use href="#i-lock" /></svg>Around your data</h3>
-              <ul>
-                <li><b>TLS 1.3 in transit, AES-256 at rest.</b> No exceptions, including backups.</li>
-                <li><b>One tenant, one boundary.</b> Row-level security on every table, forced for every role, so a query without your plant’s identity returns nothing.</li>
-                <li><b>SSO, MFA and roles.</b> SAML or OIDC against your own directory, least-privilege roles, and an audit trail that records who approved what and when.</li>
-                <li><b>Yours to take back.</b> Open-format export on request, at any time, without a support ticket.</li>
-              </ul>
-            </div>
-            <div class="sec-col">
-              <h3><svg class="ic"><use href="#i-shield" /></svg>Nowhere near safety</h3>
-              <ul>
-                <li><b>Outside the safety system.</b> AquaMesh is never in the path of a safety instrumented function — the IEC 61511 / ISA 84 layer stays entirely independent of us.</li>
-                <li><b>Inside your limits.</b> Any approved change is clamped to the operating envelope your engineers set, and refused outside it.</li>
-                <li><b>Advisory is the default state.</b> Not a setting we ship enabled — the control path physically refuses to write until you turn it on.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="sec-std">
-            <p class="sec-std-label">Designed and documented against</p>
-            <ul class="chips">
-              <li>ISA/IEC 62443</li>
-              <li>NIST SP 800-82 Rev. 3</li>
-              <li>NIST CSF 2.0</li>
-              <li>IEC 61511 / ISA 84</li>
-              <li>AWWA water-sector cyber guidance</li>
-            </ul>
-            <p class="sec-note">Alignment means our architecture and documentation are built to these frameworks and we will walk your team through the mapping. We are not claiming a third-party certification we do not yet hold — ask us where we are and we will tell you plainly.</p>
-          </div>
-        </div>
       </div>
     </section>
 
