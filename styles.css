@@ -574,36 +574,48 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
 .co-story { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 64px); }
 .co-story h2 { font-size: clamp(1.4rem, 2.1vw, 1.8rem); margin-bottom: 12px; }
 /* ── Team ────────────────────────────────────────────────────── */
+/* Portraits are the source ovals uncropped - the rounded ends sit on the
+   card's own white, so nothing is cut off the top of anyone's head. */
 .team-lead {
-  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 3vw, 40px);
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(26px, 3.4vw, 52px);
   align-items: center; background: #fff; border: 1px solid var(--rule);
-  border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(24px, 3vw, 38px);
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(26px, 3vw, 44px);
 }
 .team-lead img {
-  width: clamp(150px, 16vw, 210px); height: clamp(150px, 16vw, 210px);
-  border-radius: 50%; object-fit: cover; background: var(--wash);
-  box-shadow: 0 0 0 1px var(--rule), 0 14px 34px rgba(16, 30, 70, 0.14);
+  width: clamp(190px, 21vw, 300px); aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 16px; background: var(--wash);
 }
-.team-lead > div { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-.team-lead h3 { font-size: clamp(1.8rem, 2.6vw, 2.3rem); font-weight: 800; letter-spacing: -0.025em; }
-.team-lead p { font-size: 1rem; max-width: 62ch; }
-.team-lead .mail { padding-left: 0; }
+.team-lead > div { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.team-lead h3 { font-size: clamp(2.1rem, 3.4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; }
+.team-lead .co-role { font-size: 0.82rem; letter-spacing: 0.22em; color: var(--blue); }
+.team-lead p { font-size: 1.06rem; line-height: 1.55; max-width: 58ch; }
+.team-lead .mail { padding-left: 0; font-size: 1rem; }
+.team-lead .co-affil { font-size: 1.05rem; font-weight: 800; color: var(--blue); margin-top: -4px; }
 
-.team-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.team-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
 .team-grid li {
   background: #fff; border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow);
-  padding: 26px 24px 24px; display: flex; flex-direction: column; align-items: center;
-  text-align: center; gap: 6px;
+  padding: 26px 24px 28px; display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 5px;
 }
 .team-grid img {
-  width: clamp(112px, 12vw, 156px); height: clamp(112px, 12vw, 156px);
-  border-radius: 50%; object-fit: cover; background: var(--wash); margin-bottom: 10px;
-  box-shadow: 0 0 0 1px var(--rule), 0 10px 26px rgba(16, 30, 70, 0.12);
+  width: min(100%, 250px); aspect-ratio: 23 / 34; object-fit: contain;
+  background: #fff; margin-bottom: 14px;
 }
-.team-grid h3 { font-size: 1.16rem; font-weight: 700; }
-.team-grid .co-affil { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); }
-.team-grid li > p:last-child { font-size: 0.93rem; margin-top: 4px; }
-.co-role { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); }
+.team-grid h3 { font-size: clamp(1.25rem, 1.5vw, 1.45rem); font-weight: 800; letter-spacing: -0.02em; }
+.team-grid .co-affil { font-size: 1rem; font-weight: 800; letter-spacing: 0.02em; color: var(--blue); font-variant-numeric: tabular-nums; }
+.team-grid li > p:last-child { font-size: 0.96rem; line-height: 1.5; margin-top: 6px; color: var(--ink-2); }
+.co-role { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); }
+
+/* A click-to-reveal address: the mailbox is assembled in the browser, so it
+   is not sitting in the markup for a scraper to lift. */
+.mailbtn {
+  display: inline-flex; align-items: center; gap: 0.55em; border: 1px solid var(--rule);
+  background: var(--tint); color: var(--blue); font: inherit; font-weight: 600;
+  border-radius: 999px; padding: 0.6em 1.1em; cursor: pointer;
+}
+.mailbtn:hover { background: #dce6fc; }
+.mailbtn .ic { width: 1.15em; height: 1.15em; }
 
 .co-list { display: flex; flex-direction: column; gap: 14px; max-width: 90ch; }
 .co-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; }
@@ -680,6 +692,7 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
   .trust-grid { grid-template-columns: minmax(0, 1fr); }
   .team-lead { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
   .team-lead > div { align-items: center; }
+  .team-lead p { max-width: none; }
   .cs-steps, .cs-steps.three, .case-stats { grid-template-columns: minmax(0, 1fr); }
   .cs-facts, .cs-context { grid-template-columns: minmax(0, 1fr); }
   .cs-facts > div, .cs-facts > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); }

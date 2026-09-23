@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -92,39 +92,42 @@
         </div>
 
         <article class="team-lead">
-          <img src="assets/advisors/alex.jpg" width="560" height="560" loading="lazy" decoding="async" alt="Alex Towfigh, founder of AquaMesh." />
+          <img src="assets/advisors/alex.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Alex Towfigh, founder of AquaMesh." />
           <div>
             <p class="co-role">Founder</p>
             <h3>Alex Towfigh</h3>
-            <p>Builds the platform — the data pipeline, the models that flag a divergence, the engineering the assistant reasons from, and the architecture that keeps every recommendation advisory. The person who answers when you write in.</p>
-            <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+            <p class="co-affil">6+ years</p>
+            <p>Sensor and IoT R&amp;D and startup experience, driving deep tech from concept to market — product, IP and sales.</p>
+            <button class="mailbtn" type="button" data-mail="alex" data-host="aquamesh.ai" data-subject="Demo request">
+              <svg class="ic"><use href="#i-mail" /></svg><span>Show email</span>
+            </button>
           </div>
         </article>
 
         <ul class="team-grid">
           <li>
-            <img src="assets/advisors/corey.jpg" width="240" height="240" loading="lazy" decoding="async" alt="Corey Williams" />
+            <img src="assets/advisors/corey.jpg" width="230" height="340" loading="lazy" decoding="async" alt="Corey Williams" />
             <p class="co-role">Advisor</p>
             <h3>Corey Williams</h3>
             <p class="co-affil">30+ years</p>
             <p>Former SmartCover CEO, M&amp;A lead at Badger Meter, Vice President at WEF.</p>
           </li>
           <li>
-            <img src="assets/advisors/john.jpg" width="240" height="240" loading="lazy" decoding="async" alt="John Williams" />
+            <img src="assets/advisors/john.jpg" width="230" height="340" loading="lazy" decoding="async" alt="John Williams" />
             <p class="co-role">Advisor</p>
             <h3>John Williams</h3>
             <p class="co-affil">45+ years</p>
             <p>Former executive at Inge, Hydranautics and Mann+Hummel, among others.</p>
           </li>
           <li>
-            <img src="assets/advisors/greg.jpg" width="240" height="240" loading="lazy" decoding="async" alt="Greg Hitchcock" />
+            <img src="assets/advisors/greg.jpg" width="230" height="340" loading="lazy" decoding="async" alt="Greg Hitchcock" />
             <p class="co-role">Advisor</p>
             <h3>Greg Hitchcock</h3>
             <p class="co-affil">30+ years</p>
             <p>Food operations leader at Leprino Foods, OSF Flavors and Carla's Pasta.</p>
           </li>
           <li>
-            <img src="assets/advisors/than.jpg" width="176" height="176" loading="lazy" decoding="async" alt="Than Hansen" />
+            <img src="assets/advisors/than.jpg" width="230" height="340" loading="lazy" decoding="async" alt="Than Hansen" />
             <p class="co-role">Advisor</p>
             <h3>Than Hansen</h3>
             <p class="co-affil">25+ years</p>
@@ -167,5 +170,19 @@
       <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
     </div>
   </footer>
+<script>
+  // The address is never in the markup: the button builds it on click.
+  document.querySelectorAll('.mailbtn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var who = b.dataset.mail, host = b.dataset.host;
+      var addr = who + String.fromCharCode(64) + host;
+      var label = b.querySelector('span');
+      if (b.dataset.shown) { window.location.href = 'mailto:' + addr + '?subject=' + encodeURIComponent(b.dataset.subject || ''); return; }
+      if (label) label.textContent = addr;
+      b.dataset.shown = '1';
+      b.setAttribute('title', 'Click again to open your mail app');
+    });
+  });
+</script>
 </body>
 </html>
