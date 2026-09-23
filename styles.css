@@ -188,6 +188,25 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
 }
 .industries li { padding: 0 18px; }
 .industries li + li { border-left: 1px solid var(--rule); }
+.footer-links { font-size: 0.86rem; color: var(--ink-3); line-height: 1.9; max-width: 62ch; }
+.footer-links a { color: var(--ink-3); text-decoration: none; }
+.footer-links a:hover { color: var(--blue); }
+
+.industries a {
+  color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5em;
+  transition: color 0.15s ease;
+}
+.industries a::after {
+  content: ''; width: 0.42em; height: 0.42em; border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor; transform: rotate(45deg); opacity: 0.45;
+}
+.industries a:hover { color: var(--blue); }
+.industries a:hover::after { opacity: 1; }
+
+/* Industry pages reuse the case-study shell; the dark band there holds the
+   solution pillars, which need the four-across treatment at full width. */
+.night .pillars { margin-top: clamp(28px, 4vw, 44px); }
+@media (min-width: 900px) { .night .pillars { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* ── Sections ────────────────────────────────────────────────── */
 .section { padding: clamp(72px, 10vw, 124px) 0; }
