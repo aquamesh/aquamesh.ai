@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=16" />
+  <link rel="stylesheet" href="../styles.css?v=17" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -78,16 +78,6 @@
       </div>
     </section>
 
-    <section class="section wash">
-      <div class="wrap">
-        <figure class="cs-figure">
-          <img src="../assets/audit/fig1.jpg" width="1290" height="590" loading="lazy" decoding="async"
-               alt="Audit summary: potential annual savings of about $42,050 a year off the power and maintenance bills with no capital spend, rising to $58,428 including roughly seven hours a week of operator time, and $92,200 with the later instrumentation phase; estimated plant power bill $147,000 a year; plant running at 71 percent of design flow; effluent turbidity 0.11 NTU median, well inside the posted range." />
-          <figcaption>The opening page of the delivered audit. Values tagged <b>M</b> are measured directly from the plant's SCADA; <b>E</b> means AquaMesh calculated them, and the assumptions behind them are written down.</figcaption>
-        </figure>
-      </div>
-    </section>
-
     <section class="section">
       <div class="wrap cs-two">
         <div>
@@ -107,7 +97,7 @@
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">What it found</p>
-          <h2>Seven things the plant could not see <span class="accent">from its own screens.</span></h2>
+          <h2>What the plant could not see <span class="accent">from its own screens.</span></h2>
         </div>
         <ul class="cs-findings">
           <li>
@@ -118,54 +108,20 @@
           <li>
             <p class="pf-num">456 → 358<small> scfm</small></p>
             <h3>Membrane scour air above what the flux needed</h3>
-            <p>Airflow tracked the permeate rate almost perfectly (R² = 1.00) at a ratio well above the manufacturer's specific-scour guidance. Trimming to the guideline at the measured flux, with the existing controls, is $5,391 a year — the single largest no-capital line on the list. The platform proposes it one safe step at a time rather than in a single jump, holding each step for a shift before the next.</p>
+            <p>Airflow tracked the permeate rate almost perfectly (R² = 1.00) at a ratio well above the manufacturer's specific-scour guidance. Trimming to the guideline at the measured flux, with the existing controls, is $5,391 a year — the largest no-capital line on the list.</p>
           </li>
           <li>
             <p class="pf-num">13–28<small> starts/hour</small></p>
             <h3>Reclaimed pumps short-cycling</h3>
-            <p>Against a manufacturer guideline near six starts an hour for pumps this size — and one asset logged 143 an hour, a start every 25 seconds. Every start draws locked-rotor current and heats the windings far more than running does. It is a control deadband, not a purchase, and it is writing a bill in motors, starters and contactors: $3,500 a year.</p>
-          </li>
-          <li>
-            <p class="pf-num">84% / 39%</p>
-            <h3>RAS pumps not sharing duty</h3>
-            <p>504 run hours against 232 in the same 25 days, and the lifetime counters show the gap compounding — 44,299 hours against 30,953. Lead-lag alternation costs nothing and moves the next rebuild years to the right. The MBR blowers and permeate pumps are balanced, which is what marks this as an oversight rather than a design choice.</p>
+            <p>Against a manufacturer guideline near six starts an hour — and one asset logged 143 an hour, a start every 25 seconds. Every start draws locked-rotor current and heats the windings far more than running does. It is a control deadband, not a purchase: $3,500 a year in motors, starters and contactors.</p>
           </li>
           <li>
             <p class="pf-num">16 of 16</p>
             <h3>Reuse totalisers that never moved</h3>
-            <p>Every irrigation zone has a volume totaliser, and not one of them changed in 25 days. Until they record, nobody can show how much recycled water went to beneficial reuse versus straight to disposal — which is the largest untapped item on the site, about $7,300 a year once the split can be managed. A configuration fix, not a purchase.</p>
-          </li>
-          <li>
-            <p class="pf-num">8×</p>
-            <h3>Two turbidimeters, two answers</h3>
-            <p>Both watch the same permeate stream. One reads a median of 0.11 NTU and a 90th percentile of 0.26; the other reads 0.14 and 2.12 — three and a half times the plant's own posted limit. One of them is drifting, and compliance calls currently rest on an instrument that cannot be fully trusted. The encouraging part: the true value looks excellent.</p>
-          </li>
-          <li>
-            <p class="pf-num">3<small> records / 25 days</small></p>
-            <h3>MLSS could not be trended at all</h3>
-            <p>The tag reports a flat 10.00 — wrong scale, effectively dead, against a posted range of 7,500–10,000 mg/L. MLSS is the control variable for wasting and a leading indicator of membrane fouling, and the plant already measures it by hand every week. None of that reached the historian, so nothing could trend or alarm on it between grab samples.</p>
+            <p>Every irrigation zone has a volume totaliser, and not one changed in 25 days. Until they record, nobody can show how much recycled water went to beneficial reuse rather than disposal — about $7,300 a year once the split can be managed. A configuration fix, not a purchase.</p>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <section class="section wash">
-      <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">What it is worth</p>
-          <h2>Two subtotals, <span class="accent">kept deliberately apart.</span></h2>
-          <p class="lead">Money off a bill, and operator hours given back. The hours are real, but they are not money off a bill, so they are never folded into the first number.</p>
-        </div>
-        <figure class="cs-figure">
-          <img src="../assets/audit/fig2.jpg" width="1290" height="640" loading="lazy" decoding="async"
-               alt="Opportunity table with each line flagged measured or estimated: pre-air basin oxygen correction $3,316 measured; modulating pre-air control $1,718 estimated; RAS flow optimisation $1,096 estimated; predictive maintenance programme $20,900 estimated; direct savings subtotal $42,048 for energy plus maintenance; reporting automation worth seven hours a week of operator time, $16,380 estimated; everything added up $58,428." />
-          <figcaption>The predictive-maintenance line is built asset by asset from the plant's own run hours and start counts, not taken as a percentage of a maintenance budget.</figcaption>
-        </figure>
-        <figure class="cs-figure" style="margin-top: 22px">
-          <img src="../assets/audit/fig3.jpg" width="1290" height="660" loading="lazy" decoding="async"
-               alt="Energy table: reclaimed and spray distribution 349 kWh per day at $46,071 a year; potable distribution pumps 284 kWh per day at $37,490; MBR scour blowers 173 kWh per day at $22,837; pre-air blowers 130 kWh per day at $17,161; RAS pumps 83 kWh per day at $10,957; pre-air zone blowers 72 kWh per day at $9,505; permeate pumps 23 kWh per day at $3,036; total measurable load 1,114 kWh per day, $147,057 a year, 406,610 kWh a year." />
-          <figcaption>Where the power actually goes — 1,114 kWh a day of measurable load — each line derived from measured airflow, discharge pressure and runtime, with its basis shown beside it.</figcaption>
-        </figure>
+        <p class="cs-note">Also flagged and priced in the report: return-activated-sludge pumps at 84% and 39% duty, two turbidimeters disagreeing eightfold at the 90th percentile, and an MLSS tag reporting a flat 10.00 for the whole window.</p>
       </div>
     </section>
 
@@ -203,14 +159,12 @@
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
         </div>
       </div>
-    </section>
 
-    <section class="section wash">
       <div class="wrap">
         <figure class="cs-figure">
-          <img src="../assets/audit/fig4.jpg" width="1290" height="830" loading="lazy" decoding="async"
-               alt="Instrumentation package table: advanced aeration control $2,439 a year at no capital; reclaimed reuse displacing purchased potable, $4,000 capital for $7,300 a year; reclaimed distribution pressure optimisation, $6,000 capital for $6,917 a year; vibration monitoring on four blowers, $5,000 capital for $6,000 a year; power metering on five major loads, $10,000 capital, converting $21,148 a year of estimate into measurement; package total $55,000 capital for $33,728 a year, a 1.6 year simple payback." />
-          <figcaption>The later phase, priced item by item. The point of the power-metering line is not its savings — it converts the energy case from a defensible estimate into a measured result, which is what makes a performance guarantee possible.</figcaption>
+          <img src="../assets/audit/fig2.jpg" width="1290" height="640" loading="lazy" decoding="async"
+               alt="Opportunity table with each line flagged measured or estimated: pre-air basin oxygen correction $3,316 measured; modulating pre-air control $1,718 estimated; RAS flow optimisation $1,096 estimated; predictive maintenance programme $20,900 estimated; direct savings subtotal $42,048 for energy plus maintenance; reporting automation worth seven hours a week of operator time, $16,380 estimated; everything added up $58,428." />
+          <figcaption>Every line from the audit, flagged measured or estimated. Money off a bill and operator hours are kept as separate subtotals — the hours are real, but they are not money off a bill.</figcaption>
         </figure>
       </div>
     </section>
