@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Municipal Water &amp; Reuse | AquaMesh</title>
-  <meta name="description" content="Energy, reuse reporting and compliance in municipal water and wastewater — what AquaMesh finds in a utility’s own data, and how it is fixed." />
+  <meta name="description" content="Energy, reuse reporting and defensible numbers for utilities — what AquaMesh finds in a utility’s own data." />
   <link rel="canonical" href="https://aquamesh.ai/industries/municipal.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Municipal Water &amp; Reuse | AquaMesh" />
-  <meta property="og:description" content="Energy, reuse reporting and compliance in municipal water and wastewater — what AquaMesh finds in a utility’s own data, and how it is fixed." />
+  <meta property="og:description" content="Energy, reuse reporting and defensible numbers for utilities — what AquaMesh finds in a utility’s own data." />
   <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=18" />
+  <link rel="stylesheet" href="../styles.css?v=19" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -68,7 +68,6 @@
     <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 9c2 0 2-2 4.5-2S9.5 9 12 9s2.5-2 4.5-2S19 9 21 9M3 15c2 0 2-2 4.5-2s2 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2" /></symbol>
     <symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 3v18M16.5 7.5c-.7-1.5-2.5-2.5-4.5-2.5-2.5 0-4.5 1.4-4.5 3.4 0 4.6 9.5 2.4 9.5 7.2 0 2-2 3.4-5 3.4-2.2 0-4-.9-4.8-2.5" /></symbol>
     <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7" /><path d="M14.5 8H20v5.5" /></symbol>
-
     <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" /></symbol>
   </svg>
 
@@ -88,94 +87,118 @@
   </header>
 
   <main class="cs">
-    <section class="section cs-head">
+    <section class="ind-hero">
+      <div class="wrap ind-hero-grid">
+        <div class="ind-hero-copy">
+          <a class="cs-back" href="../index.html#industries"><svg class="ic"><use href="#i-back" /></svg>All industries</a>
+          <p class="eyebrow">Municipal</p>
+          <h1>Ratepayers fund every kilowatt-hour <span class="accent">you did not need.</span></h1>
+          <p class="lead">Energy is the largest controllable cost after labour, and most of it goes to equipment holding setpoints nobody has revisited.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Municipal">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+        <figure class="ind-shot">
+          <img src="../assets/industries/municipal.jpg" width="1000" height="666" fetchpriority="high" decoding="async" alt="A municipal wastewater treatment works." />
+        </figure>
+      </div>
       <div class="wrap">
-        <a class="cs-back" href="../index.html#industries"><svg class="ic"><use href="#i-back" /></svg>All industries</a>
-        <p class="eyebrow">Industry · Municipal</p>
-        <h1>Ratepayers fund every kilowatt-hour <span class="accent">you did not need.</span></h1>
-        <p class="lead">Energy is usually the largest controllable cost a utility has after labour, and most of it is spent by equipment holding setpoints nobody has revisited in years.</p>
-        <dl class="cs-facts">
-          <div><dt>At one reuse plant</dt><dd>$147,057 a year of measurable electrical load</dd></div>
-          <div><dt>Avoidable, from data alone</dt><dd>$42,050 a year, no capital</dd></div>
-          <div><dt>Reuse volumes recorded</dt><dd>0 of 16 zone totalisers moving</dd></div>
-          <div><dt>Audit trail</dt><dd>Every approval logged: who, what, when</dd></div>
+        <dl class="ind-stats">
+          <div><dd>$147,057/yr</dd><dt>Measurable load at one plant</dt></div>
+          <div><dd>$42,050/yr</dd><dt>Avoidable with no capital</dt></div>
+          <div><dd>0 of 16</dd><dt>Reuse totalisers moving</dt></div>
         </dl>
-      </div>
-    </section>
-
-    <section class="section wash">
-      <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">What goes wrong here</p>
-          <h2>Where a utility’s money <span class="accent">quietly goes.</span></h2>
-        </div>
-        <ul class="cs-findings">
-          <li>
-            <p class="pf-num">Peak</p>
-            <h3>Pumping straight into the expensive hours</h3>
-            <p>The two largest pumping loads in a plant often run on demand alone, with no reference to the tariff clock. Shifting part of that duty off-peak changes nothing physically and everything on the invoice.</p>
-          </li>
-          <li>
-            <p class="pf-num">Air</p>
-            <h3>Aeration held above what the process needs</h3>
-            <p>Dissolved oxygen carried well above the posted range, blowers commanded wide open, scour air set generously years ago — all of it defensible individually, all of it expensive together.</p>
-          </li>
-          <li>
-            <p class="pf-num">Reuse</p>
-            <h3>Recycled water you cannot account for</h3>
-            <p>Zone totalisers that have not moved in weeks mean nobody can show how much recycled water went to beneficial reuse rather than disposal — which is exactly the number a reuse programme is judged on.</p>
-          </li>
-          <li>
-            <p class="pf-num">People</p>
-            <h3>Thirty years of judgement walking out the door</h3>
-            <p>The operator who knows why a setpoint is where it is retires, and the reasoning goes with them. What remains is a setting everyone is afraid to touch.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section night">
-      <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">How AquaMesh solves it</p>
-          <h2>Prove it on your own data <span class="accent">before you spend anything.</span></h2>
-          <p class="lead">Public money deserves a defensible number. Every finding says what it is worth a year, whether it was measured or estimated, and which tags are the evidence.</p>
-        </div>
-        <div class="pillars">
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-bolt" /></svg></span><h3>Energy, line by line</h3><p>Power derived from measured airflow, pressure, flow and runtime — so the saving is arithmetic your engineer can check, not a vendor claim.</p></div>
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span><h3>Off-peak where it is free</h3><p>Duty shifted into cheaper hours where the process allows it, with the constraint stated and the value priced against your own tariff.</p></div>
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-db" /></svg></span><h3>Instruments that report again</h3><p>Dead totalisers, wrong-scale tags and drifting duplicates are surfaced as findings, because a signal that stopped moving never raises an alarm.</p></div>
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Defensible on the record</h3><p>Every recommendation carries its evidence, and every approval is logged — which is what a council, a board or a regulator will ask for.</p></div>
-        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Built around your process</p>
-          <h2>Not a template. <span class="accent">Your plant.</span></h2>
-          <p class="lead">Every plant runs differently, so nothing here is configured from an industry preset. We start from your tags, your limits and your product.</p>
+          <p class="eyebrow">The problem</p>
+          <h2>Where a utility’s money <span class="accent">quietly goes.</span></h2>
         </div>
-        <ol class="cs-steps">
-          <li><span class="num">1</span><div><h3>Start with the data you already keep</h3><p>A free audit on your historian export. No hardware, no install, no commitment — you see the value and the ROI before you buy anything.</p></div></li>
-          <li><span class="num">2</span><div><h3>We model your process, not a generic one</h3><p>We work against your posted operating ranges and your actual tariff schedule. A finding is only a finding if it sits outside the range your own sampling schedule publishes.</p></div></li>
-          <li><span class="num">3</span><div><h3>Sensing only where it pays</h3><p>The instrumentation phase is priced item by item and separated from everything achievable on existing data, so a capital request stands on its own rather than being bundled into a subscription.</p></div></li>
-          <li><span class="num">4</span><div><h3>You stay in control</h3><p>Every recommendation is advisory until you decide otherwise, clamped to limits your engineers set, and logged with who approved what and when.</p></div></li>
+        <ul class="ind-probs">
+          <li><h3>Pumping into the expensive hours</h3><p>The largest loads run on demand alone, with no reference to the tariff clock.</p></li>
+          <li><h3>Aeration held above what is needed</h3><p>Defensible individually. Expensive together.</p></li>
+          <li><h3>Reuse you cannot account for</h3><p>Totalisers that have not moved are exactly the number a reuse programme is judged on.</p></li>
+        </ul>
+        <figure class="ind-dia">
+          <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Pump duty plotted across 24 hours against the tariff. Much of the duty sits inside the peak-rate block; shifting it costs nothing physically.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <rect x="470" y="50" width="250" height="170" fill="#c2410c" opacity="0.08"/>
+    <text x="595" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#c2410c">PEAK TARIFF</text>
+    <g fill="#2449e8">
+      <rect x="70" y="170" width="28" height="50" rx="4"/><rect x="110" y="182" width="28" height="38" rx="4"/>
+      <rect x="150" y="190" width="28" height="30" rx="4"/><rect x="190" y="186" width="28" height="34" rx="4"/>
+      <rect x="230" y="166" width="28" height="54" rx="4"/><rect x="270" y="150" width="28" height="70" rx="4"/>
+      <rect x="310" y="138" width="28" height="82" rx="4"/><rect x="350" y="130" width="28" height="90" rx="4"/>
+      <rect x="390" y="126" width="28" height="94" rx="4"/><rect x="430" y="122" width="28" height="98" rx="4"/>
+    </g>
+    <g fill="#c2410c">
+      <rect x="480" y="96" width="28" height="124" rx="4"/><rect x="520" y="84" width="28" height="136" rx="4"/>
+      <rect x="560" y="78" width="28" height="142" rx="4"/><rect x="600" y="88" width="28" height="132" rx="4"/>
+      <rect x="640" y="100" width="28" height="120" rx="4"/><rect x="680" y="112" width="28" height="108" rx="4"/>
+    </g>
+    <g fill="#2449e8">
+      <rect x="730" y="140" width="28" height="80" rx="4"/><rect x="770" y="158" width="28" height="62" rx="4"/>
+      <rect x="810" y="172" width="28" height="48" rx="4"/><rect x="850" y="180" width="28" height="40" rx="4"/>
+    </g>
+    <path d="M60 220 H900" stroke="#dfe6f3" stroke-width="2"/>
+    <text x="70" y="248" font-size="13" font-weight="600" fill="#66728a">00:00</text>
+    <text x="480" y="248" font-size="13" font-weight="600" fill="#66728a">12:00</text>
+    <text x="878" y="248" text-anchor="end" font-size="13" font-weight="600" fill="#66728a">24:00</text>
+    <text x="60" y="284" font-size="15" fill="#66728a">Same kilowatt-hours. Different invoice.</text>
+  </g>
+</svg>
+          <figcaption>Shifting duty out of the peak block changes nothing physically — and everything on the invoice.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section night">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">What AquaMesh does about it</p>
+          <h2>Prove it on your own data <span class="accent">before you spend.</span></h2>
+        </div>
+        <div class="ind-solve">
+          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-bolt" /></svg></span><div><h3>Energy line by line</h3><p>Derived from measured airflow, pressure, flow and runtime — arithmetic your engineer can check.</p></div></div>
+          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-db" /></svg></span><div><h3>Instruments that report again</h3><p>Dead totalisers and wrong-scale tags surfaced as findings.</p></div></div>
+          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><div><h3>Defensible on the record</h3><p>Every recommendation carries its evidence; every approval is logged.</p></div></div>
+        </div>
+        <figure class="ind-ui">
+          <img src="../assets/audit.jpg" width="1400" height="1392" loading="lazy" decoding="async"
+               alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." />
+          <figcaption>Every finding arrives like this — the action, the evidence, and what it is worth a year.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Working together</p>
+          <h2>Built for your plant, <span class="accent">not from a preset.</span></h2>
+        </div>
+        <ol class="ind-steps">
+          <li><span class="num">1</span><h3>Free audit</h3><p>Free, on your historian export. No procurement, no install.</p></li>
+          <li><span class="num">2</span><h3>Your process, modelled</h3><p>Against your posted operating ranges and your actual tariff schedule.</p></li>
+          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>Capital priced item by item and kept separate, so a request stands on its own.</p></li>
+          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to your limits, every approval logged.</p></li>
         </ol>
-        <p class="cs-callout" style="margin-top: clamp(28px, 4vw, 44px)"><b>A water-reuse plant</b> gave us 25 days of its historian and nothing else. The audit came back with $42,050 a year achievable with no capital, and $92,200 fully instrumented. <a href="../case-studies/water-reuse-plant.html">Read the case study <svg class="ic"><use href="#i-arrow" /></svg></a></p>
+        <a class="ind-proof" href="../case-studies/water-reuse-plant.html"><span>A water-reuse plant: $42,050 a year achievable with no capital at all</span><svg class="ic"><use href="#i-arrow" /></svg></a>
       </div>
     </section>
 
     <section class="closing">
       <div class="wrap closing-inner">
         <h2>Start with the data you already report.</h2>
-        <p class="lead">Your historian already holds the answer to most of this. The audit is free and needs no hardware, no install and no procurement.</p>
+        <p class="lead">Your historian holds most of the answer. The audit is free and needs no hardware.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Municipal">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
         </div>
-        <p class="cs-note">Figures are from an AquaMesh audit of an operating reuse plant, anonymized. They are identified opportunities, not realized savings, and are specific to that plant and its tariff.</p>
+        <p class="cs-note">Figures from an AquaMesh audit of an operating reuse plant, anonymized. Identified opportunities, not realized savings.</p>
       </div>
     </section>
   </main>
@@ -186,8 +209,10 @@
         <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
         <p class="footer-tag">The Autopilot For Industrial Water</p>
       </div>
-      <p class="footer-links"><a href="../industries/food-beverage.html">Food &amp; Beverage</a> · <a href="../industries/industrial-water.html">Industrial Water</a> · <a href="../industries/manufacturing.html">Manufacturing</a> · <a href="../industries/municipal.html">Municipal</a> · <a href="../industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="../industries/data-centers.html">Data Centers</a></p>
-      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+      <div>
+        <p class="footer-links"><a href="food-beverage.html">Food &amp; Beverage</a> · <a href="industrial-water.html">Industrial Water</a> · <a href="manufacturing.html">Manufacturing</a> · <a href="municipal.html">Municipal</a> · <a href="pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="data-centers.html">Data Centers</a></p>
+        <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+      </div>
     </div>
   </footer>
 </body>

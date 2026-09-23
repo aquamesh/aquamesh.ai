@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Centers | AquaMesh</title>
-  <meta name="description" content="Cooling water, cycles of concentration and chemical dosing — the water side of data-center operations, and what continuous measurement changes." />
+  <meta name="description" content="Cycles of concentration, blowdown and chemical dosing — the water side of a site that is metered nothing like the power side." />
   <link rel="canonical" href="https://aquamesh.ai/industries/data-centers.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Data Centers | AquaMesh" />
-  <meta property="og:description" content="Cooling water, cycles of concentration and chemical dosing — the water side of data-center operations, and what continuous measurement changes." />
+  <meta property="og:description" content="Cycles of concentration, blowdown and chemical dosing — the water side of a site that is metered nothing like the power side." />
   <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=18" />
+  <link rel="stylesheet" href="../styles.css?v=19" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -68,7 +68,6 @@
     <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 9c2 0 2-2 4.5-2S9.5 9 12 9s2.5-2 4.5-2S19 9 21 9M3 15c2 0 2-2 4.5-2s2 2 4.5 2 2.5-2 4.5-2 2.5 2 4.5 2" /></symbol>
     <symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 3v18M16.5 7.5c-.7-1.5-2.5-2.5-4.5-2.5-2.5 0-4.5 1.4-4.5 3.4 0 4.6 9.5 2.4 9.5 7.2 0 2-2 3.4-5 3.4-2.2 0-4-.9-4.8-2.5" /></symbol>
     <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7" /><path d="M14.5 8H20v5.5" /></symbol>
-
     <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" /></symbol>
   </svg>
 
@@ -88,80 +87,92 @@
   </header>
 
   <main class="cs">
-    <section class="section cs-head">
+    <section class="ind-hero">
+      <div class="wrap ind-hero-grid">
+        <div class="ind-hero-copy">
+          <a class="cs-back" href="../index.html#industries"><svg class="ic"><use href="#i-back" /></svg>All industries</a>
+          <p class="eyebrow">Data Centers</p>
+          <h1>Power is metered to the watt. <span class="accent">Water is not.</span></h1>
+          <p class="lead">Evaporative cooling is the largest water consumer on most sites, and it runs conservatively because the alternative is far more expensive than the water it wastes.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Data%20Centers">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+        <figure class="ind-shot">
+          <img src="../assets/industries/data-centers.jpg" width="1000" height="666" fetchpriority="high" decoding="async" alt="An aisle of server racks in a data centre." />
+        </figure>
+      </div>
       <div class="wrap">
-        <a class="cs-back" href="../index.html#industries"><svg class="ic"><use href="#i-back" /></svg>All industries</a>
-        <p class="eyebrow">Industry · Data Centers</p>
-        <h1>Power is metered to the watt. <span class="accent">Water is not.</span></h1>
-        <p class="lead">Evaporative cooling is the largest water consumer on most sites, and it is run conservatively because the alternative — scaling, corrosion or a biological problem in the tower — is far more expensive than the water it wastes.</p>
-        <dl class="cs-facts">
-          <div><dt>Cycles of concentration</dt><dd>Usually held below the real limit, on purpose</dd></div>
-          <div><dt>Blowdown</dt><dd>Commonly on a timer or a single conductivity point</dd></div>
-          <div><dt>The trade-off</dt><dd>Water and chemical spend against scaling risk</dd></div>
-          <div><dt>Starts on</dt><dd>Your existing BMS and water-treatment records</dd></div>
+        <dl class="ind-stats">
+          <div><dd>Held low</dd><dt>Cycles of concentration</dt></div>
+          <div><dd>A timer</dd><dt>Blowdown triggered by</dt></div>
+          <div><dd>Reported, not managed</dd><dt>WUE today</dt></div>
         </dl>
-      </div>
-    </section>
-
-    <section class="section wash">
-      <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">What goes wrong here</p>
-          <h2>The water side of a site <span class="accent">nobody meters properly.</span></h2>
-        </div>
-        <ul class="cs-findings">
-          <li>
-            <p class="pf-num">Cycles</p>
-            <h3>Run low because the limit is unknown</h3>
-            <p>Every extra cycle of concentration is make-up water you do not buy and blowdown you do not discharge. Sites run below the achievable number because the true scaling limit for their water chemistry has never been established continuously — only estimated.</p>
-          </li>
-          <li>
-            <p class="pf-num">Blowdown</p>
-            <h3>Dumped on a timer rather than a condition</h3>
-            <p>Blowdown triggered by a clock, or by one conductivity reading that says nothing about what is actually saturating, discards treated and chemically dosed water on a schedule that has no relationship to the tower.</p>
-          </li>
-          <li>
-            <p class="pf-num">Chemistry</p>
-            <h3>Dosed to a recipe, not to demand</h3>
-            <p>Inhibitor and biocide programmes are set to cover the worst case because the actual demand is not visible between service visits. The safety margin is bought every single day.</p>
-          </li>
-          <li>
-            <p class="pf-num">Reporting</p>
-            <h3>WUE reported, not managed</h3>
-            <p>Water usage effectiveness gets published annually. Between publications there is rarely anything continuous enough to act on — so the number is a report card rather than a control.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section night">
-      <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">How AquaMesh solves it</p>
-          <h2>Find the real limit, <span class="accent">then run closer to it.</span></h2>
-          <p class="lead">Continuous chemistry instead of periodic checks means the conservative margin can shrink deliberately, with the risk watched rather than assumed.</p>
-        </div>
-        <div class="pillars">
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><h3>Continuous tower chemistry</h3><p>In-situ optical and conductivity measurement of what is actually in the circuit, not a monthly snapshot from a service visit.</p></div>
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-sliders" /></svg></span><h3>Blowdown on condition</h3><p>Trigger on the measured state of the water rather than a timer, so treated water is discharged when it needs to be and not before.</p></div>
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-drop" /></svg></span><h3>Cycles pushed with the risk watched</h3><p>Raise cycles toward the real limit for your make-up chemistry, with scaling and corrosion indicators monitored continuously as the guard.</p></div>
-          <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><h3>A number you can manage</h3><p>Water use tied to load and weather, so WUE becomes something with a trend and a cause rather than an annual figure.</p></div>
-        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Built around your process</p>
-          <h2>Not a template. <span class="accent">Your plant.</span></h2>
-          <p class="lead">Every plant runs differently, so nothing here is configured from an industry preset. We start from your tags, your limits and your product.</p>
+          <p class="eyebrow">The problem</p>
+          <h2>The water side <span class="accent">nobody meters properly.</span></h2>
         </div>
-        <ol class="cs-steps">
-          <li><span class="num">1</span><div><h3>Start with the data you already keep</h3><p>A free audit on your historian export. No hardware, no install, no commitment — you see the value and the ROI before you buy anything.</p></div></li>
-          <li><span class="num">2</span><div><h3>We model your process, not a generic one</h3><p>We model your make-up water chemistry and your tower configuration — the achievable cycle limit is a property of your water and your equipment, and it is different at every site.</p></div></li>
-          <li><span class="num">3</span><div><h3>Sensing only where it pays</h3><p>Most sites already have conductivity and flow. The audit identifies whether a spectral probe adds enough to justify itself before anything is bought.</p></div></li>
-          <li><span class="num">4</span><div><h3>You stay in control</h3><p>Every recommendation is advisory until you decide otherwise, clamped to limits your engineers set, and logged with who approved what and when.</p></div></li>
+        <ul class="ind-probs">
+          <li><h3>Cycles run below the real limit</h3><p>The true scaling limit for your water chemistry has never been established continuously.</p></li>
+          <li><h3>Blowdown on a clock</h3><p>Treated, dosed water discarded on a schedule with no relationship to the tower.</p></li>
+          <li><h3>Chemistry dosed to a recipe</h3><p>The worst-case margin is bought every single day.</p></li>
+        </ul>
+        <figure class="ind-dia">
+          <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Make-up water falls steeply as cycles of concentration rise. Most sites run well below the scaling limit their water chemistry actually allows, and the gap between the two is water and chemical bought every day.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <path d="M80 62 C 180 120, 260 178, 360 206 S 560 232, 880 240" fill="none" stroke="#2449e8" stroke-width="3"/>
+    <rect x="250" y="50" width="300" height="190" fill="#137a4b" opacity="0.08"/>
+    <path d="M250 46 V244" stroke="#c2410c" stroke-width="2.5"/>
+    <path d="M550 46 V244" stroke="#137a4b" stroke-width="2.5" stroke-dasharray="6 5"/>
+    <text x="244" y="36" text-anchor="end" font-size="14" font-weight="700" fill="#c2410c">where most sites run</text>
+    <text x="558" y="36" font-size="14" font-weight="700" fill="#137a4b">your actual scaling limit</text>
+    <text x="400" y="136" text-anchor="middle" font-size="15" font-weight="700" fill="#137a4b">water and chemical</text>
+    <text x="400" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#137a4b">bought every day</text>
+    <path d="M60 244 H900" stroke="#dfe6f3" stroke-width="2"/>
+    <text x="60" y="276" font-size="15" fill="#66728a">Make-up water against cycles of concentration</text>
+    <text x="900" y="276" text-anchor="end" font-size="13" font-weight="600" fill="#66728a">more cycles →</text>
+  </g>
+</svg>
+          <figcaption>The gap between where a site runs and where it could run is bought in water and chemical, daily.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section night">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">What AquaMesh does about it</p>
+          <h2>Find the real limit. <span class="accent">Run closer to it.</span></h2>
+        </div>
+        <div class="ind-solve">
+          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><div><h3>Continuous tower chemistry</h3><p>What is actually in the circuit — not a monthly snapshot from a service visit.</p></div></div>
+          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-sliders" /></svg></span><div><h3>Blowdown on condition</h3><p>Triggered by the measured state of the water rather than a clock.</p></div></div>
+          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><div><h3>A number you can manage</h3><p>Water tied to load and weather, so WUE gets a trend and a cause.</p></div></div>
+        </div>
+        <figure class="ind-ui">
+          <img src="../assets/audit.jpg" width="1400" height="1392" loading="lazy" decoding="async"
+               alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." />
+          <figcaption>Every finding arrives like this — the action, the evidence, and what it is worth a year.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Working together</p>
+          <h2>Built for your plant, <span class="accent">not from a preset.</span></h2>
+        </div>
+        <ol class="ind-steps">
+          <li><span class="num">1</span><h3>Free audit</h3><p>On your BMS and water-treatment records. Send a make-up water analysis and a month of tower data.</p></li>
+          <li><span class="num">2</span><h3>Your process, modelled</h3><p>The achievable cycle limit is a property of your water and your equipment — different at every site.</p></li>
+          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>Most sites already have conductivity and flow. The audit says whether a probe adds enough to justify itself.</p></li>
+          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to your limits, every approval logged.</p></li>
         </ol>
         
       </div>
@@ -170,12 +181,12 @@
     <section class="closing">
       <div class="wrap closing-inner">
         <h2>What is your real cycle limit?</h2>
-        <p class="lead">Send your make-up water analysis and a month of tower records. We will tell you what your data already says about the margin you are carrying.</p>
+        <p class="lead">Send your make-up analysis and a month of tower records.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Data%20Centers">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
         </div>
-        <p class="cs-note">Cooling-system figures are site-specific: the achievable cycle limit depends on your make-up water chemistry, equipment and local discharge rules. Nothing here is a generic target.</p>
+        <p class="cs-note">Cooling figures are site-specific: the achievable limit depends on your make-up chemistry, equipment and local discharge rules.</p>
       </div>
     </section>
   </main>
@@ -186,8 +197,10 @@
         <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
         <p class="footer-tag">The Autopilot For Industrial Water</p>
       </div>
-      <p class="footer-links"><a href="../industries/food-beverage.html">Food &amp; Beverage</a> · <a href="../industries/industrial-water.html">Industrial Water</a> · <a href="../industries/manufacturing.html">Manufacturing</a> · <a href="../industries/municipal.html">Municipal</a> · <a href="../industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="../industries/data-centers.html">Data Centers</a></p>
-      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+      <div>
+        <p class="footer-links"><a href="food-beverage.html">Food &amp; Beverage</a> · <a href="industrial-water.html">Industrial Water</a> · <a href="manufacturing.html">Manufacturing</a> · <a href="municipal.html">Municipal</a> · <a href="pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="data-centers.html">Data Centers</a></p>
+        <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+      </div>
     </div>
   </footer>
 </body>
