@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
   <!-- Icon + wordmark sprite. Kept rendered (not display:none) so the clip paths resolve in every browser. -->
@@ -120,10 +120,14 @@
         </div>
         <figure class="hero-visual">
           <div class="shot">
-            <img class="shot-base" src="assets/hero-product.jpg" width="2000" height="1320" fetchpriority="high" decoding="async"
-                 alt="The AquaMesh platform on a monitor, beside the AquaSpectra smart probe — a stainless-steel inline optical water-quality sensor." />
-            <img class="shot-screen" src="assets/screen.jpg" width="1800" height="1140" fetchpriority="high" decoding="async"
-                 alt="The AquaMesh dashboard: a live 3D digital twin of a water treatment plant with live readings, savings and cost tiles." />
+            <div class="shot-monitor">
+              <img class="shot-base" src="assets/hero-monitor.jpg" width="1636" height="1320" fetchpriority="high" decoding="async"
+                   alt="The AquaMesh platform running on a monitor on a plant desk." />
+              <img class="shot-screen" src="assets/screen.jpg" width="1800" height="1140" fetchpriority="high" decoding="async"
+                   alt="The AquaMesh dashboard: a live 3D digital twin of a water treatment plant with live readings, savings and cost tiles." />
+            </div>
+            <img class="shot-probe" src="assets/hero-probe.jpg" width="362" height="1320" fetchpriority="high" decoding="async"
+                 alt="The AquaSpectra smart probe: a stainless-steel inline optical water-quality sensor." />
           </div>
           <figcaption><b>AquaSpectra™</b> Fills the blind spots existing sensors miss.</figcaption>
         </figure>
@@ -148,14 +152,14 @@
         <div>
           <p class="eyebrow">Real plants. Real numbers.</p>
           <h2>What AquaMesh finds in <span class="accent">a plant's own data.</span></h2>
-          <p class="lead">A water-reuse plant where 25 days of existing history was enough to rank what it was losing, and a corn wet-milling assessment that catches starch before it reaches wastewater.</p>
+          <p class="lead">25 days of one plant's existing history, ranked by what each finding costs a year. Plus a corn wet-milling assessment that catches starch before it reaches wastewater.</p>
           <a class="btn btn-ghost" href="case-studies/index.html">Read the case studies <svg class="ic"><use href="#i-arrow" /></svg></a>
         </div>
-        <dl class="case-teaser-stats">
-          <div><dt>a year of avoidable cost at one plant — $42,050 of it from existing data alone</dt><dd>$92,200</dd></div>
-          <div><dt>above one plant's own posted oxygen range, every day for 25 days</dt><dd>3.6×</dd></div>
-          <div><dt>starch signal above reference, NIR</dt><dd>↑2.8σ</dd></div>
-        </dl>
+        <figure class="cs-figure">
+          <img src="assets/audit/fig1.jpg" width="1290" height="590" loading="lazy" decoding="async"
+               alt="Audit summary for a water-reuse plant: about $42,050 a year in savings with no capital spend, rising to $92,200 with a later instrumentation phase; a $147,000 a year power bill; 71% of design flow; effluent turbidity 0.11 NTU." />
+          <figcaption>One plant's audit: <b>$42,050 a year</b> from data it already had, <b>$92,200</b> fully instrumented.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -165,7 +169,7 @@
         <div class="head">
           <p class="eyebrow">Water intelligence. Real impact.</p>
           <h2>What is this problem <span class="accent">costing you?</span></h2>
-          <p class="lead">Many critical conditions in industrial water go undetected until they are already costing you — in product, downtime, energy or compliance.</p>
+          <p class="lead">Most of it goes undetected until it has already cost you — in product, downtime, energy or compliance.</p>
         </div>
 
         <div class="trio">
@@ -176,6 +180,7 @@
               <li><b>How do you catch it today?</b> Lab results, manual checks, operator observation.</li>
               <li><b>How long before you know?</b> Hours, days — sometimes weeks.</li>
             </ul>
+            <div class="figure slate"><span class="figure-label">Time to detection today</span><span class="figure-num">Hours – weeks</span><span class="figure-note">Lab turnaround, manual rounds, operator eyes</span></div>
           </article>
           <article class="card">
             <div class="card-top"><span class="num">2</span><div><h3>The cost</h3><p class="sub">What happens when you don't catch it early?</p></div></div>
@@ -185,16 +190,16 @@
               <li><svg class="ic"><use href="#i-bolt" /></svg><span><b>Water, energy, chemicals</b> Unnecessary use, higher OPEX</span></li>
               <li><svg class="ic"><use href="#i-shield" /></svg><span><b>Quality &amp; compliance</b> Fines, penalties, reputational risk</span></li>
             </ul>
-            <div class="figure blue"><span class="figure-label">Total potential impact</span><span class="figure-num">$500K – $5M+ <small>/ year</small></span><span class="figure-note">Typical range for industrial facilities</span></div>
+            <div class="figure blue"><span class="figure-label">Total potential impact</span><span class="figure-num">$500K – $5M+ <small>/ year</small></span><span class="figure-note">Typical industrial range</span></div>
           </article>
           <article class="card">
             <div class="card-top"><span class="num">3</span><div><h3>The opportunity</h3><p class="sub">Could earlier visibility change the outcome?</p></div></div>
             <ul class="qa">
               <li><b>What would you do if you knew earlier?</b> Adjust the process, isolate the source, schedule maintenance, prevent a release.</li>
-              <li><b>Can AquaMesh detect or predict it?</b> <span class="verdict"><em class="yes">Yes</em> / <em class="test">Test</em> / <em>No</em></span> — we tell you which, straight.</li>
+              <li><b>Can AquaMesh detect or predict it?</b> <span class="verdict"><em class="yes">Yes</em> / <em class="test">Test</em> / <em>No</em></span> — we tell you which.</li>
               <li><b>Can the result be measured?</b> Higher yield, lower OPEX, fewer upsets.</li>
             </ul>
-            <div class="figure green"><span class="figure-label">Potential recoverable value</span><span class="figure-num">$250K – $1M+ <small>/ year</small></span><span class="figure-note">Per facility, based on typical opportunities</span></div>
+            <div class="figure green"><span class="figure-label">Potential recoverable value</span><span class="figure-num">$250K – $1M+ <small>/ year</small></span><span class="figure-note">Per facility, typical opportunities</span></div>
           </article>
         </div>
 
@@ -210,7 +215,7 @@
           <div class="est-copy">
             <p class="eyebrow">Estimate your savings</p>
             <h3>What could AquaMesh find in your plant?</h3>
-            <p>AquaMesh targets 10–25% of the water, energy and chemical spend it can see. Move the slider to your facility's annual spend.</p>
+            <p>AquaMesh targets 10–25% of the water, energy and chemical spend it can see. Move the slider to your annual spend.</p>
           </div>
           <div class="est-control">
             <label for="spend">Annual water, energy &amp; chemical spend</label>
@@ -279,7 +284,7 @@
         <div class="split-copy">
           <p class="eyebrow">AquaSpectra™ smart probe</p>
           <h2>Fills the blind spots <span class="accent">existing sensors miss.</span></h2>
-          <p class="lead">A broad-spectrum inline optical sensor that reads water quality in real time — built for the plant floor, not the lab. Add it only where your existing instruments leave a gap.</p>
+          <p class="lead">A broad-spectrum inline optical sensor that reads water quality in real time — built for the plant floor, not the lab.</p>
           <ul class="specs">
             <li><span class="disc sm"><svg class="ic"><use href="#i-pulse" /></svg></span><span><b>16+ parameters, one device</b> UV/Vis optical measurement in a single rugged probe.</span></li>
             <li><span class="disc sm"><svg class="ic"><use href="#i-cycle" /></svg></span><span><b>Self-cleaning</b> Designed to keep reading through fouling-prone streams.</span></li>
@@ -330,10 +335,10 @@
           <p class="lead">Industrial water is too important for a black box. AquaMesh keeps your team in control of every change.</p>
         </div>
         <ul class="trust-grid">
-          <li><span class="disc"><svg class="ic"><use href="#i-shield" /></svg></span><h3>Advisory by default</h3><p>Nothing changes on your plant without an operator's approval. When closed-loop control arrives, it is opt-in — and you can return to advisory at any time.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Every change on the record</h3><p>Recommendations, approvals and setting changes are logged — who, what, when, and the value before.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-bell" /></svg></span><h3>Alarms that reach a person</h3><p>Critical excursions escalate by phone, down your on-call list, until someone acknowledges them.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-lock" /></svg></span><h3>Your data, walled off</h3><p>Each customer's data is isolated at the database level, so one plant's readings are never visible to another.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-shield" /></svg></span><h3>Advisory by default</h3><p>Nothing changes on your plant without an operator's approval. Closed-loop control is opt-in, and reversible.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Every change on the record</h3><p>Recommendations, approvals and setting changes are logged — who, what and when.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-bell" /></svg></span><h3>Alarms that reach a person</h3><p>Critical excursions escalate by phone down your on-call list until someone acknowledges.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-lock" /></svg></span><h3>Your data, walled off</h3><p>Isolated at the database level — one plant's readings are never visible to another.</p></li>
         </ul>
       </div>
     </section>
@@ -344,13 +349,13 @@
         <div class="head">
           <p class="eyebrow">Roadmap</p>
           <h2>Start with water. <span class="accent">Scale to the whole plant.</span></h2>
-          <p class="lead">AquaMesh connects your data and sensors, runs real-time models and executes operator-approved control — starting with the highest-ROI use cases, with a path to full plant operations.</p>
+          <p class="lead">Connect the data, run the models, then execute operator-approved control — highest-ROI use cases first.</p>
         </div>
 
         <div class="stages">
           <article class="stage">
             <header><span class="num lg">1</span><div><p class="stage-when">Today</p><h3>AI recommendations</h3></div></header>
-            <p>Combine existing plant data and sensors — including AquaSpectra™ — to detect issues early, identify the cause and recommend the best action.</p>
+            <p>Existing plant data and sensors — including AquaSpectra™ — combined to catch issues early, name the cause and recommend the action.</p>
             <ul class="sources">
               <li><svg class="ic"><use href="#i-wave" /></svg><span><b>Process data</b> Flow, pressure, temperature</span></li>
               <li><svg class="ic"><use href="#i-camera" /></svg><span><b>Visual data</b> Cameras and acoustics</span></li>
@@ -383,7 +388,7 @@
               <li><svg class="ic"><use href="#i-gear" /></svg><span><b>Process agent</b> Maximize yield, throughput and quality</span></li>
               <li><svg class="ic"><use href="#i-shield" /></svg><span><b>Security agent</b> Detect intrusions, safety risks and unusual activity</span></li>
             </ul>
-            <p class="stage-foot"><svg class="ic"><use href="#i-chart" /></svg>A safer, more efficient plant. Same infrastructure. More value.</p>
+            <p class="stage-foot"><svg class="ic"><use href="#i-chart" /></svg>Safer and more efficient, on the same infrastructure.</p>
           </article>
         </div>
       </div>
@@ -395,7 +400,7 @@
         <div class="head">
           <p class="eyebrow">Why AquaMesh</p>
           <h2>Lean, fast, and focused on <span class="accent">measurable results.</span></h2>
-          <p class="lead">Enterprise water platforms are powerful but heavyweight. Point solutions are quick but narrow. AquaMesh fills the gap — real operational value, faster and with less effort.</p>
+          <p class="lead">Enterprise water platforms are heavyweight. Point solutions are narrow. AquaMesh sits in the gap.</p>
         </div>
         <ul class="checks">
           <li><span class="tick"><svg class="ic"><use href="#i-check" /></svg></span><div><h3>Uses the plant data you already have</h3><p>No rip-and-replace. Works from SCADA, PLCs, historians, LIMS and CMMS.</p></div></li>
