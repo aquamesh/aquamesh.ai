@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <!-- Icon + wordmark sprite. Kept rendered (not display:none) so the clip paths resolve in every browser. -->
@@ -129,7 +129,7 @@
             <img class="shot-probe" src="assets/hero-probe.jpg" width="362" height="1320" fetchpriority="high" decoding="async"
                  alt="The AquaSpectra smart probe: a stainless-steel inline optical water-quality sensor." />
           </div>
-          <figcaption><b>AquaSpectra™</b> Fills the blind spots existing sensors miss.</figcaption>
+          <figcaption><b>AquaSpectra™</b> Fills the gap between your process and actionable insight.</figcaption>
         </figure>
       </div>
       <div class="wrap">
@@ -155,11 +155,11 @@
           <p class="lead">25 days of one plant's existing history, ranked by what each finding costs a year. Plus a corn wet-milling assessment that catches starch before it reaches wastewater.</p>
           <a class="btn btn-ghost" href="case-studies/index.html">Read the case studies <svg class="ic"><use href="#i-arrow" /></svg></a>
         </div>
-        <figure class="cs-figure">
-          <img src="assets/audit/fig1.jpg" width="1290" height="590" loading="lazy" decoding="async"
-               alt="Audit summary for a water-reuse plant: about $42,050 a year in savings with no capital spend, rising to $92,200 with a later instrumentation phase; a $147,000 a year power bill; 71% of design flow; effluent turbidity 0.11 NTU." />
-          <figcaption>One plant's audit: <b>$42,050 a year</b> from data it already had, <b>$92,200</b> fully instrumented.</figcaption>
-        </figure>
+        <dl class="case-teaser-stats">
+          <div><dt>a year of avoidable cost at one plant — $42,050 of it from existing data alone</dt><dd>$92,200</dd></div>
+          <div><dt>above one plant's own posted oxygen range, every day for 25 days</dt><dd>3.6×</dd></div>
+          <div><dt>starch signal above reference, NIR</dt><dd>↑2.8σ</dd></div>
+        </dl>
       </div>
     </section>
 
@@ -203,6 +203,44 @@
           </article>
         </div>
 
+        <div class="ledger-head">
+          <h3>What late detection costs, on the public record</h3>
+          <p>Exceedances are self-reported, so the penalties are public. What these share is duration — hundreds of exceedances over months or years, not one bad day.</p>
+        </div>
+        <ul class="ledger">
+          <li>
+            <span class="ledger-sector">Vegetable processing</span>
+            <span class="ledger-what">600+ discharge-permit exceedances since 2016 — suspended solids, ammonia, phosphorus</span>
+            <span class="ledger-num">$1.15M<small> penalty</small></span>
+          </li>
+          <li>
+            <span class="ledger-sector">Poultry</span>
+            <span class="ledger-what">Clean Water Act violation at a processing plant — criminal fine, probation and remediation</span>
+            <span class="ledger-num">$2.5M<small> fine + remedy</small></span>
+          </li>
+          <li>
+            <span class="ledger-sector">Seafood</span>
+            <span class="ledger-what">Discharge violations, plus the capital to retrofit fish-waste controls afterwards</span>
+            <span class="ledger-num">$2.5M<small> penalty</small></span>
+          </li>
+          <li>
+            <span class="ledger-sector">Fruit processing</span>
+            <span class="ledger-what">~120 exceedances of nitrogen and phosphorus limits at one facility</span>
+            <span class="ledger-num">$230K<small> penalty</small></span>
+          </li>
+          <li>
+            <span class="ledger-sector">Dairy, brewing, starch</span>
+            <span class="ledger-what">BOD and suspended solids over the sewer threshold, billed by the pound every month</span>
+            <span class="ledger-num">$0.02–0.60<small> / lb over</small></span>
+          </li>
+          <li>
+            <span class="ledger-sector">Corn wet milling</span>
+            <span class="ledger-what">One pound of starch lost per bushel, at 320,000 bushels a day</span>
+            <span class="ledger-num">160 tons<small> / day</small></span>
+          </li>
+        </ul>
+        <p class="ledger-note">Penalties and surcharge rates from public <a href="https://www.epa.gov/enforcement" rel="noopener">EPA</a> and <a href="https://www.justice.gov/enrd" rel="noopener">DOJ</a> enforcement records and published municipal surcharge schedules, 2022–2025. Other plants, not ours — shown because the exposure is the same shape everywhere.</p>
+
         <ol class="flowbar" aria-label="How we work through it">
           <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><span>Identify the problem</span></li>
           <li><span class="disc"><svg class="ic"><use href="#i-dollar" /></svg></span><span>Quantify the cost</span></li>
@@ -227,7 +265,6 @@
             <p class="est-label">Typical annual opportunity</p>
             <p class="est-num"><span id="est-low">$150K</span> – <span id="est-high">$375K</span></p>
             <p class="est-note" id="est-note">An estimate from typical ranges, not a quote. A demo on your own data narrows it down.</p>
-            <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
           </div>
         </div>
 
@@ -283,14 +320,15 @@
         </div>
         <div class="split-copy">
           <p class="eyebrow">AquaSpectra™ smart probe</p>
-          <h2>Fills the blind spots <span class="accent">existing sensors miss.</span></h2>
-          <p class="lead">A broad-spectrum inline optical sensor that reads water quality in real time — built for the plant floor, not the lab.</p>
+          <h2>Know when your product or process changes. <span class="accent">Before it costs you.</span></h2>
+          <p class="lead">A rugged in-situ probe that reads the full spectral fingerprint of your process water, continuously — so a change shows up as it happens, not in tomorrow's lab result.</p>
           <ul class="specs">
-            <li><span class="disc sm"><svg class="ic"><use href="#i-pulse" /></svg></span><span><b>16+ parameters, one device</b> UV/Vis optical measurement in a single rugged probe.</span></li>
-            <li><span class="disc sm"><svg class="ic"><use href="#i-cycle" /></svg></span><span><b>Self-cleaning</b> Designed to keep reading through fouling-prone streams.</span></li>
-            <li><span class="disc sm"><svg class="ic"><use href="#i-signal" /></svg></span><span><b>Over-the-air updates</b> New capabilities arrive as firmware, not replacements.</span></li>
-            <li><span class="disc sm"><svg class="ic"><use href="#i-dollar" /></svg></span><span><b>A third of the upfront cost</b> Hardware priced at about 1/3 of comparable sensors.</span></li>
+            <li><span class="disc sm"><svg class="ic"><use href="#i-cube" /></svg></span><span><b>Protect product</b> Catch carryover, composition drift or residual material before it becomes rework.</span></li>
+            <li><span class="disc sm"><svg class="ic"><use href="#i-pulse" /></svg></span><span><b>Control the process</b> Track batches, transitions and CIP endpoints — and run closer to target.</span></li>
+            <li><span class="disc sm"><svg class="ic"><use href="#i-drop" /></svg></span><span><b>Reduce waste and risk</b> See product loss and organic load heading for the drain.</span></li>
+            <li><span class="disc sm"><svg class="ic"><use href="#i-flask" /></svg></span><span><b>Calibrated values when you need them</b> BOD and COD in-situ, calibrated to your own reference samples.</span></li>
           </ul>
+          <p class="split-foot">UV/Vis, with optional NIR and Raman. Works across starches, sugars, dairy proteins, fats and oils, beverages, sauces and cleaning chemistry — or calibrated to your own product.</p>
         </div>
       </div>
     </section>
@@ -305,11 +343,11 @@
         </div>
 
         <ol class="steps">
-          <li><span class="num">1</span><svg class="ic lg"><use href="#i-clipboard" /></svg><h3>Free audit</h3><p>We review your process, goals and existing data. No obligation.</p></li>
+          <li><span class="num">1</span><svg class="ic lg"><use href="#i-clipboard" /></svg><h3>Free audit</h3><p>We review your process, goals and existing data.</p><p class="blue">Nothing to install. Nothing to sign.</p></li>
           <li><span class="num">2</span><svg class="ic lg"><use href="#i-monitor" /></svg><h3>Instant value <small>no hardware</small></h3><p>We connect to your existing plant data and deliver insights fast.</p><p class="blue">Start seeing savings right away.</p></li>
           <li><span class="num">3</span><svg class="ic lg"><use href="#i-sensor" /></svg><h3>Rapid deployment <small>when you're ready</small></h3><p>Add our compact sensor and edge computer.</p><p class="blue">From audit to operations in just a few hours.</p></li>
           <li><span class="num">4</span><svg class="ic lg"><use href="#i-cycle" /></svg><h3>Continuous optimization</h3><p>AI keeps optimizing your operations and verifies the results.</p><p class="blue">More savings. Less waste. Better uptime.</p></li>
-          <li><span class="num">5</span><svg class="ic lg"><use href="#i-trend" /></svg><h3>Scale as you grow</h3><p>Expand across more processes and sites as the ROI compounds.</p></li>
+          <li><span class="num">5</span><svg class="ic lg"><use href="#i-trend" /></svg><h3>Scale as you grow</h3><p>Expand across more processes and sites.</p><p class="blue">Each site starts from what the last one learned.</p></li>
         </ol>
 
         <div class="assure">
@@ -321,7 +359,6 @@
         <div class="promise">
           <svg class="ic xl"><use href="#i-shield" /></svg>
           <p><b>No big upfront costs.</b> <span>You see value first. Then you decide.</span></p>
-          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
         </div>
       </div>
     </section>
@@ -417,7 +454,7 @@
       <div class="wrap closing-inner">
         <p class="eyebrow">See <svg class="ic"><use href="#i-arrow" /></svg> Predict <svg class="ic"><use href="#i-arrow" /></svg> Act</p>
         <h2>See value first. <span class="accent">Then decide.</span></h2>
-        <p class="lead">Book a demo and we'll walk through your process, goals and existing data — and show where AquaMesh would pay off first. No obligation, and no hardware to buy up front.</p>
+        <p class="lead">We'll walk through your process, your goals and the data you already keep — and show where AquaMesh would pay off first. No obligation, and no hardware to buy up front.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>

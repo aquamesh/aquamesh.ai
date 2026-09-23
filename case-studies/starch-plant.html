@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=5" />
+  <link rel="stylesheet" href="../styles.css?v=6" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -72,7 +72,7 @@
         <a class="cs-back" href="../index.html#case-studies"><svg class="ic"><use href="#i-back" /></svg>All case studies</a>
         <p class="eyebrow">Case study · Corn wet milling</p>
         <h1>One pound of starch per bushel is <span class="accent">160 tons a day.</span></h1>
-        <p class="lead">An assessment prepared for a corn wet-milling facility. At its published operating scale, small upstream losses stop being small — and by the time they show up in wastewater, the product is already gone.</p>
+        <p class="lead">An assessment prepared for a corn wet-milling facility. At this scale small upstream losses stop being small, and by the time they reach wastewater the product is gone. So AquaMesh put <b>NIR starch detection on the process stream</b> and wired it straight into the <b>operational AI</b> — the sensor sees the starch leaving, the platform tells the operator which knob to turn.</p>
         <dl class="cs-facts">
           <div><dt>Corn processed</dt><dd>320,000 bushels a day</dd></div>
           <div><dt>Starch equivalent moving</dt><dd>10.2M lb a day</dd></div>
@@ -101,14 +101,15 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">How AquaMesh would see it</p>
-          <h2>Use the plant data you already have. <span class="accent">Add sensing only where the process is blind.</span></h2>
+          <p class="eyebrow">The two halves, integrated</p>
+          <h2>NIR reads the starch. <span class="accent">The AI says what to do about it.</span></h2>
+          <p class="lead">Neither half is much use alone. A spectrum nobody acts on is a chart; an AI with no starch signal is guessing. AquaMesh ships them as one chain.</p>
         </div>
         <ol class="cs-steps">
-          <li><span class="num">1</span><div><h3>Connect</h3><p>Historian, PLC/SCADA, lab results, flow, pressure, temperature, conductivity, turbidity, utilities, production and CIP records.</p></div></li>
-          <li><span class="num">2</span><div><h3>Measure the gaps</h3><p>AquaSpectra™ for solids, turbidity and organic load. NIR or other instruments only where direct starch, protein or moisture measurement is needed.</p></div></li>
-          <li><span class="num">3</span><div><h3>Learn the process</h3><p>Link feed variability, machine behaviour, wash conditions, dewatering and wastewater signals to find the drivers of loss.</p></div></li>
-          <li><span class="num">4</span><div><h3>Act and verify</h3><p>Operators receive recommendations first. Only after validation can AquaMesh execute approved changes inside the plant's own operating limits — and verify the result.</p></div></li>
+          <li><span class="num">1</span><div><h3>Connect what exists</h3><p>Historian, PLC/SCADA, lab results, flow, pressure, temperature, conductivity, turbidity, utilities, production and CIP records.</p></div></li>
+          <li><span class="num">2</span><div><h3>Add NIR where the process is blind</h3><p>AquaSpectra™ with the NIR window reads the starch signature directly in the stream, alongside solids, turbidity and organic load — placed only where nothing measures product today.</p></div></li>
+          <li><span class="num">3</span><div><h3>Learn what drives the loss</h3><p>The platform ties the NIR signal to feed variability, machine behaviour, wash conditions and dewatering, so a rise points at a cause instead of an alarm.</p></div></li>
+          <li><span class="num">4</span><div><h3>Hand the operator an action</h3><p>Recommendations first, in the operator's language, with the value attached. Only after validation can AquaMesh execute approved changes inside the plant's own limits — and verify the result.</p></div></li>
         </ol>
       </div>
     </section>
@@ -118,7 +119,7 @@
         <div class="head">
           <p class="eyebrow">The measurement</p>
           <h2>Two windows. <span class="accent">One fingerprint.</span></h2>
-          <p class="lead">AquaSpectra captures UV/Vis (190–440 nm) and NIR (900–1700 nm) spectra every few seconds. A one-time model of the plant's own starch product becomes the reference, and the system watches for deviation from it rather than trying to hold an absolute calibration.</p>
+          <p class="lead">AquaSpectra captures UV/Vis (190–440 nm) and NIR (900–1700 nm) spectra every few seconds. The NIR window is what sees starch directly. A one-time model of the plant's own product becomes the reference, and the platform watches for deviation from it rather than trying to hold an absolute calibration.</p>
         </div>
         <figure class="cs-figure">
           <img src="../assets/starch-spectra.jpg" width="1700" height="837" loading="lazy" decoding="async"
@@ -145,6 +146,40 @@
           <div><dt>Lag on lab results while the load moves</dt><dd>Hours</dd></div>
         </dl>
         <p class="cs-note">Industry reference figures, not measurements from this facility. Sources: Anaerobic Digestion Starch Wastewater Guide; iFactory (BOD, COD &amp; compliance); LAR corn-milling TOC monitoring; MDPI 13(10):1762 flocculation study.</p>
+      </div>
+    </section>
+
+    <section class="section night">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">In the platform</p>
+          <h2>What the operator actually gets <span class="accent">when the NIR signal moves.</span></h2>
+          <p class="lead">Not a spectrum. A named cause, the knob to turn, the tags that prove it, and what the change is worth per hour — with accept, resolve and dismiss on the same card.</p>
+        </div>
+
+        <div class="platform-grid">
+          <div class="pillars">
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><h3>NIR reads the stream</h3><p>The starch signature, every few seconds, in-situ — no sample, no lab queue.</p></div>
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-spark" /></svg></span><h3>The model names a cause</h3><p>Deviation from the plant's own reference, tied to the unit that moved first.</p></div>
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-sliders" /></svg></span><h3>The operator gets an action</h3><p>One setpoint, one shift to observe, inside limits the plant already set.</p></div>
+            <div class="pillar"><span class="disc"><svg class="ic"><use href="#i-db" /></svg></span><h3>The result is verified</h3><p>The same signal confirms whether the yield actually came back.</p></div>
+          </div>
+
+          <aside class="finding" aria-label="Example finding">
+            <p class="finding-kicker">Example finding</p>
+            <div class="finding-card">
+              <div class="finding-tags"><span class="tag crit">Critical</span><span class="tag">Separation &amp; washing</span><span class="ago">6m ago</span></div>
+              <p class="finding-title">Starch Loss Index 2.6&#963; above reference — third shift running.</p>
+              <p class="finding-body">NIR starch signature has climbed with wash-water flow while feed rate held flat, which points at hydrocyclone carryover rather than a recipe change. At the current rate this is roughly <b>$1.1k/h</b> of product to the drain.</p>
+              <div class="finding-actions"><span>Acknowledge</span><span class="primary">Accept</span><span>Dismiss</span></div>
+            </div>
+            <div class="stream">
+              <p class="stream-kicker">Operations stream</p>
+              <p class="stream-row"><span class="stream-dot"></span><span>Wash-water split trimmed 4%<small>NIR index falling, turbidity nominal</small></span><b>+0.3 lb/bu</b></p>
+            </div>
+            <p class="finding-note">Illustrative card in the shipping interface, populated with this assessment's own indicators. Not a measured result at this facility.</p>
+          </aside>
+        </div>
       </div>
     </section>
 
