@@ -116,6 +116,52 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
 .nav-links a { color: var(--ink-2); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
 .nav-links a:hover { color: var(--blue); }
 
+/* ── Legal pages ─────────────────────────────────────────────── */
+.legal-meta { margin-top: 18px; font-size: .84rem; color: var(--ink-3); }
+.legal-body { max-width: 74ch; display: flex; flex-direction: column; gap: clamp(30px, 4vw, 44px); }
+.legal-body h2 { font-size: clamp(1.3rem, 1.9vw, 1.6rem); margin-bottom: 14px; }
+.legal-body p { font-size: 1rem; line-height: 1.65; }
+.legal-body p + p { margin-top: 12px; }
+.legal-body b { color: var(--ink); font-weight: 700; }
+.legal-body code { font-family: var(--mono); font-size: .92em; background: var(--wash); padding: 2px 6px; border-radius: 6px; }
+
+/* ── Mobile menu ─────────────────────────────────────────────── */
+.nav-toggle {
+  display: none; margin-left: auto; flex-direction: column; justify-content: center; gap: 5px;
+  width: 44px; height: 44px; padding: 0 10px; background: none; border: 0; cursor: pointer;
+}
+.nav-toggle span { display: block; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
+.nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-panel {
+  position: sticky; top: 72px; z-index: 19; background: #fff; border-bottom: 1px solid var(--rule);
+  padding: 8px 24px 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+  box-shadow: 0 18px 40px rgba(16, 30, 70, .1);
+}
+.nav-panel .nav-links { display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin: 0; width: 100%; }
+.nav-panel .nav-links a { display: block; width: 100%; padding: 14px 0; font-size: 1.05rem; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--rule); }
+.nav-panel .btn { margin-top: 18px; }
+html.nav-open { overflow: hidden; }
+
+/* ── Cookie notice ───────────────────────────────────────────── */
+.cookie-bar {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60;
+  max-width: 720px; margin-inline: auto;
+  background: var(--ink); color: #c9d5f5; border-radius: 16px;
+  padding: 20px 22px; display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center;
+  box-shadow: 0 20px 50px rgba(5, 10, 20, .35);
+  transform: translateY(16px); opacity: 0; transition: transform .25s ease, opacity .25s ease;
+}
+.cookie-bar.is-in { transform: none; opacity: 1; }
+.cookie-bar p { font-size: .88rem; line-height: 1.5; flex: 1 1 320px; margin: 0; }
+.cookie-bar a { color: #9fc0ff; }
+.cookie-actions { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; }
+.cookie-decline { background: none; border: 0; color: #9fb0d8; font: inherit; font-size: .86rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.cookie-decline:hover { color: #dfe7fb; }
+@media (prefers-reduced-motion: reduce) { .cookie-bar { transition: none; } }
+@media (max-width: 560px) { .cookie-bar { padding: 18px; } .cookie-actions { width: 100%; justify-content: space-between; } }
+
 /* ── Hero ────────────────────────────────────────────────────── */
 /* The slide's own ground: white, easing into a pale water blue — so the
    product render (which carries that same ground) sits in the page, not on it. */
@@ -819,6 +865,8 @@ h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.
   .ind-apps li:nth-child(odd) { border-left: 0; }
   .nav-links { display: none; }
   .nav-inner { justify-content: space-between; }
+  .nav-toggle { display: inline-flex; }
+  .nav-inner .btn-sm { display: none; }
   .split { grid-template-columns: minmax(0, 1fr); }
   .probe-panel { min-height: 360px; }
   .assure { grid-template-columns: minmax(0, 1fr); }
