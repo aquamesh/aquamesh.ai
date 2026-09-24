@@ -50,35 +50,4 @@
     }
   }
 
-  /* ── Cookie notice ───────────────────────────────────────── */
-  var KEY = 'am-cookie-choice';
-  var stored = null;
-  try { stored = localStorage.getItem(KEY); } catch (e) { stored = 'skip'; }
-  if (stored) return;
-
-  var prefix = /\/(case-studies|industries)\//.test(location.pathname) ? '../' : '';
-  var bar = document.createElement('div');
-  bar.className = 'cookie-bar';
-  bar.setAttribute('role', 'region');
-  bar.setAttribute('aria-label', 'Cookie notice');
-  bar.innerHTML =
-    '<p>This site sets no tracking or advertising cookies. It stores one small item in your browser only to remember this choice, ' +
-    'and loads fonts from Google, which receives your IP address. <a href="' + prefix + 'privacy.html">Privacy</a> · ' +
-    '<a href="' + prefix + 'cookies.html">Cookies</a></p>' +
-    '<div class="cookie-actions">' +
-    '<button type="button" class="btn btn-sm" data-choice="accepted">Got it</button>' +
-    '<button type="button" class="cookie-decline" data-choice="declined">Decline non-essential</button>' +
-    '</div>';
-  document.body.appendChild(bar);
-  requestAnimationFrame(function () { bar.classList.add('is-in'); });
-
-  bar.addEventListener('click', function (e) {
-    var choice = e.target.getAttribute && e.target.getAttribute('data-choice');
-    if (!choice) return;
-    try { localStorage.setItem(KEY, choice); } catch (err) {}
-    /* Nothing non-essential runs today. When analytics is added, gate it on
-       localStorage.getItem('am-cookie-choice') === 'accepted'. */
-    bar.classList.remove('is-in');
-    setTimeout(function () { bar.remove(); }, 250);
-  });
 })();

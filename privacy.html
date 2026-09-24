@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=25" />
+  <link rel="stylesheet" href="styles.css?v=26" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -62,7 +62,7 @@
       <div class="wrap">
         <p class="eyebrow">Privacy</p>
         <h1>What this site does — <span class="accent">and does not — collect.</span></h1>
-        <p class="lead">A marketing site with no accounts, no forms and no analytics. Here is exactly what happens when you visit, in plain terms.</p>
+        <p class="lead">No accounts, no forms, and analytics only if you accept it. Below is what is collected, why, who receives it, and every right you have over it.</p>
         <p class="legal-meta">Last updated 23 September 2026 · AquaMesh Inc.</p>
       </div>
     </section>
@@ -71,47 +71,79 @@
       <div class="wrap legal-body">
         <section>
           <h2>The short version</h2>
-          <p>This is a marketing website. It has no accounts, no login, no forms and no analytics. We do not track you across the web, we do not sell data, and we do not use advertising cookies. If you email us, we hold that email so we can reply to it.</p>
+          <p>This is a marketing website. It has no accounts, no login and no forms. Since September 2026 it uses Google Analytics, and <b>only if you accept it</b>. We do not sell your personal information, we do not share it for cross-context behavioural advertising, and we honour Global Privacy Control automatically.</p>
+          <p>You can <a href="do-not-sell.html">opt out here</a> at any time.</p>
         </section>
 
         <section>
-          <h2>What happens when you visit</h2>
-          <p>The site is served by <b>GitHub Pages</b>. Like any web server, GitHub records technical request data including your IP address, the pages requested and your browser user-agent, and uses it to serve the site and to protect it from abuse. That processing is GitHub’s, under its own terms.</p>
-          <p>Typefaces are loaded from <b>Google Fonts</b>. That request goes directly from your browser to Google and discloses your IP address to Google. It sets no cookies, but it is a transfer of data to a third party, and it is the only third-party request the site makes.</p>
-          <p>Nothing else runs. No analytics, no tag manager, no pixels, no embedded video or social widgets, no chat tool, no A/B testing, no session recording.</p>
+          <h2>Categories of personal information we collect</h2>
+          <p>Using the categories California law defines:</p>
+          <div class="table-wrap">
+            <table class="cs-table">
+              <thead><tr><th>Category</th><th>What that means here</th><th>Source</th><th>Why</th><th>Who receives it</th></tr></thead>
+              <tbody>
+                <tr><td><b>Identifiers</b></td><td>IP address; your email address and name if you write to us</td><td>Your browser; you</td><td>Serving the site, security, replying to you</td><td>GitHub (hosting), Google (fonts, analytics), our email provider</td></tr>
+                <tr><td><b>Internet or network activity</b></td><td>Pages viewed, referring site, approximate time on page, browser and device type</td><td>Analytics, if you accept</td><td>Understanding which pages are useful</td><td>Google Analytics</td></tr>
+                <tr><td><b>Geolocation (coarse)</b></td><td>Country and region inferred from IP — never precise location</td><td>Analytics, if you accept</td><td>Knowing which markets read us</td><td>Google Analytics</td></tr>
+                <tr><td><b>Commercial information</b></td><td>What you tell us about your plant or your interest, in an email</td><td>You</td><td>Responding and, if you want, preparing an audit</td><td>Nobody outside AquaMesh</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><b>Sensitive personal information: none.</b> We do not collect it, so the right to limit its use does not arise. We do not collect biometric, precise geolocation, health, financial account, government ID or account credential data through this website, and we do not infer characteristics from any of it.</p>
         </section>
 
         <section>
-          <h2>What we store on your device</h2>
-          <p>One item, and only if you interact with the cookie notice: a record of whether you accepted or declined, kept in your browser’s local storage so we do not ask again. It contains no identifier and is never sent to us. Clearing your browser data removes it.</p>
-          <p>See the <a href="cookies.html">cookie policy</a> for the detail.</p>
+          <h2>Analytics, and how it is gated</h2>
+          <p>Google Analytics 4 runs on this site. Nothing analytics-related happens until you choose: Google Consent Mode v2 is set to <code>denied</code> for analytics storage, advertising storage, ad user data and ad personalisation before any tag loads. Accepting switches analytics storage on. Rejecting leaves everything denied.</p>
+          <p>We run it deliberately narrowed: <b>Google Signals is off</b> and <b>ad personalisation is disabled</b>, so the data is not used to build an advertising profile or to follow you across devices. IP addresses are anonymised.</p>
+          <p>Advertising storage stays denied in all cases. There are no ad tags on this site.</p>
         </section>
 
         <section>
-          <h2>If you contact us</h2>
-          <p>Every contact route on this site is a plain <code>mailto:</code> link, so writing to us is an ordinary email. We receive your address, your name if you give it, and whatever you choose to put in the message.</p>
-          <p>We use it to reply, and to continue the conversation if you want one. We keep business correspondence while the relationship is live and for a reasonable period afterwards. We do not add you to a marketing list from a single enquiry, and we do not pass your details to anyone else for their own marketing.</p>
+          <h2>What we do not do</h2>
+          <p>We do not sell personal information for money or other valuable consideration. We do not share it for cross-context behavioural advertising. We do not use it to train models offered to anyone else. We do not buy personal data about you from brokers, and we do not run remarketing, pixels, session recording or A/B testing.</p>
+          <p>We have not sold or shared personal information in the preceding twelve months, and we do not knowingly sell or share the personal information of anyone under 16.</p>
+        </section>
+
+        <section>
+          <h2>How long we keep things</h2>
+          <p><b>Analytics:</b> retained in Google Analytics for 14 months, then deleted automatically. <b>Email correspondence:</b> kept while the conversation is live and for up to three years afterwards, so we can pick up where we left off. <b>Server request logs:</b> held by GitHub under its own retention terms, which we do not control. <b>Your consent or opt-out preference:</b> held in your own browser until you clear it.</p>
+        </section>
+
+        <section>
+          <h2>Your rights under the CCPA and CPRA</h2>
+          <p>If you are a California resident you have the right to:</p>
+          <ul class="legal-list"><li><b>Know</b> what personal information we collect, use and disclose, including the specific pieces.</li><li><b>Delete</b> the personal information we hold about you, subject to the exceptions the statute allows.</li><li><b>Correct</b> personal information that is inaccurate.</li><li><b>Opt out</b> of any sale or sharing — available <a href="do-not-sell.html">here</a>, and applied automatically if your browser sends Global Privacy Control.</li><li><b>Limit</b> the use of sensitive personal information. We collect none, so there is nothing to limit.</li><li><b>Not be discriminated against</b> for exercising any of these. We will not charge you more, give you less, or degrade the site because you asked.</li></ul>
+          <p>Rights equivalent to most of these exist under other laws — including the GDPR in the UK and EU, and the consumer privacy statutes of Colorado, Connecticut, Virginia and others. We apply the same process to everyone rather than checking where you live first.</p>
+        </section>
+
+        <section>
+          <h2>How to exercise them</h2>
+          <p>Email <a href="mailto:info@aquamesh.ai?subject=Privacy%20request">info@aquamesh.ai</a> with what you want. That address reaches a person. To opt out of sale or sharing you do not need to email at all — use the <a href="do-not-sell.html">opt-out page</a> or send Global Privacy Control.</p>
+          <p>We will acknowledge within <b>10 business days</b> and respond within <b>45 calendar days</b>. If we genuinely need longer we may extend once by a further 45 days, and we will tell you why before we do.</p>
+          <p>We will verify your request by matching it against information we already hold — usually the email address the correspondence came from. If we cannot verify you we will say so rather than guessing. An <b>authorised agent</b> may act for you with your written permission, and we may ask you to confirm it directly.</p>
+          <p>If we refuse a request we will explain which exception applies. If you think we got it wrong, reply and say so; it will be read by the same person who made the decision, and then by someone else.</p>
+        </section>
+
+        <section>
+          <h2>Who processes data for us</h2>
+          <p><b>GitHub, Inc.</b> hosts the site and logs requests, including IP addresses, to serve and protect it. <b>Google LLC</b> serves the typefaces, which discloses your IP address to Google on every page load, and provides Google Analytics if you accept it. Both act as service providers; neither is permitted to use the data for their own purposes beyond what their terms describe.</p>
+          <p>These are the only third parties that receive anything through this website.</p>
         </section>
 
         <section>
           <h2>Plant data, if we work together</h2>
-          <p>This policy covers the website. If you send us operational data — a historian export, tag lists, lab results — that is handled under the agreement we sign with you, not under this page. In general: your data stays yours, it is isolated per customer at the database level, it is not used to train anything shared with another customer, and it comes back to you in open formats whenever you ask.</p>
-        </section>
-
-        <section>
-          <h2>Your rights</h2>
-          <p>Depending on where you live, you may have the right to ask what personal data we hold about you, to have it corrected or deleted, to object to how we use it, or to receive a copy. Email <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a> and we will answer. We will not charge you for it and we will not make you create an account to ask.</p>
-          <p>We do not sell personal information, and we do not share it for cross-context behavioural advertising — there is nothing on this site that could.</p>
+          <p>This policy covers the website. Operational data you send us — historian exports, tag lists, lab results — is governed by the agreement we sign with you, not by this page. In general: your data stays yours, it is isolated per customer at the database level, it is not used to train anything shared with another customer, and it is returned in open formats whenever you ask.</p>
         </section>
 
         <section>
           <h2>Children</h2>
-          <p>This site is aimed at industrial and municipal operators. It is not directed at children and we do not knowingly collect information from them.</p>
+          <p>This site is aimed at industrial and municipal operators. It is not directed at children, we do not knowingly collect information from anyone under 16, and we do not sell or share the information of minors under any circumstances.</p>
         </section>
 
         <section>
           <h2>Changes, and who to ask</h2>
-          <p>If this policy changes we will update the date at the top. Questions go to <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a>, which reaches a person, not a ticketing system.</p>
+          <p>We review this policy at least once a year and update the date at the top when it changes. If a change is material we will say what changed rather than quietly reissuing it. Questions go to <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a>.</p>
         </section>
       </div>
     </section>
@@ -124,11 +156,12 @@
         <p class="footer-tag">The Autopilot For Industrial Water</p>
       </div>
       <div>
-        <p class="footer-links"><a href="industries/food-beverage.html">Food &amp; Beverage</a> · <a href="industries/industrial-water.html">Industrial Water</a> · <a href="industries/manufacturing.html">Manufacturing</a> · <a href="industries/municipal.html">Municipal</a> · <a href="industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="industries/data-centers.html">Data Centers</a><br /><a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="terms.html">Terms</a></p>
+        <p class="footer-links"><a href="industries/food-beverage.html">Food &amp; Beverage</a> · <a href="industries/industrial-water.html">Industrial Water</a> · <a href="industries/manufacturing.html">Manufacturing</a> · <a href="industries/municipal.html">Municipal</a> · <a href="industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="industries/data-centers.html">Data Centers</a><br /><a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="terms.html">Terms</a> · <a href="do-not-sell.html">Your Privacy Choices</a></p>
         <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
       </div>
     </div>
   </footer>
+  <script src="consent.js?v=1"></script>
   <script src="nav.js?v=1" defer></script>
 </body>
 </html>

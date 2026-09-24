@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=25" />
+  <link rel="stylesheet" href="styles.css?v=26" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -70,24 +70,34 @@
     <section class="section">
       <div class="wrap legal-body">
         <section>
-          <h2>What this site sets today</h2>
-          <p><b>No tracking cookies. No advertising cookies. No analytics cookies.</b> There is no analytics package on this site, so there is nothing to consent to for measurement purposes.</p>
-          <p>The only thing stored on your device is a single local-storage item recording whether you dismissed or declined the cookie notice, so that it does not reappear on every page. It holds one word. It contains no identifier, it is not readable by anyone else, and it never leaves your browser.</p>
+          <h2>What this site sets</h2>
+          <p>Two things, and only one of them can be switched off:</p>
+          <div class="table-wrap">
+            <table class="cs-table">
+              <thead><tr><th>What</th><th>Set by</th><th>Purpose</th><th>Lifetime</th><th>Optional?</th></tr></thead>
+              <tbody>
+                <tr><td><code>am-consent</code>, <code>am-optout-sale</code></td><td>AquaMesh (local storage)</td><td>Remembering your cookie choice and your opt-out, so we do not ask again</td><td>Until you clear site data</td><td>Strictly necessary</td></tr>
+                <tr><td><code>_ga</code>, <code>_ga_&lt;ID&gt;</code></td><td>Google Analytics 4</td><td>Distinguishing one visit from another and measuring which pages are read</td><td>Up to 2 years; data retained 14 months</td><td><b>Yes — only if you accept</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>There are no advertising cookies, no remarketing tags, no pixels, no session recording and no A/B testing on this site.</p>
         </section>
 
         <section>
-          <h2>Why there is a notice at all</h2>
-          <p>Because the site makes one third-party request — fonts from Google — which discloses your IP address to Google, and because we would rather tell you that plainly than not mention it. Declining stops nothing today, since nothing non-essential is running; it records your preference so that if we ever do add measurement, it stays off for you.</p>
+          <h2>Nothing runs before you choose</h2>
+          <p>Google Consent Mode v2 is set to <code>denied</code> for analytics storage, advertising storage, ad user data and ad personalisation before any tag loads. If you reject, it stays denied and no analytics cookie is written. If you accept, analytics storage is granted and nothing else changes — advertising stays denied either way, because there are no ad tags here.</p>
+          <p>We also run Analytics with <b>Google Signals off</b> and <b>ad personalisation disabled</b>, so the data cannot be used to build an advertising profile or follow you between devices.</p>
         </section>
 
         <section>
-          <h2>If that changes</h2>
-          <p>If we add analytics in future it will be gated on the choice recorded here, it will be named on this page before it goes live, and the notice will describe what it actually does. We will not quietly swap a notice for a consent banner and call it the same thing.</p>
+          <h2>Fonts</h2>
+          <p>Typefaces load from Google Fonts. That sets no cookies, but the request itself discloses your IP address to Google on every page. It is the only other third-party request the site makes, and we mention it because it would be easy not to.</p>
         </section>
 
         <section>
-          <h2>Clearing it</h2>
-          <p>Clearing site data in your browser removes the stored preference, and the notice will appear again on your next visit.</p>
+          <h2>Changing your mind</h2>
+          <p>Use the <a href="do-not-sell.html">opt-out page</a> to turn analytics off, or clear this site’s data in your browser and the notice will appear again on your next visit. If your browser sends <b>Global Privacy Control</b>, we apply the opt-out automatically and you will not see a banner at all.</p>
         </section>
       </div>
     </section>
@@ -100,11 +110,12 @@
         <p class="footer-tag">The Autopilot For Industrial Water</p>
       </div>
       <div>
-        <p class="footer-links"><a href="industries/food-beverage.html">Food &amp; Beverage</a> · <a href="industries/industrial-water.html">Industrial Water</a> · <a href="industries/manufacturing.html">Manufacturing</a> · <a href="industries/municipal.html">Municipal</a> · <a href="industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="industries/data-centers.html">Data Centers</a><br /><a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="terms.html">Terms</a></p>
+        <p class="footer-links"><a href="industries/food-beverage.html">Food &amp; Beverage</a> · <a href="industries/industrial-water.html">Industrial Water</a> · <a href="industries/manufacturing.html">Manufacturing</a> · <a href="industries/municipal.html">Municipal</a> · <a href="industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="industries/data-centers.html">Data Centers</a><br /><a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="terms.html">Terms</a> · <a href="do-not-sell.html">Your Privacy Choices</a></p>
         <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
       </div>
     </div>
   </footer>
+  <script src="consent.js?v=1"></script>
   <script src="nav.js?v=1" defer></script>
 </body>
 </html>
