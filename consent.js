@@ -1,6 +1,6 @@
 /* AquaMesh — consent, Google Consent Mode v2, GPC, and GA4 loading.
    Loaded on every page, before analytics. One place to configure:      */
-var AM_GA_ID = 'G-XXXXXXXXXX';   /* <-- paste your GA4 Measurement ID here */
+var AM_GA_ID = 'G-SC0YTTTB5M';   /* GA4 property: aquamesh.ai */
 
 (function () {
   'use strict';
