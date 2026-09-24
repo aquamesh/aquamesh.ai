@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Manufacturing | AquaMesh</title>
-  <meta name="description" content="Rinse drift, cooling risk and discharge limits — the water problems that reach the product, and how continuous measurement catches them." />
+  <meta name="description" content="Continuous measurement on the water streams that touch production, tied back to line state — what AquaMesh can do in a manufacturing plant." />
   <link rel="canonical" href="https://aquamesh.ai/industries/manufacturing.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Manufacturing | AquaMesh" />
-  <meta property="og:description" content="Rinse drift, cooling risk and discharge limits — the water problems that reach the product, and how continuous measurement catches them." />
+  <meta property="og:description" content="Continuous measurement on the water streams that touch production, tied back to line state — what AquaMesh can do in a manufacturing plant." />
   <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=19" />
+  <link rel="stylesheet" href="../styles.css?v=20" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -92,8 +92,8 @@
         <div class="ind-hero-copy">
           <a class="cs-back" href="../index.html#industries"><svg class="ic"><use href="#i-back" /></svg>All industries</a>
           <p class="eyebrow">Manufacturing</p>
-          <h1>Water is a utility — <span class="accent">until it stops the line.</span></h1>
-          <p class="lead">A rinse tank drifts, a batch comes back out of spec, and by then the cause is hours upstream and already gone.</p>
+          <h1>Continuous measurement <span class="accent">on the streams that matter.</span></h1>
+          <p class="lead">AquaMesh reads process water in place rather than on a sampling schedule, and connects what it sees to what the line was doing at the time.</p>
           <div class="actions">
             <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Manufacturing">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           </div>
@@ -103,10 +103,10 @@
         </figure>
       </div>
       <div class="wrap">
-        <dl class="ind-stats">
-          <div><dd>Hours</dd><dt>Between lab samples</dt></div>
-          <div><dd>Scheduled</dd><dt>How limits are usually checked</dt></div>
-          <div><dd>Your SCADA &amp; LIMS</dd><dt>Starts on</dt></div>
+        <dl class="ind-spec">
+          <div><dt>Reads</dt><dd>UV/Vis spectra, solids, turbidity, organic load, conductivity context</dd></div>
+          <div><dt>Connects to</dt><dd>SCADA, PLC, historian, LIMS, production records</dd></div>
+          <div><dt>To start</dt><dd>Existing data only — no new hardware</dd></div>
         </dl>
       </div>
     </section>
@@ -114,14 +114,33 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">What we look for</p>
-          <h2>What a scheduled sample <span class="accent">cannot tell you.</span></h2>
-          <p class="lead">Which of these matters depends on your process. The audit starts by finding out which.</p>
+          <p class="eyebrow">Capabilities</p>
+          <h2>What AquaMesh can do <span class="accent">on a plant floor.</span></h2>
+          <p class="lead">Which of these is useful depends entirely on your process. The audit is how we find out.</p>
         </div>
-        <ul class="ind-probs">
-          <li><h3>A sample describes one moment</h3><p>Whatever happened between two checks is unrecorded, so an excursion is found by luck or not at all.</p></li>
-          <li><h3>The usual reading is not always the one that matters</h3><p>A rinse can sit inside its normal conductivity band while what actually affects the surface has changed.</p></li>
-          <li><h3>Cooling is run on the safe side for a reason</h3><p>Scaling and corrosion cost far more than the water, so margin is carried deliberately — and rarely measured.</p></li>
+        <ul class="ind-caps">
+          <li><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><h3>Read the stream in place</h3><p>In-situ optical measurement every few seconds, designed to keep reading through fouling-prone water rather than needing a clean sample.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Correlate with line state</h3><p>Water-side change is compared against production records, machine state and utilities, so a drift can be attributed rather than just detected.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-bell" /></svg></span><h3>Escalate to a person</h3><p>Critical excursions can escalate by phone, down an on-call list, until somebody acknowledges — rather than sitting in an inbox.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Keep the record</h3><p>Findings, approvals and setting changes are logged with who, what and when, so evidence assembles itself rather than being reconstructed later.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Where it is typically applied</p>
+          <h2>Common places to look <span class="accent">in manufacturing.</span></h2>
+          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
+        </div>
+        <ul class="ind-apps">
+          <li><b>Rinse and wash tanks</b><span>loading and carryover between changes</span></li>
+          <li><b>Cooling circuits</b><span>chemistry between service visits</span></li>
+          <li><b>Discharge to sewer</b><span>continuous context around scheduled pretreatment samples</span></li>
+          <li><b>Process water make-up</b><span>quality arriving at the point it is used</span></li>
+          <li><b>Recovery and reuse loops</b><span>what is actually being recovered</span></li>
+          <li><b>Utilities</b><span>pumps, blowers and compressors serving those streams</span></li>
         </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="A continuous trace crosses the specification limit between two scheduled lab samples, so the excursion is never sampled.">
@@ -139,7 +158,7 @@
     <text x="60" y="270" font-size="15" fill="#66728a">Continuous reading — the excursion, its start and its cause</text>
   </g>
 </svg>
-          <figcaption>A scheduled sample can only tell you about the moment it was taken.</figcaption>
+          <figcaption>The general limitation of scheduled sampling — a sample can only describe the moment it was taken. Shown illustratively, not as a claim about any site.</figcaption>
         </figure>
       </div>
     </section>
@@ -147,33 +166,29 @@
     <section class="section night">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">What AquaMesh does about it</p>
-          <h2>Catch it in the water, <span class="accent">before the part.</span></h2>
-        </div>
-        <div class="ind-solve">
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><div><h3>Continuous, not sampled</h3><p>The full spectral fingerprint every few seconds, through fouling-prone water.</p></div></div>
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><div><h3>Tied to line state</h3><p>Correlated with production records and machine state, so a drift points at a cause.</p></div></div>
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-bell" /></svg></span><div><h3>Escalation that reaches a person</h3><p>Critical excursions go down your on-call list by phone until someone acknowledges.</p></div></div>
+          <p class="eyebrow">What you actually get</p>
+          <h2>A ranked list of things to do, <span class="accent">each with a number on it.</span></h2>
+          <p class="lead">Not a dashboard to interpret. Findings arrive with the action, the tags that are the evidence, and what the change is worth a year — to accept, resolve or dismiss.</p>
         </div>
         <figure class="ind-ui">
           <img src="../assets/audit.jpg" width="1400" height="1392" loading="lazy" decoding="async"
                alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." />
-          <figcaption>Every finding arrives like this — the action, the evidence, and what it is worth a year.</figcaption>
+          <figcaption>The recommendations view, as it ships.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section wash">
+    <section class="section">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">Working together</p>
           <h2>Built for your plant, <span class="accent">not from a preset.</span></h2>
         </div>
         <ol class="ind-steps">
-          <li><span class="num">1</span><h3>Free audit</h3><p>On the data you already keep. Start with the stream that has caused a problem before.</p></li>
+          <li><span class="num">1</span><h3>Free audit</h3><p>On the data you already keep. Start with the stream you have wondered about.</p></li>
           <li><span class="num">2</span><h3>Your process, modelled</h3><p>Modelled against your specification limits, not a textbook range.</p></li>
-          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>Usually one or two points. The audit says where your existing instruments already answer the question.</p></li>
-          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to your limits, every approval logged.</p></li>
+          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>Usually one or two points. The audit says where existing instruments already answer the question.</p></li>
+          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to limits your engineers set, every approval logged.</p></li>
         </ol>
         
       </div>
@@ -181,8 +196,8 @@
 
     <section class="closing">
       <div class="wrap closing-inner">
-        <h2>Which stream worries you?</h2>
-        <p class="lead">Start with the one that has bitten you before. We will look at what your data already says.</p>
+        <h2>Which stream would you start with?</h2>
+        <p class="lead">Tell us the one that has caused trouble before, and we will look at what your data already shows.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Manufacturing">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>

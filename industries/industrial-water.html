@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Industrial Water &amp; Wastewater | AquaMesh</title>
-  <meta name="description" content="Aeration is the largest electricity load in most treatment plants and it is usually set by feel. AquaMesh models the parallel equipment and prices the gaps." />
+  <meta name="description" content="What AquaMesh can do with a treatment plant’s existing history — model parallel equipment, derive power from measured signals, and price each finding." />
   <link rel="canonical" href="https://aquamesh.ai/industries/industrial-water.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Industrial Water &amp; Wastewater | AquaMesh" />
-  <meta property="og:description" content="Aeration is the largest electricity load in most treatment plants and it is usually set by feel. AquaMesh models the parallel equipment and prices the gaps." />
+  <meta property="og:description" content="What AquaMesh can do with a treatment plant’s existing history — model parallel equipment, derive power from measured signals, and price each finding." />
   <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=19" />
+  <link rel="stylesheet" href="../styles.css?v=20" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -92,8 +92,8 @@
         <div class="ind-hero-copy">
           <a class="cs-back" href="../index.html#industries"><svg class="ic"><use href="#i-back" /></svg>All industries</a>
           <p class="eyebrow">Industrial Water</p>
-          <h1>Aeration is the biggest bill <span class="accent">in the plant.</span></h1>
-          <p class="lead">And the setpoint driving it is usually chosen once, years ago, then inherited by everyone who comes after.</p>
+          <h1>Everything your plant <span class="accent">already recorded.</span></h1>
+          <p class="lead">AquaMesh reads the history your historian already holds, models how each signal and each pair of parallel units normally behaves, and prices what it finds.</p>
           <div class="actions">
             <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Industrial%20Water">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           </div>
@@ -103,10 +103,10 @@
         </figure>
       </div>
       <div class="wrap">
-        <dl class="ind-stats">
-          <div><dd>$92,200/yr</dd><dt>Found in 25 days of history</dt></div>
-          <div><dd>$42,050</dd><dt>Of it, with no capital</dt></div>
-          <div><dd>None</dd><dt>New hardware to begin</dt></div>
+        <dl class="ind-spec">
+          <div><dt>Reads</dt><dd>Historian tags — flow, pressure, airflow, runtime, DO, turbidity, MLSS</dd></div>
+          <div><dt>Connects to</dt><dd>SCADA, PLC, historian, CMMS, LIMS</dd></div>
+          <div><dt>To start</dt><dd>A data export. No site visit required</dd></div>
         </dl>
       </div>
     </section>
@@ -114,14 +114,33 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">What we look for</p>
-          <h2>What 25 days of history <span class="accent">usually shows.</span></h2>
-          <p class="lead">Findings differ from plant to plant. What rarely differs is where they turn up.</p>
+          <p class="eyebrow">Capabilities</p>
+          <h2>What AquaMesh can do <span class="accent">with existing history.</span></h2>
+          <p class="lead">These are capabilities. Which ones turn up anything at your plant is exactly what an audit answers.</p>
         </div>
-        <ul class="ind-probs">
-          <li><h3>Parallel equipment should agree</h3><p>Twin basins, twin pumps, twin trains. When one drifts from the other for weeks, it is usually a valve or a setting — not a mystery.</p></li>
-          <li><h3>Frequent starts cost more than running</h3><p>Every start draws locked-rotor current and heats the windings. Manufacturer guidance for pumps this size is often near six an hour.</p></li>
-          <li><h3>A dead signal never raises an alarm</h3><p>A totaliser that stopped moving, or a tag at the wrong scale, simply stops arguing. Nothing flags it.</p></li>
+        <ul class="ind-caps">
+          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Model parallel equipment together</h3><p>Twin basins, twin pumps, twin trains are modelled as pairs, so a drift between them can surface as a finding instead of passing as normal variation.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-bolt" /></svg></span><h3>Derive power from measured signals</h3><p>Blower power from the isentropic relation on measured airflow and discharge pressure; pump power from measured flow and head; runtime from historian deltas — arithmetic your own engineer can check.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-db" /></svg></span><h3>Check the instruments themselves</h3><p>Tags that stopped moving, sit at the wrong scale or disagree with a duplicate are surfaced — a dead signal never raises an alarm on its own.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><h3>Label every number measured or estimated</h3><p>Each line says which it is, and the assumptions behind an estimate are written down rather than buried.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Where it is typically applied</p>
+          <h2>Common places to look <span class="accent">in a treatment plant.</span></h2>
+          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
+        </div>
+        <ul class="ind-apps">
+          <li><b>Aeration and blowers</b><span>oxygen held against the range the plant itself posts</span></li>
+          <li><b>Parallel pumps and trains</b><span>duty share, start frequency, runtime divergence</span></li>
+          <li><b>Membrane scour air</b><span>airflow against the flux it is actually serving</span></li>
+          <li><b>Reuse and distribution</b><span>volumes recorded, pressure held, pumps cycling</span></li>
+          <li><b>Instrument health</b><span>totalisers, duplicates and scale errors across the tag list</span></li>
+          <li><b>Tariff exposure</b><span>which loads sit inside the expensive hours</span></li>
         </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Two basins on shared airflow. One holds dissolved oxygen inside the posted range; its twin sits far above it for the whole record.">
@@ -136,7 +155,7 @@
     <text x="898" y="120" text-anchor="end" font-size="14" font-weight="700" fill="#0b1026">3.6× the posted limit</text>
   </g>
 </svg>
-          <figcaption>From one plant’s audit: same air header, same setpoint, two very different answers — which is what made it a valve rather than a mystery.</figcaption>
+          <figcaption>How a pair of parallel units is compared — illustrated with figures from one plant’s audit, where a shared air header produced two very different answers.</figcaption>
         </figure>
       </div>
     </section>
@@ -144,23 +163,19 @@
     <section class="section night">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">What AquaMesh does about it</p>
-          <h2>Model the pairs. <span class="accent">Price the gaps.</span></h2>
-        </div>
-        <div class="ind-solve">
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><div><h3>Pairs modelled together</h3><p>A divergence surfaces as a finding rather than as normal noise.</p></div></div>
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-bolt" /></svg></span><div><h3>Power derived, not guessed</h3><p>Isentropic relation on measured airflow and pressure; pump power from flow and head.</p></div></div>
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><div><h3>Measured or estimated, labelled</h3><p>Every line says which, with the assumptions written down.</p></div></div>
+          <p class="eyebrow">What you actually get</p>
+          <h2>A ranked list of things to do, <span class="accent">each with a number on it.</span></h2>
+          <p class="lead">Not a dashboard to interpret. Findings arrive with the action, the tags that are the evidence, and what the change is worth a year — to accept, resolve or dismiss.</p>
         </div>
         <figure class="ind-ui">
           <img src="../assets/audit.jpg" width="1400" height="1392" loading="lazy" decoding="async"
                alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." />
-          <figcaption>Every finding arrives like this — the action, the evidence, and what it is worth a year.</figcaption>
+          <figcaption>The recommendations view, as it ships.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section wash">
+    <section class="section">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">Working together</p>
@@ -168,9 +183,9 @@
         </div>
         <ol class="ind-steps">
           <li><span class="num">1</span><h3>Free audit</h3><p>On 25 days of your historian. No site visit needed.</p></li>
-          <li><span class="num">2</span><h3>Your process, modelled</h3><p>Checked against the ranges your own sampling schedule publishes — not a textbook value.</p></li>
-          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>The instrumentation phase is priced separately. At one plant: $55,000 against $33,728 a year.</p></li>
-          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to your limits, every approval logged.</p></li>
+          <li><span class="num">2</span><h3>Your process, modelled</h3><p>Checked against the ranges your own sampling schedule publishes, not a textbook value.</p></li>
+          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>The instrumentation phase is quoted separately, so capital stands on its own.</p></li>
+          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to limits your engineers set, every approval logged.</p></li>
         </ol>
         <a class="ind-proof" href="../case-studies/water-reuse-plant.html"><span>A reuse plant: 1,001 tags, 7.2 million values, $92,200 a year found</span><svg class="ic"><use href="#i-arrow" /></svg></a>
       </div>
@@ -178,13 +193,13 @@
 
     <section class="closing">
       <div class="wrap closing-inner">
-        <h2>Bring your own history.</h2>
+        <h2>Send an export. See what is in it.</h2>
         <p class="lead">If your plant keeps a historian, AquaMesh has something to read.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Industrial%20Water">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
         </div>
-        <p class="cs-note">Figures from an AquaMesh audit of an operating membrane-bioreactor reuse plant, anonymized. Identified opportunities, not realized savings.</p>
+        <p class="cs-note">Capabilities described here are general. Figures quoted in the diagram are from one anonymized AquaMesh audit and are specific to that plant.</p>
       </div>
     </section>
   </main>

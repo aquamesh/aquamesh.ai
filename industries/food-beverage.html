@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Food &amp; Beverage | AquaMesh</title>
-  <meta name="description" content="Product reaching the drain is charged twice — as lost yield, then as organic load. AquaMesh reads it in the stream and names the unit that caused it." />
+  <meta name="description" content="What AquaMesh can measure and act on in a food or beverage plant — continuous organic load, product signatures and cleaning behaviour, tied back to what the line was doing." />
   <link rel="canonical" href="https://aquamesh.ai/industries/food-beverage.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Food &amp; Beverage | AquaMesh" />
-  <meta property="og:description" content="Product reaching the drain is charged twice — as lost yield, then as organic load. AquaMesh reads it in the stream and names the unit that caused it." />
+  <meta property="og:description" content="What AquaMesh can measure and act on in a food or beverage plant — continuous organic load, product signatures and cleaning behaviour, tied back to what the line was doing." />
   <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=19" />
+  <link rel="stylesheet" href="../styles.css?v=20" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -92,8 +92,8 @@
         <div class="ind-hero-copy">
           <a class="cs-back" href="../index.html#industries"><svg class="ic"><use href="#i-back" /></svg>All industries</a>
           <p class="eyebrow">Food &amp; Beverage</p>
-          <h1>You paid to make it. <span class="accent">Then you pay to treat it.</span></h1>
-          <p class="lead">Product that reaches the drain is charged twice. AquaSpectra reads it leaving; the platform names the unit that caused it and prices it per year.</p>
+          <h1>See what your water <span class="accent">is carrying.</span></h1>
+          <p class="lead">AquaMesh reads process and effluent water continuously, learns what your own product looks like, and connects a change back to what the line was doing at the time.</p>
           <div class="actions">
             <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Food%20and%20Beverage">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           </div>
@@ -103,10 +103,10 @@
         </figure>
       </div>
       <div class="wrap">
-        <dl class="ind-stats">
-          <div><dd>BOD &amp; TSS</dd><dt>Billed by the pound, monthly</dt></div>
-          <div><dd>$230K–$2.5M</dd><dt>Recent CWA penalties</dt></div>
-          <div><dd>160 t/day</dd><dt>One lb per bushel, one plant</dt></div>
+        <dl class="ind-spec">
+          <div><dt>Reads</dt><dd>UV/Vis spectra, optional NIR, solids, turbidity, organic load</dd></div>
+          <div><dt>Connects to</dt><dd>SCADA, PLC, historian, LIMS, CIP and production records</dd></div>
+          <div><dt>To start</dt><dd>Existing data only — no new hardware</dd></div>
         </dl>
       </div>
     </section>
@@ -114,14 +114,33 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">What we look for</p>
-          <h2>Where product <span class="accent">usually goes.</span></h2>
-          <p class="lead">Every line is different. These are the three we look at first — your own data says which of them apply to you.</p>
+          <p class="eyebrow">Capabilities</p>
+          <h2>What AquaMesh can do <span class="accent">in a food plant.</span></h2>
+          <p class="lead">Capabilities, not a diagnosis. Which of them are worth anything at your site is what the audit is for.</p>
         </div>
-        <ul class="ind-probs">
-          <li><h3>A timed clean cannot know when it is clean</h3><p>The endpoint is measurable in the return line. Where it is not measured, cycle length carries margin by design.</p></li>
-          <li><h3>Changeover margins are set by what you can see</h3><p>Judging where product ends and water begins is hard from the floor, so flushes are usually cut wide on purpose.</p></li>
-          <li><h3>A surcharge invoice explains itself a month late</h3><p>BOD and solids over the threshold are billed by the pound — long after the load has moved through the plant.</p></li>
+        <ul class="ind-caps">
+          <li><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><h3>Measure organic load continuously</h3><p>A rugged in-situ probe reads the stream every few seconds, in place, through water that would foul a conventional analyser.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-spark" /></svg></span><h3>Learn your product’s own signature</h3><p>A one-time model of your starch, sugar, dairy protein or sauce becomes the reference — so the system tracks deviation rather than trying to hold an absolute calibration across recipes and seasons.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Tie a change back to the line</h3><p>The signal is correlated against feed rate, wash flow, machine state and cleaning records, so a rise points at a unit and a time rather than raising an alarm.</p></li>
+          <li><span class="disc"><svg class="ic"><use href="#i-dollar" /></svg></span><h3>Put a number on it</h3><p>Findings are priced against your own tariff and surcharge schedule, so a fix can be compared with everything else competing for the same hour.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Where it is typically applied</p>
+          <h2>Common places to look <span class="accent">in food and beverage.</span></h2>
+          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
+        </div>
+        <ul class="ind-apps">
+          <li><b>CIP return lines</b><span>whether a cycle has reached endpoint, or is still running on the clock</span></li>
+          <li><b>Changeovers and flushes</b><span>where product ends and water begins, transition by transition</span></li>
+          <li><b>Effluent to sewer</b><span>organic load and solids ahead of the surcharge invoice, not after it</span></li>
+          <li><b>Wash and recovery loops</b><span>product carried into overflow that could be recovered instead</span></li>
+          <li><b>Separation and dewatering</b><span>fines and product escaping into water streams</span></li>
+          <li><b>Permit sampling points</b><span>continuous context around the samples you already take</span></li>
         </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="A production line with four stages. Small losses leave at the changeover and clean-in-place stages and arrive at the drain, where they are billed a second time as organic load.">
@@ -145,7 +164,7 @@
     <text x="150" y="231" font-size="15" fill="#66728a">— yield you already paid to make, now billed again by the pound</text>
   </g>
 </svg>
-          <figcaption>Both of these stages are measurable in the return line — which is what makes them worth checking first.</figcaption>
+          <figcaption>Cleaning and changeover are the two stages most commonly worth measuring in the return line — shown here in general terms, not as a claim about any particular plant.</figcaption>
         </figure>
       </div>
     </section>
@@ -153,23 +172,19 @@
     <section class="section night">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">What AquaMesh does about it</p>
-          <h2>Read the effluent. <span class="accent">Trace it back.</span></h2>
-        </div>
-        <div class="ind-solve">
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><div><h3>See product in the stream</h3><p>NIR and UV/Vis read starch, sugars, fats or proteins continuously, in-situ.</p></div></div>
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><div><h3>Name the cause</h3><p>The rise is correlated to feed rate, wash flow and CIP records — so it points at a unit.</p></div></div>
-          <div class="ind-sol"><span class="disc"><svg class="ic"><use href="#i-cycle" /></svg></span><div><h3>End cleaning on condition</h3><p>Detect the real endpoint instead of running the clock out.</p></div></div>
+          <p class="eyebrow">What you actually get</p>
+          <h2>A ranked list of things to do, <span class="accent">each with a number on it.</span></h2>
+          <p class="lead">Not a dashboard to interpret. Findings arrive with the action, the tags that are the evidence, and what the change is worth a year — to accept, resolve or dismiss.</p>
         </div>
         <figure class="ind-ui">
           <img src="../assets/audit.jpg" width="1400" height="1392" loading="lazy" decoding="async"
                alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." />
-          <figcaption>Every finding arrives like this — the action, the evidence, and what it is worth a year.</figcaption>
+          <figcaption>The recommendations view, as it ships.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section wash">
+    <section class="section">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">Working together</p>
@@ -177,9 +192,9 @@
         </div>
         <ol class="ind-steps">
           <li><span class="num">1</span><h3>Free audit</h3><p>On your historian export. No hardware, no install — you see the ROI before you buy.</p></li>
-          <li><span class="num">2</span><h3>Your process, modelled</h3><p>Your own product is the reference. We model what your starch or sauce looks like, then watch for deviation.</p></li>
-          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>One or two probes where your instruments are blind — not a network.</p></li>
-          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to your limits, every approval logged.</p></li>
+          <li><span class="num">2</span><h3>Your process, modelled</h3><p>Your own product is the reference. We build the model from your data, not from a library.</p></li>
+          <li><span class="num">3</span><h3>Sensing where it pays</h3><p>One or two probes where your existing instruments are blind — not a network.</p></li>
+          <li><span class="num">4</span><h3>You stay in control</h3><p>Advisory by default, clamped to limits your engineers set, every approval logged.</p></li>
         </ol>
         <a class="ind-proof" href="../case-studies/starch-plant.html"><span>A corn wet-milling assessment: NIR starch detection wired into the operational AI</span><svg class="ic"><use href="#i-arrow" /></svg></a>
       </div>
@@ -187,13 +202,13 @@
 
     <section class="closing">
       <div class="wrap closing-inner">
-        <h2>What is your line losing?</h2>
-        <p class="lead">Send a historian export and a month of effluent bills.</p>
+        <h2>Start with one stream.</h2>
+        <p class="lead">Pick the one you have wondered about. We will look at what your existing data already says about it.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20—%20Food%20and%20Beverage">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
           <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
         </div>
-        <p class="cs-note">Penalty figures from public EPA and DOJ enforcement records, 2023–2025. Throughput from an AquaMesh assessment at publicly reported operating scale.</p>
+        <p class="cs-note">Capabilities described here are general. What any of them is worth at a given site depends on that site’s process, tariff and existing instrumentation.</p>
       </div>
     </section>
   </main>
