@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=20" />
+  <link rel="stylesheet" href="../styles.css?v=21" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -114,34 +114,53 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Capabilities</p>
-          <h2>What AquaMesh can do <span class="accent">with existing history.</span></h2>
-          <p class="lead">These are capabilities. Which ones turn up anything at your plant is exactly what an audit answers.</p>
+          <p class="eyebrow">What we find</p>
+          <h2>What a treatment plant’s history <span class="accent">usually gives up.</span></h2>
+          <p class="lead">These four turn up in most plants we look at. The examples beneath each are the shapes they take in water and wastewater — your own data decides which are real at your site.</p>
         </div>
         <ul class="ind-caps">
-          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Model parallel equipment together</h3><p>Twin basins, twin pumps, twin trains are modelled as pairs, so a drift between them can surface as a finding instead of passing as normal variation.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-bolt" /></svg></span><h3>Derive power from measured signals</h3><p>Blower power from the isentropic relation on measured airflow and discharge pressure; pump power from measured flow and head; runtime from historian deltas — arithmetic your own engineer can check.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-db" /></svg></span><h3>Check the instruments themselves</h3><p>Tags that stopped moving, sit at the wrong scale or disagree with a duplicate are surfaced — a dead signal never raises an alarm on its own.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><h3>Label every number measured or estimated</h3><p>Each line says which it is, and the assumptions behind an estimate are written down rather than buried.</p></li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-drop" /></svg></span>
+            <h3>Energy going where it is not needed</h3>
+            <p>Air and pumping are the two biggest bills in a treatment plant, and both are easy to over-supply without anyone noticing.</p>
+            <ul class="ind-egs">
+              <li>Air pushed into a basin already sitting at its posted range</li>
+              <li>Recovered water sent to disposal rather than to a reuse demand</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-search" /></svg></span>
+            <h3>Parallel equipment drifting apart</h3>
+            <p>Twin basins, twin pumps and twin trains should agree. When they stop, it is usually a valve or a setting.</p>
+            <ul class="ind-egs">
+              <li>One of two duty pumps carrying twice the run hours of its twin</li>
+              <li>Twin basins on shared airflow reading very differently</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span>
+            <h3>Setpoints inherited rather than chosen</h3>
+            <p>Commissioning settings are rarely revisited, and each one was defensible on the day it was made.</p>
+            <ul class="ind-egs">
+              <li>Scour or aeration setpoints unchanged since the plant was handed over</li>
+              <li>Pumping duty landing inside peak tariff hours</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-db" /></svg></span>
+            <h3>Instruments that stopped telling the truth</h3>
+            <p>A signal that stops moving raises nothing. It has to be looked for.</p>
+            <ul class="ind-egs">
+              <li>Zone totalisers that quietly stopped recording</li>
+              <li>A quality tag reporting at the wrong scale for months</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </section>
 
     <section class="section wash">
       <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">Where it is typically applied</p>
-          <h2>Common places to look <span class="accent">in a treatment plant.</span></h2>
-          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
-        </div>
-        <ul class="ind-apps">
-          <li><b>Aeration and blowers</b><span>oxygen held against the range the plant itself posts</span></li>
-          <li><b>Parallel pumps and trains</b><span>duty share, start frequency, runtime divergence</span></li>
-          <li><b>Membrane scour air</b><span>airflow against the flux it is actually serving</span></li>
-          <li><b>Reuse and distribution</b><span>volumes recorded, pressure held, pumps cycling</span></li>
-          <li><b>Instrument health</b><span>totalisers, duplicates and scale errors across the tag list</span></li>
-          <li><b>Tariff exposure</b><span>which loads sit inside the expensive hours</span></li>
-        </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Two basins on shared airflow. One holds dissolved oxygen inside the posted range; its twin sits far above it for the whole record.">
   <g font-family="Plus Jakarta Sans, sans-serif">

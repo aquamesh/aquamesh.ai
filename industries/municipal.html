@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=20" />
+  <link rel="stylesheet" href="../styles.css?v=21" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -114,34 +114,53 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Capabilities</p>
-          <h2>What AquaMesh can do <span class="accent">for a utility.</span></h2>
-          <p class="lead">Capabilities, stated generally. What any of them is worth at your system is what the audit establishes.</p>
+          <p class="eyebrow">What we find</p>
+          <h2>Where a utility’s money <span class="accent">usually goes.</span></h2>
+          <p class="lead">These four turn up in most systems we look at. The examples beneath each are the shapes they take in municipal water — your own data decides which are real at your system.</p>
         </div>
         <ul class="ind-caps">
-          <li><span class="disc"><svg class="ic"><use href="#i-bolt" /></svg></span><h3>Derive energy line by line</h3><p>Power calculated from measured airflow, pressure, flow and runtime, with the method shown — so a saving can be checked rather than taken on trust.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span><h3>Relate load to the tariff clock</h3><p>Duty is compared against your actual rate schedule, so shifting opportunities are priced with the constraint stated alongside them.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-db" /></svg></span><h3>Audit the instruments</h3><p>Totalisers that stopped, tags at the wrong scale and duplicates that disagree are surfaced as findings in their own right.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Produce evidence, not assertions</h3><p>Every recommendation carries the tags it rests on, every approval is logged — which is what a board, a council or a regulator tends to ask for.</p></li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-drop" /></svg></span>
+            <h3>Energy and water going where they are not needed</h3>
+            <p>Energy is usually the largest controllable cost a utility has, and most of it is spent by equipment holding a setting.</p>
+            <ul class="ind-egs">
+              <li>Aeration held above the range the plant itself posts</li>
+              <li>Reuse water going to disposal because the volumes are not recorded</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-search" /></svg></span>
+            <h3>Parallel equipment drifting apart</h3>
+            <p>Lead and lag assets that never swap wear at very different rates, and the standby is the one you will need.</p>
+            <ul class="ind-egs">
+              <li>Lead and lag pumps that have not alternated in years</li>
+              <li>Parallel trains with run hours that diverged long ago</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span>
+            <h3>Setpoints inherited rather than chosen</h3>
+            <p>The reasoning behind a setting often retires with the operator who made it.</p>
+            <ul class="ind-egs">
+              <li>Settings unchanged since commissioning, with nobody left to explain them</li>
+              <li>Pumping duty landing inside the expensive hours</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-db" /></svg></span>
+            <h3>Instruments that stopped telling the truth</h3>
+            <p>Reporting rests on instruments, and a dead one is invisible until somebody asks for the number.</p>
+            <ul class="ind-egs">
+              <li>Totalisers that stopped moving weeks ago</li>
+              <li>Two instruments on the same stream that disagree</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </section>
 
     <section class="section wash">
       <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">Where it is typically applied</p>
-          <h2>Common places to look <span class="accent">in a utility.</span></h2>
-          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
-        </div>
-        <ul class="ind-apps">
-          <li><b>Pumping and distribution</b><span>duty, start frequency, and when it runs</span></li>
-          <li><b>Aeration</b><span>oxygen against the range the plant itself posts</span></li>
-          <li><b>Reuse reporting</b><span>zone volumes actually recorded</span></li>
-          <li><b>Compliance sampling</b><span>continuous context around scheduled samples</span></li>
-          <li><b>Asset duty share</b><span>parallel equipment wearing at different rates</span></li>
-          <li><b>Energy tariff exposure</b><span>which loads sit inside peak hours</span></li>
-        </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Pump duty plotted across 24 hours against the tariff. Much of the duty sits inside the peak-rate block; shifting it costs nothing physically.">
   <g font-family="Plus Jakarta Sans, sans-serif">

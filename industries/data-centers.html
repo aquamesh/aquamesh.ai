@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=20" />
+  <link rel="stylesheet" href="../styles.css?v=21" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -114,34 +114,53 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Capabilities</p>
-          <h2>What AquaMesh can do <span class="accent">on a cooling circuit.</span></h2>
-          <p class="lead">The numbers on a cooling system are site-specific. These are the capabilities; your water and your equipment decide what they are worth.</p>
+          <p class="eyebrow">What we find</p>
+          <h2>Where the water side <span class="accent">usually leaks value.</span></h2>
+          <p class="lead">These four turn up in most sites we look at. The examples beneath each are the shapes they take on a cooling circuit — your own data decides which are real at your site.</p>
         </div>
         <ul class="ind-caps">
-          <li><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><h3>Measure the circuit continuously</h3><p>In-situ optical and conductivity context on what is actually circulating, rather than a snapshot from the last service visit.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-sliders" /></svg></span><h3>Trigger on condition, not a clock</h3><p>Blowdown and dosing can be driven by the measured state of the water, with the recommendation going to an operator first.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Establish the limit for your water</h3><p>The achievable cycle limit is a property of your make-up chemistry and your equipment — continuous data is what lets it be established rather than assumed.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-chart" /></svg></span><h3>Tie water to load</h3><p>Consumption related to IT load and weather, so a water figure has a trend and a cause rather than being an annual report line.</p></li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-drop" /></svg></span>
+            <h3>Treated water discharged on a schedule</h3>
+            <p>Blowdown driven by a clock throws away water you have already paid to treat and dose, then buys make-up to replace it.</p>
+            <ul class="ind-egs">
+              <li>Blowdown triggered on time rather than on the state of the circuit</li>
+              <li>Cycles held at a number chosen years ago rather than the achievable one</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-search" /></svg></span>
+            <h3>Parallel equipment drifting apart</h3>
+            <p>Towers and chillers on the same duty should behave alike under the same load.</p>
+            <ul class="ind-egs">
+              <li>Parallel towers behaving differently on identical IT load</li>
+              <li>Chillers sharing duty unevenly without anyone noticing</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span>
+            <h3>Programmes that cover a worst case daily</h3>
+            <p>Where demand is invisible between service visits, the chemical programme has to assume the worst.</p>
+            <ul class="ind-egs">
+              <li>Inhibitor and biocide dosed to a recipe rather than to measured demand</li>
+              <li>Settings unchanged since the last water-treatment contract was signed</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-db" /></svg></span>
+            <h3>Instruments that stopped telling the truth</h3>
+            <p>A drifting probe on a cooling circuit is expensive in both directions — wasted water, or scale.</p>
+            <ul class="ind-egs">
+              <li>A conductivity probe drifting unnoticed between visits</li>
+              <li>Meters on the same line that no longer agree</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </section>
 
     <section class="section wash">
       <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">Where it is typically applied</p>
-          <h2>Common places to look <span class="accent">on a site.</span></h2>
-          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
-        </div>
-        <ul class="ind-apps">
-          <li><b>Cooling tower circuits</b><span>chemistry between service visits</span></li>
-          <li><b>Blowdown control</b><span>what triggers it, and on what evidence</span></li>
-          <li><b>Chemical dosing</b><span>programme against measured demand</span></li>
-          <li><b>Make-up water</b><span>quality arriving, and how it varies</span></li>
-          <li><b>Water reporting</b><span>consumption related to load rather than reported annually</span></li>
-          <li><b>Discharge</b><span>what leaves the site, and under what limits</span></li>
-        </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Make-up water falls steeply as cycles of concentration rise. Most sites run well below the scaling limit their water chemistry actually allows, and the gap between the two is water and chemical bought every day.">
   <g font-family="Plus Jakarta Sans, sans-serif">

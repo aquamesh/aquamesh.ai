@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=20" />
+  <link rel="stylesheet" href="../styles.css?v=21" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -114,34 +114,53 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Capabilities</p>
-          <h2>What AquaMesh can do <span class="accent">in a food plant.</span></h2>
-          <p class="lead">Capabilities, not a diagnosis. Which of them are worth anything at your site is what the audit is for.</p>
+          <p class="eyebrow">What we find</p>
+          <h2>Where a food plant <span class="accent">usually loses money.</span></h2>
+          <p class="lead">These four turn up in most plants we look at. The examples beneath each are the shapes they take in food and beverage — your own data decides which are real at your site.</p>
         </div>
         <ul class="ind-caps">
-          <li><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><h3>Measure organic load continuously</h3><p>A rugged in-situ probe reads the stream every few seconds, in place, through water that would foul a conventional analyser.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-spark" /></svg></span><h3>Learn your product’s own signature</h3><p>A one-time model of your starch, sugar, dairy protein or sauce becomes the reference — so the system tracks deviation rather than trying to hold an absolute calibration across recipes and seasons.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Tie a change back to the line</h3><p>The signal is correlated against feed rate, wash flow, machine state and cleaning records, so a rise points at a unit and a time rather than raising an alarm.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-dollar" /></svg></span><h3>Put a number on it</h3><p>Findings are priced against your own tariff and surcharge schedule, so a fix can be compared with everything else competing for the same hour.</p></li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-drop" /></svg></span>
+            <h3>Product leaving in the water</h3>
+            <p>Yield that reaches a drain gets charged twice — once as lost product, again as load on the effluent bill.</p>
+            <ul class="ind-egs">
+              <li>A cleaning cycle still running after the return line has already come clean</li>
+              <li>Changeover flushes cut wider than the transition actually needs</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-search" /></svg></span>
+            <h3>Parallel equipment drifting apart</h3>
+            <p>Units that should behave alike slowly stop, and nothing in the control system treats that as a fault.</p>
+            <ul class="ind-egs">
+              <li>Twin separators carrying very different solids loads</li>
+              <li>Duty pumps wearing at different rates because they never alternate</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span>
+            <h3>Setpoints inherited rather than chosen</h3>
+            <p>A setting made once at commissioning tends to outlive the reason for it, and the person who set it.</p>
+            <ul class="ind-egs">
+              <li>Refrigeration or air held above what the process asks for</li>
+              <li>Large loads running straight through the expensive hours of the tariff</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-db" /></svg></span>
+            <h3>Instruments that stopped telling the truth</h3>
+            <p>A dead or drifting signal never raises an alarm. It just quietly stops arguing.</p>
+            <ul class="ind-egs">
+              <li>A flow totaliser that has not moved in weeks</li>
+              <li>Two meters on the same stream that no longer agree</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </section>
 
     <section class="section wash">
       <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">Where it is typically applied</p>
-          <h2>Common places to look <span class="accent">in food and beverage.</span></h2>
-          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
-        </div>
-        <ul class="ind-apps">
-          <li><b>CIP return lines</b><span>whether a cycle has reached endpoint, or is still running on the clock</span></li>
-          <li><b>Changeovers and flushes</b><span>where product ends and water begins, transition by transition</span></li>
-          <li><b>Effluent to sewer</b><span>organic load and solids ahead of the surcharge invoice, not after it</span></li>
-          <li><b>Wash and recovery loops</b><span>product carried into overflow that could be recovered instead</span></li>
-          <li><b>Separation and dewatering</b><span>fines and product escaping into water streams</span></li>
-          <li><b>Permit sampling points</b><span>continuous context around the samples you already take</span></li>
-        </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="A production line with four stages. Small losses leave at the changeover and clean-in-place stages and arrive at the drain, where they are billed a second time as organic load.">
   <defs><marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/></marker></defs>

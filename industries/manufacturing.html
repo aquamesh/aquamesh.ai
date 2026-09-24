@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=20" />
+  <link rel="stylesheet" href="../styles.css?v=21" />
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -114,34 +114,53 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <p class="eyebrow">Capabilities</p>
-          <h2>What AquaMesh can do <span class="accent">on a plant floor.</span></h2>
-          <p class="lead">Which of these is useful depends entirely on your process. The audit is how we find out.</p>
+          <p class="eyebrow">What we find</p>
+          <h2>What usually turns up <span class="accent">on the water side.</span></h2>
+          <p class="lead">These four turn up in most plants we look at. The examples beneath each are the shapes they take in manufacturing — your own data decides which are real at your site.</p>
         </div>
         <ul class="ind-caps">
-          <li><span class="disc"><svg class="ic"><use href="#i-pulse" /></svg></span><h3>Read the stream in place</h3><p>In-situ optical measurement every few seconds, designed to keep reading through fouling-prone water rather than needing a clean sample.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-search" /></svg></span><h3>Correlate with line state</h3><p>Water-side change is compared against production records, machine state and utilities, so a drift can be attributed rather than just detected.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-bell" /></svg></span><h3>Escalate to a person</h3><p>Critical excursions can escalate by phone, down an on-call list, until somebody acknowledges — rather than sitting in an inbox.</p></li>
-          <li><span class="disc"><svg class="ic"><use href="#i-clipboard" /></svg></span><h3>Keep the record</h3><p>Findings, approvals and setting changes are logged with who, what and when, so evidence assembles itself rather than being reconstructed later.</p></li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-drop" /></svg></span>
+            <h3>Product and utilities leaving in the water</h3>
+            <p>Water is usually the last stream anyone watches, which is why recoverable value tends to leave through it.</p>
+            <ul class="ind-egs">
+              <li>Product or additive carried into a rinse or wash stream</li>
+              <li>Reusable water going to drain because nothing measures its quality</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-search" /></svg></span>
+            <h3>Parallel equipment drifting apart</h3>
+            <p>Two circuits on the same duty should look the same. Divergence is usually the first sign of a problem.</p>
+            <ul class="ind-egs">
+              <li>Parallel cooling circuits behaving differently under the same load</li>
+              <li>Two lines producing different effluent from the same recipe</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-clock" /></svg></span>
+            <h3>Settings that cover a worst case every day</h3>
+            <p>Where the risk is invisible, the safe setting is chosen — and then paid for continuously.</p>
+            <ul class="ind-egs">
+              <li>Blowdown and chemical dosing set to cover the worst case</li>
+              <li>Chiller or compressor setpoints inherited from the last engineer</li>
+            </ul>
+          </li>
+          <li>
+            <span class="disc"><svg class="ic"><use href="#i-db" /></svg></span>
+            <h3>Instruments that stopped telling the truth</h3>
+            <p>Between scheduled samples, an instrument nobody checks is an assumption.</p>
+            <ul class="ind-egs">
+              <li>A conductivity probe reading flat for months</li>
+              <li>Duplicate meters that no longer agree with each other</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </section>
 
     <section class="section wash">
       <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">Where it is typically applied</p>
-          <h2>Common places to look <span class="accent">in manufacturing.</span></h2>
-          <p class="lead">General examples, not a prescription — the audit works out which of these are worth anything at your site.</p>
-        </div>
-        <ul class="ind-apps">
-          <li><b>Rinse and wash tanks</b><span>loading and carryover between changes</span></li>
-          <li><b>Cooling circuits</b><span>chemistry between service visits</span></li>
-          <li><b>Discharge to sewer</b><span>continuous context around scheduled pretreatment samples</span></li>
-          <li><b>Process water make-up</b><span>quality arriving at the point it is used</span></li>
-          <li><b>Recovery and reuse loops</b><span>what is actually being recovered</span></li>
-          <li><b>Utilities</b><span>pumps, blowers and compressors serving those streams</span></li>
-        </ul>
         <figure class="ind-dia">
           <svg class="dia" viewBox="0 0 960 300" role="img" aria-label="A continuous trace crosses the specification limit between two scheduled lab samples, so the excursion is never sampled.">
   <g font-family="Plus Jakarta Sans, sans-serif">
