@@ -23,7 +23,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Check publishing credential
+        id: credential
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+        run: |
+          if [ -n "$DEVTO_API_KEY" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "DEV publishing inactive: credential not configured"
+          fi
       - name: Publish and verify
+        if: steps.credential.outputs.available == 'true'
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: node .github/scripts/dev-publisher.mjs
