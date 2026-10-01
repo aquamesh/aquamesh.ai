@@ -40,7 +40,7 @@ This is a materially easier question to answer well, and it is insensitive to th
 
 {{diagram:calibration-vs-change}} — Same hardware, same spectrum, two different questions — and two very different maintenance burdens.
 
-What you lose is the ability to report a concentration to a regulator. What you gain is an instrument that is still telling the truth in eighteen months.
+What you lose is the ability to report a concentration to a regulator. What you gain is a clear operating signal whose performance can be checked against current references over time.
 
 ## So why calibrate BOD at all
 
