@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-01T03:30:35.240Z · 3 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-01T22:39:26.318Z · 3 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -245,7 +245,7 @@ This is a materially easier question to answer well, and it is insensitive to th
 
 {{diagram:calibration-vs-change}} — Same hardware, same spectrum, two different questions — and two very different maintenance burdens.
 
-What you lose is the ability to report a concentration to a regulator. What you gain is an instrument that is still telling the truth in eighteen months.
+What you lose is the ability to report a concentration to a regulator. What you gain is a clear operating signal whose performance can be checked against current references over time.
 
 ## So why calibrate BOD at all
 

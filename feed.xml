@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 03:30:35 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 22:39:26 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What 25 days of historian data actually shows about a treatment plant</title>
@@ -169,7 +169,7 @@
 <p>A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve — an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.</p>
 <figure class="post-fig"><img src="../assets/starch-spectra.jpg" alt="UV/Vis and NIR absorbance spectra at clean, rising, high and very high loss, a reference fingerprint across 200–1700 nm, and spectral deviation from that reference." loading="lazy" decoding="async" /><figcaption>The raw measurement: absorbance across wavelength, many times a second. Everything downstream is interpretation of this curve.</figcaption></figure>
 <p>Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. But they carry conditions that rarely survive contact with a real plant:</p>
-<ul class="post-list"><li>They are <b>site-specific</b>. Transferability must be demonstrated; a model validated on one stream should not be assumed valid on another.</li><li>They <b>drift with composition</b>. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.</li><li>They <b>degrade quietly</b>. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.</li></ul>
+<ul class="post-list"><li>They are often <b>site-specific</b>. Transferability must be demonstrated; a model validated on one stream should not be assumed valid on another.</li><li>They <b>drift with composition</b>. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.</li><li>They <b>degrade quietly</b>. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.</li></ul>
 <p>Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown.</p>
 <h2 id="the-alternative-watch-the-spectrum-move">The alternative: watch the spectrum move</h2>
 <p>There is a different use of the same hardware, and in a plant it is usually the more valuable one.</p>
@@ -202,7 +202,7 @@
     <text x="556" y="257" font-size="14" font-weight="700" fill="#137a4b">BOD is the one value we calibrate</text>
   </g>
 </svg><figcaption>Same hardware, same spectrum, two different questions — and two very different maintenance burdens.</figcaption></figure>
-<p>What you lose is the ability to report a concentration to a regulator. What you gain is an instrument that is still telling the truth in eighteen months.</p>
+<p>What you lose is the ability to report a concentration to a regulator. What you gain is a clear operating signal whose performance can be checked against current references over time.</p>
 <h2 id="so-why-calibrate-bod-at-all">So why calibrate BOD at all</h2>
 <p>Because sometimes a number is the point.</p>
 <p>Biochemical oxygen demand is the parameter that drives sewer surcharges, appears on discharge permits, and determines whether a load is going to cause a problem downstream. "The spectrum moved" is not an answer when the question is whether you are about to exceed a threshold that gets billed by the pound.</p>

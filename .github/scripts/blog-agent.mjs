@@ -193,13 +193,14 @@ If you do publish:
 - ${MIN_WORDS}-${MAX_WORDS} words in body_markdown.
 - At least ${MIN_SOURCES} distinct source URLs, linked inline where the claim appears.
 - Every figure attributable to a linked source.
-- Link to at least one existing AquaMesh post where genuinely relevant, using a
-  root-relative path like /blog/<slug>/.
+- Link to at least one existing AquaMesh post where genuinely relevant, using the
+  exact form /blog/<slug>.html. A trailing-slash path like /blog/<slug>/ is a 404
+  on this host.
 - Pick image from this list only: ${images.join(', ')}
 - Open with the concrete development, not with context-setting.
 
 Existing posts you can link to:
-${posts.map(p => `- /blog/${p.slug}/ - ${p.title}`).join('\n')}`;
+${posts.map(p => `- /blog/${p.slug}.html - ${p.title}`).join('\n')}`;
 }
 
 /* ── model calls ──────────────────────────────────────────────────────── */
@@ -277,6 +278,10 @@ export function gate(d, posts) {
   if (/\bcalibrat\w+\s+(?:for\s+)?(?:COD|TOC|TSS|nitrate|ammonia|turbidity)/i.test(d.body_markdown)) {
     fail.push('body claims calibration for a parameter other than BOD');
   }
+
+  // /blog/<slug>/ is a 404 on this host; only the .html form resolves
+  const badLinks = [...d.body_markdown.matchAll(/\/blog\/([a-z0-9-]+)\//g)].map(m => m[0]);
+  if (badLinks.length) fail.push(`trailing-slash blog links 404: ${[...new Set(badLinks)].join(', ')}`);
 
   const near = posts.find(p => titleOverlap(p.title, d.title) > 0.6);
   if (near) fail.push(`title too close to existing post: "${near.title}"`);
