@@ -58,6 +58,29 @@ const posts = readdirSync(dir).filter(f => f.endsWith('.md')).map(f => {
 
 console.log(`${posts.length} posts`);
 
+/* ── other agents publish HTML into /insights; discover it rather than
+      overwrite it, so their output inherits the sitemap and llms.txt ───── */
+function discoverInsights() {
+  const d = join(ROOT, 'insights');
+  if (!existsSync(d)) return [];
+  return readdirSync(d).filter(f => f.endsWith('.html') && f !== 'index.html').map(f => {
+    const html = readFileSync(join(d, f), 'utf8');
+    const pick = (re) => { const m = html.match(re); return m ? m[1].trim() : ''; };
+    const title = pick(/<title>([^<]*)<\/title>/).replace(/\s*\|\s*AquaMesh\s*$/, '');
+    const desc = pick(/<meta name="description" content="([^"]*)"/);
+    let date = '';
+    const ldm = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+    if (ldm) { try { const j = JSON.parse(ldm[1]); date = j.dateModified || j.datePublished || ''; } catch {} }
+    const text = html.replace(/<(script|style)[\s\S]*?<\/\1>/g, ' ').replace(/<[^>]+>/g, ' ')
+                     .replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ').trim();
+    return { file: f, slug: f.replace(/\.html$/, ''), title, desc, date,
+             url: `${SITE}/insights/${f}`, text };
+  }).sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+const insights = discoverInsights();
+if (insights.length) console.log(`${insights.length} insights pages discovered`);
+
+
 /* ── shared chrome ───────────────────────────────────────────────────── */
 const nav = (pre) => `  <header class="nav">
     <div class="wrap nav-inner">
@@ -247,6 +270,15 @@ write('blog/index.html', head({
         <ul class="post-grid wide">
 ${posts.map(p => `          <li><a href="${p.slug}.html"><time datetime="${p.date}">${fmtDate(p.date)}</time><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p><span class="post-more">Read <svg class="ic"><use href="#i-arrow" /></svg></span></a></li>`).join('\n')}
         </ul>
+${insights.length ? `
+        <div class="head" style="margin-top: clamp(48px, 6vw, 76px)">
+          <p class="eyebrow">Insights</p>
+          <h2>Technical guides</h2>
+          <p class="lead">Longer reference pieces on matching signals to decisions, by sector.</p>
+        </div>
+        <ul class="post-grid">
+${insights.map(x => `          <li><a href="../insights/${x.file}">${x.date ? `<time datetime="${x.date}">${fmtDate(x.date)}</time>` : ''}<h3>${esc(x.title)}</h3><p>${esc(x.desc)}</p></a></li>`).join('\n')}
+        </ul>` : ''}
       </div>
     </section>
   </main>
@@ -384,28 +416,6 @@ ${'='.repeat(78)}
 ${p.body}
 `).join('\n')}
 `);
-
-/* ── other agents publish HTML into /insights; discover it rather than
-      overwrite it, so their output inherits the sitemap and llms.txt ───── */
-function discoverInsights() {
-  const d = join(ROOT, 'insights');
-  if (!existsSync(d)) return [];
-  return readdirSync(d).filter(f => f.endsWith('.html') && f !== 'index.html').map(f => {
-    const html = readFileSync(join(d, f), 'utf8');
-    const pick = (re) => { const m = html.match(re); return m ? m[1].trim() : ''; };
-    const title = pick(/<title>([^<]*)<\/title>/).replace(/\s*\|\s*AquaMesh\s*$/, '');
-    const desc = pick(/<meta name="description" content="([^"]*)"/);
-    let date = '';
-    const ldm = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
-    if (ldm) { try { const j = JSON.parse(ldm[1]); date = j.dateModified || j.datePublished || ''; } catch {} }
-    const text = html.replace(/<(script|style)[\s\S]*?<\/\1>/g, ' ').replace(/<[^>]+>/g, ' ')
-                     .replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ').trim();
-    return { file: f, slug: f.replace(/\.html$/, ''), title, desc, date,
-             url: `${SITE}/insights/${f}`, text };
-  }).sort((a, b) => (a.date < b.date ? 1 : -1));
-}
-const insights = discoverInsights();
-if (insights.length) console.log(`${insights.length} insights pages discovered`);
 
 /* ── sitemap across the whole site ───────────────────────────────────── */
 const staticPages = [

@@ -13,6 +13,11 @@ what matters, and BOD is the one parameter calibrated against the customer's own
 - [Why parallel equipment drifts apart, and what the gap costs](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html): Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at. (2026-09-26, 4 min). Markdown: https://aquamesh.ai/blog/why-parallel-equipment-drifts.md
 - [Spectral change analysis, and why we calibrate only BOD](https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html): Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters. (2026-09-22, 4 min). Markdown: https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.md
 
+## Insights
+- [Metal Finishing Rinse Control Decisions](https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html): How metal finishers can use conductivity, flow and production context to judge rinse performance before adding another sensor. (2026-09-30)
+- [Industrial Water Reuse Monitoring Guide](https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html): A practical guide to matching flow, turbidity, ATP, lab tests and targeted sensing to the operating decisions in an industrial water reuse line. (2026-09-29)
+- [Liquid Cooling Water Quality Decisions](https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html): A practical way to separate facility water and technology cooling loops, interpret existing water quality signals, and define an operator response. (2026-09-29)
+
 ## Site
 - [Home](https://aquamesh.ai/): What AquaMesh does: reads a plant’s existing data, prices what it is losing, and hands operators a ranked list of changes.
 - [Company](https://aquamesh.ai/company.html): Origin at UC San Diego, the first sensor developed for Scripps Institution of Oceanography, the team and advisors.
