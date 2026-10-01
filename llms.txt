@@ -6,12 +6,12 @@ AquaMesh reads the history a plant already records, models each signal and each 
 parallel units, prices what it finds using the plant's own tariff, and presents a ranked
 list of actions. The AquaSpectra probe adds continuous in-situ spectral measurement where
 existing instruments leave a gap: the spectrum is watched for change and correlated with
-what matters, and BOD is the one parameter calibrated against the customer's own samples.
+what matters, and the first industrial BOD model is planned for validation against the customer's own samples.
 
 ## Blog
 - [What 25 days of historian data actually shows about a treatment plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html): A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year. (2026-09-30, 5 min). Markdown: https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.md
 - [Why parallel equipment drifts apart, and what the gap costs](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html): Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at. (2026-09-26, 4 min). Markdown: https://aquamesh.ai/blog/why-parallel-equipment-drifts.md
-- [Spectral change analysis, and why we calibrate only BOD](https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html): Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters. (2026-09-22, 4 min). Markdown: https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.md
+- [Spectral change analysis versus calibrated parameters](https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html): Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters. (2026-09-22, 4 min). Markdown: https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.md
 
 ## Insights
 - [Metal Finishing Rinse Control Decisions](https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html): How metal finishers can use conductivity, flow and production context to judge rinse performance before adding another sensor. (2026-09-30)
@@ -41,6 +41,6 @@ what matters, and BOD is the one parameter calibrated against the customer's own
 ## Notes for agents
 - Figures in case studies are identified opportunities, not realised savings, and are specific to the plant and tariff they came from.
 - Penalty and surcharge figures come from public EPA/DOJ enforcement records and published municipal schedules.
-- Spectral output is change analysis; BOD is the only calibrated parameter. AquaSpectra is not a compendial method.
+- Spectral output begins as change analysis; no parameter should be presented as calibrated until site-specific validation is complete. AquaSpectra is not a compendial method.
 - Content is quotable with attribution to AquaMesh (https://aquamesh.ai).
 - Contact: info@aquamesh.ai
