@@ -39,6 +39,7 @@ const MAX_PER_WEEK = 2;        // hard cap on published posts in any rolling 7 d
 const MIN_WORDS = 700;
 const MAX_WORDS = 1800;
 const MIN_SOURCES = 2;
+const SEARCH_BUDGET = 12;      // also stated in the prompt; max_uses alone did not hold
 
 const DRY = process.argv.includes('--dry-run');
 
@@ -139,6 +140,10 @@ to know about. Prioritise, in this order:
 Avoid: vendor press releases, funding announcements, award announcements,
 market-size reports, and anything already widely covered months ago.
 
+Budget: use at most ${SEARCH_BUDGET} web searches. Spend them on breadth first, then
+verify only the single candidate you intend to recommend. Do not exhaustively
+verify candidates you are going to discard.
+
 Posts already on the AquaMesh blog, which you must NOT duplicate:
 ${covered || '(none yet)'}
 
@@ -212,13 +217,17 @@ async function research(client, posts) {
     thinking: { type: 'adaptive' },
     output_config: { effort: 'high' },
     system: [{ type: 'text', text: HOUSE_STYLE + '\n\n' + siteContext(), cache_control: { type: 'ephemeral' } }],
-    tools: [{ type: 'web_search_20260209', name: 'web_search', max_uses: 14 }],
+    tools: [{ type: 'web_search_20260209', name: 'web_search', max_uses: SEARCH_BUDGET }],
     messages: [{ role: 'user', content: researchPrompt(posts) }]
   });
   const msg = await stream.finalMessage();
   const text = msg.content.filter(b => b.type === 'text').map(b => b.text).join('\n').trim();
   const searches = msg.content.filter(b => b.type === 'server_tool_use').length;
   console.log(`  research: ${searches} searches, ${text.split(/\s+/).length} words of brief`);
+  if (searches > SEARCH_BUDGET) {
+    console.warn(`  ! search budget overrun: ${searches} > ${SEARCH_BUDGET}. `
+      + 'max_uses is not capping this; check cost before leaving the schedule unattended.');
+  }
   return text;
 }
 
