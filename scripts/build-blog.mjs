@@ -13,7 +13,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://aquamesh.ai';
 const BRAND = 'AquaMesh';
 const TAGLINE = 'The Autopilot For Industrial Water';
-const CSS_V = 'styles.css?v=28';
+const CSS_V = 'styles.css?v=29';
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const read = (p) => readFileSync(join(ROOT, p), 'utf8');
