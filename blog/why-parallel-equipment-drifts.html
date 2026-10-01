@@ -12,7 +12,7 @@
   <meta property="og:title" content="Why parallel equipment drifts apart, and what the gap costs | AquaMesh" />
   <meta property="og:description" content="Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at." />
   <meta property="og:url" content="https://aquamesh.ai/blog/why-parallel-equipment-drifts.html" />
-  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta property="og:image" content="https://aquamesh.ai/assets/audit.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="alternate" type="application/rss+xml" title="AquaMesh blog" href="https://aquamesh.ai/feed.xml" />
   <link rel="alternate" type="application/feed+json" title="AquaMesh blog" href="https://aquamesh.ai/blog/feed.json" />
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css?v=28" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water"},{"@type":"BlogPosting","@id":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html#post","headline":"Why parallel equipment drifts apart, and what the gap costs","name":"Why parallel equipment drifts apart, and what the gap costs","description":"Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at.","url":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html","datePublished":"2026-09-26","dateModified":"2026-09-26","inLanguage":"en","wordCount":877,"keywords":"parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance","articleSection":"Field notes","author":{"@type":"Organization","name":"AquaMesh","url":"https://aquamesh.ai"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html"},"image":"https://aquamesh.ai/assets/og.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aquamesh.ai/blog/"},{"@type":"ListItem","position":3,"name":"Why parallel equipment drifts apart, and what the gap costs","item":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water"},{"@type":"BlogPosting","@id":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html#post","headline":"Why parallel equipment drifts apart, and what the gap costs","name":"Why parallel equipment drifts apart, and what the gap costs","description":"Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at.","url":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html","datePublished":"2026-09-26","dateModified":"2026-09-26","inLanguage":"en","wordCount":914,"keywords":"parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance","articleSection":"Field notes","author":{"@type":"Organization","name":"AquaMesh","url":"https://aquamesh.ai"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html"},"image":"https://aquamesh.ai/assets/audit.jpg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aquamesh.ai/blog/"},{"@type":"ListItem","position":3,"name":"Why parallel equipment drifts apart, and what the gap costs","item":"https://aquamesh.ai/blog/why-parallel-equipment-drifts.html"}]}]}</script>
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -94,10 +94,38 @@
 <p>A modern control system is very good at holding a value and raising an alarm when a limit is crossed. Divergence between two units is neither of those things.</p>
 <p>Both units can sit inside every alarm limit while being nowhere near each other. A pump at 84% duty and its twin at 39% are both running. A basin at 5.35 mg/L and its twin at 0.49 mg/L are both aerated. Nothing is out of range in the sense the alarm system understands, so nothing fires, and the gap persists for years because it never presents as an event.</p>
 <p>That is the gap worth watching, and it is visible in data a plant already records.</p>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Two basins on shared airflow over the same period. Basin 1 holds a median of 5.35 mg/L of dissolved oxygen with its blower pinned at 99.99%; Basin 2 sits inside the posted range of 0.5 to 1.5 mg/L at 0.49 mg/L.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <rect x="70" y="150" width="820" height="46" fill="#e9effd"/>
+    <text x="80" y="214" font-size="13" font-weight="600" fill="#2449e8">POSTED RANGE 0.5–1.5 mg/L</text>
+    <path d="M70 60 C 150 66, 230 54, 310 62 S 470 56, 550 64 S 710 58, 890 62" fill="none" stroke="#c2410c" stroke-width="3"/>
+    <path d="M70 176 C 150 170, 230 182, 310 174 S 470 180, 550 172 S 710 178, 890 174" fill="none" stroke="#2449e8" stroke-width="3"/>
+    <text x="70" y="44" font-size="15" font-weight="700" fill="#c2410c">Basin 1 — median 5.35 mg/L, blower pinned at 99.99%</text>
+    <text x="70" y="248" font-size="15" font-weight="700" fill="#2449e8">Basin 2 — median 0.49 mg/L, same shared airflow</text>
+    <path d="M905 62 V174" stroke="#66728a" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="898" y="120" text-anchor="end" font-size="14" font-weight="700" fill="#0b1026">3.6× the posted limit</text>
+  </g>
+</svg><figcaption>Neither trace is outside an alarm limit. Both basins are aerated, both are running, and nothing fires.</figcaption></figure>
 <h2 id="the-three-shapes-it-takes">The three shapes it takes</h2>
 <h3 id="duty-that-never-alternates">Duty that never alternates</h3>
 <p>Lead and lag assets are supposed to swap. When the alternation is disabled, or was never configured, or was turned off during a commissioning problem and never turned back on, the lead unit accumulates all the wear.</p>
 <p>In one plant's record, return-activated-sludge pumps showed 504 run hours against 232 in the same twenty-five days, and the lifetime counters showed the gap compounding: 44,299 hours against 30,953. The lead unit reaches overhaul years earlier than it needs to while the standby sits idle — and the standby is the one you will be relying on when the lead finally fails.</p>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Run hours for two RAS pumps. Over 25 days the lead pump ran 504 hours against its twin's 232. Lifetime counters show 44,299 hours against 30,953.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="60" y="38" font-size="13" font-weight="700" letter-spacing="2" fill="#66728a">RUN HOURS, SAME 25 DAYS</text>
+    <rect x="60" y="58" width="620" height="44" rx="8" fill="#c2410c"/>
+    <rect x="60" y="116" width="285" height="44" rx="8" fill="#2449e8" opacity="0.35"/>
+    <text x="76" y="86" font-size="17" font-weight="700" fill="#fff">Pump A — 504 h</text>
+    <text x="76" y="144" font-size="17" font-weight="700" fill="#0b1026">Pump B — 232 h</text>
+    <text x="700" y="86" font-size="14" font-weight="700" fill="#c2410c">84% duty</text>
+    <text x="365" y="144" font-size="14" font-weight="700" fill="#66728a">39% duty</text>
+    <path d="M60 196 H900" stroke="#dfe6f3" stroke-width="2"/>
+    <text x="60" y="228" font-size="13" font-weight="700" letter-spacing="2" fill="#66728a">LIFETIME COUNTERS — THE GAP COMPOUNDING</text>
+    <text x="60" y="262" font-size="21" font-weight="800" fill="#c2410c">44,299 h</text>
+    <text x="210" y="262" font-size="21" font-weight="800" fill="#66728a">30,953 h</text>
+    <text x="370" y="262" font-size="15" fill="#66728a">— the standby is the one you will need</text>
+  </g>
+</svg><figcaption>Twenty-five days of run hours, and the lifetime counters behind them.</figcaption></figure>
 <p>Lead-lag alternation costs nothing to enable. What makes this finding persuasive rather than theoretical is that the same plant's MBR blowers and permeate pumps <em>were</em> balanced, which marks it as an oversight on one asset rather than a design choice.</p>
 <h3 id="a-shared-supply-unequally-split">A shared supply, unequally split</h3>
 <p>Twin basins on a common air header should see similar dissolved oxygen at similar load. When one sits far above the other with its blower command pinned wide open, the control strategy is not the problem — the air is not arriving where it is supposed to.</p>
@@ -109,6 +137,26 @@
 <p>A related pattern worth naming on its own, because it is consistently underestimated.</p>
 <p>Pumps are often judged on run hours. The more expensive variable is usually <b>starts</b>. Every start draws locked-rotor current — several times the running current — and the heat goes into the windings. Manufacturer guidance for mid-size pumps is frequently around six starts an hour.</p>
 <p>In one record, reclaimed water pumps were logging 13 to 28 an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.</p>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 260" role="img" aria-label="Pump starts per hour. Manufacturer guidance is near six an hour. Observed range was 13 to 28, with one asset logging 143 in an hour — a start every 25 seconds.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <path d="M60 150 H900" stroke="#dfe6f3" stroke-width="3"/>
+    <g>
+      <path d="M100 136 V164" stroke="#137a4b" stroke-width="3"/>
+      <text x="100" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#137a4b">~6/h</text>
+      <text x="100" y="192" text-anchor="middle" font-size="13" fill="#66728a">guidance</text>
+    </g>
+    <rect x="196" y="140" width="190" height="20" rx="10" fill="#c2410c" opacity="0.25"/>
+    <text x="291" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#c2410c">13–28/h</text>
+    <text x="291" y="192" text-anchor="middle" font-size="13" fill="#66728a">observed range</text>
+    <g>
+      <circle cx="840" cy="150" r="11" fill="#c2410c"/>
+      <text x="840" y="120" text-anchor="middle" font-size="19" font-weight="800" fill="#c2410c">143/h</text>
+      <text x="840" y="192" text-anchor="middle" font-size="13" fill="#66728a">one asset</text>
+      <text x="840" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#0b1026">a start every 25 seconds</text>
+    </g>
+    <text x="60" y="40" font-size="15" fill="#66728a">Every start draws locked-rotor current. Run hours are not the expensive variable.</text>
+  </g>
+</svg></figure>
 <h2 id="how-to-look-for-it-in-your-own-data">How to look for it in your own data</h2>
 <p>You do not need a platform to start. With a historian export and a spreadsheet:</p>
 <ol class="post-list"><li><b>List your parallel assets.</b> Anything with a twin: pumps, blowers, basins, trains, filters.</li><li><b>Compare run hours over the same window</b>, and compare lifetime counters if you have them. A persistent ratio far from 1:1 is the signal.</li><li><b>Count starts per hour</b>, not just runtime, and compare against the manufacturer guidance for that size of machine.</li><li><b>For process variables, plot the pair on the same axis.</b> Not each against its limit — against each other. Divergence that holds for weeks is not noise.</li><li><b>Check duplicates against each other.</b> Two instruments on one stream that disagree are telling you something regardless of which is right.</li></ol>

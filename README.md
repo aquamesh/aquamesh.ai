@@ -74,9 +74,33 @@ slug: url-slug
 date: 2026-09-30
 section: Field notes
 description: One sentence. This becomes the meta description and the social card text.
+image: assets/audit/fig1.jpg
 tags: comma, separated
 ---
 ```
+
+`image` sets that post's own Open Graph card and the `image` in its JSON-LD. Omit it
+and the site card is used.
+
+### Figures
+
+An image alone on a line becomes a captioned figure. The quoted title is the caption
+and takes Markdown:
+
+```
+![Alt text, written for a screen reader](../assets/audit/fig1.jpg "Caption. **Bold** works here.")
+```
+
+Diagrams live in `scripts/post-diagrams.mjs` as inline SVG and are placed by name,
+with an optional caption after an em dash:
+
+```
+{{diagram:twin-basins}} — Optional caption for the figure.
+```
+
+Inline SVG keeps them sharp at any size, costs no extra request, and means a diagram
+can be edited as code rather than re-exported. Current diagrams: `twin-basins`,
+`duty-split`, `pump-starts`, `calibration-vs-change`.
 
 The build regenerates everything derived from the posts:
 

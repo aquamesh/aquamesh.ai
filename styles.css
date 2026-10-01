@@ -160,6 +160,18 @@ ol.post-list li::before { counter-increment: n; content: counter(n); background:
 .post-body .table-wrap { margin: 22px 0; overflow-x: auto; }
 .post-body img { width: 100%; height: auto; border-radius: var(--radius); margin: 22px 0; }
 
+.post-fig { margin: clamp(26px, 3.4vw, 38px) 0; }
+.post-fig img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); }
+.post-fig figcaption { margin-top: 12px; font-size: .9rem; line-height: 1.55; color: var(--ink-3); }
+.post-fig figcaption b { color: var(--ink-2); }
+.post-dia { background: #fff; border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(18px, 2.4vw, 28px); }
+.post-dia .dia { width: 100%; height: auto; display: block; }
+.post-dia figcaption { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule); }
+/* figures earn a little more width than the 72ch text column */
+@media (min-width: 900px) {
+  .post-body .post-fig { width: calc(100% + clamp(0px, 8vw, 110px)); margin-left: calc(-1 * clamp(0px, 4vw, 55px)); }
+}
+
 .post-toc { margin: 0 0 clamp(28px, 3.5vw, 40px); padding: 20px 24px; background: var(--wash); border-radius: var(--radius); }
 .post-toc-label { font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
 .post-toc ol { counter-reset: t; display: flex; flex-direction: column; gap: 7px; }

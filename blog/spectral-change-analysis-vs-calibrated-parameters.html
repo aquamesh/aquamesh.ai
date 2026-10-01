@@ -12,7 +12,7 @@
   <meta property="og:title" content="Spectral change analysis, and why we calibrate only BOD | AquaMesh" />
   <meta property="og:description" content="Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters." />
   <meta property="og:url" content="https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html" />
-  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta property="og:image" content="https://aquamesh.ai/assets/starch-spectra.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="alternate" type="application/rss+xml" title="AquaMesh blog" href="https://aquamesh.ai/feed.xml" />
   <link rel="alternate" type="application/feed+json" title="AquaMesh blog" href="https://aquamesh.ai/blog/feed.json" />
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css?v=28" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water"},{"@type":"BlogPosting","@id":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html#post","headline":"Spectral change analysis, and why we calibrate only BOD","name":"Spectral change analysis, and why we calibrate only BOD","description":"Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.","url":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html","datePublished":"2026-09-22","dateModified":"2026-09-22","inLanguage":"en","wordCount":868,"keywords":"UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters","articleSection":"Measurement","author":{"@type":"Organization","name":"AquaMesh","url":"https://aquamesh.ai"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html"},"image":"https://aquamesh.ai/assets/og.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aquamesh.ai/blog/"},{"@type":"ListItem","position":3,"name":"Spectral change analysis, and why we calibrate only BOD","item":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water"},{"@type":"BlogPosting","@id":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html#post","headline":"Spectral change analysis, and why we calibrate only BOD","name":"Spectral change analysis, and why we calibrate only BOD","description":"Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.","url":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html","datePublished":"2026-09-22","dateModified":"2026-09-22","inLanguage":"en","wordCount":886,"keywords":"UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters","articleSection":"Measurement","author":{"@type":"Organization","name":"AquaMesh","url":"https://aquamesh.ai"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html"},"image":"https://aquamesh.ai/assets/starch-spectra.jpg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aquamesh.ai/blog/"},{"@type":"ListItem","position":3,"name":"Spectral change analysis, and why we calibrate only BOD","item":"https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html"}]}]}</script>
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -92,6 +92,7 @@
 <p>That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.</p>
 <h2 id="what-the-instrument-actually-produces">What the instrument actually produces</h2>
 <p>A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve — an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.</p>
+<figure class="post-fig"><img src="../assets/starch-spectra.jpg" alt="UV/Vis and NIR absorbance spectra at clean, rising, high and very high loss, a reference fingerprint across 200–1700 nm, and spectral deviation from that reference." loading="lazy" decoding="async" /><figcaption>The raw measurement: absorbance across wavelength, many times a second. Everything downstream is interpretation of this curve.</figcaption></figure>
 <p>Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. But they carry conditions that rarely survive contact with a real plant:</p>
 <ul class="post-list"><li>They are <b>site-specific</b>. A model built on one plant's water does not transfer to another's.</li><li>They <b>drift with composition</b>. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.</li><li>They <b>degrade quietly</b>. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.</li></ul>
 <p>The result is an instrument that was sold as five parameters and is trusted for none of them within a year.</p>
@@ -100,6 +101,32 @@
 <p>Instead of asking <em>what is the concentration</em>, ask <em>has the fingerprint changed, and what does that change correlate with</em>. Build a one-time model of what the plant's own stream normally looks like. Then watch for deviation from that reference, and tie the deviation to what the plant was doing at the time — feed rate, wash flow, machine state, cleaning records.</p>
 <p>This is a materially easier question to answer well, and it is insensitive to the things that break calibrations:</p>
 <ul class="post-list"><li>It does not need an absolute value, so it does not need to hold an absolute calibration</li><li>It survives recipe and seasonal variation, because the reference is the plant's own product</li><li>A drifting baseline shows up as drift rather than as a wrong number presented confidently</li></ul>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 330" role="img" aria-label="Two uses of the same spectrum. Reporting a calibrated concentration needs a site-specific model that drifts as composition changes. Change analysis compares the spectrum against the plant's own reference and correlates deviation with plant state, so it survives recipe and seasonal variation.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <rect x="40" y="46" width="410" height="250" rx="14" fill="#fff" stroke="#dfe6f3"/>
+    <rect x="510" y="46" width="410" height="250" rx="14" fill="#fff" stroke="#137a4b" stroke-width="1.5"/>
+    <text x="60" y="34" font-size="13" font-weight="700" letter-spacing="2" fill="#c2410c">REPORTING A CONCENTRATION</text>
+    <text x="530" y="34" font-size="13" font-weight="700" letter-spacing="2" fill="#137a4b">WATCHING FOR CHANGE</text>
+
+    <text x="70" y="86" font-size="15" font-weight="700" fill="#0b1026">spectrum</text>
+    <path d="M150 80 H210" stroke="#66728a" stroke-width="2"/>
+    <text x="222" y="86" font-size="15" font-weight="700" fill="#0b1026">calibration model</text>
+    <path d="M240 100 V130" stroke="#66728a" stroke-width="2"/>
+    <text x="70" y="146" font-size="15" font-weight="700" fill="#0b1026">“COD = 212 mg/L”</text>
+    <text x="70" y="186" font-size="14" fill="#66728a">site-specific · drifts with composition</text>
+    <text x="70" y="210" font-size="14" fill="#66728a">degrades quietly, still looks plausible</text>
+    <rect x="70" y="232" width="350" height="40" rx="8" fill="#c2410c" opacity="0.08"/>
+    <text x="86" y="257" font-size="14" font-weight="700" fill="#c2410c">needs recalibration to stay true</text>
+
+    <text x="540" y="86" font-size="15" font-weight="700" fill="#0b1026">spectrum vs your own reference</text>
+    <path d="M710 100 V130" stroke="#66728a" stroke-width="2"/>
+    <text x="540" y="146" font-size="15" font-weight="700" fill="#0b1026">deviation, correlated to plant state</text>
+    <text x="540" y="186" font-size="14" fill="#66728a">survives recipe and seasonal change</text>
+    <text x="540" y="210" font-size="14" fill="#66728a">drift shows up as drift, not a wrong number</text>
+    <rect x="540" y="232" width="350" height="40" rx="8" fill="#137a4b" opacity="0.08"/>
+    <text x="556" y="257" font-size="14" font-weight="700" fill="#137a4b">BOD is the one value we calibrate</text>
+  </g>
+</svg><figcaption>Same hardware, same spectrum, two different questions — and two very different maintenance burdens.</figcaption></figure>
 <p>What you lose is the ability to report a concentration to a regulator. What you gain is an instrument that is still telling the truth in eighteen months.</p>
 <h2 id="so-why-calibrate-bod-at-all">So why calibrate BOD at all</h2>
 <p>Because sometimes a number is the point.</p>

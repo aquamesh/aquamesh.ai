@@ -4,12 +4,15 @@ slug: what-25-days-of-historian-data-shows
 date: 2026-09-30
 section: Field notes
 description: A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year.
+image: assets/audit/fig1.jpg
 tags: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor
 ---
 
 A water reuse plant gave us an export of its own historian and nothing else. No site visit, no new instruments, no interviews. Twenty-five days of operation: 1,001 tags, 7,172,532 recorded values, 28 June to 23 July.
 
 That export was enough to rank what the plant was losing, and to put an annual figure on each item. This is what the work looked like and what came out of it.
+
+![Audit summary: about $42,050 a year in savings with no capital spend, rising to $92,200 with a later instrumentation phase; a $147,000 a year power bill; 71% of design flow; effluent turbidity 0.11 NTU.](../assets/audit/fig1.jpg "The front page of the delivered audit. Values tagged **M** are measured straight from the plant’s SCADA; **E** means we calculated them, and the assumptions are written down.")
 
 ## Why a historian export is enough to start
 
@@ -42,6 +45,8 @@ The plant's sampling schedule posts pre-air dissolved oxygen at 0.5–1.5 mg/L. 
 
 Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split — a valve or a damper — not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk of carrying that much oxygen into an anoxic zone.
 
+{{diagram:twin-basins}} — Both basins draw on the same air header, so the difference is in the split rather than the control strategy.
+
 One caveat we put in the report and will repeat here: a fouled DO probe can sit on an offset and still respond to airflow. The reading gets verified against a calibrated handheld before anyone opens a valve.
 
 ### Membrane scour air above what the flux needed
@@ -71,6 +76,8 @@ Until they record, nobody can demonstrate how much recycled water went to benefi
 
 Two subtotals are kept deliberately apart: money that comes off a bill, and operator hours given back. The hours are real, but they are not money off a bill, so they never get folded into the first number.
 
+![Opportunity table with every line flagged measured or estimated: pre-air basin oxygen correction $3,316 measured; modulating pre-air control $1,718 estimated; RAS flow optimisation $1,096 estimated; predictive maintenance programme $20,900 estimated; direct savings subtotal $42,048; reporting automation $16,380 estimated; everything added up $58,428.](../assets/audit/fig2.jpg "Every line labelled. The predictive-maintenance figure is built asset by asset from the plant’s own run hours and start counts, not taken as a percentage of a maintenance budget.")
+
 ## The caveat that matters most
 
 Everything above is priced on a residential time-of-use schedule blending to $0.362/kWh. At 406,610 kWh a year this plant is well past residential scale and would normally sit on a commercial schedule at roughly half that blended rate.
@@ -82,6 +89,8 @@ The kilowatt-hours are measured either way; only their price is in question, and
 ## What this does not tell you
 
 A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a **ceiling** that assumes the recommendation is actually implemented and then maintained — an identified opportunity, not a realised saving.
+
+![The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card.](../assets/audit.jpg "The same findings in the platform, where they keep recomputing on a rolling window rather than ageing in a PDF. Plant name removed; everything else is the product as it ships.")
 
 If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.
 

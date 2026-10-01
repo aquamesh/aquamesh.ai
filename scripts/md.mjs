@@ -107,6 +107,16 @@ export function render(md) {
       continue;
     }
 
+    /* an image alone on a line becomes a captioned figure */
+    const fig = line.trim().match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/);
+    if (fig) {
+      flushPara(para);
+      const [, alt, src2, cap] = fig;
+      out.push(`<figure class="post-fig"><img src="${src2}" alt="${alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async" />` +
+               (cap ? `<figcaption>${inline(cap)}</figcaption>` : '') + `</figure>`);
+      i++; continue;
+    }
+
     para.push(line.trim());
     i++;
   }

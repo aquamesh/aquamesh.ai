@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { render, plain, inline } from './md.mjs';
+import { DIAGRAMS } from './post-diagrams.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://aquamesh.ai';
@@ -52,7 +53,16 @@ const posts = readdirSync(dir).filter(f => f.endsWith('.md')).map(f => {
     url: `${SITE}/blog/${slug}.html`,
     words: text.split(/\s+/).length,
     minutes: readingTime(text),
-    rendered: render(body)
+    rendered: (() => {
+      const r = render(body);
+      /* {{diagram:name}} becomes an inline SVG figure */
+      r.html = r.html.replace(/<p>\{\{diagram:([a-z-]+)\}\}(?:\s*—\s*([^<]*))?<\/p>/g, (m, name, cap) => {
+        const svg = DIAGRAMS[name];
+        if (!svg) { console.warn(`  ! unknown diagram: ${name}`); return ''; }
+        return `<figure class="post-fig post-dia">${svg}` + (cap ? `<figcaption>${inline(cap.trim())}</figcaption>` : '') + `</figure>`;
+      });
+      return r;
+    })()
   };
 }).sort((a, b) => (a.date < b.date ? 1 : -1));
 
@@ -169,7 +179,7 @@ for (const p of posts) {
       author: { '@type': 'Organization', name: BRAND, url: SITE },
       publisher: { '@id': `${SITE}/#organization` },
       mainEntityOfPage: { '@type': 'WebPage', '@id': p.url },
-      image: `${SITE}/assets/og.png`
+      image: `${SITE}/${p.image || 'assets/og.png'}`
     }, {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -189,7 +199,7 @@ for (const p of posts) {
 
   write(`blog/${p.slug}.html`, head({
     title: `${p.title} | ${BRAND}`, desc: p.description, canonical: p.url,
-    pre: '../', type: 'article', extra: jsonld
+    pre: '../', type: 'article', extra: jsonld, og: p.image || 'assets/og.png'
   }) + `
   <main class="cs post">
     <article>

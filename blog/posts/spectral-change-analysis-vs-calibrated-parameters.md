@@ -4,6 +4,7 @@ slug: spectral-change-analysis-vs-calibrated-parameters
 date: 2026-09-22
 section: Measurement
 description: Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.
+image: assets/starch-spectra.jpg
 tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
 ---
 
@@ -14,6 +15,8 @@ That is not how spectral measurement works, and the gap between how it is sold a
 ## What the instrument actually produces
 
 A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve — an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.
+
+![UV/Vis and NIR absorbance spectra at clean, rising, high and very high loss, a reference fingerprint across 200–1700 nm, and spectral deviation from that reference.](../assets/starch-spectra.jpg "The raw measurement: absorbance across wavelength, many times a second. Everything downstream is interpretation of this curve.")
 
 Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. But they carry conditions that rarely survive contact with a real plant:
 
@@ -34,6 +37,8 @@ This is a materially easier question to answer well, and it is insensitive to th
 - It does not need an absolute value, so it does not need to hold an absolute calibration
 - It survives recipe and seasonal variation, because the reference is the plant's own product
 - A drifting baseline shows up as drift rather than as a wrong number presented confidently
+
+{{diagram:calibration-vs-change}} — Same hardware, same spectrum, two different questions — and two very different maintenance burdens.
 
 What you lose is the ability to report a concentration to a regulator. What you gain is an instrument that is still telling the truth in eighteen months.
 

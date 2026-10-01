@@ -4,6 +4,7 @@ slug: why-parallel-equipment-drifts
 date: 2026-09-26
 section: Field notes
 description: Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at.
+image: assets/audit.jpg
 tags: parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance
 ---
 
@@ -19,6 +20,8 @@ Both units can sit inside every alarm limit while being nowhere near each other.
 
 That is the gap worth watching, and it is visible in data a plant already records.
 
+{{diagram:twin-basins}} — Neither trace is outside an alarm limit. Both basins are aerated, both are running, and nothing fires.
+
 ## The three shapes it takes
 
 ### Duty that never alternates
@@ -26,6 +29,8 @@ That is the gap worth watching, and it is visible in data a plant already record
 Lead and lag assets are supposed to swap. When the alternation is disabled, or was never configured, or was turned off during a commissioning problem and never turned back on, the lead unit accumulates all the wear.
 
 In one plant's record, return-activated-sludge pumps showed 504 run hours against 232 in the same twenty-five days, and the lifetime counters showed the gap compounding: 44,299 hours against 30,953. The lead unit reaches overhaul years earlier than it needs to while the standby sits idle — and the standby is the one you will be relying on when the lead finally fails.
+
+{{diagram:duty-split}} — Twenty-five days of run hours, and the lifetime counters behind them.
 
 Lead-lag alternation costs nothing to enable. What makes this finding persuasive rather than theoretical is that the same plant's MBR blowers and permeate pumps *were* balanced, which marks it as an oversight on one asset rather than a design choice.
 
@@ -48,6 +53,8 @@ A related pattern worth naming on its own, because it is consistently underestim
 Pumps are often judged on run hours. The more expensive variable is usually **starts**. Every start draws locked-rotor current — several times the running current — and the heat goes into the windings. Manufacturer guidance for mid-size pumps is frequently around six starts an hour.
 
 In one record, reclaimed water pumps were logging 13 to 28 an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.
+
+{{diagram:pump-starts}}
 
 ## How to look for it in your own data
 

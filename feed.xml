@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 03:05:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 03:16:13 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What 25 days of historian data actually shows about a treatment plant</title>
@@ -15,6 +15,7 @@
       <description>A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year.</description>
       <content:encoded><![CDATA[<p>A water reuse plant gave us an export of its own historian and nothing else. No site visit, no new instruments, no interviews. Twenty-five days of operation: 1,001 tags, 7,172,532 recorded values, 28 June to 23 July.</p>
 <p>That export was enough to rank what the plant was losing, and to put an annual figure on each item. This is what the work looked like and what came out of it.</p>
+<figure class="post-fig"><img src="../assets/audit/fig1.jpg" alt="Audit summary: about $42,050 a year in savings with no capital spend, rising to $92,200 with a later instrumentation phase; a $147,000 a year power bill; 71% of design flow; effluent turbidity 0.11 NTU." loading="lazy" decoding="async" /><figcaption>The front page of the delivered audit. Values tagged <b>M</b> are measured straight from the plant’s SCADA; <b>E</b> means we calculated them, and the assumptions are written down.</figcaption></figure>
 <h2 id="why-a-historian-export-is-enough-to-start">Why a historian export is enough to start</h2>
 <p>Almost every plant already records far more than anyone reads. A SCADA historian captures every tag on a schedule, forever, and the overwhelming majority of those tags are never looked at unless something breaks. The data is not the constraint. Attention is.</p>
 <p>Three properties make that archive useful:</p>
@@ -28,6 +29,18 @@
 <h3 id="one-basin-running-3-6x-above-its-own-posted-range">One basin running 3.6x above its own posted range</h3>
 <p>The plant's sampling schedule posts pre-air dissolved oxygen at 0.5–1.5 mg/L. Basin 2 sat right in that band, median 0.49 mg/L. Basin 1 held a median of 5.35 mg/L on every day of the record — roughly eleven times its twin — with its blower command pinned at 99.99%.</p>
 <p>Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split — a valve or a damper — not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk of carrying that much oxygen into an anoxic zone.</p>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Two basins on shared airflow over the same period. Basin 1 holds a median of 5.35 mg/L of dissolved oxygen with its blower pinned at 99.99%; Basin 2 sits inside the posted range of 0.5 to 1.5 mg/L at 0.49 mg/L.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <rect x="70" y="150" width="820" height="46" fill="#e9effd"/>
+    <text x="80" y="214" font-size="13" font-weight="600" fill="#2449e8">POSTED RANGE 0.5–1.5 mg/L</text>
+    <path d="M70 60 C 150 66, 230 54, 310 62 S 470 56, 550 64 S 710 58, 890 62" fill="none" stroke="#c2410c" stroke-width="3"/>
+    <path d="M70 176 C 150 170, 230 182, 310 174 S 470 180, 550 172 S 710 178, 890 174" fill="none" stroke="#2449e8" stroke-width="3"/>
+    <text x="70" y="44" font-size="15" font-weight="700" fill="#c2410c">Basin 1 — median 5.35 mg/L, blower pinned at 99.99%</text>
+    <text x="70" y="248" font-size="15" font-weight="700" fill="#2449e8">Basin 2 — median 0.49 mg/L, same shared airflow</text>
+    <path d="M905 62 V174" stroke="#66728a" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="898" y="120" text-anchor="end" font-size="14" font-weight="700" fill="#0b1026">3.6× the posted limit</text>
+  </g>
+</svg><figcaption>Both basins draw on the same air header, so the difference is in the split rather than the control strategy.</figcaption></figure>
 <p>One caveat we put in the report and will repeat here: a fouled DO probe can sit on an offset and still respond to airflow. The reading gets verified against a calibrated handheld before anyone opens a valve.</p>
 <h3 id="membrane-scour-air-above-what-the-flux-needed">Membrane scour air above what the flux needed</h3>
 <p>Airflow tracked the permeate rate almost perfectly — R² of 1.00 — at a ratio well above the manufacturer's specific-scour guidance. Trimming toward the guideline at the measured flux, using the controls already installed, came to $5,391 a year. That was the largest no-capital line on the list.</p>
@@ -40,12 +53,14 @@
 <h2 id="what-it-added-up-to">What it added up to</h2>
 <div class="table-wrap"><table class="cs-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Direct savings, no capital at all</td><td><b>$42,050 / yr</b></td></tr><tr><td>Including ~7 h/week of reporting time returned</td><td><b>$58,428 / yr</b></td></tr><tr><td>Fully instrumented, direct</td><td><b>$75,800 / yr</b></td></tr><tr><td>Fully instrumented, all in</td><td><b>$92,200 / yr</b></td></tr></tbody></table></div>
 <p>Two subtotals are kept deliberately apart: money that comes off a bill, and operator hours given back. The hours are real, but they are not money off a bill, so they never get folded into the first number.</p>
+<figure class="post-fig"><img src="../assets/audit/fig2.jpg" alt="Opportunity table with every line flagged measured or estimated: pre-air basin oxygen correction $3,316 measured; modulating pre-air control $1,718 estimated; RAS flow optimisation $1,096 estimated; predictive maintenance programme $20,900 estimated; direct savings subtotal $42,048; reporting automation $16,380 estimated; everything added up $58,428." loading="lazy" decoding="async" /><figcaption>Every line labelled. The predictive-maintenance figure is built asset by asset from the plant’s own run hours and start counts, not taken as a percentage of a maintenance budget.</figcaption></figure>
 <h2 id="the-caveat-that-matters-most">The caveat that matters most</h2>
 <p>Everything above is priced on a residential time-of-use schedule blending to $0.362/kWh. At 406,610 kWh a year this plant is well past residential scale and would normally sit on a commercial schedule at roughly half that blended rate.</p>
 <p>On a commercial tariff, the same physical savings are worth about half what is shown.</p>
 <p>The kilowatt-hours are measured either way; only their price is in question, and one utility bill settles it. We put that on the front page of the report rather than in a footnote, because showing the range is worth more than picking the flattering end of it.</p>
 <h2 id="what-this-does-not-tell-you">What this does not tell you</h2>
 <p>A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a <b>ceiling</b> that assumes the recommendation is actually implemented and then maintained — an identified opportunity, not a realised saving.</p>
+<figure class="post-fig"><img src="../assets/audit.jpg" alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." loading="lazy" decoding="async" /><figcaption>The same findings in the platform, where they keep recomputing on a rolling window rather than ageing in a PDF. Plant name removed; everything else is the product as it ships.</figcaption></figure>
 <p>If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.</p>
 <p>Read the full anonymised audit: <a href="/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant</a>.</p>]]></content:encoded>
       <category>historian data</category>
@@ -66,10 +81,38 @@
 <p>A modern control system is very good at holding a value and raising an alarm when a limit is crossed. Divergence between two units is neither of those things.</p>
 <p>Both units can sit inside every alarm limit while being nowhere near each other. A pump at 84% duty and its twin at 39% are both running. A basin at 5.35 mg/L and its twin at 0.49 mg/L are both aerated. Nothing is out of range in the sense the alarm system understands, so nothing fires, and the gap persists for years because it never presents as an event.</p>
 <p>That is the gap worth watching, and it is visible in data a plant already records.</p>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Two basins on shared airflow over the same period. Basin 1 holds a median of 5.35 mg/L of dissolved oxygen with its blower pinned at 99.99%; Basin 2 sits inside the posted range of 0.5 to 1.5 mg/L at 0.49 mg/L.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <rect x="70" y="150" width="820" height="46" fill="#e9effd"/>
+    <text x="80" y="214" font-size="13" font-weight="600" fill="#2449e8">POSTED RANGE 0.5–1.5 mg/L</text>
+    <path d="M70 60 C 150 66, 230 54, 310 62 S 470 56, 550 64 S 710 58, 890 62" fill="none" stroke="#c2410c" stroke-width="3"/>
+    <path d="M70 176 C 150 170, 230 182, 310 174 S 470 180, 550 172 S 710 178, 890 174" fill="none" stroke="#2449e8" stroke-width="3"/>
+    <text x="70" y="44" font-size="15" font-weight="700" fill="#c2410c">Basin 1 — median 5.35 mg/L, blower pinned at 99.99%</text>
+    <text x="70" y="248" font-size="15" font-weight="700" fill="#2449e8">Basin 2 — median 0.49 mg/L, same shared airflow</text>
+    <path d="M905 62 V174" stroke="#66728a" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="898" y="120" text-anchor="end" font-size="14" font-weight="700" fill="#0b1026">3.6× the posted limit</text>
+  </g>
+</svg><figcaption>Neither trace is outside an alarm limit. Both basins are aerated, both are running, and nothing fires.</figcaption></figure>
 <h2 id="the-three-shapes-it-takes">The three shapes it takes</h2>
 <h3 id="duty-that-never-alternates">Duty that never alternates</h3>
 <p>Lead and lag assets are supposed to swap. When the alternation is disabled, or was never configured, or was turned off during a commissioning problem and never turned back on, the lead unit accumulates all the wear.</p>
 <p>In one plant's record, return-activated-sludge pumps showed 504 run hours against 232 in the same twenty-five days, and the lifetime counters showed the gap compounding: 44,299 hours against 30,953. The lead unit reaches overhaul years earlier than it needs to while the standby sits idle — and the standby is the one you will be relying on when the lead finally fails.</p>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 300" role="img" aria-label="Run hours for two RAS pumps. Over 25 days the lead pump ran 504 hours against its twin's 232. Lifetime counters show 44,299 hours against 30,953.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="60" y="38" font-size="13" font-weight="700" letter-spacing="2" fill="#66728a">RUN HOURS, SAME 25 DAYS</text>
+    <rect x="60" y="58" width="620" height="44" rx="8" fill="#c2410c"/>
+    <rect x="60" y="116" width="285" height="44" rx="8" fill="#2449e8" opacity="0.35"/>
+    <text x="76" y="86" font-size="17" font-weight="700" fill="#fff">Pump A — 504 h</text>
+    <text x="76" y="144" font-size="17" font-weight="700" fill="#0b1026">Pump B — 232 h</text>
+    <text x="700" y="86" font-size="14" font-weight="700" fill="#c2410c">84% duty</text>
+    <text x="365" y="144" font-size="14" font-weight="700" fill="#66728a">39% duty</text>
+    <path d="M60 196 H900" stroke="#dfe6f3" stroke-width="2"/>
+    <text x="60" y="228" font-size="13" font-weight="700" letter-spacing="2" fill="#66728a">LIFETIME COUNTERS — THE GAP COMPOUNDING</text>
+    <text x="60" y="262" font-size="21" font-weight="800" fill="#c2410c">44,299 h</text>
+    <text x="210" y="262" font-size="21" font-weight="800" fill="#66728a">30,953 h</text>
+    <text x="370" y="262" font-size="15" fill="#66728a">— the standby is the one you will need</text>
+  </g>
+</svg><figcaption>Twenty-five days of run hours, and the lifetime counters behind them.</figcaption></figure>
 <p>Lead-lag alternation costs nothing to enable. What makes this finding persuasive rather than theoretical is that the same plant's MBR blowers and permeate pumps <em>were</em> balanced, which marks it as an oversight on one asset rather than a design choice.</p>
 <h3 id="a-shared-supply-unequally-split">A shared supply, unequally split</h3>
 <p>Twin basins on a common air header should see similar dissolved oxygen at similar load. When one sits far above the other with its blower command pinned wide open, the control strategy is not the problem — the air is not arriving where it is supposed to.</p>
@@ -81,6 +124,26 @@
 <p>A related pattern worth naming on its own, because it is consistently underestimated.</p>
 <p>Pumps are often judged on run hours. The more expensive variable is usually <b>starts</b>. Every start draws locked-rotor current — several times the running current — and the heat goes into the windings. Manufacturer guidance for mid-size pumps is frequently around six starts an hour.</p>
 <p>In one record, reclaimed water pumps were logging 13 to 28 an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.</p>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 260" role="img" aria-label="Pump starts per hour. Manufacturer guidance is near six an hour. Observed range was 13 to 28, with one asset logging 143 in an hour — a start every 25 seconds.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <path d="M60 150 H900" stroke="#dfe6f3" stroke-width="3"/>
+    <g>
+      <path d="M100 136 V164" stroke="#137a4b" stroke-width="3"/>
+      <text x="100" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#137a4b">~6/h</text>
+      <text x="100" y="192" text-anchor="middle" font-size="13" fill="#66728a">guidance</text>
+    </g>
+    <rect x="196" y="140" width="190" height="20" rx="10" fill="#c2410c" opacity="0.25"/>
+    <text x="291" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#c2410c">13–28/h</text>
+    <text x="291" y="192" text-anchor="middle" font-size="13" fill="#66728a">observed range</text>
+    <g>
+      <circle cx="840" cy="150" r="11" fill="#c2410c"/>
+      <text x="840" y="120" text-anchor="middle" font-size="19" font-weight="800" fill="#c2410c">143/h</text>
+      <text x="840" y="192" text-anchor="middle" font-size="13" fill="#66728a">one asset</text>
+      <text x="840" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#0b1026">a start every 25 seconds</text>
+    </g>
+    <text x="60" y="40" font-size="15" fill="#66728a">Every start draws locked-rotor current. Run hours are not the expensive variable.</text>
+  </g>
+</svg></figure>
 <h2 id="how-to-look-for-it-in-your-own-data">How to look for it in your own data</h2>
 <p>You do not need a platform to start. With a historian export and a spreadsheet:</p>
 <ol class="post-list"><li><b>List your parallel assets.</b> Anything with a twin: pumps, blowers, basins, trains, filters.</li><li><b>Compare run hours over the same window</b>, and compare lifetime counters if you have them. A persistent ratio far from 1:1 is the signal.</li><li><b>Count starts per hour</b>, not just runtime, and compare against the manufacturer guidance for that size of machine.</li><li><b>For process variables, plot the pair on the same axis.</b> Not each against its limit — against each other. Divergence that holds for weeks is not noise.</li><li><b>Check duplicates against each other.</b> Two instruments on one stream that disagree are telling you something regardless of which is right.</li></ol>
@@ -104,6 +167,7 @@
 <p>That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.</p>
 <h2 id="what-the-instrument-actually-produces">What the instrument actually produces</h2>
 <p>A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve — an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.</p>
+<figure class="post-fig"><img src="../assets/starch-spectra.jpg" alt="UV/Vis and NIR absorbance spectra at clean, rising, high and very high loss, a reference fingerprint across 200–1700 nm, and spectral deviation from that reference." loading="lazy" decoding="async" /><figcaption>The raw measurement: absorbance across wavelength, many times a second. Everything downstream is interpretation of this curve.</figcaption></figure>
 <p>Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. But they carry conditions that rarely survive contact with a real plant:</p>
 <ul class="post-list"><li>They are <b>site-specific</b>. A model built on one plant's water does not transfer to another's.</li><li>They <b>drift with composition</b>. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.</li><li>They <b>degrade quietly</b>. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.</li></ul>
 <p>The result is an instrument that was sold as five parameters and is trusted for none of them within a year.</p>
@@ -112,6 +176,32 @@
 <p>Instead of asking <em>what is the concentration</em>, ask <em>has the fingerprint changed, and what does that change correlate with</em>. Build a one-time model of what the plant's own stream normally looks like. Then watch for deviation from that reference, and tie the deviation to what the plant was doing at the time — feed rate, wash flow, machine state, cleaning records.</p>
 <p>This is a materially easier question to answer well, and it is insensitive to the things that break calibrations:</p>
 <ul class="post-list"><li>It does not need an absolute value, so it does not need to hold an absolute calibration</li><li>It survives recipe and seasonal variation, because the reference is the plant's own product</li><li>A drifting baseline shows up as drift rather than as a wrong number presented confidently</li></ul>
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 330" role="img" aria-label="Two uses of the same spectrum. Reporting a calibrated concentration needs a site-specific model that drifts as composition changes. Change analysis compares the spectrum against the plant's own reference and correlates deviation with plant state, so it survives recipe and seasonal variation.">
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <rect x="40" y="46" width="410" height="250" rx="14" fill="#fff" stroke="#dfe6f3"/>
+    <rect x="510" y="46" width="410" height="250" rx="14" fill="#fff" stroke="#137a4b" stroke-width="1.5"/>
+    <text x="60" y="34" font-size="13" font-weight="700" letter-spacing="2" fill="#c2410c">REPORTING A CONCENTRATION</text>
+    <text x="530" y="34" font-size="13" font-weight="700" letter-spacing="2" fill="#137a4b">WATCHING FOR CHANGE</text>
+
+    <text x="70" y="86" font-size="15" font-weight="700" fill="#0b1026">spectrum</text>
+    <path d="M150 80 H210" stroke="#66728a" stroke-width="2"/>
+    <text x="222" y="86" font-size="15" font-weight="700" fill="#0b1026">calibration model</text>
+    <path d="M240 100 V130" stroke="#66728a" stroke-width="2"/>
+    <text x="70" y="146" font-size="15" font-weight="700" fill="#0b1026">“COD = 212 mg/L”</text>
+    <text x="70" y="186" font-size="14" fill="#66728a">site-specific · drifts with composition</text>
+    <text x="70" y="210" font-size="14" fill="#66728a">degrades quietly, still looks plausible</text>
+    <rect x="70" y="232" width="350" height="40" rx="8" fill="#c2410c" opacity="0.08"/>
+    <text x="86" y="257" font-size="14" font-weight="700" fill="#c2410c">needs recalibration to stay true</text>
+
+    <text x="540" y="86" font-size="15" font-weight="700" fill="#0b1026">spectrum vs your own reference</text>
+    <path d="M710 100 V130" stroke="#66728a" stroke-width="2"/>
+    <text x="540" y="146" font-size="15" font-weight="700" fill="#0b1026">deviation, correlated to plant state</text>
+    <text x="540" y="186" font-size="14" fill="#66728a">survives recipe and seasonal change</text>
+    <text x="540" y="210" font-size="14" fill="#66728a">drift shows up as drift, not a wrong number</text>
+    <rect x="540" y="232" width="350" height="40" rx="8" fill="#137a4b" opacity="0.08"/>
+    <text x="556" y="257" font-size="14" font-weight="700" fill="#137a4b">BOD is the one value we calibrate</text>
+  </g>
+</svg><figcaption>Same hardware, same spectrum, two different questions — and two very different maintenance burdens.</figcaption></figure>
 <p>What you lose is the ability to report a concentration to a regulator. What you gain is an instrument that is still telling the truth in eighteen months.</p>
 <h2 id="so-why-calibrate-bod-at-all">So why calibrate BOD at all</h2>
 <p>Because sometimes a number is the point.</p>
