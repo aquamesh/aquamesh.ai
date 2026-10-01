@@ -1,5 +1,5 @@
 ---
-title: Spectral change analysis, and why we calibrate only BOD
+title: Spectral change analysis versus calibrated parameters
 slug: spectral-change-analysis-vs-calibrated-parameters
 date: 2026-09-22
 section: Measurement
@@ -20,11 +20,11 @@ A UV/Vis probe does one thing: it measures how much light the water absorbs acro
 
 Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. But they carry conditions that rarely survive contact with a real plant:
 
-- They are **site-specific**. A model built on one plant's water does not transfer to another's.
+- They are often **site-specific**. Transferability must be demonstrated; a model validated on one stream should not be assumed valid on another.
 - They **drift with composition**. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.
 - They **degrade quietly**. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.
 
-The result is an instrument that was sold as five parameters and is trusted for none of them within a year.
+Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown.
 
 ## The alternative: watch the spectrum move
 
@@ -35,7 +35,7 @@ Instead of asking *what is the concentration*, ask *has the fingerprint changed,
 This is a materially easier question to answer well, and it is insensitive to the things that break calibrations:
 
 - It does not need an absolute value, so it does not need to hold an absolute calibration
-- It survives recipe and seasonal variation, because the reference is the plant's own product
+- It can handle defined operating modes more transparently when each recipe or season has an appropriate reference; new conditions still need review
 - A drifting baseline shows up as drift rather than as a wrong number presented confidently
 
 {{diagram:calibration-vs-change}} — Same hardware, same spectrum, two different questions — and two very different maintenance burdens.
@@ -48,15 +48,15 @@ Because sometimes a number is the point.
 
 Biochemical oxygen demand is the parameter that drives sewer surcharges, appears on discharge permits, and determines whether a load is going to cause a problem downstream. "The spectrum moved" is not an answer when the question is whether you are about to exceed a threshold that gets billed by the pound.
 
-So BOD is the one parameter we calibrate, built against the customer's own reference samples. Their lab stays the method of record. The calibration fills the hours between the samples the lab already takes, rather than replacing them.
+For the first industrial deployment, BOD is the parameter we plan to validate against the customer's own reference samples. Their lab stays the method of record. The goal is to fill the hours between the samples the lab already takes, rather than replace them.
 
-Everything else the probe produces is change analysis, and we describe it that way.
+Other outputs begin as change analysis unless and until they are validated against an appropriate reference method.
 
 ## Why be this specific about it
 
 Partly because it is true, and a claim that is not true gets found out in a technical review.
 
-But mostly because the honest version is a better product story. "We measure sixteen parameters" invites a comparison against instruments from companies with thirty years of calibration work behind them, on a spec sheet, where we would lose. "We watch the whole spectrum for change and tell you what it correlates with in your plant, and we calibrate BOD to your lab" is a different claim, and a parameter list does not answer it.
+But mostly because the honest version is a better product story. "We measure sixteen parameters" invites a comparison against instruments from companies with thirty years of calibration work behind them, on a spec sheet, where we would lose. "We watch the whole spectrum for change and tell you what it correlates with in your plant, and we plan to validate BOD against your lab" is a different claim, and a parameter list does not answer it.
 
 It also sets expectations that survive deployment. An operator who was told they were getting continuous COD and finds the number drifting stops trusting the instrument. An operator who was told they were getting an early warning that something in the water changed, and gets exactly that, keeps using it.
 
