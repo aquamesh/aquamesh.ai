@@ -374,7 +374,7 @@ AquaMesh reads the history a plant already records, models each signal and each 
 parallel units, prices what it finds using the plant's own tariff, and presents a ranked
 list of actions. The AquaSpectra probe adds continuous in-situ spectral measurement where
 existing instruments leave a gap: the spectrum is watched for change and correlated with
-what matters, and BOD is the one parameter calibrated against the customer's own samples.
+what matters, and the first industrial BOD model is planned for validation against the customer's own samples.
 
 ## Blog
 ${posts.map(p => `- [${p.title}](${p.url}): ${p.description} (${p.date}, ${p.minutes} min). Markdown: ${SITE}/blog/${p.slug}.md`).join('\n')}
@@ -395,7 +395,7 @@ ${pages.map(([u, t, d]) => `- [${t}](${SITE}${u}): ${d}`).join('\n')}
 ## Notes for agents
 - Figures in case studies are identified opportunities, not realised savings, and are specific to the plant and tariff they came from.
 - Penalty and surcharge figures come from public EPA/DOJ enforcement records and published municipal schedules.
-- Spectral output is change analysis; BOD is the only calibrated parameter. AquaSpectra is not a compendial method.
+- Spectral output begins as change analysis; no parameter should be presented as calibrated until site-specific validation is complete. AquaSpectra is not a compendial method.
 - Content is quotable with attribution to ${BRAND} (${SITE}).
 - Contact: info@aquamesh.ai
 `);
