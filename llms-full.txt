@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-01T22:39:26.318Z · 3 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-01T23:47:41.322Z · 4 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -31,6 +31,67 @@ SECTION: Insights
 ==============================================================================
 
 Liquid Cooling Water Quality Decisions | AquaMesh Platform How it works Case studies Company Book a demo Data centers Field note · Liquid cooling · September 29, 2026 Separate the loop before the alarm. A water quality alert has little value until the team knows which cooling circuit it describes, who owns that circuit, and what action the evidence supports. This is an operating framework based on published guidance, not a report of AquaMesh performance at a data center. First boundary Facility water and server coolant are different systems. An ASHRAE TC 9.9 white paper distinguishes facility water systems (FWS) from technology cooling systems (TCS), which a coolant distribution unit commonly separates. The paper warns that applying the quality specification for one loop to the other can either impose needless cost on the facility side or leave the IT side at risk. It also notes that ownership may differ between facilities staff, the IT owner, equipment provider and service provider. Before setting a threshold, draw that boundary on the plant diagram. Identify the sample point, fluid, treatment program, materials, control owner and equipment manufacturer's requirements. A signal on a cooling tower does not establish the condition inside a separated server loop. Nor does a server-side result alone identify a tower fault. Existing coverage Use each signal for the question it answers. 1 Thermal and hydraulic tags Trend supply and return temperature, flow, pressure differential, pump and valve state, filter differential pressure, and load by operating mode. These records can localize a heat transfer or flow problem. They do not, by themselves, identify its chemical cause. The Lawrence Berkeley National Laboratory liquid cooling controls guide describes the data inputs and ownership choices involved. 2 Conductivity, pH and turbidity ASHRAE describes these as an intermediate online monitoring option, with cost and risk determining whether it is warranted. Conductivity responds to dissolved ionic content; it is not a specific contaminant assay. The USGS conductance reference explains that the reading depends on the types and amounts of dissolved substances and temperature. Interpret a change alongside makeup water, dosing, temperature compensation and the correct loop's specification. 3 Samples and equipment guidance Maintain the sampling and analysis required by the fluid and equipment providers. ASHRAE's paper calls for a monitoring frequency and an agreed response to out-of-range values; it explicitly retains periodic bacteria samples. A conductivity, pH or turbidity trend does not replace those tests or prove biological safety. 4 A defined missing observation If existing tags flag a change but cannot distinguish the physical state that would change an operator decision, write down that missing variable and the point of measurement. Targeted spectral sensing could be evaluated for a suitable signature with paired reference samples, interference and fouling checks, and false-alarm review. No spectral result should be treated as a validated concentration, bacteria test or corrosion-rate measurement without application-specific validation. Operating test Reconstruct the decision at the time it mattered. Choose one historical water quality or cooling event. Align the existing BMS or historian trends with lab sample collection time, dosing and maintenance records, operating mode, and CDU status. Ask which loop changed first, whether the evidence identified a likely cause, and who had authority to isolate, sample, inspect or hold equipment under the site's procedures. Compare with a normal run before declaring an anomaly. Then define a prospective test: a condition that triggers an operator-reviewed action, an acceptable false-alarm rate, and the downstream signal or sample that would verify the response. ASHRAE emphasizes an agreed plan for out-of-range results; this is where monitoring becomes a decision rather than another chart. Start with the loop, the owner and the response window. Add an instrument only when the evidence required for that decision is missing from the installed controls and sampling program. Sources and scope Primary references. ASHRAE TC 9.9, Water-Cooled Servers: Common Designs, Components, and Processes , especially water quality and monitoring sections. Published guidance, not an AquaMesh validation. U.S. Geological Survey, Specific Electrical Conductance , measurement basis for conductivity. Lawrence Berkeley National Laboratory, Liquid Cooling Controls Team white paper , control system data inputs. The historical review and prospective test are AquaMesh's proposed method. They are not a claim of a particular site's results or a tested AquaSpectra performance level. Find the decision your cooling data cannot make soon enough. AquaMesh starts with installed controls and samples, then tests sensing against a specific visibility gap. Data center approach info@aquamesh.ai The Autopilot For Industrial Water Food Beverage · Industrial Water · Manufacturing · Municipal · Pharma Biotech · Data Centers Privacy · Cookies · Terms · Your Privacy Choices © AquaMesh Inc. 2026 · info@aquamesh.ai
+
+
+==============================================================================
+TITLE: California now asks data centers what they actually use, under penalty of perjury
+URL: https://aquamesh.ai/blog/california-data-center-water-reporting.html
+DATE: 2026-10-01
+SECTION: Regulation
+TAGS: data centers, water reporting, AB 2619, AB 2469, cooling water, water reuse, California
+==============================================================================
+
+On 21 September 2026 the Governor of California signed [AB 2619](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2619), now Chapter 437 of the 2026 Statutes, and [AB 2469](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2469) alongside it. Between them they change what a data center operator in California has to be able to say about water, and when.
+
+The reporting obligation is the part worth reading closely, because it is more specific than the coverage suggests.
+
+## What AB 2619 actually asks for
+
+AB 2619 works through the business license process rather than through a new permit. It sorts data centers into three types: Type I, or hyperscale, at more than 10,000 servers or more than 25 megawatts; Type II between 2 and 25 megawatts; and Type III below 2 megawatts.
+
+At initial application, the operator gives the water supplier, and repeats on the license application form, a good faith estimate of expected water use, the anticipated source, and projected volume for the maximum day, the maximum month, and the average year.
+
+At every renewal, the operator reports the preceding calendar year's annual water use — and here the statute is precise — "including total water use and direct water use," along with the cooling system type.
+
+Direct annual water use is defined in the bill as:
+
+> The volume of water withdrawn, delivered, or otherwise used onsite for data center operations, including cooling, sanitation, irrigation, and any other operational use, identified by source, including potable water, nonpotable water, or recycled water.
+
+All of it under penalty of perjury.
+
+Two things in that definition do the work. The first is *identified by source* — potable, nonpotable, recycled, broken out, not aggregated. The second is the split between total and direct, which means a single number off the utility bill does not satisfy the renewal requirement.
+
+One correction worth making, because it has circulated widely: several summaries describe AB 2619 as requiring disclosure of *indirect* water use, meaning the water consumed generating the site's electricity. The enacted text does not define indirect use and does not require it. If you are scoping a compliance programme, scope it to what the statute says.
+
+## What AB 2469 adds, and the 2028 date
+
+AB 2469 operates on the other side of the counter. It applies to cities and counties approving discretionary or ministerial permits for data center construction or expansion that increases maximum peak water use, and it requires a Water Supply Assessment under [Water Code section 10910 et seq.](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=WAT&division=6.&title=&part=2.10.&chapter=&article=), projected water use and efficiency measures, workforce disclosures, and an undertaking that the applicant carries the full cost of any water conveyance, treatment, storage or distribution infrastructure the project needs.
+
+Effective 1 January 2028, it also requires a Water Scarcity Plan. That plan has to set out measures for five named conditions — an abnormally dry year, and moderate, severe, extreme and exceptional drought years — including staged reductions, curtailment, recycling and reuse, thermal load reductions, and load shedding.
+
+AB 2469 does not mandate closed-loop cooling. Some coverage says it does. It does not.
+
+## The gap this opens
+
+A Water Scarcity Plan is a commitment to cut consumption by a stated amount under stated conditions, written down in advance, in front of a permitting authority. Writing a credible one requires knowing two things that many sites do not currently know with any precision.
+
+The first is where the water is going now, by loop and by source. Evaporative cooling, blowdown, makeup, sanitation and irrigation are different lines with different elasticities, and a site that only knows its total has no basis for saying which it would cut first.
+
+The second is how far each one can be cut before something else breaks. Curtailment on a cooling tower usually means running at higher cycles of concentration — less blowdown, less makeup, and a circuit that is now closer to the scaling and corrosion limits of its own chemistry. Recycling and reuse, both named in the statute, move in the same direction. The water you keep in the loop is water whose composition is drifting.
+
+That is the real operational content of a scarcity plan. It is not a reporting exercise, it is a commitment to run the plant closer to its limits on demand, and the plan is only as good as the site's ability to see what happens when it does.
+
+## Where measurement earns its place
+
+Volumes are a flow metering problem, and the renewal report in AB 2619 is largely a question of whether a site is instrumented well enough to break its own consumption apart by source. Many are not, and 2027's renewals will be the first time that shows up with a perjury declaration attached.
+
+Composition is a different problem, and it is the one that decides whether a curtailment commitment is safe to make. A plant running higher cycles, or taking a recycled source that was not in the original design basis, is operating a water chemistry that moves. [Spectral change analysis](/blog/spectral-change-analysis-vs-calibrated-parameters.html) is a reasonable fit here precisely because it does not depend on having a calibrated panel for every constituent that might matter — it watches the spectrum for what is correlating with something the operator cares about, and flags when that relationship moves. BOD is the one parameter AquaMesh calibrates; the rest is change detection.
+
+For sites that already have a few months of history in a historian, the first question is usually answerable from data that exists. [What 25 days of one plant's data showed](/blog/what-25-days-of-historian-data-shows.html) is a reasonable picture of what that kind of look turns up, and it was not a water reporting exercise — it was a cost exercise that happened to require knowing where things actually go.
+
+Nothing in either bill requires a sensor. Both require a site to be able to answer questions about its own water that a surprising number of operators currently answer by estimate. The first renewals under AB 2619 will establish how much tolerance there is for that, and the 2028 scarcity plans will establish how much tolerance there is for a commitment that nobody has tested.
+
+Operators working through what this means for an existing site can see how we approach [data center cooling water](/industries/data-centers.html), or start with an audit of the data already being collected.
 
 
 ==============================================================================
