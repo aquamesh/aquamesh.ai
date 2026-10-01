@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aquamesh.ai/</loc></url>
-  <url><loc>https://aquamesh.ai/company.html</loc></url>
-  <url><loc>https://aquamesh.ai/case-studies/</loc></url>
-  <url><loc>https://aquamesh.ai/case-studies/starch-plant.html</loc></url>
-  <url><loc>https://aquamesh.ai/case-studies/water-reuse-plant.html</loc></url>
-  <url><loc>https://aquamesh.ai/industries/data-centers.html</loc></url>
-  <url><loc>https://aquamesh.ai/industries/food-beverage.html</loc></url>
-  <url><loc>https://aquamesh.ai/industries/industrial-water.html</loc></url>
-  <url><loc>https://aquamesh.ai/industries/manufacturing.html</loc></url>
-  <url><loc>https://aquamesh.ai/industries/municipal.html</loc></url>
-  <url><loc>https://aquamesh.ai/industries/pharma-biotech.html</loc></url>
-  <url><loc>https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html</loc></url>
-  <url><loc>https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html</loc></url>
-  <url><loc>https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html</loc></url>
+  <url><loc>https://aquamesh.ai/</loc><lastmod>2026-10-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://aquamesh.ai/company.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aquamesh.ai/case-studies/</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/case-studies/water-reuse-plant.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/case-studies/starch-plant.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/blog/</loc><lastmod>2026-10-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://aquamesh.ai/industries/food-beverage.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/industries/industrial-water.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/industries/manufacturing.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/industries/municipal.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/industries/pharma-biotech.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/industries/data-centers.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aquamesh.ai/privacy.html</loc><lastmod>2026-10-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://aquamesh.ai/cookies.html</loc><lastmod>2026-10-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://aquamesh.ai/terms.html</loc><lastmod>2026-10-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://aquamesh.ai/do-not-sell.html</loc><lastmod>2026-10-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html</loc><lastmod>2026-09-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aquamesh.ai/blog/why-parallel-equipment-drifts.html</loc><lastmod>2026-09-26</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html</loc><lastmod>2026-09-22</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
 </urlset>

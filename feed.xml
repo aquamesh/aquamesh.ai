@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AquaMesh — field notes</title>
+    <link>https://aquamesh.ai/blog/</link>
+    <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Oct 2026 02:58:46 GMT</lastBuildDate>
+    <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What 25 days of historian data actually shows about a treatment plant</title>
+      <link>https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html</link>
+      <guid isPermaLink="true">https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html</guid>
+      <pubDate>Wed, 30 Sep 2026 09:00:00 GMT</pubDate>
+      <description>A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year.</description>
+      <content:encoded><![CDATA[<p>A water reuse plant gave us an export of its own historian and nothing else. No site visit, no new instruments, no interviews. Twenty-five days of operation: 1,001 tags, 7,172,532 recorded values, 28 June to 23 July.</p>
+<p>That export was enough to rank what the plant was losing, and to put an annual figure on each item. This is what the work looked like and what came out of it.</p>
+<h2 id="why-a-historian-export-is-enough-to-start">Why a historian export is enough to start</h2>
+<p>Almost every plant already records far more than anyone reads. A SCADA historian captures every tag on a schedule, forever, and the overwhelming majority of those tags are never looked at unless something breaks. The data is not the constraint. Attention is.</p>
+<p>Three properties make that archive useful:</p>
+<ul class="post-list"><li><b>It is continuous.</b> A lab result describes one moment. A historian describes every moment, which is the only way to see a slope rather than a point.</li><li><b>It contains pairs.</b> Plants run parallel equipment — twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job under the same conditions should behave the same way. When it stops, that divergence is a measurement in itself.</li><li><b>It is already paid for.</b> No capital request, no procurement cycle, no installation window.</li></ul>
+<h2 id="the-method">The method</h2>
+<p>For each signal we model what normal looks like for that signal at that plant, rather than against a textbook range. Where the plant publishes its own operating ranges — most do, on the weekly sampling schedule — those become the reference. A finding only counts as a finding if it sits outside the range the plant itself posts.</p>
+<p>Then each item is priced, which is the part that decides whether anyone acts:</p>
+<ul class="post-list"><li>Blower power from the isentropic relation, using measured airflow and measured discharge pressure</li><li>Pump power from measured flow and head</li><li>Runtime from historian totaliser deltas</li><li>Everything converted to money using the plant's own tariff</li></ul>
+<p>Each line is labelled <b>measured</b> or <b>estimated</b>. Where it is an estimate, the assumptions are written down so the plant's own engineer can check the arithmetic rather than take a vendor's word for it.</p>
+<h2 id="what-came-out">What came out</h2>
+<h3 id="one-basin-running-3-6x-above-its-own-posted-range">One basin running 3.6x above its own posted range</h3>
+<p>The plant's sampling schedule posts pre-air dissolved oxygen at 0.5–1.5 mg/L. Basin 2 sat right in that band, median 0.49 mg/L. Basin 1 held a median of 5.35 mg/L on every day of the record — roughly eleven times its twin — with its blower command pinned at 99.99%.</p>
+<p>Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split — a valve or a damper — not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk of carrying that much oxygen into an anoxic zone.</p>
+<p>One caveat we put in the report and will repeat here: a fouled DO probe can sit on an offset and still respond to airflow. The reading gets verified against a calibrated handheld before anyone opens a valve.</p>
+<h3 id="membrane-scour-air-above-what-the-flux-needed">Membrane scour air above what the flux needed</h3>
+<p>Airflow tracked the permeate rate almost perfectly — R² of 1.00 — at a ratio well above the manufacturer's specific-scour guidance. Trimming toward the guideline at the measured flux, using the controls already installed, came to $5,391 a year. That was the largest no-capital line on the list.</p>
+<h3 id="pumps-starting-every-twenty-five-seconds">Pumps starting every twenty-five seconds</h3>
+<p>Reclaimed water pumps were logging 13 to 28 starts an hour against a manufacturer guideline near six for pumps that size. One asset logged 143 in an hour — a start every twenty-five seconds.</p>
+<p>Every start draws locked-rotor current and heats the windings far more than running does. This is a control deadband, not a purchase, and it was quietly writing a bill in motors, starters and contactors: about $3,500 a year.</p>
+<h3 id="sixteen-of-sixteen-reuse-totalisers-frozen">Sixteen of sixteen reuse totalisers frozen</h3>
+<p>Every irrigation zone has a volume totaliser. Not one of them changed in twenty-five days.</p>
+<p>Until they record, nobody can demonstrate how much recycled water went to beneficial reuse rather than straight to disposal — which is exactly the number a reuse programme is judged on. A configuration fix rather than a purchase, and it unlocks roughly $7,300 a year.</p>
+<h2 id="what-it-added-up-to">What it added up to</h2>
+<div class="table-wrap"><table class="cs-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Direct savings, no capital at all</td><td><b>$42,050 / yr</b></td></tr><tr><td>Including ~7 h/week of reporting time returned</td><td><b>$58,428 / yr</b></td></tr><tr><td>Fully instrumented, direct</td><td><b>$75,800 / yr</b></td></tr><tr><td>Fully instrumented, all in</td><td><b>$92,200 / yr</b></td></tr></tbody></table></div>
+<p>Two subtotals are kept deliberately apart: money that comes off a bill, and operator hours given back. The hours are real, but they are not money off a bill, so they never get folded into the first number.</p>
+<h2 id="the-caveat-that-matters-most">The caveat that matters most</h2>
+<p>Everything above is priced on a residential time-of-use schedule blending to $0.362/kWh. At 406,610 kWh a year this plant is well past residential scale and would normally sit on a commercial schedule at roughly half that blended rate.</p>
+<p>On a commercial tariff, the same physical savings are worth about half what is shown.</p>
+<p>The kilowatt-hours are measured either way; only their price is in question, and one utility bill settles it. We put that on the front page of the report rather than in a footnote, because showing the range is worth more than picking the flattering end of it.</p>
+<h2 id="what-this-does-not-tell-you">What this does not tell you</h2>
+<p>A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a <b>ceiling</b> that assumes the recommendation is actually implemented and then maintained — an identified opportunity, not a realised saving.</p>
+<p>If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.</p>
+<p>Read the full anonymised audit: <a href="/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant</a>.</p>]]></content:encoded>
+      <category>historian data</category>
+      <category>wastewater energy</category>
+      <category>plant audit</category>
+      <category>SCADA</category>
+      <category>membrane bioreactor</category>
+    </item>
+    <item>
+      <title>Why parallel equipment drifts apart, and what the gap costs</title>
+      <link>https://aquamesh.ai/blog/why-parallel-equipment-drifts.html</link>
+      <guid isPermaLink="true">https://aquamesh.ai/blog/why-parallel-equipment-drifts.html</guid>
+      <pubDate>Sat, 26 Sep 2026 09:00:00 GMT</pubDate>
+      <description>Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at.</description>
+      <content:encoded><![CDATA[<p>The most reliable finding in plant data is also the simplest: two things built to do the same job, under the same conditions, that have stopped behaving the same way.</p>
+<p>It is reliable because it needs no baseline, no model of correct operation, and no agreement about what good looks like. The two units are each other's reference. If one has drifted from the other, something changed, and that something usually has a cost attached.</p>
+<h2 id="why-the-control-system-will-not-tell-you">Why the control system will not tell you</h2>
+<p>A modern control system is very good at holding a value and raising an alarm when a limit is crossed. Divergence between two units is neither of those things.</p>
+<p>Both units can sit inside every alarm limit while being nowhere near each other. A pump at 84% duty and its twin at 39% are both running. A basin at 5.35 mg/L and its twin at 0.49 mg/L are both aerated. Nothing is out of range in the sense the alarm system understands, so nothing fires, and the gap persists for years because it never presents as an event.</p>
+<p>That is the gap worth watching, and it is visible in data a plant already records.</p>
+<h2 id="the-three-shapes-it-takes">The three shapes it takes</h2>
+<h3 id="duty-that-never-alternates">Duty that never alternates</h3>
+<p>Lead and lag assets are supposed to swap. When the alternation is disabled, or was never configured, or was turned off during a commissioning problem and never turned back on, the lead unit accumulates all the wear.</p>
+<p>In one plant's record, return-activated-sludge pumps showed 504 run hours against 232 in the same twenty-five days, and the lifetime counters showed the gap compounding: 44,299 hours against 30,953. The lead unit reaches overhaul years earlier than it needs to while the standby sits idle — and the standby is the one you will be relying on when the lead finally fails.</p>
+<p>Lead-lag alternation costs nothing to enable. What makes this finding persuasive rather than theoretical is that the same plant's MBR blowers and permeate pumps <em>were</em> balanced, which marks it as an oversight on one asset rather than a design choice.</p>
+<h3 id="a-shared-supply-unequally-split">A shared supply, unequally split</h3>
+<p>Twin basins on a common air header should see similar dissolved oxygen at similar load. When one sits far above the other with its blower command pinned wide open, the control strategy is not the problem — the air is not arriving where it is supposed to.</p>
+<p>This one is cheap to investigate and cheap to correct, which is what makes it worth finding. A valve position or a damper, not a capital project.</p>
+<h3 id="instruments-that-no-longer-agree">Instruments that no longer agree</h3>
+<p>Two turbidimeters on the same permeate stream, one reading a median of 0.11 NTU with a 90th percentile of 0.26, the other reading 0.14 and 2.12 — three and a half times the plant's posted upper limit.</p>
+<p>One of them is drifting. Until you know which, compliance decisions are resting on an instrument that cannot be fully trusted. The encouraging part, in that case, was that the true value looked excellent.</p>
+<h2 id="why-frequent-starts-cost-more-than-running">Why frequent starts cost more than running</h2>
+<p>A related pattern worth naming on its own, because it is consistently underestimated.</p>
+<p>Pumps are often judged on run hours. The more expensive variable is usually <b>starts</b>. Every start draws locked-rotor current — several times the running current — and the heat goes into the windings. Manufacturer guidance for mid-size pumps is frequently around six starts an hour.</p>
+<p>In one record, reclaimed water pumps were logging 13 to 28 an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.</p>
+<h2 id="how-to-look-for-it-in-your-own-data">How to look for it in your own data</h2>
+<p>You do not need a platform to start. With a historian export and a spreadsheet:</p>
+<ol class="post-list"><li><b>List your parallel assets.</b> Anything with a twin: pumps, blowers, basins, trains, filters.</li><li><b>Compare run hours over the same window</b>, and compare lifetime counters if you have them. A persistent ratio far from 1:1 is the signal.</li><li><b>Count starts per hour</b>, not just runtime, and compare against the manufacturer guidance for that size of machine.</li><li><b>For process variables, plot the pair on the same axis.</b> Not each against its limit — against each other. Divergence that holds for weeks is not noise.</li><li><b>Check duplicates against each other.</b> Two instruments on one stream that disagree are telling you something regardless of which is right.</li></ol>
+<p>What you are looking for in every case is persistence. A transient divergence is operations. A divergence that holds for the whole record is a setting, a valve, or an instrument — and all three are fixable.</p>
+<h2 id="why-this-is-where-we-start">Why this is where we start</h2>
+<p>When we read a plant's history, parallel equipment is the first thing modelled, because it produces findings that are concrete, cheap to verify, and hard to argue with. Nobody has to accept a model's opinion about what dissolved oxygen <em>should</em> be. They only have to accept that two basins on the same air header ought to look alike.</p>
+<p>More on what a historian export produces: <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of data actually shows</a>.</p>]]></content:encoded>
+      <category>parallel equipment</category>
+      <category>pump duty</category>
+      <category>lead lag alternation</category>
+      <category>aeration</category>
+      <category>predictive maintenance</category>
+    </item>
+    <item>
+      <title>Spectral change analysis, and why we calibrate only BOD</title>
+      <link>https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html</link>
+      <guid isPermaLink="true">https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html</guid>
+      <pubDate>Tue, 22 Sep 2026 09:00:00 GMT</pubDate>
+      <description>Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.</description>
+      <content:encoded><![CDATA[<p>An online water quality analyser usually arrives with a list: COD, BOD, TSS, nitrate, TOC. The list is the product. The implication is that the instrument measures each of those things the way a lab measures them, only continuously.</p>
+<p>That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.</p>
+<h2 id="what-the-instrument-actually-produces">What the instrument actually produces</h2>
+<p>A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve — an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.</p>
+<p>Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. But they carry conditions that rarely survive contact with a real plant:</p>
+<ul class="post-list"><li>They are <b>site-specific</b>. A model built on one plant's water does not transfer to another's.</li><li>They <b>drift with composition</b>. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.</li><li>They <b>degrade quietly</b>. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.</li></ul>
+<p>The result is an instrument that was sold as five parameters and is trusted for none of them within a year.</p>
+<h2 id="the-alternative-watch-the-spectrum-move">The alternative: watch the spectrum move</h2>
+<p>There is a different use of the same hardware, and in a plant it is usually the more valuable one.</p>
+<p>Instead of asking <em>what is the concentration</em>, ask <em>has the fingerprint changed, and what does that change correlate with</em>. Build a one-time model of what the plant's own stream normally looks like. Then watch for deviation from that reference, and tie the deviation to what the plant was doing at the time — feed rate, wash flow, machine state, cleaning records.</p>
+<p>This is a materially easier question to answer well, and it is insensitive to the things that break calibrations:</p>
+<ul class="post-list"><li>It does not need an absolute value, so it does not need to hold an absolute calibration</li><li>It survives recipe and seasonal variation, because the reference is the plant's own product</li><li>A drifting baseline shows up as drift rather than as a wrong number presented confidently</li></ul>
+<p>What you lose is the ability to report a concentration to a regulator. What you gain is an instrument that is still telling the truth in eighteen months.</p>
+<h2 id="so-why-calibrate-bod-at-all">So why calibrate BOD at all</h2>
+<p>Because sometimes a number is the point.</p>
+<p>Biochemical oxygen demand is the parameter that drives sewer surcharges, appears on discharge permits, and determines whether a load is going to cause a problem downstream. "The spectrum moved" is not an answer when the question is whether you are about to exceed a threshold that gets billed by the pound.</p>
+<p>So BOD is the one parameter we calibrate, built against the customer's own reference samples. Their lab stays the method of record. The calibration fills the hours between the samples the lab already takes, rather than replacing them.</p>
+<p>Everything else the probe produces is change analysis, and we describe it that way.</p>
+<h2 id="why-be-this-specific-about-it">Why be this specific about it</h2>
+<p>Partly because it is true, and a claim that is not true gets found out in a technical review.</p>
+<p>But mostly because the honest version is a better product story. "We measure sixteen parameters" invites a comparison against instruments from companies with thirty years of calibration work behind them, on a spec sheet, where we would lose. "We watch the whole spectrum for change and tell you what it correlates with in your plant, and we calibrate BOD to your lab" is a different claim, and a parameter list does not answer it.</p>
+<p>It also sets expectations that survive deployment. An operator who was told they were getting continuous COD and finds the number drifting stops trusting the instrument. An operator who was told they were getting an early warning that something in the water changed, and gets exactly that, keeps using it.</p>
+<h2 id="what-this-means-in-practice">What this means in practice</h2>
+<p>For a plant considering continuous optical measurement, three questions are worth asking any vendor:</p>
+<ol class="post-list"><li><b>Which parameters are calibrated against my samples, and which are inferred?</b> The answer should be short and specific.</li><li><b>What happens to the calibration when my feedstock changes?</b> If the answer is vague, assume it drifts.</li><li><b>What is the instrument useful for if I never calibrate anything?</b> A good spectral instrument still earns its place as a change detector. A repackaged parameter list does not.</li></ol>
+<h2 id="where-this-sits-in-the-stack">Where this sits in the stack</h2>
+<p>Measurement is only half of it. A spectrum that moved is not an action — it becomes useful when it is correlated with plant state, attributed to a unit, and priced.</p>
+<p>That is the division of labour: the probe reads the stream, the platform works out what the change means and what it is worth, and the operator decides what to do about it.</p>
+<p>More on what the sensor is used for by sector: <a href="/industries/food-beverage.html">food and beverage</a>, <a href="/industries/industrial-water.html">industrial water</a>, <a href="/industries/pharma-biotech.html">pharma and biotech</a>.</p>]]></content:encoded>
+      <category>UV-Vis</category>
+      <category>spectral analysis</category>
+      <category>BOD</category>
+      <category>COD</category>
+      <category>online water quality monitoring</category>
+      <category>surrogate parameters</category>
+    </item>
+  </channel>
+</rss>

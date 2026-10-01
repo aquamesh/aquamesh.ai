@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What 25 days of historian data actually shows about a treatment plant | AquaMesh</title>
+  <meta name="description" content="A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year." />
+  <link rel="canonical" href="https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AquaMesh" />
+  <meta property="og:title" content="What 25 days of historian data actually shows about a treatment plant | AquaMesh" />
+  <meta property="og:description" content="A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year." />
+  <meta property="og:url" content="https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html" />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" type="application/rss+xml" title="AquaMesh blog" href="https://aquamesh.ai/feed.xml" />
+  <link rel="alternate" type="application/feed+json" title="AquaMesh blog" href="https://aquamesh.ai/blog/feed.json" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=28" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water"},{"@type":"BlogPosting","@id":"https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html#post","headline":"What 25 days of historian data actually shows about a treatment plant","name":"What 25 days of historian data actually shows about a treatment plant","description":"A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year.","url":"https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html","datePublished":"2026-09-30","dateModified":"2026-09-30","inLanguage":"en","wordCount":1004,"keywords":"historian data, wastewater energy, plant audit, SCADA, membrane bioreactor","articleSection":"Field notes","author":{"@type":"Organization","name":"AquaMesh","url":"https://aquamesh.ai"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html"},"image":"https://aquamesh.ai/assets/og.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aquamesh.ai/blog/"},{"@type":"ListItem","position":3,"name":"What 25 days of historian data actually shows about a treatment plant","item":"https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html"}]}]}</script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#platform">Platform</a>
+        <a href="../index.html#how">How it works</a>
+        <a href="../case-studies/index.html">Case studies</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../company.html">Company</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+  <main class="cs post">
+    <article>
+      <section class="section cs-head">
+        <div class="wrap">
+          <a class="cs-back" href="index.html"><svg class="ic"><use href="#i-back" /></svg>All posts</a>
+          <p class="eyebrow">Field notes</p>
+          <h1>What 25 days of historian data actually shows about a treatment plant</h1>
+          <p class="lead">A membrane-bioreactor reuse plant sent us 1,001 tags and 7.2 million values, and nothing else. Here is the method, the findings, and what each one was worth a year.</p>
+          <p class="post-meta">
+            <time datetime="2026-09-30">30 September 2026</time> &middot; 5 min read
+            &middot; <a href="what-25-days-of-historian-data-shows.md">Markdown</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap post-body">
+        <nav class="post-toc" aria-label="On this page">
+          <p class="post-toc-label">On this page</p>
+          <ol><li><a href="#why-a-historian-export-is-enough-to-start">Why a historian export is enough to start</a></li><li><a href="#the-method">The method</a></li><li><a href="#what-came-out">What came out</a></li><li><a href="#what-it-added-up-to">What it added up to</a></li><li><a href="#the-caveat-that-matters-most">The caveat that matters most</a></li><li><a href="#what-this-does-not-tell-you">What this does not tell you</a></li></ol>
+        </nav>
+<p>A water reuse plant gave us an export of its own historian and nothing else. No site visit, no new instruments, no interviews. Twenty-five days of operation: 1,001 tags, 7,172,532 recorded values, 28 June to 23 July.</p>
+<p>That export was enough to rank what the plant was losing, and to put an annual figure on each item. This is what the work looked like and what came out of it.</p>
+<h2 id="why-a-historian-export-is-enough-to-start">Why a historian export is enough to start</h2>
+<p>Almost every plant already records far more than anyone reads. A SCADA historian captures every tag on a schedule, forever, and the overwhelming majority of those tags are never looked at unless something breaks. The data is not the constraint. Attention is.</p>
+<p>Three properties make that archive useful:</p>
+<ul class="post-list"><li><b>It is continuous.</b> A lab result describes one moment. A historian describes every moment, which is the only way to see a slope rather than a point.</li><li><b>It contains pairs.</b> Plants run parallel equipment — twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job under the same conditions should behave the same way. When it stops, that divergence is a measurement in itself.</li><li><b>It is already paid for.</b> No capital request, no procurement cycle, no installation window.</li></ul>
+<h2 id="the-method">The method</h2>
+<p>For each signal we model what normal looks like for that signal at that plant, rather than against a textbook range. Where the plant publishes its own operating ranges — most do, on the weekly sampling schedule — those become the reference. A finding only counts as a finding if it sits outside the range the plant itself posts.</p>
+<p>Then each item is priced, which is the part that decides whether anyone acts:</p>
+<ul class="post-list"><li>Blower power from the isentropic relation, using measured airflow and measured discharge pressure</li><li>Pump power from measured flow and head</li><li>Runtime from historian totaliser deltas</li><li>Everything converted to money using the plant's own tariff</li></ul>
+<p>Each line is labelled <b>measured</b> or <b>estimated</b>. Where it is an estimate, the assumptions are written down so the plant's own engineer can check the arithmetic rather than take a vendor's word for it.</p>
+<h2 id="what-came-out">What came out</h2>
+<h3 id="one-basin-running-3-6x-above-its-own-posted-range">One basin running 3.6x above its own posted range</h3>
+<p>The plant's sampling schedule posts pre-air dissolved oxygen at 0.5–1.5 mg/L. Basin 2 sat right in that band, median 0.49 mg/L. Basin 1 held a median of 5.35 mg/L on every day of the record — roughly eleven times its twin — with its blower command pinned at 99.99%.</p>
+<p>Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split — a valve or a damper — not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk of carrying that much oxygen into an anoxic zone.</p>
+<p>One caveat we put in the report and will repeat here: a fouled DO probe can sit on an offset and still respond to airflow. The reading gets verified against a calibrated handheld before anyone opens a valve.</p>
+<h3 id="membrane-scour-air-above-what-the-flux-needed">Membrane scour air above what the flux needed</h3>
+<p>Airflow tracked the permeate rate almost perfectly — R² of 1.00 — at a ratio well above the manufacturer's specific-scour guidance. Trimming toward the guideline at the measured flux, using the controls already installed, came to $5,391 a year. That was the largest no-capital line on the list.</p>
+<h3 id="pumps-starting-every-twenty-five-seconds">Pumps starting every twenty-five seconds</h3>
+<p>Reclaimed water pumps were logging 13 to 28 starts an hour against a manufacturer guideline near six for pumps that size. One asset logged 143 in an hour — a start every twenty-five seconds.</p>
+<p>Every start draws locked-rotor current and heats the windings far more than running does. This is a control deadband, not a purchase, and it was quietly writing a bill in motors, starters and contactors: about $3,500 a year.</p>
+<h3 id="sixteen-of-sixteen-reuse-totalisers-frozen">Sixteen of sixteen reuse totalisers frozen</h3>
+<p>Every irrigation zone has a volume totaliser. Not one of them changed in twenty-five days.</p>
+<p>Until they record, nobody can demonstrate how much recycled water went to beneficial reuse rather than straight to disposal — which is exactly the number a reuse programme is judged on. A configuration fix rather than a purchase, and it unlocks roughly $7,300 a year.</p>
+<h2 id="what-it-added-up-to">What it added up to</h2>
+<div class="table-wrap"><table class="cs-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Direct savings, no capital at all</td><td><b>$42,050 / yr</b></td></tr><tr><td>Including ~7 h/week of reporting time returned</td><td><b>$58,428 / yr</b></td></tr><tr><td>Fully instrumented, direct</td><td><b>$75,800 / yr</b></td></tr><tr><td>Fully instrumented, all in</td><td><b>$92,200 / yr</b></td></tr></tbody></table></div>
+<p>Two subtotals are kept deliberately apart: money that comes off a bill, and operator hours given back. The hours are real, but they are not money off a bill, so they never get folded into the first number.</p>
+<h2 id="the-caveat-that-matters-most">The caveat that matters most</h2>
+<p>Everything above is priced on a residential time-of-use schedule blending to $0.362/kWh. At 406,610 kWh a year this plant is well past residential scale and would normally sit on a commercial schedule at roughly half that blended rate.</p>
+<p>On a commercial tariff, the same physical savings are worth about half what is shown.</p>
+<p>The kilowatt-hours are measured either way; only their price is in question, and one utility bill settles it. We put that on the front page of the report rather than in a footnote, because showing the range is worth more than picking the flattering end of it.</p>
+<h2 id="what-this-does-not-tell-you">What this does not tell you</h2>
+<p>A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a <b>ceiling</b> that assumes the recommendation is actually implemented and then maintained — an identified opportunity, not a realised saving.</p>
+<p>If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.</p>
+<p>Read the full anonymised audit: <a href="/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant</a>.</p>
+        </div>
+      </section>
+    </article>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head"><p class="eyebrow">Keep reading</p><h2>More field notes</h2></div>
+        <ul class="post-grid">
+          <li><a href="why-parallel-equipment-drifts.html"><time datetime="2026-09-26">26 September 2026</time><h3>Why parallel equipment drifts apart, and what the gap costs</h3><p>Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at.</p></a></li>
+          <li><a href="spectral-change-analysis-vs-calibrated-parameters.html"><time datetime="2026-09-22">22 September 2026</time><h3>Spectral change analysis, and why we calibrate only BOD</h3><p>Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.</p></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>Bring your own history.</h2>
+        <p class="lead">If your plant keeps a historian, AquaMesh has something to read. The audit is free and needs no hardware.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <div>
+        <p class="footer-links"><a href="../industries/food-beverage.html">Food &amp; Beverage</a> &middot; <a href="../industries/industrial-water.html">Industrial Water</a> &middot; <a href="../industries/manufacturing.html">Manufacturing</a> &middot; <a href="../industries/municipal.html">Municipal</a> &middot; <a href="../industries/pharma-biotech.html">Pharma &amp; Biotech</a> &middot; <a href="../industries/data-centers.html">Data Centers</a><br /><a href="../privacy.html">Privacy</a> &middot; <a href="../cookies.html">Cookies</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../do-not-sell.html">Your Privacy Choices</a> &middot; <a href="../feed.xml">RSS</a> &middot; <a href="../llms.txt">llms.txt</a></p>
+        <p class="footer-meta">&copy; AquaMesh Inc. 2026 &middot; <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="../consent.js?v=2"></script>
+  <script src="../nav.js?v=1" defer></script>
+</body>
+</html>
