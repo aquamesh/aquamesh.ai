@@ -355,9 +355,11 @@ write('blog/index.json', JSON.stringify({
 const pages = [
   ['/', 'Home', 'What AquaMesh does: reads a plant’s existing data, prices what it is losing, and hands operators a ranked list of changes.'],
   ['/company.html', 'Company', 'Origin at UC San Diego, the first sensor developed for Scripps Institution of Oceanography, the team and advisors.'],
-  ['/case-studies/', 'Case studies', 'Anonymised audits of real plants with the figures they produced.'],
+  ['/case-studies/', 'Case studies', 'Anonymised audits of real plants, and worked examples on modelled plants, with the figures they produced.'],
   ['/case-studies/water-reuse-plant.html', 'Case study: membrane-bioreactor water reuse', '25 days of a plant’s own historian — 1,001 tags, 7.2M values — produced $42,050/yr achievable with no capital and $92,200/yr fully instrumented.'],
   ['/case-studies/starch-plant.html', 'Case study: corn wet milling', 'NIR starch detection on the process stream wired into the operational AI.'],
+  ['/case-studies/phosphate-complex.html', 'Example case study: integrated phosphate complex', 'Worked example on a modelled plant, not a customer: 120 days, 125 tags, 10.8M values produced $11.3M/yr across five causes with no new hardware. Includes a 3D twin.'],
+  ['/case-studies/refinery-complex.html', 'Example case study: refinery and petrochemical complex', 'Worked example on a modelled plant, not a customer: 150 days, 1,896 tags, 13.7M values produced $3.0M/yr across nine causes with no new hardware, checked against the simulator that made the data. Includes a 3D twin.'],
   ['/industries/food-beverage.html', 'Food & Beverage', 'Product leaving in the water, CIP endpoints, surcharge-driving load.'],
   ['/industries/industrial-water.html', 'Industrial Water & Wastewater', 'Aeration energy, parallel equipment divergence, instrument health.'],
   ['/industries/manufacturing.html', 'Manufacturing', 'Rinse and cooling water, discharge limits, what conductivity cannot tell you.'],
@@ -433,6 +435,8 @@ const staticPages = [
   ['/case-studies/', '0.8', 'monthly'],
   ['/case-studies/water-reuse-plant.html', '0.8', 'monthly'],
   ['/case-studies/starch-plant.html', '0.8', 'monthly'],
+  ['/case-studies/phosphate-complex.html', '0.8', 'monthly'],
+  ['/case-studies/refinery-complex.html', '0.8', 'monthly'],
   ['/blog/', '0.9', 'weekly'],
   ...['food-beverage', 'industrial-water', 'manufacturing', 'municipal', 'pharma-biotech', 'data-centers']
     .map(s => [`/industries/${s}.html`, '0.8', 'monthly']),

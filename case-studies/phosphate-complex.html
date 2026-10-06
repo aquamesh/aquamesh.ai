@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Example case study — $11.3M a year in an integrated phosphate complex | AquaMesh</title>
+  <meta name="description" content="A worked example on a modelled integrated phosphate complex: 120 days of historian data, 125 tags and 10.8 million values, priced at $11.3M a year with no new hardware." />
+  <link rel="canonical" href="https://aquamesh.ai/case-studies/phosphate-complex.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Example case study — $11.3M a year in an integrated phosphate complex | AquaMesh" />
+  <meta property="og:description" content="A worked example: what AquaMesh finds in an integrated phosphate complex’s own data, priced line by line." />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=29" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water","foundingDate":"2020","address":{"@type":"PostalAddress","addressRegion":"CA","addressCountry":"US"},"sameAs":[]},{"@type":"Article","@id":"https://aquamesh.ai/case-studies/phosphate-complex.html#article","headline":"Integrated phosphate complex: $11.3M a year found in existing data (worked example)","description":"A worked example on a modelled integrated phosphate complex: 120 days of historian data, 125 tags and 10.8 million values, priced at $11.3M a year across five causes with no new hardware.","url":"https://aquamesh.ai/case-studies/phosphate-complex.html","datePublished":"2026-10-06","dateModified":"2026-10-06","inLanguage":"en","author":{"@id":"https://aquamesh.ai/#organization"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"image":"https://aquamesh.ai/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/case-studies/phosphate-complex.html"},"isAccessibleForFree":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Case studies","item":"https://aquamesh.ai/case-studies/"},{"@type":"ListItem","position":3,"name":"Integrated phosphate complex: $11.3M a year found in existing data (worked example)","item":"https://aquamesh.ai/case-studies/phosphate-complex.html"}]}]}</script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#platform">Platform</a>
+        <a href="../index.html#how">How it works</a>
+        <a href="../case-studies/index.html">Case studies</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../company.html">Company</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+
+  <main class="cs">
+    <section class="section cs-head">
+      <div class="wrap">
+        <a class="cs-back" href="../case-studies/index.html"><svg class="ic"><use href="#i-back" /></svg>All case studies</a>
+        <p class="eyebrow">Example case study · Integrated phosphate complex</p>
+        <h1>$11.3M a year in the plant <span class="accent">it already runs.</span></h1>
+        <p class="lead">From 120 days of one complex’s own historian — 125 tags, 10.8 million recorded values — AquaMesh found five causes of avoidable cost across acid production, cooling water and water treatment. Each is priced line by line, labelled measured or estimated, and judged against the plant’s own twin unit rather than against a generic benchmark.</p>
+        <dl class="cs-facts">
+          <div><dt>Process</dt><dd>Sulfuric acid in three identical trains; phosphoric acid on two filter lines; two cooling towers; raw, demineralised and waste water</dd></div>
+          <div><dt>Range</dt><dd>$7.5M–$15.2M a year across the price ranges tested</dd></div>
+          <div><dt>Input</dt><dd>120 days of history · 125 tags · 10.8M values</dd></div>
+          <div><dt>New hardware</dt><dd>None for the savings shown</dd></div>
+        </dl>
+        <p class="cs-callout"><b>A worked example, not a customer.</b> This is a modelled plant built to behave like a real one, with faults of the kind these sites develop. It is shown to demonstrate the method and what a finished audit looks like, not as a result from a customer.</p>
+        <div class="actions">
+          <a class="btn" href="https://aquamesh.github.io/demo/case-studies/phosphate-complex/" target="_blank" rel="noopener">Open the full audit and 3D twin <svg class="ic"><use href="#i-arrow" /></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cs-two">
+        <div>
+          <h2>The plant</h2>
+          <p>Sulfuric acid is made in three identical trains and phosphoric acid on two filter lines, supported by two cooling towers, a raw water supply, a demineralised water plant and a wastewater plant. The sulfuric and phosphoric sides feed each other: acid trains make steam and need cooling water, and the filter lines need wash water and vacuum.</p>
+          <p>That pairing is what makes the audit work. Most equipment has a twin beside it, so a unit that drifts can be compared with a unit doing the same job, on the same days, in the same weather.</p>
+        </div>
+        <div>
+          <h2>What AquaMesh did</h2>
+          <p>Read the historian. Model each signal's normal behaviour and compare every unit with its identical twin on the same site, then look for the units that stopped agreeing and the signals that stopped moving.</p>
+          <p>Then price it in code: every figure is a quantity × a unit cost × operating hours, with the basis written next to it. A line is labelled measured when the quantity was read off a tag, and estimated when it had to be worked out.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">What it found</p>
+          <h2>Five causes, <span class="accent">found in data the plant already keeps.</span></h2>
+        </div>
+        <ul class="cs-findings">
+          <li>
+            <p class="pf-num">$5.1M<small>/yr</small></p>
+            <h3>Phosphate going out with the gypsum</h3>
+            <p>Each filter line should wash its gypsum clean. Filter line B now leaves 0.46% water-soluble phosphate in it, up from 0.29%, while line A holds 0.28%. That phosphate is product already made and then thrown away — measured concentration × measured gypsum flow × a realised product price. The fix is to inspect line B’s filter cloth and wash system and restore the wash ratio toward 2.40.</p>
+          </li>
+          <li>
+            <p class="pf-num">2.6×</p>
+            <h3>A cooling tower draining far more than it needs to</h3>
+            <p>Tower A reuses its cooling water 3.1 times before draining it; tower B, on the same supply, manages 6.3. Every extra drained cubic metre is bought water, treatment chemicals and a trip through effluent treatment — $2.5M a year. The audit marks it estimated and puts a condition on it: the water chemist confirms the scaling limits before the target is raised.</p>
+          </li>
+          <li>
+            <p class="pf-num">11.8%</p>
+            <h3>A sulfuric acid train burning power and losing steam</h3>
+            <p>Train C needs 11.8% more blower power than its two healthy twins and recovers 14.9 t/h less steam, with a hotter stack. That is what clogged gas coolers look like, and it gets worse with time. Worth $2.1M a year; the action is an inspection of the gas coolers and heat exchangers at the next opportunity.</p>
+          </li>
+          <li>
+            <p class="pf-num">66.5%</p>
+            <h3>Membranes wasting a growing share of their feed</h3>
+            <p>The demineralised water plant now turns 66.5% of its feed into clean water, down from 74.0%. The difference is raw water pumped through and sent to waste, and a high-pressure pump working harder to do it — $1.6M a year, fixed by a membrane clean and a check of the scale-prevention dosing.</p>
+          </li>
+        </ul>
+        <p class="cs-note">Also found and priced: tower B’s fans working harder for the same cooling as its packing fouls ($46,489 a year). One more lead — a service water line that holds 141 m³/h day and night while its neighbour follows demand — is an upper bound of $344,821 and is kept out of the total until a clamp-on meter confirms it.</p>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Where the money sits</p>
+          <h2>Priced line by line, <span class="accent">with the working shown.</span></h2>
+          <p class="lead">Every row is a measured quantity multiplied by a unit cost and the operating hours. The audit lists each line’s basis, what to check first and when to act.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="cs-table">
+            <caption>The five counted causes, largest first</caption>
+            <thead><tr><th>Cause</th><th>Evidence</th><th>Per year</th><th>Range tested</th></tr></thead>
+            <tbody>
+              <tr><td>Filter line B phosphate loss</td><td>Measured</td><td>$5,068,700</td><td>$3.8M–$6.3M</td></tr>
+              <tr><td>Cooling tower A over-draining</td><td>Estimated</td><td>$2,535,212</td><td>$1.4M–$3.6M</td></tr>
+              <tr><td>Sulfuric acid train C fouling</td><td>Measured</td><td>$2,099,584</td><td>$1.3M–$2.9M</td></tr>
+              <tr><td>Demineralised water recovery</td><td>Measured</td><td>$1,576,460</td><td>$0.9M–$2.3M</td></tr>
+              <tr><td>Cooling tower B fans</td><td>Measured</td><td>$46,489</td><td>$33k–$60k</td></tr>
+              <tr><td><b>Total counted</b></td><td></td><td><b>$11,326,446</b></td><td><b>$7.5M–$15.2M</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cs-note">Not counted: one service-water line at an upper bound of $344,821, until a field check confirms it.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cs-two">
+        <div>
+          <h2>What this is, and isn't</h2>
+          <p>The historian is simulated. It was generated so that the plant has real structure — twin units, weather, loads, slow drift — and so that a handful of faults are present. The audit never sees which ones.</p>
+          <p>That is the point of a worked example: it lets you read a finished audit end to end, open the 3D twin, and see how a finding is evidenced and priced, before pointing the same method at your own data. The $11.3M is what the method returns on this model, not a claim about any operator.</p>
+        </div>
+        <div>
+          <h2>The fine print</h2>
+          <ul class="co-list">
+            <li><svg class="ic"><use href="#i-check" /></svg><span>Raw water $0.95/m³, effluent treatment $0.40/m³, electricity $0.048/kWh, steam $14/t, phosphate product $820/t, 8,059 operating hours a year — all assumptions, each with the range tested.</span></li>
+            <li><svg class="ic"><use href="#i-check" /></svg><span>Unit prices are assumptions, not a customer’s: replace them with the plant’s own and every figure rescales. The ranges show how far each total moves across the low and high price cases tested.</span></li>
+            <li><svg class="ic"><use href="#i-check" /></svg><span>Savings are ceilings that assume each recommendation is carried out and then maintained.</span></li>
+            <li><svg class="ic"><use href="#i-check" /></svg><span>AquaSpectra’s BOD reading is calibrated to a plant’s own lab results. Everything else it reads is change analysis, not a certified compliance method, and it does not replace any test a permit specifies.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>Bring your own history.</h2>
+        <p class="lead">If your plant keeps a historian, AquaMesh has something to read. A demo starts with your process, your goals and the data you already have.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+        <p class="cs-note">Anonymized case study, reproduced from the delivered audit with the plant's identity removed. Figures are identified opportunities, not realized savings, and are specific to this plant, its process and its tariff.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <p class="footer-links"><a href="../industries/food-beverage.html">Food &amp; Beverage</a> · <a href="../industries/industrial-water.html">Industrial Water</a> · <a href="../industries/manufacturing.html">Manufacturing</a> · <a href="../industries/municipal.html">Municipal</a> · <a href="../industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="../industries/data-centers.html">Data Centers</a><br /><a href="../privacy.html">Privacy</a> · <a href="../cookies.html">Cookies</a> · <a href="../terms.html">Terms</a> · <a href="../do-not-sell.html">Your Privacy Choices</a></p>
+      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a></p>
+    </div>
+  </footer>
+  <script src="../consent.js?v=2"></script>
+  <script src="../nav.js?v=1" defer></script>
+</body>
+</html>
