@@ -22,11 +22,11 @@ what matters, and the first industrial BOD model is planned for validation again
 ## Site
 - [Home](https://aquamesh.ai/): What AquaMesh does: reads a plant’s existing data, prices what it is losing, and hands operators a ranked list of changes.
 - [Company](https://aquamesh.ai/company.html): Origin at UC San Diego, the first sensor developed for Scripps Institution of Oceanography, the team and advisors.
-- [Case studies](https://aquamesh.ai/case-studies/): Anonymised audits of real plants, and example case studies on modelled plants, with the figures they produced.
+- [Case studies](https://aquamesh.ai/case-studies/): Anonymised audits of real plants, and case studies on modelled plants, with the figures they produced.
 - [Case study: membrane-bioreactor water reuse](https://aquamesh.ai/case-studies/water-reuse-plant.html): 25 days of a plant’s own historian — 1,001 tags, 7.2M values — produced $42,050/yr achievable with no capital and $92,200/yr fully instrumented.
 - [Case study: corn wet milling](https://aquamesh.ai/case-studies/starch-plant.html): NIR starch detection on the process stream wired into the operational AI.
-- [Example case study: integrated phosphate complex](https://aquamesh.ai/case-studies/phosphate-complex.html): Example case study on a modelled plant, not a customer: 120 days, 125 tags, 10.8M values produced $11.3M/yr across five causes with no new hardware. Includes a 3D twin.
-- [Example case study: refinery and petrochemical complex](https://aquamesh.ai/case-studies/refinery-complex.html): Example case study on a modelled plant, not a customer: 150 days, 1,896 tags, 13.7M values produced $3.0M/yr across nine causes with no new hardware, checked against the simulator that made the data. Includes a 3D twin.
+- [Case study: integrated phosphate complex](https://aquamesh.ai/case-studies/phosphate-complex.html): Case study on a modelled plant, not a customer: 120 days, 125 tags, 10.8M values produced $11.3M/yr across five causes with no new hardware. Includes a 3D twin.
+- [Case study: refinery and petrochemical complex](https://aquamesh.ai/case-studies/refinery-complex.html): Case study on a modelled plant, not a customer: 150 days, 1,896 tags, 13.7M values produced $3.0M/yr across nine causes with no new hardware, checked against the simulator that made the data. Includes a 3D twin.
 - [Food & Beverage](https://aquamesh.ai/industries/food-beverage.html): Product leaving in the water, CIP endpoints, surcharge-driving load.
 - [Industrial Water & Wastewater](https://aquamesh.ai/industries/industrial-water.html): Aeration energy, parallel equipment divergence, instrument health.
 - [Manufacturing](https://aquamesh.ai/industries/manufacturing.html): Rinse and cooling water, discharge limits, what conductivity cannot tell you.
