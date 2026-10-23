@@ -64,7 +64,7 @@ The finding was worth $3,316 per year in direct blower power, plus the process r
 
 When DO measurement is continuous, accurate, and does not accumulate drift between calibration cycles, the control loop has what it was designed to work from. Blower output tracks actual oxygen demand rather than sensor artifacts. Setpoints can be tightened because operators are not building in a buffer to account for measurement uncertainty.
 
-For plants running intermittent aeration for simultaneous nitrification/denitrification, the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.
+For plants running [intermittent aeration for simultaneous nitrification/denitrification](/blog/intermittent-aeration-nitrogen-removal-do-control.html), the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.
 
 Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.
 

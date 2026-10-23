@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2026 10:17:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 16:20:18 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intermittent aeration for nitrogen removal: what DO sensor precision actually controls</title>
@@ -127,7 +127,7 @@
 <p>The finding was worth $3,316 per year in direct blower power, plus the process risk from carrying excess oxygen into a downstream anoxic zone. It was already in the data. It just had not been looked at in this way. The full analysis is in <a href="https://aquamesh.ai/blog/what-25-days-of-historian-data-shows/">what 25 days of historian data actually shows about a treatment plant</a>.</p>
 <h2 id="what-accurate-measurement-changes">What accurate measurement changes</h2>
 <p>When DO measurement is continuous, accurate, and does not accumulate drift between calibration cycles, the control loop has what it was designed to work from. Blower output tracks actual oxygen demand rather than sensor artifacts. Setpoints can be tightened because operators are not building in a buffer to account for measurement uncertainty.</p>
-<p>For plants running intermittent aeration for simultaneous nitrification/denitrification, the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.</p>
+<p>For plants running <a href="/blog/intermittent-aeration-nitrogen-removal-do-control.html">intermittent aeration for simultaneous nitrification/denitrification</a>, the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.</p>
 <p>Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.</p>
 <h2 id="three-questions-worth-asking-before-tuning-the-control-loop">Three questions worth asking before tuning the control loop</h2>
 <p>Before commissioning a new aeration control strategy or investigating why existing savings have eroded, three questions are worth answering directly from available data.</p>
