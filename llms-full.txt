@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-22T03:56:45.087Z · 6 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-23T00:51:27.154Z · 8 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -207,6 +207,35 @@ See how AquaMesh approached this analysis at a membrane bioreactor reuse plant: 
 
 
 ==============================================================================
+TITLE: In Dairy Foods: why dairy plants still miss their most expensive process losses
+URL: https://aquamesh.ai/blog/dairy-foods-process-losses.html
+DATE: 2026-10-12
+SECTION: In the press
+TAGS: dairy, product loss, CIP, spectral sensing, process water, Dairy Foods
+==============================================================================
+
+Dairy Foods published a contributed article by Alex Towfigh, AquaMesh's founder and CEO, on 12 October 2026. The full piece is on the Dairy Foods site: [Why dairy plants still miss their most expensive process losses](https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses).
+
+What follows is a short summary. The article itself is exclusive to Dairy Foods.
+
+## The argument in brief
+
+**The losses happen during transitions.** Published research puts routine losses of milk to sewer at 1% to 3% of the milk a plant processes. Most of it leaves during startups, interruptions, shutdowns and rinses: short windows where the pipe contents change and someone has to decide where product ends and water begins.
+
+**More tags do not fix a missing measurement.** Conductivity tells you something changed, but not how much product is in the line. A flowmeter tells you how much is moving, but not what it is. Lab results come back after the decision has been made. If the plant never measured the chemistry, software running on the historian has nothing to analyze.
+
+**Spectral sensing helps, if it can be trusted.** An optical spectrum carries far more information than a single-variable sensor. But temperature, bubbles, solids and a fouled window all move the reading. Without local calibration, a dirty window can look like a product loss, so every reading needs a confidence level attached.
+
+**Context decides what a signal means.** Rising conductivity is expected during caustic circulation and alarming during a product transfer. The article describes starting from data the plant already has (CIP steps, valve positions, lab results) to establish operating state, adding sensing only where a real blind spot exists, and producing an explanation of what changed and why rather than another generic alarm.
+
+**Prove it one event at a time.** Start read-only. Existing controls and sanitation checks stay in charge. Pick one expensive event, measure its baseline, catch it earlier, change the decision, and verify the result. One peer-reviewed UHT cleaning study cited in the piece used phase-endpoint measurement to cut a cleaning sequence from 142 to 66 minutes and roughly halve its effluent.
+
+The article's dollar figures are sensitivity calculations at an illustrative plant scale, not measured results at any named facility. It says so, and so do we.
+
+[Read the full article in Dairy Foods](https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses).
+
+
+==============================================================================
 TITLE: California now asks data centers what they actually use, under penalty of perjury
 URL: https://aquamesh.ai/blog/california-data-center-water-reporting.html
 DATE: 2026-10-01
@@ -362,6 +391,29 @@ A twenty-five day window in summer will not capture seasonal variation. Capital 
 If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.
 
 Read the full anonymised audit: [a membrane-bioreactor water reuse plant](/case-studies/water-reuse-plant.html).
+
+
+==============================================================================
+TITLE: Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early
+URL: https://aquamesh.ai/blog/connect-press-release-physical-ai.html
+DATE: 2026-09-28
+SECTION: In the press
+TAGS: press release, physical AI, industrial AI, San Diego, Connect
+==============================================================================
+
+On 28 September 2026, [Connect](https://connect.org/) published an announcement about AquaMesh on its blog and through PR distribution. The full release is here: [AquaMesh Builds Physical AI to Help Industrial Facilities Catch Costly Problems Early](https://connect.org/aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early/). It also ran on [PRLog](https://www.prlog.org/13173077-aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early.html).
+
+## What it covers
+
+**The problem.** Many plants still find critical problems through delayed lab tests, manual checks, indirect measurements, or alarms that only fire after the problem has already formed. Unplanned industrial downtime is estimated to cost about $260,000 an hour on average.
+
+**What AquaMesh does.** The platform connects to data a facility already collects and shows where money is being lost. Where a physical or chemical condition can't be measured any other way, it adds its own sensing. From there it works continuously: detect the problem, find the cause, estimate the cost, recommend a response, and check that the response worked.
+
+**What it is aiming at.** The target is 10% to 25% lower operating cost across water, chemicals, energy, labor and discharge. These are target ranges, not guaranteed results.
+
+**Why it matters.** In the release, Alex Towfigh describes the core issue as a blind spot about what is physically happening inside a process. Closing it pays off now through production, downtime and operating cost. Over the longer term it is the foundation for facilities that optimize themselves, starting with information operators can trust.
+
+[Read the full release on Connect](https://connect.org/aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early/).
 
 
 ==============================================================================
