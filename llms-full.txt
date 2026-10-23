@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-23T10:16:31.893Z · 9 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-23T10:17:08.531Z · 9 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -161,7 +161,7 @@ A sensor reading low when concentration is actually high causes the controller t
 
 Neither failure mode triggers an alarm in a standard building management system. The control loop is running. The conductivity reading is within the operating range. The controller is doing exactly what it was programmed to do with the signal it receives.
 
-This is the same silent failure pattern that affects dissolved oxygen control in wastewater aeration basins, where a fouled sensor drives blowers toward wasted energy rather than toward needed oxygen. The structure of the problem is identical: a lagging indicator (WUE for water, energy per gallon treated for wastewater) does not point to the sensor drift that is the actual cause. The gap shows up only when you look at the control inputs directly, not at the outcomes they produce. The parallel is covered in more detail in the analysis of [why parallel equipment drifts apart](https://aquamesh.ai/blog/why-parallel-equipment-drifts/).
+This is the same silent failure pattern that affects dissolved oxygen control in wastewater aeration basins, where a fouled sensor drives blowers toward wasted energy rather than toward needed oxygen. The structure of the problem is identical: a lagging indicator (WUE for water, energy per gallon treated for wastewater) does not point to the sensor drift that is the actual cause. The gap shows up only when you look at the control inputs directly, not at the outcomes they produce. The parallel is covered in more detail in the analysis of [why parallel equipment drifts apart](https://aquamesh.ai/blog/why-parallel-equipment-drifts/). It also applies to intermittent aeration cycles for nitrogen removal, where DO sensor drift affects both effluent compliance and the energy savings the intermittent strategy was meant to deliver: [intermittent aeration for nitrogen removal: what DO sensor precision actually controls](https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control/).
 
 ## The California compliance context
 
