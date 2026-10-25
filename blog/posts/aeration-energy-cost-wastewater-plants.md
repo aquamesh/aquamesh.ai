@@ -66,6 +66,8 @@ When DO measurement is continuous, accurate, and does not accumulate drift betwe
 
 For plants running [intermittent aeration for simultaneous nitrification/denitrification](/blog/intermittent-aeration-nitrogen-removal-do-control.html), the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.
 
+Some plants extend this further with online analyzers for ammonium or nitrate to feed an ammonia-based aeration control loop. Those instruments use a different measurement principle than a DO probe, and what they actually detect versus what they are marketed as measuring matters before you specify one. [Spectral change analysis versus calibrated parameters](/blog/spectral-change-analysis-vs-calibrated-parameters.html) covers the distinction.
+
 Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.
 
 ## Three questions worth asking before tuning the control loop
