@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-26T11:08:34.010Z · 9 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-26T11:08:56.332Z · 9 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -593,11 +593,11 @@ That is not how spectral measurement works, and the gap between how it is sold a
 
 ## What the instrument actually produces
 
-A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve — an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.
+A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve, an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.
 
-![UV/Vis and NIR absorbance spectra at clean, rising, high and very high loss, a reference fingerprint across 200–1700 nm, and spectral deviation from that reference.](../assets/starch-spectra.jpg "The raw measurement: absorbance across wavelength, many times a second. Everything downstream is interpretation of this curve.")
+![UV/Vis and NIR absorbance spectra at clean, rising, high and very high loss, a reference fingerprint across 200-1700 nm, and spectral deviation from that reference.](../assets/starch-spectra.jpg "The raw measurement: absorbance across wavelength, many times a second. Everything downstream is interpretation of this curve.")
 
-Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. But they carry conditions that rarely survive contact with a real plant:
+Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. [ISO 15839](https://www.iso.org/standard/28624.html), which sets performance specifications for online water quality analysers, addresses this directly: models must be validated for the specific application, and performance characteristics may vary by site. In practice, this means the conditions that worked at one plant do not transfer automatically:
 
 - They are often **site-specific**. Transferability must be demonstrated; a model validated on one stream should not be assumed valid on another.
 - They **drift with composition**. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.
@@ -609,7 +609,7 @@ Without reference checks and maintenance, a parameter model can keep producing p
 
 There is a different use of the same hardware, and in a plant it is usually the more valuable one.
 
-Instead of asking *what is the concentration*, ask *has the fingerprint changed, and what does that change correlate with*. Build a one-time model of what the plant's own stream normally looks like. Then watch for deviation from that reference, and tie the deviation to what the plant was doing at the time — feed rate, wash flow, machine state, cleaning records.
+Instead of asking *what is the concentration*, ask *has the fingerprint changed, and what does that change correlate with*. Build a one-time model of what the plant's own stream normally looks like. Then watch for deviation from that reference, and tie the deviation to what the plant was doing at the time: feed rate, wash flow, machine state, cleaning records.
 
 This is a materially easier question to answer well, and it is insensitive to the things that break calibrations:
 
@@ -617,7 +617,7 @@ This is a materially easier question to answer well, and it is insensitive to th
 - It can handle defined operating modes more transparently when each recipe or season has an appropriate reference; new conditions still need review
 - A drifting baseline shows up as drift rather than as a wrong number presented confidently
 
-{{diagram:calibration-vs-change}} — Same hardware, same spectrum, two different questions — and two very different maintenance burdens.
+{{diagram:calibration-vs-change}} Same hardware, same spectrum, two different questions. Two very different maintenance burdens.
 
 What you lose is the ability to report a concentration to a regulator. What you gain is a clear operating signal whose performance can be checked against current references over time.
 
@@ -625,9 +625,9 @@ What you lose is the ability to report a concentration to a regulator. What you 
 
 Because sometimes a number is the point.
 
-Biochemical oxygen demand is the parameter that drives sewer surcharges, appears on discharge permits, and determines whether a load is going to cause a problem downstream. "The spectrum moved" is not an answer when the question is whether you are about to exceed a threshold that gets billed by the pound.
+Biochemical oxygen demand is the parameter that drives sewer surcharges, appears in [discharge permits under 40 CFR Part 133](https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-133), and determines whether a load is going to cause a problem downstream. "The spectrum moved" is not an answer when the question is whether you are about to exceed a threshold that gets billed by the pound.
 
-For the first industrial deployment, BOD is the parameter we plan to validate against the customer's own reference samples. Their lab stays the method of record. The goal is to fill the hours between the samples the lab already takes, rather than replace them.
+For the first industrial deployment, BOD is the parameter we plan to validate against the customer's own reference samples. The reference test is [Standard Method 5210B, as codified in 40 CFR Part 136](https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-136). Their lab stays the method of record. The goal is to fill the hours between the samples the lab already takes, rather than replace them.
 
 Other outputs begin as change analysis unless and until they are validated against an appropriate reference method.
 
@@ -649,9 +649,9 @@ For a plant considering continuous optical measurement, three questions are wort
 
 ## Where this sits in the stack
 
-Measurement is only half of it. A spectrum that moved is not an action — it becomes useful when it is correlated with plant state, attributed to a unit, and priced.
+Measurement is only half of it. A spectrum that moved is not an action: it becomes useful when it is correlated with plant state, attributed to a unit, and priced.
 
-That is the division of labour: the probe reads the stream, the platform works out what the change means and what it is worth, and the operator decides what to do about it.
+That is the division of labour: the probe reads the stream, the platform works out what the change means and what it is worth, and the operator decides what to do about it. What that process looks like against a real plant dataset is in [what 25 days of historian data actually shows](/blog/what-25-days-of-historian-data-shows.html). Working from a production historian to find cost events is the practical version of the correlation step described above.
 
 More on what the sensor is used for by sector: [food and beverage](/industries/food-beverage.html), [industrial water](/industries/industrial-water.html), [pharma and biotech](/industries/pharma-biotech.html).
 
