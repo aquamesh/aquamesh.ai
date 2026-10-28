@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals | AquaMesh</title>
+  <meta name="description" content="Blowdown in a cooling tower is triggered by a conductivity setpoint. When the sensor reading that setpoint has drifted, the tower discharges water it did not need to. Here is what that costs and how to find it in the historian." />
+  <link rel="canonical" href="https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AquaMesh" />
+  <meta property="og:title" content="Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals | AquaMesh" />
+  <meta property="og:description" content="Blowdown in a cooling tower is triggered by a conductivity setpoint. When the sensor reading that setpoint has drifted, the tower discharges water it did not need to. Here is what that costs and how to find it in the historian." />
+  <meta property="og:url" content="https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html" />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" type="application/rss+xml" title="AquaMesh blog" href="https://aquamesh.ai/feed.xml" />
+  <link rel="alternate" type="application/feed+json" title="AquaMesh blog" href="https://aquamesh.ai/blog/feed.json" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=32" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water"},{"@type":"BlogPosting","@id":"https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html#post","headline":"Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals","name":"Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals","description":"Blowdown in a cooling tower is triggered by a conductivity setpoint. When the sensor reading that setpoint has drifted, the tower discharges water it did not need to. Here is what that costs and how to find it in the historian.","url":"https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html","datePublished":"2026-10-28","dateModified":"2026-10-28","inLanguage":"en","wordCount":1614,"keywords":"cooling tower, blowdown, conductivity, water efficiency, industrial water management","articleSection":"Measurement","author":{"@type":"Organization","name":"AquaMesh","url":"https://aquamesh.ai"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html"},"image":"https://aquamesh.ai/assets/og.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aquamesh.ai/blog/"},{"@type":"ListItem","position":3,"name":"Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals","item":"https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html"}]}]}</script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#platform">Platform</a>
+        <a href="../index.html#how">How it works</a>
+        <a href="../case-studies/index.html">Case studies</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../company.html">Company</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+  <main class="cs post">
+    <article>
+      <section class="section cs-head">
+        <div class="wrap">
+          <a class="cs-back" href="index.html"><svg class="ic"><use href="#i-back" /></svg>All posts</a>
+          <p class="eyebrow">Measurement</p>
+          <h1>Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals</h1>
+          <p class="lead">Blowdown in a cooling tower is triggered by a conductivity setpoint. When the sensor reading that setpoint has drifted, the tower discharges water it did not need to. Here is what that costs and how to find it in the historian.</p>
+          <p class="post-meta">
+            <time datetime="2026-10-28">28 October 2026</time> &middot; 7 min read
+            &middot; <a href="cooling-tower-blowdown-conductivity-sensor-drift.md">Markdown</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap post-body">
+        <nav class="post-toc" aria-label="On this page">
+          <p class="post-toc-label">On this page</p>
+          <ol><li><a href="#why-cycles-of-concentration-are-the-performance-metric">Why cycles of concentration are the performance metric</a></li><li><a href="#what-sensor-drift-does-to-blowdown-frequency">What sensor drift does to blowdown frequency</a></li><li><a href="#quantifying-the-cost-of-over-blowdown">Quantifying the cost of over-blowdown</a></li><li><a href="#the-diagnostic-that-is-already-in-the-historian">The diagnostic that is already in the historian</a></li><li><a href="#what-accurate-conductivity-measurement-enables">What accurate conductivity measurement enables</a></li></ol>
+        </nav>
+<p>Cooling tower blowdown is controlled by a conductivity setpoint. When the circulating water reaches a programmed conductivity level, the blowdown valve opens and a portion of the basin is discharged. The logic is straightforward: conductivity rises as dissolved solids concentrate through evaporation, and the setpoint represents the maximum concentration the system is designed to run at before dumping water and replacing it with fresh makeup.</p>
+<p>The measurement doing that work is a conductivity sensor in the basin or blowdown line. If that sensor reads high, the control system discharges water that was still within operating range. If it reads low, the system lets concentration climb beyond the setpoint before triggering blowdown. Either failure mode costs money, and neither is visible until it shows up in water bills or on heat exchangers.</p>
+<h2 id="why-cycles-of-concentration-are-the-performance-metric">Why cycles of concentration are the performance metric</h2>
+<p>The conductivity setpoint corresponds directly to cycles of concentration: the ratio of dissolved solids in the circulating water compared to the makeup water. At three cycles of concentration, the circulating water is three times as concentrated as the incoming makeup. At six cycles, it is six times as concentrated, meaning the system has extracted six times the evaporative cooling work from each unit of water before discharging it.</p>
+<p>The Department of Energy's Federal Energy Management Program, in its Best Management Practice for Cooling Tower Management, documents the consequence of that difference: increasing cycles from three to six reduces cooling tower makeup water consumption by 20 percent and cooling tower blowdown by 50 percent. (<a href="https://www.energy.gov/femp/best-management-practice-10-cooling-tower-management" rel="noopener">DOE FEMP Best Management Practice #10: Cooling Tower Management</a>)</p>
+<p>Most cooling towers run at two to four cycles of concentration. The practical ceiling is set by water chemistry: calcium, magnesium, silica, and other dissolved minerals will eventually scale heat exchange surfaces or corrode metal components if concentration runs too high. Water treatment programs add scale inhibitors and corrosion inhibitors specifically to allow higher cycles of concentration without those chemistry problems. But there is a second constraint that receives less attention: the accuracy of the conductivity measurement that tells the system what concentration it is actually running at.</p>
+<h2 id="what-sensor-drift-does-to-blowdown-frequency">What sensor drift does to blowdown frequency</h2>
+<p>Conductivity sensors in cooling tower service face a corrosive environment. Basin water contains biological growth, suspended solids, scale-forming minerals, and treatment chemicals. Sensor fouling from biofilm and mineral deposits is the most common failure mode, and the most common direction of failure is a reading that drifts high: a deposit on the sensor surface creates an impedance that the controller interprets as elevated dissolved solids in the water.</p>
+<p>A sensor reading high produces the same control response as actual high concentration: it triggers blowdown. If the setpoint is 1,500 microsiemens per centimeter and the sensor reads 1,600 when the actual basin conductivity is 1,200, the controller sees an out-of-spec condition and opens the valve. The water being discharged was at 1,200 microsiemens, well within the setpoint, and capable of running through additional evaporative cycles before requiring blowdown.</p>
+<p>This is not a hypothetical edge case. Sensor fouling accumulates gradually, and in many plants the cleaning interval for conductivity sensors is set by a calendar schedule rather than by measurement-to-measurement agreement. A sensor cleaned monthly in a high-load summer period is operating for weeks with accumulating offset. During that interval, every blowdown event the offset triggers is water the system did not need to discharge.</p>
+<p>The reverse failure also occurs: a sensor that reads low because of a calibration shift or a failed element delays blowdown past the intended setpoint. Scale begins depositing on heat transfer surfaces, thermal performance drops, and in severe cases chemical treatment effectiveness falls as the system runs beyond its design envelope. Scale deposits of even 1/16 inch on heat exchanger surfaces can reduce thermal efficiency by roughly 10 percent. (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1359431116341849" rel="noopener">Rahmani et al., Applied Thermal Engineering, 2017, doi:10.1016/j.applthermaleng.2016.10.191</a>)</p>
+<h2 id="quantifying-the-cost-of-over-blowdown">Quantifying the cost of over-blowdown</h2>
+<p>The DOE documents a 50 percent reduction in blowdown when moving from three to six cycles of concentration, and that figure provides a basis for estimating what premature blowdown costs. The calculation depends on facility size, local water costs, and sewer discharge fees, but the structure is consistent:</p>
+<p><b>At a facility with 1 million gallons per day of makeup water:</b></p>
+<div class="table-wrap"><table class="cs-table"><thead><tr><th>Operating scenario</th><th>Approximate daily makeup water</th><th>Approximate daily blowdown</th></tr></thead><tbody><tr><td>6 cycles of concentration (design intent)</td><td>1,000,000 gallons</td><td>~200,000 gallons</td></tr><tr><td>3 cycles of concentration (sensor reads high)</td><td>1,200,000+ gallons</td><td>~400,000 gallons</td></tr><tr><td>Difference from premature blowdown</td><td>200,000+ gallons/day</td><td>~200,000 gallons/day</td></tr></tbody></table></div>
+<p><em>Modelled example using DOE FEMP documented percentage differences; actual values depend on evaporation rate, local water chemistry, and the degree of sensor offset.</em></p>
+<p>That makeup water difference carries three layers of cost. First, water purchase cost: industrial water rates vary by region, but an industrial facility paying in the range of $1 to $5 per thousand gallons for purchased water faces a material cost when hundreds of thousands of gallons per day are discharged unnecessarily. Second, sewer and wastewater discharge costs: many jurisdictions charge for cooling tower blowdown discharge separately from water purchase, and in areas with sewer surcharges for high-conductivity industrial discharge, this cost can approach or exceed the water purchase cost. Third, chemical treatment cost: every gallon of blowdown replaced with fresh makeup water requires treatment chemicals to protect the system from the new makeup water's chemistry.</p>
+<p>For facilities that discharge cooling tower blowdown directly to surface waters, there is a fourth cost layer: regulatory exposure. Cooling tower blowdown discharged to waters of the United States requires authorization under the EPA's National Pollutant Discharge Elimination System (NPDES) program, and industrial discharge permits for many categories include limits on specific conductance or total dissolved solids as a proxy for concentrated minerals and treatment chemicals. A sensor reading low (allowing cycles of concentration to run above design) may produce a discharge that exceeds permit limits even when the control system appears to be operating normally, because the system registers a conductivity that is within setpoint while actual basin concentration has climbed past it. (<a href="https://www.ecfr.gov/current/title-40/chapter-I/subchapter-D/part-122" rel="noopener">40 CFR Part 122, EPA NPDES Permit Regulations</a>)</p>
+<p>None of this is visible at the level of a single blowdown event. It becomes visible in trends: makeup water consumption trending upward over a season, chemical feed rates increasing without a corresponding change in makeup water quality, blowdown frequency in the historian rising faster than ambient temperature or load would predict.</p>
+<h2 id="the-diagnostic-that-is-already-in-the-historian">The diagnostic that is already in the historian</h2>
+<p>The same diagnostic approach that reveals DO sensor drift in aeration systems applies to conductivity sensor drift in cooling tower control. The data is in the historian: blowdown valve timestamps, conductivity sensor readings, makeup water flow, and any makeup water quality monitoring already being logged.</p>
+<p>The signature of a sensor reading high is blowdown events that cluster at a conductivity reading just above the setpoint, while makeup water conductivity readings stay constant and blowdown event frequency increases over time on a consistent load. The signature of a sensor reading low is the opposite: infrequent blowdown with conductivity readings that stay below the setpoint even as the tower accumulates load, followed eventually by scale chemistry indicators or pressure-drop increases in the heat exchangers.</p>
+<p>This is a temporal version of the spatial drift problem described in a parallel-equipment analysis. In that case, two identical aeration basins showed diverging blower runtime and energy use that reflected sensor offset rather than actual process differences. Here, the same principle operates over time in a single system: the measurement feeding the control loop has an offset, the loop acts on the offset rather than the process state, and the cost accumulates in the historian before it appears anywhere else.</p>
+<p>The full parallel-basin methodology is in <a href="https://aquamesh.ai/blog/why-parallel-equipment-drifts/">why parallel equipment drifts apart, and what the gap costs</a>. For data centers where cooling tower blowdown directly affects the WUE metric, the connection between sensor drift and reported efficiency is covered in <a href="https://aquamesh.ai/blog/data-center-wue-measurement-gap/">data center WUE: what the metric measures, what it misses, and what it takes to move it</a>.</p>
+<h2 id="what-accurate-conductivity-measurement-enables">What accurate conductivity measurement enables</h2>
+<p>When the conductivity sensor controlling blowdown is reading accurately and corrected between calibration intervals, the control system can run the tower at the cycles of concentration the water treatment program was designed for. The 20 to 50 percent water savings the DOE documents from moving from three to six cycles are achievable without chemistry changes or capital investment -- they require that the measurement driving the control loop reflects actual basin conditions.</p>
+<p>For industrial facilities with large cooling loads -- power generation, petrochemical, food and beverage processing, large manufacturing plants -- the difference between running at three cycles and six cycles is not a marginal optimization. At the scale of a 2,000-ton cooling tower system, it is a question of hundreds of thousands of gallons per day.</p>
+<p>The diagnostic questions are straightforward. Is the conductivity sensor reading the same at the start and end of a calibration interval? Does blowdown frequency track makeup water conductivity the way it should, or does it drift independently? Are blowdown events triggering at the expected conductivity setpoint, or consistently below it? The answers are in the historian. The constraint is having a way to pull the data at the resolution that shows blowdown-event-level behavior over a long enough window to separate sensor drift from process variation.</p>
+<hr />
+<p>If your cooling tower water use has trended upward or your blowdown frequency looks inconsistent with your system load, the control data is already in your historian.</p>
+<p>See what a water system measurement review looks like at an operating industrial facility: <a href="https://aquamesh.ai/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant case study</a>. Or <a href="https://aquamesh.ai/#contact">reach out to schedule a working session with the team</a>.</p>
+<p><em>Alex Towfigh is a founder at AquaMesh.</em></p>
+        </div>
+      </section>
+    </article>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head"><p class="eyebrow">Keep reading</p><h2>More field notes</h2></div>
+        <ul class="post-grid">
+          <li><a href="water-online-sewer-repair-evidence.html"><time datetime="2026-10-26">26 October 2026</time><h3>In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream</h3><p>Our guest column in Water Online on what a $1.5 million sewer restitution case shows about the gap between measuring a discharge and explaining what caused it upstream.</p></a></li>
+          <li><a href="intermittent-aeration-nitrogen-removal-do-control.html"><time datetime="2026-10-23">23 October 2026</time><h3>Intermittent aeration for nitrogen removal: what DO sensor precision actually controls</h3><p>Plants using intermittent aeration for biological nitrogen removal rely on dissolved oxygen control precision. Here is what happens to both nitrogen performance and energy savings when that measurement drifts.</p></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>Bring your own history.</h2>
+        <p class="lead">If your plant keeps a historian, AquaMesh has something to read. The audit is free and needs no hardware.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <div>
+        <p class="footer-links"><a href="../industries/food-beverage.html">Food &amp; Beverage</a> &middot; <a href="../industries/industrial-water.html">Industrial Water</a> &middot; <a href="../industries/manufacturing.html">Manufacturing</a> &middot; <a href="../industries/municipal.html">Municipal</a> &middot; <a href="../industries/pharma-biotech.html">Pharma &amp; Biotech</a> &middot; <a href="../industries/data-centers.html">Data Centers</a><br /><a href="../privacy.html">Privacy</a> &middot; <a href="../cookies.html">Cookies</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../do-not-sell.html">Your Privacy Choices</a> &middot; <a href="../feed.xml">RSS</a> &middot; <a href="../llms.txt">llms.txt</a></p>
+        <p class="footer-meta">&copy; AquaMesh Inc. 2026 &middot; <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a> &middot; <a href="https://www.linkedin.com/company/aquamesh" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="../consent.js?v=2"></script>
+  <script src="../nav.js?v=1" defer></script>
+</body>
+</html>
