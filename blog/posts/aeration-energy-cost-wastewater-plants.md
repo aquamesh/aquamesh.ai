@@ -70,6 +70,8 @@ Some plants extend this further with online analyzers for ammonium or nitrate to
 
 Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.
 
+The same measurement-loop dynamic drives water waste in cooling towers, where a conductivity sensor reading high causes the system to discharge water still within operating range. The cost structure for that failure mode is in [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
+
 ## Three questions worth asking before tuning the control loop
 
 Before commissioning a new aeration control strategy or investigating why existing savings have eroded, three questions are worth answering directly from available data.

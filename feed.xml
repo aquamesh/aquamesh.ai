@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 23:37:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 23:38:47 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals</title>
@@ -200,6 +200,7 @@
 <p>For plants running <a href="/blog/intermittent-aeration-nitrogen-removal-do-control.html">intermittent aeration for simultaneous nitrification/denitrification</a>, the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.</p>
 <p>Some plants extend this further with online analyzers for ammonium or nitrate to feed an ammonia-based aeration control loop. Those instruments use a different measurement principle than a DO probe, and what they actually detect versus what they are marketed as measuring matters before you specify one. <a href="/blog/spectral-change-analysis-vs-calibrated-parameters.html">Spectral change analysis versus calibrated parameters</a> covers the distinction.</p>
 <p>Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.</p>
+<p>The same measurement-loop dynamic drives water waste in cooling towers, where a conductivity sensor reading high causes the system to discharge water still within operating range. The cost structure for that failure mode is in <a href="https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html">cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals</a>.</p>
 <h2 id="three-questions-worth-asking-before-tuning-the-control-loop">Three questions worth asking before tuning the control loop</h2>
 <p>Before commissioning a new aeration control strategy or investigating why existing savings have eroded, three questions are worth answering directly from available data.</p>
 <p><b>Are the DO sensors reading accurately?</b> A comparison between sensor output and a calibrated handheld grab at different times of day, not just right after calibration, shows whether a sensor is holding its reading or drifting between service intervals.</p>

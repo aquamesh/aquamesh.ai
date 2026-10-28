@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-28T23:37:39.573Z · 11 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-28T23:38:47.208Z · 11 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -376,6 +376,8 @@ For plants running [intermittent aeration for simultaneous nitrification/denitri
 Some plants extend this further with online analyzers for ammonium or nitrate to feed an ammonia-based aeration control loop. Those instruments use a different measurement principle than a DO probe, and what they actually detect versus what they are marketed as measuring matters before you specify one. [Spectral change analysis versus calibrated parameters](/blog/spectral-change-analysis-vs-calibrated-parameters.html) covers the distinction.
 
 Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.
+
+The same measurement-loop dynamic drives water waste in cooling towers, where a conductivity sensor reading high causes the system to discharge water still within operating range. The cost structure for that failure mode is in [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
 
 ## Three questions worth asking before tuning the control loop
 
