@@ -29,15 +29,26 @@ const ours = (u) => domainOf(u) === HOST || domainOf(u).endsWith(`.${HOST}`);
  */
 export function collectSources(content) {
   const retrieved = [], cited = [];
-  const walk = (node) => {
-    if (Array.isArray(node)) return node.forEach(walk);
+  const link = (n) => n.url || n.source;
+  const walk = (node, inCitations = false) => {
+    if (Array.isArray(node)) return node.forEach(n => walk(n, inCitations));
     if (!node || typeof node !== 'object') return;
-    if (node.type === 'web_search_result' && node.url) retrieved.push(node.url);
-    if (node.type === 'web_search_result_location' && node.url) cited.push(node.url);
-    for (const v of Object.values(node)) if (v && typeof v === 'object') walk(v);
+    /* plain web search gives web_search_result{url}; dynamic filtering can
+       hand back search_result{source}. Citations mirror the same split. */
+    if (/^(web_)?search_result$/.test(node.type) && link(node)) retrieved.push(link(node));
+    if ((/search_result_location$/.test(node.type) || inCitations) && /^https?:/.test(link(node) || '')) cited.push(link(node));
+    for (const [k, v] of Object.entries(node)) if (v && typeof v === 'object') walk(v, k === 'citations');
   };
   walk(content);
   return { retrieved: [...new Set(retrieved)], cited: [...new Set(cited)] };
+}
+
+/* The answer is the text after the last tool round; earlier text is the
+   model talking to itself between searches. */
+export function finalAnswer(content) {
+  const blocks = Array.isArray(content) ? content : [];
+  const lastTool = blocks.findLastIndex(b => b.type !== 'text' && b.type !== 'thinking');
+  return blocks.slice(lastTool + 1).filter(b => b.type === 'text').map(b => b.text).join('').trim();
 }
 
 export function summarize(query, content) {
@@ -45,7 +56,9 @@ export function summarize(query, content) {
   const rank = retrieved.findIndex(ours);
   const domains = {};
   for (const u of cited) domains[domainOf(u)] = (domains[domainOf(u)] || 0) + 1;
-  const answer = (Array.isArray(content) ? content : []).filter(b => b.type === 'text').map(b => b.text).join('').trim();
+  const answer = finalAnswer(content);
+  const blockTypes = {};
+  for (const b of Array.isArray(content) ? content : []) blockTypes[b.type] = (blockTypes[b.type] || 0) + 1;
   return {
     query,
     retrievedCount: retrieved.length,
@@ -54,7 +67,8 @@ export function summarize(query, content) {
     aquameshCited: cited.some(ours),
     aquameshUrls: [...new Set([...retrieved, ...cited].filter(ours))],
     topCitedDomains: Object.entries(domains).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([d]) => d),
-    answer: answer.slice(0, 700)
+    answer: answer.slice(0, 700),
+    blockTypes
   };
 }
 

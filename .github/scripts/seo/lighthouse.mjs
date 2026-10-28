@@ -31,7 +31,7 @@ export async function lighthouse(url) {
     tbtMs: Math.round(a['total-blocking-time']?.numericValue ?? 0),
     fcpMs: Math.round(a['first-contentful-paint']?.numericValue ?? 0),
     failingSeo: (c.seo?.auditRefs || []).map(r => a[r.id]).filter(x => x && x.score !== null && x.score < 1 && x.scoreDisplayMode === 'binary').map(x => x.title),
-    lcpElement: firstSnippet(a['largest-contentful-paint-element']?.details)?.slice(0, 160) || null
+    lcpElement: firstSnippet(a['lcp-breakdown-insight']?.details ?? a['largest-contentful-paint-element']?.details)?.slice(0, 160) || null
   };
 }
 

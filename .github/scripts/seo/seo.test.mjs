@@ -220,6 +220,22 @@ test('collectSources finds results and citations wherever they sit', () => {
   assert.deepEqual(collectSources({ type: 'web_search_tool_result', content: { type: 'web_search_tool_result_error', error_code: 'max_uses_exceeded' } }), { retrieved: [], cited: [] });
 });
 
+test('dynamic-filtering shapes: search_result{source}, citations by source, answer after the last tool round', () => {
+  const content = [
+    { type: 'text', text: 'r is a string; parse.' },
+    { type: 'server_tool_use', name: 'web_search', input: {} },
+    { type: 'web_search_tool_result', content: [{ type: 'web_search_result', url: 'https://www.epa.gov/a' }] },
+    { type: 'bash_code_execution_tool_result', content: { stdout: '', search_results: [{ type: 'search_result', source: 'https://aquamesh.ai/', title: 'AquaMesh' }] } },
+    { type: 'text', text: 'AquaMesh is', citations: [{ type: 'search_result_location', source: 'https://aquamesh.ai/', cited_text: 'x' }] },
+    { type: 'text', text: ' an industrial AI company.' }
+  ];
+  const s = summarize('q', content);
+  assert.equal(s.aquameshRetrievedRank, 2);
+  assert.equal(s.aquameshCited, true);
+  assert.equal(s.answer, 'AquaMesh is an industrial AI company.');
+  assert.equal(s.blockTypes.text, 3);
+});
+
 test('IndexNow only sends pages whose content changed', () => {
   const c = crawlOf([[`${S}/`, page({ canonical: `${S}/` })], [`${S}/a.html`, page()]], { sitemap: [{ loc: `${S}/` }, { loc: `${S}/a.html` }] });
   const first = changedUrls(c.pages, c.sitemap, {});

@@ -34,7 +34,8 @@ export function buildReport(run) {
 
   L.push(`# SEO agent report, ${at.slice(0, 10)}`);
   L.push('');
-  L.push(`**${errors.length} errors, ${warns.length} warnings** on ${crawl.pages} pages of ${SITE}.` +
+  const n = (k, w) => `${k} ${w}${k === 1 ? '' : 's'}`;
+  L.push(`**${n(errors.length, 'error')}, ${n(warns.length, 'warning')}** on ${crawl.pages} pages of ${SITE}.` +
     (diff ? ` Since the last run: ${diff.added.length} new, ${diff.resolved.length} resolved.` : ' First run.') +
     (dryRun ? ' _Dry run: nothing was committed, pinged or posted._' : ''));
   L.push('');
