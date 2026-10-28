@@ -57,7 +57,7 @@ The signature of a sensor reading high is blowdown events that cluster at a cond
 
 This is a temporal version of the spatial drift problem described in a parallel-equipment analysis. In that case, two identical aeration basins showed diverging blower runtime and energy use that reflected sensor offset rather than actual process differences. Here, the same principle operates over time in a single system: the measurement feeding the control loop has an offset, the loop acts on the offset rather than the process state, and the cost accumulates in the historian before it appears anywhere else.
 
-The full parallel-basin methodology is in [why parallel equipment drifts apart, and what the gap costs](https://aquamesh.ai/blog/why-parallel-equipment-drifts/). For data centers where cooling tower blowdown directly affects the WUE metric, the connection between sensor drift and reported efficiency is covered in [data center WUE: what the metric measures, what it misses, and what it takes to move it](https://aquamesh.ai/blog/data-center-wue-measurement-gap/).
+The full parallel-basin methodology is in [why parallel equipment drifts apart, and what the gap costs](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html). For data centers where cooling tower blowdown directly affects the WUE metric, the connection between sensor drift and reported efficiency is covered in [data center WUE: what the metric measures, what it misses, and what it takes to move it](https://aquamesh.ai/blog/data-center-wue-measurement-gap.html).
 
 ## What accurate conductivity measurement enables
 

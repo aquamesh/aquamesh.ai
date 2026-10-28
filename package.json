@@ -2,11 +2,14 @@
   "name": "aquamesh-site",
   "private": true,
   "type": "module",
-  "description": "aquamesh.ai static site. The site build is zero-dependency; these deps exist only for the blog agent that runs in CI.",
+  "description": "aquamesh.ai static site. The site build is zero-dependency; these deps exist only for the agents that run in CI (blog agent, SEO agent).",
   "scripts": {
     "build": "node scripts/build-blog.mjs",
     "blog-agent": "node .github/scripts/blog-agent.mjs",
-    "blog-agent:dry": "node .github/scripts/blog-agent.mjs --dry-run"
+    "blog-agent:dry": "node .github/scripts/blog-agent.mjs --dry-run",
+    "seo-agent": "node .github/scripts/seo-agent.mjs",
+    "seo-agent:dry": "node .github/scripts/seo-agent.mjs --dry-run",
+    "test:seo": "node --test .github/scripts/seo/seo.test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

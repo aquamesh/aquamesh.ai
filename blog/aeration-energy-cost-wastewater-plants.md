@@ -50,7 +50,7 @@ This is why many plants install DO control hardware and see strong early results
 
 Plants with multiple aeration basins running in parallel face a compounding version of this problem. Sensors in different basins drift at different rates depending on local solids loading, position relative to diffusers, and how consistently each one gets cleaned. The basins may share a common air header, but if their DO sensors are reading different offsets, the blower outputs serving them will diverge in ways that reflect sensor drift rather than actual process differences.
 
-We covered the mechanics and cost of this kind of hidden divergence in [why parallel equipment drifts apart](https://aquamesh.ai/blog/why-parallel-equipment-drifts/). The direct energy cost of an over-aerated basin shows up in blower runtime. The downstream cost in nitrogen removal performance, when an anoxic zone receives excess dissolved oxygen, is harder to price but real.
+We covered the mechanics and cost of this kind of hidden divergence in [why parallel equipment drifts apart](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html). The direct energy cost of an over-aerated basin shows up in blower runtime. The downstream cost in nitrogen removal performance, when an anoxic zone receives excess dissolved oxygen, is harder to price but real.
 
 ## What the historian data showed
 
@@ -58,7 +58,7 @@ When we analyzed 25 days of historian data from an operating plant earlier this 
 
 Both basins drew on the same shared air header. The control loop was functioning. The deviation was visible only by comparing the two basins side by side at hourly resolution. A daily manual grab from either basin, taken at a representative time, could easily have missed it.
 
-The finding was worth $3,316 per year in direct blower power, plus the process risk from carrying excess oxygen into a downstream anoxic zone. It was already in the data. It just had not been looked at in this way. The full analysis is in [what 25 days of historian data actually shows about a treatment plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows/).
+The finding was worth $3,316 per year in direct blower power, plus the process risk from carrying excess oxygen into a downstream anoxic zone. It was already in the data. It just had not been looked at in this way. The full analysis is in [what 25 days of historian data actually shows about a treatment plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html).
 
 ## What accurate measurement changes
 

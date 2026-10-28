@@ -1,0 +1,236 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { parsePage, pageFindings, homepageFindings, siteFindings, parseSitemap, parseRobots, diffFindings, normalizeUrl } from './checks.mjs';
+import { isGenerated, timestampOnly, gateFix, detectDrift } from './fix.mjs';
+import { collectSources, summarize } from './ai-search.mjs';
+import { changedUrls } from './indexnow.mjs';
+import { vitalsFindings } from './lighthouse.mjs';
+
+const S = 'https://aquamesh.ai';
+const words = (n) => Array.from({ length: n }, (_, i) => `word${i}`).join(' ');
+
+function page({ title = 'A reasonable page title for testing | AquaMesh', desc = 'A meta description that is long enough to count, and short enough that Google shows all of it.',
+  canonical = `${S}/a.html`, robots = '', ld = '{"@context":"https://schema.org","@type":"WebPage"}', body = '' } = {}) {
+  return `<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width">
+${title === null ? '' : `<title>${title}</title>`}
+${desc === null ? '' : `<meta name="description" content="${desc}">`}
+${canonical ? `<link rel="canonical" href="${canonical}">` : ''}
+${robots ? `<meta name="robots" content="${robots}">` : ''}
+<meta property="og:title" content="t"><meta property="og:description" content="d"><meta property="og:image" content="${S}/assets/og.png">
+${ld === null ? '' : `<script type="application/ld+json">${ld}</script>`}
+</head><body><h1>Heading</h1><p>${words(300)}</p>${body}</body></html>`;
+}
+
+const ids = (fs) => fs.map(x => x.id);
+
+test('parsePage reads head, links and images', () => {
+  const p = parsePage(`${S}/blog/x.html`, page({ body: '<a href="/b.html">b</a> <a href="mailto:x@y">m</a> <img src="i.png"> <img src="j.png" alt="">' }));
+  assert.equal(p.title, 'A reasonable page title for testing | AquaMesh');
+  assert.equal(p.canonical, `${S}/a.html`);
+  assert.deepEqual(p.jsonld[0].types, ['WebPage']);
+  assert.deepEqual(p.anchors.map(a => a.abs), [`${S}/b.html`]);
+  assert.deepEqual(p.images.map(i => i.hasAlt), [false, true]);
+  assert.equal(p.lang, 'en');
+});
+
+test('a clean page has no errors or warnings', () => {
+  const p = parsePage(`${S}/a.html`, page());
+  assert.deepEqual(pageFindings(p).filter(x => x.sev !== 'info'), []);
+});
+
+test('missing title and description are errors; long title is a warning', () => {
+  assert.ok(ids(pageFindings(parsePage(`${S}/a.html`, page({ title: null, desc: null })))).includes('title-missing'));
+  assert.ok(ids(pageFindings(parsePage(`${S}/a.html`, page({ desc: null })))).includes('desc-missing'));
+  const long = pageFindings(parsePage(`${S}/a.html`, page({ title: 'x'.repeat(90) })));
+  assert.equal(long.find(x => x.id === 'title-length').sev, 'warn');
+});
+
+test('broken JSON-LD, noindex in sitemap, relative canonical', () => {
+  const f = ids(pageFindings(parsePage(`${S}/a.html`, page({ ld: '{"@type":', robots: 'noindex', canonical: '/a.html' }))));
+  assert.ok(f.includes('jsonld-invalid'));
+  assert.ok(f.includes('noindex-in-sitemap'));
+  assert.ok(f.includes('canonical-relative'));
+});
+
+test('BlogPosting must carry the article fields', () => {
+  const ld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'BlogPosting', headline: 'h' }] });
+  const f = pageFindings(parsePage(`${S}/blog/x.html`, page({ canonical: `${S}/blog/x.html`, ld })));
+  assert.match(f.find(x => x.id === 'jsonld-article-fields').msg, /datePublished/);
+});
+
+test('competitor names and superseded case-study figures are flagged', () => {
+  const f = pageFindings(parsePage(`${S}/a.html`, page({ body: '<p>Unlike Xylem, we saved $34,870.</p>' })));
+  assert.ok(ids(f).includes('competitor-mention'));
+  assert.equal(f.find(x => x.id === 'figure-superseded').sev, 'error');
+  const cs = pageFindings(parsePage(`${S}/case-studies/water-reuse-plant.html`, page({ canonical: `${S}/case-studies/water-reuse-plant.html`, body: '<p>$92,200</p>' })));
+  assert.match(cs.find(x => x.id === 'figure-missing').msg, /\$42,050/);
+});
+
+test('homepage regression guard', () => {
+  const ok = '<nav><a href="blog/index.html">Blog</a></nav><script>{"@type":"Organization"}</script><a class="hero-badge" href="#">b</a><footer></footer>';
+  assert.deepEqual(homepageFindings(S + '/', ok), []);
+  const reverted = ok.replace('<a href="blog/index.html">Blog</a>', '');
+  assert.match(homepageFindings(S + '/', reverted)[0].msg, /Blog link/);
+  const footerBadge = ok.replace('<footer></footer>', '<footer><img src="assets/nvidia-inception-badge.svg"></footer>');
+  assert.match(homepageFindings(S + '/', footerBadge)[0].msg, /footer/);
+});
+
+function crawlOf(pages, { sitemap, llms = '', robots = 'User-agent: *\nAllow: /\nSitemap: https://aquamesh.ai/sitemap.xml', statuses = {} } = {}) {
+  const map = new Map();
+  for (const [u, html, status = 200] of pages) map.set(normalizeUrl(u), { url: normalizeUrl(u), status, html, parsed: html ? parsePage(normalizeUrl(u), html) : null });
+  return {
+    pages: map, statuses: new Map(Object.entries(statuses)), external: null,
+    sitemap: sitemap ?? pages.map(([u]) => ({ loc: u, lastmod: '2026-10-01' })),
+    llms, robots, feed: '', today: '2026-10-28'
+  };
+}
+
+test('site rules: broken internal link, unlinked sitemap URL, llms.txt gap', () => {
+  const c = crawlOf([
+    [`${S}/`, page({ canonical: `${S}/`, body: '<a href="/blog/a/">a</a>' })],
+    [`${S}/blog/a.html`, page({ canonical: `${S}/blog/a.html` })]
+  ], { statuses: { [`${S}/blog/a/`]: 404 } });
+  const f = siteFindings(c);
+  const broken = f.find(x => x.id === 'link-broken');
+  assert.equal(broken.sev, 'error');
+  assert.match(broken.msg, /blog\/a\/ which returns 404/);
+  assert.ok(f.some(x => x.id === 'sitemap-unlinked' && x.url === `${S}/blog/a.html`));
+  assert.ok(f.some(x => x.id === 'llms-missing-post' && x.url === `${S}/blog/a.html`));
+});
+
+test('robots.txt that blocks everything is an error', () => {
+  const c = crawlOf([[`${S}/`, page({ canonical: `${S}/` })]], { robots: 'User-agent: *\nDisallow: /' });
+  assert.ok(siteFindings(c).some(x => x.id === 'robots-blocks-all'));
+  assert.equal(parseRobots('User-agent: a\nUser-agent: b\nAllow: /').groups[0].agents.length, 2);
+});
+
+test('sitemap parsing and uniform lastmod', () => {
+  const xml = `<urlset>${Array.from({ length: 12 }, (_, i) => `<url><loc>${S}/p${i}.html</loc><lastmod>2026-10-28</lastmod></url>`).join('')}</urlset>`;
+  const sm = parseSitemap(xml);
+  assert.equal(sm.length, 12);
+  const c = crawlOf(sm.map(e => [e.loc, page({ canonical: e.loc })]), { sitemap: sm });
+  assert.ok(siteFindings(c).some(x => x.id === 'sitemap-lastmod-uniform'));
+});
+
+test('diffFindings keys on id + url', () => {
+  const a = { sev: 'error', id: 'x', url: 'u', msg: '1' }, b = { sev: 'warn', id: 'y', url: 'u', msg: '2' };
+  const d = diffFindings([a], [{ ...a, msg: 'changed count' }, b]);
+  assert.deepEqual(d.added.map(x => x.id), ['y']);
+  assert.deepEqual(d.resolved, []);
+});
+
+test('only generated files are committable', () => {
+  for (const p of ['blog/a-post.html', 'blog/a-post.md', 'blog/index.html', 'blog/index.json', 'blog/feed.json', 'sitemap.xml', 'llms.txt', 'llms-full.txt', 'feed.xml', 'robots.txt']) {
+    assert.ok(isGenerated(p), p);
+  }
+  for (const p of ['index.html', 'blog/posts/a.md', 'case-studies/water-reuse-plant.html', 'company.html', 'scripts/build-blog.mjs', 'styles.css', '.github/workflows/x.yml', 'x/abc.html']) {
+    assert.ok(!isGenerated(p), p);
+  }
+});
+
+test('timestamp-only diffs are ignored', () => {
+  assert.ok(timestampOnly('--- a/x\n+++ b/x\n@@ -1 +1 @@\n-  "generated": "2026-10-28T23:27:31.330Z",\n+  "generated": "2026-10-29T13:40:00.000Z",'));
+  assert.ok(timestampOnly('-    <lastBuildDate>Wed, 28 Oct 2026 23:27:31 GMT</lastBuildDate>\n+    <lastBuildDate>Thu, 29 Oct 2026 13:40:00 GMT</lastBuildDate>'));
+  assert.ok(!timestampOnly('-  "generated": "a",\n+  "generated": "b",\n+<p>new paragraph</p>'));
+  assert.ok(!timestampOnly(''));
+});
+
+test('gateFix refuses deletions, files outside the allowlist, and dead links', () => {
+  const root = mkdtempSync(join(tmpdir(), 'seo-gate-'));
+  try {
+    const g = (...a) => execFileSync('git', a, { cwd: root, stdio: 'pipe' });
+    g('init', '-q');
+    mkdirSync(join(root, 'blog'));
+    const sm = `<urlset><url><loc>${S}/blog/a.html</loc><lastmod>2026-10-01</lastmod></url></urlset>`;
+    writeFileSync(join(root, 'sitemap.xml'), sm);
+    writeFileSync(join(root, 'llms.txt'), `- [A](${S}/blog/a.html)`);
+    writeFileSync(join(root, 'blog/a.html'), page({ canonical: `${S}/blog/a.html` }));
+    writeFileSync(join(root, 'index.html'), 'home');
+    g('add', '.');
+    g('-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-qm', 'init');
+
+    /* a clean rebuild of an allowed file passes */
+    writeFileSync(join(root, 'blog/a.html'), page({ canonical: `${S}/blog/a.html`, body: '<a href="/blog/a.html">self</a>' }));
+    assert.deepEqual(gateFix(root, { changed: ['blog/a.html'], added: [], deleted: [] }).reasons, []);
+
+    /* a link to a page that does not exist */
+    writeFileSync(join(root, 'blog/a.html'), page({ canonical: `${S}/blog/a.html`, body: '<a href="/blog/missing/">x</a>' }));
+    assert.match(gateFix(root, { changed: ['blog/a.html'], added: [], deleted: [] }).reasons.join(), /no file behind it/);
+
+    /* a rebuilt page that loses its title */
+    writeFileSync(join(root, 'blog/a.html'), page({ title: null, canonical: `${S}/blog/a.html` }));
+    assert.match(gateFix(root, { changed: ['blog/a.html'], added: [], deleted: [] }).reasons.join(), /title-missing/);
+
+    const r = gateFix(root, { changed: ['index.html'], added: [], deleted: ['blog/b.html'] });
+    assert.match(r.reasons.join(), /deletes files/);
+    assert.match(r.reasons.join(), /may not commit: index.html/);
+
+    /* sitemap may not lose URLs */
+    writeFileSync(join(root, 'blog/a.html'), page({ canonical: `${S}/blog/a.html` }));
+    writeFileSync(join(root, 'sitemap.xml'), '<urlset></urlset>');
+    assert.match(gateFix(root, { changed: ['sitemap.xml'], added: [], deleted: [] }).reasons.join(), /sitemap would lose/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('detectDrift keeps real changes, drops timestamp churn, sees new files', () => {
+  const root = mkdtempSync(join(tmpdir(), 'seo-drift-'));
+  try {
+    const g = (...a) => execFileSync('git', a, { cwd: root, stdio: 'pipe' });
+    g('init', '-q');
+    mkdirSync(join(root, 'blog'));
+    mkdirSync(join(root, 'scripts'));
+    writeFileSync(join(root, 'blog/index.json'), '{\n  "generated": "2026-10-01T00:00:00.000Z",\n  "count": 1\n}\n');
+    writeFileSync(join(root, 'blog/a.html'), '<p>old</p>\n');
+    writeFileSync(join(root, 'scripts/build-blog.mjs'), `import { writeFileSync } from 'node:fs';
+writeFileSync('blog/index.json', '{\\n  "generated": "' + new Date().toISOString() + '",\\n  "count": 1\\n}\\n');
+writeFileSync('blog/a.html', '<p>new</p>\\n');
+writeFileSync('blog/b.html', '<p>added</p>\\n');`);
+    g('add', '.');
+    g('-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-qm', 'init');
+    const d = detectDrift(root);
+    assert.deepEqual(d, { changed: ['blog/a.html'], added: ['blog/b.html'], deleted: [] });
+    assert.equal(execFileSync('git', ['status', '--porcelain', '--', 'blog/index.json'], { cwd: root, encoding: 'utf8' }), '');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('collectSources finds results and citations wherever they sit', () => {
+  const content = [
+    { type: 'server_tool_use', name: 'web_search', input: { query: 'q' } },
+    { type: 'web_search_tool_result', content: [
+      { type: 'web_search_result', url: 'https://www.epa.gov/a', title: 'EPA' },
+      { type: 'web_search_result', url: 'https://aquamesh.ai/blog/x.html', title: 'AquaMesh' }
+    ] },
+    { type: 'text', text: 'Answer.', citations: [{ type: 'web_search_result_location', url: 'https://aquamesh.ai/blog/x.html', cited_text: '...' }] },
+    { type: 'text', text: ' More.', citations: [{ type: 'web_search_result_location', url: 'https://www.epa.gov/a', cited_text: '...' }] }
+  ];
+  const s = summarize('q', content);
+  assert.equal(s.aquameshRetrievedRank, 2);
+  assert.equal(s.aquameshCited, true);
+  assert.deepEqual(s.topCitedDomains.sort(), ['aquamesh.ai', 'epa.gov']);
+  assert.equal(s.answer, 'Answer. More.');
+  assert.deepEqual(collectSources({ type: 'web_search_tool_result', content: { type: 'web_search_tool_result_error', error_code: 'max_uses_exceeded' } }), { retrieved: [], cited: [] });
+});
+
+test('IndexNow only sends pages whose content changed', () => {
+  const c = crawlOf([[`${S}/`, page({ canonical: `${S}/` })], [`${S}/a.html`, page()]], { sitemap: [{ loc: `${S}/` }, { loc: `${S}/a.html` }] });
+  const first = changedUrls(c.pages, c.sitemap, {});
+  assert.equal(first.changed.length, 2);
+  assert.deepEqual(changedUrls(c.pages, c.sitemap, first.hashes).changed, []);
+  c.pages.get(`${S}/a.html`).parsed.text += ' edited';
+  assert.deepEqual(changedUrls(c.pages, c.sitemap, first.hashes).changed, [`${S}/a.html`]);
+});
+
+test('vitals thresholds', () => {
+  const f = vitalsFindings({ url: S, lcpMs: 5200, cls: 0.12, tbtMs: 90, seo: 100, failingSeo: [], performance: 60 }, { performance: 75 });
+  assert.deepEqual(ids(f).sort(), ['cwv-cls', 'cwv-lcp', 'cwv-regression']);
+  assert.equal(f.find(x => x.id === 'cwv-lcp').sev, 'error');
+});

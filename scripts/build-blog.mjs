@@ -4,6 +4,7 @@
    No dependencies, no install step. */
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { render, plain, inline } from './md.mjs';
@@ -42,13 +43,22 @@ const readingTime = (text) => Math.max(1, Math.round(text.split(/\s+/).length / 
 
 /* ── load posts, newest first ────────────────────────────────────────── */
 const dir = join(ROOT, 'blog/posts');
-const posts = readdirSync(dir).filter(f => f.endsWith('.md')).map(f => {
+const postFiles = readdirSync(dir).filter(f => f.endsWith('.md'));
+const SLUGS = new Set(postFiles.map(f => parse(readFileSync(join(dir, f), 'utf8')).meta.slug || f.replace(/\.md$/, '')));
+
+/* /blog/<slug>/ is a 404 on GitHub Pages; only /blog/<slug>.html resolves.
+   Writers keep producing the slash form, so fix it here for every post. */
+const fixPostLinks = (md) => md.replace(/(\]\((?:https:\/\/aquamesh\.ai)?\/blog\/)([a-z0-9-]+)\/(#[^)\s]*)?\)/g,
+  (m, pre, slug, hash) => (SLUGS.has(slug) ? `${pre}${slug}.html${hash || ''})` : m));
+
+const posts = postFiles.map(f => {
   const raw = readFileSync(join(dir, f), 'utf8');
-  const { meta, body } = parse(raw);
+  const { meta, body: source } = parse(raw);
+  const body = fixPostLinks(source);
   const slug = meta.slug || f.replace(/\.md$/, '');
   const text = plain(body);
   return {
-    ...meta, slug, body, raw, text,
+    ...meta, slug, body, raw: fixPostLinks(raw), text,
     tags: meta.tags || [],
     url: `${SITE}/blog/${slug}.html`,
     words: text.split(/\s+/).length,
@@ -445,9 +455,32 @@ const staticPages = [
 ];
 const today = new Date().toISOString().slice(0, 10);
 
+/* lastmod is when a page last changed, not when the build ran: Google stops
+   trusting a sitemap whose lastmod moves on every build, posts included. A
+   shallow clone has no history, so it keeps the date already published. */
+const shallow = (() => {
+  try { return execFileSync('git', ['rev-parse', '--is-shallow-repository'], { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim() !== 'false'; }
+  catch { return true; }
+})();
+const published = existsSync(join(ROOT, 'sitemap.xml'))
+  ? Object.fromEntries([...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod>/g)].map(m => [m[1], m[2]]))
+  : {};
+const newestPost = posts.map(p => p.updated || p.date).sort().at(-1) || today;
+const lastmod = (u) => {
+  if (u === '/blog/') return newestPost;
+  if (!shallow) {
+    const file = u.endsWith('/') ? `${u.slice(1)}index.html` : u.slice(1);
+    try {
+      const d = execFileSync('git', ['log', '-1', '--format=%cs', '--', file], { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+      if (d) return d;
+    } catch { /* fall through */ }
+  }
+  return published[SITE + u] || today;
+};
+
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${staticPages.map(([u, pr, cf]) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>${cf}</changefreq><priority>${pr}</priority></url>`).join('\n')}
+${staticPages.map(([u, pr, cf]) => `  <url><loc>${SITE}${u}</loc><lastmod>${lastmod(u)}</lastmod><changefreq>${cf}</changefreq><priority>${pr}</priority></url>`).join('\n')}
 ${posts.map(p => `  <url><loc>${p.url}</loc><lastmod>${p.updated || p.date}</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>`).join('\n')}
 ${insights.map(x => `  <url><loc>${x.url}</loc>${x.date ? `<lastmod>${x.date}</lastmod>` : ''}<changefreq>yearly</changefreq><priority>0.7</priority></url>`).join('\n')}
 </urlset>
