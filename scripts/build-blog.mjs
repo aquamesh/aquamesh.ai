@@ -113,7 +113,6 @@ const footer = (pre) => `  <footer class="footer">
       <div>
         <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="${BRAND}"><use href="#wordmark" /></svg>
         <p class="footer-tag">${TAGLINE}</p>
-        <a class="footer-badge" href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener"><img src="${pre}assets/nvidia-inception-badge.svg" alt="NVIDIA Inception Program member" width="125" height="54" loading="lazy" /></a>
       </div>
       <div>
         <p class="footer-links"><a href="${pre}industries/food-beverage.html">Food &amp; Beverage</a> &middot; <a href="${pre}industries/industrial-water.html">Industrial Water</a> &middot; <a href="${pre}industries/manufacturing.html">Manufacturing</a> &middot; <a href="${pre}industries/municipal.html">Municipal</a> &middot; <a href="${pre}industries/pharma-biotech.html">Pharma &amp; Biotech</a> &middot; <a href="${pre}industries/data-centers.html">Data Centers</a><br /><a href="${pre}privacy.html">Privacy</a> &middot; <a href="${pre}cookies.html">Cookies</a> &middot; <a href="${pre}terms.html">Terms</a> &middot; <a href="${pre}do-not-sell.html">Your Privacy Choices</a> &middot; <a href="${pre}feed.xml">RSS</a> &middot; <a href="${pre}llms.txt">llms.txt</a></p>
