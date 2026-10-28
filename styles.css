@@ -591,7 +591,7 @@ html.nav-open { overflow: hidden; }
 .footer-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
 .footer .wordmark { height: 18px; }
 .footer-tag { margin-top: 10px; font-size: 0.9rem; color: var(--ink-3); }
-.hero-badge { display: block; width: max-content; margin: 0 auto; }
+.hero-badge { display: block; width: max-content; margin: 0 0 0 auto; }
 .hero-badge img { display: block; height: 54px; width: auto; }
 .footer-badge { display: inline-block; margin-top: 18px; }
 .footer-badge img { display: block; height: 54px; width: auto; }
