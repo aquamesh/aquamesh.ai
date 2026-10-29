@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case study — $1.17M a year in a dairy plant’s own records | AquaMesh</title>
+  <meta name="description" content="A worked example on a modelled dairy plant: 30 days of plant records, 19 losses priced line by line, from milk to drain at changeovers to rinses that run 40% too long." />
+  <link rel="canonical" href="https://aquamesh.ai/case-studies/dairy-plant.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Case study — $1.17M a year in a dairy plant’s own records | AquaMesh" />
+  <meta property="og:description" content="Nineteen losses, each priced from the plant’s own numbers, with the fix next to it." />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=33" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aquamesh.ai/#organization","name":"AquaMesh","url":"https://aquamesh.ai","description":"Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.","logo":{"@type":"ImageObject","url":"https://aquamesh.ai/assets/og.png"},"email":"info@aquamesh.ai","slogan":"The Autopilot For Industrial Water","foundingDate":"2020","address":{"@type":"PostalAddress","addressRegion":"CA","addressCountry":"US"},"sameAs":[]},{"@type":"Article","@id":"https://aquamesh.ai/case-studies/dairy-plant.html#article","headline":"Dairy processing: $1.17M a year found in a plant’s own records","description":"A worked example on a modelled dairy plant: 30 days of plant records, 19 losses priced line by line, from milk to drain at changeovers to rinses that run 40% too long.","url":"https://aquamesh.ai/case-studies/dairy-plant.html","datePublished":"2026-10-29","dateModified":"2026-10-29","inLanguage":"en","author":{"@id":"https://aquamesh.ai/#organization"},"publisher":{"@id":"https://aquamesh.ai/#organization"},"image":"https://aquamesh.ai/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://aquamesh.ai/case-studies/dairy-plant.html"},"isAccessibleForFree":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Case studies","item":"https://aquamesh.ai/case-studies/"},{"@type":"ListItem","position":3,"name":"Dairy processing: $1.17M a year found in a plant’s own records","item":"https://aquamesh.ai/case-studies/dairy-plant.html"}]}]}</script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5" /><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" /></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6" /></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" /></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M6 4v8M6 16v4M12 4v2M12 10v10M18 4v9M18 17v3" /><circle cx="6" cy="14" r="2" /><circle cx="12" cy="8" r="2" /><circle cx="18" cy="15" r="2" /></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#platform">Platform</a>
+        <a href="../index.html#how">How it works</a>
+        <a href="../case-studies/index.html">Case studies</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../company.html">Company</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+
+  <main class="cs">
+    <section class="section cs-head">
+      <div class="wrap">
+        <a class="cs-back" href="../index.html#case-studies"><svg class="ic"><use href="#i-back" /></svg>All case studies</a>
+        <p class="eyebrow">Case study · Dairy processing</p>
+        <h1>$1.17M a year, found in <span class="accent">a dairy plant's own records.</span></h1>
+        <p class="lead">A worked example on a modelled dairy plant. Thirty days of plant records — 186 tags, 1.6 million values — went through the same engine and checks that read a real historian export. It found <b>19 losses, each priced line by line</b> from the plant's own numbers, with the fix written next to it.</p>
+        <dl class="cs-facts">
+          <div><dt>Found a year</dt><dd>$1.17M</dd></div>
+          <div><dt>Range</dt><dd>$0.93M to $1.77M</dd></div>
+          <div><dt>Milk to drain</dt><dd>0.9% of intake, best shift 0.5%</dd></div>
+          <div><dt>Findings</dt><dd>19, each with a fix</dd></div>
+        </dl>
+        <p class="cs-note">A modelled plant, not a customer. Every reading was generated by a simulator to show the platform end to end. The audit is the engine's own output, and it says so on every page.</p>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Where the money is</p>
+          <h2>Most of it leaves <span class="accent">at changeovers and in cleaning.</span></h2>
+          <p class="lead">The ten largest findings, straight from the audit. Green is measured from the plant's records; amber is estimated, with the working shown.</p>
+        </div>
+        <figure class="cs-figure">
+          <img src="../assets/case-studies/dairy-audit-money.jpg" width="1081" height="760" loading="lazy" decoding="async"
+               alt="Bar chart of the ten largest findings: milk to drain at changeovers $270,000; cleaning rinses run 40% longer than needed $129,600; caustic held at worst-day strength $108,000; separators desludge on a timer $91,125; clean condensate to drain $86,400; cooling tower at 2.6 cycles $74,650; process-area condensate return $68,817; sewer surcharge limit exceeded on 9 of 30 days $62,100; refrigeration at summer pressure all year $54,400; air compressors loaded overnight $41,400." />
+        </figure>
+        <p class="cs-callout"><b>The best shift is the benchmark.</b> Milk to drain runs 0.9% of intake on average and 0.5% on the best shift — same lines, same products. The target is a level this plant already reaches.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">This week</p>
+          <h2>Six fixes, <span class="accent">no capital.</span></h2>
+        </div>
+        <div class="table-wrap">
+          <table class="cs-table">
+            <thead><tr><th>Finding</th><th>What to do</th><th>$ / yr</th></tr></thead>
+            <tbody>
+              <tr><td>Milk to drain at changeovers</td><td>Cut the product-to-water interface on conductivity or turbidity instead of a timer.</td><td>$270,000</td></tr>
+              <tr><td>Rinses run 40% longer than needed</td><td>End each rinse on return conductivity, with today's time as the maximum.</td><td>$129,600</td></tr>
+              <tr><td>Caustic at worst-day strength</td><td>Set strength by circuit and soil; keep 1.8% for heavy runs only.</td><td>$108,000</td></tr>
+              <tr><td>Separators desludge on a timer</td><td>Trigger on bowl solids or backpressure, with the timer as backstop.</td><td>$91,125</td></tr>
+              <tr><td>Clean condensate to drain</td><td>Send condensate that passes a conductivity check to the pre-rinse tank.</td><td>$86,400</td></tr>
+              <tr><td>Cooling tower at 2.6 cycles</td><td>Raise the cycles target toward 5 once the scaling limit is confirmed.</td><td>$74,650</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">What instrumentation adds</p>
+          <h2>Sensing where the plant is blind, <span class="accent">paid for by phase one.</span></h2>
+          <p class="lead">Everything above came from data the plant already collects. The instrumentation package costs about $106,000 — roughly 9% of the savings already identified — and turns the estimated findings into measured, continuous ones.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="cs-table">
+            <thead><tr><th>Instrument</th><th>Capital</th><th>Value it secures, $ / yr</th></tr></thead>
+            <tbody>
+              <tr><td>AquaSpectra™ on the drain lines: milk solids and BOD, every minute</td><td>$25,000</td><td>$310,500</td></tr>
+              <tr><td>Conductivity on each cleaning return: when the rinse is clean</td><td>$12,000</td><td>$237,600</td></tr>
+              <tr><td>AquaSpectra™ on condensate: milk carryover before reuse</td><td>$30,000</td><td>$155,217</td></tr>
+              <tr><td>AquaSpectra™ at the outfall: BOD, fats and pH, every minute</td><td>$25,000</td><td>$96,180</td></tr>
+              <tr><td>Solids signal on each separator: when to desludge</td><td>$9,000</td><td>$91,125</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cs-note">Most of this value is already counted in the findings above; the instruments secure it rather than add to it. Capital figures are order-of-magnitude.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cs-value">
+        <div>
+          <p class="eyebrow">The audit</p>
+          <h2>The full report, <span class="accent">nine pages.</span></h2>
+          <p>The format a plant gets back from its own historian export: where the money is, each finding with its evidence and fix, what to do this week, and what instrumentation would add.</p>
+          <a class="btn" href="../assets/case-studies/AquaMesh-Example-Dairy-Audit.pdf" download>Download the audit (PDF) <svg class="ic"><use href="#i-arrow" /></svg></a>
+        </div>
+        <a href="../assets/case-studies/AquaMesh-Example-Dairy-Audit.pdf" class="cs-figure" style="display:block;max-width:440px">
+          <img src="../assets/case-studies/dairy-audit-p1.jpg" width="1081" height="1400" loading="lazy" decoding="async"
+               alt="Cover page of the example dairy audit: $1,170,265 a year of potential savings, milk to drain 0.9% of intake, 0.22 gallons of water per pound of milk, 19 findings, marked as a demonstration on simulated data." />
+        </a>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>What is your plant losing?</h2>
+        <p class="lead">Send a historian export. You get an audit like this one, priced from your own numbers.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request%20%E2%80%94%20Dairy">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+        <p class="cs-note">Example case study on a modelled plant. Figures come from simulated records, not a customer’s results.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <p class="footer-links"><a href="../industries/food-beverage.html">Food &amp; Beverage</a> · <a href="../industries/industrial-water.html">Industrial Water</a> · <a href="../industries/manufacturing.html">Manufacturing</a> · <a href="../industries/municipal.html">Municipal</a> · <a href="../industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="../industries/data-centers.html">Data Centers</a><br /><a href="../privacy.html">Privacy</a> · <a href="../cookies.html">Cookies</a> · <a href="../terms.html">Terms</a> · <a href="../do-not-sell.html">Your Privacy Choices</a></p>
+      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a> &middot; <a href="https://www.linkedin.com/company/aquamesh" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+  <script src="../consent.js?v=2"></script>
+  <script src="../nav.js?v=1" defer></script>
+</body>
+</html>
