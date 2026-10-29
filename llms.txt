@@ -41,6 +41,8 @@ what matters, and the first industrial BOD model is planned for validation again
 - [Municipal Water & Reuse](https://aquamesh.ai/industries/municipal.html): Energy per kilowatt-hour, reuse reporting, defensible evidence.
 - [Pharma & Biotech](https://aquamesh.ai/industries/pharma-biotech.html): Cleaning endpoints and continuous trend, outside the validated control path.
 - [Data Centers](https://aquamesh.ai/industries/data-centers.html): Cooling circuit chemistry, cycles of concentration, condition-based blowdown.
+- [Basin: data center water calculator](https://aquamesh.ai/basin/): Free, open, county-level calculator: how much water a proposed data center will use and what it means for the local supply. Every assumption is visible and sourced.
+- [Basin methodology](https://aquamesh.ai/basin/methodology.html): How Basin estimates a data center’s water use, with every parameter and its source.
 
 ## Machine-readable
 - [Full blog text](https://aquamesh.ai/llms-full.txt): every post, complete, in one file

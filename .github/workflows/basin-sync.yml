@@ -1,0 +1,60 @@
+name: Sync Basin
+
+# aquamesh.ai/basin/ serves a copy of aquamesh/basin, so the calculator's
+# search and AI-citation credit lands on aquamesh.ai. Basin stays developed in
+# its own repo; this keeps the copy current. It only ever writes inside basin/.
+
+on:
+  schedule:
+    - cron: '50 16 * * 4'   # Thursdays, after Basin refreshes its drought data at 16:17
+    - cron: '10 6 * * *'    # daily, so code changes arrive within a day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: aquamesh-basin-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # Off switch: repository variable BASIN_SYNC=off.
+    if: vars.BASIN_SYNC != 'off'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: aquamesh/basin
+          path: _basin
+
+      - name: Copy the site files
+        run: |
+          echo "BASIN_SHA=$(git -C _basin rev-parse --short HEAD)" >> "$GITHUB_ENV"
+          rsync -a --delete --exclude .git --exclude .github --exclude tests --exclude scripts \
+            --exclude package.json --exclude README.md --exclude node_modules _basin/ basin/
+          rm -rf _basin
+
+      - name: Guard
+        run: |
+          grep -q '<link rel="canonical" href="https://aquamesh.ai/basin/">' basin/index.html \
+            || { echo "basin/index.html lost its canonical link; not syncing"; exit 1; }
+          OUTSIDE=$(git status --porcelain | awk '{print $2}' | grep -v '^basin/' || true)
+          [ -z "$OUTSIDE" ] || { echo "sync touched files outside basin/: $OUTSIDE"; exit 1; }
+
+      - name: Commit and push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add basin
+          if git diff --cached --quiet; then echo "aquamesh.ai/basin is current"; exit 0; fi
+          git -c user.name="AquaMesh Basin Sync" -c user.email=actions@users.noreply.github.com \
+            commit -qm "Sync Basin from aquamesh/basin@$BASIN_SHA"
+          for i in 1 2 3; do
+            git push -q origin HEAD:main && break
+            git pull -q --rebase origin main
+          done
+          gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds" >/dev/null || true

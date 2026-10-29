@@ -375,7 +375,10 @@ const pages = [
   ['/industries/manufacturing.html', 'Manufacturing', 'Rinse and cooling water, discharge limits, what conductivity cannot tell you.'],
   ['/industries/municipal.html', 'Municipal Water & Reuse', 'Energy per kilowatt-hour, reuse reporting, defensible evidence.'],
   ['/industries/pharma-biotech.html', 'Pharma & Biotech', 'Cleaning endpoints and continuous trend, outside the validated control path.'],
-  ['/industries/data-centers.html', 'Data Centers', 'Cooling circuit chemistry, cycles of concentration, condition-based blowdown.']
+  ['/industries/data-centers.html', 'Data Centers', 'Cooling circuit chemistry, cycles of concentration, condition-based blowdown.'],
+  /* Basin is synced in from aquamesh/basin by .github/workflows/basin-sync.yml */
+  ['/basin/', 'Basin: data center water calculator', 'Free, open, county-level calculator: how much water a proposed data center will use and what it means for the local supply. Every assumption is visible and sourced.'],
+  ['/basin/methodology.html', 'Basin methodology', 'How Basin estimates a data center’s water use, with every parameter and its source.']
 ];
 
 write('llms.txt', `# ${BRAND}
@@ -451,7 +454,8 @@ const staticPages = [
   ...['food-beverage', 'industrial-water', 'manufacturing', 'municipal', 'pharma-biotech', 'data-centers']
     .map(s => [`/industries/${s}.html`, '0.8', 'monthly']),
   ['/privacy.html', '0.3', 'yearly'], ['/cookies.html', '0.3', 'yearly'],
-  ['/terms.html', '0.3', 'yearly'], ['/do-not-sell.html', '0.3', 'yearly']
+  ['/terms.html', '0.3', 'yearly'], ['/do-not-sell.html', '0.3', 'yearly'],
+  ['/basin/', '0.8', 'weekly'], ['/basin/methodology.html', '0.5', 'monthly']
 ];
 const today = new Date().toISOString().slice(0, 10);
 
