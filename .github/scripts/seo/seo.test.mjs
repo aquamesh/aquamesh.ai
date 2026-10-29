@@ -284,3 +284,41 @@ test('report leads with one fix per lost question, most fixable first', () => {
   assert.match(md, /\*\*CLAIM\*\*/);
   assert.match(md, /no → yes/);
 });
+
+import { validateDraft, canDraft } from './pr.mjs';
+
+test('only hand-made pages other than the homepage get drafted fixes', () => {
+  assert.ok(canDraft(`${S}/industries/food-beverage.html`));
+  assert.ok(canDraft(`${S}/insights/spectral-sensing-ai-industrial-water.html`));
+  for (const u of [`${S}/`, `${S}/case-studies/water-reuse-plant.html`, `${S}/blog/x.html`, `${S}/basin/`, `${S}/privacy.html`]) assert.ok(!canDraft(u), u);
+});
+
+test('diagnose never targets the homepage with a visible change', async () => {
+  const reply = { verdict: 'weak_page', target_page: `${S}/`, why: 'w', change: 'c', owner: 'alex', sources: [] };
+  const client = { messages: { create: async () => ({ stop_reason: 'end_turn', content: [{ type: 'text', text: JSON.stringify(reply) }], usage: {} }) } };
+  const d = await diagnose(client, { query: 'q', answer: '', citedSources: [] }, [], '');
+  assert.equal(d.target_page, '');
+  assert.equal(d.verdict, 'missing_page');
+  assert.equal(d.owner, 'seo_pod');
+});
+
+test('validateDraft accepts a clean insertion and rejects invented figures, outside links, new classes, scripts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'seo-draft-'));
+  try {
+    mkdirSync(join(root, 'industries'));
+    writeFileSync(join(root, 'company.html'), 'x');
+    const original = page({ canonical: `${S}/industries/a.html`, body: '<section class="section"><p class="lead">Plants lose $1M+ a year. Payback under 12 months.</p></section>' });
+    writeFileSync(join(root, 'industries/a.html'), original);
+    const good = { insert_after: '</p></section>', html: '<section class="section"><h2>How to find losses fast</h2><p class="lead">Start with the history the plant already records. Price each loss on the plant\'s own tariff, rank them, and act on the largest first. Facilities like this lose $1M+ a year, and payback comes in under 12 months. See <a href="../company.html">who we are</a>.</p></section>', summary: 's' };
+    assert.deepEqual(validateDraft(root, 'industries/a.html', original, good), []);
+    const bad = (patch) => validateDraft(root, 'industries/a.html', original, { ...good, ...patch }).join(' | ');
+    assert.match(bad({ html: good.html.replace('$1M+', '$4.2M') }), /figures not already on the page: 4.2/);
+    assert.match(bad({ html: good.html.replace('../company.html', 'https://example.com') }), /external link/);
+    assert.match(bad({ html: good.html.replace('class="lead"', 'class="shiny"') }), /class "shiny"/);
+    assert.match(bad({ html: good.html + '<script>x()</script>' }), /not allowed/);
+    assert.match(bad({ html: good.html.replace('../company.html', '../missing.html') }), /no page behind it/);
+    assert.match(bad({ insert_after: '<p' }), /exactly once/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});

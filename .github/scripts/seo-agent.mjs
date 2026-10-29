@@ -37,8 +37,10 @@ import { crawlSite, fetchUrl } from './seo/crawl.mjs';
 import { detectDrift, commitAndPush, verifyDeploy } from './seo/fix.mjs';
 import { changedUrls, submitIndexNow } from './seo/indexnow.mjs';
 import { lighthouse, vitalsFindings } from './seo/lighthouse.mjs';
+import Anthropic from '@anthropic-ai/sdk';
 import { probeAiSearch } from './seo/ai-search.mjs';
-import { buildReport, buildNotice } from './seo/report.mjs';
+import { draftPageFixes } from './seo/pr.mjs';
+import { buildReport, buildNotice, actionList } from './seo/report.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const argv = process.argv.slice(2);
@@ -182,6 +184,15 @@ async function main() {
       /* the rerun loop: remember each question's result so movement shows */
       for (const r of ai.results.filter(r => !r.error && !r.skipped && r.citable)) {
         aiHistory[r.query] = [...(aiHistory[r.query] || []), { at, cited: r.aquameshCited, rank: r.aquameshRetrievedRank, verdict: r.diagnosis?.verdict || null }].slice(-26);
+      }
+      /* turn the hand-made-page fixes into ready-to-merge branches */
+      if (CI || DRY) {
+        log('drafting page fixes...');
+        ai.drafts = await draftPageFixes(new Anthropic(), ROOT, REPO, actionList(ai), { dry: DRY || !CI, log });
+        const made = ai.drafts.filter(d => d.url);
+        if (made.length) actions.push(`Drafted ${made.length} ready-to-merge page fix(es): ${made.map(d => d.url).join(', ')}.`);
+        const rejected = ai.drafts.filter(d => d.rejected);
+        if (rejected.length) actions.push(`Threw away ${rejected.length} draft(s) that failed the checks.`);
       }
       const ok = ai.results.filter(r => !r.error && !r.skipped && r.citable !== false);
       actions.push(`Asked an AI answer engine ${ok.length} buyer questions; aquamesh.ai was cited in ${ok.filter(r => r.aquameshCited).length} ($${ai.usd}).`);

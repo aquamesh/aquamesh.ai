@@ -18,6 +18,8 @@ export const LIMITS = {
   maxFixFiles: 60,          // a rebuild that touches more than this is not "drift"
   maxIndexNowUrls: 100,
   aiBudgetUsd: 3,           // hard stop for the AI-search probe, per run
+  maxDraftsPerRun: 2,       // ready-to-merge page fixes drafted per weekly run
+  maxOpenDrafts: 4,         // stop drafting while this many await review
   weeklyEveryDays: 6.5
 };
 
@@ -79,6 +81,15 @@ export const AI_QUERIES = [
   'What does data center water usage effectiveness (WUE) measure, and what does it miss?',
   'How do you control cooling tower blowdown by conductivity, and what happens when the sensor drifts?'
 ];
+
+/* Alex: no visible changes to the landing page. The agent never targets it
+   with a suggested change or a drafted edit; its <head> can still be tuned. */
+export const NO_VISIBLE_CHANGES = new Set([`${SITE}/`]);
+
+/* Hand-made pages the agent may draft a ready-to-merge fix for. Not the
+   homepage, not case studies (figure provenance), not generated or synced
+   pages (blog/, basin/), not legal pages. */
+export const PR_PAGES = /^(industries\/[a-z0-9-]+|insights\/[a-z0-9-]+|company)\.html$/;
 
 /* Pages that can never be the answer to a buyer question. */
 export const NOT_ANSWER_PAGES = /\/(privacy|cookies|terms|do-not-sell)\.html$/;

@@ -44,7 +44,7 @@ export function detectDrift(root) {
   return { changed, added, deleted };
 }
 
-function fileForPath(root, pathname) {
+export function fileForPath(root, pathname) {
   const p = decodeURIComponent(pathname).replace(/^\//, '');
   return join(root, p === '' || p.endsWith('/') ? `${p}index.html` : p);
 }

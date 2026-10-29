@@ -12,7 +12,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
 import { MODEL } from '../lib/models.mjs';
-import { HOST, AI_QUERIES, LIMITS, NOT_ANSWER_PAGES, COMPETITORS } from './config.mjs';
+import { HOST, AI_QUERIES, LIMITS, NOT_ANSWER_PAGES, COMPETITORS, NO_VISIBLE_CHANGES } from './config.mjs';
 import { isPost, normalizeUrl } from './checks.mjs';
 
 const SYSTEM = `You are an AI search assistant. Answer the user's question the way a careful
@@ -90,7 +90,7 @@ export function matchPages(question, pages, n = 3) {
   const q = terms(question).filter(w => w !== 'aquamesh');
   if (!q.length) return [];
   return pages
-    .filter(p => p.parsed && !NOT_ANSWER_PAGES.test(p.url))
+    .filter(p => p.parsed && !NOT_ANSWER_PAGES.test(p.url) && !NO_VISIBLE_CHANGES.has(p.url))
     .map(p => {
       const t = p.parsed.title.toLowerCase(), d = p.parsed.description.toLowerCase(), x = p.parsed.text.toLowerCase();
       const score = q.reduce((s, w) => s + (t.includes(w) ? 3 : 0) + (d.includes(w) ? 2 : 0) + (x.includes(w) ? 1 : 0), 0) / (6 * q.length);
@@ -130,6 +130,9 @@ Classify each outside source the answer cited:
   deserve. Reddit and forum participation must be genuine, by a named person, disclosed.
 - CONTEST: outdated or wrong information about AquaMesh or its category to get corrected.
 - REFERENCE: regulators, standards bodies and papers to cite, not to influence.
+
+Never prescribe a visible change to the homepage (https://aquamesh.ai/): pick the best
+other page, or call it a missing page.
 
 Rules: AquaMesh recommends and operators decide; it does not actuate equipment. BOD is
 the only parameter it calibrates; everything else is spectral change analysis. Never
@@ -171,6 +174,10 @@ ${facts || '(no page on the site matches this question)'}` }]
   const d = Diagnosis.parse(JSON.parse(text));
   /* the site rule is never to name competitors, even in an internal to-do */
   for (const k of ['why', 'change']) for (const name of COMPETITORS) d[k] = d[k].replace(new RegExp(`\\b${name}\\b`, 'g'), 'a competitor');
+  if (d.target_page && NO_VISIBLE_CHANGES.has(normalizeUrl(d.target_page))) {
+    d.target_page = '';
+    if (d.verdict === 'weak_page') { d.verdict = 'missing_page'; d.owner = 'seo_pod'; }
+  }
   if (d.owner === 'seo_pod' && d.target_page && !isPost(d.target_page) && d.verdict !== 'missing_page') d.owner = 'alex';
   return { ...d, usd: +cost(msg.usage || {}).toFixed(4) };
 }

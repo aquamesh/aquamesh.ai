@@ -59,8 +59,11 @@ export function buildReport(run) {
 
   L.push('## Do this week');
   if (!todo.length) L.push(ai ? 'Nothing: every tracked question already cites aquamesh.ai, or none was diagnosed.' : 'The first AI-search check has not run yet.');
+  const drafts = Object.fromEntries((ai?.drafts || []).filter(d => d.url || d.skipped).map(d => [d.query, d]));
   todo.forEach((a, i) => {
-    L.push(`${i + 1}. **${OWNER[a.owner]}** · ${VERDICT[a.verdict]}${a.target_page ? ` · \`${short(a.target_page)}\`` : ''}: ${a.change}`);
+    const d = drafts[a.query];
+    const ready = d?.url ? ` **[Ready to merge: review the change](${d.url})**` : d?.skipped ? ' (a drafted fix is waiting for your review)' : '';
+    L.push(`${i + 1}. **${OWNER[a.owner]}** · ${VERDICT[a.verdict]}${a.target_page ? ` · \`${short(a.target_page)}\`` : ''}: ${a.change}${ready}`);
     L.push(`   <sub>Lost: "${a.query}". ${a.why}</sub>`);
   });
   for (const e of errors.filter(e => buyerPages.has(e.url))) L.push(`- **Fix first** (buyer page): \`${short(e.url)}\` ${e.msg}`);

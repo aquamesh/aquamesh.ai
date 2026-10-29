@@ -20,6 +20,7 @@ permissions:
   contents: write   # regenerated files to main, history to seo-agent-data
   issues: write     # the rolling report issue
   pages: write      # ask Pages to build after the agent pushes
+  pull-requests: write  # ready-to-merge page fixes (needs the repo to allow Actions PRs)
 
 concurrency:
   group: aquamesh-seo-agent
