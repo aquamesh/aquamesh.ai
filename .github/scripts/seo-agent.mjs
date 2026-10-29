@@ -156,6 +156,7 @@ async function main() {
 
   /* 4-5. weekly */
   let lh = state.lighthouse || null, ai = state.ai || null;
+  const aiHistory = { ...(state.aiHistory || {}) };
   if (weekly) {
     log('lighthouse...');
     const newest = crawl.sitemap.filter(e => isPost(e.loc)).sort((a, b) => (a.lastmod < b.lastmod ? 1 : -1))[0]?.loc;
@@ -177,7 +178,11 @@ async function main() {
 
     if (process.env.ANTHROPIC_API_KEY) {
       log('AI search probe...');
-      ai = { at, ...(await probeAiSearch({ log })) };
+      ai = { at, ...(await probeAiSearch({ log, crawl, findings })) };
+      /* the rerun loop: remember each question's result so movement shows */
+      for (const r of ai.results.filter(r => !r.error && !r.skipped && r.citable)) {
+        aiHistory[r.query] = [...(aiHistory[r.query] || []), { at, cited: r.aquameshCited, rank: r.aquameshRetrievedRank, verdict: r.diagnosis?.verdict || null }].slice(-26);
+      }
       const ok = ai.results.filter(r => !r.error && !r.skipped && r.citable !== false);
       actions.push(`Asked an AI answer engine ${ok.length} buyer questions; aquamesh.ai was cited in ${ok.filter(r => r.aquameshCited).length} ($${ai.usd}).`);
     } else actions.push('AI search probe skipped: ANTHROPIC_API_KEY is not set.');
@@ -189,7 +194,7 @@ async function main() {
   /* 6. report */
   const prevFindings = state.findings || null;
   const diff = prevFindings ? diffFindings(prevFindings, findings) : null;
-  const run = { at, crawl: { pages: crawl.pages.size }, findings, diff, actions, lighthouse: lh, ai, weekly, dryRun: DRY, fix };
+  const run = { at, crawl: { pages: crawl.pages.size }, findings, diff, actions, lighthouse: lh, ai, aiHistory, weekly, dryRun: DRY, fix };
   const report = buildReport(run);
   const notice = prevFindings ? buildNotice(run) : 'First run of the SEO agent. The report above is the baseline.';
 
@@ -209,7 +214,7 @@ async function main() {
   if (!DRY) {
     writeFileSync(join(DATA, 'state.json'), JSON.stringify({
       version: 1, lastRunAt: at, weeklyAt: weekly ? at : state.weeklyAt,
-      findings, pageHashes, indexnow, lighthouse: lh, ai,
+      findings, pageHashes, indexnow, lighthouse: lh, ai, aiHistory,
       fixes: [...(state.fixes || []), ...(fix?.pushed ? [{ at, sha: fix.sha, files: fix.files, verify: fix.verify }] : [])].slice(-30)
     }, null, 2) + '\n');
   }

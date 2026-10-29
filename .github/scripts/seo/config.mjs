@@ -60,20 +60,27 @@ export const COMPETITORS = ['Gradiant', 'Inframark', 'Ecolab', 'Veolia', 'Xylem'
 /* Weekly Lighthouse runs (mobile, simulated throttling). */
 export const LIGHTHOUSE_PAGES = ['/', '/blog/', '{newest-post}', '/case-studies/water-reuse-plant.html', '/industries/industrial-water.html'];
 
-/* Weekly AI-search probe: questions a buyer asks an AI assistant. The agent
-   records whether aquamesh.ai is retrieved and whether it is cited. Edit
-   freely; keep it under a dozen so the weekly cost stays near a dollar. */
+/* Weekly AI-search probe. Start from the decisions a buyer makes before
+   choosing something like AquaMesh, not from keywords, then ask them the way
+   a buyer asks an AI assistant. Each lost question gets diagnosed and one
+   fix. Keep the wording stable: the week-over-week trend is keyed on it.
+   About 6 cents a question. */
 export const AI_QUERIES = [
   'What is AquaMesh (aquamesh.ai) and what does it do?',
   'What AI software helps industrial water and wastewater plants cut operating costs?',
   'How can an industrial plant find energy and chemical savings in the historian data it already records?',
-  'How much of a wastewater treatment plant\'s electricity goes to aeration, and how do plants reduce it?',
-  'Why do parallel blowers or pumps at a treatment plant drift apart in performance, and what does that cost?',
-  'How does intermittent aeration work for nitrogen removal, and how precise do dissolved oxygen sensors need to be?',
-  'What does data center water usage effectiveness (WUE) measure, and what does it miss?',
-  'What do California\'s new data center water use reporting rules require?',
+  'How can a wastewater plant cut aeration blower energy without buying new equipment?',
+  'What is the fastest way for a food or beverage plant to find product and water losses going down the drain?',
+  'Should an industrial plant use online water quality sensors or lab sampling to monitor its wastewater discharge?',
   'Can UV-Vis spectral sensors monitor industrial wastewater continuously instead of lab samples?',
+  'Why do parallel blowers or pumps at a treatment plant drift apart in performance, and what does that cost?',
+  'How can a data center cut cooling tower water use and prove it under new water reporting rules?',
+  'What do California\'s new data center water use reporting rules require?',
+  'What does data center water usage effectiveness (WUE) measure, and what does it miss?',
   'How do you control cooling tower blowdown by conductivity, and what happens when the sensor drifts?'
 ];
+
+/* Pages that can never be the answer to a buyer question. */
+export const NOT_ANSWER_PAGES = /\/(privacy|cookies|terms|do-not-sell)\.html$/;
 
 export const INDEXNOW_KEY = '5b0a495408e1b61a8c0edf1626010a1b';

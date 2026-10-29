@@ -6,7 +6,8 @@ import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { parsePage, pageFindings, homepageFindings, siteFindings, parseSitemap, parseRobots, diffFindings, normalizeUrl } from './checks.mjs';
 import { isGenerated, timestampOnly, gateFix, detectDrift } from './fix.mjs';
-import { collectSources, summarize } from './ai-search.mjs';
+import { collectSources, summarize, matchPages, diagnose } from './ai-search.mjs';
+import { actionList, buildReport } from './report.mjs';
 import { changedUrls } from './indexnow.mjs';
 import { vitalsFindings } from './lighthouse.mjs';
 
@@ -217,7 +218,7 @@ test('collectSources finds results and citations wherever they sit', () => {
   assert.equal(s.aquameshCited, true);
   assert.deepEqual(s.topCitedDomains.sort(), ['aquamesh.ai', 'epa.gov']);
   assert.equal(s.answer, 'Answer. More.');
-  assert.deepEqual(collectSources({ type: 'web_search_tool_result', content: { type: 'web_search_tool_result_error', error_code: 'max_uses_exceeded' } }), { retrieved: [], cited: [] });
+  assert.deepEqual(collectSources({ type: 'web_search_tool_result', content: { type: 'web_search_tool_result_error', error_code: 'max_uses_exceeded' } }), { retrieved: [], cited: [], titles: {} });
 });
 
 test('dynamic-filtering shapes: search_result{source}, citations by source, answer after the last tool round', () => {
@@ -249,4 +250,37 @@ test('vitals thresholds', () => {
   const f = vitalsFindings({ url: S, lcpMs: 5200, cls: 0.12, tbtMs: 90, seo: 100, failingSeo: [], performance: 60 }, { performance: 75 });
   assert.deepEqual(ids(f).sort(), ['cwv-cls', 'cwv-lcp', 'cwv-regression']);
   assert.equal(f.find(x => x.id === 'cwv-lcp').sev, 'error');
+});
+
+test('matchPages finds the page that answers a question, never a legal page', () => {
+  const c = crawlOf([
+    [`${S}/blog/aeration.html`, page({ title: 'Aeration blower energy at wastewater plants', canonical: `${S}/blog/aeration.html`, body: '<p>blower energy aeration wastewater</p>' })],
+    [`${S}/industries/data-centers.html`, page({ title: 'Data center cooling water', canonical: `${S}/industries/data-centers.html` })],
+    [`${S}/privacy.html`, page({ title: 'Privacy: aeration blower energy wastewater', canonical: `${S}/privacy.html` })]
+  ]);
+  const m = matchPages('How can a wastewater plant cut aeration blower energy?', [...c.pages.values()]);
+  assert.equal(m[0].url, `${S}/blog/aeration.html`);
+  assert.ok(!m.some(x => x.url.endsWith('/privacy.html')));
+});
+
+test('diagnose scrubs competitor names and keeps the SEO pod on blog posts', async () => {
+  const reply = { verdict: 'weak_page', target_page: `${S}/industries/municipal.html`, why: 'Xylem has a clearer page.', change: 'Answer the question in the first paragraph, unlike Veolia.',
+    owner: 'seo_pod', sources: [{ url: 'https://www.reddit.com/r/Wastewater/x', kind: 'reddit', action: 'EARN', note: 'operators compare tools here' }] };
+  const client = { messages: { create: async () => ({ stop_reason: 'end_turn', content: [{ type: 'text', text: JSON.stringify(reply) }], usage: {} }) } };
+  const d = await diagnose(client, { query: 'q', aquameshRetrievedRank: null, answer: 'a', citedSources: [] }, [], 'AquaMesh');
+  assert.ok(!/Xylem|Veolia/.test(d.why + d.change));
+  assert.equal(d.owner, 'alex', 'the pod may only touch /blog/ posts');
+});
+
+test('report leads with one fix per lost question, most fixable first', () => {
+  const r = (query, verdict, extra = {}) => ({ query, citable: true, aquameshCited: false, topCitedDomains: [], answer: '',
+    diagnosis: { verdict, target_page: `${S}/blog/x.html`, why: 'w', change: `fix ${verdict}`, owner: 'seo_pod', sources: [{ url: 'https://g2.com/x', kind: 'review_site', action: 'CLAIM', note: 'n' }] }, ...extra });
+  const ai = { at: '2026-10-29T00:00:00Z', engine: 'e', usd: 0, results: [r('a', 'third_party'), r('b', 'crawl_problem'), { query: 'c', citable: true, aquameshCited: true, topCitedDomains: [], answer: '' }] };
+  assert.deepEqual(actionList(ai).map(a => a.verdict), ['crawl_problem', 'third_party']);
+  const md = buildReport({ at: ai.at, crawl: { pages: 3 }, findings: [], diff: null, actions: [], lighthouse: null, ai, aiHistory: { c: [{ cited: false }, { cited: true }] }, weekly: true });
+  assert.match(md, /AI answers that cite aquamesh.ai: 1 of 3/);
+  assert.ok(md.indexOf('## Do this week') < md.indexOf('## Site health'));
+  assert.match(md, /1\. \*\*SEO pod\*\* · crawl problem/);
+  assert.match(md, /\*\*CLAIM\*\*/);
+  assert.match(md, /no → yes/);
 });
