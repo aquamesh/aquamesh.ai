@@ -78,26 +78,43 @@ function cost(usage) {
     + (usage.server_tool_use?.web_search_requests || 0) * PRICE.search;
 }
 
+/* Plain web search on purpose. The newer dynamic-filtering variant reads
+   results through code execution, so its answers carry no citations, and
+   "was aquamesh.ai cited" is the number this probe exists to track. If the
+   API ever rejects the plain variant, fall back and mark citations n/a. */
+const PLAIN = 'web_search_20250305', DYNAMIC = 'web_search_20260209';
+let searchTool = PLAIN;
+
 async function ask(client, query) {
   const content = [];
   let spent = 0;
   let messages = [{ role: 'user', content: query }];
   for (let turn = 0; turn < 3; turn++) {
-    const msg = await client.messages.create({
-      model: MODEL,
-      max_tokens: 8000,
-      output_config: { effort: 'low' },
-      system: SYSTEM,
-      tools: [{ type: 'web_search_20260209', name: 'web_search', max_uses: 4 }],
-      messages
-    });
+    let msg;
+    try {
+      msg = await client.messages.create({
+        model: MODEL,
+        max_tokens: 8000,
+        output_config: { effort: 'low' },
+        system: SYSTEM,
+        tools: [{ type: searchTool, name: 'web_search', max_uses: 4 }],
+        messages
+      });
+    } catch (e) {
+      if (searchTool === PLAIN && e.status === 400 && /web_search|tool/i.test(e.message)) {
+        searchTool = DYNAMIC;
+        turn--;
+        continue;
+      }
+      throw e;
+    }
     content.push(...msg.content);
     spent += cost(msg.usage || {});
-    if (msg.stop_reason === 'refusal') return { content, spent, refused: true };
+    if (msg.stop_reason === 'refusal') return { content, spent, refused: true, tool: searchTool };
     if (msg.stop_reason !== 'pause_turn') break;
     messages = [{ role: 'user', content: query }, { role: 'assistant', content }];
   }
-  return { content, spent };
+  return { content, spent, tool: searchTool };
 }
 
 export async function probeAiSearch({ log = () => {}, queries = AI_QUERIES } = {}) {
@@ -112,9 +129,9 @@ export async function probeAiSearch({ log = () => {}, queries = AI_QUERIES } = {
     try {
       const r = await ask(client, q);
       spent += r.spent;
-      results.push({ ...summarize(q, r.content), refused: Boolean(r.refused), usd: +r.spent.toFixed(4) });
+      results.push({ ...summarize(q, r.content), refused: Boolean(r.refused), citable: r.tool === PLAIN, tool: r.tool, usd: +r.spent.toFixed(4) });
       const last = results.at(-1);
-      log(`  "${q.slice(0, 60)}": retrieved ${last.aquameshRetrievedRank ? `#${last.aquameshRetrievedRank}` : 'no'}, cited ${last.aquameshCited ? 'yes' : 'no'}`);
+      log(`  "${q.slice(0, 60)}": retrieved ${last.aquameshRetrievedRank ? `#${last.aquameshRetrievedRank}` : 'no'}, cited ${last.citable ? (last.aquameshCited ? 'yes' : 'no') : 'n/a'} (${last.citedCount} citations)`);
     } catch (e) {
       results.push({ query: q, error: `${e.status || ''} ${e.message}`.trim() });
       log(`  "${q.slice(0, 60)}": error ${e.message}`);

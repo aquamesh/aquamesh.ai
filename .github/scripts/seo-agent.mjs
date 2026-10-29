@@ -178,7 +178,7 @@ async function main() {
     if (process.env.ANTHROPIC_API_KEY) {
       log('AI search probe...');
       ai = { at, ...(await probeAiSearch({ log })) };
-      const ok = ai.results.filter(r => !r.error && !r.skipped);
+      const ok = ai.results.filter(r => !r.error && !r.skipped && r.citable !== false);
       actions.push(`Asked an AI answer engine ${ok.length} buyer questions; aquamesh.ai was cited in ${ok.filter(r => r.aquameshCited).length} ($${ai.usd}).`);
     } else actions.push('AI search probe skipped: ANTHROPIC_API_KEY is not set.');
   } else {
@@ -200,7 +200,7 @@ async function main() {
   const hist = join(DATA, 'history.csv');
   if (!existsSync(hist)) writeFileSync(hist, 'date,errors,warnings,pages,indexnow_sent,fix_files,ai_cited,ai_asked,home_perf,home_lcp_ms\n');
   const home = lh?.results?.find(r => r.url === `${SITE}/`);
-  const okAi = weekly && ai ? ai.results.filter(r => !r.error && !r.skipped) : null;
+  const okAi = weekly && ai ? ai.results.filter(r => !r.error && !r.skipped && r.citable !== false) : null;
   appendFileSync(hist, [at.slice(0, 10), findings.filter(x => x.sev === 'error').length, findings.filter(x => x.sev === 'warn').length,
     crawl.pages.size, (!DRY && changed.length && indexnow?.ok) ? indexnow.sent : 0, fix?.pushed ? fix.files.length : 0,
     okAi ? okAi.filter(r => r.aquameshCited).length : '', okAi ? okAi.length : '',

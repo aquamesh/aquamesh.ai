@@ -58,14 +58,16 @@ export function buildReport(run) {
   if (ai) {
     L.push(`## AI search visibility (${ai.engine}, ${ai.at.slice(0, 10)})`);
     const ok = ai.results.filter(r => !r.error && !r.skipped);
-    const cited = ok.filter(r => r.aquameshCited).length, seen = ok.filter(r => r.aquameshRetrievedRank).length;
-    L.push(`aquamesh.ai was **cited in ${cited} of ${ok.length}** answers and retrieved in ${seen}. Cost $${ai.usd}.`);
+    const citable = ok.filter(r => r.citable !== false);
+    const cited = citable.filter(r => r.aquameshCited).length, seen = ok.filter(r => r.aquameshRetrievedRank).length;
+    L.push(`aquamesh.ai was **cited in ${cited} of ${citable.length}** answers and retrieved by the search in ${seen} of ${ok.length}. Cost $${ai.usd}.`);
     L.push('');
     L.push('| Buyer question | Retrieved | Cited | Sources the answer cited |');
     L.push('|---|---|---|---|');
     for (const r of ai.results) {
       if (r.error || r.skipped) { L.push(`| ${esc(r.query)} | n/a | n/a | ${esc(r.error || r.skipped)} |`); continue; }
-      L.push(`| ${esc(r.query)} | ${r.aquameshRetrievedRank ? `#${r.aquameshRetrievedRank}` : 'no'} | ${r.aquameshCited ? '**yes**' : (r.refused ? 'refused' : 'no')} | ${esc(r.topCitedDomains.join(', ') || 'none')} |`);
+      const cited = r.citable === false ? 'n/a' : r.aquameshCited ? '**yes**' : (r.refused ? 'refused' : 'no');
+      L.push(`| ${esc(r.query)} | ${r.aquameshRetrievedRank ? `#${r.aquameshRetrievedRank}` : 'no'} | ${cited} | ${esc(r.topCitedDomains.join(', ') || (r.citable === false ? 'n/a' : 'none'))} |`);
     }
     const brand = ai.results[0];
     if (brand?.answer) {
@@ -115,7 +117,7 @@ export function buildNotice(run) {
   const fixedErrors = (diff?.resolved || []).filter(x => x.sev === 'error');
   if (fixedErrors.length) lines.push(`${fixedErrors.length} error(s) resolved since the last run.`);
   if (weekly && ai) {
-    const ok = ai.results.filter(r => !r.error && !r.skipped);
+    const ok = ai.results.filter(r => !r.error && !r.skipped && r.citable !== false);
     lines.push(`Weekly: aquamesh.ai cited in ${ok.filter(r => r.aquameshCited).length} of ${ok.length} AI answers; Lighthouse and external links re-checked.`);
   }
   return lines.join('\n\n');
