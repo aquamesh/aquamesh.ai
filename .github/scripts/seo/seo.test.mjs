@@ -10,6 +10,7 @@ import { collectSources, summarize, matchPages, diagnose } from './ai-search.mjs
 import { actionList, buildReport } from './report.mjs';
 import { changedUrls } from './indexnow.mjs';
 import { vitalsFindings } from './lighthouse.mjs';
+import { linksBack, pressFindings, pressCitations, loadPress } from './press.mjs';
 
 const S = 'https://aquamesh.ai';
 const words = (n) => Array.from({ length: n }, (_, i) => `word${i}`).join(' ');
@@ -321,4 +322,18 @@ test('validateDraft accepts a clean insertion and rejects invented figures, outs
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
+});
+
+test('trade press: link-back, missing listing, blocked publishers, AI citations', () => {
+  assert.equal(linksBack('<a href="https://aquamesh.ai/">AquaMesh</a>'), true);
+  assert.equal(linksBack('<a href="https://www.aquamesh.ai">x</a>'), true);
+  assert.equal(linksBack('<a href="https://aquamesh.ai.evil.com">x</a> aquamesh.ai in text'), false);
+  const a = { publication: 'Dairy Foods', url: 'https://www.dairyfoods.com/articles/1-x', status: 200, linksBack: false };
+  const b = { publication: 'Processing', url: 'https://www.processingmagazine.com/a/2', status: 403, linksBack: null };
+  const ids = pressFindings([a, b], `<a href="${b.url}">`).map(x => x.id).sort();
+  assert.deepEqual(ids, ['press-no-link', 'press-not-listed']);
+  const ai = { results: [{ query: 'q1', citedSources: [{ url: 'https://www.dairyfoods.com/articles/1-x#top' }] }, { query: 'q2', citedSources: [] }] };
+  assert.deepEqual(pressCitations(ai, [a, b]).map(c => c.query), ['q1']);
+  const repo = loadPress(join(import.meta.dirname, '..', '..', '..'));
+  assert.ok(repo.length >= 1 && repo.every(x => x.title && x.publication && /^https:\/\//.test(x.url) && /^\d{4}-\d{2}-\d{2}$/.test(x.date)));
 });

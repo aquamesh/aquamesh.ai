@@ -381,6 +381,10 @@ const pages = [
   ['/basin/methodology.html', 'Basin methodology', 'How Basin estimates a data center’s water use, with every parameter and its source.']
 ];
 
+/* Articles AquaMesh people wrote for trade publications. press.json is the one
+   list; company.html shows it and the SEO agent checks each is still up. */
+const press = existsSync(join(ROOT, 'press.json')) ? JSON.parse(read('press.json')).sort((a, b) => (a.date < b.date ? 1 : -1)) : [];
+
 write('llms.txt', `# ${BRAND}
 
 > ${ORG.description} ${BRAND} is advisory by default: it recommends, operators decide.
@@ -396,6 +400,9 @@ ${posts.map(p => `- [${p.title}](${p.url}): ${p.description} (${p.date}, ${p.min
 
 ${insights.length ? `## Insights
 ${insights.map(x => `- [${x.title}](${x.url}): ${x.desc}${x.date ? ` (${x.date})` : ''}`).join('\n')}
+
+` : ''}${press.length ? `## In the trade press
+${press.map(x => `- [${x.title}](${x.url}): by ${x.author}, ${x.publication} (${x.date})`).join('\n')}
 
 ` : ''}## Site
 ${pages.map(([u, t, d]) => `- [${t}](${SITE}${u}): ${d}`).join('\n')}

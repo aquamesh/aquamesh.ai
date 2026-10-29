@@ -41,7 +41,7 @@ export function actionList(ai, max = 8) {
 const trend = (hist = []) => hist.slice(-4).map(h => (h.cited ? 'yes' : 'no')).join(' → ') || 'new';
 
 export function buildReport(run) {
-  const { at, crawl, findings, diff, actions, lighthouse, ai, aiHistory = {}, weekly, dryRun } = run;
+  const { at, crawl, findings, diff, actions, lighthouse, ai, aiHistory = {}, press, weekly, dryRun } = run;
   const errors = findings.filter(x => x.sev === 'error');
   const warns = findings.filter(x => x.sev === 'warn');
   const infos = findings.filter(x => x.sev === 'info');
@@ -67,7 +67,16 @@ export function buildReport(run) {
     L.push(`   <sub>Lost: "${a.query}". ${a.why}</sub>`);
   });
   for (const e of errors.filter(e => buyerPages.has(e.url))) L.push(`- **Fix first** (buyer page): \`${short(e.url)}\` ${e.msg}`);
+  for (const r of (press?.results || []).filter(r => r.status === 200 && !r.linksBack)) L.push(`- **Alex** · trade press: ask ${r.publication} to link aquamesh.ai in your author bio on "${r.title}".`);
   L.push('');
+
+  if (press?.results?.length) {
+    const state = (r) => r.status === 200 ? (r.linksBack ? 'up, links to aquamesh.ai' : 'up, **no link to aquamesh.ai**') : [401, 403, 429].includes(r.status) ? 'could not check (publisher blocks robots)' : `**down** (HTTP ${r.status || r.error})`;
+    L.push(`## Trade press (${press.results.length} articles)`);
+    for (const r of press.results) L.push(`- [${r.publication}, ${r.date}](${r.url}): ${state(r)}`);
+    if (press.cited) L.push(`\nCited in AI answers to ${new Set(press.cited.map(c => c.query)).size} of the tracked buyer questions.`);
+    L.push('');
+  }
 
   if (ai) {
     L.push(`## AI search, question by question`);

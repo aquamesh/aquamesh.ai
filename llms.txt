@@ -27,6 +27,11 @@ what matters, and the first industrial BOD model is planned for validation again
 - [Liquid Cooling Water Quality Decisions](https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html): A practical way to separate facility water and technology cooling loops, interpret existing water quality signals, and define an operator response. (2026-09-29)
 - [UV/Vis Spectral Sensing and AI for Industrial Water](https://aquamesh.ai/insights/spectral-sensing-ai-industrial-water.html): How UV/Vis spectral sensing and AI process analytics work together to detect product loss, trace causes and verify operator decisions, with validation limits.
 
+## In the trade press
+- [The industrial AI gap isn't capability — it's deployability](https://www.processingmagazine.com/process-control-automation/article/55411691/the-industrial-ai-gap-isnt-capability-its-deployability): by Alex Towfigh, Processing (2026-10-27)
+- [The $1.5 Million Sewer Repair — And The Water-Quality Evidence Missing Upstream](https://www.wateronline.com/doc/the-million-sewer-repair-and-the-water-quality-evidence-missing-upstream-0001): by Alex Towfigh, Water Online (2026-10-26)
+- [Why dairy plants still miss their most expensive process losses](https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses): by Alex Towfigh, Dairy Foods (2026-10-12)
+
 ## Site
 - [Home](https://aquamesh.ai/): What AquaMesh does: reads a plant’s existing data, prices what it is losing, and hands operators a ranked list of changes.
 - [Company](https://aquamesh.ai/company.html): Origin at UC San Diego, the first sensor developed for Scripps Institution of Oceanography, the team and advisors.

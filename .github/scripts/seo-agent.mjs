@@ -40,6 +40,7 @@ import { lighthouse, vitalsFindings } from './seo/lighthouse.mjs';
 import Anthropic from '@anthropic-ai/sdk';
 import { probeAiSearch } from './seo/ai-search.mjs';
 import { draftPageFixes } from './seo/pr.mjs';
+import { checkPress, pressCitations } from './seo/press.mjs';
 import { buildReport, buildNotice, actionList } from './seo/report.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -157,9 +158,14 @@ async function main() {
   } else actions.push('IndexNow: no page content changed since the last run, nothing to submit.');
 
   /* 4-5. weekly */
-  let lh = state.lighthouse || null, ai = state.ai || null;
+  let lh = state.lighthouse || null, ai = state.ai || null, press = state.press || null;
   const aiHistory = { ...(state.aiHistory || {}) };
   if (weekly) {
+    log('trade press...');
+    press = { at, ...(await checkPress(ROOT, crawl)) };
+    findings.push(...press.findings);
+    actions.push(`Checked ${press.results.length} trade-press article(s): ${press.results.filter(r => r.linksBack).length} link to aquamesh.ai.`);
+
     log('lighthouse...');
     const newest = crawl.sitemap.filter(e => isPost(e.loc)).sort((a, b) => (a.lastmod < b.lastmod ? 1 : -1))[0]?.loc;
     const urls = LIGHTHOUSE_PAGES.map(p => (p === '{newest-post}' ? newest : SITE + p)).filter(Boolean);
@@ -194,24 +200,26 @@ async function main() {
         const rejected = ai.drafts.filter(d => d.rejected);
         if (rejected.length) actions.push(`Threw away ${rejected.length} draft(s) that failed the checks.`);
       }
+      press.cited = pressCitations(ai, press.results);
       const ok = ai.results.filter(r => !r.error && !r.skipped && r.citable !== false);
       actions.push(`Asked an AI answer engine ${ok.length} buyer questions; aquamesh.ai was cited in ${ok.filter(r => r.aquameshCited).length} ($${ai.usd}).`);
     } else actions.push('AI search probe skipped: ANTHROPIC_API_KEY is not set.');
   } else {
     /* carry last week's vitals findings forward so they do not flap */
     for (const r of lh?.results || []) if (!r.error) findings.push(...vitalsFindings(r));
+    findings.push(...(press?.findings || []));
   }
 
   /* 6. report */
   const prevFindings = state.findings || null;
   const diff = prevFindings ? diffFindings(prevFindings, findings) : null;
-  const run = { at, crawl: { pages: crawl.pages.size }, findings, diff, actions, lighthouse: lh, ai, aiHistory, weekly, dryRun: DRY, fix };
+  const run = { at, crawl: { pages: crawl.pages.size }, findings, diff, actions, lighthouse: lh, ai, aiHistory, press, weekly, dryRun: DRY, fix };
   const report = buildReport(run);
   const notice = prevFindings ? buildNotice(run) : 'First run of the SEO agent. The report above is the baseline.';
 
   mkdirSync(join(DATA, 'reports'), { recursive: true });
   writeFileSync(join(DATA, 'latest.md'), report + '\n');
-  writeFileSync(join(DATA, 'latest.json'), JSON.stringify({ at, findings, actions, lighthouse: lh, ai, indexnow, fix }, null, 2) + '\n');
+  writeFileSync(join(DATA, 'latest.json'), JSON.stringify({ at, findings, actions, lighthouse: lh, ai, press, indexnow, fix }, null, 2) + '\n');
   writeFileSync(join(DATA, 'reports', `${at.slice(0, 10)}.md`), report + '\n');
   const hist = join(DATA, 'history.csv');
   if (!existsSync(hist)) writeFileSync(hist, 'date,errors,warnings,pages,indexnow_sent,fix_files,ai_cited,ai_asked,home_perf,home_lcp_ms\n');
@@ -225,7 +233,7 @@ async function main() {
   if (!DRY) {
     writeFileSync(join(DATA, 'state.json'), JSON.stringify({
       version: 1, lastRunAt: at, weeklyAt: weekly ? at : state.weeklyAt,
-      findings, pageHashes, indexnow, lighthouse: lh, ai, aiHistory,
+      findings, pageHashes, indexnow, lighthouse: lh, ai, aiHistory, press,
       fixes: [...(state.fixes || []), ...(fix?.pushed ? [{ at, sha: fix.sha, files: fix.files, verify: fix.verify }] : [])].slice(-30)
     }, null, 2) + '\n');
   }
