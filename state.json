@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "lastRunAt": "2026-10-29T01:02:35.397Z",
+  "lastRunAt": "2026-10-29T19:12:19.037Z",
   "weeklyAt": "2026-10-29T01:02:35.397Z",
   "findings": [
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/company.html",
+      "msg": "Article missing dateModified, image"
     },
     {
       "sev": "warn",
@@ -17,21 +17,9 @@
     },
     {
       "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -59,9 +47,21 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
@@ -71,27 +71,9 @@
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-      "msg": "title is 102 chars; Google truncates near 60: \"Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-      "msg": "meta description is 227 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-      "msg": "title is 98 chars; Google truncates near 60: \"Data center WUE: what the metric measures, what it misses, and what it takes to move it | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-      "msg": "meta description is 209 chars (aim for 70 to 160)"
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
     },
     {
       "sev": "warn",
@@ -101,27 +83,15 @@
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
-      "msg": "title is 93 chars; Google truncates near 60: \"Aeration energy at wastewater plants: the cost, the waste, and the measurement gap | AquaMesh\""
-    },
-    {
-      "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
-      "msg": "meta description is 200 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "title is 92 chars; Google truncates near 60: \"California now asks data centers what they actually use, under penalty of perjury | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "meta description is 211 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
+      "msg": "title is 66 chars; Google truncates near 60: \"Cooling tower blowdown control: conductivity drift cost | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -144,14 +114,20 @@
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
-      "msg": "title is 111 chars; Google truncates near 60: \"Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh\""
+      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
+      "msg": "title is 98 chars; Google truncates near 60: \"Data center WUE: what the metric measures, what it misses, and what it takes to move it | AquaMesh\""
     },
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
-      "msg": "meta description is 189 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
+      "msg": "meta description is 209 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
+      "msg": "title is 67 chars; Google truncates near 60: \"Wastewater aeration energy: cost and the measurement gap | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -168,14 +144,38 @@
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
-      "msg": "title is 80 chars; Google truncates near 60: \"What 25 days of historian data actually shows about a treatment plant | AquaMesh\""
+      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
+      "msg": "title is 97 chars; Google truncates near 60: \"Intermittent aeration for nitrogen removal: what DO sensor precision actually controls | AquaMesh\""
     },
     {
-      "sev": "info",
-      "id": "geo-few-sources",
-      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
-      "msg": "cites 1 outside source(s); AI answer engines favour pages that cite primary sources"
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
+      "msg": "meta description is 209 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
+      "msg": "title is 92 chars; Google truncates near 60: \"California now asks data centers what they actually use, under penalty of perjury | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
+      "msg": "meta description is 211 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
+      "msg": "title is 111 chars; Google truncates near 60: \"Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
+      "msg": "meta description is 189 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -191,9 +191,9 @@
     },
     {
       "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
-      "msg": "links to https://www.energy.gov/sites/default/files/2014/05/f15/improving_pumping_system_performance.pdf (404)"
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
+      "msg": "title is 67 chars; Google truncates near 60: \"What a 25-day historian audit finds at a treatment plant | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -203,15 +203,9 @@
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
-      "msg": "title is 97 chars; Google truncates near 60: \"Intermittent aeration for nitrogen removal: what DO sensor precision actually controls | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
-      "msg": "meta description is 209 chars (aim for 70 to 160)"
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
+      "msg": "Article missing image"
     },
     {
       "sev": "warn",
@@ -224,18 +218,6 @@
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
-      "msg": "Article missing image"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
     },
     {
       "sev": "info",
@@ -281,47 +263,47 @@
     }
   ],
   "pageHashes": {
-    "https://aquamesh.ai/": "ddab2aa82f20512b",
-    "https://aquamesh.ai/case-studies/water-reuse-plant.html": "246c4b00ff4d0470",
+    "https://aquamesh.ai/case-studies/water-reuse-plant.html": "9138e0da8c9e0922",
+    "https://aquamesh.ai/company.html": "550b2c1bb234f64f",
     "https://aquamesh.ai/case-studies/": "6d74fb21a8515ee2",
-    "https://aquamesh.ai/company.html": "56609c6a74a004e2",
-    "https://aquamesh.ai/blog/": "d3ab7caae7f79e1d",
-    "https://aquamesh.ai/industries/food-beverage.html": "a1d92a576da523d9",
+    "https://aquamesh.ai/": "ddab2aa82f20512b",
+    "https://aquamesh.ai/blog/": "0f1b87387bb86c9d",
+    "https://aquamesh.ai/industries/food-beverage.html": "bb1dd1acbcb6706d",
     "https://aquamesh.ai/industries/industrial-water.html": "3e9131130412df24",
     "https://aquamesh.ai/case-studies/starch-plant.html": "12d3bd5b81b6a9ff",
-    "https://aquamesh.ai/industries/municipal.html": "a589224b8b086d2d",
     "https://aquamesh.ai/industries/manufacturing.html": "20cee032d9c66d1d",
+    "https://aquamesh.ai/industries/municipal.html": "a589224b8b086d2d",
+    "https://aquamesh.ai/case-studies/refinery-complex.html": "c6839a761a96c282",
+    "https://aquamesh.ai/industries/pharma-biotech.html": "7e16ff499162ed20",
+    "https://aquamesh.ai/industries/data-centers.html": "82ea9779a8922110",
     "https://aquamesh.ai/privacy.html": "8e4ca457e7bb16d5",
     "https://aquamesh.ai/cookies.html": "8be6a9ae2ac9302d",
-    "https://aquamesh.ai/industries/data-centers.html": "82ea9779a8922110",
-    "https://aquamesh.ai/industries/pharma-biotech.html": "7e16ff499162ed20",
     "https://aquamesh.ai/terms.html": "709ea5969e6d1dde",
-    "https://aquamesh.ai/case-studies/refinery-complex.html": "c6839a761a96c282",
-    "https://aquamesh.ai/basin/": "339b2d3fdf0cec31",
     "https://aquamesh.ai/do-not-sell.html": "6be042b0b5d93674",
-    "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html": "f3c90ceac6e6b4b6",
-    "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html": "5a0db0a00d5dcd4c",
-    "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html": "394e5943b5519cf4",
-    "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html": "ec953255db1cc225",
-    "https://aquamesh.ai/blog/california-data-center-water-reporting.html": "c2fe732f33e72446",
+    "https://aquamesh.ai/basin/methodology.html": "c7764f0bc5db556e",
+    "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html": "2dce9a781e48cd1e",
+    "https://aquamesh.ai/basin/": "339b2d3fdf0cec31",
+    "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html": "c0475a8ec9449df8",
     "https://aquamesh.ai/case-studies/phosphate-complex.html": "ad8a3f92770f3681",
-    "https://aquamesh.ai/blog/connect-press-release-physical-ai.html": "d4f98dc88354e68d",
-    "https://aquamesh.ai/blog/dairy-foods-process-losses.html": "512f6423db28342f",
-    "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html": "6b61a814fc38c535",
-    "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html": "cb258218495562d8",
-    "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html": "2084d65c0aa53c76",
-    "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html": "06f531ccdf43939f",
-    "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html": "88ba992d84fbd634",
-    "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html": "f2e202543854f534",
+    "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html": "7e970ef6da5c29b6",
+    "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html": "e9f14ccb81312947",
+    "https://aquamesh.ai/blog/dairy-foods-process-losses.html": "f2fd8434b35b840d",
+    "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html": "e057e17b17981c0a",
+    "https://aquamesh.ai/blog/california-data-center-water-reporting.html": "660b9d292d45cfa6",
+    "https://aquamesh.ai/blog/connect-press-release-physical-ai.html": "48c0ada4330d0914",
+    "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html": "dcce4d71ad2c7a71",
+    "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html": "cf45ab5130002376",
+    "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html": "9c9e4fd13923f159",
     "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html": "d067bc530dff7a2f",
-    "https://aquamesh.ai/insights/spectral-sensing-ai-industrial-water.html": "4a90c35272050992",
-    "https://aquamesh.ai/basin/methodology.html": "c7764f0bc5db556e"
+    "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html": "69c245debefbcb7e",
+    "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html": "f2e202543854f534",
+    "https://aquamesh.ai/insights/spectral-sensing-ai-industrial-water.html": "06cc59a863b772dd"
   },
   "indexnow": {
-    "at": "2026-10-29T01:02:35.397Z",
+    "at": "2026-10-29T19:12:19.037Z",
     "ok": true,
     "status": 200,
-    "sent": 3,
+    "sent": 17,
     "note": ""
   },
   "lighthouse": {
@@ -1459,6 +1441,7 @@
       }
     ]
   },
+  "press": null,
   "fixes": [
     {
       "at": "2026-10-29T01:02:35.397Z",

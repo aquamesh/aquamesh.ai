@@ -82,7 +82,7 @@ How the engine describes AquaMesh when asked "What is AquaMesh (aquamesh.ai) and
 ## Site health (35 pages crawled)
 No errors.
 
-Since the last run: 4 new, 1 resolved.
+Since the last run: 1 new, 4 resolved.
 
 <details><summary>Core Web Vitals, lab, mobile (2026-10-29)</summary>
 
@@ -96,34 +96,38 @@ Since the last run: 4 new, 1 resolved.
 
 </details>
 
-<details><summary>44 warnings</summary>
+<details><summary>42 warnings</summary>
 
-- **desc-length** (14)
-  - `/blog/cooling-tower-blowdown-conductivity-sensor-drift.html`: meta description is 227 chars (aim for 70 to 160)
+- **desc-length** (12)
   - `/blog/data-center-wue-measurement-gap.html`: meta description is 209 chars (aim for 70 to 160)
-  - `/blog/aeration-energy-cost-wastewater-plants.html`: meta description is 200 chars (aim for 70 to 160)
   - `/blog/why-parallel-equipment-drifts.html`: meta description is 193 chars (aim for 70 to 160)
-  - `/`: meta description is 183 chars (aim for 70 to 160)
   - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
+  - `/`: meta description is 183 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
-  - `/blog/california-data-center-water-reporting.html`: meta description is 211 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
-  - `/blog/connect-press-release-physical-ai.html`: meta description is 189 chars (aim for 70 to 160)
   - `/blog/dairy-foods-process-losses.html`: meta description is 179 chars (aim for 70 to 160)
-  - and 2 more
+  - `/blog/intermittent-aeration-nitrogen-removal-do-control.html`: meta description is 209 chars (aim for 70 to 160)
+  - `/blog/california-data-center-water-reporting.html`: meta description is 211 chars (aim for 70 to 160)
+  - `/blog/connect-press-release-physical-ai.html`: meta description is 189 chars (aim for 70 to 160)
+  - `/blog/spectral-change-analysis-vs-calibrated-parameters.html`: meta description is 201 chars (aim for 70 to 160)
 - **title-length** (11)
-  - `/blog/cooling-tower-blowdown-conductivity-sensor-drift.html`: title is 102 chars; Google truncates near 60: "Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals | AquaMesh"
+  - `/blog/cooling-tower-blowdown-conductivity-sensor-drift.html`: title is 66 chars; Google truncates near 60: "Cooling tower blowdown control: conductivity drift cost | AquaMesh"
   - `/blog/data-center-wue-measurement-gap.html`: title is 98 chars; Google truncates near 60: "Data center WUE: what the metric measures, what it misses, and what it takes to move it | AquaMesh"
-  - `/blog/aeration-energy-cost-wastewater-plants.html`: title is 93 chars; Google truncates near 60: "Aeration energy at wastewater plants: the cost, the waste, and the measurement gap | AquaMesh"
-  - `/blog/what-25-days-of-historian-data-shows.html`: title is 80 chars; Google truncates near 60: "What 25 days of historian data actually shows about a treatment plant | AquaMesh"
+  - `/blog/aeration-energy-cost-wastewater-plants.html`: title is 67 chars; Google truncates near 60: "Wastewater aeration energy: cost and the measurement gap | AquaMesh"
   - `/blog/why-parallel-equipment-drifts.html`: title is 70 chars; Google truncates near 60: "Why parallel equipment drifts apart, and what the gap costs | AquaMesh"
+  - `/blog/what-25-days-of-historian-data-shows.html`: title is 67 chars; Google truncates near 60: "What a 25-day historian audit finds at a treatment plant | AquaMesh"
   - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
   - `/blog/water-online-sewer-repair-evidence.html`: title is 105 chars; Google truncates near 60: "In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh"
-  - `/blog/california-data-center-water-reporting.html`: title is 92 chars; Google truncates near 60: "California now asks data centers what they actually use, under penalty of perjury | AquaMesh"
-  - `/blog/connect-press-release-physical-ai.html`: title is 111 chars; Google truncates near 60: "Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh"
   - `/blog/dairy-foods-process-losses.html`: title is 90 chars; Google truncates near 60: "In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh"
   - `/blog/intermittent-aeration-nitrogen-removal-do-control.html`: title is 97 chars; Google truncates near 60: "Intermittent aeration for nitrogen removal: what DO sensor precision actually controls | AquaMesh"
+  - `/blog/california-data-center-water-reporting.html`: title is 92 chars; Google truncates near 60: "California now asks data centers what they actually use, under penalty of perjury | AquaMesh"
+  - `/blog/connect-press-release-physical-ai.html`: title is 111 chars; Google truncates near 60: "Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh"
+- **jsonld-article-fields** (4)
+  - `/company.html`: Article missing dateModified, image
+  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
+  - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
+  - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
 - **og-missing** (4)
   - `/privacy.html`: missing og:title, og:description; link previews degrade
   - `/cookies.html`: missing og:title, og:description; link previews degrade
@@ -131,12 +135,8 @@ Since the last run: 4 new, 1 resolved.
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
 - **jsonld-missing** (3)
   - `/case-studies/refinery-complex.html`: no JSON-LD structured data
-  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
-- **jsonld-article-fields** (3)
-  - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
-  - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
-  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
+  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
 - **cwv-lcp** (3)
   - `/`: LCP 3.0s on mobile (good is under 2.5s); element: <p class="lead">
   - `/blog/`: LCP 2.6s on mobile (good is under 2.5s); element: <h1>
@@ -148,15 +148,11 @@ Since the last run: 4 new, 1 resolved.
 - **html-weight** (2)
   - `/case-studies/refinery-complex.html`: HTML is 1841 KB
   - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
-- **external-link-broken** (1)
-  - `/blog/why-parallel-equipment-drifts.html`: links to https://www.energy.gov/sites/default/files/2014/05/f15/improving_pumping_system_performance.pdf (404)
 
 </details>
 
 <details><summary>Opportunities</summary>
 
-- **geo-few-sources** (1)
-  - `/blog/what-25-days-of-historian-data-shows.html`: cites 1 outside source(s); AI answer engines favour pages that cite primary sources
 - **geo-org-author** (1)
   - `/blog/`: 11 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)
 
@@ -164,14 +160,11 @@ Since the last run: 4 new, 1 resolved.
 
 <details><summary>What the agent did this run</summary>
 
-- Committed 1 regenerated file(s) whose sources had changed without a rebuild ([ded7f7e](https://github.com/aquamesh/aquamesh.ai/commit/ded7f7ea45f7ada10b7e4c5587ea381371d530f8)): sitemap.xml. verified live.
-- Crawled 35 live pages and 55 assets and files, plus 48 external links.
-- Told IndexNow (Bing, Copilot, Yandex) about 3 new or changed URL(s) (HTTP 200).
-- Ran Lighthouse (mobile) on 5 pages.
-- Drafted 2 ready-to-merge page fix(es): https://github.com/aquamesh/aquamesh.ai/compare/main...seo-agent%2Findustries-food-beverage?expand=1, https://github.com/aquamesh/aquamesh.ai/compare/main...seo-agent%2Finsights-spectral-sensing-ai-industrial-water?expand=1.
-- Asked an AI answer engine 12 buyer questions; aquamesh.ai was cited in 1 ($0.595).
+- Rebuilt the blog from committed sources: output already matches, nothing to commit.
+- Crawled 35 live pages and 55 assets and files.
+- Told IndexNow (Bing, Copilot, Yandex) about 17 new or changed URL(s) (HTTP 200).
 
 </details>
 
 ---
-Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) ran this time. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.
+Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) run every 7 days. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.
