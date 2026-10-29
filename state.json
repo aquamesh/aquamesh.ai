@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "lastRunAt": "2026-10-28T23:51:30.737Z",
-  "weeklyAt": "2026-10-28T23:51:30.737Z",
+  "lastRunAt": "2026-10-28T23:57:27.859Z",
+  "weeklyAt": "2026-10-28T23:57:27.859Z",
   "findings": [
     {
       "sev": "warn",
@@ -14,102 +14,6 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/",
       "msg": "meta description is 250 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "html-weight",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "HTML is 1383 KB"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-      "msg": "title is 102 chars; Google truncates near 60: \"Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-      "msg": "meta description is 227 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
-      "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
-      "msg": "title is 97 chars; Google truncates near 60: \"Intermittent aeration for nitrogen removal: what DO sensor precision actually controls | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
-      "msg": "meta description is 209 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-      "msg": "title is 98 chars; Google truncates near 60: \"Data center WUE: what the metric measures, what it misses, and what it takes to move it | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-      "msg": "meta description is 209 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
-      "msg": "title is 90 chars; Google truncates near 60: \"In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -137,6 +41,90 @@
     },
     {
       "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "html-weight",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "HTML is 1383 KB"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
+      "msg": "title is 102 chars; Google truncates near 60: \"Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
+      "msg": "meta description is 227 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
+      "msg": "title is 98 chars; Google truncates near 60: \"Data center WUE: what the metric measures, what it misses, and what it takes to move it | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
+      "msg": "meta description is 209 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
+      "msg": "title is 97 chars; Google truncates near 60: \"Intermittent aeration for nitrogen removal: what DO sensor precision actually controls | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
+      "msg": "meta description is 209 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
+      "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
+    },
+    {
+      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
       "msg": "title is 93 chars; Google truncates near 60: \"Aeration energy at wastewater plants: the cost, the waste, and the measurement gap | AquaMesh\""
@@ -146,6 +134,18 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
       "msg": "meta description is 200 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
+      "msg": "title is 90 chars; Google truncates near 60: \"In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -174,6 +174,24 @@
     {
       "sev": "warn",
       "id": "title-length",
+      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
+      "msg": "title is 92 chars; Google truncates near 60: \"California now asks data centers what they actually use, under penalty of perjury | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
+      "msg": "meta description is 211 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
       "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
       "msg": "title is 70 chars; Google truncates near 60: \"Why parallel equipment drifts apart, and what the gap costs | AquaMesh\""
     },
@@ -191,12 +209,6 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
       "msg": "Article missing image"
@@ -204,25 +216,13 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "title is 92 chars; Google truncates near 60: \"California now asks data centers what they actually use, under penalty of perjury | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "meta description is 211 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
       "msg": "Article missing image"
     },
     {
@@ -235,25 +235,7 @@
       "sev": "error",
       "id": "cwv-lcp",
       "url": "https://aquamesh.ai/",
-      "msg": "LCP 5.2s on mobile (poor is over 4s)"
-    },
-    {
-      "sev": "warn",
-      "id": "cwv-cls",
-      "url": "https://aquamesh.ai/",
-      "msg": "CLS 0.16 (good is under 0.1)"
-    },
-    {
-      "sev": "warn",
-      "id": "cwv-tbt",
-      "url": "https://aquamesh.ai/",
-      "msg": "Total blocking time 209 ms (good is under 200 ms)"
-    },
-    {
-      "sev": "warn",
-      "id": "cwv-lcp",
-      "url": "https://aquamesh.ai/blog/",
-      "msg": "LCP 2.5s on mobile (good is under 2.5s)"
+      "msg": "LCP 5.0s on mobile (poor is over 4s); element: <p class=\"lead\">"
     },
     {
       "sev": "warn",
@@ -265,13 +247,19 @@
       "sev": "warn",
       "id": "cwv-lcp",
       "url": "https://aquamesh.ai/case-studies/water-reuse-plant.html",
-      "msg": "LCP 2.5s on mobile (good is under 2.5s)"
+      "msg": "LCP 2.5s on mobile (good is under 2.5s); element: <p class=\"lead\">"
+    },
+    {
+      "sev": "warn",
+      "id": "cwv-cls",
+      "url": "https://aquamesh.ai/case-studies/water-reuse-plant.html",
+      "msg": "CLS 0.119 (good is under 0.1)"
     },
     {
       "sev": "warn",
       "id": "cwv-lcp",
       "url": "https://aquamesh.ai/industries/industrial-water.html",
-      "msg": "LCP 2.9s on mobile (good is under 2.5s)"
+      "msg": "LCP 2.9s on mobile (good is under 2.5s); element: <img src=\"../assets/industries/industrial-water.jpg\" width=\"1000\" height=\"666\" fetchpriority=\"high\" decoding=\"async\" alt=\"A treatment basin at an operating wate"
     },
     {
       "sev": "warn",
@@ -323,20 +311,20 @@
     "note": ""
   },
   "lighthouse": {
-    "at": "2026-10-28T23:51:30.737Z",
+    "at": "2026-10-28T23:57:27.859Z",
     "results": [
       {
         "url": "https://aquamesh.ai/",
-        "performance": 66,
+        "performance": 75,
         "accessibility": 97,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 5171,
-        "cls": 0.16,
-        "tbtMs": 209,
-        "fcpMs": 2741,
+        "lcpMs": 5012,
+        "cls": 0.036,
+        "tbtMs": 172,
+        "fcpMs": 2702,
         "failingSeo": [],
-        "lcpElement": null
+        "lcpElement": "<p class=\"lead\">"
       },
       {
         "url": "https://aquamesh.ai/blog/",
@@ -344,38 +332,38 @@
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2534,
+        "lcpMs": 2488,
         "cls": 0.16,
         "tbtMs": 0,
-        "fcpMs": 2534,
+        "fcpMs": 2488,
         "failingSeo": [],
-        "lcpElement": null
+        "lcpElement": "<h1>"
       },
       {
         "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-        "performance": 97,
+        "performance": 92,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 1629,
+        "lcpMs": 2494,
         "cls": 0.092,
         "tbtMs": 0,
-        "fcpMs": 1629,
+        "fcpMs": 2494,
         "failingSeo": [],
-        "lcpElement": null
+        "lcpElement": "<h1>"
       },
       {
         "url": "https://aquamesh.ai/case-studies/water-reuse-plant.html",
-        "performance": 93,
+        "performance": 90,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2535,
-        "cls": 0.04,
+        "lcpMs": 2529,
+        "cls": 0.119,
         "tbtMs": 0,
-        "fcpMs": 2535,
+        "fcpMs": 2529,
         "failingSeo": [],
-        "lcpElement": null
+        "lcpElement": "<p class=\"lead\">"
       },
       {
         "url": "https://aquamesh.ai/industries/industrial-water.html",
@@ -383,17 +371,17 @@
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2881,
+        "lcpMs": 2880,
         "cls": 0.146,
-        "tbtMs": 11,
-        "fcpMs": 2538,
+        "tbtMs": 0,
+        "fcpMs": 2485,
         "failingSeo": [],
-        "lcpElement": null
+        "lcpElement": "<img src=\"../assets/industries/industrial-water.jpg\" width=\"1000\" height=\"666\" fetchpriority=\"high\" decoding=\"async\" alt=\"A treatment basin at an operating wate"
       }
     ]
   },
   "ai": {
-    "at": "2026-10-28T23:51:30.737Z",
+    "at": "2026-10-28T23:57:27.859Z",
     "engine": "Claude web search",
     "results": [
       {
@@ -409,9 +397,15 @@
           "https://aquamesh.ai/products/aquaspectra-probe/"
         ],
         "topCitedDomains": [],
-        "answer": "r is a string; parse.**AquaMesh** is a San Diego-based industrial AI company. It builds \"physical AI\" meant to help industrial facilities produce more, waste less and prevent expensive problems before they happen. It combines existing plant data with real-time sensing to detect process problems early. The same source says it is raising a $3 million seed round.\n\n**What it does**\n- Its site describes industrial water AI analytics, existing SCADA data and targeted UV/Vis spectral sensing used to detect losses, diagnose causes and support operator-approved optimization.\n- It prices what a plant is losing (product, energy, chemicals, downtime) and tells operators which change pays the most this w",
+        "answer": "**AquaMesh** is a San Diego-based industrial AI company. It describes its work as building physical AI to help industrial facilities produce more, waste less and prevent expensive problems before they happen.\n\n**What it does**\n- It combines industrial water AI analytics, existing SCADA data and targeted UV/Vis spectral sensing. The aim is to detect losses, diagnose causes and support operator-approved optimization.\n- It prices what a plant is losing (product, energy, chemicals, downtime) and tells operators which change pays the most that week.\n- It is advisory by default. It recommends, operators decide, and nothing writes to the control system.\n\n**Products**\n- AquaSpectra Probe is an optic",
+        "blockTypes": {
+          "server_tool_use": 5,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 4,
+          "text": 19
+        },
         "refused": false,
-        "usd": 0.0951
+        "usd": 0.0955
       },
       {
         "query": "What AI software helps industrial water and wastewater plants cut operating costs?",
@@ -421,9 +415,15 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "Several kinds of AI software help water and wastewater plants cut operating costs. These are some named examples.\n\n**Named products and vendors**\n- **Jacobs.** Its Intelligent O&M offering uses operational intelligence to optimize energy and chemical use and stabilize processes. Its Hybrid Optimizer is a live digital twin that combines mechanistic models with machine learning to forecast plant performance and reduce operating costs.\n- **Streamwise D.I.** This Australian start-up's platform uses real-time data from IoT sensors, cameras and other instruments on customer machinery. One plant using it cut trade waste charges by 26% and operator oversight by 80%, saving about $250,000 a year. Tha",
+        "answer": "Several AI tools are aimed at cutting water and wastewater operating costs. I didn't check any vendor's savings claims independently.\n\n**Named products and platforms**\n- **Jacobs digital water solutions.** Jacobs offers operational intelligence that optimizes energy and chemical use, stabilizes processes and delivers cost savings. The tools include a Hybrid Optimizer and a Biological Performance Digital Twin.\n- **AquaSight APOLLO.** This is a wastewater treatment intelligence platform. It offers real-time insights to reduce costs, improve operations and prevent costly downtime. AquaSight also sells ATLAS for pump health and AURA for water network management.\n- **Streamwise D.I.** This Austra",
+        "blockTypes": {
+          "server_tool_use": 4,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 3,
+          "text": 15
+        },
         "refused": false,
-        "usd": 0.0948
+        "usd": 0.0775
       },
       {
         "query": "How can an industrial plant find energy and chemical savings in the historian data it already records?",
@@ -433,9 +433,15 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "To find savings in historian data, start by comparing actual consumption of energy and chemicals with what production actually required.\n\n1. **Normalize usage.** Divide kWh, steam, or chemical dose by throughput. Plot the result over time to see which periods or shifts are inefficient. Historians record time-series data, so tracking energy consumption and optimising processes based on historical data can result in significant energy savings and reduced operational costs.\n\n2. **Find your best demonstrated performance.** Look for periods when quality was in spec and usage was lowest. Use those periods as the target, and look for what was different about setpoints, loads, or conditions.\n\n3. **L",
+        "answer": "Search results were generic, so this answer mixes them with standard practice.\n\n**A practical approach**\n\n1. **Normalize the data first.** A historian is a time-series database that collects and stores high-speed process data from equipment, sensors and control systems. Contextualize tags by unit, product and operating mode, and clean out bad-quality and downtime periods.\n\n2. **Build energy baselines.** Regress energy use (steam, power, compressed air) against throughput, ambient conditions and product grade. Intervals that use much more than the model predicts show where energy is being wasted. Typical causes are:\n   - idle equipment left running\n   - excess pressure setpoints\n   - fouled e",
+        "blockTypes": {
+          "server_tool_use": 3,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 2,
+          "text": 5
+        },
         "refused": false,
-        "usd": 0.0581
+        "usd": 0.0588
       },
       {
         "query": "How much of a wastewater treatment plant's electricity goes to aeration, and how do plants reduce it?",
@@ -445,9 +451,15 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "Aeration usually accounts for about half of a plant's electricity, though the share varies by plant.\n\n- **Share of energy:** An EPRI summary reported by WaterWorld says aeration is the principal energy-using process in wastewater treatment, representing half the cost of total treatment. Biosolids processing and pumping come after it. EPA guidance in the same article says mechanical aerators, blowers, and diffusers account for the largest share of energy use. Other sources often give a range of roughly 45–60%. I didn't verify that range in this search.\n\n- **How plants reduce it:**\n  - **Audits and monitoring:** Energy audits or monitoring devices feeding into SCADA show staff where energy is ",
+        "answer": "Aeration usually takes about half of a plant's electricity, though the share varies by plant.\n\n- **Share of electricity:** Aeration and its electrical systems consume anywhere from 25 to 60% of a plant's power. A second source says the U.S. EPA reports that aeration typically represents 50–60% of total electricity consumption in activated sludge plants. The range depends on plant size, loading and site conditions.\n\n- **How plants cut it:**\n  - **Better diffusers:** Install fine bubble diffusers rather than coarse bubble or mechanical diffusers. Fine bubble membranes have many small holes, about 1–3 mm across, which transfer oxygen more efficiently.\n  - **Right-sizing and customizing:** Syste",
+        "blockTypes": {
+          "server_tool_use": 3,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 2,
+          "text": 9
+        },
         "refused": false,
-        "usd": 0.058
+        "usd": 0.0577
       },
       {
         "query": "Why do parallel blowers or pumps at a treatment plant drift apart in performance, and what does that cost?",
@@ -457,21 +469,33 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "Search results were thin on this exact topic, so this answer combines what I found with general engineering knowledge.\n\n**Why parallel units drift apart**\n- Identical machines rarely stay identical. Wear, fouling, clearance changes, different run hours, and sensor or instrument drift all shift each unit's curve. Inlet filters and diffusers also clog unevenly.\n- Parallel units share the same discharge pressure, so a stronger or weaker machine ends up carrying a different share of the flow.\n- Control makes it worse. Simple control often assumes the load splits equally. The one modelling study I found, on a Finnish plant, assumed the loading is distributed equally between the blowers. Real unit",
+        "answer": "Search results were thin on this exact question, so part of this answer comes from general engineering knowledge.\n\n**Why parallel machines drift apart**\n- Units that are nominally identical differ in wear, fouling, clearances, filters, and motor or VFD condition. At the same speed they therefore deliver different flow and draw different power.\n- Centrifugal machines share a common discharge pressure. Their curves differ slightly, so one unit takes more of the load. The stronger unit can push the weaker one toward surge or deadhead, or leave it unloaded.\n- Control loops tend to make this worse. Limited turndown can cause cyclic \"hunting\" of the blowers, which is often observed and causes exce",
+        "blockTypes": {
+          "server_tool_use": 3,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 2,
+          "text": 7
+        },
         "refused": false,
-        "usd": 0.0579
+        "usd": 0.0583
       },
       {
         "query": "How does intermittent aeration work for nitrogen removal, and how precise do dissolved oxygen sensors need to be?",
-        "retrievedCount": 9,
+        "retrievedCount": 19,
         "citedCount": 0,
         "aquameshRetrievedRank": null,
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "**How it works**\n\nIntermittent aeration alternates aerobic and anoxic phases in a single tank, or in a single batch reactor.\n\n- **Aerobic phase:** The blowers are on. Nitrifying bacteria oxidize ammonium to nitrite and then nitrate.\n- **Anoxic phase:** The blowers are off. Heterotrophs use the nitrate as an electron acceptor and the available organic carbon as food. This converts nitrate to N₂ gas.\n- **Control:** Timers are the simple option. Better systems use online NH₄⁺ and NO₃⁻ probes to switch phases. One recent study used rule-based control on those two signals. At a low loading rate, the controller kept the phases short and achieved complete nitrogen removal in under 60 minutes. At hi",
+        "answer": "Sources gave no specific precision figure, so I'll answer cautiously.\n\n**How it works**\nIntermittent aeration creates alternating aerated and non-aerated conditions that favor nitrification and denitrification, respectively. In the aerated phase, ammonium is oxidized to nitrite and nitrate. When the air is off, heterotrophs use the nitrate as an electron acceptor and the available organic carbon to produce N₂ gas. Both steps happen in one tank, with no separate anoxic zone or internal recycle. The approach is reported to make use of organic carbon for denitrification instead of oxidizing it with O₂, and to cut energy use and N₂O emissions. Nitrite-oxidizing bacteria are selectively inhibited",
+        "blockTypes": {
+          "server_tool_use": 5,
+          "web_search_tool_result": 3,
+          "code_execution_tool_result": 2,
+          "text": 11
+        },
         "refused": false,
-        "usd": 0.0612
+        "usd": 0.0831
       },
       {
         "query": "What does data center water usage effectiveness (WUE) measure, and what does it miss?",
@@ -481,9 +505,15 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "**What WUE measures:** Water use effectiveness is typically defined as the data center's total water consumption divided by the electricity demand of its IT equipment. It's usually expressed in liters per kWh. Consumption means water withdrawn from a source and permanently removed from it, for example by evaporation. The metric is useful for comparing water use across facilities.\n\n**What it misses:**\n- **Indirect water use.** WUE generally measures direct water use at the facility. It doesn't capture water consumed off-site to generate the electricity that powers the data center. The same gap applies to water used in manufacturing hardware or building materials.\n- **Energy–water tradeoffs.**",
+        "answer": "**What WUE measures:** Water use effectiveness is typically defined as the total water consumption of the data center divided by the electricity demand of the IT equipment. It's usually expressed in liters per kWh. Consumption means water withdrawn from a source and permanently removed from it, for example by evaporation. This lets you compare the water efficiency of different facilities.\n\n**What it misses:**\n- **Indirect water use.** WUE generally measures direct, facility-level water use. It doesn't capture water consumed in the off-site generation of the electricity that powers the data center. The same applies to water used in manufacturing hardware and building materials. A combined met",
+        "blockTypes": {
+          "server_tool_use": 3,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 2,
+          "text": 13
+        },
         "refused": false,
-        "usd": 0.0575
+        "usd": 0.0578
       },
       {
         "query": "What do California's new data center water use reporting rules require?",
@@ -493,9 +523,15 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "Content is truncated, so I'll go with what the sources say.\n\nCalifornia's new data center laws, which Gov. Newsom signed as a package of seven bills, add several water-related requirements. I could only read part of the source text, so the details below are limited to what it showed.\n\n- **Operational reporting (AB 1577):** Qualifying data centers must report on operations, energy use, water consumption, and related resource metrics.\n- **Project disclosures (AB 2469):** Certain new and expanded data center projects seeking local approvals must make water-related disclosures and assessments.\n- **Sources and planning (AB 2619):** It sets further reporting requirements on water use, water source",
+        "answer": "California's new data center water rules come from a package of seven bills. Gov. Newsom signed them on September 21, 2026. Two bills cover water.\n\n**AB 2619 (water reporting)**\n- Before applying for an initial city or county business license, owners and operators must give their water supplier a good-faith estimate. The estimate covers expected water use, its anticipated source, and projected volumes for the maximum day, maximum month, and average year. They make the estimate under penalty of perjury. They must also report the same figures on the license application.\n- At renewal, operators must report the prior calendar year's total and direct water use. They must also report the cooling s",
+        "blockTypes": {
+          "server_tool_use": 4,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 3,
+          "text": 15
+        },
         "refused": false,
-        "usd": 0.0902
+        "usd": 0.0781
       },
       {
         "query": "Can UV-Vis spectral sensors monitor industrial wastewater continuously instead of lab samples?",
@@ -505,9 +541,15 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "Yes, in many cases. The main limit is that they estimate parameters rather than measure them directly.\n\n- **What they can do:** Online UV-Vis sensors have been shown to quantify parameters including BOD, COD, nitrate, nitrite and total suspended solids in wastewater. The sensor doesn't measure these directly. It relies on data-analysis methods such as multiple linear regression and partial least squares to turn the spectra into surrogate values.\n\n- **Role versus lab samples:** Lab analysis of grab or composite samples is still the dominant method for compliance monitoring. The sensors are mainly used for process monitoring. That includes early warning of process upsets. They add to lab sampl",
+        "answer": "Yes, in many cases. UV-Vis spectral sensors can monitor wastewater continuously, but they work best as a complement to lab sampling and not as a full replacement.\n\n- **What they measure:** Studies have shown they can quantify BOD, COD, nitrate, nitrite and total suspended solids in wastewater. They don't measure these directly. They estimate them as \"surrogate parameters\" from the spectra. This uses data analysis methods such as multiple linear regression and partial least squares.\n- **Field evidence:** One case study used an online UV-Vis sensor to build surrogate monitors for TSS and COD. The authors present it as an early warning for process upset in a community system.\n- **Compliance ver",
+        "blockTypes": {
+          "server_tool_use": 3,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 2,
+          "text": 11
+        },
         "refused": false,
-        "usd": 0.0585
+        "usd": 0.0584
       },
       {
         "query": "How do you control cooling tower blowdown by conductivity, and what happens when the sensor drifts?",
@@ -517,12 +559,18 @@
         "aquameshCited": false,
         "aquameshUrls": [],
         "topCitedDomains": [],
-        "answer": "Conductivity control works like this:\n\n1. Conductivity is a proxy for dissolved solids. Dividing tower conductivity by makeup conductivity gives the cycles of concentration.\n2. You pick a setpoint that matches the cycles you want. Cycles are held by blowdown, which dumps some concentrated water so fresh makeup can dilute the loop. A conductivity controller automates this. When conductivity rises past the setpoint, commonly about 1,500–2,500 µS/cm depending on makeup quality, the blowdown valve opens until the loop is back in band.\n3. Most systems practically target 4–6 cycles, which balances water savings against scale risk.\n4. Most controllers also use a deadband (hysteresis). Many add a bl",
+        "answer": "Conductivity-based blowdown control works like this, based on one vendor source (Sensorex) plus general practice.\n\n**How it works**\n- Evaporation removes water but leaves dissolved solids behind, so tower conductivity rises as the water concentrates.\n- When conductivity reaches the programmed upper setpoint, the controller opens the blowdown valve. Lower-conductivity makeup water then replaces the discharged water, and conductivity falls back into the control band.\n- The controller compensates the reading for water temperature.\n- Many North American systems on municipal makeup run at roughly 1,000–3,000 µS/cm, with a deadband of about 100–200 µS/cm. The deadband stops the valve from short-cy",
+        "blockTypes": {
+          "server_tool_use": 3,
+          "web_search_tool_result": 1,
+          "code_execution_tool_result": 2,
+          "text": 7
+        },
         "refused": false,
-        "usd": 0.0598
+        "usd": 0.059
       }
     ],
-    "usd": 0.691
+    "usd": 0.684
   },
   "fixes": []
 }
