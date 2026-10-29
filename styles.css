@@ -593,6 +593,12 @@ html.nav-open { overflow: hidden; }
 .footer .wordmark { height: 18px; }
 .footer-tag { margin-top: 10px; font-size: 0.9rem; color: var(--ink-3); }
 .hero-badge { display: block; width: max-content; margin: 0 0 24px auto; }
+/* Wide screens: out of the container and into the hero's bottom-right corner,
+   level with the industries row. Narrower, the row reaches the edge, so it stays in flow. */
+@media (min-width: 1400px) {
+  .hero { position: relative; }
+  .hero-badge { position: absolute; right: 24px; bottom: 24px; margin: 0; }
+}
 .hero-badge img { display: block; height: 40px; width: auto; }
 .footer-meta { font-size: 0.88rem; color: var(--ink-3); }
 .footer-meta a { color: var(--ink-2); }
@@ -908,7 +914,8 @@ html.nav-open { overflow: hidden; }
   .ind-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ind-solve { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-grid { grid-template-columns: minmax(0, 1fr); }
-  .hero-visual { margin: 8px auto 0; max-width: 760px; }
+  /* width: 100% so the figure fills the column; auto margins alone shrink it to the caption. */
+  .hero-visual { margin: 8px auto 0; max-width: 760px; width: 100%; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-stats > div:nth-child(3) { border-left: 0; }
   .hero-stats > div:nth-child(n + 3) { border-top: 1px solid var(--rule); }
