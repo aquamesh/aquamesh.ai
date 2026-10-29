@@ -1,15 +1,26 @@
 ---
-title: Cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals
+title: Cooling tower blowdown control: conductivity drift cost
 slug: cooling-tower-blowdown-conductivity-sensor-drift
 date: 2026-10-28
 section: Measurement
-description: Blowdown in a cooling tower is triggered by a conductivity setpoint. When the sensor reading that setpoint has drifted, the tower discharges water it did not need to. Here is what that costs and how to find it in the historian.
+description: Conductivity sensor drift triggers premature blowdown, wasting makeup water and chemicals. Here is what it costs and how to find the pattern in your historian.
 tags: cooling tower, blowdown, conductivity, water efficiency, industrial water management
 ---
 
 Cooling tower blowdown is controlled by a conductivity setpoint. When the circulating water reaches a programmed conductivity level, the blowdown valve opens and a portion of the basin is discharged. The logic is straightforward: conductivity rises as dissolved solids concentrate through evaporation, and the setpoint represents the maximum concentration the system is designed to run at before dumping water and replacing it with fresh makeup.
 
 The measurement doing that work is a conductivity sensor in the basin or blowdown line. If that sensor reads high, the control system discharges water that was still within operating range. If it reads low, the system lets concentration climb beyond the setpoint before triggering blowdown. Either failure mode costs money, and neither is visible until it shows up in water bills or on heat exchangers.
+
+## How conductivity blowdown control works
+
+A conductivity sensor in the basin or blowdown line reads dissolved solids continuously. A controller compares that reading to a programmed setpoint corresponding to the design cycles of concentration (COC). When the reading crosses the setpoint, the blowdown valve opens and fresh makeup water replaces what was discharged. The system is designed to run at the highest COC the water chemistry can sustain, since higher COC means less water discarded per unit of cooling output. The DOE Federal Energy Management Program documents a 20 percent reduction in makeup water and a 50 percent reduction in blowdown when moving from 3 to 6 COC -- a difference controlled entirely by where the sensor's reading lands relative to actual basin concentration. ([DOE FEMP Best Management Practice #10: Cooling Tower Management](https://www.energy.gov/femp/best-management-practice-10-cooling-tower-management))
+
+**How to detect conductivity sensor drift before it accumulates cost:**
+
+1. Cross-check with a calibrated handheld meter at each maintenance visit. A divergence of more than 5 percent means the loop measurement should not be trusted to control blowdown until recalibrated.
+2. Pull blowdown valve timestamps and conductivity readings from the historian for a rolling 60-day window. Rising event frequency with stable makeup water quality points to the sensor, not the process.
+3. Track blowdown events normalized to cooling load. Fouling-driven high-bias drift appears as more blowdown events per unit of heat rejection over time, with no change in ambient conditions or system load to explain it.
+4. Compare makeup water conductivity readings over the same period. If makeup quality is stable and blowdown frequency is rising, the sensor or the controller setpoint has changed -- not the incoming water.
 
 ## Why cycles of concentration are the performance metric
 
