@@ -11,6 +11,7 @@ import { actionList, buildReport } from './report.mjs';
 import { changedUrls } from './indexnow.mjs';
 import { vitalsFindings } from './lighthouse.mjs';
 import { linksBack, pressFindings, pressCitations, loadPress } from './press.mjs';
+import { publishToMain } from './pr.mjs';
 
 const S = 'https://aquamesh.ai';
 const words = (n) => Array.from({ length: n }, (_, i) => `word${i}`).join(' ');
@@ -336,4 +337,26 @@ test('trade press: link-back, missing listing, blocked publishers, AI citations'
   assert.deepEqual(pressCitations(ai, [a, b]).map(c => c.query), ['q1']);
   const repo = loadPress(join(import.meta.dirname, '..', '..', '..'));
   assert.ok(repo.length >= 1 && repo.every(x => x.title && x.publication && /^https:\/\//.test(x.url) && /^\d{4}-\d{2}-\d{2}$/.test(x.date)));
+});
+
+test('publishToMain commits the insertion on top of main, and refuses when the page moved', async () => {
+  const base = mkdtempSync(join(tmpdir(), 'seo-pub-test-'));
+  const g = (cwd, ...a) => execFileSync('git', a, { cwd, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+  try {
+    const remote = join(base, 'remote.git'), work = join(base, 'work');
+    g(base, 'init', '-q', '--bare', '-b', 'main', remote);
+    g(base, 'clone', '-q', remote, work);
+    mkdirSync(join(work, 'industries'));
+    const original = '<main><section class="section"><p>Old.</p></section></main>';
+    writeFileSync(join(work, 'industries/a.html'), original);
+    g(work, 'add', '.'); g(work, '-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-qm', 'init'); g(work, 'push', '-q', 'origin', 'HEAD:main');
+    const d = { path: 'industries/a.html', original, draft: { insert_after: '</section>', html: '<section class="section"><p>New.</p></section>', summary: 's' } };
+    const pub = await publishToMain(work, 'o/r', { query: 'q?' }, d);
+    assert.equal(pub.published, true);
+    const live = g(base, '--git-dir', remote, 'show', 'main:industries/a.html');
+    assert.match(live, /<p>Old\.<\/p><\/section>\n<section class="section"><p>New\.<\/p>/);
+    await assert.rejects(publishToMain(work, 'o/r', { query: 'q?' }, d), /changed on main/);
+  } finally {
+    rmSync(base, { recursive: true, force: true });
+  }
 });

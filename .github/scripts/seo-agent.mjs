@@ -195,7 +195,16 @@ async function main() {
       if (CI || DRY) {
         log('drafting page fixes...');
         ai.drafts = await draftPageFixes(new Anthropic(), ROOT, REPO, actionList(ai), { dry: DRY || !CI, log });
-        const made = ai.drafts.filter(d => d.url);
+        const live = ai.drafts.filter(d => d.published);
+        if (live.length) {
+          /* published straight to main: wait for Pages, revert any that broke its page */
+          await requestPagesBuild();
+          execFileSync('git', ['fetch', '-q', 'origin', 'main'], { cwd: ROOT });
+          execFileSync('git', ['reset', '-q', '--hard', 'origin/main'], { cwd: ROOT });
+          for (const d of live) d.verify = await verifyDeploy(ROOT, d.sha, { changed: [d.path], added: [] }, { log });
+          actions.push(`Published ${live.length} page fix(es) to the site: ${live.map(d => `${d.url}${d.verify.reverted ? ' (reverted: the page broke)' : d.verify.verified ? ' (verified live)' : ' (deploy pending)'}`).join(', ')}.`);
+        }
+        const made = ai.drafts.filter(d => d.url && !d.published);
         if (made.length) actions.push(`Drafted ${made.length} ready-to-merge page fix(es): ${made.map(d => d.url).join(', ')}.`);
         const rejected = ai.drafts.filter(d => d.rejected);
         if (rejected.length) actions.push(`Threw away ${rejected.length} draft(s) that failed the checks.`);

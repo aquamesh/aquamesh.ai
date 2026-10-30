@@ -62,7 +62,7 @@ export function buildReport(run) {
   const drafts = Object.fromEntries((ai?.drafts || []).filter(d => d.url || d.skipped).map(d => [d.query, d]));
   todo.forEach((a, i) => {
     const d = drafts[a.query];
-    const ready = d?.url ? ` **[Ready to merge: review the change](${d.url})**` : d?.skipped ? ' (a drafted fix is waiting for your review)' : '';
+    const ready = d?.published ? (d.verify?.reverted ? ' (published, then **reverted**: the deploy broke the page)' : ` **[Done: published](${d.url})**`) : d?.url ? ` **[Ready to merge: review the change](${d.url})**` : d?.skipped ? ' (a drafted fix is waiting for your review)' : '';
     L.push(`${i + 1}. **${OWNER[a.owner]}** · ${VERDICT[a.verdict]}${a.target_page ? ` · \`${short(a.target_page)}\`` : ''}: ${a.change}${ready}`);
     L.push(`   <sub>Lost: "${a.query}". ${a.why}</sub>`);
   });

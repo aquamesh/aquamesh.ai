@@ -18,7 +18,7 @@ export const LIMITS = {
   maxFixFiles: 60,          // a rebuild that touches more than this is not "drift"
   maxIndexNowUrls: 100,
   aiBudgetUsd: 3,           // hard stop for the AI-search probe, per run
-  maxDraftsPerRun: 2,       // ready-to-merge page fixes drafted per weekly run
+  maxDraftsPerRun: 4,       // page fixes drafted (and published) per weekly run
   maxOpenDrafts: 4,         // stop drafting while this many await review
   weeklyEveryDays: 6.5
 };

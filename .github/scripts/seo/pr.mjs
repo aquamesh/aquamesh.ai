@@ -1,11 +1,13 @@
 /**
  * Ready-to-merge page fixes. When the diagnosis says a hand-made page is the
  * right answer to a buyer question but does not answer it directly, draft the
- * one prescribed change as an inserted block, check it hard, and put it on
- * its own branch with a pull request. Nothing reaches main until Alex merges.
+ * one prescribed change as an inserted block, check it hard, and publish it.
  *
- * If Actions may not open pull requests in this repo, the branch is still
- * pushed and the report links GitHub's compare page, one click from a PR.
+ * Alex (2026-10-30): no review wait. A draft that passes every check goes
+ * straight to main; the orchestrator then waits for the deploy and reverts the
+ * commit if the page breaks. SEO_AGENT_AUTOPUBLISH=off goes back to pushing
+ * each draft on its own branch (with a PR, or GitHub's compare page when
+ * Actions may not open PRs) for review first.
  *
  * Checks a draft must pass (validateDraft): it only inserts, never deletes;
  * plain content tags only, no scripts, styles or images; only CSS classes the
@@ -141,6 +143,36 @@ async function github(repo, path, { method = 'GET', body } = {}) {
   return { ok: res.ok, status: res.status, json: res.ok ? await res.json() : null, text: res.ok ? '' : await res.text() };
 }
 
+export const AUTOPUBLISH = (process.env.SEO_AGENT_AUTOPUBLISH || '').toLowerCase() !== 'off';
+
+const insert = (original, draft) => original.replace(draft.insert_after, draft.insert_after + '\n' + draft.html);
+
+/** Commit the edit on top of origin/main and push it; retry if main moved, as long as the page itself did not. */
+export async function publishToMain(root, repo, action, { path, original, draft }) {
+  const dir = mkdtempSync(join(tmpdir(), 'seo-pub-'));
+  try {
+    for (let attempt = 1; ; attempt++) {
+      git(root, ['fetch', '-q', 'origin', 'main']);
+      try { git(root, ['worktree', 'remove', '--force', dir]); } catch {}
+      git(root, ['worktree', 'add', '-q', '--detach', dir, 'origin/main']);
+      if (readFileSync(join(dir, path), 'utf8') !== original) throw new Error(`${path} changed on main while drafting; next week's run will redraft`);
+      writeFileSync(join(dir, path), insert(original, draft));
+      git(dir, ['add', path]);
+      git(dir, ['-c', 'user.name=AquaMesh SEO Agent', '-c', 'user.email=actions@users.noreply.github.com',
+        'commit', '-q', '-m', `SEO: answer "${action.query}" on /${path}\n\n${draft.summary}`]);
+      try {
+        git(dir, ['push', '-q', 'origin', 'HEAD:main']);
+        const sha = git(dir, ['rev-parse', 'HEAD']);
+        return { published: true, path, sha, url: `https://github.com/${repo}/commit/${sha}` };
+      } catch (e) {
+        if (attempt >= 3) throw e;
+      }
+    }
+  } finally {
+    try { git(root, ['worktree', 'remove', '--force', dir]); } catch { rmSync(dir, { recursive: true, force: true }); }
+  }
+}
+
 /** Push the edit on its own branch from origin/main, then open a PR or hand back a compare link. */
 export async function publishDraft(root, repo, action, { path, original, draft }) {
   const branch = branchFor(path);
@@ -150,7 +182,7 @@ export async function publishDraft(root, repo, action, { path, original, draft }
     git(root, ['worktree', 'add', '-q', '-B', branch, dir, 'origin/main']);
     const current = readFileSync(join(dir, path), 'utf8');
     if (current !== original) throw new Error(`${path} changed on main while drafting; next week's run will redraft`);
-    writeFileSync(join(dir, path), original.replace(draft.insert_after, draft.insert_after + '\n' + draft.html));
+    writeFileSync(join(dir, path), insert(original, draft));
     git(dir, ['add', path]);
     git(dir, ['-c', 'user.name=AquaMesh SEO Agent', '-c', 'user.email=actions@users.noreply.github.com',
       'commit', '-q', '-m', `SEO: answer "${action.query}" on /${path}\n\n${draft.summary}`]);
@@ -184,8 +216,8 @@ export async function draftPageFixes(client, root, repo, actions, { dry = false,
       const fail = validateDraft(root, d.path, d.original, d.draft);
       if (fail.length) { out.push({ query: a.query, page: a.target_page, rejected: fail }); log(`  draft for ${d.path} rejected: ${fail.join('; ')}`); continue; }
       if (dry) { out.push({ query: a.query, page: a.target_page, wouldPublish: true, summary: d.draft.summary }); continue; }
-      const pub = await publishDraft(root, repo, a, d);
-      pending.add(pub.branch);
+      const pub = AUTOPUBLISH ? await publishToMain(root, repo, a, d) : await publishDraft(root, repo, a, d);
+      if (pub.branch) pending.add(pub.branch);
       out.push({ query: a.query, page: a.target_page, summary: d.draft.summary, ...pub });
       log(`  drafted ${d.path}: ${pub.url}`);
     } catch (e) {
