@@ -1,19 +1,26 @@
 ---
-title: Data center WUE: what the metric measures, what it misses, and what it takes to move it
+title: Data center WUE: what it measures and what it misses
 slug: data-center-wue-measurement-gap
 date: 2026-10-22
 section: Measurement
-description: Water Usage Effectiveness tells you how much water your data center uses per unit of compute. It does not tell you where the water is going or why. Here is what determines whether the number actually improves.
+description: WUE measures liters per kWh of IT load. It does not show where water goes, verify cooling controls, or prove tower savings for reporting.
 tags: data centers, WUE, water efficiency, cooling tower, water monitoring, water usage effectiveness
 ---
 
-Water Usage Effectiveness, or WUE, has become the standard headline number for data center water efficiency. It is reported in sustainability disclosures, cited in regulatory proceedings, and used in site-selection discussions in water-stressed regions. The formula is simple: liters of water consumed at a facility divided by kilowatt-hours delivered to IT equipment.
+Water Usage Effectiveness (WUE) is a data center water metric introduced by [The Green Grid](https://www.thegreengrid.org/en/resources/library/details/WUE-A-Green-Grid-Efficiency-Metric). The formula: liters of water consumed at the facility divided by kilowatt-hours delivered to IT equipment, where lower is better and zero is the theoretical ideal.
 
-What WUE does not tell you is where the water is going, what is controlling it in real time, or whether the sensors responsible for that control are working. That is a separate question, and the answer to it determines whether a WUE target is achievable or theoretical.
+What WUE does not answer:
+
+- Where the water is going (evaporation versus blowdown)
+- Whether the sensors driving cooling tower control are accurate
+- Whether blowdown volume can be reduced on demand under reporting or drought rules
+- What specific operating changes move the number versus what is fixed by physics
+
+Each of those gaps affects whether a WUE target in a sustainability report is operationally achievable.
 
 ## What WUE actually measures
 
-The metric was introduced by The Green Grid, the data center industry consortium, as a companion to PUE (Power Usage Effectiveness). Like PUE, it is a ratio: lower is better and zero is the theoretical ideal. A site with a WUE of 2.0 consumes two liters of water for every kilowatt-hour its servers use.
+The metric was introduced by The Green Grid as a companion to PUE (Power Usage Effectiveness). Like PUE, it is a ratio: lower is better and zero is the theoretical ideal. A site with a WUE of 2.0 consumes two liters of water for every kilowatt-hour its servers use.
 
 Research on actual facility performance puts the range between 1 and 9 liters per kilowatt-hour depending on cooling approach, climate zone, and facility age, with a central tendency around 1.5 to 2 L/kWh for older evaporative cooling installations. ([Mytton, D. "Data centre water consumption." npj Clean Water 4, 52 (2021)](https://www.nature.com/articles/s41545-021-00101-w)) Newer hyperscale builds using advanced chemistry management or closed-loop cooling report considerably lower values.
 
@@ -45,6 +52,36 @@ This is the same silent failure pattern that affects dissolved oxygen control in
 
 For a detailed breakdown of what conductivity sensor drift costs in cooling tower water volume and chemical spend, including a worked example using DOE benchmark data, see [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
 
+## Proving cooling tower water savings for reporting
+
+A WUE target in a sustainability disclosure or a California Water Scarcity Plan is defensible only if three things are in place: a metered baseline, an auditable record of the variables that drive consumption, and a method to demonstrate the change was real rather than a calculation artifact.
+
+For cooling towers, that means measuring at the points where water actually enters and leaves the system.
+
+**Metering checklist**
+
+- **Makeup water flow**: A flow meter on the makeup supply line, totalizing by day. This is the primary input: it is what the utility invoices and what regulators count as consumption. Without a direct makeup meter, total consumption is estimated from conductivity readings and design assumptions, and that estimate cannot catch sensor-driven overconsumption.
+- **Blowdown volume**: A flow meter or timed valve record on the blowdown line. Blowdown is the discretionary water loss, the portion a facility can actually reduce through chemistry management. Without a direct measurement, blowdown is typically back-calculated from conductivity set points, which creates circular logic if the conductivity sensor is the variable under audit.
+- **Basin conductivity with historian logging**: A continuous conductivity reading linked to the historian, not just a set-point indicator. The logged record shows what cycles of concentration the facility actually operated at over time, versus what the design target was. This is the evidence base for any claim that COC improved.
+- **Conductivity sensor verification schedule**: A periodic grab-sample check using an independent meter compared against the installed sensor. The [DOE Federal Energy Management Program Best Management Practice 10](https://www.energy.gov/eere/femp/best-management-practice-10-cooling-tower-management) identifies conductivity monitoring and cycles-of-concentration tracking as core elements of water efficiency for cooling towers. A documented record of sensor verification during both the baseline and the improvement period is the evidence that the signal driving blowdown control was accurate.
+
+**Establishing an auditable baseline**
+
+A baseline for a WUE improvement claim needs at least 12 months of data before the change, covering seasonal variation in wet-bulb temperature and heat load. Cooling water consumption tracks ambient conditions, and a baseline drawn only from summer months overstates annual average performance.
+
+From that record, calculate:
+
+1. Average cycles of concentration by month
+2. Makeup volume relative to evaporative load (calculable from heat load data and ambient conditions)
+3. Blowdown as a percentage of total makeup, by month
+4. Unexplained blowdown events: volume spikes not correlated with changes in heat load
+
+Unexplained events, whether from conductivity sensor drift, a valve held open during maintenance, or a chemical feed miscalculation, show up as isolated increases in blowdown volume not matched by heat load increases. In a 25-day historian review at an industrial process facility, three anomalies of this type were identified, adding an estimated 12 to 18 percent to water consumption for that period. ([What a 25-day historian audit finds at a treatment plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html)) The same review methodology applies directly to cooling tower makeup and blowdown logs.
+
+**When direct blowdown metering is not installed**
+
+Many operating data centers lack a flow meter on the blowdown line. Blowdown volume is inferred from the conductivity set point and the makeup meter, which means the calculated efficiency number cannot detect the cases where the sensor controlling blowdown is drifting. A dedicated blowdown meter converts an estimated variable into a verified one. For a site preparing a California Water Scarcity Plan, that difference is material: a commitment to reduce blowdown by a specific percentage is auditable only if blowdown is measured independently of the control signal.
+
 ## The California compliance context
 
 California's AB 2619, signed in September 2026, requires data center operators to report total and direct annual water use by source at every business license renewal, under penalty of perjury. AB 2469 requires a Water Scarcity Plan by 2028 for facilities requiring construction permits. ([California data center water reporting requirements](https://aquamesh.ai/blog/california-data-center-water-reporting.html))
@@ -69,6 +106,6 @@ None of this analysis requires capital investment. The data exists in most histo
 
 If your site is preparing for California's 2027 renewal requirements or developing a scarcity plan for 2028, the water balance question is worth addressing before the commitment is made, not after. AquaMesh can review the historian data that is already being collected and identify where the measurement gaps are.
 
-See how this kind of analysis surfaced a $3,300 per year blower anomaly at a wastewater treatment plant: [what 25 days of historian data actually shows](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html). Or [reach out to schedule a working session](https://aquamesh.ai/#contact).
+See how this kind of analysis surfaced a $3,316 blower anomaly at a wastewater treatment plant: [what 25 days of historian data actually shows](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html). Or [reach out to schedule a working session](https://aquamesh.ai/#contact).
 
 *Alex Towfigh is a founder at AquaMesh.*
