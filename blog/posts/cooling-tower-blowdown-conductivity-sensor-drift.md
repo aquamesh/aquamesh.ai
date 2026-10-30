@@ -3,7 +3,7 @@ title: Cooling tower blowdown control: conductivity drift cost
 slug: cooling-tower-blowdown-conductivity-sensor-drift
 date: 2026-10-28
 section: Measurement
-description: Conductivity sensor drift triggers premature blowdown, wasting makeup water and chemicals. Here is what it costs and how to find the pattern in your historian.
+description: Conductivity sensor drift triggers premature blowdown, wasting makeup water and chemicals. Here is what it costs and how to detect it in your data.
 tags: cooling tower, blowdown, conductivity, water efficiency, industrial water management
 ---
 
@@ -64,7 +64,7 @@ None of this is visible at the level of a single blowdown event. It becomes visi
 
 ## The diagnostic that is already in the historian
 
-The same diagnostic approach that reveals DO sensor drift in aeration systems applies to conductivity sensor drift in cooling tower control. The data is in the historian: blowdown valve timestamps, conductivity sensor readings, makeup water flow, and any makeup water quality monitoring already being logged.
+The same diagnostic approach that reveals [DO sensor drift in aeration systems](/blog/do-sensor-calibration-interval-activated-sludge.html) applies to conductivity sensor drift in cooling tower control. The data is in the historian: blowdown valve timestamps, conductivity sensor readings, makeup water flow, and any makeup water quality monitoring already being logged.
 
 The signature of a sensor reading high is blowdown events that cluster at a conductivity reading just above the setpoint, while makeup water conductivity readings stay constant and blowdown event frequency increases over time on a consistent load. The signature of a sensor reading low is the opposite: infrequent blowdown with conductivity readings that stay below the setpoint even as the tower accumulates load, followed eventually by scale chemistry indicators or pressure-drop increases in the heat exchangers.
 

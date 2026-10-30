@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-30T15:21:53.772Z · 12 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-30T15:22:51.143Z · 12 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -180,7 +180,7 @@ None of this is visible at the level of a single blowdown event. It becomes visi
 
 ## The diagnostic that is already in the historian
 
-The same diagnostic approach that reveals DO sensor drift in aeration systems applies to conductivity sensor drift in cooling tower control. The data is in the historian: blowdown valve timestamps, conductivity sensor readings, makeup water flow, and any makeup water quality monitoring already being logged.
+The same diagnostic approach that reveals [DO sensor drift in aeration systems](/blog/do-sensor-calibration-interval-activated-sludge.html) applies to conductivity sensor drift in cooling tower control. The data is in the historian: blowdown valve timestamps, conductivity sensor readings, makeup water flow, and any makeup water quality monitoring already being logged.
 
 The signature of a sensor reading high is blowdown events that cluster at a conductivity reading just above the setpoint, while makeup water conductivity readings stay constant and blowdown event frequency increases over time on a consistent load. The signature of a sensor reading low is the opposite: infrequent blowdown with conductivity readings that stay below the setpoint even as the tower accumulates load, followed eventually by scale chemistry indicators or pressure-drop increases in the heat exchangers.
 

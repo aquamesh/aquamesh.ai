@@ -2,7 +2,7 @@
   "site": "https://aquamesh.ai",
   "brand": "AquaMesh",
   "description": "Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.",
-  "generated": "2026-10-30T15:21:53.769Z",
+  "generated": "2026-10-30T15:22:51.141Z",
   "license": "Readable and quotable with attribution to AquaMesh (https://aquamesh.ai).",
   "count": 12,
   "posts": [
@@ -38,7 +38,7 @@
       "slug": "cooling-tower-blowdown-conductivity-sensor-drift",
       "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
       "markdown_url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.md",
-      "description": "Conductivity sensor drift triggers premature blowdown, wasting makeup water and chemicals. Here is what it costs and how to find the pattern in your historian.",
+      "description": "Conductivity sensor drift triggers premature blowdown, wasting makeup water and chemicals. Here is what it costs and how to detect it in your data.",
       "date": "2026-10-28",
       "updated": "2026-10-28",
       "section": "Measurement",
