@@ -1,12 +1,6 @@
 {
-  "at": "2026-10-29T19:12:19.037Z",
+  "at": "2026-10-30T18:50:06.528Z",
   "findings": [
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/company.html",
-      "msg": "Article missing dateModified, image"
-    },
     {
       "sev": "warn",
       "id": "desc-length",
@@ -18,6 +12,78 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/",
       "msg": "meta description is 183 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
+      "msg": "meta description is 191 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "html-weight",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "HTML is 1383 KB"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
+      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
+      "msg": "title is 66 chars; Google truncates near 60: \"Cooling tower blowdown control: conductivity drift cost | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -45,87 +111,21 @@
     },
     {
       "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
       "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-      "msg": "title is 66 chars; Google truncates near 60: \"Cooling tower blowdown control: conductivity drift cost | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "html-weight",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "HTML is 1383 KB"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-      "msg": "title is 98 chars; Google truncates near 60: \"Data center WUE: what the metric measures, what it misses, and what it takes to move it | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-      "msg": "meta description is 209 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
       "msg": "title is 67 chars; Google truncates near 60: \"Wastewater aeration energy: cost and the measurement gap | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/company.html",
+      "msg": "Article missing dateModified, image"
     },
     {
       "sev": "warn",
@@ -142,18 +142,6 @@
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
-      "msg": "title is 97 chars; Google truncates near 60: \"Intermittent aeration for nitrogen removal: what DO sensor precision actually controls | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html",
-      "msg": "meta description is 209 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
       "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
       "msg": "title is 92 chars; Google truncates near 60: \"California now asks data centers what they actually use, under penalty of perjury | AquaMesh\""
     },
@@ -162,6 +150,24 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
       "msg": "meta description is 211 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
+      "msg": "title is 67 chars; Google truncates near 60: \"What a 25-day historian audit finds at a treatment plant | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
+      "msg": "title is 70 chars; Google truncates near 60: \"Why parallel equipment drifts apart, and what the gap costs | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -177,27 +183,9 @@
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
-      "msg": "title is 70 chars; Google truncates near 60: \"Why parallel equipment drifts apart, and what the gap costs | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
-      "msg": "meta description is 193 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
-      "msg": "title is 67 chars; Google truncates near 60: \"What a 25-day historian audit finds at a treatment plant | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "msg": "Article missing image"
     },
     {
       "sev": "warn",
@@ -212,16 +200,10 @@
       "msg": "Article missing image"
     },
     {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
-      "msg": "Article missing image"
-    },
-    {
       "sev": "info",
       "id": "geo-org-author",
       "url": "https://aquamesh.ai/blog/",
-      "msg": "11 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
+      "msg": "12 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
     },
     {
       "sev": "warn",
@@ -262,7 +244,7 @@
   ],
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
-    "Crawled 35 live pages and 55 assets and files.",
+    "Crawled 38 live pages and 61 assets and files.",
     "Told IndexNow (Bing, Copilot, Yandex) about 17 new or changed URL(s) (HTTP 200)."
   ],
   "lighthouse": {
@@ -1232,7 +1214,7 @@
   },
   "press": null,
   "indexnow": {
-    "at": "2026-10-29T19:12:19.037Z",
+    "at": "2026-10-30T18:50:06.528Z",
     "ok": true,
     "status": 200,
     "sent": 17,
