@@ -3,10 +3,12 @@ title: Why parallel equipment drifts apart, and what the gap costs
 slug: why-parallel-equipment-drifts
 date: 2026-09-26
 section: Field notes
-description: Twin basins, duty and standby pumps, two membrane trains. Equipment built to do the same job should behave the same way. The moment it stops is the most useful signal most plants never look at.
+description: When parallel blowers, pumps or process trains stop matching, something changed. Here is what drives the gap and what it costs.
 image: assets/audit.jpg
 tags: parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance
 ---
+
+In industrial plants and utilities, the equipment pairs that drift apart most visibly are blowers and pumps: parallel aeration basins, duty and standby return sludge pumps, twin membrane trains. Any two units doing the same job under the same conditions should behave the same way. When they stop, the gap has one of three physical causes: fouling or blockage, mechanical wear, or a sensor or setpoint that has shifted on one unit. Each is fixable. The cost comes from the years the divergence goes undetected.
 
 The most reliable finding in plant data is also the simplest: two things built to do the same job, under the same conditions, that have stopped behaving the same way.
 
@@ -23,6 +25,16 @@ That is the gap worth watching, and it is visible in data a plant already record
 {{diagram:twin-basins}}
 
 Neither trace is outside an alarm limit. Both basins are aerated, both are running, and nothing fires.
+
+## What drives the gap in blowers and pumps
+
+**Blowers** drift apart for three main reasons. Inlet filter loading is the most common: as filters accumulate dust, mist and biogenic material, differential pressure rises and actual airflow falls even as the speed command stays the same. Two blowers in the same building foul their filters at different rates depending on position and local airflow patterns. Impeller deposits, particularly from fine aerosols and greasy compounds in municipal treatment plants, shift the speed-to-output curve over years of operation. And control-side drift compounds both effects: a dissolved oxygen sensor reading above actual suppresses the blower command on one basin while its twin continues aerating at a higher level, creating a gap that looks like a mechanical problem until the sensors are checked.
+
+**Pumps** drift from wear. Return sludge and mixed liquor carry grit that erodes impeller vanes; wear ring clearance grows, and the same speed command delivers progressively less flow. Bearing friction increases as lubrication degrades. Mechanical seals add drag as they age. None of these changes triggers an alarm, but each shifts the relationship between command and output.
+
+**Sensor and setpoint mismatch** drives divergence on either type of equipment. A dissolved oxygen sensor reading 0.3 mg/L above actual holds one basin's aeration command lower than its twin. A conductivity sensor reading high on a blowdown line, as described in [cooling tower blowdown and conductivity drift](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html), opens the blowdown valve beyond what is needed. The control logic on each unit is executing correctly; the gap is upstream of it, in the measurement.
+
+Identifying which cause applies determines the fix: filter cleaning, impeller inspection, or sensor recalibration. The first step is seeing that the gap exists.
 
 ## The three shapes it takes
 
@@ -60,9 +72,11 @@ Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO 
 
 A related pattern worth naming on its own, because it is consistently underestimated.
 
-Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE guide on improving pumping system performance](https://www.energy.gov/sites/default/files/2014/05/f15/improving_pumping_system_performance.pdf), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
+Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.osti.gov/biblio/793674), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
 
 In one record, reclaimed water pumps were logging 13 to 28 starts an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm fired, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.
+
+A modelled scenario puts numbers on that exposure. A 25 hp pump motor rated for 4 starts per hour at full load accumulates locked-rotor heat on each start equivalent to roughly 1 to 2 minutes of continuous running. At 20 starts per hour, the thermal budget that would extend winding life to 8 to 12 years is consumed in 2 to 4 years. A motor rewind at that frame size typically runs $3,000 to $6,000. Annualized across the accelerated interval: $500 to $1,000 per pump per year in a failure mode no process alarm predicted. A facility running four pumps in this pattern carries $2,000 to $4,000 per year in accelerated motor wear, before accounting for starter and contactor replacement at elevated cycle counts.
 
 {{diagram:pump-starts}}
 
