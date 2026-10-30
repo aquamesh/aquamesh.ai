@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-30T06:04:18.734Z · 11 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-30T09:09:00.470Z · 11 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -50,6 +50,8 @@ DATE: 2026-10-28
 SECTION: Measurement
 TAGS: cooling tower, blowdown, conductivity, water efficiency, industrial water management
 ==============================================================================
+
+Conductivity sensor drift in cooling tower blowdown control costs money in two directions. A sensor reading high triggers blowdown when basin water is still within its design operating range, discharging water that had remaining evaporative capacity. A sensor reading low allows dissolved solids to concentrate past the setpoint, depositing scale on heat transfer surfaces and potentially pushing discharge chemistry past permit limits. The DOE Federal Energy Management Program documents a 50 percent reduction in blowdown when moving from three to six cycles of concentration: the conductivity measurement controls that entire difference. When the sensor has an offset, the system is not running at the cycles the treatment program was designed for, regardless of what the control display shows. The detection method is below. The data is already in the historian.
 
 Cooling tower blowdown is controlled by a conductivity setpoint. When the circulating water reaches a programmed conductivity level, the blowdown valve opens and a portion of the basin is discharged. The logic is straightforward: conductivity rises as dissolved solids concentrate through evaporation, and the setpoint represents the maximum concentration the system is designed to run at before dumping water and replacing it with fresh makeup.
 
