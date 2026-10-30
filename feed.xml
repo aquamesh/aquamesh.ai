@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 09:10:20 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 12:16:22 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DO sensor calibration intervals in activated sludge</title>
@@ -356,6 +356,7 @@
       <pubDate>Wed, 30 Sep 2026 09:00:00 GMT</pubDate>
       <description>A 25-day SCADA export found $42,000/yr in losses at an MBR plant with no site visit. Method, normalized energy benchmarks, and a six-step replication guide.</description>
       <content:encoded><![CDATA[<p>A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and pump cycling at more than twenty times the design rate.</p>
+<p>The method is repeatable on any plant with a SCADA or DCS historian: pull an export, locate the parallel equipment pairs, compare each one's performance against the plant's own posted operating ranges, and price every gap that falls outside them. The rest of this post covers that method in detail.</p>
 <p>That figure came entirely from the plant's existing SCADA archive: 1,001 tags, 7,172,532 recorded values, covering 28 June to 23 July.</p>
 <figure class="post-fig"><img src="../assets/audit/fig1.jpg" alt="Audit summary page: no-capital savings, fully instrumented savings, design flow percentage, and effluent turbidity. Values tagged M are measured from SCADA; E means calculated with stated assumptions." loading="lazy" decoding="async" /><figcaption>The front page of the delivered audit. Values tagged <b>M</b> are measured straight from the plant's SCADA; <b>E</b> means we calculated them, and the assumptions are written down.</figcaption></figure>
 <h2 id="why-a-historian-export-is-enough-to-start">Why a historian export is enough to start</h2>
@@ -376,8 +377,7 @@
 <h3 id="one-basin-running-3-6x-above-its-own-posted-range">One basin running 3.6x above its own posted range</h3>
 <p>The plant's sampling schedule posts pre-air dissolved oxygen at 0.5 to 1.5 mg/L. Basin 2 sat right in that band, median 0.49 mg/L. Basin 1 held a median of 5.35 mg/L on every day of the record, roughly eleven times its twin, with its blower command pinned at 99.99%.</p>
 <p>Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split, a valve or a damper, not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk: the <a href="https://www.epa.gov/nutrient-policy-data/nutrient-control-design-manual" rel="noopener">EPA Nutrient Control Design Manual</a> identifies dissolved oxygen intrusion into anoxic zones as a primary cause of denitrification inefficiency, since aerobic organisms outcompete denitrifiers at elevated DO concentrations.</p>
-<p>{{diagram:twin-basins}} -- Both basins draw on the same air header, so the difference is in the split rather than the control strategy.</p>
-<p>One caveat worth repeating: a fouled DO probe can sit on an offset and still respond to airflow. The reading gets verified against a calibrated handheld before anyone opens a valve.</p>
+<p>One caveat worth repeating: a fouled DO probe can sit on an offset and still respond to airflow changes, making it hard to distinguish a measurement artifact from a real process difference. The reading gets verified against a calibrated handheld before anyone opens a valve. How quickly DO sensors drift in activated sludge mixed liquor, and what calibration intervals are appropriate for that environment, is covered in <a href="/blog/do-sensor-calibration-interval-activated-sludge.html">DO sensor calibration intervals in activated sludge</a>.</p>
 <h3 id="membrane-scour-air-above-what-the-flux-needed">Membrane scour air above what the flux needed</h3>
 <p>Airflow tracked the permeate rate almost perfectly, R-squared of 1.00, at a ratio well above the manufacturer's specific-scour guidance. Trimming toward the guideline at the measured flux, using the controls already installed, came to $5,391 a year. That was the largest no-capital line on the list.</p>
 <h3 id="pumps-starting-every-twenty-five-seconds">Pumps starting every twenty-five seconds</h3>
@@ -403,7 +403,8 @@
 <p>For context on the energy benchmarking side, the <a href="/blog/aeration-energy-cost-wastewater-plants.html">wastewater aeration energy cost post</a> covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math.</p>
 <figure class="post-fig"><img src="../assets/audit.jpg" alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." loading="lazy" decoding="async" /><figcaption>The same findings in the platform, where they keep recomputing on a rolling window rather than ageing in a PDF. Plant name removed; everything else is the product as it ships.</figcaption></figure>
 <p>If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.</p>
-<p>Read the full anonymised audit: <a href="/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant</a>.</p>]]></content:encoded>
+<p>Read the full anonymised audit: <a href="/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant</a>.</p>
+<p><em>Alex Towfigh is a founder at AquaMesh.</em></p>]]></content:encoded>
       <category>historian data</category>
       <category>wastewater energy</category>
       <category>plant audit</category>

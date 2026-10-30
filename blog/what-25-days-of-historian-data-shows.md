@@ -10,6 +10,8 @@ tags: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor
 
 A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and pump cycling at more than twenty times the design rate.
 
+The method is repeatable on any plant with a SCADA or DCS historian: pull an export, locate the parallel equipment pairs, compare each one's performance against the plant's own posted operating ranges, and price every gap that falls outside them. The rest of this post covers that method in detail.
+
 That figure came entirely from the plant's existing SCADA archive: 1,001 tags, 7,172,532 recorded values, covering 28 June to 23 July.
 
 ![Audit summary page: no-capital savings, fully instrumented savings, design flow percentage, and effluent turbidity. Values tagged M are measured from SCADA; E means calculated with stated assumptions.](../assets/audit/fig1.jpg "The front page of the delivered audit. Values tagged **M** are measured straight from the plant's SCADA; **E** means we calculated them, and the assumptions are written down.")
@@ -55,9 +57,7 @@ The plant's sampling schedule posts pre-air dissolved oxygen at 0.5 to 1.5 mg/L.
 
 Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split, a valve or a damper, not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk: the [EPA Nutrient Control Design Manual](https://www.epa.gov/nutrient-policy-data/nutrient-control-design-manual) identifies dissolved oxygen intrusion into anoxic zones as a primary cause of denitrification inefficiency, since aerobic organisms outcompete denitrifiers at elevated DO concentrations.
 
-{{diagram:twin-basins}} -- Both basins draw on the same air header, so the difference is in the split rather than the control strategy.
-
-One caveat worth repeating: a fouled DO probe can sit on an offset and still respond to airflow. The reading gets verified against a calibrated handheld before anyone opens a valve.
+One caveat worth repeating: a fouled DO probe can sit on an offset and still respond to airflow changes, making it hard to distinguish a measurement artifact from a real process difference. The reading gets verified against a calibrated handheld before anyone opens a valve. How quickly DO sensors drift in activated sludge mixed liquor, and what calibration intervals are appropriate for that environment, is covered in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html).
 
 ### Membrane scour air above what the flux needed
 
@@ -119,3 +119,5 @@ For context on the energy benchmarking side, the [wastewater aeration energy cos
 If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.
 
 Read the full anonymised audit: [a membrane-bioreactor water reuse plant](/case-studies/water-reuse-plant.html).
+
+*Alex Towfigh is a founder at AquaMesh.*
