@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 18:28:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 21:32:03 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DO sensor calibration intervals in activated sludge</title>
@@ -436,7 +436,8 @@
       <guid isPermaLink="true">https://aquamesh.ai/blog/why-parallel-equipment-drifts.html</guid>
       <pubDate>Sat, 26 Sep 2026 09:00:00 GMT</pubDate>
       <description>When parallel blowers, pumps or process trains stop matching, something changed. Here is what drives the gap and what it costs.</description>
-      <content:encoded><![CDATA[<p>In industrial plants and utilities, the equipment pairs that drift apart most visibly are blowers and pumps: parallel aeration basins, duty and standby return sludge pumps, twin membrane trains. Any two units doing the same job under the same conditions should behave the same way. When they stop, the gap has one of three physical causes: fouling or blockage, mechanical wear, or a sensor or setpoint that has shifted on one unit. Each is fixable. The cost comes from the years the divergence goes undetected.</p>
+      <content:encoded><![CDATA[<p>Parallel blowers and pumps in treatment plants drift apart for three reasons: inlet filter fouling, mechanical wear, and sensor or setpoint mismatch on one unit. Each is fixable. The problem is that the gap produces no control-system alarm. Two basins can sit inside every operating limit while running at completely different airflow rates, and the divergence compounds for months or years undetected.</p>
+<p>The cost shows up in three ways: wasted blower electricity, accelerated wear on whichever unit is running harder, and measurement errors that propagate into process and compliance decisions. A basin pair drifting 20 percentage points apart in aeration demand adds hundreds to over a thousand dollars a year in energy alone, before accounting for the wear asymmetry that follows.</p>
 <p>The most reliable finding in plant data is also the simplest: two things built to do the same job, under the same conditions, that have stopped behaving the same way.</p>
 <p>It is reliable because it needs no baseline, no model of correct operation, and no agreement about what good looks like. The two units are each other's reference. If one has drifted from the other, something changed, and that something usually has a cost attached.</p>
 <h2 id="why-the-control-system-will-not-tell-you">Why the control system will not tell you</h2>
@@ -459,7 +460,7 @@
 <h2 id="what-drives-the-gap-in-blowers-and-pumps">What drives the gap in blowers and pumps</h2>
 <p><b>Blowers</b> drift apart for three main reasons. Inlet filter loading is the most common: as filters accumulate dust, mist and biogenic material, differential pressure rises and actual airflow falls even as the speed command stays the same. Two blowers in the same building foul their filters at different rates depending on position and local airflow patterns. Impeller deposits, particularly from fine aerosols and greasy compounds in municipal treatment plants, shift the speed-to-output curve over years of operation. And control-side drift compounds both effects: a dissolved oxygen sensor reading above actual suppresses the blower command on one basin while its twin continues aerating at a higher level, creating a gap that looks like a mechanical problem until the sensors are checked.</p>
 <p><b>Pumps</b> drift from wear. Return sludge and mixed liquor carry grit that erodes impeller vanes; wear ring clearance grows, and the same speed command delivers progressively less flow. Bearing friction increases as lubrication degrades. Mechanical seals add drag as they age. None of these changes triggers an alarm, but each shifts the relationship between command and output.</p>
-<p><b>Sensor and setpoint mismatch</b> drives divergence on either type of equipment. A dissolved oxygen sensor reading 0.3 mg/L above actual holds one basin's aeration command lower than its twin. A conductivity sensor reading high on a blowdown line, as described in <a href="/blog/cooling-tower-blowdown-conductivity-sensor-drift.html">cooling tower blowdown and conductivity drift</a>, opens the blowdown valve beyond what is needed. The control logic on each unit is executing correctly; the gap is upstream of it, in the measurement.</p>
+<p><b>Sensor and setpoint mismatch</b> drives divergence on either type of equipment. A dissolved oxygen sensor reading 0.3 mg/L above actual holds one basin's aeration command lower than its twin. A conductivity sensor reading high on a blowdown line, as described in <a href="/blog/cooling-tower-blowdown-conductivity-sensor-drift.html">cooling tower blowdown and conductivity drift</a>, opens the blowdown valve beyond what is needed. The control logic on each unit is executing correctly; the gap is upstream of it, in the measurement. How frequently DO sensors drift and what that calibration interval costs in blower energy is covered in <a href="/blog/do-sensor-calibration-interval-activated-sludge.html">DO sensor calibration intervals for activated sludge</a>.</p>
 <p>Identifying which cause applies determines the fix: filter cleaning, impeller inspection, or sensor recalibration. The first step is seeing that the gap exists.</p>
 <h2 id="the-three-shapes-it-takes">The three shapes it takes</h2>
 <h3 id="duty-that-never-alternates">Duty that never alternates</h3>
@@ -487,7 +488,7 @@
 <h3 id="a-shared-supply-unequally-split">A shared supply, unequally split</h3>
 <p>Twin basins on a common air header should see similar dissolved oxygen at similar load. When one sits far above the other with its blower command pinned wide open, the control strategy is not the problem: the air is not arriving where it is supposed to.</p>
 <p>This one is cheap to investigate and cheap to correct, which is what makes it worth finding. A valve position or a damper, not a capital project.</p>
-<p>Aeration typically accounts for 55 to 70 percent of a treatment plant's electricity consumption (<a href="https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NRMRL&amp;amp;dirEntryId=287471" rel="noopener">EPA Energy Management Guidebook for Publicly Owned Treatment Works</a>). An air distribution imbalance between twin basins does not show up in the daily energy report: it shows up in blower run hours, and the cause is upstream of both. How that translates to operating cost is described in <a href="/blog/aeration-energy-cost-wastewater-plants.html">aeration energy at wastewater plants</a>.</p>
+<p>Aeration typically accounts for 55 to 70 percent of a treatment plant's electricity consumption (<a href="https://www.epa.gov/sustainable-water-infrastructure/energy-management-water-and-wastewater-utilities" rel="noopener">EPA Energy Management for Water and Wastewater Utilities</a>). An air distribution imbalance between twin basins does not show up in the daily energy report: it shows up in blower run hours, and the cause is upstream of both. How that translates to operating cost is described in <a href="/blog/aeration-energy-cost-wastewater-plants.html">aeration energy at wastewater plants</a>.</p>
 <h3 id="instruments-that-no-longer-agree">Instruments that no longer agree</h3>
 <p>Two turbidimeters on the same permeate stream, one reading a median of 0.11 NTU with a 90th percentile of 0.26, the other reading 0.14 and 2.12: three and a half times the plant's posted upper limit.</p>
 <p>One of them is drifting. Until you know which, compliance decisions are resting on an instrument that cannot be fully trusted. The encouraging part, in that case, was that the true value looked excellent.</p>
@@ -523,7 +524,8 @@
 <p>What you are looking for in every case is persistence. A transient divergence is operations. A divergence that holds for the whole record is a setting, a valve, or an instrument, and all three are fixable.</p>
 <h2 id="why-this-is-where-we-start">Why this is where we start</h2>
 <p>When we read a plant's history, parallel equipment is the first thing modelled, because it produces findings that are concrete, cheap to verify, and hard to argue with. Nobody has to accept a model's opinion about what dissolved oxygen should be. They only have to accept that two basins on the same air header ought to look alike.</p>
-<p>More on what a historian export produces: <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of data actually shows</a>.</p>]]></content:encoded>
+<p>More on what a historian export produces: <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of data actually shows</a>.</p>
+<p><em>Author: Alex Towfigh, AquaMesh</em></p>]]></content:encoded>
       <category>parallel equipment</category>
       <category>pump duty</category>
       <category>lead lag alternation</category>
