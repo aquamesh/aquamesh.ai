@@ -67,7 +67,7 @@ Airflow tracked the permeate rate almost perfectly, R-squared of 1.00, at a rati
 
 Reclaimed water pumps were logging 13 to 28 starts an hour against a manufacturer guideline near six for pumps that size. One asset logged 143 in an hour, a start every twenty-five seconds.
 
-Every start draws locked-rotor current and heats the windings far more than running does. The [DOE's Motor Systems guidance](https://www.energy.gov/eere/amo/motor-systems) documents the relationship between start frequency and insulation aging: permissible starts per hour depend on motor frame size and thermal class, and the typical industrial limit for motors in the fractional to ten-horsepower range is well below what this historian was recording. This is a control deadband adjustment, not a purchase, and it was quietly writing a bill in motors, starters, and contactors: about $3,500 a year.
+Every start draws locked-rotor current and heats the windings far more than running does. The [DOE's "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.osti.gov/biblio/793674) documents the relationship between start frequency and insulation aging: permissible starts per hour depend on motor frame size and thermal class, and the typical industrial limit for motors in the fractional to ten-horsepower range is well below what this historian was recording. This is a control deadband adjustment, not a purchase, and it was quietly writing a bill in motors, starters, and contactors: about $3,500 a year.
 
 ### Sixteen of sixteen reuse totalisers frozen
 

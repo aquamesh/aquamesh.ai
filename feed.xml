@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 12:16:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 15:21:53 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DO sensor calibration intervals in activated sludge</title>
@@ -382,7 +382,7 @@
 <p>Airflow tracked the permeate rate almost perfectly, R-squared of 1.00, at a ratio well above the manufacturer's specific-scour guidance. Trimming toward the guideline at the measured flux, using the controls already installed, came to $5,391 a year. That was the largest no-capital line on the list.</p>
 <h3 id="pumps-starting-every-twenty-five-seconds">Pumps starting every twenty-five seconds</h3>
 <p>Reclaimed water pumps were logging 13 to 28 starts an hour against a manufacturer guideline near six for pumps that size. One asset logged 143 in an hour, a start every twenty-five seconds.</p>
-<p>Every start draws locked-rotor current and heats the windings far more than running does. The <a href="https://www.energy.gov/eere/amo/motor-systems" rel="noopener">DOE's Motor Systems guidance</a> documents the relationship between start frequency and insulation aging: permissible starts per hour depend on motor frame size and thermal class, and the typical industrial limit for motors in the fractional to ten-horsepower range is well below what this historian was recording. This is a control deadband adjustment, not a purchase, and it was quietly writing a bill in motors, starters, and contactors: about $3,500 a year.</p>
+<p>Every start draws locked-rotor current and heats the windings far more than running does. The <a href="https://www.osti.gov/biblio/793674" rel="noopener">DOE's "Improving Pumping System Performance: A Sourcebook for Industry"</a> documents the relationship between start frequency and insulation aging: permissible starts per hour depend on motor frame size and thermal class, and the typical industrial limit for motors in the fractional to ten-horsepower range is well below what this historian was recording. This is a control deadband adjustment, not a purchase, and it was quietly writing a bill in motors, starters, and contactors: about $3,500 a year.</p>
 <h3 id="sixteen-of-sixteen-reuse-totalisers-frozen">Sixteen of sixteen reuse totalisers frozen</h3>
 <p>Every irrigation zone has a volume totaliser. Not one of them changed in twenty-five days.</p>
 <p>Until they record, nobody can demonstrate how much recycled water went to beneficial reuse rather than straight to disposal, which is exactly the number a reuse programme is judged on. A configuration fix rather than a purchase, and it unlocks roughly $7,300 a year.</p>
