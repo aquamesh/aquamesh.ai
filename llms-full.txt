@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-30T15:23:45.783Z · 12 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-30T18:28:24.592Z · 12 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -243,7 +243,7 @@ It closes with a test of its own: find the single missing measurement that would
 
 
 ==============================================================================
-TITLE: Intermittent aeration for nitrogen removal: what DO sensor precision actually controls
+TITLE: Intermittent aeration: why DO sensor precision matters
 URL: https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html
 DATE: 2026-10-23
 SECTION: Field notes
@@ -270,7 +270,7 @@ The cycle timing in intermittent aeration is almost always governed by a dissolv
 
 **Sensor reading high:** Aeration shuts off early. The basin does not complete nitrification in one cycle. Ammonia carries over. In a plant with a permit nitrogen limit, this is an effluent compliance risk, not just an energy problem.
 
-**Fouling that accumulates between cycles:** Mixed liquor accumulates on membrane or optical sensor surfaces during the unaerated phase. When aeration restarts, the sensor enters the aerobic phase with an offset that compounds over successive cycles if cleaning intervals are not calibrated to match actual fouling rates.
+**Fouling that accumulates between cycles:** Mixed liquor accumulates on membrane or optical sensor surfaces during the unaerated phase. When aeration restarts, the sensor enters the aerobic phase with an offset that compounds over successive cycles if cleaning intervals are not calibrated to match actual fouling rates. What those intervals should be for activated sludge service is covered in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html).
 
 The cumulative effect is that the DO setpoints operators specify on the control screen may not correspond to the dissolved oxygen concentration the organisms experience. The blower control loop optimizes against a sensor output, not against the process state.
 

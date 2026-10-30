@@ -1,9 +1,9 @@
 ---
-title: Intermittent aeration for nitrogen removal: what DO sensor precision actually controls
+title: Intermittent aeration: why DO sensor precision matters
 slug: intermittent-aeration-nitrogen-removal-do-control
 date: 2026-10-23
 section: Field notes
-description: Plants using intermittent aeration for biological nitrogen removal rely on dissolved oxygen control precision. Here is what happens to both nitrogen performance and energy savings when that measurement drifts.
+description: DO sensor precision controls whether intermittent aeration for nitrogen removal saves energy or misses permit limits. Here is what happens when it drifts.
 tags: nitrogen removal, intermittent aeration, dissolved oxygen, SND, wastewater treatment
 ---
 
@@ -27,13 +27,13 @@ The cycle timing in intermittent aeration is almost always governed by a dissolv
 
 **Sensor reading high:** Aeration shuts off early. The basin does not complete nitrification in one cycle. Ammonia carries over. In a plant with a permit nitrogen limit, this is an effluent compliance risk, not just an energy problem.
 
-**Fouling that accumulates between cycles:** Mixed liquor accumulates on membrane or optical sensor surfaces during the unaerated phase. When aeration restarts, the sensor enters the aerobic phase with an offset that compounds over successive cycles if cleaning intervals are not calibrated to match actual fouling rates.
+**Fouling that accumulates between cycles:** Mixed liquor accumulates on membrane or optical sensor surfaces during the unaerated phase. When aeration restarts, the sensor enters the aerobic phase with an offset that compounds over successive cycles if cleaning intervals are not calibrated to match actual fouling rates. What those intervals should be for activated sludge service is covered in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html).
 
 The cumulative effect is that the DO setpoints operators specify on the control screen may not correspond to the dissolved oxygen concentration the organisms experience. The blower control loop optimizes against a sensor output, not against the process state.
 
 ## What this looks like in practice
 
-The same phenomenon described in the parallel-basin aeration analysis applies here in a temporal rather than spatial dimension. In that case, two basins running simultaneously showed a DO divergence that reflected sensor drift rather than process differences: one blower was pinned at maximum output, consuming over $3,000 per year more than its twin, for the full 25-day record. The spatial version was visible by comparing basins side by side. The parallel equipment drift analysis is in [why parallel equipment drifts apart](https://aquamesh.ai/blog/why-parallel-equipment-drifts/), and the full historian data methodology is in [what 25 days of historian data actually shows about a treatment plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows/).
+The same phenomenon described in the parallel-basin aeration analysis applies here in a temporal rather than spatial dimension. In that case, two basins running simultaneously showed a DO divergence that reflected sensor drift rather than process differences: one blower was pinned at maximum output, consuming over $3,000 per year more than its twin, for the full 25-day record. The spatial version was visible by comparing basins side by side. The parallel equipment drift analysis is in [why parallel equipment drifts apart](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html), and the full historian data methodology is in [what 25 days of historian data actually shows about a treatment plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html).
 
 The temporal version in intermittent aeration requires a different analysis: charting DO sensor output against blower on/off timestamps at five-minute or finer resolution, and comparing aerobic phase duration over time. A sensor reading accurately produces aerobic phases of consistent duration for a given influent load. A sensor that is drifting produces phases that systematically lengthen (reading low, blowers run long) or shorten (reading high, blowers cut off early) in ways that do not track influent load changes.
 
@@ -62,7 +62,7 @@ When DO measurement in an intermittent aeration system is continuous, accurate, 
 
 For plants approaching permit limits on total nitrogen, the margin for process error is narrow. A sensor that introduces a systematic offset into the timing of aeration cycles is a measurement problem that manifests as an effluent compliance risk. The issue is usually visible in the historian data before it appears in the permit reporting: aerobic phase durations extending over time, DO baseline at cycle start gradually increasing, nitrogen removal efficiency declining in ways that do not correlate with influent load.
 
-The diagnostic questions are the same ones that apply to continuous aeration systems. Are the DO sensors reading accurately between calibrations? Does blower runtime at a given influent load match what the setpoints predict? Are cycle times stable, or are they drifting? The methodology for that analysis is in [aeration energy at wastewater plants: the cost, the waste, and the measurement gap](https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants/).
+The diagnostic questions are the same ones that apply to continuous aeration systems. Are the DO sensors reading accurately between calibrations? Does blower runtime at a given influent load match what the setpoints predict? Are cycle times stable, or are they drifting? The methodology for that analysis is in [aeration energy at wastewater plants: the cost, the waste, and the measurement gap](https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html).
 
 None of this analysis requires new hardware. The data is in the historian. The constraint is having a way to extract it at the resolution that shows cycle-level behavior, over a long enough window, against a reference that was not subject to the same drift.
 

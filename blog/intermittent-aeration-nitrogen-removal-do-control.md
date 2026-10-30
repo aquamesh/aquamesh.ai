@@ -1,9 +1,9 @@
 ---
-title: Intermittent aeration for nitrogen removal: what DO sensor precision actually controls
+title: Intermittent aeration: why DO sensor precision matters
 slug: intermittent-aeration-nitrogen-removal-do-control
 date: 2026-10-23
 section: Field notes
-description: Plants using intermittent aeration for biological nitrogen removal rely on dissolved oxygen control precision. Here is what happens to both nitrogen performance and energy savings when that measurement drifts.
+description: DO sensor precision controls whether intermittent aeration for nitrogen removal saves energy or misses permit limits. Here is what happens when it drifts.
 tags: nitrogen removal, intermittent aeration, dissolved oxygen, SND, wastewater treatment
 ---
 
@@ -27,7 +27,7 @@ The cycle timing in intermittent aeration is almost always governed by a dissolv
 
 **Sensor reading high:** Aeration shuts off early. The basin does not complete nitrification in one cycle. Ammonia carries over. In a plant with a permit nitrogen limit, this is an effluent compliance risk, not just an energy problem.
 
-**Fouling that accumulates between cycles:** Mixed liquor accumulates on membrane or optical sensor surfaces during the unaerated phase. When aeration restarts, the sensor enters the aerobic phase with an offset that compounds over successive cycles if cleaning intervals are not calibrated to match actual fouling rates.
+**Fouling that accumulates between cycles:** Mixed liquor accumulates on membrane or optical sensor surfaces during the unaerated phase. When aeration restarts, the sensor enters the aerobic phase with an offset that compounds over successive cycles if cleaning intervals are not calibrated to match actual fouling rates. What those intervals should be for activated sludge service is covered in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html).
 
 The cumulative effect is that the DO setpoints operators specify on the control screen may not correspond to the dissolved oxygen concentration the organisms experience. The blower control loop optimizes against a sensor output, not against the process state.
 
