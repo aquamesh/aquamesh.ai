@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-10-31T00:35:59.160Z · 13 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-10-31T03:40:47.453Z · 13 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -218,11 +218,9 @@ SECTION: Measurement
 TAGS: cooling tower, blowdown, conductivity, water efficiency, industrial water management
 ==============================================================================
 
+Conductivity blowdown control works by measuring dissolved solids in the cooling tower basin continuously and comparing that reading to a programmed setpoint. When conductivity crosses the setpoint -- chosen to match the system's design cycles of concentration (COC) -- a controller opens the blowdown valve, discharging concentrated basin water and replacing it with fresh makeup. COC is the ratio of dissolved solids in circulating water to incoming makeup: at six cycles, the system extracts six passes of evaporative cooling from each gallon before discharging. The DOE Federal Energy Management Program documents a 50 percent reduction in blowdown volume when moving from three to six COC. The conductivity sensor controls that entire difference. When that sensor has an offset, the system runs at the wrong COC regardless of what the control display shows.
+
 Conductivity sensor drift in cooling tower blowdown control costs money in two directions. A sensor reading high triggers blowdown when basin water is still within its design operating range, discharging water that had remaining evaporative capacity. A sensor reading low allows dissolved solids to concentrate past the setpoint, depositing scale on heat transfer surfaces and potentially pushing discharge chemistry past permit limits. The DOE Federal Energy Management Program documents a 50 percent reduction in blowdown when moving from three to six cycles of concentration: the conductivity measurement controls that entire difference. When the sensor has an offset, the system is not running at the cycles the treatment program was designed for, regardless of what the control display shows. The detection method is below. The data is already in the historian.
-
-Cooling tower blowdown is controlled by a conductivity setpoint. When the circulating water reaches a programmed conductivity level, the blowdown valve opens and a portion of the basin is discharged. The logic is straightforward: conductivity rises as dissolved solids concentrate through evaporation, and the setpoint represents the maximum concentration the system is designed to run at before dumping water and replacing it with fresh makeup.
-
-The measurement doing that work is a conductivity sensor in the basin or blowdown line. If that sensor reads high, the control system discharges water that was still within operating range. If it reads low, the system lets concentration climb beyond the setpoint before triggering blowdown. Either failure mode costs money, and neither is visible until it shows up in water bills or on heat exchangers.
 
 ## How conductivity blowdown control works
 
@@ -281,7 +279,7 @@ The signature of a sensor reading high is blowdown events that cluster at a cond
 
 This is a temporal version of the spatial drift problem described in a parallel-equipment analysis. In that case, two identical aeration basins showed diverging blower runtime and energy use that reflected sensor offset rather than actual process differences. Here, the same principle operates over time in a single system: the measurement feeding the control loop has an offset, the loop acts on the offset rather than the process state, and the cost accumulates in the historian before it appears anywhere else.
 
-The full parallel-basin methodology is in [why parallel equipment drifts apart, and what the gap costs](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html). For data centers where cooling tower blowdown directly affects the WUE metric, the connection between sensor drift and reported efficiency is covered in [data center WUE: what the metric measures, what it misses, and what it takes to move it](https://aquamesh.ai/blog/data-center-wue-measurement-gap.html).
+The full parallel-basin methodology is in [why parallel equipment drifts apart, and what the gap costs](/blog/why-parallel-equipment-drifts.html). For data centers where cooling tower blowdown directly affects the WUE metric, the connection between sensor drift and reported efficiency is covered in [data center WUE: what the metric measures, what it misses, and what it takes to move it](/blog/data-center-wue-measurement-gap.html).
 
 ## What accurate conductivity measurement enables
 
