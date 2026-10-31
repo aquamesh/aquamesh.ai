@@ -8,6 +8,16 @@ image: assets/audit.jpg
 tags: parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance
 ---
 
+---
+title: Why parallel equipment drifts apart, and what the gap costs
+slug: why-parallel-equipment-drifts
+date: 2026-09-26
+section: Field notes
+description: When parallel blowers, pumps or process trains stop matching, something changed. Here is what drives the gap and what it costs.
+image: assets/audit.jpg
+tags: parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance
+---
+
 Parallel blowers and pumps in treatment plants drift apart for three reasons: inlet filter fouling, mechanical wear, and sensor or setpoint mismatch on one unit. Each is fixable. The problem is that the gap produces no control-system alarm. Two basins can sit inside every operating limit while running at completely different airflow rates, and the divergence compounds for months or years undetected.
 
 The cost shows up in three ways: wasted blower electricity, accelerated wear on whichever unit is running harder, and measurement errors that propagate into process and compliance decisions. A basin pair drifting 20 percentage points apart in aeration demand adds hundreds to over a thousand dollars a year in energy alone, before accounting for the wear asymmetry that follows.
@@ -31,6 +41,8 @@ Neither trace is outside an alarm limit. Both basins are aerated, both are runni
 ## What drives the gap in blowers and pumps
 
 **Blowers** drift apart for three main reasons. Inlet filter loading is the most common: as filters accumulate dust, mist and biogenic material, differential pressure rises and actual airflow falls even as the speed command stays the same. Two blowers in the same building foul their filters at different rates depending on position and local airflow patterns. Impeller deposits, particularly from fine aerosols and greasy compounds in municipal treatment plants, shift the speed-to-output curve over years of operation. And control-side drift compounds both effects: a dissolved oxygen sensor reading above actual suppresses the blower command on one basin while its twin continues aerating at a higher level, creating a gap that looks like a mechanical problem until the sensors are checked.
+
+For plants with VFD-equipped blowers, there is a fourth degradation path independent of sensors: belt and coupling losses, impeller wear, and pressure setpoint creep each reduce the airflow a blower delivers at a given speed command. [Wastewater blower VFD: why energy savings erode](/blog/wastewater-blower-vfd-energy-savings-erode.html) covers how to identify whether a divergence between parallel blowers has a mechanical cause, a sensor cause, or both.
 
 **Pumps** drift from wear. Return sludge and mixed liquor carry grit that erodes impeller vanes; wear ring clearance grows, and the same speed command delivers progressively less flow. Bearing friction increases as lubrication degrades. Mechanical seals add drag as they age. None of these changes triggers an alarm, but each shifts the relationship between command and output.
 
