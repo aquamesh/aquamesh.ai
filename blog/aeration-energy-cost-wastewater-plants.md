@@ -7,6 +7,15 @@ description: Aeration is 50 to 75 percent of a wastewater plant's electricity bi
 tags: aeration energy, wastewater treatment, dissolved oxygen, blower control, energy optimization
 ---
 
+---
+title: Wastewater aeration energy: cost and the measurement gap
+slug: aeration-energy-cost-wastewater-plants
+date: 2026-10-21
+section: Field notes
+description: Aeration is 50 to 75 percent of a wastewater plant's electricity bill. What it costs per MGD, why the savings erode, and how to cut blower energy without new equipment.
+tags: aeration energy, wastewater treatment, dissolved oxygen, blower control, energy optimization
+---
+
 Aeration is the single largest line on the electricity bill for most activated sludge wastewater plants. Aeration systems typically represent 50 to 75 percent of total electricity consumption at activated sludge facilities. The logical response is to install dissolved oxygen sensors, add variable frequency drives to blowers, and let a control loop do the rest. Many plants have done exactly that. Not all of them kept the savings.
 
 Here is what the cost actually looks like, why the standard fix often falls short, and how to recover blower energy without adding hardware.
@@ -44,7 +53,7 @@ The inverse failure is less common but more consequential: a sensor fouled in a 
 
 Both failure modes are silent. The control loop is running. No alarms fire. The historian records the sensor output without knowing it has drifted. Operators checking the dashboard see normal-looking DO values.
 
-This is why many plants install DO control hardware and see strong early results followed by gradual erosion. The hardware is still there. The control loop is still active. But the measurement feeding it has drifted, and the loop is now optimizing against a wrong input.
+This is why many plants install DO control hardware and see strong early results followed by gradual erosion. The hardware is still there. The control loop is still active. But the measurement feeding it has drifted, and the loop is now optimizing against a wrong input. The broader picture of how VFD blower savings erode, including mechanical wear and pressure creep alongside measurement drift, is in [wastewater blower VFD: why energy savings erode](/blog/wastewater-blower-vfd-energy-savings-erode.html).
 
 ## The parallel basin case
 
