@@ -1,24 +1,6 @@
 {
-  "at": "2026-10-31T17:55:08.841Z",
+  "at": "2026-11-01T18:32:54.004Z",
   "findings": [
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/company.html",
-      "msg": "Article missing dateModified, image"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
-      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/",
-      "msg": "meta description is 250 chars (aim for 70 to 160)"
-    },
     {
       "sev": "warn",
       "id": "desc-length",
@@ -28,26 +10,20 @@
     {
       "sev": "warn",
       "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/",
+      "msg": "meta description is 250 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/company.html",
+      "msg": "Article missing dateModified, image"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
       "msg": "meta description is 191 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
@@ -69,15 +45,9 @@
     },
     {
       "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
+      "id": "title-length",
+      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
+      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -105,21 +75,51 @@
     },
     {
       "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/basin/",
       "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
-      "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
-    },
-    {
-      "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
       "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
+      "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -148,24 +148,6 @@
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
-      "msg": "title is 90 chars; Google truncates near 60: \"In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
       "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
       "msg": "title is 111 chars; Google truncates near 60: \"Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh\""
     },
@@ -183,9 +165,27 @@
     },
     {
       "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
-      "msg": "Article missing image"
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
+      "msg": "title is 70 chars; Google truncates near 60: \"Why parallel equipment drifts apart, and what the gap costs | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
+      "msg": "title is 90 chars; Google truncates near 60: \"In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -196,14 +196,14 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
-      "msg": "title is 70 chars; Google truncates near 60: \"Why parallel equipment drifts apart, and what the gap costs | AquaMesh\""
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
+      "msg": "Article missing image"
     },
     {
       "sev": "info",
@@ -251,7 +251,7 @@
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
     "Crawled 39 live pages and 62 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 14 new or changed URL(s) (HTTP 200)."
+    "Told IndexNow (Bing, Copilot, Yandex) about 5 new or changed URL(s) (HTTP 200)."
   ],
   "lighthouse": {
     "at": "2026-10-29T01:02:35.397Z",
@@ -1220,10 +1220,10 @@
   },
   "press": null,
   "indexnow": {
-    "at": "2026-10-31T17:55:08.841Z",
+    "at": "2026-11-01T18:32:54.004Z",
     "ok": true,
     "status": 200,
-    "sent": 14,
+    "sent": 5,
     "note": ""
   },
   "fix": null
