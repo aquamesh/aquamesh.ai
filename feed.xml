@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 16:28:42 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 19:32:56 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wastewater blower VFD: why energy savings erode</title>
@@ -458,7 +458,7 @@
 <p>The kilowatt-hours are measured either way; only their price is in question, and one utility bill settles it. We put that on the front page of the report rather than in a footnote, because showing the range is worth more than picking the flattering end of it.</p>
 <h2 id="what-this-does-not-tell-you">What this does not tell you</h2>
 <p>A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a ceiling that assumes the recommendation is actually implemented and then maintained: an identified opportunity, not a realised saving.</p>
-<p>For context on the energy benchmarking side, the <a href="/blog/aeration-energy-cost-wastewater-plants.html">wastewater aeration energy cost post</a> covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math.</p>
+<p>For context on the energy benchmarking side, the <a href="/blog/aeration-energy-cost-wastewater-plants.html">wastewater aeration energy cost post</a> covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math. For how blower VFD energy savings erode over time and what the measurement failures look like in historian data, see <a href="/blog/wastewater-blower-vfd-energy-savings-erode.html">wastewater blower VFD: why energy savings erode</a>.</p>
 <figure class="post-fig"><img src="../assets/audit.jpg" alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." loading="lazy" decoding="async" /><figcaption>The same findings in the platform, where they keep recomputing on a rolling window rather than ageing in a PDF. Plant name removed; everything else is the product as it ships.</figcaption></figure>
 <p>If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.</p>
 <p>Read the full anonymised audit: <a href="/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant</a>.</p>

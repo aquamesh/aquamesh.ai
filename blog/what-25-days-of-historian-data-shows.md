@@ -114,7 +114,7 @@ The kilowatt-hours are measured either way; only their price is in question, and
 
 A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a ceiling that assumes the recommendation is actually implemented and then maintained: an identified opportunity, not a realised saving.
 
-For context on the energy benchmarking side, the [wastewater aeration energy cost post](/blog/aeration-energy-cost-wastewater-plants.html) covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math.
+For context on the energy benchmarking side, the [wastewater aeration energy cost post](/blog/aeration-energy-cost-wastewater-plants.html) covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math. For how blower VFD energy savings erode over time and what the measurement failures look like in historian data, see [wastewater blower VFD: why energy savings erode](/blog/wastewater-blower-vfd-energy-savings-erode.html).
 
 ![The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card.](../assets/audit.jpg "The same findings in the platform, where they keep recomputing on a rolling window rather than ageing in a PDF. Plant name removed; everything else is the product as it ships.")
 
