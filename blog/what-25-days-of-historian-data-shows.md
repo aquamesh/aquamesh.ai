@@ -47,7 +47,9 @@ Energy intensity is the standard metric. The [EPA's Energy Management Guidebook 
 
 The same logic extends to chemical dosing. Chlorine, polymer, and coagulant dose all should track the flow or load passing through the relevant process step. Dose per unit volume, expressed as mg/L or lb per MG in US customary units, is the trackable metric. A flat chemical dose through wide seasonal flow variation shows up clearly in normalized form. Raw dose data measured in gallons of solution pumped per day hides both overdosing and load-proportional drift.
 
-For the MBR plant in this audit, the actual flow rate is withheld to preserve anonymity. The calculation is the same at any plant: total kWh divided by total volume treated. One month of historian data plus a flow totaliser read is enough to place a plant on the EPA benchmark curve.
+**Modelled chemicals example:** A plant dosing sodium hypochlorite for effluent disinfection at a constant pump rate, regardless of treated flow, will show a normalized dose that rises as flow falls even though the raw pump-rate trend looks flat. At 1.5 MGD, a constant 2 gallons per hour of 12.5 percent sodium hypochlorite solution delivers roughly 4 mg/L as Cl2. At 0.5 MGD, the same rate delivers roughly 12 mg/L, three times the residual target without any change to chemical spend per day. The overdosing does not appear in the raw historian pump-rate trend. It becomes visible the moment dose is divided by flow. In the historian, this shows as a flat pump-rate line through variable flow, where a correctly controlled system would show a line that tracks flow proportionally. Pump rates that do not vary with load are candidates for proportional control, and the historian already contains the data to confirm or rule it out.
+
+For the MBR plant in this audit, the actual flow rate is withheld to preserve anonymity. The calculation is the same at any plant: total kWh divided by total volume treated for energy intensity; total chemical mass or volume divided by total flow for normalized dose rate. One month of historian data plus a flow totaliser read is enough to place a plant on the EPA benchmark curve.
 
 ## What came out
 
