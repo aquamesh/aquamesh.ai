@@ -7,6 +7,15 @@ description: DO sensor precision controls whether intermittent aeration for nitr
 tags: nitrogen removal, intermittent aeration, dissolved oxygen, SND, wastewater treatment
 ---
 
+---
+title: Intermittent aeration: why DO sensor precision matters
+slug: intermittent-aeration-nitrogen-removal-do-control
+date: 2026-10-23
+section: Field notes
+description: DO sensor precision controls whether intermittent aeration for nitrogen removal saves energy or misses permit limits. Here is what happens when it drifts.
+tags: nitrogen removal, intermittent aeration, dissolved oxygen, SND, wastewater treatment
+---
+
 Biological nitrogen removal is one of the more demanding process control challenges in activated sludge treatment. Plants with tight effluent nitrogen limits need to run two competing biological processes: nitrification under aerobic conditions and denitrification under anoxic ones, efficiently, in the same biological system. For plants using intermittent aeration to accomplish this in a single-basin configuration, the precision of dissolved oxygen control during aeration cycles is not an instrumentation detail. It is the variable that determines whether the strategy works.
 
 ## What intermittent aeration is trying to do
@@ -54,7 +63,7 @@ At a 10 MGD plant and the current EIA industrial rate of $0.0977 per kWh ([EIA E
 | Annual energy cost at $0.098/kWh | $193,100 | $321,900 |
 | Annual cost difference | | $128,800 |
 
-This is a modelled example using published benchmarks; actual values depend on plant-specific loading, cycle design, and the degree of sensor offset. The direction is consistent: sensor drift in an intermittent aeration system does not only affect nitrogen removal performance. It erodes the energy savings that justified the intermittent strategy in the first place.
+This is a modelled example using published benchmarks; actual values depend on plant-specific loading, cycle design, and the degree of sensor offset. The direction is consistent: sensor drift in an intermittent aeration system does not only affect nitrogen removal performance. It erodes the energy savings that justified the intermittent strategy in the first place. VFD-controlled blowers in continuous aeration systems show the same erosion pattern through a different mechanism: [why wastewater blower VFD energy savings erode](/blog/wastewater-blower-vfd-energy-savings-erode.html).
 
 ## What accurate DO measurement enables
 
