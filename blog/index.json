@@ -2,7 +2,7 @@
   "site": "https://aquamesh.ai",
   "brand": "AquaMesh",
   "description": "Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.",
-  "generated": "2026-11-01T22:36:18.032Z",
+  "generated": "2026-11-02T01:40:30.062Z",
   "license": "Readable and quotable with attribution to AquaMesh (https://aquamesh.ai).",
   "count": 13,
   "posts": [
@@ -224,11 +224,11 @@
       "content_text": "Dairy Foods published a contributed article by Alex Towfigh, AquaMesh's founder and CEO, on 12 October 2026. The full piece is on the Dairy Foods site: Why dairy plants still miss their most expensive process losses. What follows is a short summary. The article itself is exclusive to Dairy Foods. The argument in brief The losses happen during transitions. Published research puts routine losses of milk to sewer at 1% to 3% of the milk a plant processes. Most of it leaves during startups, interruptions, shutdowns and rinses: short windows where the pipe contents change and someone has to decide where product ends and water begins. More tags do not fix a missing measurement. Conductivity tells you something changed, but not how much product is in the line. A flowmeter tells you how much is moving, but not what it is. Lab results come back after the decision has been made. If the plant never measured the chemistry, software running on the historian has nothing to analyze. Spectral sensing helps, if it can be trusted. An optical spectrum carries far more information than a single variable sensor. But temperature, bubbles, solids and a fouled window all move the reading. Without local calibration, a dirty window can look like a product loss, so every reading needs a confidence level attached. Context decides what a signal means. Rising conductivity is expected during caustic circulation and alarming during a product transfer. The article describes starting from data the plant already has (CIP steps, valve positions, lab results) to establish operating state, adding sensing only where a real blind spot exists, and producing an explanation of what changed and why rather than another generic alarm. Prove it one event at a time. Start read only. Existing controls and sanitation checks stay in charge. Pick one expensive event, measure its baseline, catch it earlier, change the decision, and verify the result. One peer reviewed UHT cleaning study cited in the piece used phase endpoint measurement to cut a cleaning sequence from 142 to 66 minutes and roughly halve its effluent. The article's dollar figures are sensitivity calculations at an illustrative plant scale, not measured results at any named facility. It says so, and so do we. Read the full article in Dairy Foods."
     },
     {
-      "title": "California now asks data centers what they actually use, under penalty of perjury",
+      "title": "California data center water reporting",
       "slug": "california-data-center-water-reporting",
       "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
       "markdown_url": "https://aquamesh.ai/blog/california-data-center-water-reporting.md",
-      "description": "Two bills signed on 21 September split a data center's water into total and direct use, by source, on every business license renewal. A third requirement lands in 2028. Most sites cannot currently answer either.",
+      "description": "AB 2619 requires California data centers to report total and direct water use, by source, at every license renewal under penalty of perjury. A third requirement lands in 2028.",
       "date": "2026-10-01",
       "updated": "2026-10-01",
       "section": "Regulation",

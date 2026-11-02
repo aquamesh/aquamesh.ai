@@ -1,9 +1,9 @@
 ---
-title: California now asks data centers what they actually use, under penalty of perjury
+title: California data center water reporting
 slug: california-data-center-water-reporting
 date: 2026-10-01
 section: Regulation
-description: Two bills signed on 21 September split a data center's water into total and direct use, by source, on every business license renewal. A third requirement lands in 2028. Most sites cannot currently answer either.
+description: AB 2619 requires California data centers to report total and direct water use, by source, at every license renewal under penalty of perjury. A third requirement lands in 2028.
 image: assets/compute-blade.jpg
 tags: data centers, water reporting, AB 2619, AB 2469, cooling water, water reuse, California
 ---
