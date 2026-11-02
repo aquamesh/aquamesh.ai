@@ -1,5 +1,15 @@
 ---
-title: What a 25-day historian audit finds at a treatment plant
+title: What 25 days of historian data reveals
+slug: what-25-days-of-historian-data-shows
+date: 2026-09-30
+section: Field notes
+description: A 25-day SCADA export found $42,000/yr in losses at an MBR plant with no site visit. Method, normalized energy benchmarks, and a six-step replication guide.
+image: assets/audit/fig1.jpg
+tags: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor
+---
+
+---
+title: What 25 days of historian data reveals
 slug: what-25-days-of-historian-data-shows
 date: 2026-09-30
 section: Field notes
@@ -114,7 +124,7 @@ The kilowatt-hours are measured either way; only their price is in question, and
 
 A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a ceiling that assumes the recommendation is actually implemented and then maintained: an identified opportunity, not a realised saving.
 
-For context on the energy benchmarking side, the [wastewater aeration energy cost post](/blog/aeration-energy-cost-wastewater-plants.html) covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math. For how blower VFD energy savings erode over time and what the measurement failures look like in historian data, see [wastewater blower VFD: why energy savings erode](/blog/wastewater-blower-vfd-energy-savings-erode.html).
+For context on the energy benchmarking side, the [wastewater blower energy cost post](/blog/aeration-energy-cost-wastewater-plants.html) covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math. For how blower VFD energy savings erode over time and what the measurement failures look like in historian data, see [wastewater blower VFD: why energy savings erode](/blog/wastewater-blower-vfd-energy-savings-erode.html).
 
 ![The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card.](../assets/audit.jpg "The same findings in the platform, where they keep recomputing on a rolling window rather than ageing in a PDF. Plant name removed; everything else is the product as it ships.")
 

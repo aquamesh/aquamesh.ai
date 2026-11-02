@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 10:58:24 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 10:59:20 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wastewater blower VFD: why energy savings erode</title>
@@ -409,12 +409,15 @@
       <category>California</category>
     </item>
     <item>
-      <title>What a 25-day historian audit finds at a treatment plant</title>
+      <title>What 25 days of historian data reveals</title>
       <link>https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html</link>
       <guid isPermaLink="true">https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html</guid>
       <pubDate>Wed, 30 Sep 2026 09:00:00 GMT</pubDate>
       <description>A 25-day SCADA export found $42,000/yr in losses at an MBR plant with no site visit. Method, normalized energy benchmarks, and a six-step replication guide.</description>
-      <content:encoded><![CDATA[<p>A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and pump cycling at more than twenty times the design rate.</p>
+      <content:encoded><![CDATA[<hr />
+<p>title: What 25 days of historian data reveals slug: what-25-days-of-historian-data-shows date: 2026-09-30 section: Field notes description: A 25-day SCADA export found $42,000/yr in losses at an MBR plant with no site visit. Method, normalized energy benchmarks, and a six-step replication guide. image: assets/audit/fig1.jpg tags: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor</p>
+<hr />
+<p>A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and pump cycling at more than twenty times the design rate.</p>
 <p>The method is repeatable on any plant with a SCADA or DCS historian: pull an export, locate the parallel equipment pairs, compare each one's performance against the plant's own posted operating ranges, and price every gap that falls outside them. The rest of this post covers that method in detail.</p>
 <p>That figure came entirely from the plant's existing SCADA archive: 1,001 tags, 7,172,532 recorded values, covering 28 June to 23 July.</p>
 <figure class="post-fig"><img src="../assets/audit/fig1.jpg" alt="Audit summary page: no-capital savings, fully instrumented savings, design flow percentage, and effluent turbidity. Values tagged M are measured from SCADA; E means calculated with stated assumptions." loading="lazy" decoding="async" /><figcaption>The front page of the delivered audit. Values tagged <b>M</b> are measured straight from the plant's SCADA; <b>E</b> means we calculated them, and the assumptions are written down.</figcaption></figure>
@@ -460,7 +463,7 @@
 <p>The kilowatt-hours are measured either way; only their price is in question, and one utility bill settles it. We put that on the front page of the report rather than in a footnote, because showing the range is worth more than picking the flattering end of it.</p>
 <h2 id="what-this-does-not-tell-you">What this does not tell you</h2>
 <p>A twenty-five day window in summer will not capture seasonal variation. Capital figures other than instrumentation are order-of-magnitude and need firming with quotes. And every number here is a ceiling that assumes the recommendation is actually implemented and then maintained: an identified opportunity, not a realised saving.</p>
-<p>For context on the energy benchmarking side, the <a href="/blog/aeration-energy-cost-wastewater-plants.html">wastewater aeration energy cost post</a> covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math. For how blower VFD energy savings erode over time and what the measurement failures look like in historian data, see <a href="/blog/wastewater-blower-vfd-energy-savings-erode.html">wastewater blower VFD: why energy savings erode</a>.</p>
+<p>For context on the energy benchmarking side, the <a href="/blog/aeration-energy-cost-wastewater-plants.html">wastewater blower energy cost post</a> covers how to compare blower costs against facility-type benchmarks and what continuous DO monitoring changes about that math. For how blower VFD energy savings erode over time and what the measurement failures look like in historian data, see <a href="/blog/wastewater-blower-vfd-energy-savings-erode.html">wastewater blower VFD: why energy savings erode</a>.</p>
 <figure class="post-fig"><img src="../assets/audit.jpg" alt="The AquaMesh recommendations view: findings with severity, the action to take, the evidence tags and the annual value, with accept, resolve and dismiss on each card." loading="lazy" decoding="async" /><figcaption>The same findings in the platform, where they keep recomputing on a rolling window rather than ageing in a PDF. Plant name removed; everything else is the product as it ships.</figcaption></figure>
 <p>If your plant keeps a historian, the same exercise is available on your data. It needs an export and nothing else.</p>
 <p>Read the full anonymised audit: <a href="/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant</a>.</p>
