@@ -1,18 +1,18 @@
 ---
-title: Wastewater aeration energy: cost and the measurement gap
+title: Wastewater blower energy: cost and control
 slug: aeration-energy-cost-wastewater-plants
 date: 2026-10-21
 section: Field notes
-description: Aeration is 50 to 75 percent of a wastewater plant's electricity bill. What it costs per MGD, why the savings erode, and how to cut blower energy without new equipment.
+description: Aeration is 50 to 75% of a wastewater plant's electricity bill. What it costs per MGD, why savings erode, and how to cut blower energy without new equipment.
 tags: aeration energy, wastewater treatment, dissolved oxygen, blower control, energy optimization
 ---
 
 ---
-title: Wastewater aeration energy: cost and the measurement gap
+title: Wastewater blower energy: cost and control
 slug: aeration-energy-cost-wastewater-plants
 date: 2026-10-21
 section: Field notes
-description: Aeration is 50 to 75 percent of a wastewater plant's electricity bill. What it costs per MGD, why the savings erode, and how to cut blower energy without new equipment.
+description: Aeration is 50 to 75% of a wastewater plant's electricity bill. What it costs per MGD, why savings erode, and how to cut blower energy without new equipment.
 tags: aeration energy, wastewater treatment, dissolved oxygen, blower control, energy optimization
 ---
 
@@ -63,7 +63,7 @@ We covered the mechanics and cost of this kind of hidden divergence in [why para
 
 ## What the historian data showed
 
-When we analyzed 25 days of historian data from an operating plant earlier this year, one of the first findings was a DO-driven blower anomaly: one basin was running at more than three times the DO level of its parallel twin, with its blower pinned at maximum output, for the full duration of the record.
+When we analyzed 25 days of historian data from an operating plant earlier this year, one of the first findings was a DO-driven blower anomaly: one basin was running at more than three times the DO level of its parallel twin, with its blower command pinned at maximum output, for the full duration of the record.
 
 Both basins drew on the same shared air header. The control loop was functioning. The deviation was visible only by comparing the two basins side by side at hourly resolution. A daily manual grab from either basin, taken at a representative time, could easily have missed it.
 
