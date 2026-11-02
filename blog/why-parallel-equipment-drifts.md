@@ -8,6 +8,16 @@ image: assets/audit.jpg
 tags: parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance
 ---
 
+---
+title: Why parallel equipment drifts and what it costs
+slug: why-parallel-equipment-drifts
+date: 2026-09-26
+section: Field notes
+description: Parallel blowers, pumps and process trains drift apart from filter fouling, wear and sensor mismatch. Here is what the gap costs and how to find it.
+image: assets/audit.jpg
+tags: parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance
+---
+
 Parallel blowers and pumps in treatment plants drift apart for three reasons: inlet filter fouling, mechanical wear, and sensor or setpoint mismatch on one unit. Each is fixable. The gap between a 150 hp blower pair drifting 12 percentage points apart from filter loading alone can cost $5,000 to $7,000 per year in excess electricity -- and the fix is a filter service, not a capital project. The problem is that the gap produces no control-system alarm. Two basins can sit inside every operating limit while running at completely different airflow rates, and the divergence compounds for months or years undetected.
 
 The cost shows up in three ways: wasted blower electricity, accelerated wear on whichever unit is running harder, and measurement errors that propagate into process and compliance decisions. A basin pair drifting 20 percentage points apart in aeration demand adds hundreds to over a thousand dollars a year in energy alone, before accounting for the wear asymmetry that follows.
@@ -78,7 +88,7 @@ Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO 
 
 A related pattern worth naming on its own, because it is consistently underestimated.
 
-Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.energy.gov/eere/amo/pump-systems), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
+Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.energy.gov/sites/default/files/2014/05/f15/pump.pdf), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
 
 In one record, reclaimed water pumps were logging 13 to 28 starts an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm fired, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.
 
