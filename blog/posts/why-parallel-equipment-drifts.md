@@ -1,9 +1,9 @@
 ---
-title: Why parallel equipment drifts apart, and what the gap costs
+title: Why parallel equipment drifts and what it costs
 slug: why-parallel-equipment-drifts
 date: 2026-09-26
 section: Field notes
-description: When parallel blowers, pumps or process trains stop matching, something changed. Here is what drives the gap, what it costs, and how to find it in data you already have.
+description: Parallel blowers, pumps and process trains drift apart from filter fouling, wear and sensor mismatch. Here is what the gap costs and how to find it.
 image: assets/audit.jpg
 tags: parallel equipment, pump duty, lead lag alternation, aeration, predictive maintenance
 ---
@@ -78,7 +78,7 @@ Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO 
 
 A related pattern worth naming on its own, because it is consistently underestimated.
 
-Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.energy.gov/sites/default/files/2014/05/f15/pumping.pdf), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
+Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.energy.gov/eere/amo/pump-systems), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
 
 In one record, reclaimed water pumps were logging 13 to 28 starts an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm fired, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.
 

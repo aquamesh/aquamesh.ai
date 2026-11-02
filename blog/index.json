@@ -2,7 +2,7 @@
   "site": "https://aquamesh.ai",
   "brand": "AquaMesh",
   "description": "Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.",
-  "generated": "2026-11-02T01:40:30.062Z",
+  "generated": "2026-11-02T04:45:32.140Z",
   "license": "Readable and quotable with attribution to AquaMesh (https://aquamesh.ai).",
   "count": 13,
   "posts": [
@@ -305,11 +305,11 @@
       "content_text": "On 28 September 2026, Connect published an announcement about AquaMesh on its blog and through PR distribution. The full release is here: AquaMesh Builds Physical AI to Help Industrial Facilities Catch Costly Problems Early. It also ran on PRLog. What it covers The problem. Many plants still find critical problems through delayed lab tests, manual checks, indirect measurements, or alarms that only fire after the problem has already formed. Unplanned industrial downtime is estimated to cost about $260,000 an hour on average. What AquaMesh does. The platform connects to data a facility already collects and shows where money is being lost. Where a physical or chemical condition can't be measured any other way, it adds its own sensing. From there it works continuously: detect the problem, find the cause, estimate the cost, recommend a response, and check that the response worked. What it is aiming at. The target is 10% to 25% lower operating cost across water, chemicals, energy, labor and discharge. These are target ranges, not guaranteed results. Why it matters. In the release, Alex Towfigh describes the core issue as a blind spot about what is physically happening inside a process. Closing it pays off now through production, downtime and operating cost. Over the longer term it is the foundation for facilities that optimize themselves, starting with information operators can trust. Read the full release on Connect."
     },
     {
-      "title": "Why parallel equipment drifts apart, and what the gap costs",
+      "title": "Why parallel equipment drifts and what it costs",
       "slug": "why-parallel-equipment-drifts",
       "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
       "markdown_url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.md",
-      "description": "When parallel blowers, pumps or process trains stop matching, something changed. Here is what drives the gap, what it costs, and how to find it in data you already have.",
+      "description": "Parallel blowers, pumps and process trains drift apart from filter fouling, wear and sensor mismatch. Here is what the gap costs and how to find it.",
       "date": "2026-09-26",
       "updated": "2026-09-26",
       "section": "Field notes",
