@@ -1,6 +1,12 @@
 {
-  "at": "2026-11-01T18:32:54.004Z",
+  "at": "2026-11-02T22:28:00.403Z",
   "findings": [
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/company.html",
+      "msg": "Article missing dateModified, image"
+    },
     {
       "sev": "warn",
       "id": "desc-length",
@@ -12,12 +18,6 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/",
       "msg": "meta description is 250 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/company.html",
-      "msg": "Article missing dateModified, image"
     },
     {
       "sev": "warn",
@@ -46,12 +46,6 @@
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
-      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
       "url": "https://aquamesh.ai/case-studies/refinery-complex.html",
       "msg": "title is 73 chars; Google truncates near 60: \"Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh\""
     },
@@ -75,14 +69,14 @@
     },
     {
       "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
+      "id": "title-length",
+      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
+      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
     },
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
+      "url": "https://aquamesh.ai/privacy.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
@@ -99,15 +93,21 @@
     },
     {
       "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/basin/",
       "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
     },
     {
       "sev": "warn",
@@ -124,26 +124,20 @@
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-      "msg": "title is 66 chars; Google truncates near 60: \"Cooling tower blowdown control: conductivity drift cost | AquaMesh\""
+      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
+      "msg": "title is 90 chars; Google truncates near 60: \"In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh\""
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
-      "msg": "title is 67 chars; Google truncates near 60: \"Wastewater aeration energy: cost and the measurement gap | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "title is 92 chars; Google truncates near 60: \"California now asks data centers what they actually use, under penalty of perjury | AquaMesh\""
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "meta description is 211 chars (aim for 70 to 160)"
+      "msg": "meta description is 175 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -159,33 +153,9 @@
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
-      "msg": "title is 67 chars; Google truncates near 60: \"What a 25-day historian audit finds at a treatment plant | AquaMesh\""
-    },
-    {
-      "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
       "msg": "meta description is 201 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
-      "msg": "title is 70 chars; Google truncates near 60: \"Why parallel equipment drifts apart, and what the gap costs | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
-      "msg": "title is 90 chars; Google truncates near 60: \"In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -251,7 +221,7 @@
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
     "Crawled 39 live pages and 62 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 5 new or changed URL(s) (HTTP 200)."
+    "Told IndexNow (Bing, Copilot, Yandex) about 9 new or changed URL(s) (HTTP 200)."
   ],
   "lighthouse": {
     "at": "2026-10-29T01:02:35.397Z",
@@ -1220,10 +1190,10 @@
   },
   "press": null,
   "indexnow": {
-    "at": "2026-11-01T18:32:54.004Z",
+    "at": "2026-11-02T22:28:00.403Z",
     "ok": true,
     "status": 200,
-    "sent": 5,
+    "sent": 9,
     "note": ""
   },
   "fix": null
