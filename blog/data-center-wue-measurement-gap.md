@@ -1,5 +1,14 @@
 ---
-title: Data center WUE: what it measures and what it misses
+title: Data center WUE: what it measures and misses
+slug: data-center-wue-measurement-gap
+date: 2026-10-22
+section: Measurement
+description: WUE measures liters per kWh of IT load. It does not show where water goes, verify cooling controls, or prove tower savings for reporting.
+tags: data centers, WUE, water efficiency, cooling tower, water monitoring, water usage effectiveness
+---
+
+---
+title: Data center WUE: what it measures and misses
 slug: data-center-wue-measurement-gap
 date: 2026-10-22
 section: Measurement
