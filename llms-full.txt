@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-03T05:22:11.136Z · 13 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-03T23:38:56.543Z · 13 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -755,16 +755,6 @@ SECTION: Field notes
 TAGS: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor
 ==============================================================================
 
----
-title: What 25 days of historian data reveals
-slug: what-25-days-of-historian-data-shows
-date: 2026-09-30
-section: Field notes
-description: A 25-day SCADA export found $42,000/yr in losses at an MBR plant with no site visit. Method, normalized energy benchmarks, and a six-step replication guide.
-image: assets/audit/fig1.jpg
-tags: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor
----
-
 A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and pump cycling at more than twenty times the design rate.
 
 The method is repeatable on any plant with a SCADA or DCS historian: pull an export, locate the parallel equipment pairs, compare each one's performance against the plant's own posted operating ranges, and price every gap that falls outside them. The rest of this post covers that method in detail.
@@ -814,7 +804,7 @@ For the MBR plant in this audit, the actual flow rate is withheld to preserve an
 
 The plant's sampling schedule posts pre-air dissolved oxygen at 0.5 to 1.5 mg/L. Basin 2 sat right in that band, median 0.49 mg/L. Basin 1 held a median of 5.35 mg/L on every day of the record, roughly eleven times its twin, with its blower command pinned at 99.99%.
 
-Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split, a valve or a damper, not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk: the [EPA Nutrient Control Design Manual](https://www.epa.gov/nutrient-policy-data/nutrient-control-design-manual) identifies dissolved oxygen intrusion into anoxic zones as a primary cause of denitrification inefficiency, since aerobic organisms outcompete denitrifiers at elevated DO concentrations.
+Both basins draw on the same shared air header. That detail is what turns this from a mystery into a maintenance task: if the air supply is common and the outcomes are not, the problem is in the split, a valve or a damper, not in the control strategy. Worth $3,316 a year in blower power, plus the nitrogen-removal risk: the [EPA Nutrient Control Design Manual](https://www.epa.gov/nutrient-policy-data/nutrient-control-design-manual) identifies dissolved oxygen intrusion into anoxic zones as a primary cause of denitrification inefficiency, since aerobic organisms outcompete denitrifiers at elevated DO concentrations. For plants using intermittent aeration to achieve biological nitrogen removal in a single basin, excess DO also disrupts aerobic and anoxic cycle timing, compounding nitrogen removal losses and increasing blower runtime. The mechanism is documented in [intermittent aeration for nitrogen removal: why DO sensor precision matters](/blog/intermittent-aeration-nitrogen-removal-do-control.html).
 
 One caveat worth repeating: a fouled DO probe can sit on an offset and still respond to airflow changes, making it hard to distinguish a measurement artifact from a real process difference. The reading gets verified against a calibrated handheld before anyone opens a valve. How quickly DO sensors drift in activated sludge mixed liquor, and what calibration intervals are appropriate for that environment, is covered in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html).
 
