@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Demo | AquaMesh</title>
-  <meta name="description" content="A three-minute walk-through of AquaMesh on a simulated cheese and whey dairy: from audit to live 3D twin." />
+  <meta name="description" content="How AquaMesh works: a three-minute demo, from a plant's own data to a live digital twin." />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href="https://aquamesh.ai/demo/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="AquaMesh demo" />
-  <meta property="og:description" content="A three-minute walk-through of AquaMesh on a simulated dairy, from audit to live 3D twin." />
+  <meta property="og:title" content="How AquaMesh works" />
+  <meta property="og:description" content="From a plant's own data to a live digital twin, in three steps." />
   <meta property="og:image" content="https://aquamesh.ai/demo/poster.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
@@ -18,10 +18,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css?v=33" />
   <style>
-    .demo-video { margin-top: clamp(28px, 4vw, 44px); width: 100%; max-width: 1080px; aspect-ratio: 16 / 9; background: #0b1226; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+    .demo-head { text-align: center; }
+    .demo-head h1, .demo-head .lead { margin-inline: auto; }
+    .demo-head .eyebrow { justify-content: center; padding-left: .24em; }
+    .demo-video { margin: clamp(28px, 4vw, 44px) auto 0; width: 100%; max-width: 1080px; aspect-ratio: 16 / 9; background: #0b1226; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
     .demo-video video { display: block; width: 100%; height: 100%; }
-    .demo-note { margin-top: 14px; font-size: .9rem; color: var(--ink-3); }
-    .demo-cta { margin-top: 28px; }
+    .demo-steps { list-style: none; margin: clamp(32px, 4.5vw, 52px) auto 0; padding: 0; max-width: 1080px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 48px); }
+    .demo-num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--blue); color: var(--blue); font-weight: 700; font-size: .95rem; margin-bottom: 12px; }
+    .demo-steps h3 { margin-bottom: 8px; }
+    .demo-steps p { font-size: .98rem; color: var(--ink-3); max-width: 34ch; margin-inline: auto; }
+    .demo-note { margin-top: 36px; font-size: .9rem; color: var(--ink-3); }
+    .demo-cta { margin-top: 20px; }
+    @media (max-width: 760px) { .demo-steps { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -103,17 +111,34 @@
   </header>
 
   <main class="cs">
-    <section class="section cs-head">
+    <section class="section cs-head demo-head">
       <div class="wrap">
         <p class="eyebrow">Demo</p>
-        <h1>See what AquaMesh <span class="accent">finds in a plant.</span></h1>
-        <p class="lead">A three-minute walk-through on a simulated cheese and whey dairy, from the audit to the live 3D twin.</p>
+        <h1>How AquaMesh <span class="accent">works.</span></h1>
+        <p class="lead">From a plant's own data to a live digital twin, in three steps.</p>
         <div class="demo-video">
           <video controls playsinline preload="metadata" poster="poster.jpg" aria-label="AquaMesh product demo">
             <source src="aquamesh-demo.mp4" type="video/mp4" />
             Your browser does not play embedded video. <a href="aquamesh-demo.mp4">Download the demo</a>.
           </video>
         </div>
+        <ol class="demo-steps">
+          <li>
+            <span class="demo-num">1</span>
+            <h3>Audit</h3>
+            <p>Reads the plant's own data, prices what it finds on the plant's utility rates, and checks its own work.</p>
+          </li>
+          <li>
+            <span class="demo-num">2</span>
+            <h3>Digital twin</h3>
+            <p>Builds a live twin from the audit: what to watch, what to detect and what to predict.</p>
+          </li>
+          <li>
+            <span class="demo-num">3</span>
+            <h3>Operate</h3>
+            <p>Watches every signal live, answers questions in plain words, and recommends responses for a person to approve.</p>
+          </li>
+        </ol>
         <p class="demo-note">All plant data shown is simulated.</p>
         <p class="demo-cta"><a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a></p>
       </div>
