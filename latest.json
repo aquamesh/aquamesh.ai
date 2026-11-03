@@ -1,17 +1,17 @@
 {
-  "at": "2026-11-02T22:28:00.403Z",
+  "at": "2026-11-03T20:16:35.225Z",
   "findings": [
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/company.html",
-      "msg": "Article missing dateModified, image"
-    },
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/",
       "msg": "meta description is 183 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/company.html",
+      "msg": "Article missing dateModified, image"
     },
     {
       "sev": "warn",
@@ -24,6 +24,12 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
       "msg": "meta description is 191 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
+      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -42,6 +48,48 @@
       "id": "html-weight",
       "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
       "msg": "HTML is 1383 KB"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -70,54 +118,6 @@
     {
       "sev": "warn",
       "id": "title-length",
-      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
-      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
       "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
       "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
     },
@@ -132,12 +132,6 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/blog/dairy-foods-process-losses.html",
       "msg": "meta description is 179 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "meta description is 175 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -168,6 +162,12 @@
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
+      "msg": "meta description is 175 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -221,7 +221,7 @@
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
     "Crawled 39 live pages and 62 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 9 new or changed URL(s) (HTTP 200)."
+    "Told IndexNow (Bing, Copilot, Yandex) about 1 new or changed URL(s) (HTTP 200)."
   ],
   "lighthouse": {
     "at": "2026-10-29T01:02:35.397Z",
@@ -1190,10 +1190,10 @@
   },
   "press": null,
   "indexnow": {
-    "at": "2026-11-02T22:28:00.403Z",
+    "at": "2026-11-03T20:16:35.225Z",
     "ok": true,
     "status": 200,
-    "sent": 9,
+    "sent": 1,
     "note": ""
   },
   "fix": null
