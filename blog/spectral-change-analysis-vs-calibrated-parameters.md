@@ -24,7 +24,7 @@ Converting that curve into "COD = 212 mg/L" requires a model that maps spectral 
 - They **drift with composition**. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.
 - They **degrade quietly**. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.
 
-Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown.
+Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown. The same silent-drift behavior applies to simpler sensors driving process control decisions: how frequently a dissolved oxygen sensor needs recalibration in activated sludge mixed liquor, and what happens to blower energy and nitrogen removal when that interval is too long, is covered in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html).
 
 ## The alternative: watch the spectrum move
 
@@ -74,4 +74,8 @@ Measurement is only half of it. A spectrum that moved is not an action: it becom
 
 That is the division of labour: the probe reads the stream, the platform works out what the change means and what it is worth, and the operator decides what to do about it. What that process looks like against a real plant dataset is in [what 25 days of historian data actually shows](/blog/what-25-days-of-historian-data-shows.html). Working from a production historian to find cost events is the practical version of the correlation step described above.
 
+That distinction between a measurement that holds against an independent reference and one that drifts undetected applies to every process sensor that drives a control decision. [Cooling tower blowdown: what conductivity sensor drift costs in water and chemicals](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html) is a direct example from a different application.
+
 More on what the sensor is used for by sector: [food and beverage](/industries/food-beverage.html), [industrial water](/industries/industrial-water.html), [pharma and biotech](/industries/pharma-biotech.html).
+
+*Author: Alex Towfigh, AquaMesh*

@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 05:45:23 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 08:49:49 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wastewater blower VFD: why energy savings erode</title>
@@ -608,7 +608,7 @@
 <figure class="post-fig"><img src="../assets/starch-spectra.jpg" alt="UV/Vis and NIR absorbance spectra at clean, rising, high and very high loss, a reference fingerprint across 200-1700 nm, and spectral deviation from that reference." loading="lazy" decoding="async" /><figcaption>The raw measurement: absorbance across wavelength, many times a second. Everything downstream is interpretation of this curve.</figcaption></figure>
 <p>Converting that curve into "COD = 212 mg/L" requires a model that maps spectral shape to a lab value. Such models exist, they can be built, and for some parameters on some streams they are good. <a href="https://www.iso.org/standard/28624.html" rel="noopener">ISO 15839</a>, which sets performance specifications for online water quality analysers, addresses this directly: models must be validated for the specific application, and performance characteristics may vary by site. In practice, this means the conditions that worked at one plant do not transfer automatically:</p>
 <ul class="post-list"><li>They are often <b>site-specific</b>. Transferability must be demonstrated; a model validated on one stream should not be assumed valid on another.</li><li>They <b>drift with composition</b>. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.</li><li>They <b>degrade quietly</b>. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.</li></ul>
-<p>Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown.</p>
+<p>Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown. The same silent-drift behavior applies to simpler sensors driving process control decisions: how frequently a dissolved oxygen sensor needs recalibration in activated sludge mixed liquor, and what happens to blower energy and nitrogen removal when that interval is too long, is covered in <a href="/blog/do-sensor-calibration-interval-activated-sludge.html">DO sensor calibration intervals in activated sludge</a>.</p>
 <h2 id="the-alternative-watch-the-spectrum-move">The alternative: watch the spectrum move</h2>
 <p>There is a different use of the same hardware, and in a plant it is usually the more valuable one.</p>
 <p>Instead of asking <em>what is the concentration</em>, ask <em>has the fingerprint changed, and what does that change correlate with</em>. Build a one-time model of what the plant's own stream normally looks like. Then watch for deviation from that reference, and tie the deviation to what the plant was doing at the time: feed rate, wash flow, machine state, cleaning records.</p>
@@ -631,7 +631,9 @@
 <h2 id="where-this-sits-in-the-stack">Where this sits in the stack</h2>
 <p>Measurement is only half of it. A spectrum that moved is not an action: it becomes useful when it is correlated with plant state, attributed to a unit, and priced.</p>
 <p>That is the division of labour: the probe reads the stream, the platform works out what the change means and what it is worth, and the operator decides what to do about it. What that process looks like against a real plant dataset is in <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of historian data actually shows</a>. Working from a production historian to find cost events is the practical version of the correlation step described above.</p>
-<p>More on what the sensor is used for by sector: <a href="/industries/food-beverage.html">food and beverage</a>, <a href="/industries/industrial-water.html">industrial water</a>, <a href="/industries/pharma-biotech.html">pharma and biotech</a>.</p>]]></content:encoded>
+<p>That distinction between a measurement that holds against an independent reference and one that drifts undetected applies to every process sensor that drives a control decision. <a href="/blog/cooling-tower-blowdown-conductivity-sensor-drift.html">Cooling tower blowdown: what conductivity sensor drift costs in water and chemicals</a> is a direct example from a different application.</p>
+<p>More on what the sensor is used for by sector: <a href="/industries/food-beverage.html">food and beverage</a>, <a href="/industries/industrial-water.html">industrial water</a>, <a href="/industries/pharma-biotech.html">pharma and biotech</a>.</p>
+<p><em>Author: Alex Towfigh, AquaMesh</em></p>]]></content:encoded>
       <category>UV-Vis</category>
       <category>spectral analysis</category>
       <category>BOD</category>
