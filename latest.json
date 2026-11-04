@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-03T20:16:35.225Z",
+  "at": "2026-11-04T20:32:34.541Z",
   "findings": [
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/case-studies/",
+      "msg": "meta description is 250 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -16,8 +16,8 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/",
-      "msg": "meta description is 250 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -33,63 +33,9 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "html-weight",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "HTML is 1383 KB"
-    },
-    {
-      "sev": "warn",
       "id": "og-missing",
       "url": "https://aquamesh.ai/privacy.html",
       "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -117,6 +63,60 @@
     },
     {
       "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "html-weight",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "HTML is 1383 KB"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
       "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
@@ -135,6 +135,12 @@
     },
     {
       "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
+      "msg": "meta description is 175 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
       "msg": "title is 111 chars; Google truncates near 60: \"Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh\""
@@ -144,6 +150,36 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
       "msg": "meta description is 189 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "external-link-broken",
+      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
+      "msg": "links to https://www.epa.gov/nutrient-policy-data/nutrient-control-design-manual (404)"
+    },
+    {
+      "sev": "warn",
+      "id": "external-link-broken",
+      "url": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
+      "msg": "links to https://www.osti.gov/biblio/793674 (404)"
+    },
+    {
+      "sev": "warn",
+      "id": "external-link-broken",
+      "url": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
+      "msg": "links to https://www.thegreengrid.org/en/resources/library/details/WUE-A-Green-Grid-Efficiency-Metric (404)"
+    },
+    {
+      "sev": "warn",
+      "id": "external-link-broken",
+      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
+      "msg": "links to https://www.epa.gov/sustainable-water-infrastructure/energy-management-water-and-wastewater-utilities (404)"
+    },
+    {
+      "sev": "warn",
+      "id": "external-link-broken",
+      "url": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
+      "msg": "links to https://web.archive.org/web/20231015000000/https://www.energy.gov/sites/default/files/2014/05/f15/pump.pdf (404)"
     },
     {
       "sev": "warn",
@@ -160,19 +196,13 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
       "msg": "Article missing image"
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-      "msg": "meta description is 175 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
     {
@@ -182,16 +212,16 @@
       "msg": "13 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
     },
     {
-      "sev": "warn",
-      "id": "cwv-lcp",
-      "url": "https://aquamesh.ai/",
-      "msg": "LCP 3.0s on mobile (good is under 2.5s); element: <p class=\"lead\">"
+      "sev": "info",
+      "id": "press-no-link",
+      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
+      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     },
     {
       "sev": "warn",
       "id": "cwv-lcp",
-      "url": "https://aquamesh.ai/blog/",
-      "msg": "LCP 2.6s on mobile (good is under 2.5s); element: <h1>"
+      "url": "https://aquamesh.ai/",
+      "msg": "LCP 3.0s on mobile (good is under 2.5s); element: <p class=\"lead\">"
     },
     {
       "sev": "warn",
@@ -202,14 +232,14 @@
     {
       "sev": "warn",
       "id": "cwv-cls",
-      "url": "https://aquamesh.ai/case-studies/water-reuse-plant.html",
-      "msg": "CLS 0.119 (good is under 0.1)"
+      "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
+      "msg": "CLS 0.106 (good is under 0.1)"
     },
     {
       "sev": "warn",
-      "id": "cwv-lcp",
-      "url": "https://aquamesh.ai/industries/industrial-water.html",
-      "msg": "LCP 2.8s on mobile (good is under 2.5s); element: <img src=\"../assets/industries/industrial-water.jpg\" width=\"1000\" height=\"666\" fetchpriority=\"high\" decoding=\"async\" alt=\"A treatment basin at an operating wate"
+      "id": "cwv-cls",
+      "url": "https://aquamesh.ai/case-studies/water-reuse-plant.html",
+      "msg": "CLS 0.119 (good is under 0.1)"
     },
     {
       "sev": "warn",
@@ -220,980 +250,184 @@
   ],
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
-    "Crawled 39 live pages and 62 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 1 new or changed URL(s) (HTTP 200)."
+    "Crawled 39 live pages and 62 assets and files, plus 58 external links.",
+    "Told IndexNow (Bing, Copilot, Yandex) about 4 new or changed URL(s) (HTTP 200).",
+    "Checked 3 trade-press article(s): 2 link to aquamesh.ai.",
+    "Ran Lighthouse (mobile) on 5 pages.",
+    "Asked an AI answer engine 0 buyer questions; aquamesh.ai was cited in 0 ($0)."
   ],
   "lighthouse": {
-    "at": "2026-10-29T01:02:35.397Z",
+    "at": "2026-11-04T20:32:34.541Z",
     "results": [
       {
         "url": "https://aquamesh.ai/",
-        "performance": 94,
+        "performance": 91,
         "accessibility": 97,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 3025,
+        "lcpMs": 3021,
         "cls": 0,
-        "tbtMs": 62,
-        "fcpMs": 1113,
+        "tbtMs": 80,
+        "fcpMs": 1077,
         "failingSeo": [],
         "lcpElement": "<p class=\"lead\">"
       },
       {
         "url": "https://aquamesh.ai/blog/",
-        "performance": 86,
+        "performance": 87,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2596,
+        "lcpMs": 2495,
         "cls": 0.16,
         "tbtMs": 0,
-        "fcpMs": 2596,
+        "fcpMs": 2495,
         "failingSeo": [],
         "lcpElement": "<h1>"
       },
       {
-        "url": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-        "performance": 97,
+        "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
+        "performance": 91,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 1625,
-        "cls": 0.092,
+        "lcpMs": 2469,
+        "cls": 0.106,
         "tbtMs": 0,
-        "fcpMs": 1625,
+        "fcpMs": 2469,
         "failingSeo": [],
-        "lcpElement": "<h1>"
+        "lcpElement": "<p class=\"lead\">"
       },
       {
         "url": "https://aquamesh.ai/case-studies/water-reuse-plant.html",
-        "performance": 95,
+        "performance": 96,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 1622,
+        "lcpMs": 1563,
         "cls": 0.119,
         "tbtMs": 0,
-        "fcpMs": 1622,
+        "fcpMs": 1563,
         "failingSeo": [],
         "lcpElement": "<p class=\"lead\">"
       },
       {
         "url": "https://aquamesh.ai/industries/industrial-water.html",
-        "performance": 86,
+        "performance": 92,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2832,
+        "lcpMs": 2379,
         "cls": 0.146,
-        "tbtMs": 0,
-        "fcpMs": 2556,
+        "tbtMs": 16,
+        "fcpMs": 1561,
         "failingSeo": [],
         "lcpElement": "<img src=\"../assets/industries/industrial-water.jpg\" width=\"1000\" height=\"666\" fetchpriority=\"high\" decoding=\"async\" alt=\"A treatment basin at an operating wate"
       }
     ]
   },
   "ai": {
-    "at": "2026-10-29T01:02:35.397Z",
+    "at": "2026-11-04T20:32:34.541Z",
     "engine": "Claude web search",
     "results": [
       {
         "query": "What is AquaMesh (aquamesh.ai) and what does it do?",
-        "retrievedCount": 9,
-        "citedCount": 7,
-        "aquameshRetrievedRank": 5,
-        "aquameshCited": true,
-        "aquameshUrls": [
-          "https://aquamesh.ai/products/aquaview-platform/",
-          "https://aquamesh.ai/",
-          "https://aquamesh.ai/industries/manufacturing.html",
-          "https://aquamesh.ai/products/aquaspectra-probe/"
-        ],
-        "topCitedDomains": [
-          "aquamesh.ai",
-          "prlog.org",
-          "thewaternetwork.com",
-          "connect.org",
-          "pitchbook.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://www.prlog.org/13173077-aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early.html",
-            "title": "AquaMesh Builds Physical AI to Help Industrial Facilities Catch Costly Problems Early -- Connect"
-          },
-          {
-            "url": "https://thewaternetwork.com/organization-c6k/aquamesh-fJmGVfoQlT4lXIl_3qa11A/product/list",
-            "title": "Products/Services by Aquamesh - The Water Network"
-          },
-          {
-            "url": "https://connect.org/aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early/",
-            "title": "AquaMesh Builds Physical AI to Help Industrial Facilities Catch Costly Problems Early - Connect Foundation"
-          },
-          {
-            "url": "https://pitchbook.com/profiles/company/534796-48",
-            "title": "Aquamesh 2026 Company Profile: Valuation, Funding & Investors"
-          }
-        ],
-        "answer": "AquaMesh is a San Diego industrial AI company focused on water operations.\n\n**What it does**\n- It combines industrial water AI analytics, existing SCADA data and targeted UV/Vis spectral sensing. It uses these to detect losses, diagnose causes and support operator-approved optimization.\n- It prices what a plant is losing (product, energy, chemicals, downtime) and tells operators which change pays the most that week.\n- It can start on data a plant already records, with no new hardware.\n- It adds proprietary sensing when a critical physical or chemical condition isn't currently measurable.\n- An on-site compute blade is part of the design. It runs real-time models and executes approved changes ",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 29
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0465
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUqZVzeAkbFPJgpkaq\"}"
       },
       {
         "query": "What AI software helps industrial water and wastewater plants cut operating costs?",
-        "retrievedCount": 9,
-        "citedCount": 8,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "aquasight.io",
-          "theturingcompany.com",
-          "gihub.org",
-          "wteinfra.com",
-          "link.springer.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://www.aquasight.io/solutions/wastewater-treatment",
-            "title": "AI-Driven Wastewater Treatment Intelligence with APOLLO™"
-          },
-          {
-            "url": "https://theturingcompany.com/",
-            "title": "Autonomous AI-Powered End-to-End Water Management Software Turing"
-          },
-          {
-            "url": "https://www.gihub.org/infrastructure-technology-use-cases/case-studies/ai-for-process-optimisation-for-water-treatment/",
-            "title": "AI for process optimisation for water treatment"
-          },
-          {
-            "url": "https://wteinfra.com/blog-detail/how-ai-and-automation-are-revolutionizing-wastewater-treatment",
-            "title": "AI in Wastewater Treatment: Smart Automation Guide"
-          },
-          {
-            "url": "https://link.springer.com/article/10.1007/s43621-026-03029-8",
-            "title": "Artificial intelligence for industrial wastewater treatment advancing technologies addressing challenges and enabling future applications"
-          },
-          {
-            "url": "https://iwaponline.com/wst/article/90/3/731/103673/Optimizing-wastewater-treatment-through-artificial",
-            "title": "Optimizing wastewater treatment through artificial intelligence: recent advances and future prospects"
-          },
-          {
-            "url": "https://www.sciencedirect.com/science/article/pii/S0301479725029846",
-            "title": "AI-driven solutions in wastewater treatment and agricultural reuse systems: A comprehensive review - ScienceDirect"
-          },
-          {
-            "url": "https://ifactoryapp.com/article/industrial-water-usage-optimization-ai-systems",
-            "title": "AI Systems for Industrial Water Usage Optimization"
-          }
-        ],
-        "answer": "**Vendor platforms named in the results**\n- **Aquasight APOLLO™** is a digital twin and \"operations copilot\" for treatment plants. Aquasight says its real-time insights help reduce costs, improve operations and prevent costly downtime. Its other products cover pump health and water network management.\n- **The Turing Company** sells AI water management software. It covers dosing optimization, predictive maintenance and anomaly detection, and claims OpEx cuts of up to 20%.\n- **Createch360** is optimization software. At the Brembate wastewater plant in Italy it produced a 19% reduction in energy consumption. The payback period was 1–2 years.\n\n**Where the savings come from (the AI function to lo",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 19
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0424,
-        "diagnosis": {
-          "verdict": "missing_page",
-          "target_page": "",
-          "why": "No aquamesh.ai page directly answers the broad question of what AI software cuts operating costs at industrial water and wastewater plants; the existing posts cover single cost topics (aeration, blowdown, reuse) and the answer favored vendor pages that make that claim outright.",
-          "change": "Publish a blog post titled around AI software for cutting industrial water plant operating costs, covering product, energy and chemical losses, tariff pricing, and the advisory model, and link it to the aeration and blowdown posts.",
-          "owner": "seo_pod",
-          "sources": [
-            {
-              "url": "https://www.aquasight.io/solutions/wastewater-treatment",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Competitor product page; nothing to influence, win the question with our own page."
-            },
-            {
-              "url": "https://theturingcompany.com/",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Competitor homepage; compete through a direct, credible answer page."
-            },
-            {
-              "url": "https://www.gihub.org/infrastructure-technology-use-cases/case-studies/ai-for-process-optimisation-for-water-treatment/",
-              "kind": "other",
-              "action": "EARN",
-              "note": "Case study roundup; earn inclusion only with a documented, verifiable result."
-            },
-            {
-              "url": "https://wteinfra.com/blog-detail/how-ai-and-automation-are-revolutionizing-wastewater-treatment",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor blog; outrank with a more specific, evidence-backed post."
-            },
-            {
-              "url": "https://link.springer.com/article/10.1007/s43621-026-03029-8",
-              "kind": "academic",
-              "action": "REFERENCE",
-              "note": "Review paper; cite it in the new post for context."
-            },
-            {
-              "url": "https://iwaponline.com/wst/article/90/3/731/103673/Optimizing-wastewater-treatment-through-artificial",
-              "kind": "academic",
-              "action": "REFERENCE",
-              "note": "Peer-reviewed review; cite for AI optimisation background."
-            },
-            {
-              "url": "https://www.sciencedirect.com/science/article/pii/S0301479725029846",
-              "kind": "academic",
-              "action": "REFERENCE",
-              "note": "Comprehensive review; cite where relevant, do not try to influence."
-            },
-            {
-              "url": "https://ifactoryapp.com/article/industrial-water-usage-optimization-ai-systems",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor article; compete with a clearer, more specific answer."
-            }
-          ],
-          "usd": 0.0173
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUqrMhesgNAjD6SvE3\"}"
       },
       {
         "query": "How can an industrial plant find energy and chemical savings in the historian data it already records?",
-        "retrievedCount": 9,
-        "citedCount": 4,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "factry.io",
-          "controlglobal.com",
-          "alliedsolutionsglobal.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://www.factry.io/resources/blog/how-data-historians-help-reduce-energy-use-in-industry-4-0",
-            "title": "Factry ⎮ How data historians help reduce energy use in Industry 4.0 ⎮ 4 minutes reading time"
-          },
-          {
-            "url": "https://www.factry.io/platform/historian",
-            "title": "Factry ⎮ Historian - Unlock your industrial data"
-          },
-          {
-            "url": "https://www.controlglobal.com/visualize/data-acquisition/article/11303295/modern-data-historians-provide-for-optimization-savings",
-            "title": "Modern data historians provide for optimization, savings"
-          },
-          {
-            "url": "https://www.alliedsolutionsglobal.com/industrial-data-historian-improves-energy-efficiency-manufacturing/",
-            "title": "How Industrial Data Historian Improves Energy Efficiency in the Manufacturing Sector"
-          }
-        ],
-        "answer": "A plant can find savings in its historian data by normalizing consumption against production, finding the best past performance, and flagging waste as it happens. The search results mostly cover energy, so the chemical points below are my own extension of the same methods.\n\n**1. Find the big consumers and normalize by output.**\n- Dashboards can show the biggest energy consumers in the plant and link energy use to production runs and batches.\n- Aggregating data per event gives metrics such as energy per ton of product.\n- The same approach works for chemical dose per unit of throughput, such as per m³ treated or per batch.\n\n**2. Benchmark against your own best runs.**\n- Overlaying trends from ",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 15
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0408,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html",
-          "why": "The existing historian post is the right page but is framed around one plant's audit, so it does not directly answer how any plant finds energy and chemical savings, and its 80-character title hurts it.",
-          "change": "Rework the historian post to open with a direct answer: normalize energy and chemical dose per unit of output, compare paired units, price in tariff. Add a short step list, a chemicals example, and a title under 60 characters.",
-          "owner": "seo_pod",
-          "sources": [
-            {
-              "url": "https://www.factry.io/resources/blog/how-data-historians-help-reduce-energy-use-in-industry-4-0",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor blog; earn comparable mentions through genuinely useful, data-backed content, not edits."
-            },
-            {
-              "url": "https://www.factry.io/platform/historian",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor product page; no action beyond publishing stronger own content."
-            },
-            {
-              "url": "https://www.controlglobal.com/visualize/data-acquisition/article/11303295/modern-data-historians-provide-for-optimization-savings",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade press article; pitch a data-backed historian-savings story if genuinely newsworthy."
-            },
-            {
-              "url": "https://www.alliedsolutionsglobal.com/industrial-data-historian-improves-energy-efficiency-manufacturing/",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Integrator blog; no direct action, strengthen our own page instead."
-            }
-          ],
-          "usd": 0.0143
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUr6zNKd4NWVFzeKPA\"}"
       },
       {
         "query": "How can a wastewater plant cut aeration blower energy without buying new equipment?",
-        "retrievedCount": 9,
-        "citedCount": 4,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "industrialmonitordirect.com",
-          "vorexwater.com",
-          "fwpcoa.org",
-          "iwaponline.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://industrialmonitordirect.com/blogs/knowledgebase/aeration-control-system-design-for-wastewater-treatment-plants",
-            "title": "Aeration Control System Design for Wastewater Treatment Plants"
-          },
-          {
-            "url": "https://vorexwater.com/blogs/how-to-reduce-aeration-energy/",
-            "title": "How to Reduce Aeration Energy Costs in Wastewater Treatment: A Three-Tiered Technical Guide - vorexwater.com"
-          },
-          {
-            "url": "https://www.fwpcoa.org/content.aspx?page_id=5&club_id=859275&item_id=134074",
-            "title": "Rethinking Aeration: Demand-Based DO Control And Energy Optimization - Florida Water and Pollution Control Operators Association"
-          },
-          {
-            "url": "https://iwaponline.com/wst/article/84/12/3941/85046/Modelling-solution-for-estimating-aeration-energy",
-            "title": "Modelling solution for estimating aeration energy of wastewater treatment plants"
-          }
-        ],
-        "answer": "Most savings come from operating and controlling the existing blowers better. These are the main options:\n\n1. **Lower DO setpoints.** Holding DO at 1.5–2.0 mg/L in the last aerobic zone is a common target. Above 2.0 mg/L, each extra 0.5 mg/L adds roughly 5–10% to blower power with little effluent benefit. Lower gradually. One guide suggests cutting setpoints by 0.2–0.5 mg/L per week while you track nitrification, effluent ammonia and sludge settling. St. Cloud's facility cut energy about 30% by moving from 2.5 to below 0.8 mg/L in phases.\n\n2. **Use DO feedback control instead of constant airflow.** Basic DO-based control reduces blower energy by 10–25%, and optimized PLC strategies by 20–40%",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 23
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0444,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
-          "why": "The existing aeration post frames the cost and a measurement gap but does not directly answer 'cut blower energy without new equipment' with concrete operating steps like DO setpoints, feedback control and phased reductions.",
-          "change": "Add a top section to the aeration energy post titled 'How to cut blower energy without new equipment' with numbered steps: DO setpoint reduction, DO feedback, pressure setpoint, blower sequencing, and the BOD-free measurement checks, citing sources.",
-          "owner": "seo_pod",
-          "sources": [
-            {
-              "url": "https://industrialmonitordirect.com/blogs/knowledgebase/aeration-control-system-design-for-wastewater-treatment-plants",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor knowledge base; only earnable through genuinely useful, citable content."
-            },
-            {
-              "url": "https://vorexwater.com/blogs/how-to-reduce-aeration-energy/",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor guide; outrank with a more specific, data-backed post."
-            },
-            {
-              "url": "https://www.fwpcoa.org/content.aspx?page_id=5&club_id=859275&item_id=134074",
-              "kind": "other",
-              "action": "EARN",
-              "note": "Operator association article; consider a genuine, named contribution or talk."
-            },
-            {
-              "url": "https://iwaponline.com/wst/article/84/12/3941/85046/Modelling-solution-for-estimating-aeration-energy",
-              "kind": "academic",
-              "action": "REFERENCE",
-              "note": "Peer-reviewed paper; cite it for aeration energy estimation."
-            }
-          ],
-          "usd": 0.0147
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUrMNoPpZscwst2RXU\"}"
       },
       {
         "query": "What is the fastest way for a food or beverage plant to find product and water losses going down the drain?",
-        "retrievedCount": 9,
-        "citedCount": 8,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "foodengineeringmag.com",
-          "vaisala.com",
-          "rheonics.com",
-          "satron.com",
-          "foodindustryexecutive.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://www.foodengineeringmag.com/articles/96344-how-food-and-beverage-makers-can-better-monitor-water-quality",
-            "title": "How food and beverage makers can better monitor water quality"
-          },
-          {
-            "url": "https://www.vaisala.com/en/case/leveraging-inline-brix-measurement-wastewater-monitoring-food-and-beverage-manufacturing",
-            "title": "Leveraging inline Brix measurement for wastewater monitoring in food and beverage manufacturing"
-          },
-          {
-            "url": "https://www.vaisala.com/en/expert-article/smarter-wastewater-monitoring-how-inline-measurement-enables-real-time-detection-product-loss-and-organic-overload",
-            "title": "Smarter wastewater monitoring: How inline measurement enables real-time detection of product loss and organic overload"
-          },
-          {
-            "url": "https://rheonics.com/solutions-item/wastewater-management-in-beverage-and-food-processing-with-inline-viscosity-monitoring/",
-            "title": "Wastewater management in beverage and food processing with inline viscosity monitoring » rheonics :: viscometer and density meter"
-          },
-          {
-            "url": "https://satron.com/reduce-product-loss-food-beverage-optical-measurement/",
-            "title": "Reduce Product Loss in Food & Beverage Processing with Real-Time Optical Measurement - Satron Instruments"
-          },
-          {
-            "url": "https://www.foodengineeringmag.com/articles/100879-colloidteks-solution-to-reduce-dairy-product-losses",
-            "title": "ColloidTek’s Solution to Reduce Dairy Product Losses"
-          },
-          {
-            "url": "https://foodindustryexecutive.com/2026/07/product-recovery-food-manufacturing/",
-            "title": "Reducing Food Waste Before It Reaches the Drain: A Process Engineering Framework for Product Recovery in Food Manufacturing - Food Industry Executive"
-          },
-          {
-            "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
-            "title": "Why dairy plants still miss their most expensive process losses"
-          }
-        ],
-        "answer": "The fastest approach is usually to put continuous inline sensors on drain and wastewater streams. They show losses as they happen, which grab samples sent to a lab can't do.\n\n**Product loss**\n- **Organics or sugar sensors:** Total organic carbon (TOC) measurement can help detect product loss before valuable product goes down the drain. For sugary products, measuring the sugar content of wastewater streams shows whether product is going down the drain. Inline refractometers work this way. They detect contaminant spikes immediately, so they act as an early-warning system for spills and process upsets.\n- **Density and viscosity:** Lab analysis is the usual method, but offline methods can be slo",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 21
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0434,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/industries/food-beverage.html",
-          "why": "The food and beverage industry page describes AquaSpectra but never directly answers how a plant finds product and water losses fastest, so answer engines cited vendor and trade articles instead.",
-          "change": "Add a section to the food and beverage page titled 'The fastest way to find product and water losses going down the drain', with a short direct answer, steps starting from existing historian data, and a typical-loss range with a source.",
-          "owner": "alex",
-          "sources": [
-            {
-              "url": "https://www.foodengineeringmag.com/articles/96344-how-food-and-beverage-makers-can-better-monitor-water-quality",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade editorial; earn a mention through genuine contributed expertise."
-            },
-            {
-              "url": "https://www.vaisala.com/en/case/leveraging-inline-brix-measurement-wastewater-monitoring-food-and-beverage-manufacturing",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Instrument vendor content; nothing to claim, answer the question better on our own page."
-            },
-            {
-              "url": "https://www.vaisala.com/en/expert-article/smarter-wastewater-monitoring-how-inline-measurement-enables-real-time-detection-product-loss-and-organic-overload",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Instrument vendor article; outperform with a direct, historian-first answer."
-            },
-            {
-              "url": "https://rheonics.com/solutions-item/wastewater-management-in-beverage-and-food-processing-with-inline-viscosity-monitoring/",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor solution page; not influenceable, cover the topic on our own page."
-            },
-            {
-              "url": "https://satron.com/reduce-product-loss-food-beverage-optical-measurement/",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor page on optical measurement; compete with a clearer answer on our page."
-            },
-            {
-              "url": "https://www.foodengineeringmag.com/articles/100879-colloidteks-solution-to-reduce-dairy-product-losses",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade editorial on a vendor solution; earn coverage with genuine expertise."
-            },
-            {
-              "url": "https://foodindustryexecutive.com/2026/07/product-recovery-food-manufacturing/",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade framework article; pitch a genuine contributed piece."
-            },
-            {
-              "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
-              "kind": "media",
-              "action": "OWN",
-              "note": "Our contributed article; link to it from the food and beverage page."
-            }
-          ],
-          "usd": 0.0186
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUrc13g8BvzG7nGKTK\"}"
       },
       {
         "query": "Should an industrial plant use online water quality sensors or lab sampling to monitor its wastewater discharge?",
-        "retrievedCount": 0,
-        "citedCount": 0,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [],
-        "citedSources": [],
-        "answer": "Most plants end up using both. Which one carries more of the load depends on your permit, your risk, and your budget. This is general guidance from established practice, and I didn't search for current sources.\n\n**Online sensors are better for:**\n- **Continuous visibility.** They catch upsets, spills, and process excursions in minutes, not days.\n- **Process control.** pH, conductivity, turbidity, temperature, DO, TOC, and ammonia or nitrate probes can trigger diversion, neutralization, or shutdown automatically.\n- **Trends and optimization.** They help cut chemical use and aeration energy, and they give early warning of permit exceedances.\n- **High-variability discharges.** Batch processes a",
-        "blockTypes": {
-          "text": 1
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0137,
-        "diagnosis": {
-          "verdict": "missing_page",
-          "target_page": "",
-          "why": "No aquamesh.ai page directly compares online sensors with lab sampling for wastewater discharge monitoring, and the answer cited no sources, so the loss comes from the absence of a page that answers the question head-on.",
-          "change": "Write a blog post comparing online sensors and lab sampling for wastewater discharge: what each catches, permit and QA limits, where BOD still needs lab samples, and a hybrid decision table. State that operators decide.",
-          "owner": "seo_pod",
-          "sources": [],
-          "usd": 0.0097
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUrqdrMuryKVAaeaft\"}"
       },
       {
         "query": "Can UV-Vis spectral sensors monitor industrial wastewater continuously instead of lab samples?",
-        "retrievedCount": 10,
-        "citedCount": 5,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "ysi.com",
-          "ncbi.nlm.nih.gov",
-          "envirotech-online.com",
-          "tpomag.com",
-          "xylem.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://www.ysi.com/ysi-blog/water-blogged-blog/2022/10/understanding-uv-vis-sensors-for-wastewater-monitoring",
-            "title": "Understanding UV Vis Sensors for Wastewater Monitoring"
-          },
-          {
-            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10975892/",
-            "title": "Using Surrogate Parameters to Enhance Monitoring of Community Wastewater Management System Performance for Sustainable Operations"
-          },
-          {
-            "url": "https://www.envirotech-online.com/news/water-wastewater/9/xylem-japan/spectral-uv-sensors-for-industrial-waste-water-applications/41677",
-            "title": "Spectral UV Sensors for Industrial Waste Water Applications Envirotech Online"
-          },
-          {
-            "url": "https://www.tpomag.com/whitepapers/details/how-to-use-uv-vis-sensors-for-wastewater-process-monitoring_sc_003k6",
-            "title": "How to Use UV-Vis Sensors for Wastewater Process Monitoring"
-          },
-          {
-            "url": "https://www.xylem.com/siteassets/brand/wtw/resources/guideline/wtw-guide-selecting-uv-or-uv-vis-sensor-web.pdf",
-            "title": "SENSOR SELECTION GUIDE 5 Questions to Ask When Selecting a UV or UV Vis Sensor"
-          }
-        ],
-        "answer": "**Yes for process monitoring, but only partly for compliance.** UV-Vis sensors can supplement lab sampling, but they don't fully replace it.\n\n**What they can do**\n- Carbon parameters, COD, nitrate and nitrite can be measured quickly and without reagents by measuring how much UV light passes through the sample.\n- Probes immersed directly in the wastewater give a continuous, direct online measurement.\n- Studies show they can quantify BOD, COD, nitrate, nitrite and TSS, using data analysis methods such as multiple linear regression and partial least squares.\n- In an industrial test, two spectral sensors ran for a month at the effluent channels of two Vietnamese industrial zones. After a site-sp",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 21
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0478,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/insights/spectral-sensing-ai-industrial-water.html",
-          "why": "The existing UV/Vis page is framed around combining spectroscopy with AI and does not directly answer the continuous-versus-lab-sampling question or address compliance limits, calibration and fouling.",
-          "change": "Add a direct-answer section near the top: UV-Vis can monitor continuously for process control, lab samples remain needed for compliance, plus site-specific calibration, fouling, interferences, and the BOD validation limit.",
-          "owner": "alex",
-          "sources": [
-            {
-              "url": "https://www.ysi.com/ysi-blog/water-blogged-blog/2022/10/understanding-uv-vis-sensors-for-wastewater-monitoring",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor explainer; earn mention only through genuinely useful technical content."
-            },
-            {
-              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10975892/",
-              "kind": "academic",
-              "action": "REFERENCE",
-              "note": "Cite for surrogate parameter monitoring evidence on the target page."
-            },
-            {
-              "url": "https://www.envirotech-online.com/news/water-wastewater/9/xylem-japan/spectral-uv-sensors-for-industrial-waste-water-applications/41677",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade media article; earn coverage with original technical material, not pitching."
-            },
-            {
-              "url": "https://www.tpomag.com/whitepapers/details/how-to-use-uv-vis-sensors-for-wastewater-process-monitoring_sc_003k6",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade publication whitepaper; contribute a genuine technical piece if relevant."
-            },
-            {
-              "url": "https://www.xylem.com/siteassets/brand/wtw/resources/guideline/wtw-guide-selecting-uv-or-uv-vis-sensor-web.pdf",
-              "kind": "vendor",
-              "action": "REFERENCE",
-              "note": "Sensor selection guide; use to inform selection criteria, not to influence."
-            }
-          ],
-          "usd": 0.0155
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUs62eFzCbZSeU3nCm\"}"
       },
       {
         "query": "Why do parallel blowers or pumps at a treatment plant drift apart in performance, and what does that cost?",
-        "retrievedCount": 9,
-        "citedCount": 4,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "blowervacuumbestpractices.com",
-          "wateronline.com",
-          "blowerfactorydirect.com",
-          "inovairblowers.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://www.blowervacuumbestpractices.com/industries/wastewater/how-select-most-effective-blower-technology-wastewater-applications",
-            "title": "How To Select The Most Effective Blower Technology for Wastewater Applications"
-          },
-          {
-            "url": "https://www.wateronline.com/doc/design-considerations-for-low-pressure-air-blowers-in-wastewater-treatment-0001",
-            "title": "Design Considerations For Low-Pressure Air Blowers In Wastewater Treatment"
-          },
-          {
-            "url": "https://www.blowerfactorydirect.com/news/parallel-roots-blower-operation-for-changing-process-demand/",
-            "title": "Parallel Roots Blower Operation for Changing Process Demand - Jianyu"
-          },
-          {
-            "url": "https://inovairblowers.com/wastewater-case-studies/",
-            "title": "Wastewater Case Studies - Inovair"
-          }
-        ],
-        "answer": "The search results don't cover why parallel units drift apart, so the causes below come from general engineering knowledge, not from the sources. The sources do help with the cost side.\n\n**Why units drift apart (general knowledge)**\n- Wear and fouling differ from unit to unit. Examples are clogged inlet filters, worn clearances and fouled impellers. Two nominally identical machines then give different flow at the same pressure.\n- Control and instrument errors differ. Sensors drift, valves and inlet guide vanes are set differently, and VFD or throttle settings aren't matched.\n- Machines of different ages or technologies share a header. The one with the flatter curve, or the one closest to its",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 11
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0436,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html",
-          "why": "A matching post exists and is indexed, but it is framed around generic equipment and does not directly answer why parallel blowers and pumps drift or give a costed example, and it links to a broken source.",
-          "change": "Rework the parallel-drift post to open with a direct answer on blowers and pumps: causes (fouling, wear, sensor and setpoint mismatch), a worked cost example, and replace the 404 energy.gov link with a working one.",
-          "owner": "seo_pod",
-          "sources": [
-            {
-              "url": "https://www.blowervacuumbestpractices.com/industries/wastewater/how-select-most-effective-blower-technology-wastewater-applications",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade publication; earn a mention through genuinely useful contributed expertise, not pitching."
-            },
-            {
-              "url": "https://www.wateronline.com/doc/design-considerations-for-low-pressure-air-blowers-in-wastewater-treatment-0001",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade media; earn coverage with original data on parallel-unit divergence."
-            },
-            {
-              "url": "https://www.blowerfactorydirect.com/news/parallel-roots-blower-operation-for-changing-process-demand/",
-              "kind": "vendor",
-              "action": "REFERENCE",
-              "note": "Vendor content on parallel operation; nothing to influence, learn from its framing."
-            },
-            {
-              "url": "https://inovairblowers.com/wastewater-case-studies/",
-              "kind": "vendor",
-              "action": "REFERENCE",
-              "note": "Vendor case studies; no action beyond understanding what buyers see."
-            }
-          ],
-          "usd": 0.0145
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUsPdPmx6RzjikL35Z\"}"
       },
       {
         "query": "How can a data center cut cooling tower water use and prove it under new water reporting rules?",
-        "retrievedCount": 9,
-        "citedCount": 8,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "hydropurewater.com",
-          "tech-insider.org",
-          "hunton.com",
-          "climate-xchange.org",
-          "blog.se.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://hydropurewater.com/blog/6033-data-center-water-reuse-trends-2026-engineering-costs-standards.html",
-            "title": "Data Center Water Reuse Treatment 2026: Costs & Standards — HydropureWater"
-          },
-          {
-            "url": "https://tech-insider.org/why-data-centers-use-so-much-water-2m-gallons-2026/",
-            "title": "Why Data Centers Use 2M+ Gallons of Water a Day [2026]"
-          },
-          {
-            "url": "https://www.hunton.com/the-nickel-report/2026-virginia-environmental-legislative-update-for-data-centers",
-            "title": "2026 Virginia Environmental Legislative Update for Data Centers"
-          },
-          {
-            "url": "https://climate-xchange.org/2026/04/webinar-recap-data-center-water-impacts/",
-            "title": "Webinar: State Policy Solutions for Data Center Water Impacts"
-          },
-          {
-            "url": "https://blog.se.com/datacenter/2026/08/11/closed-loop-cooling-data-center-strategies-for-the-new-wave-of-u-s-state-water-rules/",
-            "title": "Closed-loop cooling data center strategies for the new wave of U.S. state water rules - Schneider Electric Blog"
-          },
-          {
-            "url": "https://www.hklaw.com/en/insights/publications/2026/10/californias-2026-data-center-laws-what-you-need-to-know",
-            "title": "California's 2026 Data Center Laws: What You Need to Know"
-          },
-          {
-            "url": "https://www.congress.gov/crs-product/R49057",
-            "title": "Data Centers and Water: Frequently Asked Questions"
-          },
-          {
-            "url": "https://www.western-water.com/2026/08/07/data-centers-and-water-what-congress-found/",
-            "title": "DATA CENTERS AND WATER: What Congress found"
-          }
-        ],
-        "answer": "**Cutting cooling tower water use**\n- **Move away from evaporative cooling where you can.** Closed-loop chilled water systems need makeup water of under 5% of loop volume, and direct-to-chip systems lose almost no water to evaporation. One 2026 estimate says closed-loop and direct-liquid designs can use 10 to 20 times less water than traditional evaporative facilities.\n- **Use hybrid designs and alternative water.** Virginia's rules list air cooling, closed-loop systems, recycled water and stormwater reuse as the accepted water-efficient technologies.\n- **Treat and reuse water.** One vendor says reuse trains combining filtration, RO and polishing can cut water operating costs 60–80% while ho",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 23
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0462,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-          "why": "The answer was built from sources covering reuse, closed-loop design and state rules, and no aquamesh.ai page directly answers how to cut tower water use and prove it with metered, auditable data under reporting rules.",
-          "change": "Add a section to the WUE post titled 'Proving cooling tower water savings for reporting': a make-up, blowdown and cycles-of-concentration metering checklist, plus how to build an auditable baseline, linking the California reporting post.",
-          "owner": "seo_pod",
-          "sources": [
-            {
-              "url": "https://hydropurewater.com/blog/6033-data-center-water-reuse-trends-2026-engineering-costs-standards.html",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor reuse article; earn mention only through genuinely useful published data."
-            },
-            {
-              "url": "https://tech-insider.org/why-data-centers-use-so-much-water-2m-gallons-2026/",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Explainer roundup; deserve inclusion with a credible measurement resource."
-            },
-            {
-              "url": "https://www.hunton.com/the-nickel-report/2026-virginia-environmental-legislative-update-for-data-centers",
-              "kind": "other",
-              "action": "REFERENCE",
-              "note": "Law firm summary of Virginia rules; cite for requirements."
-            },
-            {
-              "url": "https://climate-xchange.org/2026/04/webinar-recap-data-center-water-impacts/",
-              "kind": "other",
-              "action": "REFERENCE",
-              "note": "Policy webinar recap; cite as context, not influence."
-            },
-            {
-              "url": "https://blog.se.com/datacenter/2026/08/11/closed-loop-cooling-data-center-strategies-for-the-new-wave-of-u-s-state-water-rules/",
-              "kind": "vendor",
-              "action": "EARN",
-              "note": "Vendor blog on closed-loop; no direct lever, leave it."
-            },
-            {
-              "url": "https://www.hklaw.com/en/insights/publications/2026/10/californias-2026-data-center-laws-what-you-need-to-know",
-              "kind": "other",
-              "action": "REFERENCE",
-              "note": "Law firm summary of California laws; cite alongside our own post."
-            },
-            {
-              "url": "https://www.congress.gov/crs-product/R49057",
-              "kind": "government",
-              "action": "REFERENCE",
-              "note": "Congressional Research Service FAQ; cite for background."
-            },
-            {
-              "url": "https://www.western-water.com/2026/08/07/data-centers-and-water-what-congress-found/",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade media recap; earn coverage only through useful original analysis."
-            }
-          ],
-          "usd": 0.0179
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUsdmamhL9rR852ksU\"}"
       },
       {
         "query": "What do California's new data center water use reporting rules require?",
-        "retrievedCount": 9,
-        "citedCount": 4,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [
-          "unite.ai",
-          "allenmatkins.com",
-          "hklaw.com",
-          "mondaq.com"
-        ],
-        "citedSources": [
-          {
-            "url": "https://www.unite.ai/california-enacts-seven-new-laws-targeting-data-center-power-and-water-use/",
-            "title": "California Enacts Seven New Laws Targeting Data Center Power and Water Use"
-          },
-          {
-            "url": "https://www.allenmatkins.com/real-ideas/california-links-data-center-permitting-and-licensing-to-new-water-use-disclosure-and-drought-planning-obligations.html",
-            "title": "California Links Data Center Permitting and Licensing to New Water Use Disclosure and Drought Planning Obligations"
-          },
-          {
-            "url": "https://www.hklaw.com/en/insights/publications/2026/10/californias-2026-data-center-laws-what-you-need-to-know",
-            "title": "California's 2026 Data Center Laws: What You Need to Know"
-          },
-          {
-            "url": "https://www.mondaq.com/unitedstates/water/1851474/californias-2026-data-center-laws-what-you-need-to-know",
-            "title": "California's 2026 Data Center Laws: What You Need To Know - Water - United States"
-          }
-        ],
-        "answer": "Gov. Newsom signed seven data center bills on September 21, 2026. Two of them set the water rules.\n\n**AB 2619 (water reporting through business licensing)**\n- Before applying for an initial business license, a data center owner or operator must give its local water supplier a good-faith estimate of expected water use, the anticipated water source, and projected volumes for the maximum day, maximum month, and average year. The same information must also appear on the license application.\n- The estimate is given under penalty of perjury.\n- When renewing, the operator must report actual total water use for the preceding calendar year. That report must include the cooling system type and whether",
-        "blockTypes": {
-          "server_tool_use": 1,
-          "web_search_tool_result": 1,
-          "text": 22
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0433,
-        "diagnosis": {
-          "verdict": "third_party",
-          "target_page": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
-          "why": "A matching, indexed, crawlable post exists, but the answer drew on law-firm and trade-press explainers, and nothing links the post to AB 2619 as a primary-source explainer.",
-          "change": "Add a short 'What AB 2619 requires' summary at the top of the post, with cited links to the bill text and chapter, and shorten the title to under 60 characters.",
-          "owner": "seo_pod",
-          "sources": [
-            {
-              "url": "https://www.unite.ai/california-enacts-seven-new-laws-targeting-data-center-power-and-water-use/",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Trade press roundup; earn a mention with useful, original data or commentary."
-            },
-            {
-              "url": "https://www.allenmatkins.com/real-ideas/california-links-data-center-permitting-and-licensing-to-new-water-use-disclosure-and-drought-planning-obligations.html",
-              "kind": "other",
-              "action": "EARN",
-              "note": "Law firm explainer; earn citation through a accurate, well-sourced post."
-            },
-            {
-              "url": "https://www.hklaw.com/en/insights/publications/2026/10/californias-2026-data-center-laws-what-you-need-to-know",
-              "kind": "other",
-              "action": "EARN",
-              "note": "Law firm explainer; earn citation through a accurate, well-sourced post."
-            },
-            {
-              "url": "https://www.mondaq.com/unitedstates/water/1851474/californias-2026-data-center-laws-what-you-need-to-know",
-              "kind": "media",
-              "action": "EARN",
-              "note": "Syndicated legal commentary; cannot be directly controlled, nothing to claim."
-            }
-          ],
-          "usd": 0.0141
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUsseZfgGN79rhjF7e\"}"
       },
       {
         "query": "What does data center water usage effectiveness (WUE) measure, and what does it miss?",
-        "retrievedCount": 0,
-        "citedCount": 0,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [],
-        "citedSources": [],
-        "answer": "Water usage effectiveness (WUE) is a data center efficiency metric from The Green Grid. It's the annual site water use in liters divided by IT equipment energy in kilowatt-hours (L/kWh). Here is what it measures and what it leaves out, based on my general knowledge. I didn't run a search.\n\n**What it measures**\n- It covers on-site water use, mainly evaporative cooling, humidification, and similar uses.\n- It normalizes that use by the energy the IT equipment consumes. This lets you compare facilities and track one facility over time.\n- A lower WUE means less water per unit of computing energy. Typical figures are around 1.8 L/kWh industry-wide, and the best facilities are well below 1.\n\n**What",
-        "blockTypes": {
-          "text": 1
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.0129,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html",
-          "why": "A strong matching blog post exists and is indexed, but its 98-character title and 209-character description bury the direct definition and miss, so engines answering from general knowledge skip it.",
-          "change": "Rewrite the title to under 60 characters (e.g. 'What WUE measures and misses in data centers') and open with a two-sentence definition of WUE (L/kWh) followed by a bulleted list of what it omits.",
-          "owner": "seo_pod",
-          "sources": [],
-          "usd": 0.0096
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUt82oVwgQTN836ZKW\"}"
       },
       {
         "query": "How do you control cooling tower blowdown by conductivity, and what happens when the sensor drifts?",
-        "retrievedCount": 0,
-        "citedCount": 0,
-        "aquameshRetrievedRank": null,
-        "aquameshCited": false,
-        "aquameshUrls": [],
-        "topCitedDomains": [],
-        "citedSources": [],
-        "answer": "Conductivity control of cooling tower blowdown works like this. This comes from general engineering practice, not a fresh search.\n\n**How it works**\n- Evaporation removes pure water and leaves dissolved solids behind. Conductivity is a proxy for total dissolved solids (TDS), so it tracks how concentrated the water has become.\n- A conductivity probe sits in the recirculating loop. It is usually on a sample line or in a flow cell, so it sees representative water.\n- A controller compares the reading to a setpoint. The setpoint is set by the target cycles of concentration (COC). It is limited by the scaling and corrosion limits of the makeup water chemistry and the metallurgy.\n- When conductivity",
-        "blockTypes": {
-          "text": 1
-        },
-        "refused": false,
-        "citable": true,
-        "tool": "web_search_20250305",
-        "usd": 0.014,
-        "diagnosis": {
-          "verdict": "weak_page",
-          "target_page": "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html",
-          "why": "The blog post exists and is indexable, but it opens with the cost of drift rather than answering how conductivity blowdown control works and how to detect and handle a drifting sensor, and its 102-character title and 227-character description blur the match.",
-          "change": "Add a short direct-answer section near the top covering how conductivity blowdown control works (setpoint, COC, controller) and how to detect sensor drift (grab-sample check, historian trend). Shorten the title to under 60 characters and the description to under 160.",
-          "owner": "seo_pod",
-          "sources": [],
-          "usd": 0.0103
-        }
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgiXUtMvFH8Bp6QjyotiD\"}"
       }
     ],
-    "usd": 0.595,
-    "drafts": [
+    "usd": 0,
+    "drafts": []
+  },
+  "press": {
+    "at": "2026-11-04T20:32:34.541Z",
+    "results": [
       {
-        "query": "What is the fastest way for a food or beverage plant to find product and water losses going down the drain?",
-        "page": "https://aquamesh.ai/industries/food-beverage.html",
-        "summary": "Adds a section answering how a food or beverage plant finds product and water losses fastest, with a direct answer and four steps starting from historian data; the typical-loss range is stated qualitatively because the page has no sourced figure to cite.",
-        "branch": "seo-agent/industries-food-beverage",
-        "url": "https://github.com/aquamesh/aquamesh.ai/compare/main...seo-agent%2Findustries-food-beverage?expand=1",
-        "note": "PR not opened (403); compare link instead"
+        "title": "The industrial AI gap isn't capability — it's deployability",
+        "publication": "Processing",
+        "url": "https://www.processingmagazine.com/process-control-automation/article/55411691/the-industrial-ai-gap-isnt-capability-its-deployability",
+        "date": "2026-10-27",
+        "author": "Alex Towfigh",
+        "status": 200,
+        "linksBack": true
       },
       {
-        "query": "Can UV-Vis spectral sensors monitor industrial wastewater continuously instead of lab samples?",
-        "page": "https://aquamesh.ai/insights/spectral-sensing-ai-industrial-water.html",
-        "summary": "Adds a direct-answer section near the top stating that UV/Vis can monitor wastewater continuously for process control while lab samples remain required for compliance, and covering site-specific calibration, fouling, interferences and the limit that BOD is the only calibrated parameter.",
-        "branch": "seo-agent/insights-spectral-sensing-ai-industrial-water",
-        "url": "https://github.com/aquamesh/aquamesh.ai/compare/main...seo-agent%2Finsights-spectral-sensing-ai-industrial-water?expand=1",
-        "note": "PR not opened (403); compare link instead"
+        "title": "The $1.5 Million Sewer Repair — And The Water-Quality Evidence Missing Upstream",
+        "publication": "Water Online",
+        "url": "https://www.wateronline.com/doc/the-million-sewer-repair-and-the-water-quality-evidence-missing-upstream-0001",
+        "date": "2026-10-26",
+        "author": "Alex Towfigh",
+        "status": 200,
+        "linksBack": true
+      },
+      {
+        "title": "Why dairy plants still miss their most expensive process losses",
+        "publication": "Dairy Foods",
+        "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
+        "date": "2026-10-12",
+        "author": "Alex Towfigh",
+        "status": 200,
+        "linksBack": false
       }
-    ]
+    ],
+    "findings": [
+      {
+        "sev": "info",
+        "id": "press-no-link",
+        "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
+        "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
+      }
+    ],
+    "cited": []
   },
-  "press": null,
   "indexnow": {
-    "at": "2026-11-03T20:16:35.225Z",
+    "at": "2026-11-04T20:32:34.541Z",
     "ok": true,
     "status": 200,
-    "sent": 1,
+    "sent": 4,
     "note": ""
   },
   "fix": null
