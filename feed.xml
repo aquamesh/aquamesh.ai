@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 21:09:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 21:10:43 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wastewater blower VFD: why energy savings erode</title>
@@ -552,7 +552,7 @@
 <p>Twin basins on a common air header should see similar dissolved oxygen at similar load. When one sits far above the other with its blower command pinned wide open, the control strategy is not the problem: the air is not arriving where it is supposed to.</p>
 <p>This one is cheap to investigate and cheap to correct, which is what makes it worth finding. A valve position or a damper, not a capital project.</p>
 <p>A modelled scenario for scale: two 150 hp centrifugal blowers serving twin aeration basins, each averaging 60% load. A filter-loading imbalance drives one blower 12 percentage points above its twin. At that differential, the harder-running blower consumes roughly 8 to 10 kW more than needed. At $0.085 per kWh over an 8,000-hour operating year, that is $5,400 to $6,800 in excess annual electricity on one pair. A single filter service or damper adjustment that costs a few hundred dollars eliminates the cause; the recovery is measured in weeks, not quarters.</p>
-<p>Aeration typically accounts for 55 to 70 percent of a treatment plant's electricity consumption (<a href="https://www.epa.gov/sustainable-water-infrastructure/energy-management-water-and-wastewater-utilities" rel="noopener">EPA Energy Management for Water and Wastewater Utilities</a>). An air distribution imbalance between twin basins does not show up in the daily energy report: it shows up in blower run hours, and the cause is upstream of both. How that translates to operating cost is described in <a href="/blog/aeration-energy-cost-wastewater-plants.html">aeration energy at wastewater plants</a>.</p>
+<p>Aeration typically accounts for 55 to 70 percent of a treatment plant's electricity consumption (<a href="https://www.epa.gov/sites/default/files/2016-12/documents/guide_energymanagement.pdf" rel="noopener">EPA, Ensuring a Sustainable Future: An Energy Management Guidebook for Wastewater and Water Utilities</a>). An air distribution imbalance between twin basins does not show up in the daily energy report: it shows up in blower run hours, and the cause is upstream of both. How that translates to operating cost is described in <a href="/blog/aeration-energy-cost-wastewater-plants.html">aeration energy at wastewater plants</a>.</p>
 <h3 id="instruments-that-no-longer-agree">Instruments that no longer agree</h3>
 <p>Two turbidimeters on the same permeate stream, one reading a median of 0.11 NTU with a 90th percentile of 0.26, the other reading 0.14 and 2.12: three and a half times the plant's posted upper limit.</p>
 <p>One of them is drifting. Until you know which, compliance decisions are resting on an instrument that cannot be fully trusted. The encouraging part, in that case, was that the true value looked excellent.</p>
