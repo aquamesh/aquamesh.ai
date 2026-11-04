@@ -44,7 +44,7 @@ A Water Scarcity Plan is a commitment to cut consumption by a stated amount unde
 
 The first is where the water is going now, by loop and by source. Evaporative cooling, blowdown, makeup, sanitation and irrigation are different lines with different elasticities, and a site that only knows its total has no basis for saying which it would cut first.
 
-The second is how far each one can be cut before something else breaks. Curtailment on a cooling tower usually means running at higher cycles of concentration: less blowdown, less makeup, and a circuit that is now closer to the scaling and corrosion limits of its own chemistry. Recycling and reuse, both named in the statute, move in the same direction. The water you keep in the loop is water whose composition is drifting.
+The second is how far each one can be cut before something else breaks. Curtailment on a cooling tower usually means running at higher cycles of concentration: less blowdown, less makeup, and a circuit that is now closer to the scaling and corrosion limits of its own chemistry. How conductivity sensor drift interacts with that control strategy, and what it costs when blowdown runs at the wrong frequency, is covered in [cooling tower blowdown: conductivity control and sensor drift](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html). Recycling and reuse, both named in the statute, move in the same direction. The water you keep in the loop is water whose composition is drifting.
 
 That is the real operational content of a scarcity plan. It is not a reporting exercise, it is a commitment to run the plant closer to its limits on demand, and the plan is only as good as the site's ability to see what happens when it does.
 
@@ -59,3 +59,5 @@ For sites that already have a few months of history in a historian, the first qu
 Nothing in either bill requires a sensor. Both require a site to be able to answer questions about its own water that a surprising number of operators currently answer by estimate. The first renewals under AB 2619 will establish how much tolerance there is for that, and the 2028 scarcity plans will establish how much tolerance there is for a commitment that nobody has tested.
 
 Operators working through what this means for an existing site can see how we approach [data center cooling water](/industries/data-centers.html), or start with an audit of the data already being collected. Understanding what the site's own WUE figure actually measures, and what it omits, is useful context before committing to a curtailment plan; [the measurement gap in data center WUE](/blog/data-center-wue-measurement-gap.html) covers that ground.
+
+*Alex Towfigh is a founder at AquaMesh.*
