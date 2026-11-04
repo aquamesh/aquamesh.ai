@@ -85,7 +85,7 @@ Before changing anything in the control loop, three questions are worth answerin
 
 **When was the last time sensor readings were verified against a calibrated handheld at midday, not just immediately after calibration?** Sensors that look fine at calibration can drift substantially before the next service event. A midday check, two weeks after calibration, shows whether the reading is holding.
 
-None of this analysis requires hardware beyond what most plants already have. The data is usually in the historian. The constraint is having a way to examine it at the right resolution, across basins, over a window long enough to see the patterns clearly.
+None of this analysis requires hardware beyond what most plants already have. The data is usually in the historian. The constraint is having a way to examine it at the right resolution, across basins, over a window long enough to see the patterns clearly. The steps for recovering blower energy once the measurement baseline is confirmed, including DO setpoint reduction, feedback loop verification, pressure tuning, and blower staging, are in [wastewater blower energy: cost and control](/blog/aeration-energy-cost-wastewater-plants.html).
 
 ---
 

@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 08:49:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 11:55:43 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wastewater blower VFD: why energy savings erode</title>
@@ -49,7 +49,7 @@
 <p><b>How large were the step changes in blower output after the last three calibration events?</b> If each calibration produces a visible step down in blower output, the sensor has been reading low between calibration cycles. The step size tells you how much the drift cost.</p>
 <p><b>Do parallel basins show divergent blower outputs during similar load periods?</b> Persistent divergence with no other explanation almost always traces to a sensor offset. It will not resolve with setpoint adjustments.</p>
 <p><b>When was the last time sensor readings were verified against a calibrated handheld at midday, not just immediately after calibration?</b> Sensors that look fine at calibration can drift substantially before the next service event. A midday check, two weeks after calibration, shows whether the reading is holding.</p>
-<p>None of this analysis requires hardware beyond what most plants already have. The data is usually in the historian. The constraint is having a way to examine it at the right resolution, across basins, over a window long enough to see the patterns clearly.</p>
+<p>None of this analysis requires hardware beyond what most plants already have. The data is usually in the historian. The constraint is having a way to examine it at the right resolution, across basins, over a window long enough to see the patterns clearly. The steps for recovering blower energy once the measurement baseline is confirmed, including DO setpoint reduction, feedback loop verification, pressure tuning, and blower staging, are in <a href="/blog/aeration-energy-cost-wastewater-plants.html">wastewater blower energy: cost and control</a>.</p>
 <hr />
 <p>If your plant installed blower VFDs with projected savings that have not materialized, or savings that were real initially and have since faded, the measurement quality question is the right place to start. An initial review of historian data from your aeration system can show whether the control loop is working from accurate inputs and where the largest gaps are.</p>
 <p>See how AquaMesh approached a related analysis at a membrane bioreactor reuse plant: <a href="https://aquamesh.ai/case-studies/water-reuse-plant.html">a membrane-bioreactor water reuse plant case study</a>. Or <a href="https://aquamesh.ai/#contact">reach out to schedule a working session with the team</a>.</p>

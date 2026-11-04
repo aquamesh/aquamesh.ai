@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-04T08:49:49.939Z · 13 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-04T11:55:43.554Z · 13 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -129,7 +129,7 @@ Before changing anything in the control loop, three questions are worth answerin
 
 **When was the last time sensor readings were verified against a calibrated handheld at midday, not just immediately after calibration?** Sensors that look fine at calibration can drift substantially before the next service event. A midday check, two weeks after calibration, shows whether the reading is holding.
 
-None of this analysis requires hardware beyond what most plants already have. The data is usually in the historian. The constraint is having a way to examine it at the right resolution, across basins, over a window long enough to see the patterns clearly.
+None of this analysis requires hardware beyond what most plants already have. The data is usually in the historian. The constraint is having a way to examine it at the right resolution, across basins, over a window long enough to see the patterns clearly. The steps for recovering blower energy once the measurement baseline is confirmed, including DO setpoint reduction, feedback loop verification, pressure tuning, and blower staging, are in [wastewater blower energy: cost and control](/blog/aeration-energy-cost-wastewater-plants.html).
 
 ---
 
