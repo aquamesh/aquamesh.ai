@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-04T14:59:37.547Z · 13 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-04T21:09:49.700Z · 13 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================

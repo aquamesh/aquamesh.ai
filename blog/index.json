@@ -2,7 +2,7 @@
   "site": "https://aquamesh.ai",
   "brand": "AquaMesh",
   "description": "Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.",
-  "generated": "2026-11-04T14:59:37.544Z",
+  "generated": "2026-11-04T21:09:49.696Z",
   "license": "Readable and quotable with attribution to AquaMesh (https://aquamesh.ai).",
   "count": 13,
   "posts": [
@@ -336,7 +336,7 @@
       "slug": "spectral-change-analysis-vs-calibrated-parameters",
       "url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html",
       "markdown_url": "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.md",
-      "description": "Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.",
+      "description": "UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool.",
       "date": "2026-09-22",
       "updated": "2026-09-22",
       "section": "Measurement",

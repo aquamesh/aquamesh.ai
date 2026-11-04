@@ -3,7 +3,7 @@ title: Spectral change analysis versus calibrated parameters
 slug: spectral-change-analysis-vs-calibrated-parameters
 date: 2026-09-22
 section: Measurement
-description: Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.
+description: UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool.
 image: assets/starch-spectra.jpg
 tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
 ---

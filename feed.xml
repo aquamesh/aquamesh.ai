@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 14:59:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 21:09:49 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wastewater blower VFD: why energy savings erode</title>
@@ -601,7 +601,7 @@
       <link>https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html</link>
       <guid isPermaLink="true">https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html</guid>
       <pubDate>Tue, 22 Sep 2026 09:00:00 GMT</pubDate>
-      <description>Most online analysers sell you a parameter list. A spectrum is a different kind of instrument, and pretending otherwise is how vendors end up over-promising. Here is the distinction and why it matters.</description>
+      <description>UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool.</description>
       <content:encoded><![CDATA[<p>An online water quality analyser usually arrives with a list: COD, BOD, TSS, nitrate, TOC. The list is the product. The implication is that the instrument measures each of those things the way a lab measures them, only continuously.</p>
 <p>That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.</p>
 <h2 id="what-the-instrument-actually-produces">What the instrument actually produces</h2>
