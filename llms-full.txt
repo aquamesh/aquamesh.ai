@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-03T23:38:56.543Z · 13 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-04T05:45:23.154Z · 13 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -73,6 +73,8 @@ A sensor reading 1.4 mg/L when the basin contains 2.1 mg/L presents the controll
 
 The result is a system where the VFD is still installed, the control loop is still active, and the blowers are running harder than the process needs. The savings documented at commissioning, when the sensors were freshly calibrated, erode as sensor bias accumulates between calibration events.
 
+The same pattern appears in other process control loops where a single sensor drives an automated response. In cooling tower systems, conductivity sensor drift causes blowdown cycles to run incorrectly -- purging more treated water than water chemistry requires, or leaving scale-forming chemistry in place when it should be removed -- as described in [cooling tower blowdown: conductivity control and sensor drift](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
+
 ## What the cost of eroded savings looks like
 
 The U.S. EPA benchmarks secondary treatment activated sludge plants at approximately 1,500 kWh per million gallons for electricity consumption, with aeration systems representing 50 to 75 percent of that total. ([U.S. EPA, Ensuring a Sustainable Future: An Energy Management Guidebook for Wastewater and Water Utilities](https://www.epa.gov/sites/default/files/2016-12/documents/guide_energymanagement.pdf)) The U.S. Energy Information Administration reported the national average industrial electricity rate at $0.0977 per kWh in July 2026. ([EIA Electric Power Monthly, September 2026](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a))
@@ -101,9 +103,9 @@ When VFD savings have eroded due to sensor drift, three patterns tend to appear 
 
 **Divergent blower output across parallel basins.** At plants with multiple aeration basins drawing from a common air header, sensors in different basins drift at different rates depending on local solids loading and maintenance consistency. When two basins receive similar influent loads but their blower outputs differ by 20 percent or more, the most common cause is a measurement offset in one of the sensors. The control loop is faithfully responding to what the sensors report. What the sensors report has diverged from reality.
 
-We documented this exact pattern in [25 days of historian data from an operating plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html): one basin was running its blower at more than three times the DO level of its parallel twin, with the blower pinned at maximum output for the full duration of the record. Both basins drew from the same air header. The control loop was functioning. The deviation was worth $3,316 per year in direct blower power, and it was invisible without comparing basins side by side at hourly resolution.
+We documented this exact pattern in [25 days of historian data from an operating plant](/blog/what-25-days-of-historian-data-shows.html): one basin was running its blower at more than three times the DO level of its parallel twin, with the blower pinned at maximum output for the full duration of the record. Both basins drew from the same air header. The control loop was functioning. The deviation was worth $3,316 per year in direct blower power, and it was invisible without comparing basins side by side at hourly resolution.
 
-The mechanics of parallel equipment drift in aeration systems, and why the gap tends to grow rather than self-correct, are covered in [why parallel equipment drifts apart and what the gap costs](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html).
+The mechanics of parallel equipment drift in aeration systems, and why the gap tends to grow rather than self-correct, are covered in [why parallel equipment drifts apart and what the gap costs](/blog/why-parallel-equipment-drifts.html).
 
 ## The calibration interval question
 
@@ -111,9 +113,9 @@ There is no universal answer for how often a DO sensor in activated sludge servi
 
 What determines the right interval is the sensor's actual drift rate in your mixed liquor at your current solids loading. A sensor that drifts 0.1 mg/L per week and holds that drift until the membrane is replaced needs a different schedule than one that degrades faster. The only way to know which situation you are in is to compare sensor readings against a calibrated handheld reference at intervals shorter than your current calibration cycle, not just immediately after calibration.
 
-A calibration-versus-drift log, built from a few weeks of parallel readings, makes the calibration interval decision quantitative rather than a guess based on manufacturer defaults. We examine this approach in detail in [DO sensor calibration intervals in activated sludge](https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html), including how to build a drift profile and what a typical profile looks like in activated sludge service.
+A calibration-versus-drift log, built from a few weeks of parallel readings, makes the calibration interval decision quantitative rather than a guess based on manufacturer defaults. We examine this approach in detail in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html), including how to build a drift profile and what a typical profile looks like in activated sludge service.
 
-For plants running [intermittent aeration for simultaneous nitrification and denitrification](https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html), the stakes around calibration intervals are higher. That control strategy uses precise DO swings through the nitrification setpoint to cycle between aerobic and anoxic conditions. A sensor with a standing offset of 0.5 mg/L can shift the timing of those swings in ways that reduce nitrogen removal efficiency and create compliance risk, entirely apart from the energy cost.
+For plants running [intermittent aeration for simultaneous nitrification and denitrification](/blog/intermittent-aeration-nitrogen-removal-do-control.html), the stakes around calibration intervals are higher. That control strategy uses precise DO swings through the nitrification setpoint to cycle between aerobic and anoxic conditions. A sensor with a standing offset of 0.5 mg/L can shift the timing of those swings in ways that reduce nitrogen removal efficiency and create compliance risk, entirely apart from the energy cost.
 
 ## Three questions before adjusting the control strategy
 
