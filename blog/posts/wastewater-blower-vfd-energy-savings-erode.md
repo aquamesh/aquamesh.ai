@@ -7,6 +7,15 @@ description: DO sensor drift silently reverses VFD energy savings at wastewater 
 tags: blower energy, VFD, dissolved oxygen control, wastewater aeration, energy optimization
 ---
 
+---
+title: Wastewater blower VFD: why energy savings erode
+slug: wastewater-blower-vfd-energy-savings-erode
+date: 2026-10-31
+section: Field notes
+description: DO sensor drift silently reverses VFD energy savings at wastewater plants. Here are three historian patterns that expose the cause and how to fix it.
+tags: blower energy, VFD, dissolved oxygen control, wastewater aeration, energy optimization
+---
+
 Variable frequency drives on aeration blowers are among the most reliable energy investments a wastewater plant can make. The engineering is sound: slow the blower when oxygen demand drops, and power consumption falls by the cube of the speed reduction. Many plants documented 15 to 25 percent reductions in blower energy in the months after commissioning. Not all of them still see those numbers.
 
 The most common reason is not a failing drive, a degraded motor, or the wrong control strategy. It is the dissolved oxygen sensor feeding the control loop.
@@ -71,7 +80,7 @@ What determines the right interval is the sensor's actual drift rate in your mix
 
 A calibration-versus-drift log, built from a few weeks of parallel readings, makes the calibration interval decision quantitative rather than a guess based on manufacturer defaults. We examine this approach in detail in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html), including how to build a drift profile and what a typical profile looks like in activated sludge service.
 
-For plants running [intermittent aeration for simultaneous nitrification and denitrification](/blog/intermittent-aeration-nitrogen-removal-do-control.html), the stakes around calibration intervals are higher. That control strategy uses precise DO swings through the nitrification setpoint to cycle between aerobic and anoxic conditions. A sensor with a standing offset of 0.5 mg/L can shift the timing of those swings in ways that reduce nitrogen removal efficiency and create compliance risk, entirely apart from the energy cost.
+For plants running [intermittent aeration for simultaneous nitrification and denitrification](/blog/intermittent-aeration-nitrogen-removal-do-control.html), the stakes around calibration intervals are higher. That control strategy uses precise DO swings through the nitrification setpoint to cycle between aerobic and anoxic conditions. A sensor with a standing offset of 0.5 mg/L can shift the timing of those swings in ways that reduce nitrogen removal efficiency and create the compliance exposure described in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html), entirely apart from the energy cost.
 
 ## Three questions before adjusting the control strategy
 
