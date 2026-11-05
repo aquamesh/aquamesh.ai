@@ -7,15 +7,6 @@ description: DO sensor precision controls whether intermittent aeration for nitr
 tags: nitrogen removal, intermittent aeration, dissolved oxygen, SND, wastewater treatment
 ---
 
----
-title: Intermittent aeration: why DO sensor precision matters
-slug: intermittent-aeration-nitrogen-removal-do-control
-date: 2026-10-23
-section: Field notes
-description: DO sensor precision controls whether intermittent aeration for nitrogen removal saves energy or misses permit limits. Here is what happens when it drifts.
-tags: nitrogen removal, intermittent aeration, dissolved oxygen, SND, wastewater treatment
----
-
 Biological nitrogen removal is one of the more demanding process control challenges in activated sludge treatment. Plants with tight effluent nitrogen limits need to run two competing biological processes: nitrification under aerobic conditions and denitrification under anoxic ones, efficiently, in the same biological system. For plants using intermittent aeration to accomplish this in a single-basin configuration, the precision of dissolved oxygen control during aeration cycles is not an instrumentation detail. It is the variable that determines whether the strategy works.
 
 ## What intermittent aeration is trying to do
@@ -69,7 +60,7 @@ This is a modelled example using published benchmarks; actual values depend on p
 
 When DO measurement in an intermittent aeration system is continuous, accurate, and corrected against drift between calibration intervals, the control loop can do what it was designed for: maintain the aerobic-to-anoxic balance that both nitrification and denitrification require.
 
-For plants approaching permit limits on total nitrogen, the margin for process error is narrow. A sensor that introduces a systematic offset into the timing of aeration cycles is a measurement problem that manifests as an effluent compliance risk. The issue is usually visible in the historian data before it appears in the permit reporting: aerobic phase durations extending over time, DO baseline at cycle start gradually increasing, nitrogen removal efficiency declining in ways that do not correlate with influent load.
+For plants approaching permit limits on total nitrogen, the margin for process error is narrow. The compliance exposure those limits create -- specifically what the scheduled DMR sampling program can and cannot see on unmonitored days -- is covered in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html). A sensor that introduces a systematic offset into the timing of aeration cycles is a measurement problem that manifests as an effluent compliance risk. The issue is usually visible in the historian data before it appears in the permit reporting: aerobic phase durations extending over time, DO baseline at cycle start gradually increasing, nitrogen removal efficiency declining in ways that do not correlate with influent load.
 
 The diagnostic questions are the same ones that apply to continuous aeration systems. Are the DO sensors reading accurately between calibrations? Does blower runtime at a given influent load match what the setpoints predict? Are cycle times stable, or are they drifting? The methodology for that analysis is in [aeration energy at wastewater plants: the cost, the waste, and the measurement gap](https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html).
 
