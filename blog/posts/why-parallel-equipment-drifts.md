@@ -70,7 +70,7 @@ Aeration typically accounts for 55 to 70 percent of a treatment plant's electric
 
 Two turbidimeters on the same permeate stream, one reading a median of 0.11 NTU with a 90th percentile of 0.26, the other reading 0.14 and 2.12: three and a half times the plant's posted upper limit.
 
-One of them is drifting. Until you know which, compliance decisions are resting on an instrument that cannot be fully trusted. The encouraging part, in that case, was that the true value looked excellent.
+One of them is drifting. Until you know which, compliance decisions are resting on an instrument that cannot be fully trusted. An approach that can identify which instrument shifted, without waiting for a scheduled calibration, is described in [spectral change analysis versus calibrated parameters](/blog/spectral-change-analysis-vs-calibrated-parameters.html). The encouraging part, in that case, was that the true value looked excellent.
 
 Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO sensor reading above actual holds the blower on past the setpoint; one reading below actual cuts aeration short before the biology is satisfied. The process consequence of that divergence, particularly during intermittent aeration cycles for nitrogen removal, is covered in [intermittent aeration for nitrogen removal](/blog/intermittent-aeration-nitrogen-removal-do-control.html).
 
