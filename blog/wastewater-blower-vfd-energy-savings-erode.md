@@ -3,7 +3,7 @@ title: Wastewater blower VFD: why energy savings erode
 slug: wastewater-blower-vfd-energy-savings-erode
 date: 2026-10-31
 section: Field notes
-description: Dissolved oxygen sensor drift silently reverses VFD energy savings at wastewater plants. Three historian patterns reveal the cause, and the fix starts with calibration records.
+description: DO sensor drift silently reverses VFD energy savings at wastewater plants. Here are three historian patterns that expose the cause and how to fix it.
 tags: blower energy, VFD, dissolved oxygen control, wastewater aeration, energy optimization
 ---
 

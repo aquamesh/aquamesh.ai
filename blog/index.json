@@ -2,7 +2,7 @@
   "site": "https://aquamesh.ai",
   "brand": "AquaMesh",
   "description": "Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.",
-  "generated": "2026-11-05T03:22:45.818Z",
+  "generated": "2026-11-05T03:23:29.898Z",
   "license": "Readable and quotable with attribution to AquaMesh (https://aquamesh.ai).",
   "count": 14,
   "posts": [
@@ -40,7 +40,7 @@
       "slug": "wastewater-blower-vfd-energy-savings-erode",
       "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
       "markdown_url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.md",
-      "description": "Dissolved oxygen sensor drift silently reverses VFD energy savings at wastewater plants. Three historian patterns reveal the cause, and the fix starts with calibration records.",
+      "description": "DO sensor drift silently reverses VFD energy savings at wastewater plants. Here are three historian patterns that expose the cause and how to fix it.",
       "date": "2026-10-31",
       "updated": "2026-10-31",
       "section": "Field notes",

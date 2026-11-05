@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 03:22:45 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 03:23:29 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NPDES nitrogen permit compliance: the DMR sampling gap</title>
@@ -55,7 +55,7 @@
       <link>https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html</link>
       <guid isPermaLink="true">https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html</guid>
       <pubDate>Sat, 31 Oct 2026 09:00:00 GMT</pubDate>
-      <description>Dissolved oxygen sensor drift silently reverses VFD energy savings at wastewater plants. Three historian patterns reveal the cause, and the fix starts with calibration records.</description>
+      <description>DO sensor drift silently reverses VFD energy savings at wastewater plants. Here are three historian patterns that expose the cause and how to fix it.</description>
       <content:encoded><![CDATA[<p>Variable frequency drives on aeration blowers are among the most reliable energy investments a wastewater plant can make. The engineering is sound: slow the blower when oxygen demand drops, and power consumption falls by the cube of the speed reduction. Many plants documented 15 to 25 percent reductions in blower energy in the months after commissioning. Not all of them still see those numbers.</p>
 <p>The most common reason is not a failing drive, a degraded motor, or the wrong control strategy. It is the dissolved oxygen sensor feeding the control loop.</p>
 <p><b>Quotable insight:</b> A blower VFD can only be as efficient as the measurement telling it when to slow down. If that sensor reads low, the controller drives blowers harder, and the savings disappear into electricity you cannot account for.</p>
