@@ -7,15 +7,6 @@ description: Aeration is 50 to 75% of a wastewater plant's electricity bill. Wha
 tags: aeration energy, wastewater treatment, dissolved oxygen, blower control, energy optimization
 ---
 
----
-title: Wastewater blower energy: cost and control
-slug: aeration-energy-cost-wastewater-plants
-date: 2026-10-21
-section: Field notes
-description: Aeration is 50 to 75% of a wastewater plant's electricity bill. What it costs per MGD, why savings erode, and how to cut blower energy without new equipment.
-tags: aeration energy, wastewater treatment, dissolved oxygen, blower control, energy optimization
----
-
 Aeration is the single largest line on the electricity bill for most activated sludge wastewater plants. Aeration systems typically represent 50 to 75 percent of total electricity consumption at activated sludge facilities. The logical response is to install dissolved oxygen sensors, add variable frequency drives to blowers, and let a control loop do the rest. Many plants have done exactly that. Not all of them kept the savings.
 
 Here is what the cost actually looks like, why the standard fix often falls short, and how to recover blower energy without adding hardware.
@@ -77,7 +68,7 @@ For plants running [intermittent aeration for simultaneous nitrification/denitri
 
 Some plants extend this further with online analyzers for ammonium or nitrate to feed an ammonia-based aeration control loop. Those instruments use a different measurement principle than a DO probe, and what they actually detect versus what they are marketed as measuring matters before you specify one. [Spectral change analysis versus calibrated parameters](https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html) covers the distinction.
 
-Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.
+Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny. For plants on nitrogen-limited discharge permits, the exposure created by DO control gaps and sensor drift is covered in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html).
 
 The same measurement-loop dynamic drives water waste in cooling towers, where a conductivity sensor reading high causes the system to discharge water still within operating range. The cost structure for that failure mode is in [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
 

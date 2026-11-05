@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 09:29:56 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 09:30:44 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NPDES nitrogen permit compliance: the DMR sampling gap</title>
@@ -329,10 +329,7 @@
       <guid isPermaLink="true">https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html</guid>
       <pubDate>Wed, 21 Oct 2026 09:00:00 GMT</pubDate>
       <description>Aeration is 50 to 75% of a wastewater plant's electricity bill. What it costs per MGD, why savings erode, and how to cut blower energy without new equipment.</description>
-      <content:encoded><![CDATA[<hr />
-<p>title: Wastewater blower energy: cost and control slug: aeration-energy-cost-wastewater-plants date: 2026-10-21 section: Field notes description: Aeration is 50 to 75% of a wastewater plant's electricity bill. What it costs per MGD, why savings erode, and how to cut blower energy without new equipment. tags: aeration energy, wastewater treatment, dissolved oxygen, blower control, energy optimization</p>
-<hr />
-<p>Aeration is the single largest line on the electricity bill for most activated sludge wastewater plants. Aeration systems typically represent 50 to 75 percent of total electricity consumption at activated sludge facilities. The logical response is to install dissolved oxygen sensors, add variable frequency drives to blowers, and let a control loop do the rest. Many plants have done exactly that. Not all of them kept the savings.</p>
+      <content:encoded><![CDATA[<p>Aeration is the single largest line on the electricity bill for most activated sludge wastewater plants. Aeration systems typically represent 50 to 75 percent of total electricity consumption at activated sludge facilities. The logical response is to install dissolved oxygen sensors, add variable frequency drives to blowers, and let a control loop do the rest. Many plants have done exactly that. Not all of them kept the savings.</p>
 <p>Here is what the cost actually looks like, why the standard fix often falls short, and how to recover blower energy without adding hardware.</p>
 <h2 id="how-large-the-prize-is">How large the prize is</h2>
 <p>The U.S. Energy Information Administration reported the national average industrial electricity rate at $0.0977 per kWh in July 2026, up from $0.0933 the prior year. (<a href="https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a" rel="noopener">EIA Electric Power Monthly, September 2026</a>)</p>
@@ -360,7 +357,7 @@
 <p>When DO measurement is continuous, accurate, and does not accumulate drift between calibration cycles, the control loop has what it was designed to work from. Blower output tracks actual oxygen demand rather than sensor artifacts. Setpoints can be tightened because operators are not building in a buffer to account for measurement uncertainty.</p>
 <p>For plants running <a href="https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html">intermittent aeration for simultaneous nitrification/denitrification</a>, the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.</p>
 <p>Some plants extend this further with online analyzers for ammonium or nitrate to feed an ammonia-based aeration control loop. Those instruments use a different measurement principle than a DO probe, and what they actually detect versus what they are marketed as measuring matters before you specify one. <a href="https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html">Spectral change analysis versus calibrated parameters</a> covers the distinction.</p>
-<p>Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny.</p>
+<p>Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny. For plants on nitrogen-limited discharge permits, the exposure created by DO control gaps and sensor drift is covered in <a href="/blog/nitrogen-permit-compliance-sampling-gap.html">NPDES nitrogen permit compliance: the DMR sampling gap</a>.</p>
 <p>The same measurement-loop dynamic drives water waste in cooling towers, where a conductivity sensor reading high causes the system to discharge water still within operating range. The cost structure for that failure mode is in <a href="https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html">cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals</a>.</p>
 <h2 id="how-to-cut-blower-energy-without-new-equipment">How to cut blower energy without new equipment</h2>
 <p>The FWPCOA analysis cited above documents 10 to 40 percent reductions in blower energy from demand-based DO control, compared to running blowers without feedback. Plants already running VFDs in manual mode, or with feedback loops that have not been recommissioned since original installation, often have most of that gap still available. The five steps below work in sequence; later steps depend on the earlier ones being in place.</p>
