@@ -78,7 +78,7 @@ Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO 
 
 A related pattern worth naming on its own, because it is consistently underestimated.
 
-Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE "Improving Pumping System Performance: A Sourcebook for Industry" (archived)](https://web.archive.org/web/20231015000000/https://www.energy.gov/sites/default/files/2014/05/f15/pump.pdf), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
+Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the [DOE "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.energy.gov/sites/prod/files/2014/05/f16/pump.pdf), establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.
 
 In one record, reclaimed water pumps were logging 13 to 28 starts an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm fired, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.
 
