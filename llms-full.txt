@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-05T09:30:44.068Z · 14 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-05T15:36:19.330Z · 14 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -1023,6 +1023,8 @@ Two turbidimeters on the same permeate stream, one reading a median of 0.11 NTU 
 One of them is drifting. Until you know which, compliance decisions are resting on an instrument that cannot be fully trusted. The encouraging part, in that case, was that the true value looked excellent.
 
 Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO sensor reading above actual holds the blower on past the setpoint; one reading below actual cuts aeration short before the biology is satisfied. The process consequence of that divergence, particularly during intermittent aeration cycles for nitrogen removal, is covered in [intermittent aeration for nitrogen removal](/blog/intermittent-aeration-nitrogen-removal-do-control.html).
+
+When that DO sensor divergence coincides with permit limits on total nitrogen or ammonia, the compliance exposure extends beyond process efficiency. [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html) covers how plants relying on monthly grab samples can be reporting compliant while actual effluent conditions periodically exceed the permit limit.
 
 ## Why frequent starts cost more than running
 

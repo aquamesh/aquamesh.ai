@@ -74,6 +74,8 @@ One of them is drifting. Until you know which, compliance decisions are resting 
 
 Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO sensor reading above actual holds the blower on past the setpoint; one reading below actual cuts aeration short before the biology is satisfied. The process consequence of that divergence, particularly during intermittent aeration cycles for nitrogen removal, is covered in [intermittent aeration for nitrogen removal](/blog/intermittent-aeration-nitrogen-removal-do-control.html).
 
+When that DO sensor divergence coincides with permit limits on total nitrogen or ammonia, the compliance exposure extends beyond process efficiency. [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html) covers how plants relying on monthly grab samples can be reporting compliant while actual effluent conditions periodically exceed the permit limit.
+
 ## Why frequent starts cost more than running
 
 A related pattern worth naming on its own, because it is consistently underestimated.

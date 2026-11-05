@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 09:30:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 15:36:19 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NPDES nitrogen permit compliance: the DMR sampling gap</title>
@@ -594,6 +594,7 @@
 <p>Two turbidimeters on the same permeate stream, one reading a median of 0.11 NTU with a 90th percentile of 0.26, the other reading 0.14 and 2.12: three and a half times the plant's posted upper limit.</p>
 <p>One of them is drifting. Until you know which, compliance decisions are resting on an instrument that cannot be fully trusted. The encouraging part, in that case, was that the true value looked excellent.</p>
 <p>Dissolved oxygen instruments follow the same pattern. In activated sludge, a DO sensor reading above actual holds the blower on past the setpoint; one reading below actual cuts aeration short before the biology is satisfied. The process consequence of that divergence, particularly during intermittent aeration cycles for nitrogen removal, is covered in <a href="/blog/intermittent-aeration-nitrogen-removal-do-control.html">intermittent aeration for nitrogen removal</a>.</p>
+<p>When that DO sensor divergence coincides with permit limits on total nitrogen or ammonia, the compliance exposure extends beyond process efficiency. <a href="/blog/nitrogen-permit-compliance-sampling-gap.html">NPDES nitrogen permit compliance: the DMR sampling gap</a> covers how plants relying on monthly grab samples can be reporting compliant while actual effluent conditions periodically exceed the permit limit.</p>
 <h2 id="why-frequent-starts-cost-more-than-running">Why frequent starts cost more than running</h2>
 <p>A related pattern worth naming on its own, because it is consistently underestimated.</p>
 <p>Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the <a href="https://www.energy.gov/sites/prod/files/2014/05/f16/pump.pdf" rel="noopener">DOE "Improving Pumping System Performance: A Sourcebook for Industry"</a>, establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.</p>
