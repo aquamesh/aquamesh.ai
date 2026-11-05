@@ -7,16 +7,7 @@ description: WUE measures liters per kWh of IT load. It does not show where wate
 tags: data centers, WUE, water efficiency, cooling tower, water monitoring, water usage effectiveness
 ---
 
----
-title: Data center WUE: what it measures and misses
-slug: data-center-wue-measurement-gap
-date: 2026-10-22
-section: Measurement
-description: WUE measures liters per kWh of IT load. It does not show where water goes, verify cooling controls, or prove tower savings for reporting.
-tags: data centers, WUE, water efficiency, cooling tower, water monitoring, water usage effectiveness
----
-
-Water Usage Effectiveness (WUE) is a data center water metric introduced by [The Green Grid](https://www.thegreengrid.org/en/resources/library/details/WUE-A-Green-Grid-Efficiency-Metric). The formula: liters of water consumed at the facility divided by kilowatt-hours delivered to IT equipment, where lower is better and zero is the theoretical ideal.
+Water Usage Effectiveness (WUE) is a data center water metric introduced by [The Green Grid](https://www.thegreengrid.org/resources/library-and-tools). The formula: liters of water consumed at the facility divided by kilowatt-hours delivered to IT equipment, where lower is better and zero is the theoretical ideal.
 
 What WUE does not answer:
 
