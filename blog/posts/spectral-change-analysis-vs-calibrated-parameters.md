@@ -8,6 +8,16 @@ image: assets/starch-spectra.jpg
 tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
 ---
 
+---
+title: Spectral change analysis versus calibrated parameters
+slug: spectral-change-analysis-vs-calibrated-parameters
+date: 2026-09-22
+section: Measurement
+description: UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool.
+image: assets/starch-spectra.jpg
+tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
+---
+
 An online water quality analyser usually arrives with a list: COD, BOD, TSS, nitrate, TOC. The list is the product. The implication is that the instrument measures each of those things the way a lab measures them, only continuously.
 
 That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.
@@ -48,7 +58,7 @@ Because sometimes a number is the point.
 
 Biochemical oxygen demand is the parameter that drives sewer surcharges, appears in [discharge permits under 40 CFR Part 133](https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-133), and determines whether a load is going to cause a problem downstream. "The spectrum moved" is not an answer when the question is whether you are about to exceed a threshold that gets billed by the pound.
 
-For the first industrial deployment, BOD is the parameter we plan to validate against the customer's own reference samples. The reference test is [Standard Method 5210B, as codified in 40 CFR Part 136](https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-136). Their lab stays the method of record. The goal is to fill the hours between the samples the lab already takes, rather than replace them.
+For the first industrial deployment, BOD is the parameter we plan to validate against the customer's own reference samples. The reference test is [Standard Method 5210B, as codified in 40 CFR Part 136](https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-136). Their lab stays the method of record. The goal is to fill the hours between the samples the lab already takes, rather than replace them.
 
 Other outputs begin as change analysis unless and until they are validated against an appropriate reference method.
 
@@ -75,6 +85,8 @@ Measurement is only half of it. A spectrum that moved is not an action: it becom
 That is the division of labour: the probe reads the stream, the platform works out what the change means and what it is worth, and the operator decides what to do about it. What that process looks like against a real plant dataset is in [what 25 days of historian data actually shows](/blog/what-25-days-of-historian-data-shows.html). Working from a production historian to find cost events is the practical version of the correlation step described above.
 
 That distinction between a measurement that holds against an independent reference and one that drifts undetected applies to every process sensor that drives a control decision. [Cooling tower blowdown: what conductivity sensor drift costs in water and chemicals](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html) is a direct example from a different application.
+
+When the same drift problem affects parallel process units running side-by-side, the divergence appears in energy use and process outputs before it shows in any individual sensor alarm. The methodology for catching that pattern -- and what it typically costs before it surfaces -- is in [why parallel equipment drifts and what it costs](/blog/why-parallel-equipment-drifts.html).
 
 More on what the sensor is used for by sector: [food and beverage](/industries/food-beverage.html), [industrial water](/industries/industrial-water.html), [pharma and biotech](/industries/pharma-biotech.html).
 
