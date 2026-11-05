@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 03:23:29 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 03:23:58 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NPDES nitrogen permit compliance: the DMR sampling gap</title>
@@ -411,7 +411,7 @@
       <link>https://aquamesh.ai/blog/california-data-center-water-reporting.html</link>
       <guid isPermaLink="true">https://aquamesh.ai/blog/california-data-center-water-reporting.html</guid>
       <pubDate>Thu, 01 Oct 2026 09:00:00 GMT</pubDate>
-      <description>AB 2619 requires California data centers to report total and direct water use, by source, at every license renewal under penalty of perjury. A third requirement lands in 2028.</description>
+      <description>AB 2619 requires California data centers to report direct water use by source at renewal, under penalty of perjury. AB 2469 adds a Water Scarcity Plan by 2028.</description>
       <content:encoded><![CDATA[<p>On 21 September 2026 the Governor of California signed <a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2619" rel="noopener">AB 2619</a>, now Chapter 437 of the 2026 Statutes, and <a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2469" rel="noopener">AB 2469</a> alongside it. Between them they change what a data center operator in California has to be able to say about water, and when.</p>
 <p>The reporting obligation is the part worth reading closely, because it is more specific than the coverage suggests.</p>
 <h2 id="what-ab-2619-actually-asks-for">What AB 2619 actually asks for</h2>

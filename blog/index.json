@@ -2,7 +2,7 @@
   "site": "https://aquamesh.ai",
   "brand": "AquaMesh",
   "description": "Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.",
-  "generated": "2026-11-05T03:23:29.898Z",
+  "generated": "2026-11-05T03:23:58.155Z",
   "license": "Readable and quotable with attribution to AquaMesh (https://aquamesh.ai).",
   "count": 14,
   "posts": [
@@ -256,7 +256,7 @@
       "slug": "california-data-center-water-reporting",
       "url": "https://aquamesh.ai/blog/california-data-center-water-reporting.html",
       "markdown_url": "https://aquamesh.ai/blog/california-data-center-water-reporting.md",
-      "description": "AB 2619 requires California data centers to report total and direct water use, by source, at every license renewal under penalty of perjury. A third requirement lands in 2028.",
+      "description": "AB 2619 requires California data centers to report direct water use by source at renewal, under penalty of perjury. AB 2469 adds a Water Scarcity Plan by 2028.",
       "date": "2026-10-01",
       "updated": "2026-10-01",
       "section": "Regulation",
