@@ -70,7 +70,7 @@ Some plants extend this further with online analyzers for ammonium or nitrate to
 
 Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny. For plants on nitrogen-limited discharge permits, the exposure created by DO control gaps and sensor drift is covered in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html).
 
-The same measurement-loop dynamic drives water waste in cooling towers, where a conductivity sensor reading high causes the system to discharge water still within operating range. The cost structure for that failure mode is in [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
+The same measurement-loop dynamic drives water waste in cooling towers, where a conductivity sensor reading high causes the system to discharge water still within operating range. The cost structure for that failure mode is in [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html). In activated sludge, the same drift accumulation affects pH electrodes, where a biased reading creates alkalinity overdosing and can mask early nitrification inhibition: [pH sensor drift in activated sludge: the cost of 0.5 units](/blog/ph-sensor-drift-wastewater-activated-sludge.html).
 
 ## How to cut blower energy without new equipment
 
