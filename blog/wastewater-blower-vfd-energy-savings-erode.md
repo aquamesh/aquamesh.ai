@@ -7,15 +7,6 @@ description: DO sensor drift silently reverses VFD energy savings at wastewater 
 tags: blower energy, VFD, dissolved oxygen control, wastewater aeration, energy optimization
 ---
 
----
-title: Wastewater blower VFD: why energy savings erode
-slug: wastewater-blower-vfd-energy-savings-erode
-date: 2026-10-31
-section: Field notes
-description: DO sensor drift silently reverses VFD energy savings at wastewater plants. Here are three historian patterns that expose the cause and how to fix it.
-tags: blower energy, VFD, dissolved oxygen control, wastewater aeration, energy optimization
----
-
 Variable frequency drives on aeration blowers are among the most reliable energy investments a wastewater plant can make. The engineering is sound: slow the blower when oxygen demand drops, and power consumption falls by the cube of the speed reduction. Many plants documented 15 to 25 percent reductions in blower energy in the months after commissioning. Not all of them still see those numbers.
 
 The most common reason is not a failing drive, a degraded motor, or the wrong control strategy. It is the dissolved oxygen sensor feeding the control loop.
@@ -38,7 +29,7 @@ A sensor reading 1.4 mg/L when the basin contains 2.1 mg/L presents the controll
 
 The result is a system where the VFD is still installed, the control loop is still active, and the blowers are running harder than the process needs. The savings documented at commissioning, when the sensors were freshly calibrated, erode as sensor bias accumulates between calibration events.
 
-The same pattern appears in other process control loops where a single sensor drives an automated response. In cooling tower systems, conductivity sensor drift causes blowdown cycles to run incorrectly -- purging more treated water than water chemistry requires, or leaving scale-forming chemistry in place when it should be removed -- as described in [cooling tower blowdown: conductivity control and sensor drift](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
+The same pattern appears in other process control loops where a single sensor drives an automated response. In cooling tower systems, conductivity sensor drift causes blowdown cycles to run incorrectly: purging more treated water than water chemistry requires, or leaving scale-forming chemistry in place when it should be removed, as described in [cooling tower blowdown: conductivity control and sensor drift](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
 
 ## What the cost of eroded savings looks like
 
@@ -80,7 +71,7 @@ What determines the right interval is the sensor's actual drift rate in your mix
 
 A calibration-versus-drift log, built from a few weeks of parallel readings, makes the calibration interval decision quantitative rather than a guess based on manufacturer defaults. We examine this approach in detail in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html), including how to build a drift profile and what a typical profile looks like in activated sludge service.
 
-For plants running [intermittent aeration for simultaneous nitrification and denitrification](/blog/intermittent-aeration-nitrogen-removal-do-control.html), the stakes around calibration intervals are higher. That control strategy uses precise DO swings through the nitrification setpoint to cycle between aerobic and anoxic conditions. A sensor with a standing offset of 0.5 mg/L can shift the timing of those swings in ways that reduce nitrogen removal efficiency and create the compliance exposure described in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html), entirely apart from the energy cost.
+For plants running [intermittent aeration for simultaneous nitrification and denitrification](/blog/intermittent-aeration-nitrogen-removal-do-control.html), the stakes around calibration intervals are higher. That control strategy uses precise DO swings through the nitrification setpoint to cycle between aerobic and anoxic conditions. A sensor with a standing offset of 0.5 mg/L can shift the timing of those swings in ways that reduce nitrogen removal efficiency and create the compliance exposure described in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html), entirely apart from the energy cost. In BNR processes, pH electrode drift adds a compounding risk alongside DO offset: biased alkalinity dosing and masked nitrification inhibition are covered in [pH sensor drift in activated sludge: the cost of 0.5 units](/blog/ph-sensor-drift-wastewater-activated-sludge.html).
 
 ## Three questions before adjusting the control strategy
 
