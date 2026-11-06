@@ -64,6 +64,8 @@ For plants approaching permit limits on total nitrogen, the margin for process e
 
 The diagnostic questions are the same ones that apply to continuous aeration systems. Are the DO sensors reading accurately between calibrations? Does blower runtime at a given influent load match what the setpoints predict? Are cycle times stable, or are they drifting? The methodology for that analysis is in [aeration energy at wastewater plants: the cost, the waste, and the measurement gap](https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html).
 
+In the same biological process, pH electrodes face the same drift accumulation. A biased pH reading keeps alkalinity dosing off-target and can mask developing nitrification inhibition before the effluent shows it: [pH sensor drift in activated sludge: the cost of 0.5 units](/blog/ph-sensor-drift-wastewater-activated-sludge.html).
+
 None of this analysis requires new hardware. The data is in the historian. The constraint is having a way to extract it at the resolution that shows cycle-level behavior, over a long enough window, against a reference that was not subject to the same drift.
 
 ---
