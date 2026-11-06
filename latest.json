@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-05T20:49:34.864Z",
+  "at": "2026-11-06T20:04:28.271Z",
   "findings": [
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/",
-      "msg": "meta description is 250 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -15,33 +15,21 @@
     },
     {
       "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
+      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
+    },
+    {
+      "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/case-studies/",
+      "msg": "meta description is 250 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
       "msg": "meta description is 191 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "html-weight",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "HTML is 1383 KB"
     },
     {
       "sev": "warn",
@@ -75,14 +63,14 @@
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
-      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
+      "url": "https://aquamesh.ai/do-not-sell.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
@@ -93,51 +81,27 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
-      "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
-    },
-    {
-      "sev": "warn",
       "id": "jsonld-missing",
       "url": "https://aquamesh.ai/basin/methodology.html",
       "msg": "no JSON-LD structured data"
     },
     {
       "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
-      "msg": "title is 111 chars; Google truncates near 60: \"Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh\""
-    },
-    {
-      "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
-      "msg": "meta description is 189 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
-      "msg": "Article missing image"
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/ph-sensor-drift-wastewater-activated-sludge.html",
+      "msg": "title is 69 chars; Google truncates near 60: \"pH sensor drift in activated sludge: the cost of 0.5 units | AquaMesh\""
     },
     {
       "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
-      "msg": "Article missing image"
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
+      "msg": "title is 105 chars; Google truncates near 60: \"In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -153,15 +117,57 @@
     },
     {
       "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
+      "msg": "title is 111 chars; Google truncates near 60: \"Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
+      "msg": "meta description is 189 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "html-weight",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "HTML is 1383 KB"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "msg": "Article missing image"
+    },
+    {
+      "sev": "warn",
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
+      "msg": "Article missing image"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
       "msg": "Article missing image"
     },
     {
       "sev": "info",
       "id": "geo-org-author",
       "url": "https://aquamesh.ai/blog/",
-      "msg": "14 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
+      "msg": "15 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
     },
     {
       "sev": "warn",
@@ -202,8 +208,8 @@
   ],
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
-    "Crawled 40 live pages and 63 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 15 new or changed URL(s) (HTTP 200)."
+    "Crawled 41 live pages and 64 assets and files.",
+    "Told IndexNow (Bing, Copilot, Yandex) about 16 new or changed URL(s) (HTTP 200)."
   ],
   "lighthouse": {
     "at": "2026-11-04T20:32:34.541Z",
@@ -373,10 +379,10 @@
     "cited": []
   },
   "indexnow": {
-    "at": "2026-11-05T20:49:34.864Z",
+    "at": "2026-11-06T20:04:28.271Z",
     "ok": true,
     "status": 200,
-    "sent": 15,
+    "sent": 16,
     "note": ""
   },
   "fix": null

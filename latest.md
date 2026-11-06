@@ -1,4 +1,4 @@
-# SEO report, 2026-11-05
+# SEO report, 2026-11-06
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-04). Site errors: 0.
 
@@ -36,10 +36,10 @@ Cited in AI answers to 0 of the tracked buyer questions.
 
 </details>
 
-## Site health (40 pages crawled)
+## Site health (41 pages crawled)
 No errors.
 
-Since the last run: 0 new, 8 resolved.
+Since the last run: 1 new, 0 resolved.
 
 <details><summary>Core Web Vitals, lab, mobile (2026-11-04)</summary>
 
@@ -53,45 +53,46 @@ Since the last run: 0 new, 8 resolved.
 
 </details>
 
-<details><summary>31 warnings</summary>
+<details><summary>32 warnings</summary>
 
 - **desc-length** (8)
-  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/`: meta description is 183 chars (aim for 70 to 160)
+  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
-  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
-  - `/blog/connect-press-release-physical-ai.html`: meta description is 189 chars (aim for 70 to 160)
   - `/blog/dairy-foods-process-losses.html`: meta description is 179 chars (aim for 70 to 160)
-- **title-length** (5)
-  - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
+  - `/blog/connect-press-release-physical-ai.html`: meta description is 189 chars (aim for 70 to 160)
+  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
+- **title-length** (6)
   - `/case-studies/dairy-plant.html`: title is 68 chars; Google truncates near 60: "Case study — $1.17M a year in a dairy plant’s own records | AquaMesh"
+  - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
+  - `/blog/ph-sensor-drift-wastewater-activated-sludge.html`: title is 69 chars; Google truncates near 60: "pH sensor drift in activated sludge: the cost of 0.5 units | AquaMesh"
   - `/blog/water-online-sewer-repair-evidence.html`: title is 105 chars; Google truncates near 60: "In Water Online: the $1.5 million sewer repair and the water-quality evidence missing upstream | AquaMesh"
-  - `/blog/connect-press-release-physical-ai.html`: title is 111 chars; Google truncates near 60: "Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh"
   - `/blog/dairy-foods-process-losses.html`: title is 90 chars; Google truncates near 60: "In Dairy Foods: why dairy plants still miss their most expensive process losses | AquaMesh"
+  - `/blog/connect-press-release-physical-ai.html`: title is 111 chars; Google truncates near 60: "Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early | AquaMesh"
 - **jsonld-article-fields** (4)
   - `/company.html`: Article missing dateModified, image
   - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
-  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
   - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
+  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **og-missing** (4)
   - `/privacy.html`: missing og:title, og:description; link previews degrade
   - `/cookies.html`: missing og:title, og:description; link previews degrade
-  - `/terms.html`: missing og:title, og:description; link previews degrade
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
+  - `/terms.html`: missing og:title, og:description; link previews degrade
 - **cwv-cls** (4)
   - `/blog/`: CLS 0.16 (good is under 0.1)
   - `/blog/wastewater-blower-vfd-energy-savings-erode.html`: CLS 0.106 (good is under 0.1)
   - `/case-studies/water-reuse-plant.html`: CLS 0.119 (good is under 0.1)
   - `/industries/industrial-water.html`: CLS 0.146 (good is under 0.1)
 - **jsonld-missing** (3)
-  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
   - `/case-studies/refinery-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
+  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
 - **html-weight** (2)
-  - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
   - `/case-studies/refinery-complex.html`: HTML is 1841 KB
+  - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
 - **cwv-lcp** (1)
   - `/`: LCP 3.0s on mobile (good is under 2.5s); element: <p class="lead">
 
@@ -100,7 +101,7 @@ Since the last run: 0 new, 8 resolved.
 <details><summary>Opportunities</summary>
 
 - **geo-org-author** (1)
-  - `/blog/`: 14 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)
+  - `/blog/`: 15 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)
 - **press-no-link** (1)
   - `https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses`: Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio
 
@@ -109,8 +110,8 @@ Since the last run: 0 new, 8 resolved.
 <details><summary>What the agent did this run</summary>
 
 - Rebuilt the blog from committed sources: output already matches, nothing to commit.
-- Crawled 40 live pages and 63 assets and files.
-- Told IndexNow (Bing, Copilot, Yandex) about 15 new or changed URL(s) (HTTP 200).
+- Crawled 41 live pages and 64 assets and files.
+- Told IndexNow (Bing, Copilot, Yandex) about 16 new or changed URL(s) (HTTP 200).
 
 </details>
 
