@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 01:18:51 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 04:21:33 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ammonia sensor drift in wastewater aeration control</title>
@@ -352,6 +352,7 @@
 <p>When DO measurement in an intermittent aeration system is continuous, accurate, and corrected against drift between calibration intervals, the control loop can do what it was designed for: maintain the aerobic-to-anoxic balance that both nitrification and denitrification require.</p>
 <p>For plants approaching permit limits on total nitrogen, the margin for process error is narrow. The compliance exposure those limits create -- specifically what the scheduled DMR sampling program can and cannot see on unmonitored days -- is covered in <a href="/blog/nitrogen-permit-compliance-sampling-gap.html">NPDES nitrogen permit compliance: the DMR sampling gap</a>. A sensor that introduces a systematic offset into the timing of aeration cycles is a measurement problem that manifests as an effluent compliance risk. The issue is usually visible in the historian data before it appears in the permit reporting: aerobic phase durations extending over time, DO baseline at cycle start gradually increasing, nitrogen removal efficiency declining in ways that do not correlate with influent load.</p>
 <p>The diagnostic questions are the same ones that apply to continuous aeration systems. Are the DO sensors reading accurately between calibrations? Does blower runtime at a given influent load match what the setpoints predict? Are cycle times stable, or are they drifting? The methodology for that analysis is in <a href="https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html">aeration energy at wastewater plants: the cost, the waste, and the measurement gap</a>.</p>
+<p>For plants running ammonia-based aeration control (ABAC), where an in-process ammonium analyzer trims blower output based on effluent ammonium concentration, that control loop is only as reliable as the ammonia sensor feeding it: <a href="/blog/ammonia-sensor-drift-wastewater-aeration-control.html">ammonia sensor drift in wastewater aeration control</a>.</p>
 <p>In the same biological process, pH electrodes face the same drift accumulation. A biased pH reading keeps alkalinity dosing off-target and can mask developing nitrification inhibition before the effluent shows it: <a href="/blog/ph-sensor-drift-wastewater-activated-sludge.html">pH sensor drift in activated sludge: the cost of 0.5 units</a>.</p>
 <p>None of this analysis requires new hardware. The data is in the historian. The constraint is having a way to extract it at the resolution that shows cycle-level behavior, over a long enough window, against a reference that was not subject to the same drift.</p>
 <hr />
