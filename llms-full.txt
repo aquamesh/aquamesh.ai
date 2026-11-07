@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-07T04:22:46.569Z · 16 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-07T19:37:38.972Z · 16 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -112,7 +112,7 @@ Ammonium sensor drift in ABAC service is predictable, slow-moving, and detectabl
 
 ---
 
-If your plant runs ABAC or is evaluating ammonium-based setpoint control, AquaMesh can show you how continuous ammonium monitoring integrates with existing SCADA and historian data to detect sensor drift before it affects blower operation. [Request a demo.](https://aquamesh.ai/contact/)
+If your plant runs ABAC or is evaluating ammonium-based setpoint control, AquaMesh can show you how continuous ammonium monitoring integrates with existing SCADA and historian data to detect sensor drift before it affects blower operation. [Request a demo.](https://aquamesh.ai/#contact)
 
 *Alex Towfigh is a founder at AquaMesh.*
 

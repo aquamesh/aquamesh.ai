@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 04:22:46 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 19:37:38 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ammonia sensor drift in wastewater aeration control</title>
@@ -42,7 +42,7 @@
 <p>The same pattern-based approach applies across <a href="/blog/spectral-change-analysis-vs-calibrated-parameters.html">multiple sensors in parallel or sequential service</a>: when two ammonium sensors at different basin locations both drift in the same direction at the same rate, a shared environmental driver such as a temperature shift or ion matrix change is more likely than independent mechanical failure. Separating those two causes matters because the corrective actions are different.</p>
 <p>Ammonium sensor drift in ABAC service is predictable, slow-moving, and detectable. That makes it preventable. The cost of a weekly grab-sample comparison and a monthly calibration is a fraction of one month of avoidable blower energy or a single permit exceedance.</p>
 <hr />
-<p>If your plant runs ABAC or is evaluating ammonium-based setpoint control, AquaMesh can show you how continuous ammonium monitoring integrates with existing SCADA and historian data to detect sensor drift before it affects blower operation. <a href="https://aquamesh.ai/contact/">Request a demo.</a></p>
+<p>If your plant runs ABAC or is evaluating ammonium-based setpoint control, AquaMesh can show you how continuous ammonium monitoring integrates with existing SCADA and historian data to detect sensor drift before it affects blower operation. <a href="https://aquamesh.ai/#contact">Request a demo.</a></p>
 <p><em>Alex Towfigh is a founder at AquaMesh.</em></p>]]></content:encoded>
       <category>wastewater</category>
       <category>sensors</category>

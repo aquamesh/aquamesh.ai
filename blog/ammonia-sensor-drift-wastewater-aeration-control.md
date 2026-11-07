@@ -68,6 +68,6 @@ Ammonium sensor drift in ABAC service is predictable, slow-moving, and detectabl
 
 ---
 
-If your plant runs ABAC or is evaluating ammonium-based setpoint control, AquaMesh can show you how continuous ammonium monitoring integrates with existing SCADA and historian data to detect sensor drift before it affects blower operation. [Request a demo.](https://aquamesh.ai/contact/)
+If your plant runs ABAC or is evaluating ammonium-based setpoint control, AquaMesh can show you how continuous ammonium monitoring integrates with existing SCADA and historian data to detect sensor drift before it affects blower operation. [Request a demo.](https://aquamesh.ai/#contact)
 
 *Alex Towfigh is a founder at AquaMesh.*
