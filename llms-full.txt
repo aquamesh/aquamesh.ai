@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-07T04:22:05.702Z · 16 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-07T04:22:46.569Z · 16 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -139,7 +139,7 @@ Activated sludge is an unusually hostile medium for a glass pH electrode. Mixed 
 
 Three mechanisms drive drift in this environment:
 
-**Liquid junction fouling.** The reference electrode inside a pH probe makes contact with the sample through a porous junction (typically a ceramic frit, a PTFE pin, or a fiber wick). In activated sludge, biological solids and scale progressively block that junction. As flow across the junction slows, a junction potential builds up that shifts the measured voltage in a direction that looks like a pH decrease. A frit junction that was calibrated in a clean buffer at 7.00 and then immersed in mixed liquor can read 0.2 to 0.5 units low within four to seven days, without any change in actual sample pH.
+**Liquid junction fouling.** The reference electrode inside a pH probe makes contact with the sample through a porous junction (typically a ceramic frit, a PTFE pin, or a fiber wick). In activated sludge, biological solids and scale progressively block that junction. As flow across the junction slows, a junction potential builds up that shifts the measured voltage in a direction that looks like a pH decrease. A frit junction that was calibrated in a clean buffer at 7.00 and then immersed in mixed liquor can read 0.2 to 0.5 units low within four to seven days, without any change in actual sample pH. Ion-selective electrode (ISE) ammonium sensors use the same liquid junction design and face the same fouling mechanism in activated sludge; how that accumulates into an aeration control error is covered in [ammonia sensor drift in wastewater aeration control](/blog/ammonia-sensor-drift-wastewater-aeration-control.html).
 
 **Glass membrane fouling.** The glass membrane at the tip of the electrode is sensitive to surface charge. A thin biofilm or scale layer on the membrane blunts the response, increasing response time and flattening the measurement near the setpoint. This is less common than junction fouling but produces a different pattern: sluggish response to rapid pH swings rather than a steady offset.
 
