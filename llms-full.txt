@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-07T01:16:06.835Z · 16 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-07T01:18:06.597Z · 16 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -837,7 +837,7 @@ When DO measurement is continuous, accurate, and does not accumulate drift betwe
 
 For plants running [intermittent aeration for simultaneous nitrification/denitrification](https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html), the DO swing required is fast and narrow. The economics of that strategy depend entirely on measurement that responds quickly and without offset.
 
-Some plants extend this further with online analyzers for ammonium or nitrate to feed an ammonia-based aeration control loop. Those instruments use a different measurement principle than a DO probe, and what they actually detect versus what they are marketed as measuring matters before you specify one. [Spectral change analysis versus calibrated parameters](https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html) covers the distinction.
+Some plants extend this further with online analyzers for ammonium or nitrate to feed an [ammonia-based aeration control (ABAC) loop](/blog/ammonia-sensor-drift-wastewater-aeration-control.html). Those instruments use a different measurement principle than a DO probe, and what they actually detect versus what they are marketed as measuring matters before you specify one. [Spectral change analysis versus calibrated parameters](https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html) covers the distinction.
 
 Accurate measurement also creates a defensible record of what happened. When a plant documents savings for a utility incentive program or a regulatory report, both the baseline and current performance need measurement that holds up to scrutiny. For plants on nitrogen-limited discharge permits, the exposure created by DO control gaps and sensor drift is covered in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html).
 
