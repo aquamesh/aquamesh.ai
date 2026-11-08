@@ -1,11 +1,17 @@
 {
-  "at": "2026-11-07T18:17:34.299Z",
+  "at": "2026-11-08T18:29:22.181Z",
   "findings": [
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/",
       "msg": "meta description is 183 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/",
+      "msg": "meta description is 250 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -18,18 +24,6 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
       "msg": "meta description is 191 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
-      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/",
-      "msg": "meta description is 250 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -51,15 +45,9 @@
     },
     {
       "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
+      "id": "title-length",
+      "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
+      "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
     },
     {
       "sev": "warn",
@@ -88,6 +76,12 @@
     {
       "sev": "warn",
       "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
       "url": "https://aquamesh.ai/do-not-sell.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
@@ -99,15 +93,15 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
       "id": "jsonld-missing",
       "url": "https://aquamesh.ai/basin/methodology.html",
       "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -116,10 +110,10 @@
       "msg": "title is 69 chars; Google truncates near 60: \"pH sensor drift in activated sludge: the cost of 0.5 units | AquaMesh\""
     },
     {
-      "sev": "error",
-      "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/ammonia-sensor-drift-wastewater-aeration-control.html",
-      "msg": "links to https://aquamesh.ai/contact/ which returns 404"
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
@@ -160,13 +154,13 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
       "msg": "Article missing image"
     },
     {
@@ -214,8 +208,8 @@
   ],
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
-    "Crawled 43 live pages and 65 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 17 new or changed URL(s) (HTTP 200)."
+    "Crawled 42 live pages and 65 assets and files.",
+    "Told IndexNow (Bing, Copilot, Yandex) about 1 new or changed URL(s) (HTTP 200)."
   ],
   "lighthouse": {
     "at": "2026-11-04T20:32:34.541Z",
@@ -385,10 +379,10 @@
     "cited": []
   },
   "indexnow": {
-    "at": "2026-11-07T18:17:34.299Z",
+    "at": "2026-11-08T18:29:22.181Z",
     "ok": true,
     "status": 200,
-    "sent": 17,
+    "sent": 1,
     "note": ""
   },
   "fix": null

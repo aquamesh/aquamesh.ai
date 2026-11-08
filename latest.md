@@ -1,6 +1,6 @@
-# SEO report, 2026-11-07
+# SEO report, 2026-11-08
 
-**AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-04). Site errors: 1.
+**AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-04). Site errors: 0.
 
 ## Do this week
 Nothing: every tracked question already cites aquamesh.ai, or none was diagnosed.
@@ -36,11 +36,10 @@ Cited in AI answers to 0 of the tracked buyer questions.
 
 </details>
 
-## Site health (43 pages crawled)
-- **link-broken** (1)
-  - `/blog/ammonia-sensor-drift-wastewater-aeration-control.html`: links to https://aquamesh.ai/contact/ which returns 404
+## Site health (42 pages crawled)
+No errors.
 
-Since the last run: 1 new, 0 resolved.
+Since the last run: 0 new, 1 resolved.
 
 <details><summary>Core Web Vitals, lab, mobile (2026-11-04)</summary>
 
@@ -58,8 +57,8 @@ Since the last run: 1 new, 0 resolved.
 
 - **desc-length** (8)
   - `/`: meta description is 183 chars (aim for 70 to 160)
-  - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
+  - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
@@ -75,13 +74,13 @@ Since the last run: 1 new, 0 resolved.
 - **jsonld-article-fields** (4)
   - `/company.html`: Article missing dateModified, image
   - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
-  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
   - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
+  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **og-missing** (4)
   - `/privacy.html`: missing og:title, og:description; link previews degrade
-  - `/cookies.html`: missing og:title, og:description; link previews degrade
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
   - `/terms.html`: missing og:title, og:description; link previews degrade
+  - `/cookies.html`: missing og:title, og:description; link previews degrade
 - **cwv-cls** (4)
   - `/blog/`: CLS 0.16 (good is under 0.1)
   - `/blog/wastewater-blower-vfd-energy-savings-erode.html`: CLS 0.106 (good is under 0.1)
@@ -111,8 +110,8 @@ Since the last run: 1 new, 0 resolved.
 <details><summary>What the agent did this run</summary>
 
 - Rebuilt the blog from committed sources: output already matches, nothing to commit.
-- Crawled 43 live pages and 65 assets and files.
-- Told IndexNow (Bing, Copilot, Yandex) about 17 new or changed URL(s) (HTTP 200).
+- Crawled 42 live pages and 65 assets and files.
+- Told IndexNow (Bing, Copilot, Yandex) about 1 new or changed URL(s) (HTTP 200).
 
 </details>
 
