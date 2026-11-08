@@ -32,7 +32,7 @@ For facilities using evaporative cooling towers, which covers the majority of in
 
 Evaporation is the productive part. The cooling process works by letting water absorb heat and leave the tower as vapor. Roughly 70 to 80 percent of the water that enters the tower in this way is not recoverable; it has done its job and left the site. ([Mytton 2021](https://www.nature.com/articles/s41545-021-00101-w)) This fraction tracks the heat load on the facility and varies with ambient wet-bulb temperature. A site cannot significantly reduce evaporative losses without changing the physics of how it cools its equipment.
 
-Blowdown is different. As water circulates through the tower and a portion evaporates, the dissolved minerals left behind concentrate. Calcium, silica, chlorides, and biological material accumulate. If concentration rises too high, scale deposits on heat exchanger surfaces and corrosion accelerates. To prevent this, some fraction of the circulating water is periodically discharged and replaced with fresh makeup water. That discharge is blowdown.
+Blowdown is different. As water circulates through the tower and a portion evaporates, the dissolved minerals left behind concentrate. Calcium, silica, chlorides, and biological material accumulate. If concentration rises too high, scale deposits on heat exchange surfaces and corrosion accelerates. To prevent this, some fraction of the circulating water is periodically discharged and replaced with fresh makeup water. That discharge is blowdown.
 
 The ratio of dissolved mineral concentration in the circulating water to the concentration in the makeup supply is called the cycles of concentration. At three cycles, for every gallon that evaporates, roughly half a gallon is discharged as blowdown, and one and a half gallons are drawn in as makeup. At six cycles, blowdown drops to roughly one fifth of the evaporation volume. At ten cycles, it drops to one ninth.
 
@@ -48,9 +48,9 @@ A sensor reading low when concentration is actually high causes the controller t
 
 Neither failure mode triggers an alarm in a standard building management system. The control loop is running. The conductivity reading is within the operating range. The controller is doing exactly what it was programmed to do with the signal it receives.
 
-This is the same silent failure pattern that affects dissolved oxygen control in wastewater aeration basins, where a fouled sensor drives blowers toward wasted energy rather than toward needed oxygen. The structure of the problem is identical: a lagging indicator (WUE for water, energy per gallon treated for wastewater) does not point to the sensor drift that is the actual cause. The gap shows up only when you look at the control inputs directly, not at the outcomes they produce. The parallel is covered in more detail in the analysis of [why parallel equipment drifts apart](https://aquamesh.ai/blog/why-parallel-equipment-drifts.html). It also applies to intermittent aeration cycles for nitrogen removal, where DO sensor drift affects both effluent compliance and the energy savings the intermittent strategy was meant to deliver: [intermittent aeration for nitrogen removal: what DO sensor precision actually controls](https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html).
+This is the same silent failure pattern that affects dissolved oxygen control in wastewater aeration basins, where a fouled sensor drives blowers toward wasted energy rather than toward needed oxygen. The structure of the problem is identical: a lagging indicator (WUE for water, energy per gallon treated for wastewater) does not point to the sensor drift that is the actual cause. The gap shows up only when you look at the control inputs directly, not at the outcomes they produce. The parallel is covered in more detail in the analysis of [why parallel equipment drifts apart](/blog/why-parallel-equipment-drifts.html). It also applies to intermittent aeration cycles for nitrogen removal, where DO sensor drift affects both effluent compliance and the energy savings the intermittent strategy was meant to deliver: [intermittent aeration for nitrogen removal: what DO sensor precision actually controls](/blog/intermittent-aeration-nitrogen-removal-do-control.html).
 
-For a detailed breakdown of what conductivity sensor drift costs in cooling tower water volume and chemical spend, including a worked example using DOE benchmark data, see [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
+For a detailed breakdown of what conductivity sensor drift costs in cooling tower water volume and chemical spend, including a worked example using DOE benchmark data, see [cooling tower blowdown control: what conductivity sensor drift costs in water and chemicals](/blog/cooling-tower-blowdown-conductivity-sensor-drift.html).
 
 ## Proving cooling tower water savings for reporting
 
@@ -76,7 +76,7 @@ From that record, calculate:
 3. Blowdown as a percentage of total makeup, by month
 4. Unexplained blowdown events: volume spikes not correlated with changes in heat load
 
-Unexplained events, whether from conductivity sensor drift, a valve held open during maintenance, or a chemical feed miscalculation, show up as isolated increases in blowdown volume not matched by heat load increases. In a 25-day historian review at an industrial process facility, three anomalies of this type were identified, adding an estimated 12 to 18 percent to water consumption for that period. ([What a 25-day historian audit finds at a treatment plant](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html)) The same review methodology applies directly to cooling tower makeup and blowdown logs.
+Unexplained events, whether from conductivity sensor drift, a valve held open during maintenance, or a chemical feed miscalculation, show up as isolated increases in blowdown volume not matched by heat load increases. In a 25-day historian review at an industrial process facility, three anomalies of this type were identified, adding an estimated 12 to 18 percent to water consumption for that period. ([What a 25-day historian audit finds at a treatment plant](/blog/what-25-days-of-historian-data-shows.html)) The same review methodology applies directly to cooling tower makeup and blowdown logs.
 
 **When direct blowdown metering is not installed**
 
@@ -84,7 +84,7 @@ Many operating data centers lack a flow meter on the blowdown line. Blowdown vol
 
 ## The California compliance context
 
-California's AB 2619, signed in September 2026, requires data center operators to report total and direct annual water use by source at every business license renewal, under penalty of perjury. AB 2469 requires a Water Scarcity Plan by 2028 for facilities requiring construction permits. ([California data center water reporting requirements](https://aquamesh.ai/blog/california-data-center-water-reporting.html))
+California's AB 2619, signed in September 2026, requires data center operators to report total and direct annual water use by source at every business license renewal, under penalty of perjury. AB 2469 requires a Water Scarcity Plan by 2028 for facilities requiring construction permits. ([California data center water reporting requirements](/blog/california-data-center-water-reporting.html))
 
 A Water Scarcity Plan is a commitment to reduce water consumption under specified drought conditions, including staged curtailment and targeted reductions by use type. The commitment is credible only if the site can demonstrate that it knows where its water goes and can reduce specific uses on demand.
 
@@ -106,6 +106,6 @@ None of this analysis requires capital investment. The data exists in most histo
 
 If your site is preparing for California's 2027 renewal requirements or developing a scarcity plan for 2028, the water balance question is worth addressing before the commitment is made, not after. AquaMesh can review the historian data that is already being collected and identify where the measurement gaps are.
 
-See how this kind of analysis surfaced a $3,316 blower anomaly at a wastewater treatment plant: [what 25 days of historian data actually shows](https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html). Or [reach out to schedule a working session](https://aquamesh.ai/#contact).
+See how this kind of analysis surfaced a $3,316 blower anomaly at a wastewater treatment plant: [what 25 days of historian data actually shows](/blog/what-25-days-of-historian-data-shows.html). Or [reach out to schedule a working session](https://aquamesh.ai/#contact).
 
 *Alex Towfigh is a founder at AquaMesh.*
