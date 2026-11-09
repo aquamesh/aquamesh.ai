@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 05:09:30 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 08:13:27 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ammonia sensor drift in wastewater aeration control</title>
@@ -491,20 +491,30 @@
       <category>energy optimization</category>
     </item>
     <item>
-      <title>In Dairy Foods: why dairy plants still miss their most expensive process losses</title>
+      <title>Why dairy plants miss their most costly process losses</title>
       <link>https://aquamesh.ai/blog/dairy-foods-process-losses.html</link>
       <guid isPermaLink="true">https://aquamesh.ai/blog/dairy-foods-process-losses.html</guid>
       <pubDate>Mon, 12 Oct 2026 09:00:00 GMT</pubDate>
-      <description>Our contributed article in Dairy Foods on where milk solids leave a plant unnoticed, why more historian tags alone cannot find them, and how to prove a saving one event at a time.</description>
+      <description>Milk solids lost during transitions often go unmeasured. A Dairy Foods contributed article on spectral sensing and context for finding them.</description>
       <content:encoded><![CDATA[<p>Dairy Foods published a contributed article by Alex Towfigh, AquaMesh's founder and CEO, on 12 October 2026. The full piece is on the Dairy Foods site: <a href="https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses" rel="noopener">Why dairy plants still miss their most expensive process losses</a>.</p>
-<p>What follows is a short summary. The article itself is exclusive to Dairy Foods.</p>
+<p>What follows is a short summary with additional context. The article itself is exclusive to Dairy Foods.</p>
+<h2 id="the-scale-of-the-problem">The scale of the problem</h2>
+<p>A dairy processing facility moves large volumes of product through shared piping continuously. Industry estimates put routine milk-to-sewer losses at one to three percent of the milk a plant processes per year. At a mid-size fluid milk plant processing 500,000 pounds per day, that range translates to roughly 1,500 to 4,500 pounds of milk solids entering the wastewater stream daily, before a single equipment failure or operator error occurs.</p>
+<p>The losses do not show up as a single large event. They accumulate across hundreds of small decisions made every shift: when to divert, when to release the line, when to call a CIP complete. A quarterly accounting of milk-to-drain volume often looks like normal shrinkage until individual transitions are examined one at a time.</p>
+<p>Federal effluent guidelines for dairy products processing set BOD and TSS limits on wastewater discharge (<a href="https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-405" rel="noopener">40 CFR Part 405</a>; see also the <a href="https://www.epa.gov/eg/dairy-products-processing-effluent-guidelines" rel="noopener">EPA Dairy Products Processing Effluent Guidelines</a>). A plant's permit reflects those limits, but a permit only tells you whether the total load passed the threshold. It says nothing about which transitions produced the loss or what tighter endpoint detection would have recovered.</p>
 <h2 id="the-argument-in-brief">The argument in brief</h2>
 <p><b>The losses happen during transitions.</b> Published research puts routine losses of milk to sewer at 1% to 3% of the milk a plant processes. Most of it leaves during startups, interruptions, shutdowns and rinses: short windows where the pipe contents change and someone has to decide where product ends and water begins.</p>
 <p><b>More tags do not fix a missing measurement.</b> Conductivity tells you something changed, but not how much product is in the line. A flowmeter tells you how much is moving, but not what it is. Lab results come back after the decision has been made. If the plant never measured the chemistry, software running on the historian has nothing to analyze.</p>
 <p><b>Spectral sensing helps, if it can be trusted.</b> An optical spectrum carries far more information than a single-variable sensor. But temperature, bubbles, solids and a fouled window all move the reading. Without local calibration, a dirty window can look like a product loss, so every reading needs a confidence level attached.</p>
 <p><b>Context decides what a signal means.</b> Rising conductivity is expected during caustic circulation and alarming during a product transfer. The article describes starting from data the plant already has (CIP steps, valve positions, lab results) to establish operating state, adding sensing only where a real blind spot exists, and producing an explanation of what changed and why rather than another generic alarm.</p>
 <p><b>Prove it one event at a time.</b> Start read-only. Existing controls and sanitation checks stay in charge. Pick one expensive event, measure its baseline, catch it earlier, change the decision, and verify the result. One peer-reviewed UHT cleaning study cited in the piece used phase-endpoint measurement to cut a cleaning sequence from 142 to 66 minutes and roughly halve its effluent.</p>
-<p>The article's dollar figures are sensitivity calculations at an illustrative plant scale, not measured results at any named facility. It says so, and so do we.</p>
+<h2 id="why-cip-cycles-are-worth-measuring-closely">Why CIP cycles are worth measuring closely</h2>
+<p>CIP is where most of the volume decision happens. A caustic wash, rinse, acid wash and final rinse can each carry residual product if the endpoint is missed. Many plants time their steps rather than measure them: the rinse runs for three minutes because that has worked in the past. Three minutes is a proxy for conductivity dropping below a threshold, which is itself a proxy for product concentration falling low enough to release the line.</p>
+<p>Measuring directly, using a sensor that distinguishes caustic from milk fat from clean water, collapses that chain of proxies. It also creates an audit trail: was this CIP event as clean as the last one? If conductivity at the drain started high and ended high, that is a different failure than a rinse that ran long but ended clean. The sensor data makes the diagnosis available in real time rather than weeks later when a customer complaint or effluent exceedance arrives.</p>
+<p>The UHT study cited in the Dairy Foods article is a useful benchmark. Cutting cycle time from 142 to 66 minutes is not a marginal gain; it changes the economics of the line. The same logic applies to the product-to-water transition at the start of a run: an earlier, more accurate determination of when to divert lets the plant recover product that would otherwise go to drain.</p>
+<p>This connects to the same measurement challenge described in <a href="/blog/why-parallel-equipment-drifts.html">why parallel equipment drifts and what it costs</a> and the broader case in <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of historian data reveals</a>: the historian typically has flow and conductivity records; what it lacks is component-level identification that turns a conductivity trend into a recoverable, accountable event.</p>
+<h2 id="next-step">Next step</h2>
+<p>If your facility has a CIP loop or product-to-water transition that runs on timers rather than direct measurement, AquaMesh can show what an instrumented baseline looks like at one point in that system. <a href="/contact.html">Request a demo</a> or read the full article on the Dairy Foods site.</p>
 <p><a href="https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses" rel="noopener">Read the full article in Dairy Foods</a>.</p>]]></content:encoded>
       <category>dairy</category>
       <category>product loss</category>
