@@ -43,6 +43,6 @@ This connects to the same measurement challenge described in [why parallel equip
 
 ## Next step
 
-If your facility has a CIP loop or product-to-water transition that runs on timers rather than direct measurement, AquaMesh can show what an instrumented baseline looks like at one point in that system. [Request a demo](/contact.html) or read the full article on the Dairy Foods site.
+If your facility has a CIP loop or product-to-water transition that runs on timers rather than direct measurement, AquaMesh can show what an instrumented baseline looks like at one point in that system. [Request a demo](https://aquamesh.ai) or read the full article on the Dairy Foods site.
 
 [Read the full article in Dairy Foods](https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses).
