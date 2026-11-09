@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 08:13:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 11:17:37 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ammonia sensor drift in wastewater aeration control</title>
@@ -628,23 +628,42 @@
       <category>membrane bioreactor</category>
     </item>
     <item>
-      <title>Press release: AquaMesh builds physical AI to help industrial facilities catch costly problems early</title>
+      <title>AquaMesh physical AI: early detection for industrial plants</title>
       <link>https://aquamesh.ai/blog/connect-press-release-physical-ai.html</link>
       <guid isPermaLink="true">https://aquamesh.ai/blog/connect-press-release-physical-ai.html</guid>
       <pubDate>Mon, 28 Sep 2026 09:00:00 GMT</pubDate>
-      <description>Connect, the San Diego innovation organization, published our announcement on how AquaMesh combines existing plant data with real-time sensing to find problems before they become expensive.</description>
-      <content:encoded><![CDATA[<p>On 28 September 2026, <a href="https://connect.org/" rel="noopener">Connect</a> published an announcement about AquaMesh on its blog and through PR distribution. The full release is here: <a href="https://connect.org/aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early/" rel="noopener">AquaMesh Builds Physical AI to Help Industrial Facilities Catch Costly Problems Early</a>. It also ran on <a href="https://www.prlog.org/13173077-aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early.html" rel="noopener">PRLog</a>.</p>
-<h2 id="what-it-covers">What it covers</h2>
-<p><b>The problem.</b> Many plants still find critical problems through delayed lab tests, manual checks, indirect measurements, or alarms that only fire after the problem has already formed. Unplanned industrial downtime is estimated to cost about $260,000 an hour on average.</p>
-<p><b>What AquaMesh does.</b> The platform connects to data a facility already collects and shows where money is being lost. Where a physical or chemical condition can't be measured any other way, it adds its own sensing. From there it works continuously: detect the problem, find the cause, estimate the cost, recommend a response, and check that the response worked.</p>
-<p><b>What it is aiming at.</b> The target is 10% to 25% lower operating cost across water, chemicals, energy, labor and discharge. These are target ranges, not guaranteed results.</p>
-<p><b>Why it matters.</b> In the release, Alex Towfigh describes the core issue as a blind spot about what is physically happening inside a process. Closing it pays off now through production, downtime and operating cost. Over the longer term it is the foundation for facilities that optimize themselves, starting with information operators can trust.</p>
-<p><a href="https://connect.org/aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early/" rel="noopener">Read the full release on Connect</a>.</p>]]></content:encoded>
-      <category>press release</category>
+      <description>Connect published AquaMesh's 2026 physical AI announcement. This post explains what the platform does and why industrial plant operators are paying attention.</description>
+      <content:encoded><![CDATA[<p>The gap between what an industrial facility measures and what is actually happening inside its processes is where operating problems form. A sensor drifts. A chemical feed runs long. A blower draws more power than the control system expects. The signal often reaches the operator hours later in a lab result, the next morning in a shift log, or weeks later in a utility bill.</p>
+<p>On September 28, 2026, <a href="https://connect.org/" rel="noopener">Connect</a>, the San Diego innovation organization, published an announcement about how AquaMesh addresses this gap. The announcement describes what the company calls physical AI: software intelligence that connects directly to physical process data and acts on what it finds.</p>
+<p>The key distinction is coverage. Industrial plants generate large volumes of historian records, meter readings and lab results. What they often lack is the measurement density to catch a problem while it is still forming rather than after it has accumulated cost.</p>
+<p><a href="https://connect.org/aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early/" rel="noopener">Read the full announcement on Connect</a>.</p>
+<h2 id="what-physical-ai-means-in-practice">What "physical AI" means in practice</h2>
+<p>Most enterprise AI applications operate on business documents: invoices, tickets, contracts, email. Physical AI, as the term is used in this context, means software that is connected directly to the instruments embedded in an operating process, reads what those instruments report in real time, and reasons about what the numbers mean for that process right now.</p>
+<p>For a wastewater plant, that includes dissolved oxygen analyzers, ammonia sensors, flow meters and blower control signals. For a cooling water system it includes conductivity, temperature, blowdown flow and makeup water consumption. For a food processing facility it includes pH, conductivity, flow through CIP circuits and effluent parameters.</p>
+<p>The AquaMesh platform connects to the data infrastructure a facility already has, identifies where measurement coverage is incomplete, adds sensing where necessary, and runs a continuous loop: detect an anomaly, locate the likely cause, estimate what it is costing, recommend a corrective action, and confirm the action worked.</p>
+<h2 id="the-measurement-gap-problem">The measurement gap problem</h2>
+<p>Industrial facilities operate under a structural tension. Continuous analyzers give real-time visibility into a process variable, but they require calibration, maintenance and interpretation. Laboratory samples give accurate reference measurements, but they are taken infrequently and results arrive after the fact. Manual readings fill in some gaps, but depend on shift timing and individual judgment.</p>
+<p>In practice, this means that small deviations in a process variable often compound undetected between monitoring events. A dissolved oxygen sensor that has drifted 0.3 mg/L affects aeration control decisions for every cycle between calibration visits. A conductivity sensor reading high causes blowdown to run longer than the water balance requires. A chemical feed that is slightly over set point adds up across thousands of batches or cycles.</p>
+<p>The U.S. Environmental Protection Agency's <a href="https://www.epa.gov/npdes/npdes-permit-limits" rel="noopener">NPDES permit program</a> requires industrial dischargers to monitor and report effluent quality at defined intervals. Those intervals set a floor for compliance reporting, but what happens between required sampling events is often tracked only indirectly. The gap between required monitoring and continuous process visibility is where many compliance exceedances originate and where the largest operating cost opportunities tend to sit.</p>
+<p>This pattern is consistent across industrial water treatment, wastewater discharge compliance, food and beverage process efficiency, and data center cooling water management. The specific parameters differ, but the structure is the same: a measurement gap, a slow drift, a delayed signal.</p>
+<h2 id="what-aquamesh-announced">What AquaMesh announced</h2>
+<p>The September 2026 release describes a platform that connects to existing plant historian and control infrastructure and adds coverage where the measurement picture is incomplete. The core workflow operates in five steps: detect a process deviation, find the probable cause, estimate the operating cost of the deviation, recommend a corrective action, and verify that the correction held.</p>
+<p>The target operating categories span water consumption, chemical use, energy, labor and discharge compliance. Alex Towfigh, AquaMesh CEO, described the central problem in the release: "We are closing the blind spot about what is physically happening inside a process." The stated target for operating cost improvement is a range of 10 to 25 percent across those categories. AquaMesh presents this as a target range based on design intent, not a guaranteed outcome for any facility.</p>
+<p>The longer-term direction is facilities that identify and correct operating problems continuously, without waiting for the next lab sample or maintenance visit. The platform is designed to work with what a facility already has rather than requiring replacement of existing instrumentation or control systems.</p>
+<p>The announcement was also distributed through <a href="https://www.prlog.org/13173077-aquamesh-builds-physical-ai-to-help-industrial-facilities-catch-costly-problems-early/" rel="noopener">PRLog</a>, which reaches a broad industrial and technology audience.</p>
+<h2 id="who-this-applies-to">Who this applies to</h2>
+<p>The platform is designed for facilities where water, chemical or energy costs are tracked against a permit, a tariff or an operating budget and where the measurement infrastructure exists to connect to.</p>
+<p>In practice, this includes municipal and industrial wastewater treatment plants operating under NPDES discharge permits, industrial water treatment systems managing chemical dosing and energy for pumping and aeration, food and beverage processing plants with wastewater pretreatment obligations under EPA categorical pretreatment standards, and data centers managing cooling water systems subject to state or municipal water use reporting requirements.</p>
+<p>The decision makers who typically carry responsibility for these costs are plant operations managers, directors of utilities, and VPs of operations. Environmental compliance officers at facilities with complex permit conditions often have a parallel interest in monitoring gap analysis.</p>
+<p>For a closer look at the specific measurement problems the platform addresses, related posts on this site cover <a href="/blog/ammonia-sensor-drift-wastewater-aeration-control.html">why ammonia sensor drift affects aeration control</a>, <a href="/blog/nitrogen-permit-compliance-sampling-gap.html">the DMR sampling gap in nitrogen permit compliance</a>, and <a href="/blog/wastewater-blower-vfd-energy-savings-erode.html">how blower VFD energy savings erode between calibration events</a>.</p>
+<h2 id="next-step">Next step</h2>
+<p>If you manage a facility with water, energy or compliance operating costs and want to see what the platform finds in your data, <a href="/contact.html">request a demo at aquamesh.ai</a>.</p>
+<p><em>Alex Towfigh, AquaMesh</em></p>]]></content:encoded>
       <category>physical AI</category>
-      <category>industrial AI</category>
-      <category>San Diego</category>
-      <category>Connect</category>
+      <category>industrial water treatment</category>
+      <category>plant operations</category>
+      <category>monitoring</category>
+      <category>wastewater</category>
     </item>
     <item>
       <title>Why parallel equipment drifts and what it costs</title>
