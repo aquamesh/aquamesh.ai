@@ -55,6 +55,6 @@ For a closer look at the specific measurement problems the platform addresses, r
 
 ## Next step
 
-If you manage a facility with water, energy or compliance operating costs and want to see what the platform finds in your data, [request a demo at aquamesh.ai](/contact.html).
+If you manage a facility with water, energy or compliance operating costs and want to see what the platform finds in your data, [request a demo at aquamesh.ai](https://aquamesh.ai).
 
 *Alex Towfigh, AquaMesh*
