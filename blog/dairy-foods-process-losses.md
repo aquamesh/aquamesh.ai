@@ -4,6 +4,7 @@ slug: dairy-foods-process-losses
 date: 2026-10-12
 section: In the press
 description: Milk solids lost during transitions often go unmeasured. A Dairy Foods contributed article on spectral sensing and context for finding them.
+image: assets/starch-spectra.jpg
 tags: dairy, product loss, CIP, spectral sensing, process water, Dairy Foods
 ---
 
@@ -25,7 +26,7 @@ Federal effluent guidelines for dairy products processing set BOD and TSS limits
 
 **More tags do not fix a missing measurement.** Conductivity tells you something changed, but not how much product is in the line. A flowmeter tells you how much is moving, but not what it is. Lab results come back after the decision has been made. If the plant never measured the chemistry, software running on the historian has nothing to analyze.
 
-**Spectral sensing helps, if it can be trusted.** An optical spectrum carries far more information than a single-variable sensor. But temperature, bubbles, solids and a fouled window all move the reading. Without local calibration, a dirty window can look like a product loss, so every reading needs a confidence level attached.
+**Spectral sensing helps, if it can be trusted.** An optical spectrum carries far more information than a single-variable sensor. But temperature, bubbles, solids and a fouled window all move the reading. Without local calibration, a dirty window can look like a product loss, so every reading needs a confidence level attached. How the distinction between calibrated parameter outputs and spectral change detection applies in practice is covered in [spectral change analysis versus calibrated parameters](/blog/spectral-change-analysis-vs-calibrated-parameters.html).
 
 **Context decides what a signal means.** Rising conductivity is expected during caustic circulation and alarming during a product transfer. The article describes starting from data the plant already has (CIP steps, valve positions, lab results) to establish operating state, adding sensing only where a real blind spot exists, and producing an explanation of what changed and why rather than another generic alarm.
 

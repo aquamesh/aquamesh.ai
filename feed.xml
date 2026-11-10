@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 17:59:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 21:04:03 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ammonia sensor drift in wastewater aeration control</title>
@@ -506,7 +506,7 @@
 <h2 id="the-argument-in-brief">The argument in brief</h2>
 <p><b>The losses happen during transitions.</b> Published research puts routine losses of milk to sewer at 1% to 3% of the milk a plant processes. Most of it leaves during startups, interruptions, shutdowns and rinses: short windows where the pipe contents change and someone has to decide where product ends and water begins.</p>
 <p><b>More tags do not fix a missing measurement.</b> Conductivity tells you something changed, but not how much product is in the line. A flowmeter tells you how much is moving, but not what it is. Lab results come back after the decision has been made. If the plant never measured the chemistry, software running on the historian has nothing to analyze.</p>
-<p><b>Spectral sensing helps, if it can be trusted.</b> An optical spectrum carries far more information than a single-variable sensor. But temperature, bubbles, solids and a fouled window all move the reading. Without local calibration, a dirty window can look like a product loss, so every reading needs a confidence level attached.</p>
+<p><b>Spectral sensing helps, if it can be trusted.</b> An optical spectrum carries far more information than a single-variable sensor. But temperature, bubbles, solids and a fouled window all move the reading. Without local calibration, a dirty window can look like a product loss, so every reading needs a confidence level attached. How the distinction between calibrated parameter outputs and spectral change detection applies in practice is covered in <a href="/blog/spectral-change-analysis-vs-calibrated-parameters.html">spectral change analysis versus calibrated parameters</a>.</p>
 <p><b>Context decides what a signal means.</b> Rising conductivity is expected during caustic circulation and alarming during a product transfer. The article describes starting from data the plant already has (CIP steps, valve positions, lab results) to establish operating state, adding sensing only where a real blind spot exists, and producing an explanation of what changed and why rather than another generic alarm.</p>
 <p><b>Prove it one event at a time.</b> Start read-only. Existing controls and sanitation checks stay in charge. Pick one expensive event, measure its baseline, catch it earlier, change the decision, and verify the result. One peer-reviewed UHT cleaning study cited in the piece used phase-endpoint measurement to cut a cleaning sequence from 142 to 66 minutes and roughly halve its effluent.</p>
 <h2 id="why-cip-cycles-are-worth-measuring-closely">Why CIP cycles are worth measuring closely</h2>
