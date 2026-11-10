@@ -25,7 +25,7 @@ Water Online published a guest column by Alex Towfigh, AquaMesh's founder and CE
 
 The EPA pretreatment program, codified at [40 CFR Part 403](https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-403), requires significant industrial users discharging to publicly owned treatment works (POTWs) to monitor their effluent and submit self-monitoring reports against local and categorical limits. The California case is notable for documenting 14 violations over four months rather than a single incident.
 
-That pattern matters. A one-time equipment failure is an operations problem. Repeated violations over multiple months suggest the monitoring and investigation loop was too slow to interrupt the cycle: a suspect reading, an investigation that finds no root cause, another event. The column's core argument is that an endpoint measurement at the discharge cannot tell you which upstream condition caused it.
+That pattern matters. A one-time equipment failure is an operations problem. Repeated violations over multiple months suggest the monitoring and investigation loop was too slow to interrupt the cycle: a suspect reading, an investigation that finds no root cause, another event. The column's core argument is that an endpoint measurement at the discharge cannot tell you which upstream condition caused it. The same gap operates at the municipal discharge level: [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html) covers how periodic DMR sampling misses what happens between sampling dates at the POTW receiving the industrial discharge.
 
 Under the pretreatment program, a significant industrial user found in violation may face formal Notices of Violation, civil penalties under [CWA Section 309](https://www.epa.gov/enforcement/clean-water-act-enforcement), and in cases involving physical POTW damage, restitution claims from the municipal utility. The $1.5 million figure in this case reflected sewer repair costs, not standard permit penalties.
 
@@ -44,3 +44,5 @@ It closes with a test of its own: find the single missing measurement that would
 The column's framing applies broadly to any facility managing discharges under a POTW pretreatment permit. The practical question is whether the current monitoring architecture would allow operations staff to trace the source of a problem within the same shift it occurs, rather than after the next scheduled compliance sample. If the answer is no, that is the gap worth measuring first.
 
 [Read the full column in Water Online](https://www.wateronline.com/doc/the-million-sewer-repair-and-the-water-quality-evidence-missing-upstream-0001). For facilities working through a similar monitoring gap, [request a conversation with the AquaMesh team](https://aquamesh.ai/#contact).
+
+*Alex Towfigh is a founder at AquaMesh.*
