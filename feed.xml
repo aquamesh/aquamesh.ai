@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 00:08:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 09:21:01 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ammonia sensor drift in wastewater aeration control</title>
@@ -51,7 +51,7 @@
       <category>activated sludge</category>
     </item>
     <item>
-      <title>pH sensor drift in activated sludge: the cost of 0.5 units</title>
+      <title>pH sensor drift in activated sludge: operating cost</title>
       <link>https://aquamesh.ai/blog/ph-sensor-drift-wastewater-activated-sludge.html</link>
       <guid isPermaLink="true">https://aquamesh.ai/blog/ph-sensor-drift-wastewater-activated-sludge.html</guid>
       <pubDate>Fri, 06 Nov 2026 09:00:00 GMT</pubDate>

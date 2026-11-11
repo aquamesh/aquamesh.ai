@@ -1,5 +1,5 @@
 ---
-title: pH sensor drift in activated sludge: the cost of 0.5 units
+title: pH sensor drift in activated sludge: operating cost
 slug: ph-sensor-drift-wastewater-activated-sludge
 date: 2026-11-06
 section: Field notes

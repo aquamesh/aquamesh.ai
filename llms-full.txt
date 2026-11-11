@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-11T00:08:11.429Z · 16 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-11T09:21:01.479Z · 16 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -118,7 +118,7 @@ If your plant runs ABAC or is evaluating ammonium-based setpoint control, AquaMe
 
 
 ==============================================================================
-TITLE: pH sensor drift in activated sludge: the cost of 0.5 units
+TITLE: pH sensor drift in activated sludge: operating cost
 URL: https://aquamesh.ai/blog/ph-sensor-drift-wastewater-activated-sludge.html
 DATE: 2026-11-06
 SECTION: Field notes
