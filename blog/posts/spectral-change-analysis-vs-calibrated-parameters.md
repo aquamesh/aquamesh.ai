@@ -8,16 +8,6 @@ image: assets/starch-spectra.jpg
 tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
 ---
 
----
-title: Spectral change analysis versus calibrated parameters
-slug: spectral-change-analysis-vs-calibrated-parameters
-date: 2026-09-22
-section: Measurement
-description: UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool.
-image: assets/starch-spectra.jpg
-tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
----
-
 An online water quality analyser usually arrives with a list: COD, BOD, TSS, nitrate, TOC. The list is the product. The implication is that the instrument measures each of those things the way a lab measures them, only continuously.
 
 That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.
@@ -34,7 +24,7 @@ Converting that curve into "COD = 212 mg/L" requires a model that maps spectral 
 - They **drift with composition**. Change the recipe, the season, the raw material or the upstream process, and the relationship between spectrum and lab value moves.
 - They **degrade quietly**. A calibration that has stopped being right does not announce it. It keeps producing plausible numbers.
 
-Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown. The same silent-drift behavior applies to simpler sensors driving process control decisions: how frequently a dissolved oxygen sensor needs recalibration in activated sludge mixed liquor, and what happens to blower energy and nitrogen removal when that interval is too long, is covered in [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html).
+Without reference checks and maintenance, a parameter model can keep producing plausible numbers after its error has grown. The same silent-drift behavior applies to simpler sensors driving process control decisions. What calibration intervals look like in practice, and what deferred recalibration costs in energy and nitrogen removal performance, is covered for three sensor types: [DO sensor calibration intervals in activated sludge](/blog/do-sensor-calibration-interval-activated-sludge.html), [pH sensor drift in activated sludge](/blog/ph-sensor-drift-wastewater-activated-sludge.html), and [ammonia sensor drift in wastewater aeration control](/blog/ammonia-sensor-drift-wastewater-aeration-control.html).
 
 ## The alternative: watch the spectrum move
 
