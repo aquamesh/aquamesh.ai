@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 00:42:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 00:43:18 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Industrial pretreatment: the self-monitoring blind spot</title>
@@ -184,7 +184,7 @@
 <h2 id="a-practical-starting-point">A practical starting point</h2>
 <p>Most wastewater utilities do not have a clear picture of how much variability exists between their scheduled sample days. The facility knows its design-basis performance and trusts that scheduled samples are representative.</p>
 <p>Whether they are representative depends on what the process was actually doing on the other 21 days of the month. That answer lives in the SCADA historian -- if it is being used. The <a href="/blog/aeration-energy-cost-wastewater-plants.html">Aeration energy at wastewater plants: the cost, the waste, and the measurement gap</a> post covers what plant historian data typically shows about aeration performance variability across operating days. The <a href="/blog/wastewater-blower-vfd-energy-savings-erode.html">wastewater blower VFD energy savings erode</a> post shows the same dynamic from the energy side: a DO sensor drifting between calibration events causes the control loop to optimize against the wrong input, with no alarm raised and no indication in the daily operational record until someone looks at the historian across a longer window. <a href="/blog/do-sensor-calibration-interval-activated-sludge.html">DO sensor calibration intervals in activated sludge</a> covers how calibration frequency directly affects the measurement precision that determines when nitrogen compliance exposure builds.</p>
-<p>Understanding your actual variability is the first step. It tells you whether your current monitoring program is adequate for the permit limits you are operating under -- and whether the unsampled days in your DMR represent a real exposure or a comfortable margin.</p>
+<p>Understanding your actual variability is the first step. It tells you whether your current monitoring program is adequate for the permit limits you are operating under -- and whether the unsampled days in your DMR represent a real exposure or a comfortable margin. For industrial dischargers to the municipal system, a parallel sampling gap exists at the pretreatment level: monthly or quarterly grab samples taken during production runs do not capture cleaning cycles or batch upsets: <a href="/blog/industrial-pretreatment-self-monitoring-gaps.html">industrial pretreatment: the self-monitoring blind spot</a>.</p>
 <p>AquaMesh works with treatment plants and utilities to analyze existing plant data and identify where measurement programs could be doing more to support both operational control and compliance confidence. If you want to see what your process historian shows about the days between your compliance samples, <a href="https://aquamesh.ai/#contact">request a demo</a>.</p>
 <p><em>Alex Towfigh is a founder at AquaMesh.</em></p>]]></content:encoded>
       <category>nitrogen</category>
