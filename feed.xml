@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 17:58:10 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 19:01:32 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Industrial pretreatment: the self-monitoring blind spot</title>
@@ -819,7 +819,10 @@
       <guid isPermaLink="true">https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html</guid>
       <pubDate>Tue, 22 Sep 2026 09:00:00 GMT</pubDate>
       <description>UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool.</description>
-      <content:encoded><![CDATA[<p>An online water quality analyser usually arrives with a list: COD, BOD, TSS, nitrate, TOC. The list is the product. The implication is that the instrument measures each of those things the way a lab measures them, only continuously.</p>
+      <content:encoded><![CDATA[<hr />
+<p>title: Spectral change analysis versus calibrated parameters slug: spectral-change-analysis-vs-calibrated-parameters date: 2026-09-22 section: Measurement description: UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool. image: assets/starch-spectra.jpg tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters</p>
+<hr />
+<p>An online water quality analyser usually arrives with a list: COD, BOD, TSS, nitrate, TOC. The list is the product. The implication is that the instrument measures each of those things the way a lab measures them, only continuously.</p>
 <p>That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.</p>
 <h2 id="what-the-instrument-actually-produces">What the instrument actually produces</h2>
 <p>A UV/Vis probe does one thing: it measures how much light the water absorbs across a range of wavelengths, many times a second. What comes back is a curve, an absorbance spectrum. That curve is the raw measurement. Everything else is interpretation.</p>
@@ -851,7 +854,7 @@
 <p>That is the division of labour: the probe reads the stream, the platform works out what the change means and what it is worth, and the operator decides what to do about it. What that process looks like against a real plant dataset is in <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of historian data actually shows</a>. Working from a production historian to find cost events is the practical version of the correlation step described above.</p>
 <p>That distinction between a measurement that holds against an independent reference and one that drifts undetected applies to every process sensor that drives a control decision. <a href="/blog/cooling-tower-blowdown-conductivity-sensor-drift.html">Cooling tower blowdown: what conductivity sensor drift costs in water and chemicals</a> is a direct example from a different application.</p>
 <p>When the same drift problem affects parallel process units running side-by-side, the divergence appears in energy use and process outputs before it shows in any individual sensor alarm. The methodology for catching that pattern -- and what it typically costs before it surfaces -- is in <a href="/blog/why-parallel-equipment-drifts.html">why parallel equipment drifts and what it costs</a>.</p>
-<p>More on what the sensor is used for by sector: <a href="/industries/food-beverage.html">food and beverage</a>, <a href="/industries/industrial-water.html">industrial water</a>, <a href="/industries/pharma-biotech.html">pharma and biotech</a>.</p>
+<p>More on what the sensor is used for by sector: <a href="/industries/food-beverage.html">food and beverage</a>, <a href="/industries/industrial-water.html">industrial water</a>, <a href="/industries/pharma-biotech.html">pharma and biotech</a>. For more on the measurement hardware, including the AquaSpectra spectral water probe and edge connectivity: <a href="/hardware.html">AquaMesh hardware</a>.</p>
 <p><em>Author: Alex Towfigh, AquaMesh</em></p>]]></content:encoded>
       <category>UV-Vis</category>
       <category>spectral analysis</category>

@@ -8,6 +8,16 @@ image: assets/starch-spectra.jpg
 tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
 ---
 
+---
+title: Spectral change analysis versus calibrated parameters
+slug: spectral-change-analysis-vs-calibrated-parameters
+date: 2026-09-22
+section: Measurement
+description: UV-Vis probes measure absorbance spectra, not parameters. What that means for BOD, why calibration models drift, and when change detection is the better tool.
+image: assets/starch-spectra.jpg
+tags: UV-Vis, spectral analysis, BOD, COD, online water quality monitoring, surrogate parameters
+---
+
 An online water quality analyser usually arrives with a list: COD, BOD, TSS, nitrate, TOC. The list is the product. The implication is that the instrument measures each of those things the way a lab measures them, only continuously.
 
 That is not how spectral measurement works, and the gap between how it is sold and how it behaves is where a lot of disappointment comes from.
@@ -78,6 +88,6 @@ That distinction between a measurement that holds against an independent referen
 
 When the same drift problem affects parallel process units running side-by-side, the divergence appears in energy use and process outputs before it shows in any individual sensor alarm. The methodology for catching that pattern -- and what it typically costs before it surfaces -- is in [why parallel equipment drifts and what it costs](/blog/why-parallel-equipment-drifts.html).
 
-More on what the sensor is used for by sector: [food and beverage](/industries/food-beverage.html), [industrial water](/industries/industrial-water.html), [pharma and biotech](/industries/pharma-biotech.html).
+More on what the sensor is used for by sector: [food and beverage](/industries/food-beverage.html), [industrial water](/industries/industrial-water.html), [pharma and biotech](/industries/pharma-biotech.html). For more on the measurement hardware, including the AquaSpectra spectral water probe and edge connectivity: [AquaMesh hardware](/hardware.html).
 
 *Author: Alex Towfigh, AquaMesh*
