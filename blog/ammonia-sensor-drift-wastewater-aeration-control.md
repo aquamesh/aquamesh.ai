@@ -7,6 +7,15 @@ description: How ammonium sensor drift degrades ABAC aeration control, wastes bl
 tags: wastewater, sensors, aeration, nitrogen, activated sludge
 ---
 
+---
+title: Ammonia sensor drift in wastewater aeration control
+slug: ammonia-sensor-drift-wastewater-aeration-control
+date: 2026-11-07
+section: Field notes
+description: How ammonium sensor drift degrades ABAC aeration control, wastes blower energy and creates nitrogen permit compliance gaps.
+tags: wastewater, sensors, aeration, nitrogen, activated sludge
+---
+
 A 1 mg/L positive drift in an online ammonium sensor running ammonia-based aeration control (ABAC) makes the blower work harder than the process needs, every hour the bias persists. A negative drift at a permit-sensitive plant does the opposite: the process under-aerates, nitrification stalls, and the next grab sample surprises the operator. Both are common. Neither shows up in the normal daily walk-through.
 
 This post covers how ammonium sensors drift in activated sludge service, what that drift does to an ABAC control loop, and what operators can check to catch it before it costs money or compliance points.
@@ -15,7 +24,7 @@ This post covers how ammonium sensors drift in activated sludge service, what th
 
 In a fixed-setpoint system, the operator sets a dissolved oxygen (DO) target and blower airflow modulates to hold it. In ABAC, the DO setpoint is a function of the measured ammonium concentration in the aeration basin. When ammonium is high and nitrification demand is high, the system raises the DO setpoint; when ammonium is low, it backs off. The logic trims aeration to the actual nitrogen load rather than the worst-case load.
 
-The energy benefit is real. The [U.S. EPA Nutrient Control Design Manual](https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=236566) documents that properly tuned ABAC systems can reduce aeration energy 10 to 30 percent relative to fixed-DO operation by eliminating the over-aeration margin that fixed setpoints require when loading is low (EPA Report No. 600/R-10/100, Chapter 5). That saving disappears when the ammonium sensor reading the setpoint signal is wrong.
+The energy benefit is real. The U.S. EPA Nutrient Control Design Manual (EPA/600/R-10/100, Chapter 5) documents that properly tuned ABAC systems can reduce aeration energy 10 to 30 percent relative to fixed-DO operation by eliminating the over-aeration margin that fixed setpoints require when loading is low. That saving disappears when the ammonium sensor reading the setpoint signal is wrong.
 
 ## Why ammonium sensors drift
 
@@ -49,7 +58,7 @@ In [intermittent aeration systems running ABAC](/blog/intermittent-aeration-nitr
 
 ## Calibration and validation intervals
 
-Published guidance from the [Water Environment Federation Nutrient Removal Manual of Practice No. 34](https://www.wef.org/resources/publications/manuals-of-practice/) recommends site-specific calibration schedules for online analyzers based on the fouling rate observed during commissioning, updated when the operating load changes significantly. The EPA Nutrient Control Design Manual recommends verifying online analyzers against grab samples at least weekly during initial commissioning and recalibrating when deviations exceed 10 percent of the measured value.
+Published guidance from the [Water Environment Federation Nutrient Removal Manual of Practice No. 34](https://www.wef.org/resources/publications/) recommends site-specific calibration schedules for online analyzers based on the fouling rate observed during commissioning, updated when the operating load changes significantly. The EPA Nutrient Control Design Manual (EPA/600/R-10/100) recommends verifying online analyzers against grab samples at least weekly during initial commissioning and recalibrating when deviations exceed 10 percent of the measured value.
 
 A practical starting point for most activated sludge plants in continuous aeration service:
 
