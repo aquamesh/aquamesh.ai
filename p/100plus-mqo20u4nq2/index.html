@@ -5,7 +5,7 @@
 
 :root{--ink:#0b1026;--ink2:#3d4860;--ink3:#7a849b;--blue:#2449e8;--brand:#4a9bcd;--rule:#e3e8f2;--wash:#f4f7fd;--tint:#e8eefd}
 @page{size:13.333in 7.5in;margin:0}
-*{box-sizing:border-box}html,body{margin:0;background:#fff}
+*{box-sizing:border-box}html,body{margin:0;background:#fff}html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink2);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .s{width:1280px;height:720px;position:relative;overflow:hidden;break-after:page;background:#fff;padding:40px 72px 0;text-align:center}
 .s:last-child{break-after:auto}
@@ -16,7 +16,7 @@ h1,h2{font-weight:800;color:var(--ink);margin:0}
 h2{font-size:46px;line-height:1.08;letter-spacing:-.04em;margin-top:16px}
 h1 em,h2 em{font-style:normal;color:var(--blue)}
 .wm{position:absolute;right:60px;bottom:26px;height:20px;width:auto;color:var(--brand)}
-.cp{position:absolute;left:60px;bottom:24px;right:300px;text-align:left;font-size:10.5px;line-height:1.45;color:#9aa3b8}
+.cp{position:absolute;left:60px;top:674px;right:300px;text-align:left;font-size:10.5px;line-height:1.45;color:#9aa3b8}
 .n{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:17px;flex-shrink:0}
 .tagline{margin:0;font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
 .tagline em{font-style:normal;color:var(--blue)}
@@ -456,7 +456,7 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
     </div>
   </div>
   <div class="prep"><span>Prepared for</span><img src="img/logos/abinbev.svg" alt="AB InBev" style="height:25px"><i></i><img src="img/logos/coca-cola-company.svg" alt="The Coca-Cola Company" style="height:22px"><i></i><img src="img/logos/mondelez.svg" alt="Mondelez International" style="height:30px"></div>
-  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; $1.7T: our estimate, built on $1.4T of unplanned downtime at the world&rsquo;s 500 largest companies plus wasted energy, water, chemicals and product. $10M+: average per large consumer goods (FMCG) plant, Siemens True Cost of Downtime 2024. +159%: US BLS consumer price index, water and sewer, 2004 to 2024 (all items +66%).</div>
+  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; $1.7T: our estimate ($1.4T of downtime at the 500 largest companies, plus waste). $10M+: average FMCG plant, Siemens 2024. +159%: US BLS CPI, water and sewer, 2004 to 2024.</div>
 </div>
 
 
@@ -465,7 +465,7 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
   <h2>Six years of water R&amp;D. <em>Now AI for industry.</em></h2>
   <div class="fd">
     <div class="ph"><img class="me" src="img/alex-lab.jpg" alt="Alex Towfigh with his smart water sensor">
-      <div class="lgs"><figure><figcaption>Built at</figcaption><img src="img/logo-ucsd.jpg" alt="UC San Diego"></figure><figure><figcaption>Bought by</figcaption><img src="img/logo-sio.jpg" alt="Scripps Institution of Oceanography"></figure></div></div>
+      <div class="lgs"><figure><img src="img/logo-ucsd.jpg" alt="UC San Diego"></figure><figure><img src="img/logo-sio.jpg" alt="Scripps Institution of Oceanography"></figure></div></div>
     <div>
       <div class="nm">Alex Towfigh</div>
       <div class="ro">Founder &amp; CEO &middot; Inventor and engineer</div>
@@ -491,7 +491,7 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
     </div>
   </div>
   <svg class="wm" viewBox="0 -4 986 132"><use href="#wordmark"/></svg>
-  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 2 &middot; 2020 to 2025: independent, privately funded R&amp;D at UC San Diego, with a team of student engineers he hired and led.</div>
+  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 2 &middot; 2020 to 2025: independent, privately funded R&amp;D at UC San Diego, with student engineers he hired and led.</div>
 </div>
 
 
@@ -521,14 +521,14 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
       <div class="hd"><span>Line tools</span><span>AquaMesh</span></div>
       <div><span>Cleans and changeovers</span><b>Towers, boilers, RO, wastewater, energy</b></div>
       <div><span>Optical fingerprint + ML</span><b>Self-calibrating physics twin</b></div>
-      <div><span>One optical sensor</span><b>UV-Vis, Raman and NIR in one probe</b></div>
+      <div><span>One optical sensor</span><b>Acoustic, vibration and Raman/NIR sensors</b></div>
       <div><span>Next action per clean</span><b>Agents across the site, simulated first</b></div>
       <p class="keep"><i><svg class="ic"><use href="#i-plug"/></svg></i>Already have line sensors? Keep them. We read their data.</p>
     </div>
     <div class="vid"><img class="poster" src="img/reel-poster.jpg" alt="AquaMesh platform demo"><video src="video/platform-reel.mp4" poster="img/reel-poster.jpg" muted loop playsinline preload="auto"></video><span class="play"><i></i>35 s platform demo</span><button class="grow" type="button">Full size</button></div>
   </div>
   <svg class="wm" viewBox="0 -4 986 132"><use href="#wordmark"/></svg>
-  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 4 &middot; Answers the 100+ question on spectral sensor + IoT offerings. Line tools as they describe themselves: cleans, changeovers, line yield. Video: real AquaMesh software on simulated plant data; the 3D view is our demonstration plant.</div>
+  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 4 &middot; Answers the 100+ sensor + IoT question. Line tools as their own sites describe them. Video: real AquaMesh software, simulated data; 3D view is our demo plant.</div>
 </div>
 
 
@@ -543,7 +543,7 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
   </div>
   <div class="tot2"><span>Together</span><b>$2.2M to $3.0M a year</b><i>24,000 to 33,000 lb/h of steam</i></div>
   <svg class="wm" viewBox="0 -4 986 132"><use href="#wordmark"/></svg>
-  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 5 &middot; Anonymized food-ingredient plant. Estimates from our column and heat-balance models, to confirm on plant data. Total: fuel, carbon, water, overlap removed.</div>
+  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 5 &middot; Anonymized food-ingredient plant. Estimates from our column and heat-balance models, to confirm on plant data. Total nets out overlap.</div>
 </div>
 
 
@@ -551,7 +551,7 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
   <span class="sec">Hardware</span>
   <h2>Built by us. <em>Works with what you have.</em></h2>
   <div class="sn">
-    <figure><div class="pd"><img src="img/sensor-asona.png" alt="asona" style="height:205px"></div><figcaption>asona<small>AI acoustic camera</small><span>Vision layer for autonomous factories: hazards, leaks, bearings and more</span></figcaption></figure>
+    <figure><div class="pd"><img src="img/sensor-asona.png" alt="asona" style="height:205px"></div><figcaption>asona<small>AI acoustic camera</small><span>Vision layer for next-gen factories: hazards, leaks, bearings and more</span></figcaption></figure>
     <figure><div class="pd"><img src="img/sensor-mechtrack.png" alt="MechTrack" style="height:250px"></div><figcaption>MechTrack<small>Machine health</small><span>Machine learning on vibration, ultrasound and heat</span></figcaption></figure>
     <figure><div class="pd"><img src="img/sensor-aquaspectra.png" alt="AquaSpectra" style="height:265px"></div><figcaption>AquaSpectra<small>UV-Vis, Raman, NIR</small><span>Tells product, chemicals and contaminants apart, live</span></figcaption></figure>
     <figure><div class="pd"><img src="img/sensor-aqualink.png" alt="AquaLink Hub" style="height:180px"></div><figcaption>AquaLink Hub<small>Industrial gateway</small><span>Rugged, multi-network link from every sensor to the cloud</span></figcaption></figure>
@@ -573,7 +573,7 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
     <span><i><svg class="ic"><use href="#i-hand"/></svg></i>You choose: advise, approve or automate</span>
   </div>
   <svg class="wm" viewBox="0 -4 986 132"><use href="#wordmark"/></svg>
-  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 7 &middot; Answers the SAZ question on decisions beyond monitoring. Examples only: the platform can optimize or automate many more decisions. Each starts in advise mode.</div>
+  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 7 &middot; Answers the SAZ question. Examples only: the platform can optimize or automate many more decisions. Each starts in advise mode.</div>
 </div>
 
 
@@ -610,7 +610,7 @@ h1{font-size:58px;line-height:1.02;letter-spacing:-.045em;margin-top:30px}
     </div>
   </div>
   <svg class="wm" viewBox="0 -4 986 132"><use href="#wordmark"/></svg>
-  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 9 &middot; From your public reports: AB InBev 2025 Annual Report and 2030 goals; Coca-Cola 2025 Environmental Update and 2023 CDP; Mondel&#275;z 2025 Snacking Made Right; Di&aacute;rio do Rio; 3BL.</div>
+  <div class="cp">&copy; AquaMesh Inc. 2026 &middot; 9 &middot; From public reports: AB InBev 2025 Annual Report and 2030 goals; Coca-Cola 2025 Environmental Update; Mondel&#275;z 2025 Snacking Made Right; 3BL.</div>
 </div>
 
 
