@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-12T22:06:33.279Z · 17 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-12T22:06:57.131Z · 17 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -625,6 +625,15 @@ SECTION: In the press
 TAGS: industrial wastewater, pretreatment, discharge compliance, sewer surcharges, spectral sensing, Water Online
 ==============================================================================
 
+---
+title: The $1.5M sewer repair: what discharge monitoring missed
+slug: water-online-sewer-repair-evidence
+date: 2026-10-26
+section: In the press
+description: Guest column by Alex Towfigh in Water Online on a $1.5M restitution case and what upstream monitoring could have shown about the discharge.
+tags: industrial wastewater, pretreatment, discharge compliance, sewer surcharges, spectral sensing, Water Online
+---
+
 Water Online published a guest column by Alex Towfigh, AquaMesh's founder and CEO, on 26 October 2026. The full piece is on the Water Online site: [The $1.5 Million Sewer Repair -- And The Water-Quality Evidence Missing Upstream](https://www.wateronline.com/doc/the-million-sewer-repair-and-the-water-quality-evidence-missing-upstream-0001). What follows is an expanded summary with additional context on the pretreatment regulatory framework.
 
 ## The argument in brief
@@ -645,7 +654,7 @@ The EPA pretreatment program, codified at [40 CFR Part 403](https://www.ecfr.gov
 
 That pattern matters. A one-time equipment failure is an operations problem. Repeated violations over multiple months suggest the monitoring and investigation loop was too slow to interrupt the cycle: a suspect reading, an investigation that finds no root cause, another event. The column's core argument is that an endpoint measurement at the discharge cannot tell you which upstream condition caused it. The same gap operates at the municipal discharge level: [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html) covers how periodic DMR sampling misses what happens between sampling dates at the POTW receiving the industrial discharge.
 
-Under the pretreatment program, a significant industrial user found in violation may face formal Notices of Violation, civil penalties under [CWA Section 309](https://www.epa.gov/enforcement/clean-water-act-enforcement), and in cases involving physical POTW damage, restitution claims from the municipal utility. The $1.5 million figure in this case reflected sewer repair costs, not standard permit penalties.
+Under the pretreatment program, a significant industrial user found in violation may face formal Notices of Violation, civil penalties under [CWA Section 309](https://www.epa.gov/enforcement/water-enforcement), and in cases involving physical POTW damage, restitution claims from the municipal utility. The $1.5 million figure in this case reflected sewer repair costs, not standard permit penalties.
 
 [Spectral sensing can reveal discharge chemistry that endpoint pH alone misses](/blog/spectral-change-analysis-vs-calibrated-parameters.html). But identifying that a problem occurred is different from tracing its cause upstream. That is where process historian data plays a role. [When 25 days of process historian data were analyzed at one industrial facility](/blog/what-25-days-of-historian-data-shows.html), unexpected deviations mapped to specific shifts and equipment states rather than random failures, providing the upstream context the column argues is missing from most monitoring architectures.
 
@@ -659,7 +668,7 @@ For each recurring discharge, the column asks:
 
 It closes with a test of its own: find the single missing measurement that would most improve the conclusion. If there is not one, more sensors may not be the right investment. And AquaMesh's value has to be shown the same way, through lower confirmed losses, earlier diagnosis or less investigation effort.
 
-The column's framing applies broadly to any facility managing discharges under a POTW pretreatment permit. The practical question is whether the current monitoring architecture would allow operations staff to trace the source of a problem within the same shift it occurs, rather than after the next scheduled compliance sample. If the answer is no, that is the gap worth measuring first.
+The column's framing applies broadly to any facility managing discharges under a POTW pretreatment permit. The practical question is whether the current monitoring architecture would allow operations staff to trace the source of a problem within the same shift it occurs, rather than after the next scheduled compliance sample. If the answer is no, that is the gap worth measuring first. What continuous online sensors add, and what they cannot replace, in a facility's monitoring architecture is covered in [online sensors vs. lab sampling for discharge compliance](/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html).
 
 [Read the full column in Water Online](https://www.wateronline.com/doc/the-million-sewer-repair-and-the-water-quality-evidence-missing-upstream-0001). For facilities working through a similar monitoring gap, [request a conversation with the AquaMesh team](https://aquamesh.ai/#contact).
 
