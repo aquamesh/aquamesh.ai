@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AquaMesh Hardware | Sensors and edge for industrial water</title>
+  <meta name="description" content="AquaSpectra spectral probe, MechTrack machine health, asona AI acoustic camera (coming soon), AquaLink Hub gateway and the AquaMesh compute blade. Works with the sensors you already have." />
+  <link rel="canonical" href="https://aquamesh.ai/hardware.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AquaMesh Hardware | Sensors and edge for industrial water" />
+  <meta property="og:description" content="AquaSpectra spectral probe, MechTrack machine health, asona AI acoustic camera (coming soon), AquaLink Hub gateway and the AquaMesh compute blade. Works with the sensors you already have." />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=33" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://aquamesh.ai/hardware.html#page","url":"https://aquamesh.ai/hardware.html","name":"AquaMesh Hardware | Sensors and edge for industrial water","isPartOf":{"@id":"https://aquamesh.ai/#website"},"about":{"@id":"https://aquamesh.ai/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Hardware","item":"https://aquamesh.ai/hardware.html"}]}]}</script>
+<style>
+.hw-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.hw{display:flex;flex-direction:column;background:#fff;border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
+.hw-shot{position:relative;height:250px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f5f8fe,#e4ebfb)}
+.hw-shot img{max-height:200px;max-width:78%;width:auto;height:auto;display:block}
+.hw-shot.wide img{max-width:86%;max-height:120px}
+.hw-badge{position:absolute;left:16px;top:16px;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:99px;padding:5px 11px;background:#fff;color:var(--green);border:1px solid #cfe9db}
+.hw-badge.soon{background:var(--navy);color:#fff;border-color:var(--navy)}
+.hw-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.hw-type{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.hw h3{font-size:1.5rem;letter-spacing:-.02em}
+.hw-line{color:var(--ink);font-weight:600;line-height:1.45}
+.hw ul{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.hw li{display:flex;gap:10px;color:var(--ink-2);line-height:1.45;font-size:.97rem}
+.hw li .ic{color:var(--blue);margin-top:2px;width:1.05em;height:1.05em;stroke-width:2.4}
+.hw-link{margin-top:auto;padding-top:8px;font-weight:700;color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.hw-link:hover{text-decoration:underline}
+.hw.any .hw-shot{background:#fff;border-bottom:1px dashed #c3d0f3}
+.hw-any{display:flex;flex-direction:column;align-items:center;gap:14px}
+.hw-any .disc2{width:86px;height:86px;border-radius:50%;background:var(--tint);color:var(--blue);display:flex;align-items:center;justify-content:center}
+.hw-any .disc2 .ic{width:40px;height:40px}
+.hw-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.hw-chips span{font-family:var(--mono);font-size:.78rem;color:var(--ink-2);background:var(--wash);border:1px solid var(--rule);border-radius:8px;padding:4px 8px}
+.flow{display:grid;grid-template-columns:1.25fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:14px}
+.flow-step{background:#fff;border:1px solid var(--rule);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:8px}
+.flow-step .ic{width:30px;height:30px;color:var(--blue)}
+.flow-step b{font-size:1.08rem;color:var(--ink)}
+.flow-step span{color:var(--ink-3);font-size:.95rem;line-height:1.45}
+.flow-arrow{display:flex;align-items:center;color:var(--blue)}
+.flow-arrow .ic{width:26px;height:26px}
+.perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}
+.perks div{border-top:2px solid var(--blue);padding-top:14px}
+.perks b{display:block;font-size:1.15rem;color:var(--ink)}
+.perks span{display:block;margin-top:6px;color:var(--ink-3);line-height:1.5}
+@media (max-width:980px){.hw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.flow{grid-template-columns:1fr}.flow-arrow{justify-content:center;transform:rotate(90deg)}.perks{grid-template-columns:1fr}}
+@media (max-width:620px){.hw-grid{grid-template-columns:1fr}.hw-shot{height:220px}}
+</style>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4.5 16.5a7.5 7.5 0 1 1 15 0"/><path d="M12 16.5l4-5"/><path d="M4 19.5h16"/></symbol><symbol id="i-radio" viewBox="0 0 24 24"><path d="M12 12v9M9 21h6"/><circle cx="12" cy="10" r="1.6"/><path d="M8.3 6.3a5.2 5.2 0 0 0 0 7.4M15.7 6.3a5.2 5.2 0 0 1 0 7.4M5.5 3.5a9.2 9.2 0 0 0 0 13M18.5 3.5a9.2 9.2 0 0 1 0 13"/></symbol><symbol id="i-router" viewBox="0 0 24 24"><rect x="2.5" y="12.5" width="19" height="7.5" rx="2"/><path d="M6.5 12.5V6M17.5 12.5V6M15 16.25h3.5M9.6 7.4a3.4 3.4 0 0 1 4.8 0M7.9 5.4a5.8 5.8 0 0 1 8.2 0"/><circle cx="6.3" cy="16.25" r=".9" fill="currentColor" stroke="none"/><circle cx="9.3" cy="16.25" r=".9" fill="currentColor" stroke="none"/></symbol><symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol><symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21"/></symbol><symbol id="i-cycle" viewBox="0 0 24 24"><path d="M19 8.5A7.5 7.5 0 0 0 5.2 9M5 15.5A7.5 7.5 0 0 0 18.8 15"/><path d="M19.5 4v4.8h-4.8M4.5 20v-4.8h4.8"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.2c0 4.4-2.9 7.9-7 9.8-4.1-1.9-7-5.4-7-9.8V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol><symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></symbol><symbol id="i-flask" viewBox="0 0 24 24"><path d="M9.5 3.5h5M10.5 3.5v5.2L5.2 18a1.8 1.8 0 0 0 1.6 2.6h10.4a1.8 1.8 0 0 0 1.6-2.6l-5.3-9.3V3.5"/><path d="M7.6 14.5h8.8"/></symbol><symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5c3.2 4.2 6 7.6 6 10.7a6 6 0 0 1-12 0c0-3.1 2.8-6.5 6-10.7z"/><path d="M9.2 14.5a2.9 2.9 0 0 0 2.8 2.6"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c.5 3.5 5 5.5 5 10.5a5 5 0 0 1-10 0c0-2.6 1.4-4.2 2.6-5.4.2 1.8 1 2.9 2.2 3.4C11.5 9 11.2 5.8 12 3z"/></symbol><symbol id="i-tower" viewBox="0 0 24 24"><path d="M7 21l1.5-14h7L17 21zM6 7h12M9 3.5h6M10.5 3.5v3.5M13.5 3.5v3.5M8 14h8"/></symbol><symbol id="i-ro" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="4" rx="2"/><rect x="3" y="13" width="18" height="4" rx="2"/><path d="M6 9h3M6 15h3"/></symbol><symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 9c2-2.6 4-2.6 6 0s4 2.6 6 0 4-2.6 6 0M3 15c2-2.6 4-2.6 6 0s4 2.6 6 0 4-2.6 6 0"/></symbol><symbol id="i-pump" viewBox="0 0 24 24"><circle cx="9" cy="13" r="5.5"/><path d="M9 7.5V4h9v4M14.5 13H20M9 13l2.5-2.5"/></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/></symbol><symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 20.5V10l5 3V10l5 3V6.5h3.5l1 4H21v10z"/><path d="M7 17h2M12 17h2M17 17h1.5"/></symbol><symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 11V5.5a1.5 1.5 0 0 1 3 0V11M11 10V4a1.5 1.5 0 0 1 3 0v6M14 10V5.5a1.5 1.5 0 0 1 3 0V13c0 4-2.5 7-6 7-2.5 0-4-1.2-5.4-3.4L3.8 13.5a1.5 1.5 0 0 1 2.6-1.5L8 14"/></symbol><symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.5h5"/><circle cx="12" cy="3.5" r=".8"/></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/><path d="M19 16.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></symbol><symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol><symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol></svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#platform">Platform</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="case-studies/index.html">Case studies</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="company.html">Company</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+
+  <main class="cs">
+    <section class="section cs-head">
+      <div class="wrap">
+        <p class="eyebrow">Hardware</p>
+        <h1>Built for the plant floor. <span class="accent">Works with what you have.</span></h1>
+        <p class="lead">Start on the data your plant already records. Add our hardware only where it pays: to see what is in the water, how the machines are running and what the plant sounds like.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:clamp(36px,5vw,56px)">
+      <div class="wrap">
+        <div class="hw-grid">
+        <article class="hw">
+          <div class="hw-shot"><span class="hw-badge">Available</span><img src="assets/hardware/aquaspectra.webp" alt="AquaSpectra stainless spectral probe" loading="lazy" decoding="async" /></div>
+          <div class="hw-body">
+            <p class="hw-type">Spectral water probe</p>
+            <h3>AquaSpectra&trade;</h3>
+            <p class="hw-line">Sees what is in your process water, not just how much.</p>
+            <ul><li><svg class="ic"><use href="#i-check" /></svg><span>UV-Vis and fluorescence, with NIR and Raman options</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Reads protein residues, fermentation activity, starch, sugars and alcohols</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Calibrated to your own product and samples</span></li></ul>
+            <a class="hw-link" href="products/aquaspectra.html">Learn more <svg class="ic"><use href="#i-arrow" /></svg></a>
+          </div>
+        </article>
+        <article class="hw">
+          <div class="hw-shot"><img src="assets/hardware/mechtrack.webp" alt="MechTrack machine health sensor" loading="lazy" decoding="async" /></div>
+          <div class="hw-body">
+            <p class="hw-type">Machine health</p>
+            <h3>MechTrack&trade;</h3>
+            <p class="hw-line">Catches pump and motor problems before they stop a line.</p>
+            <ul><li><svg class="ic"><use href="#i-check" /></svg><span>Machine learning on vibration, ultrasound and temperature</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Built for pumps and motors</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Machine health and process data in one view</span></li></ul>
+            <a class="hw-link" href="products/mechtrack.html">Learn more <svg class="ic"><use href="#i-arrow" /></svg></a>
+          </div>
+        </article>
+        <article class="hw">
+          <div class="hw-shot"><span class="hw-badge soon">Coming soon</span><img src="assets/hardware/asona.webp" alt="asona AI acoustic camera" loading="lazy" decoding="async" /></div>
+          <div class="hw-body">
+            <p class="hw-type">AI acoustic camera</p>
+            <h3>asona&trade;</h3>
+            <p class="hw-line">The vision layer for next-gen factories.</p>
+            <ul><li><svg class="ic"><use href="#i-check" /></svg><span>Maintenance: hears failing bearings and equipment early</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Hazards and leaks: pinpoints the source on a live camera view</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Turns sound into findings the platform can act on</span></li></ul>
+            <a class="hw-link" href="products/asona.html">Learn more <svg class="ic"><use href="#i-arrow" /></svg></a>
+          </div>
+        </article>
+        <article class="hw">
+          <div class="hw-shot"><img src="assets/hardware/aqualink-hub.webp" alt="AquaLink Hub industrial gateway" loading="lazy" decoding="async" /></div>
+          <div class="hw-body">
+            <p class="hw-type">Industrial gateway</p>
+            <h3>AquaLink&trade; Hub</h3>
+            <p class="hw-line">A rugged, multi-network link from every sensor to the cloud.</p>
+            <ul><li><svg class="ic"><use href="#i-check" /></svg><span>Connects our sensors and the ones you already have</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Sends data securely to the AquaMesh platform</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Built for plant conditions</span></li></ul>
+            <a class="hw-link" href="products/aqualink-hub.html">Learn more <svg class="ic"><use href="#i-arrow" /></svg></a>
+          </div>
+        </article>
+        <article class="hw">
+          <div class="hw-shot wide"><img src="assets/hardware/edge-computer.webp" alt="AquaMesh compute blade" loading="lazy" decoding="async" /></div>
+          <div class="hw-body">
+            <p class="hw-type">Edge computer</p>
+            <h3>AquaMesh compute blade</h3>
+            <p class="hw-line">Runs the models on site, next to your control system.</p>
+            <ul><li><svg class="ic"><use href="#i-check" /></svg><span>Real-time models in the plant</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Carries out approved changes through your PLC or SCADA</span></li><li><svg class="ic"><use href="#i-check" /></svg><span>Back to advisory at any time</span></li></ul>
+            <a class="hw-link" href="products/compute-blade.html">Learn more <svg class="ic"><use href="#i-arrow" /></svg></a>
+          </div>
+        </article>
+        <article class="hw any">
+          <div class="hw-shot"><div class="hw-any"><div class="disc2"><svg class="ic"><use href="#i-plug" /></svg></div>
+            <div class="hw-chips"><span>OPC UA</span><span>MQTT</span><span>Modbus</span></div></div></div>
+          <div class="hw-body">
+            <p class="hw-type">Your sensors</p>
+            <h3>Any sensor</h3>
+            <p class="hw-line">Already installed? Keep it.</p>
+            <ul><li><svg class="ic"><use href="#i-check" /></svg><span>Reads the sensors, PLCs and historians you already run</span></li>
+              <li><svg class="ic"><use href="#i-check" /></svg><span>Adds off-the-shelf sensors where needed</span></li>
+              <li><svg class="ic"><use href="#i-check" /></svg><span>Vendor-neutral: your equipment, your control system</span></li></ul>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">How it connects</p>
+          <h2>From the sensor to <span class="accent">the decision.</span></h2>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><svg class="ic"><use href="#i-eye" /></svg><b>Sensors</b><span>AquaSpectra, MechTrack, asona, and the sensors you already have</span></div>
+          <div class="flow-arrow"><svg class="ic"><use href="#i-arrow" /></svg></div>
+          <div class="flow-step"><svg class="ic"><use href="#i-router" /></svg><b>AquaLink Hub</b><span>One secure link for every sensor</span></div>
+          <div class="flow-arrow"><svg class="ic"><use href="#i-arrow" /></svg></div>
+          <div class="flow-step"><svg class="ic"><use href="#i-chip" /></svg><b>Compute blade</b><span>Models and approved control, on site</span></div>
+          <div class="flow-arrow"><svg class="ic"><use href="#i-arrow" /></svg></div>
+          <div class="flow-step"><svg class="ic"><use href="#i-bot" /></svg><b>AquaMesh platform</b><span>Findings, the digital twin and AI agents</span></div>
+        </div>
+        <div class="perks">
+          <div><b>Start on data alone</b><span>The free audit runs on what you already record. Hardware comes later, only where it pays.</span></div>
+          <div><b>About a third of the cost</b><span>Our sensors cost about a third of comparable instruments.</span></div>
+          <div><b>Small and fast to install</b><span>Compact sensors and an edge computer that fit in tight spaces.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>Not sure what to add?</h2>
+        <p class="lead">Start with the free audit. It shows where your data runs out, and only then what is worth installing.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <p class="footer-links"><a href="industries/food-beverage.html">Food &amp; Beverage</a> · <a href="industries/industrial-water.html">Industrial Water</a> · <a href="industries/manufacturing.html">Manufacturing</a> · <a href="industries/municipal.html">Municipal</a> · <a href="industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="industries/data-centers.html">Data Centers</a><br /><a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="terms.html">Terms</a> · <a href="do-not-sell.html">Your Privacy Choices</a></p>
+      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a> &middot; <a href="https://www.linkedin.com/company/aquamesh" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+<script src="consent.js?v=2"></script>
+  <script src="nav.js?v=1" defer></script>
+</body>
+</html>

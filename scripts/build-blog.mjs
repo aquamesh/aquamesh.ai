@@ -109,7 +109,7 @@ const nav = (pre) => `  <header class="nav">
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="${pre}index.html#platform">Platform</a>
-        <a href="${pre}index.html#how">How it works</a>
+        <a href="${pre}hardware.html">Hardware</a>
         <a href="${pre}case-studies/index.html">Case studies</a>
         <a href="${pre}blog/index.html">Blog</a>
         <a href="${pre}company.html">Company</a>
@@ -364,6 +364,13 @@ write('blog/index.json', JSON.stringify({
 /* llms.txt — the index an agent reads first */
 const pages = [
   ['/', 'Home', 'What AquaMesh does: reads a plant’s existing data, prices what it is losing, and hands operators a ranked list of changes.'],
+  ['/hardware.html', 'Hardware', 'AquaSpectra spectral probe, MechTrack machine health, asona AI acoustic camera (coming soon), AquaLink Hub gateway and the AquaMesh compute blade.'],
+  ['/products/aquaspectra.html', 'AquaSpectra', 'Inline spectral probe: UV-Vis and fluorescence with NIR and Raman options; protein residues, fermentation activity, starch, sugars and alcohols.'],
+  ['/products/mechtrack.html', 'MechTrack', 'Machine-health sensor for pumps and motors: vibration, ultrasound and temperature with machine learning.'],
+  ['/products/asona.html', 'asona', 'AI acoustic camera, coming soon: sees sound on a live camera view to find failing equipment, leaks and hazards.'],
+  ['/products/aqualink-hub.html', 'AquaLink Hub', 'Industrial gateway connecting AquaMesh sensors and existing instruments over OPC UA, MQTT and Modbus.'],
+  ['/products/compute-blade.html', 'AquaMesh compute blade', 'Edge computer that runs AquaMesh models on site and carries out approved changes through PLC or SCADA.'],
+  ['/modeling.html', 'Modeling', 'Self-calibrating physics models of each unit in a plant; every fix tested against many possible futures before it reaches the line.'],
   ['/company.html', 'Company', 'Origin at UC San Diego, the first sensor developed for Scripps Institution of Oceanography, the team and advisors.'],
   ['/case-studies/', 'Case studies', 'Anonymised audits of real plants, and case studies on modelled plants, with the figures they produced.'],
   ['/case-studies/water-reuse-plant.html', 'Case study: membrane-bioreactor water reuse', '25 days of a plant’s own historian — 1,001 tags, 7.2M values — produced $42,050/yr achievable with no capital and $92,200/yr fully instrumented.'],
@@ -453,7 +460,7 @@ ${p.body}
 
 /* ── sitemap across the whole site ───────────────────────────────────── */
 const staticPages = [
-  ['/', '1.0', 'weekly'], ['/company.html', '0.7', 'monthly'],
+  ['/', '1.0', 'weekly'], ['/company.html', '0.7', 'monthly'], ['/hardware.html', '0.7', 'monthly'], ['/modeling.html', '0.7', 'monthly'], ['/products/aquaspectra.html', '0.6', 'monthly'], ['/products/mechtrack.html', '0.6', 'monthly'], ['/products/asona.html', '0.6', 'monthly'], ['/products/aqualink-hub.html', '0.6', 'monthly'], ['/products/compute-blade.html', '0.6', 'monthly'],
   ['/case-studies/', '0.8', 'monthly'],
   ['/case-studies/water-reuse-plant.html', '0.8', 'monthly'],
   ['/case-studies/starch-plant.html', '0.8', 'monthly'],

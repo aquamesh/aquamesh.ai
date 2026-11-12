@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AquaMesh Modeling | Physics models of your plant</title>
+  <meta name="description" content="Self-calibrating physics models of cooling towers, RO, boilers, ion exchange, biological treatment, distillation and more. Every fix is tested against many possible futures before it reaches the plant." />
+  <link rel="canonical" href="https://aquamesh.ai/modeling.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AquaMesh Modeling | Physics models of your plant" />
+  <meta property="og:description" content="Self-calibrating physics models of cooling towers, RO, boilers, ion exchange, biological treatment, distillation and more. Every fix is tested against many possible futures before it reaches the plant." />
+  <meta property="og:image" content="https://aquamesh.ai/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=33" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://aquamesh.ai/modeling.html#page","url":"https://aquamesh.ai/modeling.html","name":"AquaMesh Modeling | Physics models of your plant","isPartOf":{"@id":"https://aquamesh.ai/#website"},"about":{"@id":"https://aquamesh.ai/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aquamesh.ai"},{"@type":"ListItem","position":2,"name":"Modeling","item":"https://aquamesh.ai/modeling.html"}]}]}</script>
+<style>
+.md-feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.md-feat article{background:#fff;border:1px solid var(--rule);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px}
+.md-feat .n{display:flex;align-items:center;gap:12px}
+.md-feat .n i{width:46px;height:46px;border-radius:14px;background:var(--tint);color:var(--blue);display:flex;align-items:center;justify-content:center;font-style:normal}
+.md-feat .n i .ic{width:24px;height:24px}
+.md-feat h3{font-size:1.3rem;letter-spacing:-.02em}
+.md-feat p{color:var(--ink-2);line-height:1.55}
+.md-feat article.wide{grid-column:span 2;background:var(--navy);border-color:var(--navy)}
+.md-feat article.wide h3{color:#fff}.md-feat article.wide p{color:#c9d4f2}
+.md-feat article.wide .n i{background:rgba(255,255,255,.12);color:#fff}
+.md-modes{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.md-modes span{font-size:.9rem;font-weight:700;border-radius:99px;padding:6px 14px;background:rgba(255,255,255,.1);color:#fff}
+.md-modes span:last-child{background:var(--blue)}
+.units{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.unit{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--rule);border-radius:14px;padding:16px 18px}
+.unit i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--tint);color:var(--blue);display:flex;align-items:center;justify-content:center;font-style:normal}
+.unit i .ic{width:21px;height:21px}
+.unit b{display:block;color:var(--ink);font-size:1.02rem}
+.unit span{display:block;margin-top:3px;color:var(--ink-3);font-size:.93rem;line-height:1.4}
+.md-why{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.md-why div{border-radius:var(--radius);padding:24px;border:1px solid var(--rule);background:#fff}
+.md-why div.us{border-color:var(--blue);background:var(--tint)}
+.md-why p.k{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.md-why div.us p.k{color:var(--blue)}
+.md-why b{display:block;margin-top:8px;font-size:1.25rem;color:var(--ink);letter-spacing:-.01em}
+.md-why ul{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;color:var(--ink-2);line-height:1.5}
+.md-why li{position:relative;padding-left:22px}
+.md-why li::before{content:"";position:absolute;left:2px;top:.6em;width:8px;height:8px;border-radius:50%;background:#aab3c5}
+.md-why div.us li::before{background:var(--blue)}
+@media (max-width:980px){.md-feat,.units{grid-template-columns:repeat(2,minmax(0,1fr))}.md-feat article.wide{grid-column:span 2}}
+@media (max-width:620px){.md-feat,.units,.md-why{grid-template-columns:1fr}.md-feat article.wide{grid-column:auto}}
+</style>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="wm-cap"><rect x="-10" y="0" width="1010" height="100" /></clipPath>
+      <clipPath id="wm-m"><rect x="506" y="0" width="115" height="100" /></clipPath>
+    </defs>
+    <symbol id="wordmark" viewBox="0 -4 986 132">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-miterlimit="6">
+        <g clip-path="url(#wm-cap)">
+          <path d="M0.4,112 L46.5,13.2 L92.6,112" />
+          <path d="M383.4,112 L429.5,13.2 L475.6,112" />
+        </g>
+        <circle cx="172" cy="50" r="47.5" />
+        <path d="M172,70 V126" />
+        <path d="M278.5,0 V60 A34.5,34.5 0 0 0 347.5,60 V0" />
+        <g clip-path="url(#wm-m)">
+          <path d="M511.5,0 V100 M615.5,0 V100" />
+          <path d="M503.3,-12 L563.5,76 L623.7,-12" />
+        </g>
+        <path d="M669,5.5 H743 M669,50 H743 M669,94.5 H743" />
+        <path d="M852,20 C846.5,10.5 835,5.5 818.5,5.5 C798.5,5.5 785,14.5 785,28.5 C785,43.5 798.5,47.5 817.5,50.5 C836.5,53.5 850.5,59 850.5,74 C850.5,88.5 836.5,94.5 816.5,94.5 C799,94.5 785.5,89 779.5,78.5" />
+        <path d="M906.5,0 V100 M980.5,0 V100 M906.5,50 H980.5" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4.5 16.5a7.5 7.5 0 1 1 15 0"/><path d="M12 16.5l4-5"/><path d="M4 19.5h16"/></symbol><symbol id="i-radio" viewBox="0 0 24 24"><path d="M12 12v9M9 21h6"/><circle cx="12" cy="10" r="1.6"/><path d="M8.3 6.3a5.2 5.2 0 0 0 0 7.4M15.7 6.3a5.2 5.2 0 0 1 0 7.4M5.5 3.5a9.2 9.2 0 0 0 0 13M18.5 3.5a9.2 9.2 0 0 1 0 13"/></symbol><symbol id="i-router" viewBox="0 0 24 24"><rect x="2.5" y="12.5" width="19" height="7.5" rx="2"/><path d="M6.5 12.5V6M17.5 12.5V6M15 16.25h3.5M9.6 7.4a3.4 3.4 0 0 1 4.8 0M7.9 5.4a5.8 5.8 0 0 1 8.2 0"/><circle cx="6.3" cy="16.25" r=".9" fill="currentColor" stroke="none"/><circle cx="9.3" cy="16.25" r=".9" fill="currentColor" stroke="none"/></symbol><symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol><symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21"/></symbol><symbol id="i-cycle" viewBox="0 0 24 24"><path d="M19 8.5A7.5 7.5 0 0 0 5.2 9M5 15.5A7.5 7.5 0 0 0 18.8 15"/><path d="M19.5 4v4.8h-4.8M4.5 20v-4.8h4.8"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.2c0 4.4-2.9 7.9-7 9.8-4.1-1.9-7-5.4-7-9.8V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol><symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></symbol><symbol id="i-flask" viewBox="0 0 24 24"><path d="M9.5 3.5h5M10.5 3.5v5.2L5.2 18a1.8 1.8 0 0 0 1.6 2.6h10.4a1.8 1.8 0 0 0 1.6-2.6l-5.3-9.3V3.5"/><path d="M7.6 14.5h8.8"/></symbol><symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5c3.2 4.2 6 7.6 6 10.7a6 6 0 0 1-12 0c0-3.1 2.8-6.5 6-10.7z"/><path d="M9.2 14.5a2.9 2.9 0 0 0 2.8 2.6"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c.5 3.5 5 5.5 5 10.5a5 5 0 0 1-10 0c0-2.6 1.4-4.2 2.6-5.4.2 1.8 1 2.9 2.2 3.4C11.5 9 11.2 5.8 12 3z"/></symbol><symbol id="i-tower" viewBox="0 0 24 24"><path d="M7 21l1.5-14h7L17 21zM6 7h12M9 3.5h6M10.5 3.5v3.5M13.5 3.5v3.5M8 14h8"/></symbol><symbol id="i-ro" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="4" rx="2"/><rect x="3" y="13" width="18" height="4" rx="2"/><path d="M6 9h3M6 15h3"/></symbol><symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 9c2-2.6 4-2.6 6 0s4 2.6 6 0 4-2.6 6 0M3 15c2-2.6 4-2.6 6 0s4 2.6 6 0 4-2.6 6 0"/></symbol><symbol id="i-pump" viewBox="0 0 24 24"><circle cx="9" cy="13" r="5.5"/><path d="M9 7.5V4h9v4M14.5 13H20M9 13l2.5-2.5"/></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/></symbol><symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 20.5V10l5 3V10l5 3V6.5h3.5l1 4H21v10z"/><path d="M7 17h2M12 17h2M17 17h1.5"/></symbol><symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 11V5.5a1.5 1.5 0 0 1 3 0V11M11 10V4a1.5 1.5 0 0 1 3 0v6M14 10V5.5a1.5 1.5 0 0 1 3 0V13c0 4-2.5 7-6 7-2.5 0-4-1.2-5.4-3.4L3.8 13.5a1.5 1.5 0 0 1 2.6-1.5L8 14"/></symbol><symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.5h5"/><circle cx="12" cy="3.5" r=".8"/></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/><path d="M19 16.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></symbol><symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol><symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol></svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="AquaMesh home">
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#platform">Platform</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="case-studies/index.html">Case studies</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="company.html">Company</a>
+      </nav>
+      <a class="btn btn-sm" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo</a>
+    </div>
+  </header>
+
+  <main class="cs">
+    <section class="section cs-head">
+      <div class="wrap">
+        <p class="eyebrow">Modeling</p>
+        <h1>A physics model of your plant. <span class="accent">Every fix tested first.</span></h1>
+        <p class="lead">Data shows what happened. Physics explains why, and what would happen if you changed something. AquaMesh keeps a working model of each unit in your plant, matched to your live data, so every recommendation is tested before it reaches the line.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:clamp(36px,5vw,56px)">
+      <div class="wrap">
+        <div class="md-feat">
+          <article>
+            <div class="n"><i><svg class="ic"><use href="#i-cycle" /></svg></i><h3>Learns your plant</h3></div>
+            <p>Re-fits to live data every 15 minutes. Works out the rates nobody measures directly, like how fast a membrane fouls or how well a diffuser really transfers air, and shows how sure it is.</p>
+          </article>
+          <article>
+            <div class="n"><i><svg class="ic"><use href="#i-wave" /></svg></i><h3>Plans ahead</h3></div>
+            <p>Tests each plan against many possible futures across load, weather and water chemistry, then picks the cheapest one that stays inside your permits and quality limits.</p>
+          </article>
+          <article>
+            <div class="n"><i><svg class="ic"><use href="#i-factory" /></svg></i><h3>Sees the whole site</h3></div>
+            <p>Balances water across the plant, flags meters that disagree, and finds reuse between assets, like RO reject going into the cooling tower.</p>
+          </article>
+          <article>
+            <div class="n"><i><svg class="ic"><use href="#i-cal" /></svg></i><h3>Schedules the work</h3></div>
+            <p>Plans cleans, regenerations and backwashes by cost and risk, not by the calendar.</p>
+          </article>
+          <article class="wide">
+            <div class="n"><i><svg class="ic"><use href="#i-shield" /></svg></i><h3>Safe by design</h3></div>
+            <p>Every agent move is simulated first, kept inside hard limits and logged in a record that can't be edited. Your controllers keep running the plant. You choose how far the agents go.</p>
+            <div class="md-modes"><span>Advise</span><span>Approve</span><span>Automate</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wash">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Unit library</p>
+          <h2>One model for each <span class="accent">part of your plant.</span></h2>
+          <p class="lead">Each unit runs on the same core, so calibration, forecasting and scheduling work the same way across the site.</p>
+        </div>
+        <div class="units">
+          <div class="unit"><i><svg class="ic"><use href="#i-tower" /></svg></i><div><b>Cooling towers</b><span>Cycles, blowdown, scaling and inhibitor dose</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-ro" /></svg></i><div><b>RO and NF</b><span>Fouling, cleaning timing and membrane life</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-flame" /></svg></i><div><b>Boilers</b><span>Blowdown, chemistry limits and fuel</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-cycle" /></svg></i><div><b>Ion exchange</b><span>Capacity and regeneration timing</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-flask" /></svg></i><div><b>Neutralizers</b><span>pH and reagent dose</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-spark" /></svg></i><div><b>Biological treatment</b><span>Aeration and nitrogen, run to the permit</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-gauge" /></svg></i><div><b>Distillation</b><span>Column steam, reflux and product strength</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-drop" /></svg></i><div><b>Water chemistry</b><span>Speciation and scaling indices, including silica</span></div></div>
+          <div class="unit"><i><svg class="ic"><use href="#i-pump" /></svg></i><div><b>Pumps</b><span>Schedules against power prices and tank levels</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Why physics</p>
+          <h2>Curve-fitting learns the past. <span class="accent">Physics handles what's next.</span></h2>
+        </div>
+        <div class="md-why">
+          <div><p class="k">Data-only models</p><b>Fit a curve to history</b>
+            <ul><li>Good at what already happened</li><li>Unsure outside the conditions they have seen</li><li>Can't say why a number moved</li></ul></div>
+          <div class="us"><p class="k">AquaMesh</p><b>A calibrated model of each unit</b>
+            <ul><li>Tests changes the plant has never tried</li><li>Names the cause behind a change</li><li>Shows its confidence with every answer</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>See what your plant's model would say.</h2>
+        <p class="lead">Start with the free audit on the data you already record. The model is built from it.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a>
+          <a class="mail" href="mailto:info@aquamesh.ai"><svg class="ic"><use href="#i-mail" /></svg>info@aquamesh.ai</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <svg class="wordmark" viewBox="0 -4 986 132" role="img" aria-label="AquaMesh"><use href="#wordmark" /></svg>
+        <p class="footer-tag">The Autopilot For Industrial Water</p>
+      </div>
+      <p class="footer-links"><a href="industries/food-beverage.html">Food &amp; Beverage</a> · <a href="industries/industrial-water.html">Industrial Water</a> · <a href="industries/manufacturing.html">Manufacturing</a> · <a href="industries/municipal.html">Municipal</a> · <a href="industries/pharma-biotech.html">Pharma &amp; Biotech</a> · <a href="industries/data-centers.html">Data Centers</a><br /><a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="terms.html">Terms</a> · <a href="do-not-sell.html">Your Privacy Choices</a></p>
+      <p class="footer-meta">© AquaMesh Inc. 2026 · <a href="mailto:info@aquamesh.ai">info@aquamesh.ai</a> &middot; <a href="https://www.linkedin.com/company/aquamesh" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+<script src="consent.js?v=2"></script>
+  <script src="nav.js?v=1" defer></script>
+</body>
+</html>
