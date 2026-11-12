@@ -1,6 +1,6 @@
 # AquaMesh — complete blog text
 # Operational AI for industrial water: finds what a plant is losing in product, energy and chemicals, prices it, and tells operators what to change.
-# Generated 2026-11-12T00:42:07.151Z · 17 posts · quotable with attribution to https://aquamesh.ai
+# Generated 2026-11-12T00:42:44.347Z · 17 posts · quotable with attribution to https://aquamesh.ai
 
 
 ==============================================================================
@@ -718,7 +718,7 @@ This is a modelled example using published benchmarks; actual values depend on p
 
 When DO measurement in an intermittent aeration system is continuous, accurate, and corrected against drift between calibration intervals, the control loop can do what it was designed for: maintain the aerobic-to-anoxic balance that both nitrification and denitrification require.
 
-For plants approaching permit limits on total nitrogen, the margin for process error is narrow. The compliance exposure those limits create -- specifically what the scheduled DMR sampling program can and cannot see on unmonitored days -- is covered in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html). A sensor that introduces a systematic offset into the timing of aeration cycles is a measurement problem that manifests as an effluent compliance risk. The issue is usually visible in the historian data before it appears in the permit reporting: aerobic phase durations extending over time, DO baseline at cycle start gradually increasing, nitrogen removal efficiency declining in ways that do not correlate with influent load.
+For plants approaching permit limits on total nitrogen, the margin for process error is narrow. The compliance exposure those limits create -- specifically what the scheduled DMR sampling program can and cannot see on unmonitored days -- is covered in [NPDES nitrogen permit compliance: the DMR sampling gap](/blog/nitrogen-permit-compliance-sampling-gap.html). A sensor that introduces a systematic offset into the timing of aeration cycles is a measurement problem that manifests as an effluent compliance risk. The same monitoring gap -- scheduled samples capturing a narrow window of actual operating conditions -- applies to industrial dischargers under the National Pretreatment Program: [industrial pretreatment: the self-monitoring blind spot](/blog/industrial-pretreatment-self-monitoring-gaps.html). The issue is usually visible in the historian data before it appears in the permit reporting: aerobic phase durations extending over time, DO baseline at cycle start gradually increasing, nitrogen removal efficiency declining in ways that do not correlate with influent load.
 
 The diagnostic questions are the same ones that apply to continuous aeration systems. Are the DO sensors reading accurately between calibrations? Does blower runtime at a given influent load match what the setpoints predict? Are cycle times stable, or are they drifting? The methodology for that analysis is in [aeration energy at wastewater plants: the cost, the waste, and the measurement gap](https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html).
 
