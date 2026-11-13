@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 01:11:15 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 01:11:40 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Industrial pretreatment: the self-monitoring blind spot</title>
@@ -13,10 +13,7 @@
       <guid isPermaLink="true">https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html</guid>
       <pubDate>Thu, 12 Nov 2026 09:00:00 GMT</pubDate>
       <description>Monthly or quarterly grab samples miss cleaning cycles and batch upsets. Under 40 CFR Part 403, industrial dischargers bear the compliance cost of that gap.</description>
-      <content:encoded><![CDATA[<hr />
-<p>title: Industrial pretreatment: the self-monitoring blind spot slug: industrial-pretreatment-self-monitoring-gaps date: 2026-11-12 section: Regulation description: Monthly or quarterly grab samples miss cleaning cycles and batch upsets. Under 40 CFR Part 403, industrial dischargers bear the compliance cost of that gap. tags: pretreatment, industrial discharge, compliance, self-monitoring, POTW, 40 CFR Part 403, BOD, TSS</p>
-<hr />
-<p>Industrial facilities discharging process water to a publicly owned treatment works (POTW) operate under a monitoring program designed around the administrative capacity of the 1970s. That program, the National Pretreatment Program, still forms the compliance backbone for thousands of manufacturers, food processors and industrial facilities in the United States. Its self-monitoring requirements are legally adequate. They are not designed to capture what modern batch and cyclic operations actually produce.</p>
+      <content:encoded><![CDATA[<p>Industrial facilities discharging process water to a publicly owned treatment works (POTW) operate under a monitoring program designed around the administrative capacity of the 1970s. That program, the National Pretreatment Program, still forms the compliance backbone for thousands of manufacturers, food processors and industrial facilities in the United States. Its self-monitoring requirements are legally adequate. They are not designed to capture what modern batch and cyclic operations actually produce.</p>
 <h2 id="what-the-regulations-require">What the regulations require</h2>
 <p>The National Pretreatment Program is codified at <a href="https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-403" rel="noopener">40 CFR Part 403</a>. Its core requirement is that industrial users (IUs) discharging to a POTW must meet applicable pretreatment standards and report compliance to the control authority, which is usually the POTW itself.</p>
 <p>Categorical pretreatment standards set technology-based discharge limits for specific industry categories. The reporting requirements at <a href="https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-403/section-403.12" rel="noopener">40 CFR Section 403.12</a> require significant industrial users (SIUs) to submit semi-annual self-monitoring reports. These reports cover the pollutants identified in the facility's permit, based on samples taken during a "representative period of daily operations."</p>
@@ -40,7 +37,7 @@
 <h2 id="a-practical-starting-point">A practical starting point</h2>
 <p>Understanding actual discharge variability is the first step. A facility that has installed flow measurement and online organic-load measurement at its final discharge point can generate a profile of daily load variation over a quarter. That data answers two questions: how often do high-load events occur, and do they correlate with identifiable process events such as cleaning schedules, batch cycles or production changeovers?</p>
 <p>If the high-load events are identifiable, they can often be managed operationally: equalization tanks, staggered CIP cycles or modified flush procedures. If they are infrequent, the facility has documentation that the quarterly grab sample is statistically likely to be representative. If they are common, the facility knows before the POTW does.</p>
-<p>The same historian-based methodology that reveals these patterns in continuous sensor data is described in <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of historian data actually shows</a>. The relationship between DO measurement precision and the compliance exposure that surfaces in permit reports is examined in <a href="/blog/intermittent-aeration-nitrogen-removal-do-control.html">intermittent aeration: why DO sensor precision matters</a>.</p>
+<p>The same historian-based methodology that reveals these patterns in continuous sensor data is described in <a href="/blog/what-25-days-of-historian-data-shows.html">what 25 days of historian data actually shows</a>. The relationship between DO measurement precision and the compliance exposure that surfaces in permit reports is examined in <a href="/blog/intermittent-aeration-nitrogen-removal-do-control.html">intermittent aeration: why DO sensor precision matters</a>. For facilities evaluating continuous online monitoring as a complement to periodic grab sampling, what sensors can and cannot do for official compliance purposes is examined in <a href="/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html">online sensors vs. lab sampling for discharge compliance</a>.</p>
 <p>Whether your facility's current self-monitoring program is capturing the events that drive your compliance exposure is worth checking before the POTW does it for you. <a href="https://aquamesh.ai">See how AquaMesh maps discharge variability from operational historian data</a>.</p>
 <p><em>Author: Alex Towfigh, AquaMesh</em></p>]]></content:encoded>
       <category>pretreatment</category>

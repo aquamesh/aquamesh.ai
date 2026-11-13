@@ -7,15 +7,6 @@ description: Monthly or quarterly grab samples miss cleaning cycles and batch up
 tags: pretreatment, industrial discharge, compliance, self-monitoring, POTW, 40 CFR Part 403, BOD, TSS
 ---
 
----
-title: Industrial pretreatment: the self-monitoring blind spot
-slug: industrial-pretreatment-self-monitoring-gaps
-date: 2026-11-12
-section: Regulation
-description: Monthly or quarterly grab samples miss cleaning cycles and batch upsets. Under 40 CFR Part 403, industrial dischargers bear the compliance cost of that gap.
-tags: pretreatment, industrial discharge, compliance, self-monitoring, POTW, 40 CFR Part 403, BOD, TSS
----
-
 Industrial facilities discharging process water to a publicly owned treatment works (POTW) operate under a monitoring program designed around the administrative capacity of the 1970s. That program, the National Pretreatment Program, still forms the compliance backbone for thousands of manufacturers, food processors and industrial facilities in the United States. Its self-monitoring requirements are legally adequate. They are not designed to capture what modern batch and cyclic operations actually produce.
 
 ## What the regulations require
@@ -66,7 +57,7 @@ Understanding actual discharge variability is the first step. A facility that ha
 
 If the high-load events are identifiable, they can often be managed operationally: equalization tanks, staggered CIP cycles or modified flush procedures. If they are infrequent, the facility has documentation that the quarterly grab sample is statistically likely to be representative. If they are common, the facility knows before the POTW does.
 
-The same historian-based methodology that reveals these patterns in continuous sensor data is described in [what 25 days of historian data actually shows](/blog/what-25-days-of-historian-data-shows.html). The relationship between DO measurement precision and the compliance exposure that surfaces in permit reports is examined in [intermittent aeration: why DO sensor precision matters](/blog/intermittent-aeration-nitrogen-removal-do-control.html).
+The same historian-based methodology that reveals these patterns in continuous sensor data is described in [what 25 days of historian data actually shows](/blog/what-25-days-of-historian-data-shows.html). The relationship between DO measurement precision and the compliance exposure that surfaces in permit reports is examined in [intermittent aeration: why DO sensor precision matters](/blog/intermittent-aeration-nitrogen-removal-do-control.html). For facilities evaluating continuous online monitoring as a complement to periodic grab sampling, what sensors can and cannot do for official compliance purposes is examined in [online sensors vs. lab sampling for discharge compliance](/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html).
 
 Whether your facility's current self-monitoring program is capturing the events that drive your compliance exposure is worth checking before the POTW does it for you. [See how AquaMesh maps discharge variability from operational historian data](https://aquamesh.ai).
 
