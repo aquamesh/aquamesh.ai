@@ -1,18 +1,6 @@
 {
-  "at": "2026-11-12T21:05:40.256Z",
+  "at": "2026-11-13T20:38:51.994Z",
   "findings": [
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/hardware.html",
-      "msg": "meta description is 187 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
-    },
     {
       "sev": "warn",
       "id": "desc-length",
@@ -24,6 +12,18 @@
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/company.html",
       "msg": "Article missing dateModified, image"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/hardware.html",
+      "msg": "meta description is 187 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -75,6 +75,48 @@
     },
     {
       "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
+      "msg": "title is 66 chars; Google truncates near 60: \"Industrial pretreatment: the self-monitoring blind spot | AquaMesh\""
+    },
+    {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+    },
+    {
+      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/case-studies/refinery-complex.html",
       "msg": "title is 73 chars; Google truncates near 60: \"Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh\""
@@ -98,58 +140,10 @@
       "msg": "HTML is 1841 KB"
     },
     {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-      "msg": "title is 66 chars; Google truncates near 60: \"Industrial pretreatment: the self-monitoring blind spot | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-      "msg": "links to https://www.epa.gov/npdes/industrial-pretreatment-program (404)"
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/ammonia-sensor-drift-wastewater-aeration-control.html",
-      "msg": "links to https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=236566 (unreachable)"
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/ammonia-sensor-drift-wastewater-aeration-control.html",
-      "msg": "links to https://www.wef.org/resources/publications/manuals-of-practice/ (404)"
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
       "sev": "warn",
@@ -158,16 +152,16 @@
       "msg": "title is 67 chars; Google truncates near 60: \"The $1.5M sewer repair: what discharge monitoring missed | AquaMesh\""
     },
     {
-      "sev": "warn",
-      "id": "external-link-broken",
+      "sev": "error",
+      "id": "link-broken",
       "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
-      "msg": "links to https://www.epa.gov/enforcement/clean-water-act-enforcement (404)"
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
-      "msg": "Article missing image"
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
       "sev": "warn",
@@ -184,6 +178,12 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
+      "msg": "Article missing image"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
@@ -192,12 +192,6 @@
       "id": "geo-org-author",
       "url": "https://aquamesh.ai/blog/",
       "msg": "17 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
-    },
-    {
-      "sev": "info",
-      "id": "press-no-link",
-      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
-      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     },
     {
       "sev": "warn",
@@ -234,15 +228,18 @@
       "id": "cwv-cls",
       "url": "https://aquamesh.ai/industries/industrial-water.html",
       "msg": "CLS 0.146 (good is under 0.1)"
+    },
+    {
+      "sev": "info",
+      "id": "press-no-link",
+      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
+      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     }
   ],
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
-    "Crawled 50 live pages and 71 assets and files, plus 68 external links.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 46 new or changed URL(s) (HTTP 200).",
-    "Checked 3 trade-press article(s): 2 link to aquamesh.ai.",
-    "Ran Lighthouse (mobile) on 5 pages.",
-    "Asked an AI answer engine 0 buyer questions; aquamesh.ai was cited in 0 ($0)."
+    "Crawled 51 live pages and 71 assets and files.",
+    "Told IndexNow (Bing, Copilot, Yandex) about 5 new or changed URL(s) (HTTP 200)."
   ],
   "lighthouse": {
     "at": "2026-11-12T21:05:40.256Z",
@@ -412,10 +409,10 @@
     "cited": []
   },
   "indexnow": {
-    "at": "2026-11-12T21:05:40.256Z",
+    "at": "2026-11-13T20:38:51.994Z",
     "ok": true,
     "status": 200,
-    "sent": 46,
+    "sent": 5,
     "note": ""
   },
   "fix": null

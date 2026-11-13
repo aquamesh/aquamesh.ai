@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "lastRunAt": "2026-11-12T21:05:40.256Z",
+  "lastRunAt": "2026-11-13T20:38:51.994Z",
   "weeklyAt": "2026-11-12T21:05:40.256Z",
   "findings": [
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/hardware.html",
-      "msg": "meta description is 187 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
-    },
     {
       "sev": "warn",
       "id": "desc-length",
@@ -26,6 +14,18 @@
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/company.html",
       "msg": "Article missing dateModified, image"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/hardware.html",
+      "msg": "meta description is 187 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -77,6 +77,48 @@
     },
     {
       "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
+      "msg": "title is 66 chars; Google truncates near 60: \"Industrial pretreatment: the self-monitoring blind spot | AquaMesh\""
+    },
+    {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+    },
+    {
+      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/case-studies/refinery-complex.html",
       "msg": "title is 73 chars; Google truncates near 60: \"Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh\""
@@ -100,58 +142,10 @@
       "msg": "HTML is 1841 KB"
     },
     {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-      "msg": "title is 66 chars; Google truncates near 60: \"Industrial pretreatment: the self-monitoring blind spot | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-      "msg": "links to https://www.epa.gov/npdes/industrial-pretreatment-program (404)"
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/ammonia-sensor-drift-wastewater-aeration-control.html",
-      "msg": "links to https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=236566 (unreachable)"
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/ammonia-sensor-drift-wastewater-aeration-control.html",
-      "msg": "links to https://www.wef.org/resources/publications/manuals-of-practice/ (404)"
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
       "sev": "warn",
@@ -160,16 +154,16 @@
       "msg": "title is 67 chars; Google truncates near 60: \"The $1.5M sewer repair: what discharge monitoring missed | AquaMesh\""
     },
     {
-      "sev": "warn",
-      "id": "external-link-broken",
+      "sev": "error",
+      "id": "link-broken",
       "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
-      "msg": "links to https://www.epa.gov/enforcement/clean-water-act-enforcement (404)"
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
-      "msg": "Article missing image"
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
       "sev": "warn",
@@ -186,6 +180,12 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
+      "msg": "Article missing image"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
@@ -194,12 +194,6 @@
       "id": "geo-org-author",
       "url": "https://aquamesh.ai/blog/",
       "msg": "17 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
-    },
-    {
-      "sev": "info",
-      "id": "press-no-link",
-      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
-      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     },
     {
       "sev": "warn",
@@ -236,65 +230,71 @@
       "id": "cwv-cls",
       "url": "https://aquamesh.ai/industries/industrial-water.html",
       "msg": "CLS 0.146 (good is under 0.1)"
+    },
+    {
+      "sev": "info",
+      "id": "press-no-link",
+      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
+      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     }
   ],
   "pageHashes": {
-    "https://aquamesh.ai/hardware.html": "c37c3400cb5e1e8d",
-    "https://aquamesh.ai/": "236507e403a85592",
     "https://aquamesh.ai/modeling.html": "56e4ba13fdc86d96",
-    "https://aquamesh.ai/products/mechtrack.html": "bd92359c3e6ed675",
     "https://aquamesh.ai/company.html": "438581644a2d8416",
+    "https://aquamesh.ai/": "236507e403a85592",
+    "https://aquamesh.ai/hardware.html": "c37c3400cb5e1e8d",
     "https://aquamesh.ai/products/aquaspectra.html": "f817fb3ccb35e0b1",
+    "https://aquamesh.ai/products/mechtrack.html": "bd92359c3e6ed675",
+    "https://aquamesh.ai/products/asona.html": "f40b1697526a238d",
     "https://aquamesh.ai/products/aqualink-hub.html": "87e760323fc29038",
     "https://aquamesh.ai/products/compute-blade.html": "99004a02ee6ef8d5",
-    "https://aquamesh.ai/products/asona.html": "f40b1697526a238d",
     "https://aquamesh.ai/case-studies/": "c21d706ccd3c7e26",
-    "https://aquamesh.ai/case-studies/starch-plant.html": "dedc15211c725376",
     "https://aquamesh.ai/case-studies/dairy-plant.html": "a7c9f690f4bc72a4",
-    "https://aquamesh.ai/case-studies/bottling-plant.html": "3241ae1365ce8460",
     "https://aquamesh.ai/case-studies/water-reuse-plant.html": "9e2ca8cdc33bcff2",
+    "https://aquamesh.ai/case-studies/bottling-plant.html": "3241ae1365ce8460",
+    "https://aquamesh.ai/case-studies/starch-plant.html": "dedc15211c725376",
     "https://aquamesh.ai/blog/": "e6806d7a8d4a0e27",
-    "https://aquamesh.ai/industries/manufacturing.html": "98769341442727df",
     "https://aquamesh.ai/industries/food-beverage.html": "5940a47c8711afd0",
     "https://aquamesh.ai/industries/industrial-water.html": "7585c80f93563841",
-    "https://aquamesh.ai/case-studies/phosphate-complex.html": "ad8a3f92770f3681",
+    "https://aquamesh.ai/industries/manufacturing.html": "98769341442727df",
     "https://aquamesh.ai/industries/municipal.html": "37aa58af6b96c3af",
+    "https://aquamesh.ai/case-studies/phosphate-complex.html": "ad8a3f92770f3681",
+    "https://aquamesh.ai/industries/pharma-biotech.html": "385b15144ef4604c",
     "https://aquamesh.ai/industries/data-centers.html": "3a9008b3b656f65f",
     "https://aquamesh.ai/privacy.html": "2813f2a3c61a83e3",
-    "https://aquamesh.ai/case-studies/refinery-complex.html": "c6839a761a96c282",
-    "https://aquamesh.ai/industries/pharma-biotech.html": "385b15144ef4604c",
     "https://aquamesh.ai/cookies.html": "4f52f10d6715f5b5",
-    "https://aquamesh.ai/terms.html": "cb0e8002f575c725",
     "https://aquamesh.ai/do-not-sell.html": "322389c9276e71ed",
-    "https://aquamesh.ai/basin/methodology.html": "c7764f0bc5db556e",
+    "https://aquamesh.ai/terms.html": "cb0e8002f575c725",
     "https://aquamesh.ai/basin/": "339b2d3fdf0cec31",
-    "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html": "17b30c66dc865ddc",
-    "https://aquamesh.ai/blog/ammonia-sensor-drift-wastewater-aeration-control.html": "fe189153f5511145",
-    "https://aquamesh.ai/blog/ph-sensor-drift-wastewater-activated-sludge.html": "441e617f346cc619",
-    "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html": "c945b9c559a22363",
+    "https://aquamesh.ai/basin/methodology.html": "c7764f0bc5db556e",
+    "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html": "5ca042ee3e488fa4",
+    "https://aquamesh.ai/blog/ammonia-sensor-drift-wastewater-aeration-control.html": "32dc362afcd7edbe",
+    "https://aquamesh.ai/case-studies/refinery-complex.html": "c6839a761a96c282",
     "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html": "7aec22708f5f03af",
+    "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html": "0667dc3594b1fa59",
     "https://aquamesh.ai/blog/cooling-tower-blowdown-conductivity-sensor-drift.html": "9d7ef47287d74e16",
-    "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html": "9b9694e5999e9129",
-    "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html": "f29300f419170954",
-    "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html": "df884e9ab2cdd897",
+    "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html": "7cb9941d4d25c114",
     "https://aquamesh.ai/blog/intermittent-aeration-nitrogen-removal-do-control.html": "f07f7a061ed3a37f",
-    "https://aquamesh.ai/blog/dairy-foods-process-losses.html": "173cd3ab8ffc5929",
-    "https://aquamesh.ai/blog/california-data-center-water-reporting.html": "deeccb0b248e5eba",
-    "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html": "5cb101c9ca70fdf8",
+    "https://aquamesh.ai/blog/data-center-wue-measurement-gap.html": "f29300f419170954",
+    "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html": "32c110639585939b",
     "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html": "3b678719bf07246d",
+    "https://aquamesh.ai/blog/ph-sensor-drift-wastewater-activated-sludge.html": "441e617f346cc619",
     "https://aquamesh.ai/blog/what-25-days-of-historian-data-shows.html": "abbe8a553fd7336a",
-    "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html": "7cefb96b13fca65d",
-    "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html": "4df933b16e698cae",
+    "https://aquamesh.ai/blog/dairy-foods-process-losses.html": "173cd3ab8ffc5929",
     "https://aquamesh.ai/blog/connect-press-release-physical-ai.html": "0e392681a970106a",
-    "https://aquamesh.ai/insights/spectral-sensing-ai-industrial-water.html": "2aa6d0ed0011b015",
+    "https://aquamesh.ai/blog/california-data-center-water-reporting.html": "deeccb0b248e5eba",
+    "https://aquamesh.ai/blog/why-parallel-equipment-drifts.html": "4df933b16e698cae",
+    "https://aquamesh.ai/blog/spectral-change-analysis-vs-calibrated-parameters.html": "5cb101c9ca70fdf8",
     "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html": "edde07d09dad759b",
+    "https://aquamesh.ai/insights/spectral-sensing-ai-industrial-water.html": "2aa6d0ed0011b015",
+    "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html": "7cefb96b13fca65d",
     "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html": "154f980897d63262"
   },
   "indexnow": {
-    "at": "2026-11-12T21:05:40.256Z",
+    "at": "2026-11-13T20:38:51.994Z",
     "ok": true,
     "status": 200,
-    "sent": 46,
+    "sent": 5,
     "note": ""
   },
   "lighthouse": {
