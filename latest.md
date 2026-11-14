@@ -1,4 +1,4 @@
-# SEO report, 2026-11-13
+# SEO report, 2026-11-14
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-12). Site errors: 4.
 
@@ -40,10 +40,8 @@ Cited in AI answers to 0 of the tracked buyer questions.
 - **link-broken** (4)
   - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/nitrogen-permit-compliance-sampling-gap.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
-  - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/do-sensor-calibration-interval-activated-sludge.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
-
-Since the last run: 4 new, 4 resolved.
+  - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
 
 <details><summary>Core Web Vitals, lab, mobile (2026-11-12)</summary>
 
@@ -60,15 +58,15 @@ Since the last run: 4 new, 4 resolved.
 <details><summary>33 warnings</summary>
 
 - **desc-length** (9)
-  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/`: meta description is 183 chars (aim for 70 to 160)
   - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
-  - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
+  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
+  - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
-  - `/basin/`: meta description is 171 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
+  - `/basin/`: meta description is 171 chars (aim for 70 to 160)
 - **title-length** (5)
   - `/case-studies/dairy-plant.html`: title is 68 chars; Google truncates near 60: "Case study — $1.17M a year in a dairy plant’s own records | AquaMesh"
   - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: title is 66 chars; Google truncates near 60: "Industrial pretreatment: the self-monitoring blind spot | AquaMesh"
@@ -77,14 +75,14 @@ Since the last run: 4 new, 4 resolved.
   - `/blog/connect-press-release-physical-ai.html`: title is 70 chars; Google truncates near 60: "AquaMesh physical AI: early detection for industrial plants | AquaMesh"
 - **jsonld-article-fields** (4)
   - `/company.html`: Article missing dateModified, image
-  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
   - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
   - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
+  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **og-missing** (4)
+  - `/terms.html`: missing og:title, og:description; link previews degrade
   - `/privacy.html`: missing og:title, og:description; link previews degrade
   - `/cookies.html`: missing og:title, og:description; link previews degrade
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
-  - `/terms.html`: missing og:title, og:description; link previews degrade
 - **jsonld-missing** (3)
   - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
@@ -116,7 +114,7 @@ Since the last run: 4 new, 4 resolved.
 
 - Rebuilt the blog from committed sources: output already matches, nothing to commit.
 - Crawled 51 live pages and 71 assets and files.
-- Told IndexNow (Bing, Copilot, Yandex) about 5 new or changed URL(s) (HTTP 200).
+- IndexNow: no page content changed since the last run, nothing to submit.
 
 </details>
 

@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "lastRunAt": "2026-11-13T20:38:51.994Z",
+  "lastRunAt": "2026-11-14T18:50:38.508Z",
   "weeklyAt": "2026-11-12T21:05:40.256Z",
   "findings": [
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/modeling.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -18,26 +18,26 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
       "url": "https://aquamesh.ai/hardware.html",
       "msg": "meta description is 187 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/products/aquaspectra.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/modeling.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/",
       "msg": "meta description is 250 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/products/aquaspectra.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -72,6 +72,12 @@
     {
       "sev": "warn",
       "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
       "url": "https://aquamesh.ai/privacy.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
@@ -86,18 +92,6 @@
       "id": "og-missing",
       "url": "https://aquamesh.ai/do-not-sell.html",
       "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -142,9 +136,21 @@
       "msg": "HTML is 1841 KB"
     },
     {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
       "sev": "error",
       "id": "link-broken",
       "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+    },
+    {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
@@ -160,22 +166,10 @@
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
-      "sev": "error",
-      "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
-      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
-    },
-    {
       "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
       "msg": "title is 70 chars; Google truncates near 60: \"AquaMesh physical AI: early detection for industrial plants | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
-      "msg": "Article missing image"
     },
     {
       "sev": "warn",
@@ -187,6 +181,12 @@
       "sev": "warn",
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "msg": "Article missing image"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
       "msg": "Article missing image"
     },
     {
