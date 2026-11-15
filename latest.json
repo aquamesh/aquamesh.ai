@@ -1,6 +1,12 @@
 {
-  "at": "2026-11-14T18:50:38.508Z",
+  "at": "2026-11-15T19:28:07.695Z",
   "findings": [
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/modeling.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
+    },
     {
       "sev": "warn",
       "id": "desc-length",
@@ -22,20 +28,14 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/modeling.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/products/aquaspectra.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/",
       "msg": "meta description is 250 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/products/aquaspectra.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -70,13 +70,13 @@
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
+      "url": "https://aquamesh.ai/privacy.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
+      "url": "https://aquamesh.ai/do-not-sell.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
@@ -88,26 +88,8 @@
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
+      "url": "https://aquamesh.ai/terms.html",
       "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "title-length",
-      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-      "msg": "title is 66 chars; Google truncates near 60: \"Industrial pretreatment: the self-monitoring blind spot | AquaMesh\""
-    },
-    {
-      "sev": "error",
-      "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
       "sev": "warn",
@@ -138,6 +120,24 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/basin/",
       "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "title-length",
+      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
+      "msg": "title is 66 chars; Google truncates near 60: \"Industrial pretreatment: the self-monitoring blind spot | AquaMesh\""
+    },
+    {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
     },
     {
       "sev": "error",

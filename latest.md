@@ -1,4 +1,4 @@
-# SEO report, 2026-11-14
+# SEO report, 2026-11-15
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-12). Site errors: 4.
 
@@ -58,19 +58,19 @@ Cited in AI answers to 0 of the tracked buyer questions.
 <details><summary>33 warnings</summary>
 
 - **desc-length** (9)
+  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/`: meta description is 183 chars (aim for 70 to 160)
   - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
-  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
-  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
+  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
 - **title-length** (5)
   - `/case-studies/dairy-plant.html`: title is 68 chars; Google truncates near 60: "Case study — $1.17M a year in a dairy plant’s own records | AquaMesh"
-  - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: title is 66 chars; Google truncates near 60: "Industrial pretreatment: the self-monitoring blind spot | AquaMesh"
   - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
+  - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: title is 66 chars; Google truncates near 60: "Industrial pretreatment: the self-monitoring blind spot | AquaMesh"
   - `/blog/water-online-sewer-repair-evidence.html`: title is 67 chars; Google truncates near 60: "The $1.5M sewer repair: what discharge monitoring missed | AquaMesh"
   - `/blog/connect-press-release-physical-ai.html`: title is 70 chars; Google truncates near 60: "AquaMesh physical AI: early detection for industrial plants | AquaMesh"
 - **jsonld-article-fields** (4)
@@ -79,14 +79,14 @@ Cited in AI answers to 0 of the tracked buyer questions.
   - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
   - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **og-missing** (4)
-  - `/terms.html`: missing og:title, og:description; link previews degrade
   - `/privacy.html`: missing og:title, og:description; link previews degrade
-  - `/cookies.html`: missing og:title, og:description; link previews degrade
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
+  - `/cookies.html`: missing og:title, og:description; link previews degrade
+  - `/terms.html`: missing og:title, og:description; link previews degrade
 - **jsonld-missing** (3)
   - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
-  - `/basin/methodology.html`: no JSON-LD structured data
   - `/case-studies/refinery-complex.html`: no JSON-LD structured data
+  - `/basin/methodology.html`: no JSON-LD structured data
 - **cwv-lcp** (3)
   - `/`: LCP 2.9s on mobile (good is under 2.5s); element: <p class="lead">
   - `/blog/`: LCP 2.5s on mobile (good is under 2.5s); element: <h1>
