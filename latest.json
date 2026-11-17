@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16T23:00:31.319Z",
+  "at": "2026-11-17T21:54:09.807Z",
   "findings": [
     {
       "sev": "warn",
@@ -10,8 +10,8 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/modeling.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -22,8 +22,14 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/modeling.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/products/aquaspectra.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -42,12 +48,6 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
       "msg": "meta description is 191 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/products/aquaspectra.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -76,13 +76,13 @@
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
+      "url": "https://aquamesh.ai/cookies.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
+      "url": "https://aquamesh.ai/terms.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
@@ -100,8 +100,26 @@
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
+      "url": "https://aquamesh.ai/privacy.html",
       "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "html-weight",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "HTML is 1383 KB"
     },
     {
       "sev": "warn",
@@ -147,27 +165,15 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "html-weight",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "HTML is 1383 KB"
-    },
-    {
-      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
       "msg": "title is 70 chars; Google truncates near 60: \"AquaMesh physical AI: early detection for industrial plants | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
+      "msg": "Article missing image"
     },
     {
       "sev": "warn",
@@ -179,12 +185,6 @@
       "sev": "warn",
       "id": "jsonld-article-fields",
       "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
-      "msg": "Article missing image"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
       "msg": "Article missing image"
     },
     {
