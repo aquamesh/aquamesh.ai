@@ -1,4 +1,4 @@
-# SEO report, 2026-11-17
+# SEO report, 2026-11-18
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-12). Site errors: 4.
 
@@ -59,14 +59,14 @@ Cited in AI answers to 0 of the tracked buyer questions.
 
 - **desc-length** (9)
   - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
-  - `/`: meta description is 183 chars (aim for 70 to 160)
   - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
+  - `/`: meta description is 183 chars (aim for 70 to 160)
   - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
-  - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
-  - `/basin/`: meta description is 171 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
+  - `/basin/`: meta description is 171 chars (aim for 70 to 160)
+  - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
 - **title-length** (5)
   - `/case-studies/dairy-plant.html`: title is 68 chars; Google truncates near 60: "Case study — $1.17M a year in a dairy plant’s own records | AquaMesh"
   - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
@@ -79,13 +79,13 @@ Cited in AI answers to 0 of the tracked buyer questions.
   - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
   - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **og-missing** (4)
-  - `/cookies.html`: missing og:title, og:description; link previews degrade
-  - `/terms.html`: missing og:title, og:description; link previews degrade
-  - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
   - `/privacy.html`: missing og:title, og:description; link previews degrade
+  - `/cookies.html`: missing og:title, og:description; link previews degrade
+  - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
+  - `/terms.html`: missing og:title, og:description; link previews degrade
 - **jsonld-missing** (3)
-  - `/case-studies/refinery-complex.html`: no JSON-LD structured data
   - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
+  - `/case-studies/refinery-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
 - **cwv-lcp** (3)
   - `/`: LCP 2.9s on mobile (good is under 2.5s); element: <p class="lead">
@@ -96,8 +96,8 @@ Cited in AI answers to 0 of the tracked buyer questions.
   - `/case-studies/water-reuse-plant.html`: CLS 0.119 (good is under 0.1)
   - `/industries/industrial-water.html`: CLS 0.146 (good is under 0.1)
 - **html-weight** (2)
-  - `/case-studies/refinery-complex.html`: HTML is 1841 KB
   - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
+  - `/case-studies/refinery-complex.html`: HTML is 1841 KB
 
 </details>
 
