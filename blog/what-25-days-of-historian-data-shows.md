@@ -18,7 +18,7 @@ image: assets/audit/fig1.jpg
 tags: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor
 ---
 
-A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and pump cycling at more than twenty times the design rate.
+A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and reuse totalisers that had stopped recording.
 
 The method is repeatable on any plant with a SCADA or DCS historian: pull an export, locate the parallel equipment pairs, compare each one's performance against the plant's own posted operating ranges, and price every gap that falls outside them. The rest of this post covers that method in detail.
 
@@ -75,11 +75,11 @@ One caveat worth repeating: a fouled DO probe can sit on an offset and still res
 
 Airflow tracked the permeate rate almost perfectly, R-squared of 1.00, at a ratio well above the manufacturer's specific-scour guidance. Trimming toward the guideline at the measured flux, using the controls already installed, came to $5,391 a year. That was the largest no-capital line on the list.
 
-### Pumps starting every twenty-five seconds
+### Pumps running in two-minute bursts
 
-Reclaimed water pumps were logging 13 to 28 starts an hour against a manufacturer guideline near six for pumps that size. One asset logged 143 in an hour, a start every twenty-five seconds.
+Each reclaimed water pump started about 20 times a day and ran for two to three minutes at a time. That is under one start an hour, well inside the roughly six an hour that manufacturers allow for pumps that size, so this was not short-cycling. An earlier version of this post said it was: dividing lifetime starts by run hours gives 13 to 28 starts an hour, but the limit is per clock hour, and per clock hour the pumps were at 0.8.
 
-Every start draws locked-rotor current and heats the windings far more than running does. The [DOE's "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.energy.gov/sites/prod/files/2014/05/f16/pump.pdf) documents the relationship between start frequency and insulation aging: permissible starts per hour depend on motor frame size and thermal class, and the typical industrial limit for motors in the fractional to ten-horsepower range is well below what this historian was recording. This is a control deadband adjustment, not a purchase, and it was quietly writing a bill in motors, starters, and contactors: about $3,500 a year.
+Short runs still matter. Every start draws locked-rotor current, and the [DOE's "Improving Pumping System Performance: A Sourcebook for Industry"](https://www.energy.gov/sites/prod/files/2014/05/f16/pump.pdf) covers how start frequency wears motors and starters. A wider pressure deadband gives fewer, longer runs: a settings change, not a purchase. One other asset logged about 91 starts a day while its hour meter never moved, which is a field check, not a finding.
 
 ### Sixteen of sixteen reuse totalisers frozen
 

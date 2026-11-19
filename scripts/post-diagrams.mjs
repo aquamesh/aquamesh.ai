@@ -37,25 +37,27 @@ export const DIAGRAMS = {
   </g>
 </svg>`,
 
-/* starts per hour against manufacturer guidance */
-'pump-starts': `<svg class="dia" viewBox="0 0 960 260" role="img" aria-label="Pump starts per hour. Manufacturer guidance is near six an hour. Observed range was 13 to 28, with one asset logging 143 in an hour — a start every 25 seconds.">
+/* starts per clock hour against manufacturer guidance */
+'pump-starts': `<svg class="dia" viewBox="0 0 960 260" role="img" aria-label="Pump starts per clock hour. Manufacturer guidance is near six an hour. The reclaimed pumps in the record started about 0.8 times an hour; another asset about 3.8. Dividing lifetime starts by run hours instead gives a misleading 13 to 28.">
   <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="60" y="40" font-size="15" fill="${INK3}">Starts per clock hour. Divide by run hours instead and the same pumps look like 13–28/h.</text>
     <path d="M60 150 H900" stroke="${RULE}" stroke-width="3"/>
     <g>
-      <path d="M100 136 V164" stroke="${GREEN}" stroke-width="3"/>
-      <text x="100" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="${GREEN}">~6/h</text>
-      <text x="100" y="192" text-anchor="middle" font-size="13" fill="${INK3}">guidance</text>
+      <circle cx="147" cy="150" r="10" fill="${GREEN}"/>
+      <text x="147" y="124" text-anchor="middle" font-size="16" font-weight="800" fill="${GREEN}">0.8/h</text>
+      <text x="147" y="192" text-anchor="middle" font-size="13" fill="${INK3}">reclaimed pumps</text>
+      <text x="147" y="212" text-anchor="middle" font-size="13" fill="${INK3}">~20 a day, 2–3 min runs</text>
     </g>
-    <rect x="196" y="140" width="190" height="20" rx="10" fill="${RED}" opacity="0.25"/>
-    <text x="291" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="${RED}">13–28/h</text>
-    <text x="291" y="192" text-anchor="middle" font-size="13" fill="${INK3}">observed range</text>
     <g>
-      <circle cx="840" cy="150" r="11" fill="${RED}"/>
-      <text x="840" y="120" text-anchor="middle" font-size="19" font-weight="800" fill="${RED}">143/h</text>
-      <text x="840" y="192" text-anchor="middle" font-size="13" fill="${INK3}">one asset</text>
-      <text x="840" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="${INK}">a start every 25 seconds</text>
+      <circle cx="459" cy="150" r="8" fill="${INK3}"/>
+      <text x="459" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="${INK3}">3.8/h</text>
+      <text x="459" y="192" text-anchor="middle" font-size="13" fill="${INK3}">one other asset</text>
     </g>
-    <text x="60" y="40" font-size="15" fill="${INK3}">Every start draws locked-rotor current. Run hours are not the expensive variable.</text>
+    <g>
+      <path d="M690 136 V164" stroke="${RED}" stroke-width="3"/>
+      <text x="690" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="${RED}">~6/h</text>
+      <text x="690" y="192" text-anchor="middle" font-size="13" fill="${INK3}">manufacturer guidance</text>
+    </g>
   </g>
 </svg>`,
 

@@ -5,7 +5,7 @@
     <link>https://aquamesh.ai/blog/</link>
     <description>What we find in industrial water plants, how the measurement works, and what it is worth.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 01:12:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 23:00:08 GMT</lastBuildDate>
     <atom:link href="https://aquamesh.ai/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Industrial pretreatment: the self-monitoring blind spot</title>
@@ -622,7 +622,7 @@
       <content:encoded><![CDATA[<hr />
 <p>title: What 25 days of historian data reveals slug: what-25-days-of-historian-data-shows date: 2026-09-30 section: Field notes description: A 25-day SCADA export found $42,000/yr in losses at an MBR plant with no site visit. Method, normalized energy benchmarks, and a six-step replication guide. image: assets/audit/fig1.jpg tags: historian data, wastewater energy, plant audit, SCADA, membrane bioreactor</p>
 <hr />
-<p>A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and pump cycling at more than twenty times the design rate.</p>
+<p>A 25-day export of a water reuse plant's historian located roughly $42,000 a year in recoverable losses without a site visit, new instruments, or a capital request. The main items were aeration energy running above the plant's own control targets, membrane scour airflow above the manufacturer's specific guidance, and reuse totalisers that had stopped recording.</p>
 <p>The method is repeatable on any plant with a SCADA or DCS historian: pull an export, locate the parallel equipment pairs, compare each one's performance against the plant's own posted operating ranges, and price every gap that falls outside them. The rest of this post covers that method in detail.</p>
 <p>That figure came entirely from the plant's existing SCADA archive: 1,001 tags, 7,172,532 recorded values, covering 28 June to 23 July.</p>
 <figure class="post-fig"><img src="../assets/audit/fig1.jpg" alt="Audit summary page: no-capital savings, fully instrumented savings, design flow percentage, and effluent turbidity. Values tagged M are measured from SCADA; E means calculated with stated assumptions." loading="lazy" decoding="async" /><figcaption>The front page of the delivered audit. Values tagged <b>M</b> are measured straight from the plant's SCADA; <b>E</b> means we calculated them, and the assumptions are written down.</figcaption></figure>
@@ -648,9 +648,9 @@
 <p>One caveat worth repeating: a fouled DO probe can sit on an offset and still respond to airflow changes, making it hard to distinguish a measurement artifact from a real process difference. The reading gets verified against a calibrated handheld before anyone opens a valve. How quickly DO sensors drift in activated sludge mixed liquor, and what calibration intervals are appropriate for that environment, is covered in <a href="/blog/do-sensor-calibration-interval-activated-sludge.html">DO sensor calibration intervals in activated sludge</a>.</p>
 <h3 id="membrane-scour-air-above-what-the-flux-needed">Membrane scour air above what the flux needed</h3>
 <p>Airflow tracked the permeate rate almost perfectly, R-squared of 1.00, at a ratio well above the manufacturer's specific-scour guidance. Trimming toward the guideline at the measured flux, using the controls already installed, came to $5,391 a year. That was the largest no-capital line on the list.</p>
-<h3 id="pumps-starting-every-twenty-five-seconds">Pumps starting every twenty-five seconds</h3>
-<p>Reclaimed water pumps were logging 13 to 28 starts an hour against a manufacturer guideline near six for pumps that size. One asset logged 143 in an hour, a start every twenty-five seconds.</p>
-<p>Every start draws locked-rotor current and heats the windings far more than running does. The <a href="https://www.energy.gov/sites/prod/files/2014/05/f16/pump.pdf" rel="noopener">DOE's "Improving Pumping System Performance: A Sourcebook for Industry"</a> documents the relationship between start frequency and insulation aging: permissible starts per hour depend on motor frame size and thermal class, and the typical industrial limit for motors in the fractional to ten-horsepower range is well below what this historian was recording. This is a control deadband adjustment, not a purchase, and it was quietly writing a bill in motors, starters, and contactors: about $3,500 a year.</p>
+<h3 id="pumps-running-in-two-minute-bursts">Pumps running in two-minute bursts</h3>
+<p>Each reclaimed water pump started about 20 times a day and ran for two to three minutes at a time. That is under one start an hour, well inside the roughly six an hour that manufacturers allow for pumps that size, so this was not short-cycling. An earlier version of this post said it was: dividing lifetime starts by run hours gives 13 to 28 starts an hour, but the limit is per clock hour, and per clock hour the pumps were at 0.8.</p>
+<p>Short runs still matter. Every start draws locked-rotor current, and the <a href="https://www.energy.gov/sites/prod/files/2014/05/f16/pump.pdf" rel="noopener">DOE's "Improving Pumping System Performance: A Sourcebook for Industry"</a> covers how start frequency wears motors and starters. A wider pressure deadband gives fewer, longer runs: a settings change, not a purchase. One other asset logged about 91 starts a day while its hour meter never moved, which is a field check, not a finding.</p>
 <h3 id="sixteen-of-sixteen-reuse-totalisers-frozen">Sixteen of sixteen reuse totalisers frozen</h3>
 <p>Every irrigation zone has a volume totaliser. Not one of them changed in twenty-five days.</p>
 <p>Until they record, nobody can demonstrate how much recycled water went to beneficial reuse rather than straight to disposal, which is exactly the number a reuse programme is judged on. A configuration fix rather than a purchase, and it unlocks roughly $7,300 a year.</p>
@@ -786,26 +786,28 @@
 <h2 id="why-frequent-starts-cost-more-than-running">Why frequent starts cost more than running</h2>
 <p>A related pattern worth naming on its own, because it is consistently underestimated.</p>
 <p>Pumps are often judged on run hours. The more expensive variable is usually starts. Every start draws locked-rotor current several times the running current, and the heat goes into the windings. Motor thermal protection guidelines, as documented in the <a href="https://www.energy.gov/sites/prod/files/2014/05/f16/pump.pdf" rel="noopener">DOE "Improving Pumping System Performance: A Sourcebook for Industry"</a>, establish typical starting limits for mid-size motors because inrush heat cannot dissipate faster than winding insulation allows. Manufacturer specifications typically put that limit at a handful of starts per hour.</p>
-<p>In one record, reclaimed water pumps were logging 13 to 28 starts an hour. One asset logged 143 in a single hour: a start every twenty-five seconds. No alarm fired, because at no point was any pump outside its operating limits. It is a control deadband, and the bill arrives years later in motors, starters and contactors.</p>
+<p>Count starts per clock hour, not per run hour. In one record, reclaimed water pumps looked like they were logging 13 to 28 starts an hour, but that was lifetime starts divided by run hours. Per clock hour they started about 0.8 times, roughly 20 starts a day in two-to-three-minute runs: well inside the limit. An earlier version of this post got that wrong. The short runs are still worth a wider deadband, but the bill is small. The pattern that costs real money is the one in the scenario below.</p>
 <p>A modelled scenario puts numbers on that exposure. A 25 hp pump motor rated for 4 starts per hour at full load accumulates locked-rotor heat on each start equivalent to roughly 1 to 2 minutes of continuous running. At 20 starts per hour, the thermal budget that would extend winding life to 8 to 12 years is consumed in 2 to 4 years. A motor rewind at that frame size typically runs $3,000 to $6,000. Annualized across the accelerated interval: $500 to $1,000 per pump per year in a failure mode no process alarm predicted. A facility running four pumps in this pattern carries $2,000 to $4,000 per year in accelerated motor wear, before accounting for starter and contactor replacement at elevated cycle counts.</p>
-<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 260" role="img" aria-label="Pump starts per hour. Manufacturer guidance is near six an hour. Observed range was 13 to 28, with one asset logging 143 in an hour — a start every 25 seconds.">
+<figure class="post-fig post-dia"><svg class="dia" viewBox="0 0 960 260" role="img" aria-label="Pump starts per clock hour. Manufacturer guidance is near six an hour. The reclaimed pumps in the record started about 0.8 times an hour; another asset about 3.8. Dividing lifetime starts by run hours instead gives a misleading 13 to 28.">
   <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="60" y="40" font-size="15" fill="#66728a">Starts per clock hour. Divide by run hours instead and the same pumps look like 13–28/h.</text>
     <path d="M60 150 H900" stroke="#dfe6f3" stroke-width="3"/>
     <g>
-      <path d="M100 136 V164" stroke="#137a4b" stroke-width="3"/>
-      <text x="100" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#137a4b">~6/h</text>
-      <text x="100" y="192" text-anchor="middle" font-size="13" fill="#66728a">guidance</text>
+      <circle cx="147" cy="150" r="10" fill="#137a4b"/>
+      <text x="147" y="124" text-anchor="middle" font-size="16" font-weight="800" fill="#137a4b">0.8/h</text>
+      <text x="147" y="192" text-anchor="middle" font-size="13" fill="#66728a">reclaimed pumps</text>
+      <text x="147" y="212" text-anchor="middle" font-size="13" fill="#66728a">~20 a day, 2–3 min runs</text>
     </g>
-    <rect x="196" y="140" width="190" height="20" rx="10" fill="#c2410c" opacity="0.25"/>
-    <text x="291" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#c2410c">13–28/h</text>
-    <text x="291" y="192" text-anchor="middle" font-size="13" fill="#66728a">observed range</text>
     <g>
-      <circle cx="840" cy="150" r="11" fill="#c2410c"/>
-      <text x="840" y="120" text-anchor="middle" font-size="19" font-weight="800" fill="#c2410c">143/h</text>
-      <text x="840" y="192" text-anchor="middle" font-size="13" fill="#66728a">one asset</text>
-      <text x="840" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#0b1026">a start every 25 seconds</text>
+      <circle cx="459" cy="150" r="8" fill="#66728a"/>
+      <text x="459" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#66728a">3.8/h</text>
+      <text x="459" y="192" text-anchor="middle" font-size="13" fill="#66728a">one other asset</text>
     </g>
-    <text x="60" y="40" font-size="15" fill="#66728a">Every start draws locked-rotor current. Run hours are not the expensive variable.</text>
+    <g>
+      <path d="M690 136 V164" stroke="#c2410c" stroke-width="3"/>
+      <text x="690" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#c2410c">~6/h</text>
+      <text x="690" y="192" text-anchor="middle" font-size="13" fill="#66728a">manufacturer guidance</text>
+    </g>
   </g>
 </svg></figure>
 <h2 id="how-to-look-for-it-in-your-own-data">How to look for it in your own data</h2>
