@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-18T21:34:43.291Z",
+  "at": "2026-11-19T21:47:18.521Z",
   "findings": [
     {
       "sev": "warn",
@@ -10,14 +10,14 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/modeling.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/modeling.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -28,14 +28,14 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/products/aquaspectra.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/case-studies/",
+      "msg": "meta description is 250 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/",
-      "msg": "meta description is 250 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/products/aquaspectra.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -48,54 +48,6 @@
       "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
       "msg": "meta description is 191 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "meta description is 176 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "no JSON-LD structured data"
-    },
-    {
-      "sev": "warn",
-      "id": "html-weight",
-      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
-      "msg": "HTML is 1383 KB"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/terms.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -123,9 +75,75 @@
     },
     {
       "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "meta description is 176 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "html-weight",
+      "url": "https://aquamesh.ai/case-studies/phosphate-complex.html",
+      "msg": "HTML is 1383 KB"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/terms.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
       "id": "jsonld-missing",
       "url": "https://aquamesh.ai/basin/methodology.html",
       "msg": "no JSON-LD structured data"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+    },
+    {
+      "sev": "warn",
+      "id": "external-link-broken",
+      "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
+      "msg": "links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)"
+    },
+    {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
       "sev": "warn",
@@ -137,18 +155,6 @@
       "sev": "error",
       "id": "link-broken",
       "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
-    },
-    {
-      "sev": "error",
-      "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
-      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
-    },
-    {
-      "sev": "error",
-      "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
@@ -165,6 +171,12 @@
     },
     {
       "sev": "warn",
+      "id": "external-link-broken",
+      "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
+      "msg": "links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)"
+    },
+    {
+      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
       "msg": "title is 70 chars; Google truncates near 60: \"AquaMesh physical AI: early detection for industrial plants | AquaMesh\""
@@ -172,13 +184,13 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
       "msg": "Article missing image"
     },
     {
@@ -194,16 +206,28 @@
       "msg": "17 posts credit the Organization as author. A named, real author with a bio page is a trust signal for Google and AI answer engines (needs Alex's OK to name someone)"
     },
     {
-      "sev": "warn",
-      "id": "cwv-lcp",
-      "url": "https://aquamesh.ai/",
-      "msg": "LCP 2.9s on mobile (good is under 2.5s); element: <p class=\"lead\">"
+      "sev": "info",
+      "id": "press-no-link",
+      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
+      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     },
     {
       "sev": "warn",
       "id": "cwv-lcp",
-      "url": "https://aquamesh.ai/blog/",
-      "msg": "LCP 2.5s on mobile (good is under 2.5s); element: <h1>"
+      "url": "https://aquamesh.ai/",
+      "msg": "LCP 3.4s on mobile (good is under 2.5s); element: <p class=\"lead\">"
+    },
+    {
+      "sev": "warn",
+      "id": "cwv-tbt",
+      "url": "https://aquamesh.ai/",
+      "msg": "Total blocking time 333 ms (good is under 200 ms)"
+    },
+    {
+      "sev": "warn",
+      "id": "cwv-regression",
+      "url": "https://aquamesh.ai/",
+      "msg": "performance score fell from 95 to 85 since last week"
     },
     {
       "sev": "warn",
@@ -228,147 +252,144 @@
       "id": "cwv-cls",
       "url": "https://aquamesh.ai/industries/industrial-water.html",
       "msg": "CLS 0.146 (good is under 0.1)"
-    },
-    {
-      "sev": "info",
-      "id": "press-no-link",
-      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
-      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     }
   ],
   "actions": [
     "Rebuilt the blog from committed sources: output already matches, nothing to commit.",
-    "Crawled 51 live pages and 71 assets and files.",
-    "IndexNow: no page content changed since the last run, nothing to submit."
+    "Crawled 51 live pages and 71 assets and files, plus 67 external links.",
+    "IndexNow: no page content changed since the last run, nothing to submit.",
+    "Checked 3 trade-press article(s): 2 link to aquamesh.ai.",
+    "Ran Lighthouse (mobile) on 5 pages.",
+    "Asked an AI answer engine 0 buyer questions; aquamesh.ai was cited in 0 ($0)."
   ],
   "lighthouse": {
-    "at": "2026-11-12T21:05:40.256Z",
+    "at": "2026-11-19T21:47:18.521Z",
     "results": [
       {
         "url": "https://aquamesh.ai/",
-        "performance": 95,
+        "performance": 85,
         "accessibility": 97,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2895,
+        "lcpMs": 3359,
         "cls": 0,
-        "tbtMs": 7,
-        "fcpMs": 1050,
+        "tbtMs": 333,
+        "fcpMs": 971,
         "failingSeo": [],
         "lcpElement": "<p class=\"lead\">"
       },
       {
         "url": "https://aquamesh.ai/blog/",
-        "performance": 87,
+        "performance": 92,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2515,
+        "lcpMs": 1636,
         "cls": 0.16,
         "tbtMs": 0,
-        "fcpMs": 2515,
+        "fcpMs": 1636,
         "failingSeo": [],
         "lcpElement": "<h1>"
       },
       {
         "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
-        "performance": 94,
+        "performance": 98,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2477,
-        "cls": 0,
+        "lcpMs": 1688,
+        "cls": 0.068,
         "tbtMs": 0,
-        "fcpMs": 2477,
+        "fcpMs": 1688,
         "failingSeo": [],
         "lcpElement": "<h1>"
       },
       {
         "url": "https://aquamesh.ai/case-studies/water-reuse-plant.html",
-        "performance": 90,
+        "performance": 95,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2471,
+        "lcpMs": 1651,
         "cls": 0.119,
         "tbtMs": 0,
-        "fcpMs": 2471,
+        "fcpMs": 1651,
         "failingSeo": [],
         "lcpElement": "<p class=\"lead\">"
       },
       {
         "url": "https://aquamesh.ai/industries/industrial-water.html",
-        "performance": 86,
+        "performance": 85,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100,
-        "lcpMs": 2905,
+        "lcpMs": 2929,
         "cls": 0.146,
-        "tbtMs": 14,
-        "fcpMs": 2514,
+        "tbtMs": 0,
+        "fcpMs": 2546,
         "failingSeo": [],
         "lcpElement": "<img src=\"../assets/industries/industrial-water.jpg\" width=\"1000\" height=\"666\" fetchpriority=\"high\" decoding=\"async\" alt=\"A treatment basin at an operating wate"
       }
     ]
   },
   "ai": {
-    "at": "2026-11-12T21:05:40.256Z",
+    "at": "2026-11-19T21:47:18.521Z",
     "engine": "Claude web search",
     "results": [
       {
         "query": "What is AquaMesh (aquamesh.ai) and what does it do?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW4J5ihvUyortPi4L2\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KsKQ3uf6U1QzauNP2\"}"
       },
       {
         "query": "What AI software helps industrial water and wastewater plants cut operating costs?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW4qZptFSq5H5FogKf\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KsjSYf67mJXnapQ4F\"}"
       },
       {
         "query": "How can an industrial plant find energy and chemical savings in the historian data it already records?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW5H7yrXHaJTgWfhT3\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KszpcpZzjTWwzsNSv\"}"
       },
       {
         "query": "How can a wastewater plant cut aeration blower energy without buying new equipment?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW5jegCrUff5mtKStB\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KtHgrmur45SRWKLpk\"}"
       },
       {
         "query": "What is the fastest way for a food or beverage plant to find product and water losses going down the drain?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW67EBuVY3LLWcBjJt\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KtbngRYuCTxaH8KGm\"}"
       },
       {
         "query": "Should an industrial plant use online water quality sensors or lab sampling to monitor its wastewater discharge?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW6WHQKpbbUZExFGsm\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KtsAGmCHVzoBTimCo\"}"
       },
       {
         "query": "Can UV-Vis spectral sensors monitor industrial wastewater continuously instead of lab samples?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW6vLU5Rc4hH3qXdwW\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KuA24PB56nbAfG4mR\"}"
       },
       {
         "query": "Why do parallel blowers or pumps at a treatment plant drift apart in performance, and what does that cost?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW7MNuDNEc595zYAar\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KuSPBmN7rFbmFtNFc\"}"
       },
       {
         "query": "How can a data center cut cooling tower water use and prove it under new water reporting rules?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW7mBaA1bkTDF3uwHk\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KunUMFtsTNoGHV5UK\"}"
       },
       {
         "query": "What do California's new data center water use reporting rules require?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW8BErUPinp5AQpzQg\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2Kv5q2swnmDYVbg3mj\"}"
       },
       {
         "query": "What does data center water usage effectiveness (WUE) measure, and what does it miss?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW8Z4Li3BSZ6crZVxc\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KvLiKCarmreSPGxnA\"}"
       },
       {
         "query": "How do you control cooling tower blowdown by conductivity, and what happens when the sensor drifts?",
-        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyiW8wsb312KxAmPXSig\"}"
+        "error": "401 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChD2KvbqjE8qGsz8jRgPA\"}"
       }
     ],
     "usd": 0,
     "drafts": []
   },
   "press": {
-    "at": "2026-11-12T21:05:40.256Z",
+    "at": "2026-11-19T21:47:18.521Z",
     "results": [
       {
         "title": "The industrial AI gap isn't capability — it's deployability",
