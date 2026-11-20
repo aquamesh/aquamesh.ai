@@ -1,4 +1,4 @@
-# SEO report, 2026-11-19
+# SEO report, 2026-11-20
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-19). Site errors: 4.
 
@@ -38,12 +38,12 @@ Cited in AI answers to 0 of the tracked buyer questions.
 
 ## Site health (51 pages crawled)
 - **link-broken** (4)
+  - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/nitrogen-permit-compliance-sampling-gap.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/do-sensor-calibration-interval-activated-sludge.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
-  - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
 
-Since the last run: 4 new, 1 resolved.
+Since the last run: 0 new, 3 resolved.
 
 <details><summary>Core Web Vitals, lab, mobile (2026-11-19)</summary>
 
@@ -57,18 +57,18 @@ Since the last run: 4 new, 1 resolved.
 
 </details>
 
-<details><summary>36 warnings</summary>
+<details><summary>33 warnings</summary>
 
 - **desc-length** (9)
   - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
   - `/`: meta description is 183 chars (aim for 70 to 160)
   - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
-  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
+  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
-  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
+  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
 - **title-length** (5)
   - `/case-studies/dairy-plant.html`: title is 68 chars; Google truncates near 60: "Case study — $1.17M a year in a dairy plant’s own records | AquaMesh"
   - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
@@ -77,8 +77,8 @@ Since the last run: 4 new, 1 resolved.
   - `/blog/connect-press-release-physical-ai.html`: title is 70 chars; Google truncates near 60: "AquaMesh physical AI: early detection for industrial plants | AquaMesh"
 - **jsonld-article-fields** (4)
   - `/company.html`: Article missing dateModified, image
-  - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
   - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
+  - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
   - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **og-missing** (4)
   - `/privacy.html`: missing og:title, og:description; link previews degrade
@@ -87,8 +87,8 @@ Since the last run: 4 new, 1 resolved.
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
 - **jsonld-missing** (3)
   - `/case-studies/refinery-complex.html`: no JSON-LD structured data
-  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
+  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
 - **cwv-cls** (3)
   - `/blog/`: CLS 0.16 (good is under 0.1)
   - `/case-studies/water-reuse-plant.html`: CLS 0.119 (good is under 0.1)
@@ -96,16 +96,11 @@ Since the last run: 4 new, 1 resolved.
 - **html-weight** (2)
   - `/case-studies/refinery-complex.html`: HTML is 1841 KB
   - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
-- **external-link-broken** (2)
-  - `/blog/wastewater-blower-vfd-energy-savings-erode.html`: links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)
-  - `/blog/aeration-energy-cost-wastewater-plants.html`: links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)
 - **cwv-lcp** (2)
   - `/`: LCP 3.4s on mobile (good is under 2.5s); element: <p class="lead">
   - `/industries/industrial-water.html`: LCP 2.9s on mobile (good is under 2.5s); element: <img src="../assets/industries/industrial-water.jpg" width="1000" height="666" fetchpriority="high" decoding="async" alt="A treatment basin at an operating wate
 - **cwv-tbt** (1)
   - `/`: Total blocking time 333 ms (good is under 200 ms)
-- **cwv-regression** (1)
-  - `/`: performance score fell from 95 to 85 since last week
 
 </details>
 
@@ -121,13 +116,10 @@ Since the last run: 4 new, 1 resolved.
 <details><summary>What the agent did this run</summary>
 
 - Rebuilt the blog from committed sources: output already matches, nothing to commit.
-- Crawled 51 live pages and 71 assets and files, plus 67 external links.
-- IndexNow: no page content changed since the last run, nothing to submit.
-- Checked 3 trade-press article(s): 2 link to aquamesh.ai.
-- Ran Lighthouse (mobile) on 5 pages.
-- Asked an AI answer engine 0 buyer questions; aquamesh.ai was cited in 0 ($0).
+- Crawled 51 live pages and 73 assets and files.
+- Told IndexNow (Bing, Copilot, Yandex) about 3 new or changed URL(s) (HTTP 200).
 
 </details>
 
 ---
-Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) ran this time. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.
+Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) run every 7 days. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.
