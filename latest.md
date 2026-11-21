@@ -1,6 +1,6 @@
-# SEO report, 2026-11-20
+# SEO report, 2026-11-21
 
-**AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-19). Site errors: 4.
+**AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-19). Site errors: 5.
 
 ## Do this week
 Nothing: every tracked question already cites aquamesh.ai, or none was diagnosed.
@@ -36,14 +36,16 @@ Cited in AI answers to 0 of the tracked buyer questions.
 
 </details>
 
-## Site health (51 pages crawled)
+## Site health (52 pages crawled)
 - **link-broken** (4)
-  - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/nitrogen-permit-compliance-sampling-gap.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
+  - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/do-sensor-calibration-interval-activated-sludge.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
+- **drift-unfixable** (1)
+  - `/`: generated files are stale but the rebuild failed a guardrail: sitemap would lose https://aquamesh.ai/case-studies/mechtrack-predictive-maintenance.html
 
-Since the last run: 0 new, 3 resolved.
+Since the last run: 5 new, 0 resolved.
 
 <details><summary>Core Web Vitals, lab, mobile (2026-11-19)</summary>
 
@@ -57,45 +59,49 @@ Since the last run: 0 new, 3 resolved.
 
 </details>
 
-<details><summary>33 warnings</summary>
+<details><summary>37 warnings</summary>
 
-- **desc-length** (9)
-  - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
-  - `/`: meta description is 183 chars (aim for 70 to 160)
+- **desc-length** (10)
   - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
+  - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
   - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
+  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
+  - `/case-studies/mechtrack-predictive-maintenance.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
-  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
-- **title-length** (5)
+  - `/`: meta description is 183 chars (aim for 70 to 160)
+- **title-length** (6)
   - `/case-studies/dairy-plant.html`: title is 68 chars; Google truncates near 60: "Case study — $1.17M a year in a dairy plant’s own records | AquaMesh"
+  - `/case-studies/mechtrack-predictive-maintenance.html`: title is 73 chars; Google truncates near 60: "Case study: MechTrack predictive maintenance for manufacturing | AquaMesh"
   - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
   - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: title is 66 chars; Google truncates near 60: "Industrial pretreatment: the self-monitoring blind spot | AquaMesh"
   - `/blog/water-online-sewer-repair-evidence.html`: title is 67 chars; Google truncates near 60: "The $1.5M sewer repair: what discharge monitoring missed | AquaMesh"
   - `/blog/connect-press-release-physical-ai.html`: title is 70 chars; Google truncates near 60: "AquaMesh physical AI: early detection for industrial plants | AquaMesh"
 - **jsonld-article-fields** (4)
   - `/company.html`: Article missing dateModified, image
-  - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
   - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
+  - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
   - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
-- **og-missing** (4)
-  - `/privacy.html`: missing og:title, og:description; link previews degrade
-  - `/terms.html`: missing og:title, og:description; link previews degrade
-  - `/cookies.html`: missing og:title, og:description; link previews degrade
-  - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
-- **jsonld-missing** (3)
+- **jsonld-missing** (4)
+  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
+  - `/case-studies/mechtrack-predictive-maintenance.html`: no JSON-LD structured data
   - `/case-studies/refinery-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
-  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
+- **og-missing** (4)
+  - `/cookies.html`: missing og:title, og:description; link previews degrade
+  - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
+  - `/terms.html`: missing og:title, og:description; link previews degrade
+  - `/privacy.html`: missing og:title, og:description; link previews degrade
+- **html-weight** (3)
+  - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
+  - `/case-studies/mechtrack-predictive-maintenance.html`: HTML is 852 KB
+  - `/case-studies/refinery-complex.html`: HTML is 1841 KB
 - **cwv-cls** (3)
   - `/blog/`: CLS 0.16 (good is under 0.1)
   - `/case-studies/water-reuse-plant.html`: CLS 0.119 (good is under 0.1)
   - `/industries/industrial-water.html`: CLS 0.146 (good is under 0.1)
-- **html-weight** (2)
-  - `/case-studies/refinery-complex.html`: HTML is 1841 KB
-  - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
 - **cwv-lcp** (2)
   - `/`: LCP 3.4s on mobile (good is under 2.5s); element: <p class="lead">
   - `/industries/industrial-water.html`: LCP 2.9s on mobile (good is under 2.5s); element: <img src="../assets/industries/industrial-water.jpg" width="1000" height="666" fetchpriority="high" decoding="async" alt="A treatment basin at an operating wate
@@ -115,9 +121,9 @@ Since the last run: 0 new, 3 resolved.
 
 <details><summary>What the agent did this run</summary>
 
-- Rebuilt the blog from committed sources: output already matches, nothing to commit.
-- Crawled 51 live pages and 73 assets and files.
-- Told IndexNow (Bing, Copilot, Yandex) about 3 new or changed URL(s) (HTTP 200).
+- Found stale generated files; the rebuild failed a guardrail, so I committed nothing.
+- Crawled 52 live pages and 73 assets and files.
+- Told IndexNow (Bing, Copilot, Yandex) about 2 new or changed URL(s) (HTTP 200).
 
 </details>
 
