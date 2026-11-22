@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-21T20:13:53.957Z",
+  "at": "2026-11-22T20:28:04.005Z",
   "findings": [
     {
       "sev": "warn",
@@ -10,8 +10,8 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/modeling.html",
-      "msg": "meta description is 201 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -22,14 +22,20 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/products/aquaspectra.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/case-studies/",
+      "msg": "meta description is 250 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/",
-      "msg": "meta description is 250 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/modeling.html",
+      "msg": "meta description is 201 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/products/aquaspectra.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -87,6 +93,18 @@
     },
     {
       "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/cookies.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/privacy.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/case-studies/refinery-complex.html",
       "msg": "title is 73 chars; Google truncates near 60: \"Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh\""
@@ -112,38 +130,14 @@
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
-      "id": "og-missing",
       "url": "https://aquamesh.ai/terms.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "error",
-      "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
-      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
     },
     {
       "sev": "warn",
@@ -159,14 +153,20 @@
     },
     {
       "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "error",
       "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
+      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
@@ -182,6 +182,12 @@
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+    },
+    {
       "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/blog/connect-press-release-physical-ai.html",
@@ -189,14 +195,8 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
       "msg": "Article missing image"
     },
     {
@@ -208,7 +208,7 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/liquid-cooling-water-quality-decisions.html",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
     {
@@ -269,7 +269,7 @@
   "actions": [
     "Found stale generated files; the rebuild failed a guardrail, so I committed nothing.",
     "Crawled 52 live pages and 73 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 2 new or changed URL(s) (HTTP 200)."
+    "IndexNow: no page content changed since the last run, nothing to submit."
   ],
   "lighthouse": {
     "at": "2026-11-19T21:47:18.521Z",
