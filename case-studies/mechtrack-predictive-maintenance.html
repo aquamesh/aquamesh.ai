@@ -58,7 +58,8 @@
   #mInfo li .row b { flex:1; color:#fff; font-weight:600; font-size:13px; }
   #mInfo li .row:after { content:"+"; color:#6F8493; font-size:15px; width:12px; text-align:center; }
   #mInfo li.open .row:after { content:"\2212"; }
-  #mInfo .ch { font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:2px 5px; border:1px solid; white-space:nowrap; }
+  #mInfo li .row b em { display:flex; gap:4px; flex-wrap:wrap; font-style:normal; margin-top:4px; font-weight:400; }
+  #mInfo .ch { text-transform:none !important; letter-spacing:0 !important; font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:2px 5px; border:1px solid; white-space:nowrap; }
   #mInfo .ch.v { color:#8FD0EA; border-color:rgba(143,208,234,.45); } #mInfo .ch.u { color:#B7A6FF; border-color:rgba(183,166,255,.45); }
   #mInfo .ch.t { color:#FFC27A; border-color:rgba(255,194,122,.45); } #mInfo .ch.r { color:#C9D4DB; border-color:rgba(201,212,219,.35); }
   #mInfo li p { display:none; margin:0 0 10px; font-size:12px; color:#AFC2CE; line-height:1.45; }
@@ -2044,11 +2045,11 @@
     var ft = null; if (state === 'fault') faults.forEach(function (x) { if (x.m.mk === sel) ft = x; });
     info.querySelector('ul').innerHTML = c.f.map(function (f, i) {
       var chips = f[1].split(/\s*(?:\+|→)\s*/).map(function (w) {
-        var k = /^Vib/.test(w) ? ['v', 'Vib'] : /^Ultra/.test(w) ? ['u', 'Ultra'] : /^Temp/.test(w) ? ['t', 'Temp'] : ['r', w === 'Run time' ? 'Run' : w];
+        var k = /^Vib/.test(w) ? ['v', 'Vibration'] : /^Ultra/.test(w) ? ['u', 'Ultrasound'] : /^Temp/.test(w) ? ['t', 'Heat'] : ['r', w === 'Run time' ? 'Run time' : w];
         return '<span class="ch ' + k[0] + '" title="' + w + '">' + k[1] + '</span>';
       }).join('');
       var hot = ft && i === ft.i;
-      return '<li class="' + (hot ? 'hot' : '') + '"><div class="row"><b>' + f[0] + '</b>' + chips + '</div><p>' + f[2] + '</p></li>';
+      return '<li class="' + (hot ? 'hot' : '') + '"><div class="row"><b>' + f[0] + '<em>' + chips + '</em></b></div><p>' + f[2] + '</p></li>';
     }).join('');
     info.querySelectorAll('li .row').forEach(function (r) { r.addEventListener('click', function () { r.parentNode.classList.toggle('open'); }); });
     var fd = info.querySelector('.find'); fd.style.display = ft ? 'block' : 'none';
