@@ -47,21 +47,27 @@
   .ac b { display:block; font-family:"Space Grotesk",sans-serif; font-size:13px; color:#fff; margin-bottom:1px; }
   .ac span { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#F5A623; }
   #plant3d .legend { position:absolute; right:14px; bottom:12px; font-family:"IBM Plex Mono",monospace; font-size:11px; color:#9FB3C0; text-align:right; line-height:1.7; }
-  #mInfo { display:none; z-index:5; position:absolute; right:14px; top:14px; width:350px; max-height:calc(100% - 70px); overflow:auto; background:rgba(11,20,27,.94); border:1px solid rgba(255,255,255,.14); border-top:3px solid var(--blue); padding:14px 16px 12px; color:#DCE7EE; font-size:13px; line-height:1.45; }
+  #mInfo { display:none; z-index:5; position:absolute; right:14px; top:14px; width:320px; max-height:calc(100% - 70px); overflow:auto; background:rgba(11,20,27,.94); border:1px solid rgba(255,255,255,.14); border-top:3px solid var(--blue); padding:14px 16px 12px; color:#DCE7EE; font-size:13px; line-height:1.45; }
   #mInfo.on { display:block; }
   #mInfo .k { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); }
   #mInfo h4 { font-family:"Space Grotesk",sans-serif; font-size:18px; color:#fff; margin:3px 0 2px; font-weight:600; }
   #mInfo .where { color:#9FB3C0; font-size:12px; margin-bottom:10px; }
   #mInfo ul { list-style:none; margin:0; padding:0; }
-  #mInfo li { padding:8px 0; border-top:1px solid rgba(255,255,255,.1); }
-  #mInfo li b { display:block; color:#fff; font-weight:600; font-size:13px; }
-  #mInfo li i { font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#8FD0EA; }
-  #mInfo li.hot b { color:#FFD58A; } #mInfo li.hot i { color:#F5A623; }
-  #mInfo li.hot b:after { content:" · detected now"; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#F5A623; }
-  #mInfo li p { margin:4px 0 0; font-size:12px; color:#AFC2CE; line-height:1.45; }
-  #mInfo .foot { border-top:1px solid rgba(255,255,255,.14); margin-top:4px; padding-top:8px; }
-  #mInfo .foot span { display:block; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-top:6px; }
-  #mInfo .foot p { margin:2px 0 0; font-size:12px; color:#DCE7EE; }
+  #mInfo li { border-top:1px solid rgba(255,255,255,.1); }
+  #mInfo li .row { display:flex; align-items:center; gap:8px; padding:9px 0; cursor:pointer; }
+  #mInfo li .row b { flex:1; color:#fff; font-weight:600; font-size:13px; }
+  #mInfo li .row:after { content:"+"; color:#6F8493; font-size:15px; width:12px; text-align:center; }
+  #mInfo li.open .row:after { content:"\2212"; }
+  #mInfo .ch { font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:2px 5px; border:1px solid; white-space:nowrap; }
+  #mInfo .ch.v { color:#8FD0EA; border-color:rgba(143,208,234,.45); } #mInfo .ch.u { color:#B7A6FF; border-color:rgba(183,166,255,.45); }
+  #mInfo .ch.t { color:#FFC27A; border-color:rgba(255,194,122,.45); } #mInfo .ch.r { color:#C9D4DB; border-color:rgba(201,212,219,.35); }
+  #mInfo li p { display:none; margin:0 0 10px; font-size:12px; color:#AFC2CE; line-height:1.45; }
+  #mInfo li.open p { display:block; }
+  #mInfo li.hot .row b { color:#FFD58A; }
+  #mInfo li.hot .row b:before { content:"\25CF  "; color:#F5A623; }
+  #mInfo .foot { border-top:1px solid rgba(255,255,255,.14); padding-top:9px; font-size:12px; color:#DCE7EE; }
+  #mInfo .foot span { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#F5A623; margin-right:6px; }
+  #mInfo .std { font-size:11px; color:#7F95A3; margin-top:6px; }
   #mInfo .x { position:absolute; right:8px; top:6px; background:none; border:0; color:#9FB3C0; font-size:20px; line-height:1; cursor:pointer; padding:4px 6px; }
   #plant3d .hint { position:absolute; left:50%; top:16px; transform:translateX(-50%); font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:#DCE7EE; background:rgba(11,20,27,.7); border:1px solid rgba(27,157,209,.5); padding:7px 12px; pointer-events:none; transition:opacity .4s; white-space:nowrap; }
   #plant3d .legend i { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--blue); margin-right:6px; }
@@ -198,7 +204,7 @@
     </div>
     <div class="legend"><i></i>MechTrack sensor on every machine<br>Click a machine · drag to rotate · scroll to zoom</div>
     <div class="hint" id="mHint">Click any machine to see what it watches for</div>
-    <div id="mInfo" role="dialog" aria-live="polite"><button class="x" aria-label="Close">&times;</button><div class="k">MechTrack watches for</div><h4></h4><div class="where"></div><div class="find"></div><ul></ul><div class="foot"><span>If it fails</span><p class="stake"></p><span>Severity basis</span><p class="std"></p></div></div>
+    <div id="mInfo" role="dialog" aria-live="polite"><button class="x" aria-label="Close">&times;</button><div class="k">MechTrack watches for</div><h4></h4><div class="where"></div><div class="find"></div><ul></ul><div class="foot"><span>If it fails</span><span class="stake" style="font:inherit;letter-spacing:0;text-transform:none;color:inherit;margin:0"></span><div class="std"></div></div></div>
   </div>
 
   <section>
@@ -2055,14 +2061,20 @@
   }
   function render() {
     if (!sel) return;
-    var c = CAT[sel.kind]; info.querySelector('h4').textContent = c.n; info.querySelector('.where').textContent = c.mount;
+    var c = CAT[sel.kind]; info.querySelector('h4').textContent = c.n; info.querySelector('.where').textContent = 'Sensor: ' + c.mount.replace(/^Magnet on (the )?/, '').replace(/, .*$/, '');
     var ft = null; if (state === 'fault') faults.forEach(function (x) { if (x.m.mk === sel) ft = x; });
     info.querySelector('ul').innerHTML = c.f.map(function (f, i) {
-      return '<li' + (ft && i === ft.i ? ' class="hot"' : '') + '><b>' + f[0] + '</b><i>' + f[1] + '</i><p>' + f[2] + '</p></li>';
+      var chips = f[1].split(/\s*(?:\+|→)\s*/).map(function (w) {
+        var k = /^Vib/.test(w) ? ['v', 'Vib'] : /^Ultra/.test(w) ? ['u', 'Ultra'] : /^Temp/.test(w) ? ['t', 'Temp'] : ['r', w === 'Run time' ? 'Run' : w];
+        return '<span class="ch ' + k[0] + '" title="' + w + '">' + k[1] + '</span>';
+      }).join('');
+      var hot = ft && i === ft.i;
+      return '<li class="' + (hot ? 'hot' : '') + '"><div class="row"><b>' + f[0] + '</b>' + chips + '</div><p>' + f[2] + '</p></li>';
     }).join('');
+    info.querySelectorAll('li .row').forEach(function (r) { r.addEventListener('click', function () { r.parentNode.classList.toggle('open'); }); });
     var fd = info.querySelector('.find'); fd.style.display = ft ? 'block' : 'none';
     if (ft) { var hx = '#' + ft.c.toString(16).padStart(6, '0'); fd.style.borderLeftColor = hx; fd.innerHTML = '<span style="color:' + hx + '">Finding · ' + ft.tag + '</span>' + ft.d; }
-    info.querySelector('.std').textContent = c.std; info.querySelector('.stake').textContent = c.stake;
+    info.querySelector('.std').textContent = c.std; info.querySelector('.stake').textContent = c.stake.split(/, and |\. /)[0].replace(/\.$/, '') + '.';
   }
   function select(mk) {
     if (sel) glow(sel, false);
