@@ -39,12 +39,15 @@
   #plant3d .tog { position:absolute; left:14px; top:14px; display:flex; border:1px solid rgba(255,255,255,.2); }
   #plant3d .tog button { font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; padding:9px 13px; border:0; background:rgba(11,20,27,.7); color:#9FB3C0; cursor:pointer; }
   #plant3d .tog button.on { background:var(--blue); color:#fff; }
-  #alertCards { display:none; position:absolute; left:14px; bottom:14px; flex-direction:column; gap:8px; width:290px; }
-  .ac { background:rgba(11,20,27,.92); border-left:3px solid #F5A623; padding:9px 12px; color:#DCE7EE; font-size:12px; line-height:1.4; }
+  #alertCards { display:none; z-index:4; position:absolute; left:14px; bottom:14px; flex-direction:column; gap:6px; width:270px; }
+  #alertCards .ac { padding:7px 10px; } #alertCards .ac b { display:inline; font-size:13px; margin:0 0 0 6px; } #alertCards .ac span { display:inline; } #alertCards .ac:hover { background:rgba(27,157,209,.25); }
+  #mInfo .find { background:rgba(255,255,255,.06); border-left:3px solid #F5A623; padding:8px 10px; margin:0 0 10px; font-size:12px; color:#DCE7EE; }
+  #mInfo .find span { display:block; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px; }
+  .ac { cursor:pointer; background:rgba(11,20,27,.92); border-left:3px solid #F5A623; padding:9px 12px; color:#DCE7EE; font-size:12px; line-height:1.4; }
   .ac b { display:block; font-family:"Space Grotesk",sans-serif; font-size:13px; color:#fff; margin-bottom:1px; }
   .ac span { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#F5A623; }
   #plant3d .legend { position:absolute; right:14px; bottom:12px; font-family:"IBM Plex Mono",monospace; font-size:11px; color:#9FB3C0; text-align:right; line-height:1.7; }
-  #mInfo { display:none; z-index:5; position:absolute; right:14px; top:14px; width:300px; max-height:calc(100% - 70px); overflow:auto; background:rgba(11,20,27,.94); border:1px solid rgba(255,255,255,.14); border-top:3px solid var(--blue); padding:14px 16px 12px; color:#DCE7EE; font-size:13px; line-height:1.45; }
+  #mInfo { display:none; z-index:5; position:absolute; right:14px; top:14px; width:350px; max-height:calc(100% - 70px); overflow:auto; background:rgba(11,20,27,.94); border:1px solid rgba(255,255,255,.14); border-top:3px solid var(--blue); padding:14px 16px 12px; color:#DCE7EE; font-size:13px; line-height:1.45; }
   #mInfo.on { display:block; }
   #mInfo .k { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); }
   #mInfo h4 { font-family:"Space Grotesk",sans-serif; font-size:18px; color:#fff; margin:3px 0 2px; font-weight:600; }
@@ -55,6 +58,10 @@
   #mInfo li i { font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#8FD0EA; }
   #mInfo li.hot b { color:#FFD58A; } #mInfo li.hot i { color:#F5A623; }
   #mInfo li.hot b:after { content:" · detected now"; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#F5A623; }
+  #mInfo li p { margin:4px 0 0; font-size:12px; color:#AFC2CE; line-height:1.45; }
+  #mInfo .foot { border-top:1px solid rgba(255,255,255,.14); margin-top:4px; padding-top:8px; }
+  #mInfo .foot span { display:block; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-top:6px; }
+  #mInfo .foot p { margin:2px 0 0; font-size:12px; color:#DCE7EE; }
   #mInfo .x { position:absolute; right:8px; top:6px; background:none; border:0; color:#9FB3C0; font-size:20px; line-height:1; cursor:pointer; padding:4px 6px; }
   #plant3d .hint { position:absolute; left:50%; top:16px; transform:translateX(-50%); font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:#DCE7EE; background:rgba(11,20,27,.7); border:1px solid rgba(27,157,209,.5); padding:7px 12px; pointer-events:none; transition:opacity .4s; white-space:nowrap; }
   #plant3d .legend i { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--blue); margin-right:6px; }
@@ -94,7 +101,7 @@
   .cta h3 { font-size:26px; margin-bottom:8px; }
   .cta p { color:#B9C7D1; margin:0; max-width:560px; }
   footer { margin-top:36px; font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--mute); }
-  @media (max-width:760px){ h1{font-size:32px} .panel.on,.cases,.loop,.kpis{grid-template-columns:1fr} .loop div{border-right:0;border-bottom:1px solid var(--line)} #plant3d{height:420px;width:calc(100vw - 32px);margin-left:calc(50% - 50vw + 16px)} #alertCards{width:220px} .kpis b{font-size:42px} .tabs button{padding:10px 12px;font-size:14px} #plant3d .legend{display:none} #mInfo{left:10px;right:10px;top:58px;width:auto;max-height:calc(100% - 70px)} #plant3d .hint{top:auto;bottom:12px;font-size:10px} #plant3d.sel #alertCards{display:none !important} }
+  @media (max-width:760px){ h1{font-size:32px} .panel.on,.cases,.loop,.kpis{grid-template-columns:1fr} .loop div{border-right:0;border-bottom:1px solid var(--line)} #plant3d{height:420px;width:calc(100vw - 32px);margin-left:calc(50% - 50vw + 16px)} #alertCards{width:220px} .kpis b{font-size:42px} .tabs button{padding:10px 12px;font-size:14px} #plant3d .legend{display:none} #mInfo{left:10px;right:10px;top:58px;width:auto;max-height:calc(100% - 70px)} #plant3d .hint{top:auto;bottom:12px;font-size:10px} #plant3d.sel #alertCards{display:none !important} #alertCards .ac:nth-child(n+3){display:none} }
   .three,.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:20px; }
   .three span,.steps span { display:block; font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-bottom:6px; }
   .three p,.steps p { font-size:15px; margin:0; }
@@ -146,6 +153,25 @@
   @media (max-width:760px){ .quick{grid-template-columns:1fr 1fr} .quick div:last-child{grid-column:span 2} }
   .cta .btn { display:inline-block; margin-top:18px; background:var(--blue); color:#fff; text-decoration:none; font-weight:600; padding:12px 20px; }
   .cta .btn:hover { background:#1585b3; }
+  .rel { display:grid; grid-template-columns:1.15fr 1fr; gap:36px; margin-top:24px; }
+  .rel-fig h3 { font-size:18px; margin-bottom:12px; }
+  .rel-fig svg { width:100%; height:auto; display:block; margin-bottom:12px; }
+  .rel-fig p { font-size:15px; }
+  .nh div { display:grid; grid-template-columns:140px 1fr 40px; align-items:center; gap:10px; margin:7px 0; font-size:13px; }
+  .nh span { color:var(--mute); font-family:"IBM Plex Mono",monospace; font-size:11px; }
+  .nh i { display:block; height:16px; background:#9FB3C0; min-width:3px; }
+  .nh i.r { background:var(--blue); }
+  .nh b { font-family:"IBM Plex Mono",monospace; font-weight:500; font-size:13px; }
+  .nh { margin-bottom:14px; }
+  .oee td.y { color:var(--ink); } .oee td.y:before { content:"● "; color:var(--blue); }
+  .oee td.p:before { content:"◐ "; color:var(--blue); } .oee td.n { color:var(--mute); } .oee td.n:before { content:"○ "; }
+  .pdca { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); margin-top:16px; }
+  .pdca div { padding:18px; border-right:1px solid var(--line); }
+  .pdca div:last-child { border-right:0; }
+  .pdca span { font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); }
+  .pdca b { display:block; font-family:"Space Grotesk",sans-serif; font-size:17px; margin:4px 0 6px; }
+  .pdca p { font-size:14px; color:var(--mute); margin:0; }
+  @media (max-width:760px){ .rel,.pdca{grid-template-columns:1fr} .pdca div{border-right:0;border-bottom:1px solid var(--line)} .nh div{grid-template-columns:110px 1fr 36px} }
   .ic { width:30px; height:30px; stroke:var(--blue); fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; display:block; margin-bottom:10px; }
   .h-ic { display:flex; align-items:center; gap:10px; }
   .h-ic .ic { width:24px; height:24px; margin:0; }
@@ -172,7 +198,7 @@
     </div>
     <div class="legend"><i></i>MechTrack sensor on every machine<br>Click a machine · drag to rotate · scroll to zoom</div>
     <div class="hint" id="mHint">Click any machine to see what it watches for</div>
-    <div id="mInfo" role="dialog" aria-live="polite"><button class="x" aria-label="Close">&times;</button><div class="k">MechTrack watches for</div><h4></h4><div class="where"></div><ul></ul></div>
+    <div id="mInfo" role="dialog" aria-live="polite"><button class="x" aria-label="Close">&times;</button><div class="k">MechTrack watches for</div><h4></h4><div class="where"></div><div class="find"></div><ul></ul><div class="foot"><span>If it fails</span><p class="stake"></p><span>Severity basis</span><p class="std"></p></div></div>
   </div>
 
   <section>
@@ -269,6 +295,68 @@
       <div class="m"><h3>Wastewater</h3><ul><li>Process and transfer pumps</li><li>Mixers and agitators</li><li>Filter press drives</li><li>Blowers and aerators</li></ul></div>
       <div class="m"><h3>Material handling</h3><ul><li>Conveyors and gearmotors</li><li>Overhead cranes and hoists</li><li>Robot and automation drives</li><li>Packaging and test equipment</li></ul></div>
     </div>
+  </section>
+
+  <section>
+    <div class="label">Reliability engineering</div>
+    <h2>Built on how reliability engineers think</h2>
+    <p class="lede" style="font-size:17px">MechTrack is a tool for the methods your team already uses: RCM, TPM and continuous improvement. Here is where it fits in each.</p>
+
+    <div class="rel">
+      <div class="rel-fig">
+        <h3>1 · The P-F curve: catch it at P, not F</h3>
+        <svg viewBox="0 0 560 250" role="img" aria-label="P-F curve: equipment condition falls over time. Ultrasound detects the change first, then vibration, then temperature, then audible noise, before functional failure.">
+          <defs><linearGradient id="pfw" x1="0" x2="1"><stop offset="0" stop-color="#1B9DD1" stop-opacity=".16"/><stop offset="1" stop-color="#1B9DD1" stop-opacity=".02"/></linearGradient></defs>
+          <rect x="92" y="18" width="388" height="188" fill="url(#pfw)"/>
+          <line x1="40" y1="206" x2="540" y2="206" stroke="#C9D3DA"/><line x1="40" y1="14" x2="40" y2="206" stroke="#C9D3DA"/>
+          <text x="44" y="226" font-size="11" fill="#5B6B77" font-family="IBM Plex Mono,monospace">TIME →</text>
+          <text x="14" y="120" font-size="11" fill="#5B6B77" font-family="IBM Plex Mono,monospace" transform="rotate(-90 14 120)">CONDITION</text>
+          <path d="M40 34 L80 34 C170 36 260 52 330 86 C390 116 440 160 480 200" fill="none" stroke="#0F1B24" stroke-width="2.5"/>
+          <g font-family="IBM Plex Mono,monospace" font-size="13">
+            <circle cx="92" cy="34" r="6" fill="#1B9DD1"/><text x="88" y="16" fill="#1B9DD1" font-weight="600">P · ultrasound</text>
+            <circle cx="235" cy="47" r="5" fill="#1B9DD1"/><text x="226" y="70" fill="#0F1B24">vibration</text>
+            <circle cx="345" cy="94" r="5" fill="#F5A623"/><text x="356" y="90" fill="#0F1B24">temperature</text>
+            <circle cx="420" cy="141" r="5" fill="#E5533D"/><text x="432" y="136" fill="#0F1B24">noise, heat</text>
+            <circle cx="480" cy="200" r="6" fill="#E5533D"/><text x="492" y="196" fill="#E5533D" font-weight="600">F</text>
+            <text x="100" y="190" fill="#1B9DD1">P-F interval: time to plan the repair</text>
+          </g>
+        </svg>
+        <p>Moubray's rule in RCM is to check more often than the P-F interval, usually at about half of it. A monthly route can miss a fault that runs from P to F in three weeks. MechTrack reads every machine on a schedule of minutes to hours. Because ultrasound sets P earliest, the window is as long as it can be.</p>
+      </div>
+
+      <div class="rel-fig">
+        <h3>2 · Most failures don't follow the calendar</h3>
+        <div class="nh">
+          <div><span>A · bathtub</span><i style="width:4%"></i><b>4%</b></div>
+          <div><span>B · wear-out</span><i style="width:2%"></i><b>2%</b></div>
+          <div><span>C · slow aging</span><i style="width:5%"></i><b>5%</b></div>
+          <div><span>D · rising early</span><i class="r" style="width:7%"></i><b>7%</b></div>
+          <div><span>E · random</span><i class="r" style="width:14%"></i><b>14%</b></div>
+          <div><span>F · infant mortality</span><i class="r" style="width:68%"></i><b>68%</b></div>
+        </div>
+        <p>Nowlan and Heap's 1978 study for the US Department of Defense found only 11% of failures were age-related (A to C). For the other 89%, a fixed-interval overhaul doesn't prevent failure, and it can bring in new infant-mortality failures. Their answer, now written into SAE JA1011, is the on-condition task: watch for the potential failure and act on it. MechTrack runs on-condition tasks automatically.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px">3 · Which OEE losses it attacks</h3>
+    <table class="oee">
+      <tr><th>TPM big loss (Nakajima)</th><th>OEE factor</th><th>MechTrack</th></tr>
+      <tr><td>Equipment breakdowns</td><td>Availability</td><td class="y">Direct. Failures become planned repairs in the next changeover.</td></tr>
+      <tr><td>Setup and adjustment</td><td>Availability</td><td class="n">No. That is SMED work, not sensing.</td></tr>
+      <tr><td>Idling and minor stops</td><td>Performance</td><td class="p">Partly. Run-time and RPM logs show stop patterns per machine.</td></tr>
+      <tr><td>Reduced speed</td><td>Performance</td><td class="y">Direct. Machines slowed down to "nurse" a bad bearing get fixed and run back up to rate.</td></tr>
+      <tr><td>Process defects</td><td>Quality</td><td class="y">Direct. Spindle runout, wheel imbalance and gear wear show up as chatter and finish defects before parts fail inspection.</td></tr>
+      <tr><td>Startup losses</td><td>Quality</td><td class="n">No.</td></tr>
+    </table>
+
+    <h3 style="margin-top:40px">4 · Closing the loop: PDCA on every finding</h3>
+    <div class="pdca">
+      <div><span>Plan</span><b>Detect and plan</b><p>The finding names the machine, the fault and the signal. The planner books it into the next window, with parts ordered while it is still at P.</p></div>
+      <div><span>Do</span><b>Fix it</b><p>The repair happens as planned work, not an emergency call-out.</p></div>
+      <div><span>Check</span><b>Verify it</b><p>The signal has to come back to baseline after the repair. If it doesn't, the root cause is still there: misalignment left in, the wrong grease, a soft foot.</p></div>
+      <div><span>Act</span><b>Standardize it</b><p>Repeat findings feed the FMEA and change the PM task or the design. For example, rinse pumps that keep cavitating get a weekly strainer check.</p></div>
+    </div>
+    <p class="small" style="margin-top:14px">References: F. S. Nowlan and H. F. Heap, <em>Reliability-Centered Maintenance</em>, United Airlines for the US DoD, 1978 · J. Moubray, <em>Reliability-Centered Maintenance</em> (RCM II) · SAE JA1011, evaluation criteria for RCM processes · S. Nakajima, <em>Introduction to TPM</em>, 1988 · ISO 17359, condition monitoring and diagnostics of machines.</p>
   </section>
 
   <section>
@@ -1752,27 +1840,100 @@
   }
 
   // ---------- what each machine is watched for (click a machine) ----------
-  var V = 'Vibration', U = 'Ultrasound', T = 'Temperature';
+  var V = 'Vibration', U = 'Ultrasound', T = 'Temperature', R = 'Run time';
+  var BRG = ['Bearing wear', U + ' → ' + V, 'Ultrasound rises first (about 8 dB over baseline means it needs grease; 16 dB or more is early damage). Then BPFO/BPFI tones show in the envelope spectrum.'];
   var CAT = {
-    cnc: ['CNC machining center', 'Sensor on the spindle housing', [['Spindle bearing wear', V + ' + ' + U], ['Spindle imbalance or tool runout', V], ['Spindle motor overheating', T], ['Lubrication loss on the bearings', U]]],
-    grinder: ['Surface grinder', 'Sensor on the wheel-head motor', [['Grinding wheel imbalance', V], ['Wheel-head bearing wear', V + ' + ' + U], ['Motor overheating', T], ['Lubrication loss', U]]],
-    fan: ['Exhaust fan', 'Sensor on the fan motor', [['Blade imbalance from buildup', V], ['Belt slip or misalignment', V + ' + ' + U], ['Motor bearing wear', U], ['Loose mounts', V]]],
-    hoist: ['Plating line hoist', 'Sensor on the hoist motor', [['Gearbox wear', V], ['Motor bearing wear', U], ['Overheating from duty cycle', T], ['Brake drag', T + ' + ' + V]]],
-    spray: ['Spray coating cell', 'Sensor on the robot base and turntable', [['Robot joint gearbox wear', V], ['Turntable bearing wear', V + ' + ' + U], ['Servo motor overheating', T]]],
-    furnace: ['Vacuum heat-treat furnace', 'Sensor on the vacuum pump', [['Pump bearing wear', V + ' + ' + U], ['Vacuum leaks', U], ['Pump overheating', T], ['Oil breakdown or low oil', T + ' + ' + U]]],
-    conveyor: ['Main conveyor', 'Sensor on the drive gearbox', [['Gearbox tooth wear', V], ['Motor bearing wear', U], ['Coupling misalignment', V], ['Belt or chain slip', V]]],
-    robot: ['Robot cell', 'Sensor on the robot base', [['Joint gearbox wear', V], ['Reducer backlash', V], ['Servo motor overheating', T]]],
-    compressor: ['Air compressor', 'Sensor on the motor and air end', [['Bearing wear', V + ' + ' + U], ['Air leaks on the header', U], ['Overheating', T], ['Motor misalignment', V]]],
-    pump: ['Process pump', 'Sensor on the motor', [['Cavitation', U + ' + ' + V], ['Impeller imbalance', V], ['Bearing wear', U], ['Seal failure or dry running', T]]],
-    press: ['Hydraulic press', 'Sensor on the press pump', [['Pump cavitation', U], ['Pump bearing wear', V + ' + ' + U], ['Hydraulic oil overheating', T], ['Internal leakage', U]]],
-    tower: ['Cooling tower', 'Sensor on the fan motor', [['Fan blade imbalance', V], ['Gearbox wear', V], ['Motor bearing wear', U], ['Loose mounts', V]]],
-    chiller: ['Chiller', 'Sensor on the compressor', [['Compressor bearing wear', V + ' + ' + U], ['Refrigerant leaks', U], ['Motor overheating', T], ['Loose mounts', V]]],
-    dust: ['Dust collector', 'Sensor on the fan motor', [['Fan imbalance from dust buildup', V], ['Bearing wear', U], ['Belt misalignment', V], ['Leaking pulse valves', U]]],
-    blast: ['Blast cabinet', 'Sensor on the blower motor', [['Blower bearing wear', V + ' + ' + U], ['Impeller imbalance', V], ['Motor overheating', T]]],
-    vib: ['Vibratory finisher', 'Sensor on the drive motor', [['Motor bearing wear', U], ['Broken spring or weight shift', V], ['Motor overheating', T]]],
-    mixer: ['Mix tank agitator', 'Sensor on the agitator drive', [['Gearbox wear', V], ['Shaft misalignment', V], ['Bearing wear', U], ['Motor overheating', T]]],
-    filter: ['Filter press', 'Sensor on the hydraulic drive', [['Hydraulic pump wear', V + ' + ' + U], ['Oil overheating', T], ['Motor bearing wear', U], ['Internal leakage', U]]],
-    hpu: ['Hydraulic power unit', 'Sensor on the pump motor', [['Pump cavitation', U], ['Oil overheating', T], ['Internal leakage', U], ['Motor bearing wear', V]]]
+    cnc: { n: 'CNC machining center', mount: 'Magnet on the spindle housing, radial, near the front bearing', std: 'No ISO severity zone fits spindles, so MechTrack baselines each spindle at each speed band', stake: 'A spindle rebuild takes the machine out for days to weeks, and a failing bearing shows up first as chatter and scrapped parts', f: [
+      ['Spindle bearing wear', V + ' + ' + U, 'Ultrasound friction rises first. Then the bearing defect tones (BPFO/BPFI) and a broadband rise above 1 kHz follow, at the same RPM and load.'],
+      ['Imbalance or tool runout', V, 'A steady 1× running-speed peak that follows the tool holder, which you can check after each tool change.'],
+      ['Spindle motor overheating', T, 'Case temperature drifting up at the same duty. That usually means a failing chiller or blocked cooling.'],
+      ['Lubrication loss', U, 'Ultrasound up with flat vibration. That is the cheapest fix there is: grease or oil-air, not a rebuild.']] },
+    grinder: { n: 'Surface grinder', mount: 'Magnet on the wheel-head motor housing', std: 'Baselined per wheel speed. Wheel balance is tracked against the post-dress reading', stake: 'Wheel imbalance turns straight into chatter marks and out-of-tolerance finish', f: [
+      ['Wheel imbalance', V, 'A 1× wheel-speed peak that grows as the wheel wears and drops after balancing or dressing.'],
+      BRG,
+      ['Motor overheating', T, 'Temperature rising at the same feed, from coolant or ventilation problems.'],
+      ['Looseness', V, 'Harmonics of running speed, often with ½× components, from loose mounts or a worn way.']] },
+    fan: { n: 'Exhaust fan', mount: 'Magnet on the motor drive-end bearing', std: 'Severity per ISO 14694 (fans), set by the fan category', stake: 'If it fails, airflow is lost and the process it ventilates has to stop', f: [
+      ['Blade buildup or imbalance', V, 'A 1× radial peak that climbs slowly as residue builds on the blades.'],
+      ['Belt wear or misalignment', V, 'Belt-frequency peaks below running speed, and RPM drifting down as belts slip.'],
+      BRG,
+      ['Looseness', V, 'Running-speed harmonics, from soft foot or loose base bolts.']] },
+    hoist: { n: 'Plating line hoist', mount: 'Magnet on the hoist gearmotor', std: 'Baselined per move. Start-stop duty is the trend that matters', stake: 'A hoist that stops mid-cycle leaves racks sitting in the tank, so parts over-etch or over-plate and get scrapped', f: [
+      ['Gearbox wear', V, 'Gear mesh frequency with sidebands at shaft speed, growing over weeks.'],
+      BRG,
+      ['Overheating from duty cycle', T + ' + ' + R, 'Temperature and run time both climbing, which means the hoist is working harder per cycle.'],
+      ['Brake drag', T + ' + ' + V, 'Heat at the brake end with a friction signature after each stop.']] },
+    spray: { n: 'Spray coating cell', mount: 'Magnet on the robot base and the turntable drive', std: 'Baselined per program. The robot repeats the same path, so changes stand out', stake: 'A robot stopping mid-cycle leaves parts with partial coats that need stripping and redoing', f: [
+      ['Joint gearbox wear', V, 'Mesh and backlash signatures growing on the same repeated motion.'],
+      ['Turntable bearing wear', U + ' → ' + V, 'Ultrasound friction first, then low-speed bearing tones.'],
+      ['Servo motor overheating', T, 'Temperature up on an unchanged program.']] },
+    furnace: { n: 'Vacuum heat-treat furnace', mount: 'Magnet on the roughing vacuum pump', std: 'Pump motor severity per ISO 20816-3', stake: 'Losing vacuum mid-cycle can scrap the whole furnace load and stretch the cycle by hours', f: [
+      ['Pump bearing wear', U + ' → ' + V, BRG[2]],
+      ['Vane or rotor wear', U + ' + ' + R, 'Ultrasound rising and the pump running longer each cycle to reach the same vacuum.'],
+      ['Pump overheating', T, 'Oil and case temperature climbing at the same cycle.'],
+      ['Oil breakdown or low oil', U + ' + ' + T, 'Friction in ultrasound together with heat, usually before any vibration change.']] },
+    conveyor: { n: 'Main conveyor', mount: 'Magnet on the drive gearbox, output side', std: 'Motor severity per ISO 20816-3. The gearbox is trended against its own baseline', stake: 'The conveyor links every cell, so one drive failure idles the whole line', f: [
+      ['Gearbox tooth wear', V, 'Gear mesh frequency with shaft-speed sidebands. A sideband spread points to one damaged tooth.'],
+      BRG,
+      ['Coupling misalignment', V + ' + ' + T, '1× and 2× peaks with high axial vibration, and the coupling running warm.'],
+      ['Belt or chain slip', V + ' + RPM', 'Speed drifting under load and impacts at the chain pitch frequency.']] },
+    robot: { n: 'Robot cell', mount: 'Magnet on the robot base, near the axis 1 reducer', std: 'Baselined per program, because a repeated path makes small changes visible', stake: 'A reducer failure means waiting on the robot maker\'s part with the cell down', f: [
+      ['Joint reducer wear', V, 'Rising vibration on the same motion, often at the reducer\'s mesh frequency.'],
+      ['Backlash', V, 'Impacts at each change of direction.'],
+      ['Servo motor overheating', T, 'Temperature up with the program unchanged.']] },
+    compressor: { n: 'Air compressor', mount: 'Magnet on the motor and on the air-end housing', std: 'Severity per ISO 20816-3', stake: 'Every air tool, actuator and blow-off in the plant stops when it does', f: [
+      ['Air-end bearing wear', U + ' → ' + V, BRG[2]],
+      ['Growing air leaks', R, 'The compressor loads more hours a day for the same production, which is the signature of leaks downstream.'],
+      ['Overheating', T, 'Discharge-side case temperature rising, from a fouled cooler or a fan problem.'],
+      ['Motor misalignment', V, '1× and 2× peaks with high axial vibration.']] },
+    pump: { n: 'Process pump', mount: 'Magnet on the motor drive-end bearing', std: 'Severity per ISO 10816-7 (rotodynamic pumps)', stake: 'A seized pump stops the rinse or recirculation it serves, and a failed seal can spill process chemistry', f: [
+      ['Cavitation', U + ' + ' + V, 'Broadband high-frequency noise and crackling in the ultrasound, worse at low suction head.'],
+      ['Impeller wear or imbalance', V, 'Vane-pass frequency (vanes × running speed) and 1× rising.'],
+      BRG,
+      ['Dry running or seal failure', T, 'A fast temperature rise. Dry running destroys a mechanical seal in minutes.']] },
+    press: { n: 'Hydraulic press', mount: 'Magnet on the press pump housing', std: 'Pump motor severity per ISO 20816-3', stake: 'Loss of the hydraulics stops the press. Hot oil also degrades seals across the whole circuit', f: [
+      ['Pump cavitation or aeration', U, 'Crackling broadband ultrasound, often from a clogged suction strainer or low oil.'],
+      ['Pump bearing wear', U + ' → ' + V, BRG[2]],
+      ['Oil overheating', T, 'Case temperature rising, from cooler fouling or internal bypass.'],
+      ['Internal leakage', U, 'A steady hiss in the ultrasound while holding pressure, which means oil is bypassing worn parts.']] },
+    tower: { n: 'Cooling tower', mount: 'Magnet on the fan motor, with the gearbox trended through it', std: 'Low speed: ultrasound carries the bearing signal where vibration is weak', stake: 'Losing the tower takes away cooling for the furnaces, quench and hydraulics', f: [
+      ['Fan blade imbalance', V, 'A 1× fan-speed peak, often after ice, scale or a damaged blade.'],
+      ['Gearbox wear', V, 'Gear mesh frequency with sidebands, from a wet, hard-to-inspect gearbox.'],
+      BRG,
+      ['Looseness', V, 'Harmonics from loose blades or the fan deck.']] },
+    chiller: { n: 'Chiller', mount: 'Magnet on the compressor housing', std: 'Compressor severity per ISO 20816-3', stake: 'Spindles, lasers and the process all lose cooling, and the parts that come off them drift out of tolerance', f: [
+      ['Compressor bearing wear', U + ' → ' + V, BRG[2]],
+      ['Running longer to hold setpoint', R + ' + ' + T, 'More run hours for the same load, which points to low charge or fouled coils.'],
+      ['Motor overheating', T, 'Case temperature rising at the same load.'],
+      ['Loose mounts', V, 'Running-speed harmonics.']] },
+    dust: { n: 'Dust collector', mount: 'Magnet on the fan motor', std: 'Severity per ISO 14694 (fans)', stake: 'Lose extraction on the grinders and blast cells and they must stop for air quality and fire safety', f: [
+      ['Dust buildup on the fan', V, 'A slowly climbing 1× peak as dust cakes the wheel.'],
+      BRG,
+      ['Belt wear or misalignment', V, 'Belt-frequency peaks and RPM drift.'],
+      ['Looseness', V, 'Running-speed harmonics.']] },
+    blast: { n: 'Blast cabinet', mount: 'Magnet on the blower motor', std: 'Severity per ISO 14694 (fans)', stake: 'Abrasive dust is hard on bearings, and when the blower stops the cell stops', f: [
+      BRG,
+      ['Impeller wear or imbalance', V, 'A 1× peak rising as abrasive erodes the impeller.'],
+      ['Motor overheating', T, 'Temperature up at the same load, often from clogged cooling fins.']] },
+    vib: { n: 'Vibratory finisher', mount: 'Magnet on the drive motor', std: 'It vibrates by design, so MechTrack learns its normal shake and flags changes to it', stake: 'A broken spring or shifted weight gives uneven finish across a batch', f: [
+      ['Motor bearing wear', U, 'Ultrasound picks up bearing friction even through the machine\'s own shake.'],
+      ['Broken spring or shifted weight', V, 'The amplitude or direction of the shake changes.'],
+      ['Motor overheating', T, 'Temperature up at the same load.']] },
+    mixer: { n: 'Mix tank agitator', mount: 'Magnet on the gearbox, near the output bearing', std: 'Low speed: ultrasound carries the bearing signal where vibration is weak', stake: 'Unmixed chemistry gives off-spec baths and rework', f: [
+      ['Gearbox wear', V, 'Gear mesh frequency with sidebands.'],
+      ['Shaft misalignment or bent shaft', V, '1× and 2× peaks with high axial vibration.'],
+      BRG,
+      ['Motor overheating', T, 'Temperature rising as the batch gets thicker or the gearbox drags.']] },
+    filter: { n: 'Filter press', mount: 'Magnet on the hydraulic drive pump', std: 'Pump motor severity per ISO 20816-3', stake: 'If the press can\'t close, sludge backs up and wastewater treatment slows', f: [
+      ['Hydraulic pump wear', U + ' + ' + V, 'Friction and vane-pass rising together.'],
+      ['Oil overheating', T, 'Case temperature rising over the clamping cycle.'],
+      BRG,
+      ['Internal leakage', U, 'A steady hiss while holding clamp pressure.']] },
+    hpu: { n: 'Hydraulic power unit', mount: 'Magnet on the pump-motor bell housing', std: 'Severity per ISO 20816-3', stake: 'Every press or fixture it feeds stops, and hot oil shortens seal life everywhere', f: [
+      ['Pump cavitation', U, 'Crackling broadband ultrasound, from a clogged suction strainer or low oil.'],
+      ['Oil overheating', T, 'Temperature up, from cooler fouling or internal bypass.'],
+      ['Internal leakage', U, 'A steady hiss while holding pressure.'],
+      ['Coupling misalignment', V, '1× and 2× peaks with high axial vibration.']] }
   };
   var machines = [];
   function tagged(kind, fn) {
@@ -1799,14 +1960,14 @@
   sprayCell(6, -6.5); sprayCell(11, -6.5);
   furnace(17, -6.5, 'Vacuum pump'); furnace(20.2, -6.5, 'Vacuum pump');
   // middle: conveyor + robot cells
-  conveyor(-20, 14, -1.5, 'Conveyor drive');
+  var fConv = conveyor(-20, 14, -1.5, 'Conveyor drive');
   robotCell(-12, 2.2); robotCell(-2, 2.2); robotCell(4, 2.2);
   // front: compressors, pumps, presses
-  compressor(-19.5, 9, 'Air compressor'); compressor(-16.2, 9, 'Air compressor');
-  [-11, -7.5, -4, -0.5].forEach(function (x) { pumpSkid(x, 10.5, 'Pump'); });
+  var fComp = compressor(-19.5, 9, 'Air compressor'); compressor(-16.2, 9, 'Air compressor');
+  var fPump = null; [-11, -7.5, -4, -0.5].forEach(function (x, i) { var pm = pumpSkid(x, 10.5, 'Pump'); if (i === 0) fPump = pm; });
   press(5, 10, 'Press pump'); press(11, 10, 'Press pump'); press(17, 10, 'Press pump');
   pumpSkid(14.8, -3.4, 'Quench pump');
-  coolingTower(-19, 16.5, 'Cooling tower fan'); chiller(-14, 16.5, 'Chiller');
+  var fTower = coolingTower(-19, 16.5, 'Cooling tower fan'); chiller(-14, 16.5, 'Chiller');
   dustCollector(-9, 16.5, 'Dust collector'); blastCabinet(-5.2, 16.5, 'Blast blower');
   vibFinisher(1.5, 16.5, 'Vibratory finisher'); mixerTank(5.5, 16.5, 'Agitator');
   filterPress(10.5, 16.5, 'Filter press drive');
@@ -1832,20 +1993,38 @@
   var trolley = new THREE.Group(); bridge.add(trolley);
   box(1.0, 0.5, 0.9, DARK, 0, -0.45, 0, {}, trolley); box(0.04, 3.2, 0.04, 0x222222, 0, -2.3, 0, {}, trolley); box(0.3, 0.3, 0.3, 0xf2c230, 0, -4.0, 0, {}, trolley);
 
-  // fault ring on the flagged spindle
-  var ring = new THREE.Mesh(new THREE.TorusGeometry(1.9, 0.05, 8, 64), new THREE.MeshBasicMaterial({ color: AMBER, transparent: true, opacity: 0 }));
-  ring.rotation.x = Math.PI / 2; ring.position.set(faultMech.g.position.x, 0.05, faultMech.g.position.z); ring.scale.set(1, 0.85, 1); scene.add(ring);
+  // problems found across the plant
+  var RED = 0xe5533d, YEL = 0xf2c230;
+  var faults = [
+    { m: faultMech, i: 0, c: RED, tag: 'Act this week', lbl: 'CNC spindle: bearing wear', t: 'Spindle bearing wear', d: 'Ultrasound up, then bearing tones at the same speed and load. Swap it in the weekend changeover.' },
+    { m: fPump, i: 0, c: RED, tag: 'Act this shift', lbl: 'Pump: cavitation', t: 'Rinse pump cavitating', d: 'Ultrasound crackle at low suction head. Check the suction strainer before the impeller erodes.' },
+    { m: fComp, i: 1, c: AMBER, tag: 'Plan', lbl: 'Compressor: loaded hours up', t: 'Compressor running longer', d: 'Loaded hours climbing week over week at the same output. Book a leak walk.' },
+    { m: fConv, i: 0, c: YEL, tag: 'Watch', lbl: 'Conveyor: gear mesh rising', t: 'Conveyor gearbox wear', d: 'Gear mesh sidebands growing slowly. Order the spare, trend weekly.' },
+    { m: fTower, i: 0, c: YEL, tag: 'Watch', lbl: 'Tower fan: 1x rising', t: 'Cooling tower fan imbalance', d: '1x fan-speed peak creeping up. Inspect blades at the next outage.' }
+  ];
+  faults.forEach(function (f) {
+    var wp0 = f.m.g.getWorldPosition(new THREE.Vector3());
+    f.ring = new THREE.Mesh(new THREE.TorusGeometry(1.6, 0.05, 8, 64), new THREE.MeshBasicMaterial({ color: f.c, transparent: true, opacity: 0 }));
+    f.ring.rotation.x = Math.PI / 2; f.ring.position.set(wp0.x, 0.05, wp0.z); scene.add(f.ring);
+  });
+  faults.forEach(function (f) { f.m.fc = f.c; });
+  var hotSet = faults.map(function (f) { return f.m; });
+  document.getElementById('alertCards').innerHTML = faults.map(function (f, k) {
+    var hex = '#' + f.c.toString(16).padStart(6, '0');
+    return '<div class="ac" data-k="' + k + '" style="border-left-color:' + hex + '"><span style="color:' + hex + '">' + f.tag + '</span><b>' + f.t + '</b></div>';
+  }).join('');
 
   // gateway label
   var gwEl = document.createElement('div'); gwEl.className = 'lbl'; gwEl.textContent = 'Gateway'; host.appendChild(gwEl);
-  var faultDef = faultMech.label;
 
   var state = 'normal';
   function setState(s) {
-    state = s; var f = s === 'fault'; var c = f ? AMBER : BLUE;
-    faultMech.top.material.color.setHex(c); faultMech.top.material.emissive.setHex(c);
+    state = s; var f = s === 'fault';
+    faults.forEach(function (ft) {
+      var c = f ? ft.c : BLUE; ft.m.top.material.color.setHex(c); ft.m.top.material.emissive.setHex(c);
+      var d = ft.m.label; if (d) { d.el.textContent = f ? ft.lbl : d.name; d.el.classList.toggle('hotl', f); }
+    });
     document.getElementById('alertCards').style.display = f ? 'flex' : 'none';
-    if (faultDef) { faultDef.el.textContent = f ? 'CNC spindle: bearing wear' : faultDef.name; faultDef.el.classList.toggle('hotl', f); }
     document.querySelectorAll('#plant3d .tog button').forEach(function (b) { b.classList.toggle('on', b.dataset.s === s); });
   }
   document.querySelectorAll('#plant3d .tog button').forEach(function (b) { b.addEventListener('click', function () { setState(b.dataset.s); controls.autoRotate = false; }); });
@@ -1876,11 +2055,14 @@
   }
   function render() {
     if (!sel) return;
-    var c = CAT[sel.kind]; info.querySelector('h4').textContent = c[0]; info.querySelector('.where').textContent = c[1];
-    var hotMk = state === 'fault' && faultMech.mk === sel;
-    info.querySelector('ul').innerHTML = c[2].map(function (f, i) {
-      return '<li' + (hotMk && i === 0 ? ' class="hot"' : '') + '><b>' + f[0] + '</b><i>' + f[1] + '</i></li>';
+    var c = CAT[sel.kind]; info.querySelector('h4').textContent = c.n; info.querySelector('.where').textContent = c.mount;
+    var ft = null; if (state === 'fault') faults.forEach(function (x) { if (x.m.mk === sel) ft = x; });
+    info.querySelector('ul').innerHTML = c.f.map(function (f, i) {
+      return '<li' + (ft && i === ft.i ? ' class="hot"' : '') + '><b>' + f[0] + '</b><i>' + f[1] + '</i><p>' + f[2] + '</p></li>';
     }).join('');
+    var fd = info.querySelector('.find'); fd.style.display = ft ? 'block' : 'none';
+    if (ft) { var hx = '#' + ft.c.toString(16).padStart(6, '0'); fd.style.borderLeftColor = hx; fd.innerHTML = '<span style="color:' + hx + '">Finding · ' + ft.tag + '</span>' + ft.d; }
+    info.querySelector('.std').textContent = c.std; info.querySelector('.stake').textContent = c.stake;
   }
   function select(mk) {
     if (sel) glow(sel, false);
@@ -1889,6 +2071,7 @@
     if (mk) { glow(mk, true); render(); controls.autoRotate = false; hint.style.opacity = 0; }
   }
   info.querySelector('.x').addEventListener('click', function () { select(null); });
+  document.querySelectorAll('#alertCards .ac').forEach(function (el) { el.addEventListener('click', function () { select(faults[+el.dataset.k].m.mk); }); });
   labelDefs.forEach(function (d) {
     d.el.addEventListener('pointerdown', function (e) { e.stopPropagation(); });
     d.el.addEventListener('click', function (e) { e.stopPropagation(); select(sel === d.m.mk ? null : d.m.mk); });
@@ -1901,7 +2084,7 @@
   renderer.domElement.addEventListener('pointermove', function (e) {
     if (e.buttons) return; renderer.domElement.style.cursor = pick(e) ? 'pointer' : 'grab';
   });
-  document.querySelectorAll('#plant3d .tog button').forEach(function (b) { b.addEventListener('click', function () { if (b.dataset.s === 'fault' && !sel && host.clientWidth > 700) select(faultMech.mk); else render(); }); });
+  document.querySelectorAll('#plant3d .tog button').forEach(function (b) { b.addEventListener('click', function () { if (b.dataset.s === 'fault' && !sel && host.clientWidth > 700) select(faults[0].m.mk); else render(); }); });
 
   var v = new THREE.Vector3(), wp = new THREE.Vector3(), A = new THREE.Vector3(), M = new THREE.Vector3(), Pt = new THREE.Vector3();
   function bez(a, m, b, t, out) { var u = 1 - t; return out.set(u * u * a.x + 2 * u * t * m.x + t * t * b.x, u * u * a.y + 2 * u * t * m.y + t * t * b.y, u * u * a.z + 2 * u * t * m.z + t * t * b.z); }
@@ -1931,17 +2114,19 @@
       var pos = l.line.geometry.attributes.position;
       for (var k = 0; k <= NP; k++) { bez(A, M, top, k / NP, Pt); pos.setXYZ(k, Pt.x, Pt.y, Pt.z); }
       pos.needsUpdate = true;
-      var hot = state === 'fault' && l.m === faultMech;
+      var hot = state === 'fault' && hotSet.indexOf(l.m) >= 0; var hc = hot ? l.m.fc : BLUE;
       l.t = (l.t + 0.004 + (hot ? 0.004 : 0)) % 1;
       bez(A, M, top, l.t, l.dot.position);
-      l.dot.material.color.setHex(hot ? AMBER : BLUE);
+      l.dot.material.color.setHex(hc);
     });
     rings.forEach(function (r, i) { var ph = (t * 0.5 + (i % 3) / 3) % 1; var s3 = 0.4 + ph * 3.2; r.scale.set(s3, s3, 1); r.material.opacity = 0.6 * (1 - ph); });
-    if (state === 'fault') {
-      var pulse = 0.5 + 0.5 * Math.sin(t * 5);
-      faultMech.top.material.emissiveIntensity = 0.5 + pulse * 1.3;
-      ring.material.opacity = 0.35 + pulse * 0.5; var s2 = 1 + pulse * 0.2; ring.scale.set(s2, 0.85 * s2, 1);
-    } else { faultMech.top.material.emissiveIntensity = 1.0; ring.material.opacity = 0; }
+    faults.forEach(function (ft, k) {
+      if (state === 'fault') {
+        var pulse = 0.5 + 0.5 * Math.sin(t * (ft.c === YEL ? 2.5 : 5) + k);
+        ft.m.top.material.emissiveIntensity = 0.5 + pulse * 1.3;
+        ft.ring.material.opacity = 0.3 + pulse * 0.5; var s2 = 1 + pulse * 0.2; ft.ring.scale.set(s2, s2, 1);
+      } else { ft.m.top.material.emissiveIntensity = 1.0; ft.ring.material.opacity = 0; }
+    });
     controls.update();
     labelDefs.forEach(function (d) { d.m.g.getWorldPosition(wp); wp.y += 0.5; place(d.el, wp); });
     wp.copy(gateways[0].top); wp.y += 0.35; place(gwEl, wp);
