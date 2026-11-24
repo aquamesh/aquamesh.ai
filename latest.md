@@ -1,4 +1,4 @@
-# SEO report, 2026-11-22
+# SEO report, 2026-11-24
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-19). Site errors: 5.
 
@@ -40,8 +40,8 @@ Cited in AI answers to 0 of the tracked buyer questions.
 - **link-broken** (4)
   - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/nitrogen-permit-compliance-sampling-gap.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
-  - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/do-sensor-calibration-interval-activated-sludge.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
+  - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
 - **drift-unfixable** (1)
   - `/`: generated files are stale but the rebuild failed a guardrail: sitemap would lose https://aquamesh.ai/case-studies/mechtrack-predictive-maintenance.html
 
@@ -61,13 +61,13 @@ Cited in AI answers to 0 of the tracked buyer questions.
 
 - **desc-length** (10)
   - `/`: meta description is 183 chars (aim for 70 to 160)
-  - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
-  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
+  - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
   - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
+  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
-  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
   - `/case-studies/mechtrack-predictive-maintenance.html`: meta description is 179 chars (aim for 70 to 160)
+  - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
   - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
 - **title-length** (6)
@@ -79,22 +79,22 @@ Cited in AI answers to 0 of the tracked buyer questions.
   - `/blog/connect-press-release-physical-ai.html`: title is 70 chars; Google truncates near 60: "AquaMesh physical AI: early detection for industrial plants | AquaMesh"
 - **jsonld-article-fields** (4)
   - `/company.html`: Article missing dateModified, image
-  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
   - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
   - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
+  - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **jsonld-missing** (4)
-  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
   - `/case-studies/mechtrack-predictive-maintenance.html`: no JSON-LD structured data
+  - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
   - `/case-studies/refinery-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
 - **og-missing** (4)
-  - `/cookies.html`: missing og:title, og:description; link previews degrade
   - `/privacy.html`: missing og:title, og:description; link previews degrade
+  - `/cookies.html`: missing og:title, og:description; link previews degrade
   - `/terms.html`: missing og:title, og:description; link previews degrade
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
 - **html-weight** (3)
+  - `/case-studies/mechtrack-predictive-maintenance.html`: HTML is 885 KB
   - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
-  - `/case-studies/mechtrack-predictive-maintenance.html`: HTML is 852 KB
   - `/case-studies/refinery-complex.html`: HTML is 1841 KB
 - **cwv-cls** (3)
   - `/blog/`: CLS 0.16 (good is under 0.1)
@@ -121,7 +121,7 @@ Cited in AI answers to 0 of the tracked buyer questions.
 
 - Found stale generated files; the rebuild failed a guardrail, so I committed nothing.
 - Crawled 52 live pages and 73 assets and files.
-- IndexNow: no page content changed since the last run, nothing to submit.
+- Told IndexNow (Bing, Copilot, Yandex) about 1 new or changed URL(s) (HTTP 200).
 
 </details>
 
