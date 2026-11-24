@@ -1,23 +1,17 @@
 {
-  "at": "2026-11-24T01:12:04.029Z",
+  "at": "2026-11-24T23:15:33.514Z",
   "findings": [
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/",
-      "msg": "meta description is 183 chars (aim for 70 to 160)"
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/company.html",
+      "msg": "Article missing dateModified, image"
     },
     {
       "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/modeling.html",
       "msg": "meta description is 201 chars (aim for 70 to 160)"
-    },
-    {
-      "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/company.html",
-      "msg": "Article missing dateModified, image"
     },
     {
       "sev": "warn",
@@ -28,8 +22,8 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/products/aquaspectra.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/",
+      "msg": "meta description is 183 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -40,14 +34,20 @@
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
-      "msg": "meta description is 191 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/products/aquaspectra.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
       "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
+      "msg": "meta description is 191 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -141,9 +141,9 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/basin/",
-      "msg": "meta description is 171 chars (aim for 70 to 160)"
+      "id": "jsonld-missing",
+      "url": "https://aquamesh.ai/basin/methodology.html",
+      "msg": "no JSON-LD structured data"
     },
     {
       "sev": "warn",
@@ -159,9 +159,9 @@
     },
     {
       "sev": "warn",
-      "id": "jsonld-missing",
-      "url": "https://aquamesh.ai/basin/methodology.html",
-      "msg": "no JSON-LD structured data"
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/basin/",
+      "msg": "meta description is 171 chars (aim for 70 to 160)"
     },
     {
       "sev": "error",
@@ -196,13 +196,13 @@
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
+      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
       "msg": "Article missing image"
     },
     {
       "sev": "warn",
       "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/insights/water-reuse-monitoring-failure-modes.html",
+      "url": "https://aquamesh.ai/insights/metal-finishing-rinse-control-decisions.html",
       "msg": "Article missing image"
     },
     {
@@ -269,7 +269,7 @@
   "actions": [
     "Found stale generated files; the rebuild failed a guardrail, so I committed nothing.",
     "Crawled 52 live pages and 73 assets and files.",
-    "Told IndexNow (Bing, Copilot, Yandex) about 1 new or changed URL(s) (HTTP 200)."
+    "IndexNow: no page content changed since the last run, nothing to submit."
   ],
   "lighthouse": {
     "at": "2026-11-19T21:47:18.521Z",
