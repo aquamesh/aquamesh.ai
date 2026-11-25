@@ -1,4 +1,4 @@
-# SEO report, 2026-11-24
+# SEO report, 2026-11-25
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-19). Site errors: 5.
 
@@ -39,8 +39,8 @@ Cited in AI answers to 0 of the tracked buyer questions.
 ## Site health (52 pages crawled)
 - **link-broken** (4)
   - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
-  - `/blog/nitrogen-permit-compliance-sampling-gap.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/do-sensor-calibration-interval-activated-sludge.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
+  - `/blog/nitrogen-permit-compliance-sampling-gap.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
 - **drift-unfixable** (1)
   - `/`: generated files are stale but the rebuild failed a guardrail: sitemap would lose https://aquamesh.ai/case-studies/mechtrack-predictive-maintenance.html
@@ -60,11 +60,11 @@ Cited in AI answers to 0 of the tracked buyer questions.
 <details><summary>37 warnings</summary>
 
 - **desc-length** (10)
-  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
   - `/`: meta description is 183 chars (aim for 70 to 160)
-  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
+  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
+  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/mechtrack-predictive-maintenance.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
