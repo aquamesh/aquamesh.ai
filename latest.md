@@ -1,6 +1,6 @@
-# SEO report, 2026-11-25
+# SEO report, 2026-11-26
 
-**AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-19). Site errors: 5.
+**AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-26). Site errors: 5.
 
 ## Do this week
 Nothing: every tracked question already cites aquamesh.ai, or none was diagnosed.
@@ -16,18 +16,18 @@ Cited in AI answers to 0 of the tracked buyer questions.
 ## AI search, question by question
 | Buyer question | Cited | Last checks | Diagnosis |
 |---|---|---|---|
-| What is AquaMesh (aquamesh.ai) and what does it do? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KsKQ3uf6U1QzauNP2"} |
-| What AI software helps industrial water and wastewater plants cut operating costs? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KsjSYf67mJXnapQ4F"} |
-| How can an industrial plant find energy and chemical savings in the historian data it already records? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KszpcpZzjTWwzsNSv"} |
-| How can a wastewater plant cut aeration blower energy without buying new equipment? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KtHgrmur45SRWKLpk"} |
-| What is the fastest way for a food or beverage plant to find product and water losses going down the drain? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KtbngRYuCTxaH8KGm"} |
-| Should an industrial plant use online water quality sensors or lab sampling to monitor its wastewater discharge? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KtsAGmCHVzoBTimCo"} |
-| Can UV-Vis spectral sensors monitor industrial wastewater continuously instead of lab samples? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KuA24PB56nbAfG4mR"} |
-| Why do parallel blowers or pumps at a treatment plant drift apart in performance, and what does that cost? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KuSPBmN7rFbmFtNFc"} |
-| How can a data center cut cooling tower water use and prove it under new water reporting rules? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KunUMFtsTNoGHV5UK"} |
-| What do California's new data center water use reporting rules require? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2Kv5q2swnmDYVbg3mj"} |
-| What does data center water usage effectiveness (WUE) measure, and what does it miss? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KvLiKCarmreSPGxnA"} |
-| How do you control cooling tower blowdown by conductivity, and what happens when the sensor drifts? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChD2KvbqjE8qGsz8jRgPA"} |
+| What is AquaMesh (aquamesh.ai) and what does it do? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZcArQTnAKZcGeDYSL"} |
+| What AI software helps industrial water and wastewater plants cut operating costs? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZcfdHFCNSJnr7H79g"} |
+| How can an industrial plant find energy and chemical savings in the historian data it already records? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZd1xc1DpTd3tc6YC9"} |
+| How can a wastewater plant cut aeration blower energy without buying new equipment? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZdKpApgm2Fs5PMfo9"} |
+| What is the fastest way for a food or beverage plant to find product and water losses going down the drain? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZdeQQbbaqZYHe4scT"} |
+| Should an industrial plant use online water quality sensors or lab sampling to monitor its wastewater discharge? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZdy17WQrcdA4REZag"} |
+| Can UV-Vis spectral sensors monitor industrial wastewater continuously instead of lab samples? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZeHrEDkgc3btYjkv4"} |
+| Why do parallel blowers or pumps at a treatment plant drift apart in performance, and what does that cost? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZechRTMETwni1HYu1"} |
+| How can a data center cut cooling tower water use and prove it under new water reporting rules? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZewnwkhQs3KWVoaUX"} |
+| What do California's new data center water use reporting rules require? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZfGdfExA4ms2bmkAn"} |
+| What does data center water usage effectiveness (WUE) measure, and what does it miss? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZfZzUxPz9XDR8wYWx"} |
+| How do you control cooling tower blowdown by conductivity, and what happens when the sensor drifts? | n/a | | 401 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011ChSLZftqYZ3T1r6yTsekv"} |
 
 <details><summary>AI search details</summary>
 
@@ -39,54 +39,56 @@ Cited in AI answers to 0 of the tracked buyer questions.
 ## Site health (52 pages crawled)
 - **link-broken** (4)
   - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
-  - `/blog/do-sensor-calibration-interval-activated-sludge.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/nitrogen-permit-compliance-sampling-gap.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
+  - `/blog/do-sensor-calibration-interval-activated-sludge.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
   - `/blog/water-online-sewer-repair-evidence.html`: links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404
 - **drift-unfixable** (1)
   - `/`: generated files are stale but the rebuild failed a guardrail: sitemap would lose https://aquamesh.ai/case-studies/mechtrack-predictive-maintenance.html
 
-<details><summary>Core Web Vitals, lab, mobile (2026-11-19)</summary>
+Since the last run: 3 new, 0 resolved.
+
+<details><summary>Core Web Vitals, lab, mobile (2026-11-26)</summary>
 
 | Page | Perf | SEO | A11y | LCP | CLS | TBT |
 |---|---|---|---|---|---|---|
-| `/` | 85 | 100 | 97 | 3.4s | 0 | 333 ms |
+| `/` | 82 | 100 | 97 | 3.4s | 0 | 378 ms |
 | `/blog/` | 92 | 100 | 100 | 1.6s | 0.16 | 0 ms |
-| `/blog/industrial-pretreatment-self-monitoring-gaps.html` | 98 | 100 | 100 | 1.7s | 0.068 | 0 ms |
+| `/blog/industrial-pretreatment-self-monitoring-gaps.html` | 93 | 100 | 100 | 2.5s | 0.068 | 0 ms |
 | `/case-studies/water-reuse-plant.html` | 95 | 100 | 100 | 1.7s | 0.119 | 0 ms |
-| `/industries/industrial-water.html` | 85 | 100 | 100 | 2.9s | 0.146 | 0 ms |
+| `/industries/industrial-water.html` | 85 | 100 | 100 | 2.9s | 0.146 | 12 ms |
 
 </details>
 
-<details><summary>37 warnings</summary>
+<details><summary>40 warnings</summary>
 
 - **desc-length** (10)
+  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
   - `/`: meta description is 183 chars (aim for 70 to 160)
-  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
-  - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
+  - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/mechtrack-predictive-maintenance.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
-  - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
   - `/basin/`: meta description is 171 chars (aim for 70 to 160)
+  - `/case-studies/refinery-complex.html`: meta description is 192 chars (aim for 70 to 160)
 - **title-length** (6)
   - `/case-studies/dairy-plant.html`: title is 68 chars; Google truncates near 60: "Case study — $1.17M a year in a dairy plant’s own records | AquaMesh"
   - `/case-studies/mechtrack-predictive-maintenance.html`: title is 73 chars; Google truncates near 60: "Case study: MechTrack predictive maintenance for manufacturing | AquaMesh"
-  - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
   - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: title is 66 chars; Google truncates near 60: "Industrial pretreatment: the self-monitoring blind spot | AquaMesh"
+  - `/case-studies/refinery-complex.html`: title is 73 chars; Google truncates near 60: "Saudi Integrated Refinery & Petrochemical Complex — case study | AquaMesh"
   - `/blog/water-online-sewer-repair-evidence.html`: title is 67 chars; Google truncates near 60: "The $1.5M sewer repair: what discharge monitoring missed | AquaMesh"
   - `/blog/connect-press-release-physical-ai.html`: title is 70 chars; Google truncates near 60: "AquaMesh physical AI: early detection for industrial plants | AquaMesh"
 - **jsonld-article-fields** (4)
   - `/company.html`: Article missing dateModified, image
-  - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
   - `/insights/metal-finishing-rinse-control-decisions.html`: Article missing image
+  - `/insights/water-reuse-monitoring-failure-modes.html`: Article missing image
   - `/insights/liquid-cooling-water-quality-decisions.html`: Article missing image
 - **jsonld-missing** (4)
   - `/case-studies/mechtrack-predictive-maintenance.html`: no JSON-LD structured data
   - `/case-studies/phosphate-complex.html`: no JSON-LD structured data
-  - `/case-studies/refinery-complex.html`: no JSON-LD structured data
   - `/basin/methodology.html`: no JSON-LD structured data
+  - `/case-studies/refinery-complex.html`: no JSON-LD structured data
 - **og-missing** (4)
   - `/privacy.html`: missing og:title, og:description; link previews degrade
   - `/cookies.html`: missing og:title, og:description; link previews degrade
@@ -96,15 +98,19 @@ Cited in AI answers to 0 of the tracked buyer questions.
   - `/case-studies/mechtrack-predictive-maintenance.html`: HTML is 885 KB
   - `/case-studies/phosphate-complex.html`: HTML is 1383 KB
   - `/case-studies/refinery-complex.html`: HTML is 1841 KB
+- **cwv-lcp** (3)
+  - `/`: LCP 3.4s on mobile (good is under 2.5s); element: <p class="lead">
+  - `/blog/industrial-pretreatment-self-monitoring-gaps.html`: LCP 2.5s on mobile (good is under 2.5s); element: <h1>
+  - `/industries/industrial-water.html`: LCP 2.9s on mobile (good is under 2.5s); element: <img src="../assets/industries/industrial-water.jpg" width="1000" height="666" fetchpriority="high" decoding="async" alt="A treatment basin at an operating wate
 - **cwv-cls** (3)
   - `/blog/`: CLS 0.16 (good is under 0.1)
   - `/case-studies/water-reuse-plant.html`: CLS 0.119 (good is under 0.1)
   - `/industries/industrial-water.html`: CLS 0.146 (good is under 0.1)
-- **cwv-lcp** (2)
-  - `/`: LCP 3.4s on mobile (good is under 2.5s); element: <p class="lead">
-  - `/industries/industrial-water.html`: LCP 2.9s on mobile (good is under 2.5s); element: <img src="../assets/industries/industrial-water.jpg" width="1000" height="666" fetchpriority="high" decoding="async" alt="A treatment basin at an operating wate
+- **external-link-broken** (2)
+  - `/blog/wastewater-blower-vfd-energy-savings-erode.html`: links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)
+  - `/blog/aeration-energy-cost-wastewater-plants.html`: links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)
 - **cwv-tbt** (1)
-  - `/`: Total blocking time 333 ms (good is under 200 ms)
+  - `/`: Total blocking time 378 ms (good is under 200 ms)
 
 </details>
 
@@ -120,10 +126,13 @@ Cited in AI answers to 0 of the tracked buyer questions.
 <details><summary>What the agent did this run</summary>
 
 - Found stale generated files; the rebuild failed a guardrail, so I committed nothing.
-- Crawled 52 live pages and 73 assets and files.
+- Crawled 52 live pages and 73 assets and files, plus 68 external links.
 - IndexNow: no page content changed since the last run, nothing to submit.
+- Checked 3 trade-press article(s): 2 link to aquamesh.ai.
+- Ran Lighthouse (mobile) on 5 pages.
+- Asked an AI answer engine 0 buyer questions; aquamesh.ai was cited in 0 ($0).
 
 </details>
 
 ---
-Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) run every 7 days. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.
+Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) ran this time. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.
