@@ -23,13 +23,19 @@
     .demo-head .eyebrow { justify-content: center; padding-left: .24em; }
     .demo-video { margin: clamp(28px, 4vw, 44px) auto 0; width: 100%; max-width: 1080px; aspect-ratio: 16 / 9; background: #0b1226; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
     .demo-video video { display: block; width: 100%; height: 100%; }
-    .demo-steps { list-style: none; margin: clamp(32px, 4.5vw, 52px) auto 0; padding: 0; max-width: 1080px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 48px); }
+    .demo-more { margin: clamp(40px, 5vw, 64px) auto 0; font-size: 1.3rem; }
+ .demo-shorts { margin: 18px auto 0; max-width: 1080px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 3vw, 32px); }
+ .demo-shorts figure { margin: 0; }
+ .demo-shorts .demo-video { margin-top: 0; }
+ .demo-shorts figcaption { margin-top: 10px; font-size: .95rem; color: var(--ink-3); text-align: left; }
+ .demo-steps { list-style: none; margin: clamp(32px, 4.5vw, 52px) auto 0; padding: 0; max-width: 1080px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); }
     .demo-num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--blue); color: var(--blue); font-weight: 700; font-size: .95rem; margin-bottom: 12px; }
     .demo-steps h3 { margin-bottom: 8px; }
     .demo-steps p { font-size: .98rem; color: var(--ink-3); max-width: 34ch; margin-inline: auto; }
     .demo-note { margin-top: 36px; font-size: .9rem; color: var(--ink-3); }
     .demo-cta { margin-top: 20px; }
-    @media (max-width: 760px) { .demo-steps { grid-template-columns: 1fr; } }
+    @media (max-width: 960px) { .demo-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+ @media (max-width: 760px) { .demo-steps, .demo-shorts { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -117,9 +123,10 @@
         <h1>Sell with the plant's own <span class="accent">numbers.</span></h1>
         <p class="lead">For teams that sell chemistry, equipment or services into plants: from a plant worth approaching to a brief your rep can take into the room.</p>
         <div class="demo-video">
-          <video controls playsinline preload="metadata" poster="poster.jpg" aria-label="AquaMesh sales demo">
-            <source src="aquamesh-sales-demo.mp4?v=1" type="video/mp4" />
-            Your browser does not play embedded video. <a href="aquamesh-sales-demo.mp4?v=1">Download the demo</a>.
+          <video controls playsinline preload="metadata" poster="poster.jpg" aria-label="AquaMesh sales demo, narrated">
+            <source src="aquamesh-sales-demo-narrated.mp4?v=2" type="video/mp4" />
+            <track kind="captions" src="aquamesh-sales-demo-narrated.vtt?v=2" srclang="en" label="English" />
+            Your browser does not play embedded video. <a href="aquamesh-sales-demo-narrated.mp4?v=2">Download the demo</a>.
           </video>
         </div>
         <ol class="demo-steps">
@@ -138,8 +145,30 @@
             <h3>Rep's brief</h3>
             <p>Questions to ask, objections to expect, a talk track and next steps, every figure traced to a finding. The plant gets its own report.</p>
           </li>
+          <li>
+            <span class="demo-num">4</span>
+            <h3>Live twin</h3>
+            <p>When they say yes, the same audit becomes a live digital twin: their historian streamed in, detectors from the audit, every saving tracked. Advisory only.</p>
+          </li>
         </ol>
-        <p class="demo-note">The seller and the audited plant are fictional, and the plant's data is simulated. The prospect list shows real facilities from public EPA records.</p>
+        <h2 class="demo-more">Short videos</h2>
+        <div class="demo-shorts">
+          <figure>
+            <div class="demo-video"><video controls playsinline preload="metadata" poster="poster-pids.jpg" aria-label="From P&amp;IDs to the plant model">
+              <source src="aquamesh-pids-to-plant-model.mp4?v=1" type="video/mp4" />
+              <track kind="captions" src="aquamesh-pids-to-plant-model.vtt?v=1" srclang="en" label="English" />
+            </video></div>
+            <figcaption><strong>P&amp;IDs to plant model</strong> · 30 s. The plant's drawings read into equipment, instruments and lines, then checked by its engineer.</figcaption>
+          </figure>
+          <figure>
+            <div class="demo-video"><video controls playsinline preload="metadata" poster="poster-twin.jpg" aria-label="The live digital twin">
+              <source src="aquamesh-live-twin.mp4?v=1" type="video/mp4" />
+              <track kind="captions" src="aquamesh-live-twin.vtt?v=1" srclang="en" label="English" />
+            </video></div>
+            <figcaption><strong>The live twin</strong> · 50 s. From the audit to a live, watched plant, advisory by default.</figcaption>
+          </figure>
+        </div>
+        <p class="demo-note">The seller and the audited plant are fictional, and the plant's data is simulated. The prospect list shows real facilities from public EPA records. The 3D view shows our demonstration plant. Narration voice: elevenlabs.io.</p>
         <p class="demo-cta"><a class="btn" href="mailto:info@aquamesh.ai?subject=Demo%20request">Book a demo <svg class="ic"><use href="#i-arrow" /></svg></a></p>
       </div>
     </section>

@@ -1,0 +1,26 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:04.712
+Got P&IDs? Drop the whole drawing set into AquaMesh.
+
+2
+00:00:05.762 --> 00:00:07.319
+It reads every sheet:
+
+3
+00:00:07.319 --> 00:00:11.248
+the equipment, every instrument, and what feeds what.
+
+4
+00:00:12.298 --> 00:00:17.052
+Your engineer checks it, fixes anything that's off, and marks it checked.
+
+5
+00:00:18.252 --> 00:00:22.735
+That checked plant model is what the live digital twin is built on.
+
+6
+00:00:22.735 --> 00:00:25.880
+So the twin matches the plant you actually run.
+
