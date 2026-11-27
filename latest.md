@@ -1,4 +1,4 @@
-# SEO report, 2026-11-26
+# SEO report, 2026-11-27
 
 **AI answers that cite aquamesh.ai: 0 of 0** (checked 2026-11-26). Site errors: 5.
 
@@ -45,7 +45,7 @@ Cited in AI answers to 0 of the tracked buyer questions.
 - **drift-unfixable** (1)
   - `/`: generated files are stale but the rebuild failed a guardrail: sitemap would lose https://aquamesh.ai/case-studies/mechtrack-predictive-maintenance.html
 
-Since the last run: 3 new, 0 resolved.
+Since the last run: 0 new, 2 resolved.
 
 <details><summary>Core Web Vitals, lab, mobile (2026-11-26)</summary>
 
@@ -59,14 +59,14 @@ Since the last run: 3 new, 0 resolved.
 
 </details>
 
-<details><summary>40 warnings</summary>
+<details><summary>38 warnings</summary>
 
 - **desc-length** (10)
-  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/hardware.html`: meta description is 187 chars (aim for 70 to 160)
+  - `/modeling.html`: meta description is 201 chars (aim for 70 to 160)
   - `/`: meta description is 183 chars (aim for 70 to 160)
-  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/products/aquaspectra.html`: meta description is 179 chars (aim for 70 to 160)
+  - `/case-studies/`: meta description is 250 chars (aim for 70 to 160)
   - `/case-studies/bottling-plant.html`: meta description is 191 chars (aim for 70 to 160)
   - `/case-studies/mechtrack-predictive-maintenance.html`: meta description is 179 chars (aim for 70 to 160)
   - `/case-studies/phosphate-complex.html`: meta description is 176 chars (aim for 70 to 160)
@@ -90,8 +90,8 @@ Since the last run: 3 new, 0 resolved.
   - `/basin/methodology.html`: no JSON-LD structured data
   - `/case-studies/refinery-complex.html`: no JSON-LD structured data
 - **og-missing** (4)
-  - `/privacy.html`: missing og:title, og:description; link previews degrade
   - `/cookies.html`: missing og:title, og:description; link previews degrade
+  - `/privacy.html`: missing og:title, og:description; link previews degrade
   - `/terms.html`: missing og:title, og:description; link previews degrade
   - `/do-not-sell.html`: missing og:title, og:description; link previews degrade
 - **html-weight** (3)
@@ -106,9 +106,6 @@ Since the last run: 3 new, 0 resolved.
   - `/blog/`: CLS 0.16 (good is under 0.1)
   - `/case-studies/water-reuse-plant.html`: CLS 0.119 (good is under 0.1)
   - `/industries/industrial-water.html`: CLS 0.146 (good is under 0.1)
-- **external-link-broken** (2)
-  - `/blog/wastewater-blower-vfd-energy-savings-erode.html`: links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)
-  - `/blog/aeration-energy-cost-wastewater-plants.html`: links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)
 - **cwv-tbt** (1)
   - `/`: Total blocking time 378 ms (good is under 200 ms)
 
@@ -126,13 +123,10 @@ Since the last run: 3 new, 0 resolved.
 <details><summary>What the agent did this run</summary>
 
 - Found stale generated files; the rebuild failed a guardrail, so I committed nothing.
-- Crawled 52 live pages and 73 assets and files, plus 68 external links.
+- Crawled 52 live pages and 73 assets and files.
 - IndexNow: no page content changed since the last run, nothing to submit.
-- Checked 3 trade-press article(s): 2 link to aquamesh.ai.
-- Ran Lighthouse (mobile) on 5 pages.
-- Asked an AI answer engine 0 buyer questions; aquamesh.ai was cited in 0 ($0).
 
 </details>
 
 ---
-Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) ran this time. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.
+Daily at 13:40 UTC from `.github/workflows/seo-agent.yml`; weekly checks (Lighthouse, AI search, external links) run every 7 days. It only ever commits files that `scripts/build-blog.mjs` generates. Off switch: repository variable `SEO_AGENT=off`; report-only: `SEO_AGENT_AUTOFIX=off`. History lives on the `seo-agent-data` branch.

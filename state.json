@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "lastRunAt": "2026-11-26T22:34:11.836Z",
+  "lastRunAt": "2026-11-27T22:19:10.635Z",
   "weeklyAt": "2026-11-26T22:34:11.836Z",
   "findings": [
     {
       "sev": "warn",
-      "id": "jsonld-article-fields",
-      "url": "https://aquamesh.ai/company.html",
-      "msg": "Article missing dateModified, image"
+      "id": "desc-length",
+      "url": "https://aquamesh.ai/hardware.html",
+      "msg": "meta description is 187 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -17,9 +17,9 @@
     },
     {
       "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/hardware.html",
-      "msg": "meta description is 187 chars (aim for 70 to 160)"
+      "id": "jsonld-article-fields",
+      "url": "https://aquamesh.ai/company.html",
+      "msg": "Article missing dateModified, image"
     },
     {
       "sev": "warn",
@@ -30,26 +30,26 @@
     {
       "sev": "warn",
       "id": "desc-length",
+      "url": "https://aquamesh.ai/products/aquaspectra.html",
+      "msg": "meta description is 179 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "desc-length",
       "url": "https://aquamesh.ai/case-studies/",
       "msg": "meta description is 250 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "desc-length",
-      "url": "https://aquamesh.ai/products/aquaspectra.html",
-      "msg": "meta description is 179 chars (aim for 70 to 160)"
+      "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
+      "msg": "meta description is 191 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
       "id": "title-length",
       "url": "https://aquamesh.ai/case-studies/dairy-plant.html",
       "msg": "title is 68 chars; Google truncates near 60: \"Case study — $1.17M a year in a dairy plant’s own records | AquaMesh\""
-    },
-    {
-      "sev": "warn",
-      "id": "desc-length",
-      "url": "https://aquamesh.ai/case-studies/bottling-plant.html",
-      "msg": "meta description is 191 chars (aim for 70 to 160)"
     },
     {
       "sev": "warn",
@@ -96,13 +96,13 @@
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/privacy.html",
+      "url": "https://aquamesh.ai/cookies.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
       "id": "og-missing",
-      "url": "https://aquamesh.ai/cookies.html",
+      "url": "https://aquamesh.ai/privacy.html",
       "msg": "missing og:title, og:description; link previews degrade"
     },
     {
@@ -113,15 +113,15 @@
     },
     {
       "sev": "warn",
-      "id": "og-missing",
-      "url": "https://aquamesh.ai/do-not-sell.html",
-      "msg": "missing og:title, og:description; link previews degrade"
-    },
-    {
-      "sev": "warn",
       "id": "desc-length",
       "url": "https://aquamesh.ai/basin/",
       "msg": "meta description is 171 chars (aim for 70 to 160)"
+    },
+    {
+      "sev": "warn",
+      "id": "og-missing",
+      "url": "https://aquamesh.ai/do-not-sell.html",
+      "msg": "missing og:title, og:description; link previews degrade"
     },
     {
       "sev": "warn",
@@ -139,6 +139,12 @@
       "sev": "error",
       "id": "link-broken",
       "url": "https://aquamesh.ai/blog/industrial-pretreatment-self-monitoring-gaps.html",
+      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
+    },
+    {
+      "sev": "error",
+      "id": "link-broken",
+      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
     {
@@ -168,18 +174,6 @@
     {
       "sev": "error",
       "id": "link-broken",
-      "url": "https://aquamesh.ai/blog/nitrogen-permit-compliance-sampling-gap.html",
-      "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/wastewater-blower-vfd-energy-savings-erode.html",
-      "msg": "links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)"
-    },
-    {
-      "sev": "error",
-      "id": "link-broken",
       "url": "https://aquamesh.ai/blog/do-sensor-calibration-interval-activated-sludge.html",
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
     },
@@ -194,12 +188,6 @@
       "id": "link-broken",
       "url": "https://aquamesh.ai/blog/water-online-sewer-repair-evidence.html",
       "msg": "links to https://aquamesh.ai/blog/online-sensors-vs-lab-sampling-wastewater-discharge.html which returns 404"
-    },
-    {
-      "sev": "warn",
-      "id": "external-link-broken",
-      "url": "https://aquamesh.ai/blog/aeration-energy-cost-wastewater-plants.html",
-      "msg": "links to https://www.fwpcoa.org/content.aspx?page_id=5&amp;club_id=859275&amp;item_id=134074 (404)"
     },
     {
       "sev": "warn",
@@ -236,12 +224,6 @@
       "id": "drift-unfixable",
       "url": "https://aquamesh.ai/",
       "msg": "generated files are stale but the rebuild failed a guardrail: sitemap would lose https://aquamesh.ai/case-studies/mechtrack-predictive-maintenance.html"
-    },
-    {
-      "sev": "info",
-      "id": "press-no-link",
-      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
-      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     },
     {
       "sev": "warn",
@@ -284,6 +266,12 @@
       "id": "cwv-cls",
       "url": "https://aquamesh.ai/industries/industrial-water.html",
       "msg": "CLS 0.146 (good is under 0.1)"
+    },
+    {
+      "sev": "info",
+      "id": "press-no-link",
+      "url": "https://www.dairyfoods.com/articles/99452-why-dairy-plants-still-miss-their-most-expensive-process-losses",
+      "msg": "Dairy Foods article does not link to aquamesh.ai; ask the editor to link it in the author bio"
     }
   ],
   "pageHashes": {
